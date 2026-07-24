@@ -1,0 +1,150 @@
+NCERT POLITY — COMPLETE READING GUIDE FOR UPSC
+you | Target: CSE 2027 Prelims (May 2027)
+Start Date: August 2026
+================================================
+
+WHAT'S IN THIS FOLDER
+======================
+7 books downloaded (62 chapter PDFs):
+  Class_07_Social_Political_Life_II      — 8 chapters
+  Class_08_Social_Political_Life_III     — 8 chapters
+  Class_10_Democratic_Politics_II        — 5 chapters
+  Class_11_Indian_Constitution_at_Work   — 10 chapters
+  Class_11_Political_Theory              — 8 chapters
+  Class_12_Contemporary_World_Politics   — 7 chapters
+  Class_12_Politics_in_India_Since_Independence — 9 chapters
+
+2 books need manual download (see HOW_TO_GET.txt in each folder):
+  Class_06 — LOW PRIORITY (skip for now, read at end)
+  Class_09 — HIGH PRIORITY (get from DIKSHA app this week)
+
+PDF naming: e.g. keps201.pdf = Class 11 Const at Work, Chapter 1
+                  leps208.pdf = Class 12 Politics in India, Chapter 8
+
+
+PRIORITY ORDER FOR UPSC
+========================
+Tier 1 (Read first — highest UPSC impact):
+  Class 11: Indian Constitution at Work  [keps2XX.pdf]
+  Class 12: Politics in India Since Ind. [leps2XX.pdf]
+
+Tier 2 (Read second):
+  Class 9:  Democratic Politics I        [iess4XX.pdf — get from DIKSHA]
+  Class 10: Democratic Politics II       [jess4XX.pdf]
+  Class 11: Political Theory             [keps1XX.pdf]
+
+Tier 3 (Read last):
+  Class 8:  Social and Political Life III [hess3XX.pdf]
+  Class 7:  Social and Political Life II  [gess3XX.pdf]
+  Class 12: Contemporary World Politics   [leps1XX.pdf]
+
+Tier 4 (Optional — low Prelims weight):
+  Class 6:  Social and Political Life I   [get from DIKSHA]
+
+
+WEEK-BY-WEEK READING PLAN
+==========================
+Time available: ~1 hour/day morning + weekend sessions
+Reading pace: 1 chapter per session (30-45 min each)
+
+--- WEEK 1 (Aug 1-7): Class 11 Indian Constitution at Work ---
+  Day 1:  Ch 1 — Constitution: Why and How? (keps201.pdf)
+  Day 2:  Ch 2 — Rights in the Indian Constitution (keps202.pdf)
+  Day 3:  Ch 3 — Election and Representation (keps203.pdf)
+  Day 4:  Ch 4 — Executive (keps204.pdf)
+  Day 5:  Ch 5 — Legislature (keps205.pdf)
+  Weekend: Ch 6 — Judiciary (keps206.pdf)
+           Ch 7 — Federalism (keps207.pdf)
+
+--- WEEK 2 (Aug 8-14): Class 11 Indian Constitution at Work (contd.) ---
+  Day 1:  Ch 8 — Local Governments (keps208.pdf)
+  Day 2:  Ch 9 — Constitution as a Living Document (keps209.pdf)
+  Day 3:  Ch 10 — The Philosophy of the Constitution (keps210.pdf)
+  Day 4-5: REVISION — Re-read key chapters (Executive, Legislature, Judiciary)
+  Weekend: NOTES — Write 1-page summary of each chapter (10 pages total)
+
+--- WEEK 3 (Aug 15-21): Class 12 Politics in India Since Independence ---
+  Day 1:  Ch 1 — Challenges of Nation Building (leps201.pdf)
+  Day 2:  Ch 2 — Era of One-Party Dominance (leps202.pdf)
+  Day 3:  Ch 3 — Politics of Planned Development (leps203.pdf)
+  Day 4:  Ch 4 — India's External Relations (leps204.pdf)
+  Day 5:  Ch 5 — Challenges to the Congress System (leps205.pdf)
+  Weekend: Ch 6 — Crisis of the Constitutional Order (Emergency) (leps206.pdf)
+           Ch 7 — Rise of Popular Movements (leps207.pdf)
+
+--- WEEK 4 (Aug 22-31): Class 12 Politics in India (contd.) ---
+  Day 1:  Ch 8 — Regional Aspirations (leps208.pdf)
+  Day 2:  Ch 9 — Recent Developments in Indian Politics [if available]
+  Day 3:  REVISION of Class 12 Politics in India
+  Weekend: NOTES — Timeline of Indian political events 1947-2000
+
+--- WEEK 5 (Sep 1-7): Class 9 Democratic Politics I (from DIKSHA) ---
+  Day 1:  Ch 1 — What is Democracy? Why Democracy?
+  Day 2:  Ch 2 — Constitutional Design
+  Day 3:  Ch 3 — Electoral Politics
+  Day 4:  Ch 4 — Working of Institutions
+  Day 5:  Ch 5 — Democratic Rights
+  Weekend: REVISION + connect to Class 11 knowledge
+
+--- WEEK 6 (Sep 8-14): Class 10 Democratic Politics II ---
+  Day 1:  Ch 1 — Power Sharing (jess401.pdf)
+  Day 2:  Ch 2 — Federalism (jess402.pdf)
+  Day 3:  Ch 3 — Democracy and Diversity (jess403.pdf)
+  Day 4:  Ch 4 — Gender, Religion, Caste (jess404.pdf)
+  Day 5:  Ch 5 — Popular Struggles and Movements (jess405.pdf)
+  Weekend: REVISION
+
+--- WEEK 7 (Sep 15-21): Class 11 Political Theory ---
+  Day 1:  Ch 1 — Political Theory: An Introduction (keps101.pdf)
+  Day 2:  Ch 2 — Freedom (keps102.pdf)
+  Day 3:  Ch 3 — Equality (keps103.pdf)
+  Day 4:  Ch 4 — Social Justice (keps104.pdf)
+  Day 5:  Ch 5 — Rights (keps105.pdf)
+  Weekend: Ch 6 — Citizenship (keps106.pdf)
+           Ch 7 — Nationalism (keps107.pdf)
+
+--- WEEK 8 (Sep 22-28): Class 11 Political Theory (contd.) ---
+  Day 1:  Ch 8 — Secularism (keps108.pdf)
+  Day 2-5: REVISION of all Political Theory
+  Weekend: BIG REVISION — All Class 11 & 12 books
+
+--- WEEK 9 (Sep 29 - Oct 5): Class 8 Social and Political Life III ---
+  Day 1:  Ch 1 — The Indian Constitution (hess301.pdf)
+  Day 2:  Ch 2 — Understanding Secularism (hess302.pdf)
+  Day 3:  Ch 3 — Why Do We Need a Parliament? (hess303.pdf)
+  Day 4:  Ch 4 — Understanding Laws (hess304.pdf)
+  Day 5:  Ch 5 — Judiciary (hess305.pdf)
+  Weekend: Ch 6 — Understanding Our Criminal Justice System (hess306.pdf)
+           Ch 7 — Understanding Marginalisation (hess307.pdf)
+
+--- WEEK 10 (Oct 6-12): Wrap up + Transition ---
+  Day 1:  Ch 8 — Confronting Marginalisation (hess308.pdf)
+  Day 2:  Class 7 SPL - Skim key chapters (gess3)
+  Day 3:  Class 12 Contemp World Politics - Skim (leps1) [less UPSC critical]
+  Day 4-5: FINAL NCERT REVISION
+  Weekend: START LAXMIKANTH (Indian Polity by M. Laxmikanth)
+
+TOTAL NCERT TIME: ~10 weeks (August 1 to October 12, 2026)
+
+
+WHAT TO DO WHILE READING
+========================
+1. DO NOT take elaborate notes — just underline/highlight key terms
+2. At end of each chapter, write 3 bullet points: What + Why it matters + UPSC angle
+3. Connect every topic to either: Parliament / Judiciary / Federalism / Rights / Elections
+4. After every 2 chapters, write one Prelims-style MCQ for yourself
+5. Weekend session: Solve 10 PYQ Prelims questions on that week's topic
+
+
+AFTER NCERTs — WHAT'S NEXT
+===========================
+October 2026 onwards:
+  1. Laxmikanth — Indian Polity (read alongside Constitution text)
+  2. Constitution of India bare text (Part III Rights, Part IV DPSP, key articles)
+  3. PRS India for current bills related to Polity
+  4. Solve Class 11 & 12 NCERT exercise questions (all of them)
+
+================================================
+Good luck, you. The foundation you build in these 10 weeks
+will carry you through Prelims AND Mains GS2 AND PA Paper 2.
+================================================
