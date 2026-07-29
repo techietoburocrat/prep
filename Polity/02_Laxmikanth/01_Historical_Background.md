@@ -27,6 +27,31 @@ The East India Company came to trade. It accidentally became a ruler. The Britis
 | **Company Rule** | 1773–1858 | London slowly leashing a private company |
 | **Crown Rule** | 1858–1947 | London ruling directly, slowly conceding to Indians |
 
+### 🖼️ The whole chapter in one picture
+
+```mermaid
+flowchart LR
+  subgraph CR["🏢 COMPANY RULE · 1773–1858 · London leashes a private company"]
+    direction LR
+    A1["<b>1773</b><br/>Regulating Act<br/><i>first leash</i>"] --> A2["<b>1784</b><br/>Pitt's India Act<br/><i>double government</i>"]
+    A2 --> A3["<b>1813</b><br/>trade monopoly<br/>ends"]
+    A3 --> A4["<b>1833</b><br/>Governor-General<br/>of INDIA"]
+    A4 --> A5["<b>1853</b><br/>civil services<br/>exam begins"]
+  end
+  subgraph CW["👑 CROWN RULE · 1858–1947 · London rules directly, concedes slowly"]
+    direction LR
+    B1["<b>1858</b><br/>Company<br/>ABOLISHED"] --> B2["<b>1861</b><br/>Indians in<br/>law-making"]
+    B2 --> B3["<b>1892</b><br/>indirect<br/>election"]
+    B3 --> B4["<b>1909</b><br/>separate<br/>electorates ⚠️"]
+    B4 --> B5["<b>1919</b><br/>DYARCHY<br/>in provinces"]
+    B5 --> B6["<b>1935</b><br/>THE<br/>BLUEPRINT"]
+    B6 --> B7["<b>1947</b><br/>Independence<br/>Act"]
+  end
+  A5 -->|"1857 REVOLT"| B1
+```
+
+> 🔑 **Notice the hinge:** the arrow between the two blocks is the **1857 Revolt**. Everything before it is London controlling a company; everything after is London governing directly. One event splits the chapter in half.
+
 ---
 
 ## PART A — Company Rule (1773–1858)
@@ -135,6 +160,17 @@ Provincial subjects were split into two lists:
 
 > 💡 **Analogy:** Parents let the teenager manage the TV remote and the fridge (transferred), but keep the house keys, the bank account and the front door (reserved). Looks like power-sharing. Isn't really.
 
+```mermaid
+flowchart TD
+  G["<b>GOVERNOR OF THE PROVINCE</b>"]
+  G --> T["<b>TRANSFERRED subjects</b><br/>administered WITH Indian ministers<br/>responsible to the legislature"]
+  G --> R["<b>RESERVED subjects</b><br/>administered with the Executive Council<br/>NOT responsible to the legislature"]
+  T --> T1["education · health<br/>local government · agriculture"]
+  R --> R1["⚠️ police · jails<br/><b>finance</b> · land revenue"]
+  T1 --> N["💡 Ministers controlled the<br/>departments — but NOT the money.<br/>Finance stayed reserved."]
+  R1 --> N
+```
+
 **Other key points:**
 - **Separated central and provincial subjects** for the first time — the ancestor of our Union/State Lists
 - Introduced **bicameralism** and **direct elections** at the centre
@@ -142,7 +178,7 @@ Provincial subjects were split into two lists:
 - Extended separate electorates to Sikhs, Indian Christians, Anglo-Indians, Europeans
 - Provided for a **Public Service Commission** — set up in **1926**
 
-> 🔑 **PYQ:** *"The Government of India Act of 1919 clearly defined ___"* → **the jurisdiction of the central and provincial governments.** ([Prelims 2015 Q78](../UPSC_Prelims_Polity_MCQs/2015.md))
+> 🔑 **PYQ:** *"The Government of India Act of 1919 clearly defined ___"* → **the jurisdiction of the central and provincial governments.** ([Prelims 2015 Q78](../03_PYQ_Prelims/2015.md))
 
 ---
 
@@ -162,8 +198,8 @@ Provincial subjects were split into two lists:
 > 💡 **Why "two-thirds borrowed" matters:** when you later study Emergency provisions, Governor's powers, the federal scheme, and the office of the Governor — they all look oddly *un*-democratic. That's because they were designed by a colonial government to control India, and we kept the machinery while changing the purpose.
 
 > 🔑 **PYQ traps from this Act:**
-> - Residuary power → **Governor-General**, not the Federal Legislature ([Prelims 2018 Q5](../UPSC_Prelims_Polity_MCQs/2018.md))
-> - "Did the GoI Act, 1935 lay down a federal constitution?" → [Mains 2016 GS-II Q7](../UPSC_Mains_Polity_PYQs/2016.md)
+> - Residuary power → **Governor-General**, not the Federal Legislature ([Prelims 2018 Q5](../03_PYQ_Prelims/2018.md))
+> - "Did the GoI Act, 1935 lay down a federal constitution?" → [Mains 2016 GS-II Q7](../04_PYQ_Mains/2016.md)
 
 ---
 
@@ -225,7 +261,7 @@ Two big provisions of the **1935 Act never actually operated**:
 **4. "Dyarchy was a device to concede the shadow of power while retaining its substance." Examine with reference to the Act of 1919. (250 words)**
 > *Skeleton:* Explain transferred vs reserved. Show that finance and police — the sinews of real power — stayed reserved. Ministers had no control over funds needed for their own departments. Note the Muddiman Committee's criticism. Conclude on why 1935 abolished it.
 
-**Actually asked in Mains:** ["Did the Government of India Act, 1935 lay down a federal constitution? Discuss."](../UPSC_Mains_Polity_PYQs/2016.md) — GS-II 2016, Q7.
+**Actually asked in Mains:** ["Did the Government of India Act, 1935 lay down a federal constitution? Discuss."](../04_PYQ_Mains/2016.md) — GS-II 2016, Q7.
 
 ---
 
@@ -245,10 +281,10 @@ Two big provisions of the **1935 Act never actually operated**:
 
 ## 🔗 Practice this chapter
 
-- [Prelims 2015 Q78](../UPSC_Prelims_Polity_MCQs/2015.md) — GoI Act 1919
-- [Prelims 2018 Q5](../UPSC_Prelims_Polity_MCQs/2018.md) — residuary power under the 1935 Act
-- [Prelims 2018 A1](../UPSC_Prelims_Polity_MCQs/2018.md) — Charter Act 1813 and English education
-- [Mains 2016 GS-II Q7](../UPSC_Mains_Polity_PYQs/2016.md) — was the 1935 Act federal?
+- [Prelims 2015 Q78](../03_PYQ_Prelims/2015.md) — GoI Act 1919
+- [Prelims 2018 Q5](../03_PYQ_Prelims/2018.md) — residuary power under the 1935 Act
+- [Prelims 2018 A1](../03_PYQ_Prelims/2018.md) — Charter Act 1813 and English education
+- [Mains 2016 GS-II Q7](../04_PYQ_Mains/2016.md) — was the 1935 Act federal?
 
 ---
 

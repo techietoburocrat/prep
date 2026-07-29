@@ -25,7 +25,7 @@ Document B is the DPSP. Ambedkar called them **"novel features"** and Granville 
 >
 > **Article 37 says it plainly:** the principles are **"fundamental in the governance of the country"** and it shall be the **duty of the State to apply them in making laws** — but they **shall not be enforceable by any court.**
 
-> 🔑 [Prelims 2013 Q6](../UPSC_Prelims_Polity_MCQs/2013.md) asked which are "fundamental for the governance of the country." Answer: **DPSP** — that phrase comes straight from Article 37.
+> 🔑 [Prelims 2013 Q6](../03_PYQ_Prelims/2013.md) asked which are "fundamental for the governance of the country." Answer: **DPSP** — that phrase comes straight from Article 37.
 
 **Borrowed from:** the **Irish** Constitution (which itself took the idea from Spain).
 
@@ -48,8 +48,8 @@ The Constitution itself does **not** classify them. This grouping is a scholarly
 | **43A** | **Participation of workers in management** of industries — *added by 42nd Amendment, 1976* |
 | **47** | Raise the level of **nutrition and public health**; prohibit intoxicating drinks and drugs injurious to health |
 
-> 🔑 **Article 39(c) — "concentration of wealth"** was tested directly in [Prelims 2021 Q1](../UPSC_Prelims_Polity_MCQs/2021.md). Answer: it violates the **DPSP**, not the Right to Equality.
-> **Article 39A** is the constitutional basis for **NALSA** — see [Prelims 2013 Q1](../UPSC_Prelims_Polity_MCQs/2013.md), [2020 Q8](../UPSC_Prelims_Polity_MCQs/2020.md) and [Mains 2023 GS-II Q2](../UPSC_Mains_Polity_PYQs/2023.md).
+> 🔑 **Article 39(c) — "concentration of wealth"** was tested directly in [Prelims 2021 Q1](../03_PYQ_Prelims/2021.md). Answer: it violates the **DPSP**, not the Right to Equality.
+> **Article 39A** is the constitutional basis for **NALSA** — see [Prelims 2013 Q1](../03_PYQ_Prelims/2013.md), [2020 Q8](../03_PYQ_Prelims/2020.md) and [Mains 2023 GS-II Q2](../04_PYQ_Mains/2023.md).
 
 ### 2. GANDHIAN principles — the village and the marginalised
 
@@ -77,10 +77,10 @@ The Constitution itself does **not** classify them. This grouping is a scholarly
 | **51** | Promote **international peace and security**, respect for international law and treaty obligations, settlement of disputes by arbitration |
 
 > 🔑 Two very frequently asked:
-> - **Article 50 — separation of judiciary from executive → [Prelims 2020 Q4](../UPSC_Prelims_Polity_MCQs/2020.md).** Answer: a **Directive Principle**, not the Preamble or Seventh Schedule.
-> - **Article 51 — promotion of international peace → [Prelims 2014 Q3](../UPSC_Prelims_Polity_MCQs/2014.md).** Answer: **DPSP**, not the Preamble or Fundamental Duties.
+> - **Article 50 — separation of judiciary from executive → [Prelims 2020 Q4](../03_PYQ_Prelims/2020.md).** Answer: a **Directive Principle**, not the Preamble or Seventh Schedule.
+> - **Article 51 — promotion of international peace → [Prelims 2014 Q3](../03_PYQ_Prelims/2014.md).** Answer: **DPSP**, not the Preamble or Fundamental Duties.
 
-> 💡 **Article 44 (UCC) is the most politically live directive.** It was [Mains 2015 GS-II Q1](../UPSC_Mains_Polity_PYQs/2015.md), and became live again when **Uttarakhand enacted a UCC**. Expect it back.
+> 💡 **Article 44 (UCC) is the most politically live directive.** It was [Mains 2015 GS-II Q1](../04_PYQ_Mains/2015.md), and became live again when **Uttarakhand enacted a UCC**. Expect it back.
 
 ---
 
@@ -111,7 +111,7 @@ Three directives sit elsewhere in the Constitution but are equally non-justiciab
 | **350A** | Instruction in the **mother tongue** at the primary stage for linguistic minority children |
 | **351** | Promotion and development of the **Hindi language** |
 
-> 🔑 **Article 335 was tested in [Prelims 2023 Q9](../UPSC_Prelims_Polity_MCQs/2023.md)** — Statement-II wrongly claimed Article 335 *defines* "efficiency of administration." It does not.
+> 🔑 **Article 335 was tested in [Prelims 2023 Q9](../03_PYQ_Prelims/2023.md)** — Statement-II wrongly claimed Article 335 *defines* "efficiency of administration." It does not.
 
 ---
 
@@ -128,6 +128,21 @@ Three directives sit elsewhere in the Constitution but are equally non-justiciab
 | **5. *Kesavananda Bharati*** (1973) | The landmark | Parliament **can** amend any part **but cannot destroy the BASIC STRUCTURE**. Upheld the first part of Art 31C, struck down the clause barring judicial review |
 | **6. 42nd Amendment (1976)** | Expanded Article 31C to cover **ALL** Directive Principles | DPSP would have completely overridden Articles 14 and 19 |
 | **7. *Minerva Mills*** (1980) | The correction | **Struck down that expansion.** Held that **"the Indian Constitution is founded on the bedrock of the balance between Parts III and IV. To give absolute primacy to one over the other is to disturb the harmony of the Constitution."** This harmony is itself part of the basic structure |
+
+### 🖼️ The FR vs DPSP war, in one picture
+
+```mermaid
+flowchart TD
+  A["<b>Champakam Dorairajan · 1951</b><br/>⚖️ <b>FR PREVAIL over DPSP</b><br/><i>DPSP must run subsidiary to FR</i>"] --> B["<b>1st Amendment · 1951</b><br/>🏛️ Parliament inserts <b>Art 15(4)</b><br/><i>amending its way around the Court</i>"]
+  B --> C["<b>Golaknath · 1967</b><br/>⚖️ Parliament <b>CANNOT</b><br/>abridge Fundamental Rights"]
+  C --> D["<b>24th + 25th Amendment · 1971</b><br/>🏛️ Inserts <b>Article 31C</b> —<br/>laws under Art 39(b) &amp; (c) immune<br/>from Articles 14 and 19"]
+  D --> E["<b>Kesavananda Bharati · 1973</b><br/>⚖️ Upholds 31C's first part,<br/><b>strikes the no-review clause</b><br/><i>BASIC STRUCTURE is born</i>"]
+  E --> F["<b>42nd Amendment · 1976</b><br/>🏛️ Expands 31C to cover<br/><b>ALL</b> Directive Principles"]
+  F --> G["<b>MINERVA MILLS · 1980</b> ⭐<br/>⚖️ <b>Expansion STRUCK DOWN</b><br/><i>'the balance between Parts III and IV<br/>is the bedrock of the Constitution'</i>"]
+  G --> H["<b>TODAY</b><br/>Art 31C survives only for Art 39(b) &amp; (c).<br/>Elsewhere: <b>harmonious construction</b>,<br/>and DPSP read INTO Article 21"]
+```
+
+> 💡 **Look at the alternating colours of the argument:** ⚖️ Court → 🏛️ Parliament → ⚖️ Court → 🏛️ Parliament. **Neither side ever wins outright.** That alternation *is* Indian constitutional history, and the exam asks about it constantly.
 
 > 💡 **The *Minerva Mills* line is the single most valuable quotation in this chapter.** It resolves the whole conflict: **neither Part III nor Part IV is supreme — the BALANCE between them is.**
 
@@ -188,7 +203,7 @@ Three directives sit elsewhere in the Constitution but are equally non-justiciab
 > *Skeleton:* *Champakam* (FR prevail) → 1st Amendment → *Golaknath* → 24th & 25th Amendments and Art 31C → *Kesavananda* (basic structure) → 42nd Amendment expansion → ***Minerva Mills*** restores balance. Conclude with the *Minerva Mills* quotation and the modern practice of harmonious construction, illustrated by Article 21's expansion.
 
 **2. Discuss the possible factors that inhibit India from enacting a Uniform Civil Code as provided in the DPSP. (250 words)**
-> *Actually asked — [Mains 2015 GS-II Q1](../UPSC_Mains_Polity_PYQs/2015.md).*
+> *Actually asked — [Mains 2015 GS-II Q1](../04_PYQ_Mains/2015.md).*
 > *Skeleton:* Article 44. Factors — religious diversity and personal-law plurality; minority apprehension about cultural erosion; Article 25 and 29 concerns; political cost; diversity even *within* communities; tribal customary law and Article 371 exemptions. Note *Shah Bano*, *Sarla Mudgal*, the Law Commission's 2018 view that a UCC is "neither necessary nor desirable at this stage", and Uttarakhand's recent enactment. Balanced conclusion — reform of personal laws first, codification later.
 
 **3. "Directive Principles are not weak rights but unenforced obligations." Critically examine. (250 words)**
@@ -213,9 +228,9 @@ Three directives sit elsewhere in the Constitution but are equally non-justiciab
 
 ## 🔗 Practice this chapter
 
-**Prelims:** [2013 Q4, Q6](../UPSC_Prelims_Polity_MCQs/2013.md) · [2014 Q3](../UPSC_Prelims_Polity_MCQs/2014.md) · [2015 Q39, Q57](../UPSC_Prelims_Polity_MCQs/2015.md) · [2017 Q2](../UPSC_Prelims_Polity_MCQs/2017.md) · [2020 Q4, Q10, Q14](../UPSC_Prelims_Polity_MCQs/2020.md) · [2021 Q1](../UPSC_Prelims_Polity_MCQs/2021.md) · [2023 Q9](../UPSC_Prelims_Polity_MCQs/2023.md)
+**Prelims:** [2013 Q4, Q6](../03_PYQ_Prelims/2013.md) · [2014 Q3](../03_PYQ_Prelims/2014.md) · [2015 Q39, Q57](../03_PYQ_Prelims/2015.md) · [2017 Q2](../03_PYQ_Prelims/2017.md) · [2020 Q4, Q10, Q14](../03_PYQ_Prelims/2020.md) · [2021 Q1](../03_PYQ_Prelims/2021.md) · [2023 Q9](../03_PYQ_Prelims/2023.md)
 
-**Mains:** [2015 GS-II Q1](../UPSC_Mains_Polity_PYQs/2015.md) — Uniform Civil Code
+**Mains:** [2015 GS-II Q1](../04_PYQ_Mains/2015.md) — Uniform Civil Code
 
 ---
 

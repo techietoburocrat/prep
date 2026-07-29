@@ -58,6 +58,19 @@ Three doctrines flow from it:
 
 Originally there were **seven**. The **Right to Property** was deleted by the **44th Amendment, 1978**, and became a mere **legal right under Article 300A**.
 
+```mermaid
+flowchart TD
+  P3(["<b>PART III · Articles 12–35</b><br/>FUNDAMENTAL RIGHTS"])
+  P3 --> R1["<b>1 · EQUALITY</b><br/>Art 14–18<br/><i>14 equality before law · 15 no discrimination<br/>16 public employment · 17 untouchability<br/>18 titles</i>"]
+  P3 --> R2["<b>2 · FREEDOM</b><br/>Art 19–22<br/><i>19 six freedoms · 20 conviction<br/>21 life &amp; liberty · 21A education<br/>22 arrest &amp; detention</i>"]
+  P3 --> R3["<b>3 · AGAINST EXPLOITATION</b><br/>Art 23–24<br/><i>trafficking, begar,<br/>child labour under 14</i>"]
+  P3 --> R4["<b>4 · FREEDOM OF RELIGION</b><br/>Art 25–28<br/><i>25 profess/practise/propagate<br/>26 manage affairs · 27 no tax<br/>28 no religious instruction</i>"]
+  P3 --> R5["<b>5 · CULTURAL &amp; EDUCATIONAL</b><br/>Art 29–30<br/><i>29 any section · 30 minorities only</i>"]
+  P3 --> R6["<b>6 · CONSTITUTIONAL REMEDIES</b><br/>Art 32 ⭐<br/><i>'the heart and soul'<br/>— the enforcement engine</i>"]
+  R7["❌ <b>7 · RIGHT TO PROPERTY</b><br/>DELETED by the 44th Amendment, 1978<br/>→ now only a legal right, Art 300A"]
+  P3 -.-> R7
+```
+
 > 🧠 **Mnemonic for the six: "E-F-E-R-C-C"**
 > **E**quality (14–18) · **F**reedom (19–22) · **E**xploitation (23–24) · **R**eligion (25–28) · **C**ultural & Educational (29–30) · **C**onstitutional Remedies (32)
 
@@ -84,7 +97,7 @@ Two ideas, two origins:
 
 **Later evolution:** in *E.P. Royappa*, the Court added that **arbitrariness itself violates Article 14** — a law can fail even if it passes the classification test, if it is simply arbitrary.
 
-> 🔑 [Prelims 2021 Q9](../UPSC_Prelims_Polity_MCQs/2021.md) asked which Article is violated by "unguided and uncontrolled discretionary power." Answer: **Article 14**. That's the arbitrariness doctrine.
+> 🔑 [Prelims 2021 Q9](../03_PYQ_Prelims/2021.md) asked which Article is violated by "unguided and uncontrolled discretionary power." Answer: **Article 14**. That's the arbitrariness doctrine.
 
 ### Article 15 — Prohibition of discrimination
 
@@ -130,7 +143,7 @@ Untouchability is **abolished** and its practice in any form **forbidden**. Enfo
 
 **Laws made under it:** the **Protection of Civil Rights Act, 1955** and the **SC/ST (Prevention of Atrocities) Act, 1989**.
 
-> 🔑 [Prelims 2020 Q3](../UPSC_Prelims_Polity_MCQs/2020.md) — untouchability falls under **Right to Equality**, not Right against Exploitation. A very common mix-up.
+> 🔑 [Prelims 2020 Q3](../03_PYQ_Prelims/2020.md) — untouchability falls under **Right to Equality**, not Right against Exploitation. A very common mix-up.
 
 ### Article 18 — Abolition of titles
 
@@ -139,7 +152,7 @@ The State shall not confer titles, except **military and academic distinctions**
 > ⚠️ **The classic trap:** are **Bharat Ratna and Padma awards** "titles" barred by Article 18?
 > **No.** In *Balaji Raghavan* (1996) the Supreme Court held these are **awards, not titles** — but they cannot be used as prefixes or suffixes to a name.
 >
-> [Prelims 2021 Q5](../UPSC_Prelims_Polity_MCQs/2021.md) tested exactly this. Answer: all three statements were **not correct**.
+> [Prelims 2021 Q5](../03_PYQ_Prelims/2021.md) tested exactly this. Answer: all three statements were **not correct**.
 
 ---
 
@@ -160,13 +173,13 @@ Originally **seven**; the right to property (19(1)(f)) was deleted by the **44th
 
 > 🔑 **"Co-operative societies" was added to 19(1)(c) by the 97th Amendment, 2011.**
 > ⚠️ **19(1)(d) and (e) are available only to CITIZENS**, and are restricted for Scheduled Tribe areas — which is why the Sixth Schedule and inner-line permits are constitutional.
-> [Prelims 2005 Q8](../UPSC_Prelims_Polity_MCQs/2015.md) and [Mains 2022 GS-II Q2](../UPSC_Mains_Polity_PYQs/2022.md) both turn on this.
+> [Prelims 2005 Q8](../03_PYQ_Prelims/2015.md) and [Mains 2022 GS-II Q2](../04_PYQ_Mains/2022.md) both turn on this.
 
 **What Article 19(1)(a) has been read to include:** freedom of the press, the right to information, the right to silence, the right to fly the national flag, and commercial advertising.
 
 > 💡 **Real case — *Shreya Singhal* (2015).** Section 66A of the IT Act criminalised sending "grossly offensive" or "menacing" messages online. People were being arrested for Facebook posts. The Supreme Court struck it down as **vague, overbroad and violative of Article 19(1)(a)** — the vagueness meant nobody could know what was legal.
 >
-> 🔑 This was asked as [Mains 2013 GS-II Q2](../UPSC_Mains_Polity_PYQs/2013.md) — *two years before* the judgment came.
+> 🔑 This was asked as [Mains 2013 GS-II Q2](../04_PYQ_Mains/2013.md) — *two years before* the judgment came.
 
 ### Article 20 — Protection in respect of conviction
 
@@ -191,14 +204,25 @@ Three protections, available to **citizens and foreigners alike**:
 | ***Maneka Gandhi*** | **1978** | **The transformation.** The procedure must be **"fair, just and reasonable"** — not arbitrary. Effectively read American **due process** into an Article that had deliberately borrowed the Japanese phrase |
 | ***Puttaswamy*** | **2017** | **Right to privacy** is intrinsic to Article 21. Also **expressly overruled *ADM Jabalpur*** |
 
+```mermaid
+flowchart LR
+  A["<b>A.K. Gopalan</b><br/><b>1950</b><br/>🔒 Narrow reading<br/><i>'procedure established by law'<br/>= ANY procedure Parliament enacts</i>"] --> B["<b>ADM Jabalpur</b><br/><b>1976</b> ⚠️<br/>🕳️ The nadir<br/><i>even the right to life could be<br/>suspended; no remedy at all.<br/>Justice Khanna dissents alone</i>"]
+  B --> C["<b>Maneka Gandhi</b><br/><b>1978</b> ⭐<br/>🔓 The transformation<br/><i>procedure must be<br/>FAIR, JUST and REASONABLE</i>"]
+  C --> D["<b>Expansion</b><br/><b>1980s–2010s</b><br/>🌱 Rights read IN<br/><i>livelihood · clean environment<br/>health · education · dignity<br/>speedy trial · legal aid · shelter</i>"]
+  D --> E["<b>Puttaswamy</b><br/><b>2017</b> ⭐<br/>🛡️ Privacy is intrinsic to Art 21<br/><i>and ADM Jabalpur is<br/>expressly OVERRULED</i>"]
+  B -.->|"41 years later,<br/>the Court corrects itself"| E
+```
+
+> 💡 **Follow the dotted arrow.** The Supreme Court's worst judgment was formally erased by its own hand four decades later. That self-correction is the strongest evidence you can cite for constitutional resilience.
+
 > 💡 **The Maneka Gandhi story:** the government impounded her passport without giving reasons. She challenged it. The Court could have said "there's a law permitting it, so it's valid" — the *Gopalan* answer. Instead it said a law is not enough; **the procedure itself must be fair.** That one shift converted Article 21 from a narrow protection into the engine of Indian rights jurisprudence.
 
 **Rights read INTO Article 21 over time:**
 Livelihood · clean environment · health · education · **privacy** · dignity · speedy trial · free legal aid · shelter · sleep · fair trial · travel abroad · **die with dignity** (*Common Cause*, 2018, permitting passive euthanasia and living wills) · marry a person of one's choice
 
-> 🔑 [Prelims 2019 Q5](../UPSC_Prelims_Polity_MCQs/2019.md) — right to marry a person of one's choice → **Article 21**.
-> [Prelims 2012](../UPSC_Prelims_Polity_MCQs/2013.md), [2018 Q7](../UPSC_Prelims_Polity_MCQs/2018.md), [2021 Q17](../UPSC_Prelims_Polity_MCQs/2021.md) all test Article 21.
-> Mains: [2023 GS-II Q11](../UPSC_Mains_Polity_PYQs/2023.md) and [2024 GS-II Q12](../UPSC_Mains_Polity_PYQs/2024.md).
+> 🔑 [Prelims 2019 Q5](../03_PYQ_Prelims/2019.md) — right to marry a person of one's choice → **Article 21**.
+> [Prelims 2012](../03_PYQ_Prelims/2013.md), [2018 Q7](../03_PYQ_Prelims/2018.md), [2021 Q17](../03_PYQ_Prelims/2021.md) all test Article 21.
+> Mains: [2023 GS-II Q11](../04_PYQ_Mains/2023.md) and [2024 GS-II Q12](../04_PYQ_Mains/2024.md).
 
 ### Article 21A — Right to Education
 
@@ -229,7 +253,7 @@ Two halves, and candidates constantly confuse them.
 
 > ⚠️ **Note the age asymmetry:** Article 24 bars work below **14**, and Article 21A guarantees education from **6 to 14**. They were designed to fit together.
 >
-> 🔑 [Prelims 2017 Q13](../UPSC_Prelims_Polity_MCQs/2017.md) — the Right against Exploitation covers **trafficking/forced labour and child labour** (Articles 23, 24), **not** untouchability (that's Article 17, Right to Equality) and **not** minority interests (Articles 29–30).
+> 🔑 [Prelims 2017 Q13](../03_PYQ_Prelims/2017.md) — the Right against Exploitation covers **trafficking/forced labour and child labour** (Articles 23, 24), **not** untouchability (that's Article 17, Right to Equality) and **not** minority interests (Articles 29–30).
 
 ---
 
@@ -288,11 +312,30 @@ Article 32 gives you the **right to move the Supreme Court directly** for enforc
 | **Certiorari** | "To be certified" | Higher court **transfers a case or quashes an order** of a lower court — *curative* | Judicial/quasi-judicial (and now administrative too) |
 | **Quo Warranto** | "By what authority" | Asks a person **by what authority they hold a public office** | Public offices only |
 
+### 🖼️ Which writ do I need? — the decision tree
+
+```mermaid
+flowchart TD
+  Q(["<b>What exactly is<br/>the problem?</b>"])
+  Q --> A["Someone is being<br/><b>illegally detained</b>"]
+  A --> A1["<b>HABEAS CORPUS</b><br/><i>'produce the body'</i><br/>✅ lies against BOTH<br/>public and private persons"]
+  Q --> B["A public authority is<br/><b>refusing to do its duty</b>"]
+  B --> B1["<b>MANDAMUS</b><br/><i>'we command'</i><br/>⚠️ NOT against a private body<br/>unless entrusted with a public duty"]
+  Q --> C["A lower court is<br/><b>exceeding its jurisdiction</b>"]
+  C --> C1{"Are the proceedings<br/>still <b>PENDING</b>?"}
+  C1 -- "Yes — stop it now" --> C2["<b>PROHIBITION</b><br/><i>PREVENTIVE</i>"]
+  C1 -- "No — the order<br/>is already made" --> C3["<b>CERTIORARI</b><br/><i>CURATIVE</i><br/>quash or transfer"]
+  Q --> D["Someone holds a <b>public office</b><br/>without lawful authority"]
+  D --> D1["<b>QUO WARRANTO</b><br/><i>'by what authority?'</i><br/>✅ ANY public-minded<br/>person may seek it"]
+```
+
+> 🔑 **The Prohibition / Certiorari split is the single most-asked pair in this chapter.** The only question you ever need is: *has the order already been passed?* Before = Prohibition. After = Certiorari.
+
 > 🧠 **Memory hook:** *Habeas = body · Mandamus = do it · Prohibition = stop now (before) · Certiorari = undo it (after) · Quo Warranto = who are you?*
 >
 > 🔑 **Prohibition vs Certiorari is the most-asked pair.** Prohibition is issued **while** proceedings are pending (prevent); Certiorari **after** the order is made (cure).
 >
-> 🔑 [Prelims 2022 Q8](../UPSC_Prelims_Polity_MCQs/2022.md) tested exactly this: Mandamus doesn't lie against a private body unless it has a public duty, and **any public-minded person** can seek Quo Warranto.
+> 🔑 [Prelims 2022 Q8](../03_PYQ_Prelims/2022.md) tested exactly this: Mandamus doesn't lie against a private body unless it has a public duty, and **any public-minded person** can seek Quo Warranto.
 
 ### Article 32 vs Article 226 — a guaranteed exam question
 
@@ -304,7 +347,7 @@ Article 32 gives you the **right to move the Supreme Court directly** for enforc
 | Discretion | SC **cannot refuse** to entertain | HC **may refuse** — it is discretionary |
 | Territorial reach | All India | Within its own jurisdiction (plus where the cause of action arises) |
 
-> ⚠️ **So the High Court's writ jurisdiction is WIDER than the Supreme Court's.** Counter-intuitive, and therefore frequently tested — including as [Prelims 2006 Q55](../UPSC_Prelims_Polity_MCQs/2015.md).
+> ⚠️ **So the High Court's writ jurisdiction is WIDER than the Supreme Court's.** Counter-intuitive, and therefore frequently tested — including as [Prelims 2006 Q55](../03_PYQ_Prelims/2015.md).
 
 ### Articles 33, 34, 35
 
@@ -320,6 +363,16 @@ Article 32 gives you the **right to move the Supreme Court directly** for enforc
 |---|---|
 | **Article 358** | **Article 19 is automatically suspended** the moment a National Emergency is declared on grounds of **war or external aggression** *(not armed rebellion — a 44th Amendment change)* |
 | **Article 359** | The President may suspend the **right to move courts** for enforcement of other Fundamental Rights |
+
+```mermaid
+flowchart TD
+  E["<b>NATIONAL EMERGENCY</b><br/>declared under Article 352"] --> G{"On what<br/><b>GROUND</b>?"}
+  G -- "WAR or<br/>EXTERNAL AGGRESSION" --> A358["<b>Article 358</b><br/>Article 19 is<br/><b>AUTOMATICALLY suspended</b>"]
+  G -- "ARMED REBELLION" --> NO["Article 19 is <b>NOT</b> suspended<br/><i>⚠️ a 44th Amendment change —<br/>the ground used to be<br/>'internal disturbance'</i>"]
+  E --> A359["<b>Article 359</b><br/>President <b>may</b> suspend the<br/>RIGHT TO MOVE COURTS for<br/>other Fundamental Rights"]
+  A359 --> EXC["⚠️⚠️ <b>EXCEPT ARTICLES 20 AND 21</b><br/>— these can <b>NEVER</b> be suspended"]
+  EXC --> WHY["<b>Why this rule exists:</b><br/><i>ADM Jabalpur, 1976</i><br/>→ <b>44th Amendment, 1978</b>"]
+```
 
 > ⚠️⚠️ **The single most important exception:** under Article 359, **Articles 20 and 21 CAN NEVER be suspended**, even during a National Emergency.
 
@@ -358,14 +411,14 @@ Article 32 gives you the **right to move the Supreme Court directly** for enforc
 > *Skeleton:* *Champakam* 1951 → 1st Amendment (15(4)). *Indra Sawhney* 1992 → 50% cap, creamy layer, no promotion quota → 77th Amendment (16(4A)), 81st (16(4B)). 103rd Amendment 2019 (EWS) crossing the 50% logic. Argue this is dialogue, not conflict — each corrects the other, bounded by basic structure.
 
 **3. Examine the scope of Fundamental Rights in the light of the Supreme Court's judgement on the Right to Privacy. (250 words)**
-> *Actually asked — [Mains 2017 GS-II Q12](../UPSC_Mains_Polity_PYQs/2017.md); revisited in [2024 GS-II Q12](../UPSC_Mains_Polity_PYQs/2024.md).*
+> *Actually asked — [Mains 2017 GS-II Q12](../04_PYQ_Mains/2017.md); revisited in [2024 GS-II Q12](../04_PYQ_Mains/2024.md).*
 > *Skeleton:* *Puttaswamy* — privacy intrinsic to Art 21 and Part III freedoms. Three-fold test: legality, legitimate aim, proportionality. Consequences — Aadhaar, decriminalisation of Section 377 (*Navtej Johar*), data protection law, DNA testing. Note the overruling of *ADM Jabalpur*.
 
 **4. "Article 32 is the heart and soul of the Constitution." Discuss with reference to the writ jurisdiction of the Supreme Court and High Courts. (250 words)**
 > *Skeleton:* Ambedkar's quote and why remedy defines right. The five writs with their distinct functions. Article 32 vs 226 — the HC's wider scope. PIL as the democratisation of Article 32. Criticism — cost, delay, judicial overreach concerns. Conclude on remedy as the test of a right's reality.
 
 **5. "Indian secularism empowers the State to reform religion; Western secularism forbids it." Examine with constitutional provisions. (250 words)**
-> *Skeleton:* Articles 25–28, and specifically **25(2)(b)**. Examples — Article 17, temple entry, triple talaq, Sabarimala. Contrast with the US First Amendment and French *laïcité*. Argue the Indian model was necessary because religion here structures social hierarchy. Note criticism of selective interference. Links to [Mains 2019 Q5](../UPSC_Mains_Polity_PYQs/2019.md) and [2024 Q15](../UPSC_Mains_Polity_PYQs/2024.md).
+> *Skeleton:* Articles 25–28, and specifically **25(2)(b)**. Examples — Article 17, temple entry, triple talaq, Sabarimala. Contrast with the US First Amendment and French *laïcité*. Argue the Indian model was necessary because religion here structures social hierarchy. Note criticism of selective interference. Links to [Mains 2019 Q5](../04_PYQ_Mains/2019.md) and [2024 Q15](../04_PYQ_Mains/2024.md).
 
 ---
 
@@ -386,9 +439,9 @@ Article 32 gives you the **right to move the Supreme Court directly** for enforc
 
 ## 🔗 Practice this chapter
 
-**Prelims:** [2013 Q6](../UPSC_Prelims_Polity_MCQs/2013.md) · [2017 Q13](../UPSC_Prelims_Polity_MCQs/2017.md) · [2018 Q7](../UPSC_Prelims_Polity_MCQs/2018.md) · [2019 Q5](../UPSC_Prelims_Polity_MCQs/2019.md) · [2020 Q3, Q7](../UPSC_Prelims_Polity_MCQs/2020.md) · [2021 Q9, Q17](../UPSC_Prelims_Polity_MCQs/2021.md) · [2022 Q2, Q8](../UPSC_Prelims_Polity_MCQs/2022.md) · [2023 Q1, Q9](../UPSC_Prelims_Polity_MCQs/2023.md)
+**Prelims:** [2013 Q6](../03_PYQ_Prelims/2013.md) · [2017 Q13](../03_PYQ_Prelims/2017.md) · [2018 Q7](../03_PYQ_Prelims/2018.md) · [2019 Q5](../03_PYQ_Prelims/2019.md) · [2020 Q3, Q7](../03_PYQ_Prelims/2020.md) · [2021 Q9, Q17](../03_PYQ_Prelims/2021.md) · [2022 Q2, Q8](../03_PYQ_Prelims/2022.md) · [2023 Q1, Q9](../03_PYQ_Prelims/2023.md)
 
-**Mains:** [2013 Q2](../UPSC_Mains_Polity_PYQs/2013.md) · [2014 Q4](../UPSC_Mains_Polity_PYQs/2014.md) · [2015 Q7](../UPSC_Mains_Polity_PYQs/2015.md) · [2017 Q12](../UPSC_Mains_Polity_PYQs/2017.md) · [2022 Q2](../UPSC_Mains_Polity_PYQs/2022.md) · [2023 Q11, Q12](../UPSC_Mains_Polity_PYQs/2023.md) · [2024 Q12](../UPSC_Mains_Polity_PYQs/2024.md)
+**Mains:** [2013 Q2](../04_PYQ_Mains/2013.md) · [2014 Q4](../04_PYQ_Mains/2014.md) · [2015 Q7](../04_PYQ_Mains/2015.md) · [2017 Q12](../04_PYQ_Mains/2017.md) · [2022 Q2](../04_PYQ_Mains/2022.md) · [2023 Q11, Q12](../04_PYQ_Mains/2023.md) · [2024 Q12](../04_PYQ_Mains/2024.md)
 
 ---
 

@@ -62,6 +62,21 @@ A bill under Article 3 can be introduced only with **two conditions**:
 1. **Only on the prior recommendation of the President**
 2. Before recommending, the President must **refer the bill to the legislature of the state concerned** for its views, within a specified period
 
+```mermaid
+flowchart TD
+  A["Proposal to create a new State,<br/>or rename / merge / split<br/>an existing one"] --> B{"Prior <b>RECOMMENDATION<br/>OF THE PRESIDENT</b>?"}
+  B -- No --> X["❌ Bill cannot even<br/>be introduced"]
+  B -- Yes --> C["President refers the Bill to the<br/><b>STATE LEGISLATURE</b> for its views,<br/>within a specified period"]
+  C --> D{"Is the State's<br/>opinion <b>BINDING</b>?"}
+  D -- "⚠️ NO — Parliament may ignore it<br/>entirely" --> E["Bill introduced in<br/><b>either House of Parliament</b>"]
+  E --> F["Passed by <b>SIMPLE MAJORITY</b><br/>⚠️ not a special majority"]
+  F --> G["President's assent"]
+  G --> H["✅ New State / new name /<br/>new boundary"]
+  H --> I["<b>Article 4:</b> this is NOT deemed<br/>an amendment under Art 368"]
+```
+
+> 🔑 **Read that flow once more.** A state can be renamed, split, merged or abolished **against its own express wishes, by an ordinary law.** No other provision shows India's unitary bias so starkly.
+
 > ⚠️⚠️ **The two traps, both regularly tested:**
 > - The state legislature's view is **NOT binding** on Parliament. The President may or may not accept it.
 > - Parliament can pass the law by a **SIMPLE MAJORITY**, not a special majority.
@@ -83,6 +98,18 @@ This is the interesting bit.
 | **Acquiring** foreign territory | No amendment needed — a natural attribute of sovereignty |
 | **Ceding** Indian territory to a foreign country | **A constitutional amendment under Article 368** |
 | Merely **settling a boundary dispute** | Only an executive action — no amendment needed |
+
+```mermaid
+flowchart TD
+  A{"Is territory being<br/><b>GIVEN AWAY</b> or<br/><b>TAKEN IN</b>?"}
+  A -- "TAKEN IN<br/>(acquiring)" --> B["✅ No amendment needed<br/><i>a natural attribute<br/>of sovereignty</i>"]
+  A -- "GIVEN AWAY<br/>(ceding)" --> C["⚠️ Requires a<br/><b>CONSTITUTIONAL AMENDMENT</b><br/>under Article 368"]
+  A -- "Neither — merely<br/>settling a boundary dispute" --> D["✅ Executive action<br/>is enough"]
+  C --> E["<b>Berubari Union, 1960</b><br/>→ 9th Amendment"]
+  C --> F["<b>India–Bangladesh Land<br/>Boundary Agreement, 2015</b><br/>→ 100th Amendment"]
+```
+
+> 🔑 **One rule, two events, 55 years apart.** Remember *Berubari* and you automatically know why the 100th Amendment had to exist.
 
 > 💡 **The real case — Berubari Union (1960):**
 > Under the Nehru-Noon Agreement, India was to transfer half of Berubari Union to Pakistan. Could the Union executive simply hand it over? The President referred the question to the Supreme Court under Article 143.
@@ -136,7 +163,7 @@ India inherited a mess: British provinces drawn for administrative convenience, 
 
 > ⚠️ **2019 is constitutionally remarkable and worth a line in any federalism answer:** it is the **first time a full state was converted into Union Territories.** Article 3 was used in a direction it had never been used before — downward.
 >
-> 🔑 This is exactly [Mains 2025 GS-II Q4](../UPSC_Mains_Polity_PYQs/2025.md): *the nature of the J&K Legislative Assembly after the 2019 Reorganisation Act.*
+> 🔑 This is exactly [Mains 2025 GS-II Q4](../04_PYQ_Mains/2025.md): *the nature of the J&K Legislative Assembly after the 2019 Reorganisation Act.*
 
 ---
 
@@ -165,7 +192,7 @@ India inherited a mess: British provinces drawn for administrative convenience, 
 > *Skeleton:* (i) The procedure — President's recommendation, state's **non-binding** opinion, **simple majority**. (ii) Contrast with the USA, where state consent is essential. (iii) Evidence of use — Andhra 1953, SRA 1956, Telangana 2014, **J&K 2019 (state → UTs)**. (iv) Defence — India's diversity and Partition trauma required flexibility; over 20 states have been created peacefully because of it. (v) Conclude: constitutionally justified, but demands political restraint that Article 3 itself does not require.
 
 **2. Would the creation of more, smaller states bring better governance at the state level? Discuss. (250 words)**
-> *Actually asked — [Mains 2013 GS-II Q5](../UPSC_Mains_Polity_PYQs/2013.md).*
+> *Actually asked — [Mains 2013 GS-II Q5](../04_PYQ_Mains/2013.md).*
 > *Skeleton:* For — administrative proximity, better delivery (Uttarakhand, Himachal's record), regional aspiration. Against — cost of new capitals and bureaucracy, capital disputes (Andhra-Telangana), water and resource sharing conflicts, risk of endless sub-regional demands (Vidarbha, Gorkhaland, Bodoland). Note that governance quality correlates with institutional capacity, not size. Suggest the Second SRC idea and strengthening local government as the alternative.
 
 **3. Examine the constitutional route by which Jammu & Kashmir was reorganised in 2019 and its implications for Indian federalism. (250 words)**
@@ -189,10 +216,10 @@ India inherited a mess: British provinces drawn for administrative convenience, 
 
 ## 🔗 Practice this chapter
 
-- [Mains 2013 GS-II Q5](../UPSC_Mains_Polity_PYQs/2013.md) — would smaller states improve governance?
-- [Mains 2025 GS-II Q4](../UPSC_Mains_Polity_PYQs/2025.md) — J&K Legislative Assembly after the 2019 Act
-- [Mains 2016 GS-II Q2](../UPSC_Mains_Polity_PYQs/2016.md) — how "temporary" was Article 370?
-- [Prelims 2023 Q8](../UPSC_Prelims_Polity_MCQs/2023.md) — Scheduled Areas and Presidential Orders
+- [Mains 2013 GS-II Q5](../04_PYQ_Mains/2013.md) — would smaller states improve governance?
+- [Mains 2025 GS-II Q4](../04_PYQ_Mains/2025.md) — J&K Legislative Assembly after the 2019 Act
+- [Mains 2016 GS-II Q2](../04_PYQ_Mains/2016.md) — how "temporary" was Article 370?
+- [Prelims 2023 Q8](../03_PYQ_Prelims/2023.md) — Scheduled Areas and Presidential Orders
 
 ---
 

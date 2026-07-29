@@ -1,6 +1,6 @@
 # Chapter 10 — Amendment of the Constitution
 
-[← Chapter 9](09_Fundamental_Duties.md) · [Index](00_INDEX.md)
+[← Chapter 9](09_Fundamental_Duties.md) · [Index](00_INDEX.md) · [Chapter 11 →](11_Basic_Structure.md)
 
 **Read time ~12 min** · Part XX, Article 368 · Prelims: 1–2 most years · Mains: **asked in 2002, 2013, 2014, 2019 and 2025** — one of the highest-frequency topics in the entire syllabus
 
@@ -42,10 +42,25 @@ Learn these eight steps — Prelims questions come straight from them:
 > - **No joint sitting** for amendment bills
 > - **President cannot refuse assent** since the 24th Amendment
 >
-> [Prelims 2022 Q3](../UPSC_Prelims_Polity_MCQs/2022.md) tested exactly these — answer: **(b) 2 and 3 only**.
-> [Prelims 2013 Q5](../UPSC_Prelims_Polity_MCQs/2013.md) tested the "Lok Sabha only" and "all States" traps — answer: **(d) Neither**.
+> [Prelims 2022 Q3](../03_PYQ_Prelims/2022.md) tested exactly these — answer: **(b) 2 and 3 only**.
+> [Prelims 2013 Q5](../03_PYQ_Prelims/2013.md) tested the "Lok Sabha only" and "all States" traps — answer: **(d) Neither**.
 
 **Special majority means:** a majority of the **total membership** of that House **AND** a majority of **not less than two-thirds of the members present and voting**. Both conditions, together.
+
+```mermaid
+flowchart TD
+  A["Bill introduced in <b>EITHER HOUSE</b><br/>of Parliament<br/>⚠️ NOT in a State legislature"] --> B["By a Minister <b>or</b> a private member<br/>⚠️ NO prior recommendation<br/>of the President needed"]
+  B --> C["Passed by <b>SPECIAL MAJORITY</b><br/>in the <b>Lok Sabha</b>"]
+  C --> D["Passed by <b>SPECIAL MAJORITY</b><br/>in the <b>Rajya Sabha</b>"]
+  D --> E{"Do the two Houses<br/><b>disagree</b>?"}
+  E -- Yes --> F["❌ <b>NO joint sitting</b> for<br/>amendment bills.<br/>The Bill simply fails.<br/><i>→ the Rajya Sabha has an<br/>absolute veto here</i>"]
+  E -- No --> G{"Does it affect<br/><b>federal provisions</b>?"}
+  G -- Yes --> H["Ratified by <b>half the States</b><br/>by simple majority"]
+  G -- No --> I["<b>PRESIDENT</b>"]
+  H --> I
+  I --> J["⚠️ President <b>MUST</b> assent<br/>— cannot withhold, cannot return<br/><i>made obligatory by the<br/>24th Amendment, 1971</i>"]
+  J --> K["✅ Constitution<br/>Amendment Act"]
+```
 
 ---
 
@@ -57,11 +72,25 @@ Learn these eight steps — Prelims questions come straight from them:
 | **2. SPECIAL majority** *(Article 368)* | Majority of total membership **+** two-thirds of members present and voting | **Fundamental Rights** · **Directive Principles** · and all other provisions not in categories 1 or 3 |
 | **3. SPECIAL majority + RATIFICATION by half the states** | As above, **plus** simple-majority approval by legislatures of **half the states** | **Election of the President** and its manner · extent of executive power of the Union and the States · **Supreme Court and High Courts** · distribution of legislative powers between Centre and States · **any of the lists in the Seventh Schedule** · representation of States in Parliament · **Article 368 itself** |
 
+### 🖼️ Which majority do I need? — the decision tree
+
+```mermaid
+flowchart TD
+  S(["<b>A provision is to<br/>be amended</b>"])
+  S --> Q1{"Is it on the<br/><b>'HOUSEKEEPING' list</b>?<br/><i>new States · names · boundaries<br/>citizenship · Legislative Councils<br/>salaries · quorum · official language</i>"}
+  Q1 -- Yes --> M1["<b>1 · SIMPLE MAJORITY</b><br/>of members present and voting<br/>⚠️ <i>outside Article 368 —<br/>NOT deemed an amendment at all</i>"]
+  Q1 -- No --> Q2{"Does it touch the<br/><b>FEDERAL BALANCE</b>?<br/><i>President's election · executive power<br/>SC &amp; High Courts · Seventh Schedule<br/>States' representation · Art 368 itself</i>"}
+  Q2 -- No --> M2["<b>2 · SPECIAL MAJORITY</b><br/>majority of TOTAL membership<br/><b>AND</b> 2/3 of members present &amp; voting<br/><i>⚠️ this is where FUNDAMENTAL RIGHTS<br/>and DPSP sit</i>"]
+  Q2 -- Yes --> M3["<b>3 · SPECIAL MAJORITY<br/>+ RATIFICATION</b><br/>by the legislatures of<br/><b>HALF the States</b>, by simple majority<br/><i>no time limit · cannot be withdrawn</i>"]
+```
+
+> 🔑 **The counter-intuitive takeaway:** most people assume Fundamental Rights are the most protected thing in the Constitution. **Procedurally, they are not.** FR sit in box 2 and need no state consent at all — it is the **federal provisions** in box 3 that are hardest to change.
+
 > ⚠️⚠️ **The most commonly missed point:** amendments under category 1 are **NOT deemed amendments of the Constitution** under Article 368 at all *(recall Article 4 from [Chapter 5](05_Union_and_its_Territory.md))*.
 >
 > 🔑 **So Fundamental Rights need only a SPECIAL majority — NOT state ratification.** People assume rights are the most protected thing. They aren't, procedurally. **The federal provisions are.**
 >
-> [Prelims 2016 Q… and 2020 Q1](../UPSC_Prelims_Polity_MCQs/2020.md) — *"Rajya Sabha has equal powers with Lok Sabha in ___"* → **amending the Constitution**. Because there is no joint sitting, the Rajya Sabha has an absolute veto here. That's the sharpest illustration of its power.
+> [Prelims 2016 Q… and 2020 Q1](../03_PYQ_Prelims/2020.md) — *"Rajya Sabha has equal powers with Lok Sabha in ___"* → **amending the Constitution**. Because there is no joint sitting, the Rajya Sabha has an absolute veto here. That's the sharpest illustration of its power.
 
 > 🧠 **Mnemonic for category 3 — "PESSER":**
 > **P**resident's election · **E**xecutive power extent · **S**upreme Court & High Courts · **S**eventh Schedule · **E**very state's representation in Parliament · **A**rticle 368 itself
@@ -103,7 +132,7 @@ The Court has deliberately **never given an exhaustive list** — it decides cas
 
 **Supremacy of the Constitution** · **Rule of law** · **Separation of powers** · **Judicial review** · **Federalism** · **Secularism** *(S.R. Bommai, 1994)* · **Sovereign, democratic and republican structure** · **Parliamentary system** · **Free and fair elections** · **Independence of the judiciary** · **Article 32** · **Balance between Fundamental Rights and Directive Principles** *(Minerva Mills)* · **Welfare state** · **Unity and integrity of the nation** · **Limited amending power of Parliament**
 
-> 🔑 **The doctrine in action, recently:** in 2015 the Supreme Court struck down the **99th Amendment and the NJAC Act**, holding that the collegium and judicial independence were part of the basic structure. That is [Mains 2017 GS-II Q2](../UPSC_Mains_Polity_PYQs/2017.md) and [Prelims 2019 Q3](../UPSC_Prelims_Polity_MCQs/2019.md).
+> 🔑 **The doctrine in action, recently:** in 2015 the Supreme Court struck down the **99th Amendment and the NJAC Act**, holding that the collegium and judicial independence were part of the basic structure. That is [Mains 2017 GS-II Q2](../04_PYQ_Mains/2017.md) and [Prelims 2019 Q3](../03_PYQ_Prelims/2019.md).
 
 ---
 
@@ -141,18 +170,18 @@ The Court has deliberately **never given an exhaustive list** — it decides cas
 ## ❓ Expected Mains questions
 
 **1. "Parliament's power to amend the Constitution is a limited power and it cannot be enlarged into absolute power." Explain whether Parliament under Article 368 can destroy the basic structure by expanding its amending power. (250 words)**
-> *Actually asked — [Mains 2019 GS-II Q12](../UPSC_Mains_Polity_PYQs/2019.md).*
+> *Actually asked — [Mains 2019 GS-II Q12](../04_PYQ_Mains/2019.md).*
 > *Skeleton:* (i) The text of Article 368 and its silence on limits. (ii) The judicial journey — *Shankari Prasad* → *Golaknath* → 24th Amendment → *Kesavananda*. (iii) The decisive point: the 42nd Amendment tried exactly this — declaring unlimited constituent power — and ***Minerva Mills* struck it down**, holding that a limited power cannot be used to make itself unlimited. (iv) Conclude: Parliament cannot lift itself by its own bootstraps; the amending power is a *power under* the Constitution, not *over* it.
 
 **2. Examine the procedural and substantive limitations on Parliament's amending power. (250 words)**
-> *Actually asked — [Mains 2025 GS-II Q12](../UPSC_Mains_Polity_PYQs/2025.md).*
+> *Actually asked — [Mains 2025 GS-II Q12](../04_PYQ_Mains/2025.md).*
 > *Skeleton:* **Procedural** — special majority, separate passage in each House, no joint sitting, state ratification for federal provisions, mandatory Presidential assent. **Substantive** — the basic structure doctrine, with its non-exhaustive list. Illustrate substantive limits with *Indira Nehru Gandhi* (1975), *Minerva Mills* (1980) and the NJAC case (2015). Conclude on the balance between constitutional stability and democratic adaptability.
 
 **3. "The basic structure doctrine is judicial legislation without constitutional sanction." Critically examine. (250 words)**
 > *Skeleton:* The charge — no textual basis in Article 368; the list is judge-made and open-ended; unelected judges override an elected Parliament. The defence — the Constitution's *silence* is not permission to destroy it; the doctrine has been used sparingly; it protected democracy in 1975–77 when no other institution could; it is now accepted across the political spectrum and has been exported to Bangladesh and Pakistan. Conclude: legitimacy earned through restraint and outcome.
 
 **4. "The Supreme Court of India keeps a check on the arbitrary power of Parliament in amending the Constitution." Discuss critically. (250 words)**
-> *Actually asked — [Mains 2013 GS-II Q4](../UPSC_Mains_Polity_PYQs/2013.md) and [Mains 2014 GS-II Q1](../UPSC_Mains_Polity_PYQs/2014.md).*
+> *Actually asked — [Mains 2013 GS-II Q4](../04_PYQ_Mains/2013.md) and [Mains 2014 GS-II Q1](../04_PYQ_Mains/2014.md).*
 > *Skeleton:* Trace the check from *Kesavananda* through *Minerva Mills* to the NJAC case. Then present the critical side — uncertainty about what the basic structure contains; the counter-majoritarian objection; the collegium controversy as an example of the Court protecting its own power. Balanced conclusion.
 
 ---
@@ -172,12 +201,10 @@ The Court has deliberately **never given an exhaustive list** — it decides cas
 
 ## 🔗 Practice this chapter
 
-**Prelims:** [2013 Q5](../UPSC_Prelims_Polity_MCQs/2013.md) — amendment initiation and ratification traps · [2019 Q3](../UPSC_Prelims_Polity_MCQs/2019.md) — 99th Amendment struck down · [2020 Q1](../UPSC_Prelims_Polity_MCQs/2020.md) — Rajya Sabha's equal power · [2020 Q11](../UPSC_Prelims_Polity_MCQs/2020.md) — the Constitution does not *define* basic structure · [2022 Q3](../UPSC_Prelims_Polity_MCQs/2022.md) — Constitution Amendment Bill procedure · [2023 Q4](../UPSC_Prelims_Polity_MCQs/2023.md) — 42nd Amendment
+**Prelims:** [2013 Q5](../03_PYQ_Prelims/2013.md) — amendment initiation and ratification traps · [2019 Q3](../03_PYQ_Prelims/2019.md) — 99th Amendment struck down · [2020 Q1](../03_PYQ_Prelims/2020.md) — Rajya Sabha's equal power · [2020 Q11](../03_PYQ_Prelims/2020.md) — the Constitution does not *define* basic structure · [2022 Q3](../03_PYQ_Prelims/2022.md) — Constitution Amendment Bill procedure · [2023 Q4](../03_PYQ_Prelims/2023.md) — 42nd Amendment
 
-**Mains:** [2013 Q4](../UPSC_Mains_Polity_PYQs/2013.md) · [2014 Q1](../UPSC_Mains_Polity_PYQs/2014.md) · [2016 Q6](../UPSC_Mains_Polity_PYQs/2016.md) *(Coelho)* · [2019 Q12](../UPSC_Mains_Polity_PYQs/2019.md) · [2025 Q12](../UPSC_Mains_Polity_PYQs/2025.md)
+**Mains:** [2013 Q4](../04_PYQ_Mains/2013.md) · [2014 Q1](../04_PYQ_Mains/2014.md) · [2016 Q6](../04_PYQ_Mains/2016.md) *(Coelho)* · [2019 Q12](../04_PYQ_Mains/2019.md) · [2025 Q12](../04_PYQ_Mains/2025.md)
 
 ---
 
-[← Chapter 9](09_Fundamental_Duties.md) · [Index](00_INDEX.md)
-
-> **Next batch:** Chapter 11 (Basic Structure), Chapter 12 (Parliamentary System), Chapter 13 (Federal System), Chapter 14 (Centre-State Relations) — say the word.
+[← Chapter 9](09_Fundamental_Duties.md) · [Index](00_INDEX.md) · [Chapter 11 → Basic Structure](11_Basic_Structure.md)

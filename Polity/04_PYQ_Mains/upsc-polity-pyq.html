@@ -1,0 +1,919 @@
+<title>UPSC Mains Polity PYQs · 2000–2026</title>
+
+<style>
+  :root{
+    --paper:#EBEDE9; --card:#F6F7F4; --card-2:#E3E7E2;
+    --ink:#171F1D; --ink-2:#4A5754; --ink-3:#78837F;
+    --line:#D3D8D2; --line-2:#C2C9C1;
+    --accent:#8A2F3F; --accent-soft:#EEDFE2;
+    --era-a:#2E5A63; --era-a-soft:#DDE7E9;
+    --era-b:#8A2F3F; --era-b-soft:#EEDFE2;
+    --on-accent:#FFFFFF;
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,"Times New Roman",serif;
+    --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    --r:3px;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --paper:#111615; --card:#191F1E; --card-2:#222927;
+      --ink:#E5E9E4; --ink-2:#A0ACA8; --ink-3:#78837F;
+      --line:#28312F; --line-2:#333D3A;
+      --accent:#E28E9D; --accent-soft:#332227;
+      --era-a:#74A7B1; --era-a-soft:#1B2A2D;
+      --era-b:#E28E9D; --era-b-soft:#332227;
+      --on-accent:#111615;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#111615; --card:#191F1E; --card-2:#222927;
+    --ink:#E5E9E4; --ink-2:#A0ACA8; --ink-3:#78837F;
+    --line:#28312F; --line-2:#333D3A;
+    --accent:#E28E9D; --accent-soft:#332227;
+    --era-a:#74A7B1; --era-a-soft:#1B2A2D;
+    --era-b:#E28E9D; --era-b-soft:#332227;
+    --on-accent:#111615;
+  }
+  :root[data-theme="light"]{
+    --paper:#EBEDE9; --card:#F6F7F4; --card-2:#E3E7E2;
+    --ink:#171F1D; --ink-2:#4A5754; --ink-3:#78837F;
+    --line:#D3D8D2; --line-2:#C2C9C1;
+    --accent:#8A2F3F; --accent-soft:#EEDFE2;
+    --era-a:#2E5A63; --era-a-soft:#DDE7E9;
+    --era-b:#8A2F3F; --era-b-soft:#EEDFE2;
+    --on-accent:#FFFFFF;
+  }
+
+  *{box-sizing:border-box}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:var(--sans);font-size:16px;line-height:1.5;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden;
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  a{color:inherit}
+  .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:2px}
+
+  /* ---------------- topbar ---------------- */
+  .topbar{position:sticky;top:0;z-index:40;background:var(--paper);border-bottom:1px solid var(--line)}
+  .tb{display:flex;gap:12px;align-items:center;padding:11px 0;flex-wrap:wrap}
+  .home-btn{
+    display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line-2);background:var(--card);
+    color:var(--ink);font-family:var(--sans);font-size:12.5px;font-weight:600;padding:8px 13px;
+    border-radius:var(--r);cursor:pointer;white-space:nowrap;
+  }
+  .home-btn:hover{border-color:var(--ink-3)}
+  .home-btn .ar{color:var(--accent);font-size:14px;line-height:1}
+  .search{position:relative;flex:1 1 240px;min-width:0}
+  .search input{
+    width:100%;padding:8px 32px 8px 12px;border:1px solid var(--line-2);background:var(--card);
+    color:var(--ink);border-radius:var(--r);font-family:var(--sans);font-size:13.5px;
+  }
+  .search input::placeholder{color:var(--ink-3)}
+  .search input:focus{outline:2px solid var(--accent);outline-offset:-1px;border-color:transparent}
+  .search .x{position:absolute;right:3px;top:50%;transform:translateY(-50%);border:0;background:none;
+    color:var(--ink-3);cursor:pointer;font-size:17px;line-height:1;padding:4px 7px;border-radius:var(--r)}
+  .search .x:hover{color:var(--ink)}
+  .crumb{font-size:12px;color:var(--ink-3);letter-spacing:.05em;white-space:nowrap}
+
+  /* ---------------- home masthead ---------------- */
+  .masthead{border-bottom:1px solid var(--line);background:var(--card)}
+  .mast-in{display:flex;flex-wrap:wrap;gap:24px;align-items:flex-end;justify-content:space-between;padding:34px 0 28px}
+  .eyebrow{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);font-weight:600;margin:0 0 10px}
+  h1{font-family:var(--serif);font-weight:600;font-size:clamp(28px,4.2vw,42px);line-height:1.1;margin:0;letter-spacing:-.015em;text-wrap:balance}
+  h1 .yr{color:var(--accent);font-variant-numeric:tabular-nums}
+  .lede{font-family:var(--serif);color:var(--ink-2);font-size:17px;line-height:1.55;margin:12px 0 0;max-width:56ch}
+  .stats{display:flex;gap:26px;flex-wrap:wrap}
+  .stat b{display:block;font-family:var(--serif);font-size:26px;line-height:1;font-variant-numeric:tabular-nums;font-weight:600}
+  .stat span{display:block;font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-3);margin-top:6px;font-weight:600}
+
+  /* ---------------- spine ---------------- */
+  .spine-sec{border-bottom:1px solid var(--line);padding:22px 0 18px;background:var(--card)}
+  .spine-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:14px}
+  .kicker{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+  .legend{display:flex;gap:16px;font-size:12px;color:var(--ink-2);flex-wrap:wrap}
+  .legend i{display:inline-block;width:9px;height:9px;border-radius:1px;margin-right:6px}
+  .spine-scroll{overflow-x:auto;overflow-y:hidden;padding-bottom:4px}
+  .spine{display:flex;gap:3px;align-items:flex-end;min-width:660px}
+  .bar{flex:1 1 0;background:none;border:0;padding:0;cursor:pointer;display:flex;flex-direction:column;
+    justify-content:flex-end;height:100px;font-family:inherit}
+  .bar .fill{width:100%;border-radius:1px 1px 0 0;transition:opacity .15s;min-height:3px}
+  .bar .cnt{font-size:10px;color:var(--ink-3);font-variant-numeric:tabular-nums;margin-bottom:4px;font-weight:600}
+  .bar .lab{font-size:9.5px;color:var(--ink-3);margin-top:6px;font-variant-numeric:tabular-nums;
+    writing-mode:vertical-rl;transform:rotate(180deg);align-self:center;letter-spacing:.04em}
+  .bar:hover .fill{opacity:.7}
+  .bar:hover .lab{color:var(--ink)}
+  .bar.pending .fill{background:repeating-linear-gradient(45deg,var(--line-2) 0 3px,transparent 3px 6px);border:1px dashed var(--line-2)}
+
+  /* ---------------- home sections ---------------- */
+  section.block{padding:32px 0}
+  section.block + section.block{border-top:1px solid var(--line)}
+  .block h2{font-family:var(--serif);font-size:23px;font-weight:600;margin:0 0 4px;letter-spacing:-.01em}
+  .block .sub{font-size:13.5px;color:var(--ink-3);margin:0 0 20px;max-width:70ch;line-height:1.5}
+
+  .ygrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:8px}
+  .ycard{
+    display:flex;flex-direction:column;gap:5px;text-align:left;cursor:pointer;
+    background:var(--card);border:1px solid var(--line-2);border-left:3px solid var(--era-b);
+    border-radius:var(--r);padding:12px 13px;font-family:inherit;color:inherit;transition:border-color .14s,transform .14s;
+  }
+  .ycard.a{border-left-color:var(--era-a)}
+  .ycard:hover{border-color:var(--ink-3);transform:translateY(-1px)}
+  .ycard.a:hover{border-left-color:var(--era-a)}
+  .ycard:hover{border-left-color:var(--era-b)}
+  .ycard.a:hover{border-left-color:var(--era-a)}
+  .ycard .y{font-family:var(--serif);font-size:21px;font-weight:600;font-variant-numeric:tabular-nums;line-height:1}
+  .ycard .c{font-size:11.5px;color:var(--ink-3);font-variant-numeric:tabular-nums}
+  .ycard.pending{border-style:dashed;opacity:.72}
+
+  .tlist{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:8px}
+  .trow{
+    display:flex;align-items:center;justify-content:space-between;gap:12px;cursor:pointer;text-align:left;
+    background:var(--card);border:1px solid var(--line-2);border-radius:var(--r);padding:12px 14px;
+    font-family:inherit;color:inherit;font-size:13.5px;transition:border-color .14s;
+  }
+  .trow:hover{border-color:var(--accent)}
+  .trow .n{font-variant-numeric:tabular-nums;font-size:12px;color:var(--ink-3);font-weight:700;
+    background:var(--card-2);padding:2px 8px;border-radius:20px;white-space:nowrap}
+
+  /* ---------------- year page ---------------- */
+  .pagehead{background:var(--card);border-bottom:1px solid var(--line);padding:34px 0 28px}
+  .ph-top{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+  .era-tag{font-size:9.5px;letter-spacing:.11em;text-transform:uppercase;font-weight:700;padding:4px 8px;border-radius:2px;white-space:nowrap}
+  .era-a{background:var(--era-a-soft);color:var(--era-a)}
+  .era-b{background:var(--era-b-soft);color:var(--era-b)}
+  .pagehead h1.big{font-size:clamp(46px,9vw,80px);letter-spacing:-.03em;font-variant-numeric:tabular-nums;line-height:.92}
+  .ph-meta{display:flex;gap:24px;flex-wrap:wrap;margin-top:20px;padding-top:18px;border-top:1px solid var(--line-2)}
+  .ph-meta div span{display:block;font-size:10px;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-3);font-weight:700;margin-bottom:5px}
+  .ph-meta div b{font-family:var(--serif);font-size:17px;font-weight:600;font-variant-numeric:tabular-nums}
+  .ynote{
+    font-family:var(--serif);font-size:15.5px;line-height:1.55;color:var(--ink-2);margin:18px 0 0;
+    max-width:72ch;padding-left:13px;border-left:3px solid var(--accent);
+  }
+
+  .pager{display:flex;gap:8px;justify-content:space-between;align-items:stretch;flex-wrap:wrap;margin:0 0 4px}
+  .pg{
+    flex:1 1 190px;display:flex;flex-direction:column;gap:3px;cursor:pointer;text-align:left;
+    background:var(--card);border:1px solid var(--line-2);border-radius:var(--r);padding:12px 15px;
+    font-family:inherit;color:inherit;transition:border-color .14s;min-width:0;
+  }
+  .pg:hover{border-color:var(--accent)}
+  .pg.next{text-align:right;align-items:flex-end}
+  .pg .dir{font-size:10px;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-3);font-weight:700}
+  .pg .t{font-family:var(--serif);font-size:18px;font-weight:600;font-variant-numeric:tabular-nums}
+  .pg.ghost{visibility:hidden}
+
+  /* ---------------- question list ---------------- */
+  main{padding:28px 0 20px}
+  .tally{font-size:12.5px;color:var(--ink-3);margin:0 0 20px;font-variant-numeric:tabular-nums}
+  .tally b{color:var(--ink);font-weight:600}
+  .group{margin-bottom:34px}
+  .ghead{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;padding-bottom:8px;border-bottom:2px solid var(--ink);margin-bottom:2px}
+  .ghead h3{font-family:var(--serif);font-size:20px;font-weight:600;margin:0;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+  .ghead .meta{font-size:11.5px;color:var(--ink-3);letter-spacing:.04em}
+
+  .q{display:grid;grid-template-columns:78px 1fr;gap:0 18px;padding:15px 0;border-bottom:1px solid var(--line)}
+  .q:last-child{border-bottom:0}
+  .qno{font-size:12.5px;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums;padding-top:2px}
+  .qno .yr{display:block;font-size:10.5px;color:var(--ink-3);font-weight:600;margin-top:2px;cursor:pointer;text-decoration:underline;text-underline-offset:2px}
+  .qtext{font-family:var(--serif);font-size:16.5px;line-height:1.52;margin:0;max-width:68ch;text-wrap:pretty}
+  .qmeta{display:flex;gap:7px;flex-wrap:wrap;align-items:center;margin-top:9px}
+  .tag{font-size:10.5px;letter-spacing:.05em;padding:2.5px 7px;border-radius:2px;background:var(--card-2);color:var(--ink-2);white-space:nowrap;
+    border:0;font-family:inherit;cursor:pointer}
+  .tag:hover{color:var(--ink)}
+  .tag.mk{font-variant-numeric:tabular-nums;font-weight:600;background:none;border:1px solid var(--line-2);color:var(--ink-3);cursor:default}
+  .tag.ch{background:none;border:1px dashed var(--line-2);color:var(--ink-3);font-style:italic;cursor:default}
+  .qnote{font-size:12.5px;color:var(--ink-2);margin:9px 0 0;padding-left:11px;border-left:2px solid var(--line-2);line-height:1.45;max-width:70ch}
+  .qnote b{color:var(--accent);font-weight:600}
+  mark{background:var(--accent-soft);color:inherit;padding:0 1px;border-radius:1px}
+
+  .empty{text-align:center;padding:64px 20px;color:var(--ink-3)}
+  .empty p{font-family:var(--serif);font-size:19px;margin:0 0 6px;color:var(--ink-2)}
+
+  /* ---------------- pending page ---------------- */
+  .pend{background:var(--card);border:1px dashed var(--line-2);border-radius:var(--r);padding:24px;margin-bottom:26px}
+  .pend h3{font-family:var(--serif);font-size:19px;margin:0 0 10px;font-weight:600}
+  .pend p{margin:0 0 14px;font-size:14.5px;color:var(--ink-2);line-height:1.55;max-width:74ch}
+  .tblwrap{overflow-x:auto}
+  table{border-collapse:collapse;font-size:13px;min-width:440px;width:100%}
+  th,td{text-align:left;padding:7px 14px 7px 0;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);font-weight:700}
+  td.d{font-variant-numeric:tabular-nums;white-space:nowrap;color:var(--ink-2)}
+  td.hl{color:var(--accent);font-weight:700}
+  ul.odue{margin:0;padding-left:19px;font-size:14px;color:var(--ink-2);line-height:1.7;max-width:74ch}
+  ul.odue b{color:var(--ink);font-weight:600}
+
+  /* ---------------- notice ---------------- */
+  .notice{background:var(--card);border:1px solid var(--line-2);border-left:3px solid var(--accent);border-radius:var(--r);padding:16px 18px}
+  .notice h3{font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin:0 0 7px;color:var(--accent);font-weight:700}
+  .notice p{margin:0;font-size:13.5px;color:var(--ink-2);line-height:1.55;max-width:78ch}
+  .notice details{margin-top:10px}
+  .notice summary{font-size:12.5px;color:var(--ink);cursor:pointer;font-weight:600}
+  .notice table{margin-top:11px;font-size:12.5px}
+  td.was{color:var(--ink-3);text-decoration:line-through;font-variant-numeric:tabular-nums;white-space:nowrap}
+  td.is{color:var(--accent);font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+  td.qt{font-family:var(--serif);color:var(--ink-2)}
+
+  footer{border-top:1px solid var(--line);padding:24px 0 44px;font-size:12.5px;color:var(--ink-3);line-height:1.6;margin-top:20px}
+  footer p{margin:0 0 8px;max-width:82ch}
+
+  @media (max-width:640px){
+    .q{grid-template-columns:1fr}
+    .qno{padding-top:0;margin-bottom:6px;display:flex;gap:8px;align-items:baseline}
+    .qno .yr{margin-top:0}
+    .mast-in{padding:26px 0 20px}
+    .pagehead{padding:26px 0 22px}
+    .ph-meta{gap:18px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none!important;animation:none!important;scroll-behavior:auto!important}
+  }
+</style>
+
+<div class="topbar">
+  <div class="wrap tb">
+    <button class="home-btn" id="home-btn"><span class="ar">&#9664;</span> All years</button>
+    <div class="search">
+      <label for="q" class="sr">Search all questions</label>
+      <input id="q" type="search" placeholder="Search all years — Article 21, collegium, ordinance…" autocomplete="off">
+      <button class="x" id="clear" aria-label="Clear search">&times;</button>
+    </div>
+    <span class="crumb" id="crumb"></span>
+  </div>
+</div>
+
+<div id="app"></div>
+
+<footer>
+  <div class="wrap">
+    <p><strong>The 2013 break.</strong> Before 2013 polity was a section inside GS Paper I (usually Q6–Q9), with internal choice and factual, institutional questions. From 2013 it became GS Paper II — its own 250-mark paper, every question compulsory, all statement-based and analytical. Polity carried about 130 of 300 marks in 2000 and roughly 37 by 2012; the restructuring was a correction to exactly that.</p>
+    <p><strong>Fidelity.</strong> Question text is reproduced as printed and keyed to the year-wise question papers, not to topic-wise compilations. Where archived transcriptions carried obvious OCR damage (the 2014 paper's “Staring”, “hat speech”, “NIIRC”; the 2015 paper's “Arbitration and Conciliation Act, 1966”) the standard published wording is used.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  var TH = {
+    cons:"Constitution & Amendments", rght:"Rights, DPSP & Duties", exec:"Executive",
+    parl:"Parliament & Legislatures", judi:"Judiciary & Separation of Powers",
+    fedl:"Federalism & Centre–State", locl:"Local Government", elec:"Elections & the RPA",
+    cbdy:"Constitutional Bodies", sbdy:"Statutory & Regulatory Bodies",
+    comp:"Comparison with Other Constitutions", poli:"Parties, Pressure Groups & Political Process",
+    govn:"Governance & Accountability"
+  };
+  var THORDER=["cons","rght","exec","parl","judi","fedl","locl","elec","cbdy","sbdy","comp","poli","govn"];
+
+  var YNOTE = {
+    2000:"Polity's heaviest year in this set — about 130 of 300 marks, including a full 30-mark block on the Human Rights Protection Act. The Constitution-review question was set the same year the National Commission to Review the Working of the Constitution was constituted.",
+    2005:"The Panchayati Raj question is timed to the tenth anniversary of the 73rd and 74th Amendments.",
+    2008:"Unusual: besides the standard constitutional block, a second block (Q9) on caste, national integration and regional parties pushed the political-science weight higher than any other year in this era.",
+    2009:"A turning point. From here the tidy Q6–Q9 polity block dissolves into the paper, and institutional questions give way to governance and current-affairs framing — the direction the exam would formalise in 2013.",
+    2012:"The thinnest polity year in the whole set. No 250-word constitutional question at all; polity survives only as 50-word and 20-word items. This is the low point immediately before the restructuring that gave polity a paper of its own.",
+    2013:"The pattern change. Polity gets its own 250-mark paper and choice is abolished — every question compulsory. Note the format oddity: 25 questions of equal weight, used only this year.",
+    2016:"The most constitution-heavy paper of the GS-II era — the first eight questions are all pure constitutional law.",
+    2020:"A COVID-era paper. Q11 on centralising tendencies was set weeks into the farm-laws protests.",
+    2022:"The most bare-Constitution-and-case-law paper of the recent set — Q11 even asks candidates to cite case laws by name.",
+    2025:"The most recent paper available. The comparative-constitution question appears twice, both against the USA."
+  };
+
+  // [year, qno, marks, words, theme, text, note, choice]
+  var D = [
+  [2000,"Q6(a)",30,250,"cons","Examine the need for the review of the Indian Constitution.","Set the year the National Commission to Review the Working of the Constitution was constituted.","any one"],
+  [2000,"Q6(b)",30,250,"fedl","Examine the demand for greater State-autonomy and also its impact on the smooth functioning of the Indian polity.","Repeated almost verbatim in <b>2008 Q6(b)</b>.","any one"],
+  [2000,"Q7(a)",30,250,"parl","How does Parliament control the Union Executive? How effective is its control?","","any one"],
+  [2000,"Q7(b)",30,250,"cons","What constitutes the doctrine of 'basic features' as introduced into the Constitution of India by the Judiciary?","","any one"],
+  [2000,"Q8(a)",15,150,"elec","Identify the major electoral reforms which are necessary in the Indian Political System.","","any two"],
+  [2000,"Q8(b)",15,150,"parl","Examine the role of Estimates Committee.","Asked again in <b>2018 Q4</b>.","any two"],
+  [2000,"Q8(c)",15,150,"fedl","Discuss the major extra-constitutional factors influencing the working of federal polity in India.","Repeated almost verbatim in <b>2008 Q5(b)</b>.","any two"],
+  [2000,"Q9(a)",2,20,"parl","What is vote on account?","",""],
+  [2000,"Q9(b)",2,20,"exec","What is a Caretaker Government?","",""],
+  [2000,"Q9(c)",2,20,"exec","Do you justify the Prime Minister's entry into Parliament through the Rajya Sabha?","",""],
+  [2000,"Q9(d)",2,20,"parl","What is a Privilege Motion?","Repeated in <b>2003 Q9(b)</b>.",""],
+  [2000,"Q9(e)",2,20,"parl","What is Contempt of Parliament?","Repeated in <b>2008 Q7(d)</b>.",""],
+  [2000,"Q10(a)",30,250,"sbdy","Discuss the provisions of the Human Rights Protection Act (1993) — the definition of human rights, the composition of the National Human Rights Commission, its functions, and suggestions for amendment.","The NHRC returns as a full 12.5-mark question in <b>2014 Q9</b>. Sub-clause wording here is indicative; the stem is accurate.","any one"],
+  [2000,"Q10(b)",30,250,"judi","Discuss the propositions laid down by the Supreme Court of India in the context of Torture in Prisons and Human Dignity.","","any one"],
+
+  [2001,"Q6(a)",30,250,"fedl","Discuss the administrative relations between the centre and the states in the light of recent controversies.","","any one"],
+  [2001,"Q6(b)",30,250,"parl","Bring out the aberrations of the parliamentary system of government in India.","","any one"],
+  [2001,"Q7(a)",30,250,"rght","What is the constitutional position of Directive Principles of State Policy? How has it been interpreted by the judiciary after the emergency in 1975-77?","","any one"],
+  [2001,"Q7(b)",30,250,"cons","What are the main differences between the passage of a Constitution Amendment Bill and other Legislative Bills?","Repeated almost verbatim in <b>2006 Q8(a)</b> — a clean five-year cycle.","any one"],
+  [2001,"Q8(a)",15,150,"exec","Comment on the nature of Ordinance-making power of the President of India. What safeguards are there against possible misuse?","Returns as a major question in <b>2015 Q5</b>; for the Governor in <b>2022 Q12</b>.","any two"],
+  [2001,"Q8(b)",15,150,"exec","Distinguish between Cabinet Secretariat and Prime Minister's Secretariat. Which of these is more important?","","any two"],
+  [2001,"Q8(c)",15,150,"rght","Discuss the constitutional provisions regarding the rights of children.","","any two"],
+  [2001,"Q9(a)",2,20,"parl","Explain the Local Area Development Scheme of the Members of Parliament.","",""],
+  [2001,"Q9(b)",2,20,"parl","What is Ethics Committee of Lok Sabha?","",""],
+  [2001,"Q9(c)",2,20,"fedl","Why is it said that the centre has absolute veto over State Legislature?","",""],
+  [2001,"Q9(d)",2,20,"parl","What is Call Attention Motion?","",""],
+  [2001,"Q9(e)",2,20,"parl","When is the device of joint sitting of both the Houses of Parliament not available?","The seed of the full <b>2017 Q13</b> on occasions for joint sittings.",""],
+
+  [2002,"Q6(a)",30,250,"exec","“The issue of a hung Parliament adversely affects the stability of Indian Government.” Discuss the statement and point out how far changing over to the Presidential form of government will be a solution to this problem.","","any one"],
+  [2002,"Q6(b)",30,250,"cons","Why does the Constitution of India provide different forms of Oaths for the President, the Ministers, the legislators and the members of the judiciary? Discuss their significance.","","any one"],
+  [2002,"Q7(a)",30,250,"judi","What is the position of the Supreme Court under the Constitution of India? How far does it play its role as the guardian of the Constitution?","","any one"],
+  [2002,"Q7(b)",30,250,"cons","How is the Constitution of India amended? Do you think that the procedure for amendment makes the Constitution a-play-thing in the hands of the Centre?","The same worry drives <b>2019 Q12</b> and <b>2025 Q12</b>.","any one"],
+  [2002,"Q8(a)",15,150,"rght","Discuss the constitutional provisions relating to the nonjusticiable directives binding upon the states.","","any two"],
+  [2002,"Q8(b)",15,150,"elec","Describe the methods of delimiting constituencies for parliamentary elections in India.","Not asked since — and due before the 2026 delimitation exercise.","any two"],
+  [2002,"Q8(c)",15,150,"parl","Explain the role of the Public Accounts Committee.","Returns in <b>2017 Q5</b>.","any two"],
+  [2002,"Q9(i)",2,20,"cons","What is the importance of the 84th Amendment of the Indian Constitution?","",""],
+  [2002,"Q9(ii)",2,20,"fedl","Under what Article of the Constitution can the Union Government play its role in settling inter-state water disputes?","Becomes a full question in <b>2013 Q6</b>.",""],
+  [2002,"Q9(iii)",2,20,"parl","What is the role of the protem speaker?","Repeated in <b>2007 Q8(b)</b>.",""],
+  [2002,"Q9(iv)",2,20,"parl","What is meant by the 'lame-duck session' of the legislature?","",""],
+  [2002,"Q9(v)",2,20,"locl","What is meant by the 'fringe areas' in the sphere of local government in India?","",""],
+
+  [2003,"Q6(a)",30,250,"exec","Discuss the question of death sentence and Presidential clemency.","Opens the clemency chain: 2003 → 2011 → 2014 → <b>2025 Q3</b>.","any one"],
+  [2003,"Q6(b)",30,250,"exec","Explain the discretionary powers of the Governor of a State.","","any one"],
+  [2003,"Q7(a)",30,250,"parl","Discuss Parliamentary Control over the Executive.","Asked again near-verbatim in <b>2021 Q4</b>.","any one"],
+  [2003,"Q7(b)",30,250,"parl","Identify the major obstacles in the smooth functioning of Parliamentary democracy in India.","","any one"],
+  [2003,"Q8(a)",15,150,"cons","Highlight the significance of Forty Fourth Amendment to the Constitution of India.","","any two"],
+  [2003,"Q8(b)",15,150,"rght","Identify the major Fundamental Duties.","Returns in <b>2008 Q6(a)</b> and <b>2011 Q1(a)</b>, then silence — overdue.","any two"],
+  [2003,"Q8(c)",15,150,"parl","Explain the relevance of Rajya Sabha as a second chamber in the federal set up of Indian Parliamentary System.","Returns in <b>2020 Q14</b>.","any two"],
+  [2003,"Q9(a)",2,20,"parl","What is a point of order? When can it be raised?","",""],
+  [2003,"Q9(b)",2,20,"parl","What is a Privilege Motion?","",""],
+  [2003,"Q9(c)",2,20,"exec","State the difference between Council of Ministers and the Cabinet.","Repeated verbatim in <b>2007 Q9(d)</b>.",""],
+  [2003,"Q9(d)",2,20,"exec","How is the Vice President of India elected?","The Vice-President gets a full question in <b>2022 Q4</b>.",""],
+  [2003,"Q9(e)",2,20,"parl","What is meant by 'Sine-die' adjournment?","",""],
+
+  [2004,"Q6(a)",30,250,"cons","What is the significance of a preamble to a constitution? Bring out the philosophy of the Indian polity as reflected in core constitutional values.","The Preamble returns in <b>2016 Q5</b>.","any one"],
+  [2004,"Q6(b)",30,250,"fedl","Discuss the meaning of 'breakdown of constitutional machinery'. What are its effects?","Article 356 returns in <b>2023 Q13</b>.","any one"],
+  [2004,"Q7(a)",30,250,"rght","Discuss how the Constitution of India provides equal rights.","Compared with the US Constitution in <b>2021 Q13</b>.","any one"],
+  [2004,"Q7(b)",30,250,"cbdy","How does the Indian Constitution seek to maintain independence of the Public Service Commission?","","any one"],
+  [2004,"Q8(a)",15,150,"parl","Define Money-bill. Discuss how it is passed in the Parliament.","Not asked since — despite sustained controversy over Money Bill certification.","any two"],
+  [2004,"Q8(b)",15,150,"cbdy","What is a Finance Commission? Discuss the main functions of the State Finance Commission.","","any two"],
+  [2004,"Q8(c)",15,150,"locl","Discuss how state governments can exercise control over panchayats.","Anticipates <b>2023 Q3</b> on states' reluctance to empower local bodies.","any two"],
+  [2004,"Q9(a)",2,20,"rght","What is Habeas Corpus?","",""],
+  [2004,"Q9(b)",2,20,"fedl","What are the constitutional restrictions imposed upon the power of borrowing of the state governments?","",""],
+  [2004,"Q9(c)",2,20,"rght","What is the special facility provided to the linguistic minorities under Article 350 A?","",""],
+  [2004,"Q9(d)",2,20,"judi","How can a judge of the Supreme Court be removed?","",""],
+  [2004,"Q9(e)",2,20,"elec","How is the Election Commission of India constituted?","",""],
+
+  [2005,"Q6",30,250,"judi","Is it possible to distinguish between judicial review and judicial activism in India? Does the recent behaviour of the Indian judiciary partake more of judicial activism? Argue with suitable examples.","A theme that recurs through <b>2008</b>, <b>2014</b>, <b>2020</b> and <b>2024</b>.",""],
+  [2005,"Q7(a)",30,250,"locl","Would you say that the implementation of the Panchayati System in the last ten years has led to a real restructuring of the Indian polity?","","any one"],
+  [2005,"Q7(b)",30,250,"rght","Give your views on the right to freedom of religion as enshrined in the Indian Constitution. Do they make India a secular State?","Secularism returns comparatively in <b>2019 Q5</b> (France) and <b>2024 Q15</b> (USA).","any one"],
+  [2005,"Q8(a)",15,150,"rght","What are the constitutional limitations on the free movements of Indians throughout the country?","Asked again in <b>2022 Q2</b>.","any two"],
+  [2005,"Q8(b)",15,150,"govn","How has the Indian State tackled the trade-off between environment and development?","","any two"],
+  [2005,"Q8(c)",15,150,"elec","What are the steps that the Election Commission may take if a recalcitrant State Government wants to put off Assembly Elections?","","any two"],
+  [2005,"Q9(a)",2,20,"rght","What is meant by double jeopardy?","",""],
+  [2005,"Q9(b)",2,20,"fedl","What are the protections afforded to Scheduled Tribes in the Fifth Schedule of the Indian Constitution?","",""],
+  [2005,"Q9(c)",2,20,"judi","In what ways can the President of India ascertain the views of the Supreme Court on a particular bill?","",""],
+  [2005,"Q9(d)",2,20,"rght","What is the common point between Articles 14 and 226 of the Indian Constitution?","",""],
+  [2005,"Q9(e)",2,20,"parl","Who and what does the Indian Parliament consist of?","",""],
+
+  [2006,"Q6(a)",30,250,"rght","What is right to life and personal liberty? How have the courts expanded its meaning in recent years?","The direct ancestor of <b>2023 Q11</b> and <b>2024 Q12</b>.","any one"],
+  [2006,"Q6(b)",30,250,"parl","On what grounds can a member be disqualified from either House of Parliament?","Repeated in <b>2010 Q4(a)</b>; recast under the RPA in <b>2019 Q11</b>.","any one"],
+  [2006,"Q7(b)",30,250,"poli","Discuss economic backwardness as a major challenge of Indian democracy. Can democracy and development go together smoothly?","","any one"],
+  [2006,"Q8(a)",15,150,"cons","How would you differentiate between the passage of a Constitution Amendment Bill and of an Ordinary Legislative Bill?","","any two"],
+  [2006,"Q8(b)",15,150,"fedl","How does the Inter-State Council establish co-ordination between States?","","any two"],
+  [2006,"Q8(c)",15,150,"judi","Is the High Courts' power to issue 'writs' wider than that of the Supreme Court of India?","","any two"],
+  [2006,"Q9(a)",2,20,"parl","Explain the following terms: (i) Dissolution of the House (ii) Prorogation of the House (iii) Adjournment of the business of the House","",""],
+  [2006,"Q9(b)",2,20,"parl","What is Consolidated Fund of India?","",""],
+  [2006,"Q9(c)",2,20,"exec","To what extent can the President withhold his assent to a Bill already passed by the Parliament?","",""],
+
+  [2007,"Q6(a)",30,250,"cons","What is a Constitution? What are the main sources of the Indian Constitution?","","any one"],
+  [2007,"Q6(b)",30,250,"rght","Bring out the differences between the Fundamental Rights and the Directive Principles of State Policy. Discuss some of the measures taken by the Union and State Governments for the implementation of the Directive Principles of State Policy.","","any one"],
+  [2007,"Q7(a)",30,250,"poli","What is Regionalism? In which way regionalism has affected the Indian polity?","","any one"],
+  [2007,"Q7(b)",30,250,"elec","What are the main determinants of voting behaviour in India?","Asked again with a twist in <b>2009 Q6(b)</b>.","any one"],
+  [2007,"Q8(a)",15,150,"exec","What are the exceptions when the President of India is not bound by the aid and advice of the Council of Ministers?","","any two"],
+  [2007,"Q8(b)",15,150,"parl","What is pro tem Speaker?","","any two"],
+  [2007,"Q8(c)",15,150,"fedl","Under what circumstances, Parliament may legislate on State subjects?","Links to <b>2010 Q5(e)</b> on Articles 249 and 312.","any two"],
+  [2007,"Q9(a)",2,20,"poli","What is criminalization of politics?","",""],
+  [2007,"Q9(b)",2,20,"exec","How is the President of India elected?","Becomes a comparative question in <b>2022 Q14</b>.",""],
+  [2007,"Q9(c)",2,20,"parl","What is casting vote?","",""],
+  [2007,"Q9(d)",2,20,"exec","What is the difference between Council of Ministers and Cabinet?","",""],
+  [2007,"Q9(e)",2,20,"rght","What is the importance of Right to Constitutional Remedies?","",""],
+
+  [2008,"Q5(a)",30,250,"judi","What is meant by 'Judicial Activism'? Evaluate its role in the context of the functioning of Indian polity.","","any one"],
+  [2008,"Q5(b)",30,250,"fedl","Discuss the major extra-constitutional factors influencing the federal polity in India.","","any one"],
+  [2008,"Q6(a)",15,150,"rght","Enumerate the Fundamental Duties incorporated in the Constitution after the 42nd Amendment.","","any two"],
+  [2008,"Q6(b)",15,150,"fedl","Examine the demand for greater state autonomy and its impact on the smooth functioning of Indian polity.","","any two"],
+  [2008,"Q6(c)",15,150,"cbdy","Discuss the composition and functions of the Union Public Service Commission.","","any two"],
+  [2008,"Q7(a)",2,20,"parl","What is a Censure Motion?","",""],
+  [2008,"Q7(b)",2,20,"cbdy","Distinguish between the auditing and accounting functions of the CAG of India.","The seed of <b>2016 Q4</b> and <b>2024 Q4</b> on propriety audit.",""],
+  [2008,"Q7(c)",2,20,"parl","Distinguish between a starred question and an unstarred one asked in the Parliament.","",""],
+  [2008,"Q7(d)",2,20,"parl","What is contempt of Parliament?","",""],
+  [2008,"Q7(e)",2,20,"exec","What were the two major considerations to have the Governor appointed and not elected?","",""],
+  [2008,"Q9(a)",15,150,"poli","Examine the role of caste in Indian politics.","","any two"],
+  [2008,"Q9(b)",15,150,"poli","Discuss the problems in achieving National Integration in India.","","any two"],
+  [2008,"Q9(c)",15,150,"poli","Examine the impact of Regional Political Parties in Indian politics.","Anticipates <b>2016 Q3</b> and <b>2022 Q13</b>.","any two"],
+  [2008,"Q11(a)",15,150,"locl","Examine whether rural women in India have been empowered by their active participation in Panchayat Raj System.","Asked again, more sharply, in <b>2019 Q13</b> and <b>2020 Q15</b>.",""],
+
+  [2009,"Q6(a)",15,150,"govn","What are your views on the features and impact of the Domestic Violence Act, 2005?","","any two"],
+  [2009,"Q6(b)",15,150,"elec","Are the traditional determinants of voting behaviour in India changing? Examine in the context of the last General Elections.","","any two"],
+  [2009,"Q6(c)",15,150,"govn","Examine corruption as a serious development challenge in Indian Polity.","Anticipates the Lokpal question in <b>2013 Q17</b>.","any two"],
+  [2009,"Q7(b)",15,150,"cbdy","In the changing context of governance in the country, what should be the role of the UPSC?","","any two"],
+  [2009,"Q9(c)",15,150,"rght","'As we live in a plural society we need the greatest freedom to express our opinions even if others find it offensive' — Do you agree? Discuss with reference to some recent incidents in the Indian context.","Reappears as <b>2013 Q2</b> and <b>2014 Q4</b>.","any two"],
+  [2009,"Q10(a)",2,20,"cons","Significance of 26th November in the country's polity","",""],
+  [2009,"Q10(i)",2,20,"exec","Pocket Veto","",""],
+  [2009,"Q10(j)",2,20,"locl","PESA, 1996","",""],
+
+  [2010,"Q1(a)",20,250,"fedl","“Disputes between the riparian states on sharing of river waters in post-Independence India are becoming increasingly complex.” Objectively analyse the major disputes in this connection, with special reference to the Southern States.","Asked again in <b>2013 Q6</b>, reframed as why the mechanism failed.",""],
+  [2010,"Q2(b)",12,150,"cons","With respect to Cooperative Societies what are the salient features of the 106th and 111th Constitutional Amendment Bills as at present?","These became the 97th Amendment Act, 2011 — Mains asks about pending bills, not just enacted law.","any two"],
+  [2010,"Q4(a)",12,150,"parl","What are the grounds of disqualification of a Member of Parliament from either House? Quote relevant provisions in your answer.","","any two"],
+  [2010,"Q5(e)",5,50,"parl","Legislative powers assigned to the Rajya Sabha under Art. 249 and Art. 312 of the Constitution","","any six"],
+  [2010,"Q6(b)",12,150,"parl","Bring out the powers and responsibilities attached to the office of the Speaker of the Lok Sabha.","The Speaker returns in <b>2020 Q5</b> and, for states, <b>2023 Q5</b>.","any three"],
+  [2010,"Q8(a)",5,50,"parl","How is disagreement between the Legislative Council and the Legislative Assembly of a State in passing of an ordinary Bill, resolved?","Legislative Councils get a full question in <b>2021 Q14</b>.",""],
+
+  [2011,"Q1(a)",20,250,"rght","“Essentially all this is contained in Part IV-A of the Constitution is just a codification of tasks integral of the Indian way of life.” Critically examine this statement.","Third outing for Fundamental Duties in nine years — and the last to date.","any three"],
+  [2011,"Q1(b)",20,250,"exec","“The exercise of executive clemency is not a privilege but is based on several principles, and discretion has to be exercised in public considerations.” Analyse this statement in the context of the judicial powers of the President of India.","","any three"],
+  [2011,"Q4(c)",12,150,"judi","Evolution of 'Green Benches' in our higher judiciary","The environmental-constitutionalism strand culminates in <b>2022 Q1</b>.","any five"],
+  [2011,"Q4(d)",12,150,"parl","Distinction between 'Department Related Parliamentary Standing Committees' and 'Parliamentary Forums'","DRSCs get a full evaluation in <b>2021 Q15</b>.","any five"],
+  [2011,"Q7(c)",5,50,"govn","Composition and functions of the National Executive Committee of the National Disaster Management Authority","",""],
+  [2011,"Q7(d)",5,50,"judi","The Bihar Special Courts Act, 2009 and why it has been in the news recently?","",""],
+  [2011,"Q7(e)",5,50,"sbdy","The Telecommunications Ministry's proposed Spectrum Management Commission","",""],
+
+  [2012,"Q2(b)",12,150,"govn","The Union Cabinet recently cleared the proposal to rename and amend the Child Labour (Prohibition and Regulation) Act, 1986. What are the salient features of the proposed amendments?","","any five"],
+  [2012,"Q2(e)",12,150,"govn","What are the salient features of the Consumer Protections (Amendment) Bill, 2011 introduced in the Lok Sabha in December 2011?","","any five"],
+  [2012,"Q3(a)",5,50,"sbdy","What is the 'Parivarik Mahila Lok Adalat'?","Lok Adalats get a full question in <b>2024 Q2</b>.",""],
+  [2012,"Q3(d)",5,50,"rght","What are the Rights within the ambit of Article 21 of the Indian Constitution?","",""],
+  [2012,"Q3(e)",5,50,"govn","Comment on the significance of the Preamble contained in the Right to Information Act.","The RTI returns in <b>2020 Q2</b>.",""],
+  [2012,"Q3(f)",5,50,"sbdy","To implement one key recommendation of the Mohini Giri Committee, the Government has recently announced the constitution of a National Council. Highlight the composition and the mandate of the National Council.","",""],
+  [2012,"Q4(c)",2,20,"elec","Determining the 'value' assigned to the vote of a Member of a State Legislative Assembly and of a Member of Parliament in the Indian Presidential elections","Sources differ on whether this was a 50-word or 20-word item; the fuller listing places it here.",""],
+
+  [2013,"Q1",10,200,"parl","The role of individual MPs (Members of Parliament) has diminished over the years and as a result healthy constructive debates on policy issues are not usually witnessed. How far can this be attributed to the anti-defection law which was legislated but with a different intention?","Asked again in <b>2019 Q15</b>, that time without the anti-defection framing.",""],
+  [2013,"Q2",10,200,"rght","Discuss Section 66A of IT Act, with reference to its alleged violation of Article 19 of the Constitution.","Struck down two years later in Shreya Singhal v. Union of India (2015).",""],
+  [2013,"Q3",10,200,"fedl","Recent directives from Ministry of Petroleum and Natural Gas are perceived by the 'Nagas' as a threat to override the exceptional status enjoyed by the State. Discuss in light of Article 371A of the Indian Constitution.","",""],
+  [2013,"Q4",10,200,"cons","The Supreme Court of India keeps a check on arbitrary power of the Parliament in amending the Constitution. Discuss critically.","",""],
+  [2013,"Q5",10,200,"fedl","Many State Governments further bifurcate geographical administrative areas like Districts and Talukas for better governance. In light of the above, can it also be justified that more number of smaller States would bring in effective governance at State level? Discuss.","Asked in the year Telangana's creation was cleared.",""],
+  [2013,"Q6",10,200,"fedl","Constitutional mechanisms to resolve the inter-state water disputes have failed to address and solve the problems. Is the failure due to structural or process inadequacy or both? Discuss.","",""],
+  [2013,"Q7",10,200,"cbdy","Discuss the recommendations of the 13th Finance Commission which have been a departure from the previous commissions for strengthening the local government finances.","",""],
+  [2013,"Q8",10,200,"sbdy","The product diversification of financial institutions and insurance companies, resulting in overlapping of products and services strengthens the case for the merger of the two regulatory agencies, namely SEBI and IRDA. Justify.","",""],
+  [2013,"Q10",10,200,"poli","Pressure group politics is sometimes seen as the informal face of politics. With regards to the above, assess the structure and functioning of pressure groups in India.","First of five: 2013 → 2017 → 2019 → 2021 → <b>2025 Q15</b>.",""],
+  [2013,"Q12",10,200,"govn","The Central Government frequently complains on the poor performance of the State Governments in eradicating suffering of the vulnerable sections of the society. Restructuring of Centrally sponsored schemes across the sectors for ameliorating the cause of vulnerable sections of population aims at providing flexibility to the States in better implementation. Critically evaluate.","",""],
+  [2013,"Q13",10,200,"govn","Electronic cash transfer system for the welfare schemes is an ambitious project to minimize corruption, eliminate wastage and facilitate reforms. Comment.","Returns as DBT in <b>2022 Q8</b>.",""],
+  [2013,"Q14",10,200,"govn","The basis of providing urban amenities in rural areas (PURA) is rooted in establishing connectivity. Comment.","",""],
+  [2013,"Q16",10,200,"govn","Though Citizens' charters have been formulated by many public service delivery organizations, there is no corresponding improvement in the level of citizens' satisfaction and quality of services being provided. Analyse.","Repeated in <b>2018 Q18</b> and <b>2024 Q16</b>.",""],
+  [2013,"Q17",10,200,"sbdy","A national Lokpal, however strong it may be, cannot resolve the problems of immorality in public affairs. Discuss.","The Lokpal and Lokayuktas Act was passed in December 2013, months after this paper.",""],
+
+  [2014,"Q1",12.5,200,"judi","Starting from inventing the 'basic structure' doctrine, the judiciary has played a highly proactive role in ensuring that India develops into a thriving democracy. In light of the statement, evaluate the role played by judicial activism in achieving the ideals of democracy.","Widely misdated to 2015. The year-wise paper places it at 2014 Q1.",""],
+  [2014,"Q2",12.5,200,"fedl","Though the federal principle is dominant in our Constitution and that principle is one of its basic features, but it is equally true that federalism under the Indian Constitution leans in favour of a strong Centre, a feature that militates against the concept of strong federalism. Discuss.","",""],
+  [2014,"Q3",12.5,200,"parl","The 'Powers, Privileges and Immunities of Parliament and its Members' as envisaged in Article 105 of the Constitution leave room for a large number of un-codified and un-enumerated privileges to continue. Assess the reasons for the absence of legal codification of the 'parliamentary privileges'. How can this problem be addressed?","",""],
+  [2014,"Q4",12.5,200,"rght","What do you understand by the concept “freedom of speech and expression”? Does it cover hate speech also? Why do the films in India stand on a slightly different plane from other forms of expression? Discuss.","",""],
+  [2014,"Q5",12.5,200,"exec","Instances of President's delay in commuting death sentences has come under public debate as denial of justice. Should there be a time limit specified for the President to accept/reject such petitions? Analyse.","Set against Shatrughan Chauhan (2014).",""],
+  [2014,"Q6",12.5,200,"exec","The size of the cabinet should be as big as governmental work justifies and as big as the Prime Minister can manage as a team. How far is the efficacy of a government then inversely related to the size of the cabinet? Discuss.","",""],
+  [2014,"Q7",12.5,200,"govn","Though 100 percent FDI is already allowed in non-news media like a trade publication and general entertainment channel, the Government is mulling over the proposal for increased FDI in news media for quite some time. What difference would an increase in FDI make? Critically evaluate the pros and cons.","",""],
+  [2014,"Q8",12.5,200,"sbdy","The setting up of a Rail Tariff Authority to regulate fares will subject the cash strapped Indian Railways to demand subsidy for obligation to operate non-profitable routes and services. Taking into account the experience in the power sector, discuss if the proposed reform is expected to benefit the consumers, the Indian Railways or the private container operators.","",""],
+  [2014,"Q9",12.5,200,"sbdy","National Human Rights Commission (NHRC) in India can be most effective when its tasks are adequately supported by other mechanisms that ensure the accountability of a government. In light of the above observation assess the role of NHRC as an effective complement to the judiciary and other institutions in promoting and protecting human rights standards.","Structural limitations of Human Rights Commissions return in <b>2021 Q12</b>.",""],
+  [2014,"Q13",12.5,200,"govn","Should the premier institutes like IITs/IIMs be allowed to retain premier status, allowed more academic independence in designing courses and also decide mode/criteria of selection of students? Discuss in light of the growing challenges.","",""],
+  [2014,"Q14",12.5,200,"govn","Has the cadre-based Civil Services Organisation been the cause of slow change in India? Critically examine.","",""],
+  [2014,"Q15",12.5,200,"govn","Two parallel run schemes of the Government, viz. the Aadhaar Card and NPR, one as voluntary and the other as compulsory, have led to debates at national levels and also litigations. On merits, discuss whether or not both schemes need run concurrently. Analyse the potential of the schemes to achieve developmental benefits and equitable growth.","The constitutional question left open here is settled by Puttaswamy (2017).",""],
+
+  [2015,"Q1",12.5,200,"rght","Discuss the possible factors that inhibit India from enacting for its citizens a uniform civil code as provided for in the Directive Principles of State Policy.","Live again after Uttarakhand's UCC — overdue for a repeat.",""],
+  [2015,"Q2",12.5,200,"fedl","The concept of cooperative federalism has been increasingly emphasised in recent years. Highlight the drawbacks in the existing structure and the extent to which cooperative federalism would answer the shortcomings.","Asked the year the Planning Commission was replaced by NITI Aayog.",""],
+  [2015,"Q3",12.5,200,"locl","In the absence of a well-educated and organised local level government system, 'Panchayats' and 'Samitis' have remained mainly political institutions and not effective instruments of governance. Critically discuss.","",""],
+  [2015,"Q4",12.5,200,"judi","Khap Panchayats have been in the news for functioning as extra-constitutional authorities, often delivering pronouncements amounting to human rights violations. Discuss critically the actions taken by the legislative, executive and the judiciary to set the things right in this regard.","",""],
+  [2015,"Q5",12.5,200,"judi","Resorting to ordinances has always raised concern on violation of the spirit of separation of powers doctrine. While noting the rationales justifying the power to promulgate ordinances, analyse whether the decisions of the Supreme Court on the issue have further facilitated resorting to this power. Should the power to promulgate ordinances be repealed?","Commonly misdated to 2016. The year-wise paper places it at 2015 Q5.",""],
+  [2015,"Q6",12.5,200,"sbdy","What are the major changes brought in the Arbitration and Conciliation Act, 1996 through the recent Ordinance promulgated by the President? How far will it improve India's dispute resolution mechanism? Discuss.","Archived transcriptions misprint the Act's year as 1966; it is of 1996.",""],
+  [2015,"Q7",12.5,200,"rght","Does the right to clean environment entail legal regulations on burning crackers during Diwali? Discuss in the light of Article 21 of the Indian Constitution and Judgement(s) of the Apex Court in this regard.","",""],
+  [2015,"Q8",12.5,200,"govn","Examine critically the recent changes in the rules governing foreign funding of NGOs under the Foreign Contribution (Regulation) Act (FCRA), 1976.","",""],
+  [2015,"Q10",12.5,200,"govn","How can the role of NGOs be strengthened in India for development works relating to protection of the environment? Discuss throwing light on the major constraints.","",""],
+  [2015,"Q14",12.5,200,"govn","In the light of the Satyam Scandal (2009), discuss the changes brought in corporate governance to ensure transparency and accountability.","",""],
+  [2015,"Q15",12.5,200,"govn","If the amendment bill to the Whistleblowers Protection Act, 2011 tabled in the Parliament is passed, there may be no one left to protect. Critically evaluate.","",""],
+  [2015,"Q16",12.5,200,"sbdy","For achieving the desired objectives, it is necessary to ensure that the regulatory institutions remain independent and autonomous. Discuss in the light of the experiences in recent past.","",""],
+
+  [2016,"Q1",12.5,200,"fedl","Discuss the essentials of the 69th Constitutional Amendment Act and anomalies, if any, that have led to the recent reported conflicts between the elected representatives and the institution of the Lieutenant Governor in the administration of Delhi. Do you think that this will give rise to a new trend in the functioning of the Indian federal politics?","The Delhi tussle returns in <b>2018 Q11</b> after the July 2018 judgment.",""],
+  [2016,"Q2",12.5,200,"fedl","To what extent is Article 370 of the Indian Constitution, bearing marginal note “Temporary provision with respect to the State of Jammu and Kashmir”, temporary? Discuss the future prospects of this provision in the context of Indian polity.","Answered by events in August 2019; the successor is <b>2025 Q4</b>.",""],
+  [2016,"Q3",12.5,200,"poli","“The Indian party system is passing through a phase of transition which looks to be full of contradictions and paradoxes.” Discuss.","",""],
+  [2016,"Q4",12.5,200,"cbdy","Exercise of CAG's powers in relation to the accounts of the Union and the States is derived from Article 149 of the Indian Constitution. Discuss whether audit of the Government's policy implementation could amount to overstepping its own (CAG) jurisdiction.","",""],
+  [2016,"Q5",12.5,200,"cons","Discuss each adjective attached to the word 'Republic' in the 'Preamble'. Are they defendable in the present circumstances?","",""],
+  [2016,"Q6",12.5,200,"cons","What was held in the Coelho case? In this context, can you say that judicial review is of key importance amongst the basic features of the Constitution?","",""],
+  [2016,"Q7",12.5,200,"fedl","Did the Government of India Act, 1935 lay down a federal constitution? Discuss.","",""],
+  [2016,"Q8",12.5,200,"sbdy","What is a quasi-judicial body? Explain with the help of concrete examples.","Tribunals asked head-on in <b>2018 Q12</b>, <b>2019 Q2</b> and <b>2025 Q2</b>.",""],
+  [2016,"Q10",12.5,200,"govn","“In the Indian governance system, the role of non-state actors has been only marginal.” Critically examine this statement.","Recast provocatively in <b>2025 Q8</b>.",""],
+  [2016,"Q11",12.5,200,"govn","“Effectiveness of the government system at various levels and people's participation in the governance system are inter-dependent.” Discuss their relationship in the context of India.","",""],
+  [2016,"Q12",12.5,200,"govn","In the integrity index of Transparency International, India stands very low. Discuss briefly the legal, political, social and cultural factors that have caused the decline of public morality in India.","",""],
+  [2016,"Q13",12.5,200,"govn","Has the Indian governmental system responded adequately to the demands of Liberalization, Privatization and Globalization started in 1991? What can the government do to be responsive to this important change?","",""],
+  [2016,"Q14",12.5,200,"govn","“Traditional bureaucratic structure and culture have hampered the process of socio-economic development in India.” Comment.","",""],
+
+  [2017,"Q1",10,150,"locl","“The local self-government system in India has not proved to be effective instrument of governance.” Critically examine the statement and give your views to improve the situation.","",""],
+  [2017,"Q2",10,150,"judi","Critically examine the Supreme Court's judgement on the 'National Judicial Appointments Commission Act, 2014' with reference to appointment of judges of higher judiciary in India.","The collegium returns comparatively in <b>2025 Q13</b>.",""],
+  [2017,"Q3",10,150,"elec","“Simultaneous election to the Lok Sabha and the State Assemblies will limit the amount of time and money spent in electioneering but it will reduce the government's accountability to the people.” Discuss.","Asked again in <b>2024 Q1</b> after the High-Level Committee report.",""],
+  [2017,"Q4",10,150,"poli","How do pressure groups influence Indian political process? Do you agree with this view that informal pressure groups have emerged as more powerful than formal pressure groups in recent years?","",""],
+  [2017,"Q5",10,150,"parl","Discuss the role of the Public Accounts Committee in establishing accountability of the government to the people.","",""],
+  [2017,"Q7",10,150,"govn","Does the Rights of Persons with Disabilities Act, 2016 ensure an effective mechanism for the empowerment and inclusion of the intended beneficiaries in the society? Discuss.","Asked again in <b>2022 Q7</b>.",""],
+  [2017,"Q8",10,150,"govn","Hunger and poverty are the biggest challenges for good governance in India still today. Evaluate how far successive governments have progressed in dealing with these humongous problems. Suggest measures for improvement.","",""],
+  [2017,"Q11",15,250,"fedl","Explain the salient features of the Constitution (One Hundred and First Amendment) Act, 2016. Do you think it is efficacious enough “to remove cascading effect of taxes and provide for common national market for goods and services”?","A second, federalism-angled question on the same amendment appears in <b>2023 Q15</b>.",""],
+  [2017,"Q12",15,250,"rght","Examine the scope of Fundamental Rights in the light of the latest judgement of the Supreme Court on Right to Privacy.","Puttaswamy was decided two months before this paper.",""],
+  [2017,"Q13",15,250,"parl","The Indian Constitution has provisions for holding joint session of the two houses of the Parliament. Enumerate the occasions when this would normally happen and also the occasions when it cannot, with reasons thereof.","",""],
+  [2017,"Q14",15,250,"elec","To enhance the quality of democracy in India the Election Commission of India has proposed electoral reforms in 2016. What are the suggested reforms and how far are they significant to make democracy successful?","",""],
+  [2017,"Q15",15,250,"sbdy","Is the National Commission for Women able to strategize and tackle the problems that women face at both public and private spheres?","Constitutionalisation of the NCW is asked in <b>2020 Q15</b>.",""],
+  [2017,"Q18",15,250,"govn","“Initially Civil Services in India were designed to achieve the goals of neutrality and effectiveness, which seems to be lacking in the present context.” Do you agree with the view that drastic reforms are required in Civil Services? Comment.","",""],
+
+  [2018,"Q1",10,150,"elec","In the light of recent controversy regarding the use of Electronic Voting Machines (EVM), what are the challenges before the Election Commission of India to ensure the trustworthiness of elections in India?","",""],
+  [2018,"Q2",10,150,"cbdy","Whether the National Commission for Scheduled Castes (NCSC) can enforce the implementation of constitutional reservation for the Scheduled Castes in the religious minority institutions? Examine.","",""],
+  [2018,"Q3",10,150,"cons","Under what circumstances can the Financial Emergency be proclaimed by the President of India? What consequences follow when such a declaration remains in force?","",""],
+  [2018,"Q4",10,150,"parl","Why do you think the committees are considered to be useful for parliamentary work? Discuss, in this context, the role of the Estimates Committee.","",""],
+  [2018,"Q5",10,150,"cbdy","“The Comptroller and Auditor General (CAG) has a very vital role to play.” Explain how this is reflected in the method and terms of his appointment as well as the range of powers he can exercise.","",""],
+  [2018,"Q8",10,150,"govn","E-governance is not only about utilization of the power of new technology, but also much about critical importance of the 'use value' of information. Explain.","Opens a run of e-governance questions: 2018 → 2020 → 2023 → 2024 → <b>2025</b>.",""],
+  [2018,"Q11",15,250,"fedl","Whether the Supreme Court Judgement (July 2018) can settle the political tussle between the Lt. Governor and elected government of Delhi? Examine.","",""],
+  [2018,"Q12",15,250,"judi","How far do you agree with the view that tribunals curtail the jurisdiction of ordinary courts? In view of the above, discuss the constitutional validity and competency of the tribunals in India.","",""],
+  [2018,"Q13",15,250,"comp","India and USA are two large democracies. Examine the basic tenets on which the two political systems are based.","Opens the comparative run — one has appeared <b>every year since</b>.",""],
+  [2018,"Q14",15,250,"cbdy","How is the Finance Commission of India constituted? What do you know about the terms of reference of the recently constituted Finance Commission? Discuss.","",""],
+  [2018,"Q15",15,250,"locl","Assess the importance of the Panchayat system in India as a part of local government. Apart from government grants, what sources the Panchayats can look out for financing developmental projects?","",""],
+  [2018,"Q16",15,250,"cbdy","Multiplicity of various commissions for the vulnerable sections of the society leads to problems of overlapping jurisdiction and duplication of functions. Is it better to merge all commissions into an umbrella Human Rights Commission? Argue your case.","",""],
+  [2018,"Q18",15,250,"govn","The Citizen's Charter is an ideal instrument of organisational transparency and accountability, but it has its own limitations. Identify the limitations and suggest measures for greater effectiveness of the Citizen's Charters.","",""],
+
+  [2019,"Q1",10,150,"judi","Do you think Constitution of India does not accept principle of strict separation of powers rather it is based on the principle of 'checks and balance'? Explain.","Frequently misdated to 2020. The year-wise paper places it at 2019 Q1.",""],
+  [2019,"Q2",10,150,"sbdy","The Central Administrative Tribunal which was established for redressal of grievances and complaints by or against central government employees, nowadays is exercising its powers as an independent judicial authority. Explain.","",""],
+  [2019,"Q3",10,150,"poli","What are the methods used by the farmers' organizations to influence the policy-makers in India and how effective are these methods?","",""],
+  [2019,"Q4",10,150,"fedl","From the resolution of contentious issues regarding distribution of legislative powers by the courts, 'Principle of Federal Supremacy' and 'Harmonious Construction' have emerged. Explain.","",""],
+  [2019,"Q5",10,150,"comp","What can France learn from the Indian Constitution's approach to secularism?","",""],
+  [2019,"Q8",10,150,"govn","Implementation of Information and Communication Technology (ICT) based projects/programmes usually suffers in terms of certain vital factors. Identify these factors and suggest measures for their effective implementation.","",""],
+  [2019,"Q11",15,250,"elec","On what grounds a people's representative can be disqualified under the Representation of People Act, 1951? Also mention the remedies available to such person against his disqualification.","The RPA becomes near-annual from here: 2019 → 2020 → 2022 → <b>2025</b>.",""],
+  [2019,"Q12",15,250,"cons","“Parliament's power to amend the Constitution is a limited power and it cannot be enlarged into absolute power.” In the light of this statement explain whether Parliament under Article 368 of the Constitution can destroy the Basic Structure of the Constitution by expanding its amending power?","Asked again in <b>2025 Q12</b>.",""],
+  [2019,"Q13",15,250,"locl","“The reservation of seats for women in the institutions of local self-government has had a limited impact on the patriarchal character of the Indian political process.” Comment.","",""],
+  [2019,"Q14",15,250,"cbdy","“The Attorney-General is the chief legal adviser and lawyer of the Government of India.” Discuss.","Asked again in <b>2025 Q5</b>.",""],
+  [2019,"Q15",15,250,"parl","Individual parliamentarian's role as the national law maker is on a decline, which in turn, has adversely impacted the quality of debates and their outcome. Discuss.","",""],
+  [2019,"Q16",15,250,"govn","'In the context of neo-liberal paradigm of developmental planning, multi-level planning is expected to make operations cost-effective and remove many implementation blockages' — Discuss.","",""],
+  [2019,"Q18",15,250,"govn","Performance of welfare schemes that are implemented for vulnerable sections is not so effective due to absence of their awareness and active involvement at all stages of policy process. Discuss.","",""],
+
+  [2020,"Q1",10,150,"elec","“There is a need for simplification of procedure for disqualification of persons found guilty of corrupt practices under the Representation of Peoples Act.” Comment.","The 'corrupt practices' limb is taken up directly in <b>2025 Q1</b>.",""],
+  [2020,"Q2",10,150,"sbdy","“Recent amendments to the Right to Information Act will have profound impact on the autonomy and independence of the Information Commission.” Discuss.","",""],
+  [2020,"Q3",10,150,"fedl","How far do you think cooperation, competition and confrontation have shaped the nature of federation in India? Cite some recent examples to validate your answer.","Variously misdated to 2018 and 2021. The year-wise paper places it at 2020 Q3.",""],
+  [2020,"Q4",10,150,"comp","The judicial system in India and UK seem to be converging as well as diverging in recent times. Highlight the key points of convergence and divergence between the two nations in terms of their judicial practices.","",""],
+  [2020,"Q5",10,150,"parl","'Once a Speaker, Always a Speaker'! Do you think this practice should be adopted to impart objectivity to the office of the Speaker of Lok Sabha? What could be its implication for the robust functioning of parliamentary business in India?","",""],
+  [2020,"Q7",10,150,"govn","“Institutional quality is a crucial driver of economic performance.” In this context suggest reforms in Civil Service for strengthening democracy.","",""],
+  [2020,"Q8",10,150,"govn","“The emergence of Fourth Industrial Revolution (Digital Revolution) has initiated e-Governance as an integral part of the government.” Discuss.","",""],
+  [2020,"Q11",15,250,"fedl","Indian Constitution exhibits centralising tendencies to maintain unity and integrity of the nation. Elucidate in the perspective of the Epidemic Diseases Act, 1897; The Disaster Management Act, 2005 and recently passed Farm Acts.","A COVID-era question, set weeks into the farm-laws protests.",""],
+  [2020,"Q12",15,250,"judi","Judicial legislation is antithetical to the doctrine of separation of powers as envisaged in the Indian Constitution. In this context justify the filing of large number of public interest petitions praying for issuing guidelines to executive authorities.","PIL is asked head-on in <b>2024 Q14</b>.",""],
+  [2020,"Q13",15,250,"locl","The strength and sustenance of local institutions in India has shifted from their formative phase of 'functions, functionaries and funds' to the contemporary stage of 'functionality'. Highlight the critical challenges faced by local institutions in terms of their functionality in recent times.","",""],
+  [2020,"Q14",15,250,"parl","Rajya Sabha has been transformed from a 'useless Stepney tyre' to the most useful supporting organ in past few decades. Highlight the factors as well as the areas in which this transformation could be visible.","",""],
+  [2020,"Q15",15,250,"cbdy","Which steps are required for constitutionalisation of a commission? Do you think imparting constitutionality to the national commission for woman would ensure greater gender justice and empowerment in India? Give reasons.","The live example of this process is asked in <b>2022 Q5</b> (NCBC).",""],
+
+  [2021,"Q1",10,150,"cons","'Constitutional Morality' is rooted in the Constitution itself and is founded on its essential facets. Explain the doctrine of 'Constitutional Morality' with the help of relevant judicial decisions.","Asked again at 15 marks in <b>2025 Q11</b>.",""],
+  [2021,"Q2",10,150,"judi","Discuss the desirability of greater representation to women in the higher judiciary to ensure diversity, equity and inclusiveness.","",""],
+  [2021,"Q3",10,150,"cbdy","How have the recommendations of the 14th Finance Commission of India enabled the states to improve their fiscal position?","",""],
+  [2021,"Q4",10,150,"parl","To what extent, in your view, the Parliament is able to ensure accountability of the executive in India?","Near-verbatim repeat of <b>2003 Q7(a)</b>.",""],
+  [2021,"Q5",10,150,"poli","'Pressure groups play a vital role in influencing public policy making in India.' Explain how the business associations contribute to public policies.","",""],
+  [2021,"Q11",15,250,"fedl","The jurisdiction of the Central Bureau of Investigation (CBI) regarding lodging an FIR and conducting probe within a particular state is being questioned by various States. However, the power of States to withhold consent to the CBI is not absolute. Explain with special reference to the federal character of India.","",""],
+  [2021,"Q12",15,250,"sbdy","Though the Human Rights Commissions have contributed immensely to the protection of human rights in India, yet they have failed to assert themselves against the mighty and powerful. Analyzing their structural and practical limitations, suggest remedial measures.","Often misdated to 2022. The year-wise paper places it at 2021 Q12.",""],
+  [2021,"Q13",15,250,"comp","Analyze the distinguishing features of the notion of Equality in the Constitutions of the USA and India.","",""],
+  [2021,"Q14",15,250,"parl","Explain the constitutional provisions under which Legislative Councils are established. Review the working and current status of Legislative Councils with suitable illustrations.","",""],
+  [2021,"Q15",15,250,"parl","Do Department-related Parliamentary Standing Committees keep the administration on its toes and inspire reverence for parliamentary control? Evaluate the working of such committees with suitable examples.","",""],
+  [2021,"Q18",15,250,"govn","Can Civil Society and Non-Governmental Organizations present an alternative model of public service delivery to benefit the common citizen? Discuss the challenges of this alternative model.","",""],
+
+  [2022,"Q1",10,150,"judi","“The most significant achievement of modern law in India is the constitutionalization of environmental problems by the Supreme Court.” Discuss this statement with the help of relevant case laws.","Often misdated to 2023. The year-wise paper places it at 2022 Q1.",""],
+  [2022,"Q2",10,150,"rght","“Right of movement and residence throughout the territory of India are freely available to the Indian citizens, but these rights are not absolute.” Comment.","Follows <b>2005 Q8(a)</b>. Often misdated to 2023.",""],
+  [2022,"Q3",10,150,"locl","To what extent, in your opinion, has the decentralisation of power in India changed the governance landscape at the grassroots?","",""],
+  [2022,"Q4",10,150,"exec","Discuss the role of the Vice-President of India as the Chairman of the Rajya Sabha.","Frequently misdated to 2024. The year-wise paper places it at 2022 Q4.",""],
+  [2022,"Q5",10,150,"cbdy","Discuss the role of the National Commission for Backward Classes in the wake of its transformation from a statutory body to a constitutional body.","",""],
+  [2022,"Q8",10,150,"govn","Reforming the government delivery system through the Direct Benefit Transfer Scheme is a progressive step, but it has its limitations too. Comment.","",""],
+  [2022,"Q11",15,250,"elec","Discuss the procedures to decide the disputes arising out of the election of a Member of the Parliament or State Legislature under The Representation of the People Act, 1951. What are the grounds on which the election of any returned candidate may be declared void? What remedy is available to the aggrieved party against the decision? Refer to the case laws.","",""],
+  [2022,"Q12",15,250,"exec","Discuss the essential conditions for exercise of the legislative powers by the Governor. Discuss the legality of re-promulgation of ordinances by the Governor without placing them before the Legislature.","The state-level counterpart of <b>2015 Q5</b>.",""],
+  [2022,"Q13",15,250,"fedl","“While the national political parties in India favour centralisation, the regional parties are in favour of State autonomy.” Comment.","",""],
+  [2022,"Q14",15,250,"comp","Critically examine the procedures through which the Presidents of India and France are elected.","",""],
+  [2022,"Q15",15,250,"cbdy","Discuss the role of the Election Commission of India in the light of the evolution of the Model Code of Conduct.","",""],
+
+  [2023,"Q1",10,150,"judi","“Constitutionally guaranteed judicial independence is a prerequisite of democracy.” Comment.","",""],
+  [2023,"Q2",10,150,"sbdy","Who are entitled to receive free legal aid? Assess the role of the National Legal Services Authority (NALSA) in rendering free legal aid in India.","",""],
+  [2023,"Q3",10,150,"locl","“The states in India seem reluctant to empower urban local bodies both functionally as well as financially.” Comment.","",""],
+  [2023,"Q4",10,150,"comp","Compare and contrast the British and Indian approaches to Parliamentary sovereignty.","",""],
+  [2023,"Q5",10,150,"parl","Discuss the role of Presiding Officers of state legislatures in maintaining order and impartiality in conducting legislative work and in facilitating best democratic practices.","The state-level counterpart of <b>2020 Q5</b>.",""],
+  [2023,"Q7",10,150,"sbdy","Discuss the role of the Competition Commission of India in containing the abuse of dominant position by the Multi-National Corporations in India. Refer to the recent decisions.","",""],
+  [2023,"Q8",10,150,"govn","E-governance, as a critical tool of governance, has ushered in effectiveness, transparency and accountability in governments. What inadequacies hamper the enhancement of these features?","",""],
+  [2023,"Q11",15,250,"rght","“The Constitution of India is a living instrument with capabilities of enormous dynamism. It is a constitution made for a progressive society.” Illustrate with special reference to the expanding horizons of the right to life and personal liberty.","",""],
+  [2023,"Q12",15,250,"rght","Explain the constitutional perspectives of Gender Justice with the help of relevant Constitutional Provisions and case laws.","",""],
+  [2023,"Q13",15,250,"fedl","Account for the legal and political factors responsible for the reduced frequency of using Article 356 by the Union Governments since mid 1990s.","",""],
+  [2023,"Q14",15,250,"poli","Discuss the contribution of civil society groups for women's effective and meaningful participation and representation in state legislatures in India.","Set the very month the 106th Amendment on women's reservation was passed.",""],
+  [2023,"Q15",15,250,"fedl","Explain the significance of the 101st Constitutional Amendment Act. To what extent does it reflect the accommodative spirit of federalism?","",""],
+  [2023,"Q16",15,250,"parl","Explain the structure of the Parliamentary Committee system. How far have the financial committees helped in the institutionalization of Indian Parliament?","Draws together 2000, 2002, 2017, 2018 and 2021.",""],
+
+  [2024,"Q1",10,150,"elec","Examine the need for electoral reforms as suggested by various committees with particular reference to “one nation – one election” principle.","",""],
+  [2024,"Q2",10,150,"sbdy","Explain and distinguish between Lok Adalats and Arbitration Tribunals. Whether they entertain civil as well as criminal cases?","",""],
+  [2024,"Q3",10,150,"exec","“The growth of cabinet system has practically resulted in the marginalisation of the parliamentary supremacy.” Elucidate.","Often misdated to 2022. The year-wise paper places it at 2024 Q3.",""],
+  [2024,"Q4",10,150,"cbdy","“The duty of the Comptroller and Auditor General is not merely to ensure the legality of expenditure but also its propriety.” Comment.","",""],
+  [2024,"Q5",10,150,"locl","Analyse the role of local bodies in providing good governance at local level and bring out the pros and cons of merging the rural local bodies with the urban local bodies.","",""],
+  [2024,"Q8",10,150,"govn","The Doctrine of Democratic Governance makes it necessary that the public perception of the integrity and commitment of civil servants becomes absolutely positive. Discuss.","",""],
+  [2024,"Q11",15,250,"govn","What are the aims and objects of recently passed and enforced, The Public Examination (Prevention of Unfair Means) Act, 2024? Whether University/State Education Board examinations, too, are covered under the Act?","",""],
+  [2024,"Q12",15,250,"rght","Right to privacy is intrinsic to life and personal liberty and is inherently protected under Article 21 of the constitution. Explain. In this reference discuss the law relating to D.N.A. testing of child in the womb to establish its paternity.","",""],
+  [2024,"Q13",15,250,"fedl","What changes has the Union Government recently introduced in the domain of Centre-State relations? Suggest measures to be adopted to build the trust between the Centre and the States and for strengthening federalism.","",""],
+  [2024,"Q14",15,250,"judi","Explain the reasons for the growth of public interest litigation in India. As a result of it, has the Indian Supreme Court emerged as the world's most powerful judiciary?","",""],
+  [2024,"Q15",15,250,"comp","Discuss India as a secular state and compare with the secular principles of the US constitution.","",""],
+  [2024,"Q16",15,250,"govn","The Citizens' charter has been a landmark initiative in ensuring citizen-centric administration. But it is yet to reach its full potential. Identify the factors hindering the realisation of its promise and suggest measures to overcome them.","",""],
+  [2024,"Q18",15,250,"govn","E-governance is not just about the routine application of digital technology in service delivery process. It is as much about multifarious interactions for ensuring transparency and accountability. In this context evaluate the role of the 'Interactive Service Model' of e-governance.","",""],
+
+  [2025,"Q1",10,150,"elec","Discuss the 'corrupt practices' for the purpose of the Representation of the People Act, 1951. Analyze whether the increase in the assets of the legislators and/or their associates, disproportionate to their known sources of income, would constitute 'undue influence' and consequently a corrupt practice.","",""],
+  [2025,"Q2",10,150,"sbdy","Comment on the need of administrative tribunals as compared to the court system. Assess the impact of the recent tribunal reforms through rationalization of tribunals made in 2021.","",""],
+  [2025,"Q3",10,150,"comp","Compare and contrast the President's power to pardon in India and in the USA. Are there any limits to it in both the countries? What are 'preemptive pardons'?","Culminates the clemency chain begun in <b>2003 Q6(a)</b>.",""],
+  [2025,"Q4",10,150,"fedl","Discuss the nature of Jammu and Kashmir Legislative Assembly after the Jammu and Kashmir Reorganization Act, 2019. Briefly describe the powers and functions of the Assembly of the Union Territory of Jammu and Kashmir.","The direct successor to <b>2016 Q2</b> on Article 370.",""],
+  [2025,"Q5",10,150,"cbdy","“The Attorney General of India plays a crucial role in guiding the legal framework of the Union Government and ensuring sound governance through legal counsel.” Discuss his responsibilities, rights and limitations in this regard.","",""],
+  [2025,"Q7",10,150,"govn","E-governance projects have a built-in bias towards technology and back-end integration than user-centric designs. Examine.","Sixth consecutive e-governance question since 2018.",""],
+  [2025,"Q8",10,150,"govn","Civil Society Organizations are often perceived as being anti-State actors than non-State actors.","",""],
+  [2025,"Q11",15,250,"cons","Constitutional morality is the fulcrum which acts as an essential check upon the high functionaries and citizens alike…. In view of the above observation of the Supreme Court, explain the concept of constitutional morality and its application to ensure balance between judicial independence and judicial accountability in India.","",""],
+  [2025,"Q12",15,250,"cons","The Indian Constitution has conferred the amending power on the ordinary legislative institutions with a few procedural hurdles. In view of this statement, examine the procedural and substantive limitations on the amending power of Parliament to change the Constitution.","",""],
+  [2025,"Q13",15,250,"comp","Discuss the evolution of the collegium system in India. Critically examine the advantages and disadvantages of the system of appointment of the Judges of the Supreme Court of India and that of the USA.","",""],
+  [2025,"Q14",15,250,"fedl","Examine the evolving pattern of Centre-State financial relations in the context of planned development in India. How far have the recent reforms impacted the fiscal federalism in India?","",""],
+  [2025,"Q15",15,250,"poli","What are environmental pressure groups? Discuss their role in raising awareness, influencing policies and advocating for environmental protection in India.","",""],
+  [2025,"Q18",15,250,"sbdy","The National Commission for Protection of Child Rights has to address the challenges faced by children in the digital era. Examine the existing policies and suggest measures the Commission can initiate to tackle the issue.","",""]
+  ];
+
+  var Q = D.map(function(r){
+    return {y:r[0],no:r[1],m:r[2],w:r[3],th:r[4],t:r[5],note:r[6]||"",ch:r[7]||"",
+            era:(r[0]<2013?"a":"b"),
+            hay:(r[0]+" "+r[1]+" "+r[5]+" "+TH[r[4]]).toLowerCase()};
+  });
+
+  var YEARS=[]; for(var y=2000;y<=2026;y++) YEARS.push(y);
+  var COUNT={}; Q.forEach(function(q){COUNT[q.y]=(COUNT[q.y]||0)+1;});
+  var TCOUNT={}; Q.forEach(function(q){TCOUNT[q.th]=(TCOUNT[q.th]||0)+1;});
+  var PAPER={a:"GS Paper I · polity block",b:"GS Paper II"};
+
+  var $=function(i){return document.getElementById(i);};
+  function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+  var app=$("app"), searchEl=$("q"), crumbEl=$("crumb"), homeBtn=$("home-btn");
+  var curQuery="";
+
+  function hilite(txt,needle){
+    var safe=esc(txt);
+    if(!needle) return safe;
+    var n=needle.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");
+    try{ return safe.replace(new RegExp("("+n+")","ig"),"<mark>$1</mark>"); }catch(e){ return safe; }
+  }
+
+  function qcard(q,showYear,needle){
+    return '<article class="q">'+
+      '<div class="qno">'+esc(q.no)+(showYear?'<button class="yr" data-goy="'+q.y+'">'+q.y+'</button>':'')+'</div>'+
+      '<div>'+
+        '<p class="qtext">'+hilite(q.t,needle)+'</p>'+
+        '<div class="qmeta">'+
+          '<button class="tag" data-got="'+q.th+'">'+esc(TH[q.th])+'</button>'+
+          '<span class="tag mk">'+q.m+' marks</span>'+
+          '<span class="tag mk">'+q.w+' words</span>'+
+          (q.ch?'<span class="tag ch">'+esc(q.ch)+'</span>':'')+
+        '</div>'+
+        (q.note?'<p class="qnote">'+q.note+'</p>':'')+
+      '</div></article>';
+  }
+
+  function groupByTheme(items,needle){
+    return THORDER.filter(function(k){return items.some(function(q){return q.th===k;});})
+      .map(function(k){
+        var it=items.filter(function(q){return q.th===k;});
+        return '<section class="group"><div class="ghead"><h3>'+esc(TH[k])+'</h3>'+
+          '<span class="meta">'+it.length+' question'+(it.length===1?"":"s")+'</span></div>'+
+          it.map(function(q){return qcard(q,false,needle);}).join("")+'</section>';
+      }).join("");
+  }
+
+  /* ================= HOME ================= */
+  function viewHome(){
+    var max=0; YEARS.forEach(function(y){ if((COUNT[y]||0)>max) max=COUNT[y]||0; });
+    var spine=YEARS.map(function(y){
+      var c=COUNT[y]||0, pend=(y===2026);
+      var h=pend?14:Math.max(3,Math.round((c/max)*72));
+      var col=y<2013?"var(--era-a)":"var(--era-b)";
+      return '<button class="bar'+(pend?" pending":"")+'" data-goy="'+y+'" title="'+y+' — '+(pend?"not yet conducted":c+" questions")+'">'+
+        '<span class="cnt">'+(pend?"—":c)+'</span>'+
+        '<span class="fill" style="height:'+h+'px;'+(pend?"":"background:"+col)+'"></span>'+
+        '<span class="lab">'+y+'</span></button>';
+    }).join("");
+
+    var grid=YEARS.map(function(y){
+      var c=COUNT[y]||0, pend=(y===2026);
+      return '<button class="ycard'+(y<2013?" a":"")+(pend?" pending":"")+'" data-goy="'+y+'">'+
+        '<span class="y">'+y+'</span>'+
+        '<span class="c">'+(pend?"not yet held":c+" question"+(c===1?"":"s"))+'</span></button>';
+    }).join("");
+
+    var themes=THORDER.map(function(k){
+      return '<button class="trow" data-got="'+k+'"><span>'+esc(TH[k])+'</span><span class="n">'+TCOUNT[k]+'</span></button>';
+    }).join("");
+
+    app.innerHTML=
+    '<header class="masthead"><div class="wrap mast-in"><div>'+
+      '<p class="eyebrow">Civil Services Examination · General Studies</p>'+
+      '<h1 tabindex="-1" id="pgtitle">Mains Polity Questions<br><span class="yr">2000 — 2026</span></h1>'+
+      '<p class="lede">Every Polity, Constitution and Governance question asked in the UPSC Mains, keyed to the year-wise question papers rather than to topic-wise compilations.</p>'+
+    '</div><div class="stats">'+
+      '<div class="stat"><b>'+Q.length+'</b><span>Questions</span></div>'+
+      '<div class="stat"><b>26</b><span>Papers</span></div>'+
+      '<div class="stat"><b>13</b><span>Themes</span></div>'+
+    '</div></div></header>'+
+
+    '<section class="spine-sec"><div class="wrap">'+
+      '<div class="spine-head"><span class="kicker">Questions per year · click a bar to open that year</span>'+
+      '<span class="legend"><span><i style="background:var(--era-a)"></i>2000–2012 · GS Paper I</span>'+
+      '<span><i style="background:var(--era-b)"></i>2013–2025 · GS Paper II</span></span></div>'+
+      '<div class="spine-scroll"><div class="spine">'+spine+'</div></div>'+
+    '</div></section>'+
+
+    '<section class="block"><div class="wrap">'+
+      '<h2>Open a year</h2>'+
+      '<p class="sub">Each year opens as its own page, with the questions grouped by theme and a note on what made that paper distinctive.</p>'+
+      '<div class="ygrid">'+grid+'</div>'+
+    '</div></section>'+
+
+    '<section class="block"><div class="wrap">'+
+      '<h2>Or work through a theme</h2>'+
+      '<p class="sub">Every year a theme has been asked, oldest to newest. This is the view to use alongside a Laxmikanth chapter.</p>'+
+      '<div class="tlist">'+themes+'</div>'+
+    '</div></section>'+
+
+    '<section class="block"><div class="wrap"><div class="notice">'+
+      '<h3>Why these year labels differ from your coaching handout</h3>'+
+      '<p>The widely circulated topic-wise PYQ compilations misdate questions in both directions. Everything here is keyed to the <strong>year-wise question papers</strong>. Eleven confirmed corrections:</p>'+
+      '<details><summary>Show the corrections</summary><div class="tblwrap"><table>'+
+      '<thead><tr><th>Question</th><th>Often listed</th><th>Actually</th></tr></thead><tbody>'+
+      [['“Resorting to ordinances has always raised concern…”','2016','2015 Q5'],
+       ['“Starting from inventing the \'basic structure\' doctrine…”','2015','2014 Q1'],
+       ['“Discuss the role of the Vice-President of India…”','2024','2022 Q4'],
+       ['“The growth of cabinet system has practically resulted…”','2022','2024 Q3'],
+       ['“Right of movement and residence throughout the territory…”','2023','2022 Q2'],
+       ['“The most significant achievement of modern law in India…”','2023','2022 Q1'],
+       ['“…does not accept principle of strict separation of powers”','2020','2019 Q1'],
+       ['“Which steps are required for constitutionalization of a Commission?”','2021','2020 Q15'],
+       ['“Though the Human Rights Commissions have contributed…”','2022','2021 Q12'],
+       ['“The Central Administrative Tribunal…”','2020','2019 Q2'],
+       ['“How far do you think cooperation, competition and confrontation…”','2018 / 2021','2020 Q3']]
+       .map(function(r){return '<tr><td class="qt">'+r[0]+'</td><td class="was">'+r[1]+'</td><td class="is">'+r[2]+'</td></tr>';}).join("")+
+      '</tbody></table></div></details>'+
+    '</div></div></section>';
+
+    homeBtn.style.display="none";
+    crumbEl.textContent="";
+    document.title="UPSC Mains Polity PYQs · 2000–2026";
+  }
+
+  /* ================= YEAR PAGE ================= */
+  function viewYear(yr){
+    var items=Q.filter(function(q){return q.y===yr;});
+    var era=yr<2013?"a":"b";
+    var prev=yr>2000?yr-1:null, next=yr<2026?yr+1:null;
+
+    var marks=items.map(function(q){return q.m;});
+    var lo=Math.min.apply(null,marks), hi=Math.max.apply(null,marks);
+    var mkTxt=items.length? (lo===hi? lo+" marks each" : lo+"–"+hi+" marks") : "—";
+    var thCount=Object.keys(items.reduce(function(a,q){a[q.th]=1;return a;},{})).length;
+
+    var body;
+    if(yr===2026){
+      body='<div class="pend">'+
+        '<h3>Not yet conducted</h3>'+
+        '<p>As of 29 July 2026 the Civil Services Mains 2026 has not been held. Per the official UPSC timetable, Mains 2026 runs <strong>21–30 August 2026</strong>, with <strong>General Studies Paper II on Saturday 22 August</strong>, afternoon session.</p>'+
+        '<div class="tblwrap"><table><thead><tr><th>Date</th><th>Forenoon 9:00–12:00</th><th>Afternoon 2:30–5:30</th></tr></thead><tbody>'+
+        '<tr><td class="d">Fri 21 Aug</td><td>Essay</td><td class="d">—</td></tr>'+
+        '<tr><td class="d">Sat 22 Aug</td><td>General Studies I</td><td class="hl">General Studies II</td></tr>'+
+        '<tr><td class="d">Sun 23 Aug</td><td>General Studies III</td><td>General Studies IV</td></tr>'+
+        '<tr><td class="d">Sat 29 Aug</td><td>Paper A · Indian Language</td><td>Paper B · English</td></tr>'+
+        '<tr><td class="d">Sun 30 Aug</td><td>Optional Paper I</td><td>Optional Paper II</td></tr>'+
+        '</tbody></table></div></div>'+
+        '<section class="block" style="padding-top:6px"><h2 style="font-family:var(--serif);font-size:20px;margin:0 0 14px">Themes overdue for a question</h2>'+
+        '<ul class="odue">'+
+        '<li><b>Anti-defection law / Tenth Schedule</b> — last asked 2013</li>'+
+        '<li><b>Fundamental Duties</b> — three outings 2003–2011, then silence</li>'+
+        '<li><b>Money Bill and Article 110</b> — last asked 2004, despite sustained controversy</li>'+
+        '<li><b>Delimitation</b> — last asked 2002; due before the 2026 exercise</li>'+
+        '<li><b>Uniform Civil Code</b> — last asked 2015, live again after Uttarakhand</li>'+
+        '<li><b>Women\'s reservation</b> — the 106th Amendment has never been asked directly</li>'+
+        '<li><b>Comparison with another constitution</b> — every year since 2018; treat as guaranteed</li>'+
+        '</ul></section>';
+    } else {
+      body=groupByTheme(items,"");
+    }
+
+    app.innerHTML=
+    '<header class="pagehead"><div class="wrap">'+
+      '<div class="ph-top"><span class="era-tag era-'+era+'">'+PAPER[era]+'</span>'+
+      (yr===2026?'<span class="era-tag" style="background:var(--card-2);color:var(--ink-3)">Pending</span>':'')+'</div>'+
+      '<h1 class="big" tabindex="-1" id="pgtitle">'+yr+'</h1>'+
+      (YNOTE[yr]?'<p class="ynote">'+YNOTE[yr]+'</p>':'')+
+      '<div class="ph-meta">'+
+        '<div><span>Questions</span><b>'+(yr===2026?"—":items.length)+'</b></div>'+
+        '<div><span>Weight</span><b>'+(yr===2026?"—":mkTxt)+'</b></div>'+
+        '<div><span>Themes</span><b>'+(yr===2026?"—":thCount)+'</b></div>'+
+        '<div><span>Paper</span><b>'+(era==="a"?"GS I":"GS II")+'</b></div>'+
+      '</div>'+
+    '</div></header>'+
+    '<main><div class="wrap">'+body+
+      '<nav class="pager" style="margin-top:26px">'+
+        (prev?'<button class="pg" data-goy="'+prev+'"><span class="dir">&#9664; Previous year</span><span class="t">'+prev+'</span></button>':'<span class="pg ghost"></span>')+
+        (next?'<button class="pg next" data-goy="'+next+'"><span class="dir">Next year &#9654;</span><span class="t">'+next+'</span></button>':'<span class="pg ghost"></span>')+
+      '</nav>'+
+    '</div></main>';
+
+    homeBtn.style.display="";
+    crumbEl.textContent="Year "+yr;
+    document.title=yr+" · UPSC Mains Polity PYQs";
+  }
+
+  /* ================= THEME PAGE ================= */
+  function viewTheme(key){
+    if(!TH[key]) return viewHome();
+    var items=Q.filter(function(q){return q.th===key;}).sort(function(a,b){return a.y-b.y;});
+    var i=THORDER.indexOf(key);
+    var prev=i>0?THORDER[i-1]:null, next=i<THORDER.length-1?THORDER[i+1]:null;
+    var yrs=items.map(function(q){return q.y;});
+    var years=[]; items.forEach(function(q){if(years.indexOf(q.y)===-1) years.push(q.y);});
+
+    var byYear=years.map(function(y){
+      var it=items.filter(function(q){return q.y===y;});
+      return '<section class="group"><div class="ghead"><h3>'+y+'</h3>'+
+        '<span class="era-tag era-'+(y<2013?"a":"b")+'">'+PAPER[y<2013?"a":"b"]+'</span>'+
+        '<span class="meta">'+it.length+' question'+(it.length===1?"":"s")+'</span></div>'+
+        it.map(function(q){return qcard(q,false,"");}).join("")+'</section>';
+    }).join("");
+
+    app.innerHTML=
+    '<header class="pagehead"><div class="wrap">'+
+      '<div class="ph-top"><span class="era-tag era-b">Theme</span></div>'+
+      '<h1 tabindex="-1" id="pgtitle" style="font-size:clamp(28px,5vw,44px)">'+esc(TH[key])+'</h1>'+
+      '<div class="ph-meta">'+
+        '<div><span>Questions</span><b>'+items.length+'</b></div>'+
+        '<div><span>Years asked</span><b>'+years.length+'</b></div>'+
+        '<div><span>First</span><b>'+Math.min.apply(null,yrs)+'</b></div>'+
+        '<div><span>Latest</span><b>'+Math.max.apply(null,yrs)+'</b></div>'+
+      '</div>'+
+    '</div></header>'+
+    '<main><div class="wrap">'+byYear+
+      '<nav class="pager" style="margin-top:26px">'+
+        (prev?'<button class="pg" data-got="'+prev+'"><span class="dir">&#9664; Previous theme</span><span class="t" style="font-size:15px">'+esc(TH[prev])+'</span></button>':'<span class="pg ghost"></span>')+
+        (next?'<button class="pg next" data-got="'+next+'"><span class="dir">Next theme &#9654;</span><span class="t" style="font-size:15px">'+esc(TH[next])+'</span></button>':'<span class="pg ghost"></span>')+
+      '</nav>'+
+    '</div></main>';
+
+    homeBtn.style.display="";
+    crumbEl.textContent="Theme";
+    document.title=TH[key]+" · UPSC Mains Polity PYQs";
+  }
+
+  /* ================= SEARCH PAGE ================= */
+  function viewSearch(term){
+    var needle=term.toLowerCase();
+    var items=Q.filter(function(q){return q.hay.indexOf(needle)!==-1;});
+    var years=[]; items.forEach(function(q){if(years.indexOf(q.y)===-1) years.push(q.y);});
+    years.sort(function(a,b){return b-a;});
+
+    var body = items.length
+      ? years.map(function(y){
+          var it=items.filter(function(q){return q.y===y;});
+          return '<section class="group"><div class="ghead"><h3>'+y+'</h3>'+
+            '<span class="meta">'+it.length+' match'+(it.length===1?"":"es")+'</span>'+
+            '<span class="meta"><button class="tag" data-goy="'+y+'">open '+y+' &#9654;</button></span></div>'+
+            it.map(function(q){return qcard(q,false,needle);}).join("")+'</section>';
+        }).join("")
+      : '<div class="empty"><p>No questions match &ldquo;'+esc(term)+'&rdquo;.</p><span>Try an article number, a case name, or a single keyword.</span></div>';
+
+    app.innerHTML=
+    '<header class="pagehead"><div class="wrap">'+
+      '<div class="ph-top"><span class="era-tag era-b">Search</span></div>'+
+      '<h1 tabindex="-1" id="pgtitle" style="font-size:clamp(26px,4.4vw,38px)">&ldquo;'+esc(term)+'&rdquo;</h1>'+
+      '<div class="ph-meta">'+
+        '<div><span>Matches</span><b>'+items.length+'</b></div>'+
+        '<div><span>Across</span><b>'+years.length+' year'+(years.length===1?"":"s")+'</b></div>'+
+      '</div>'+
+    '</div></header>'+
+    '<main><div class="wrap">'+body+'</div></main>';
+
+    homeBtn.style.display="";
+    crumbEl.textContent="Search";
+    document.title='"'+term+'" · UPSC Mains Polity PYQs';
+  }
+
+  /* ================= ROUTER ================= */
+  function go(hash){ if(location.hash===hash) route(); else location.hash=hash; }
+
+  function route(){
+    var h=location.hash.replace(/^#\/?/,"");
+    var parts=h.split("/");
+    if(parts[0]==="y" && parts[1]){ curQuery=""; if(searchEl.value) searchEl.value=""; viewYear(parseInt(parts[1],10)); }
+    else if(parts[0]==="t" && parts[1]){ curQuery=""; if(searchEl.value) searchEl.value=""; viewTheme(parts[1]); }
+    else if(parts[0]==="s" && parts[1]){ var t=decodeURIComponent(parts.slice(1).join("/")); curQuery=t;
+      if(searchEl.value!==t) searchEl.value=t; viewSearch(t); }
+    else { curQuery=""; viewHome(); }
+
+    window.scrollTo(0,0);
+    var t2=$("pgtitle"); if(t2) t2.focus({preventScroll:true});
+  }
+
+  document.addEventListener("click",function(e){
+    var b=e.target.closest("[data-goy]");
+    if(b){ go("#/y/"+b.getAttribute("data-goy")); return; }
+    var c=e.target.closest("[data-got]");
+    if(c){ go("#/t/"+c.getAttribute("data-got")); return; }
+  });
+
+  homeBtn.addEventListener("click",function(){ go("#/"); });
+
+  var timer;
+  searchEl.addEventListener("input",function(e){
+    clearTimeout(timer);
+    var v=e.target.value.trim();
+    timer=setTimeout(function(){
+      if(!v){ if(curQuery) go("#/"); return; }
+      go("#/s/"+encodeURIComponent(v));
+    },200);
+  });
+  $("clear").addEventListener("click",function(){ searchEl.value=""; go("#/"); searchEl.focus(); });
+
+  document.addEventListener("keydown",function(e){
+    if(e.target===searchEl) return;
+    var h=location.hash.replace(/^#\/?/,"").split("/");
+    if(h[0]!=="y") return;
+    var yr=parseInt(h[1],10);
+    if(e.key==="ArrowLeft"  && yr>2000) go("#/y/"+(yr-1));
+    if(e.key==="ArrowRight" && yr<2026) go("#/y/"+(yr+1));
+  });
+
+  window.addEventListener("hashchange",route);
+  route();
+})();
+</script>

@@ -61,6 +61,23 @@ India follows **single citizenship** (borrowed from Britain). You are a citizen 
 | **4. By NATURALISATION** | For foreigners meeting qualifications, including a residence period, good character and knowledge of a language in the Eighth Schedule |
 | **5. By INCORPORATION OF TERRITORY** | When India acquires new territory, the Government specifies who becomes a citizen — e.g. **Pondicherry (1962), Goa, Sikkim** |
 
+### 🖼️ Citizenship by birth — the decision tree
+
+```mermaid
+flowchart TD
+  A["A person is born<br/><b>IN INDIA</b>"] --> B{"<b>Date of birth?</b>"}
+  B -- "26 Jan 1950 –<br/>30 June 1987" --> C["✅ <b>CITIZEN</b><br/>regardless of the<br/>parents' nationality<br/><i>pure jus soli</i>"]
+  B -- "1 July 1987 –<br/>2 Dec 2004" --> D{"Was <b>EITHER</b> parent<br/>an Indian citizen<br/>at the time of birth?"}
+  D -- Yes --> E["✅ <b>CITIZEN</b>"]
+  D -- No --> F["❌ Not a citizen"]
+  B -- "On or after<br/>3 Dec 2004" --> G{"Were <b>BOTH</b> parents<br/>Indian citizens?"}
+  G -- Yes --> H["✅ <b>CITIZEN</b>"]
+  G -- "One Indian, and the other<br/>NOT an illegal migrant" --> H
+  G -- "Otherwise" --> I["❌ Not a citizen"]
+```
+
+> 💡 **Read the tree left to right and you can see the policy shift happening.** India moved from *"born here = Indian"* → *"one Indian parent"* → *"both Indian parents"*. Each tightening followed migration pressure in Assam — the **Assam Accord (1985)** produced the 1987 change.
+
 > ⚠️ **The 1987 and 2004 cutoffs are the most-tested facts in this chapter.** India moved progressively **away from pure *jus soli*** (right of soil) **towards *jus sanguinis*** (right of blood).
 >
 > 💡 **Why?** Because of large-scale illegal migration, especially into Assam. The **Assam Accord (1985)** and the resulting **1987 tightening** are directly connected. This is not trivia — it's a causal chain you can write about.
@@ -74,6 +91,33 @@ India follows **single citizenship** (borrowed from Britain). You are a citizen 
 | **Deprivation** | **Compulsory, by the Government** — for fraud in obtaining citizenship, disloyalty to the Constitution, trading with the enemy in wartime, imprisonment of 2 years within 5 years of registration, or continuous residence abroad for 7 years |
 
 > 🧠 **Mnemonic: "R-T-D" — Renounce (I choose), Terminate (it happens), Deprive (they take it)."**
+
+```mermaid
+flowchart LR
+  subgraph IN["🟢 FIVE WAYS IN"]
+    direction TB
+    I1["<b>BIRTH</b>"]
+    I2["<b>DESCENT</b><br/><i>born abroad to<br/>an Indian parent</i>"]
+    I3["<b>REGISTRATION</b><br/><i>PIO, spouse,<br/>OCI holder</i>"]
+    I4["<b>NATURALISATION</b><br/><i>foreigners, residence<br/>+ language + character</i>"]
+    I5["<b>INCORPORATION<br/>OF TERRITORY</b><br/><i>Pondicherry, Goa, Sikkim</i>"]
+  end
+  subgraph OUT["🔴 THREE WAYS OUT"]
+    direction TB
+    O1["<b>RENUNCIATION</b><br/><i>I choose to give it up</i>"]
+    O2["<b>TERMINATION</b><br/><i>automatic, the moment I<br/>voluntarily take another<br/>country's citizenship</i>"]
+    O3["<b>DEPRIVATION</b><br/><i>the Government takes it —<br/>fraud, disloyalty, wartime<br/>trade with the enemy</i>"]
+  end
+  CIT(["<b>INDIAN<br/>CITIZEN</b>"])
+  I1 --> CIT
+  I2 --> CIT
+  I3 --> CIT
+  I4 --> CIT
+  I5 --> CIT
+  CIT --> O1
+  CIT --> O2
+  CIT --> O3
+```
 
 ---
 
@@ -164,8 +208,8 @@ A register of Indian citizens. Updated in **Assam** under Supreme Court supervis
 
 ## 🔗 Practice this chapter
 
-- [Prelims 2021 Q13](../UPSC_Prelims_Polity_MCQs/2021.md) — single citizenship, Head of State, deprivation of citizenship
-- [Prelims 2019 Q5](../UPSC_Prelims_Polity_MCQs/2019.md) — Article 21 and the right to marry (linked personal-liberty ground)
+- [Prelims 2021 Q13](../03_PYQ_Prelims/2021.md) — single citizenship, Head of State, deprivation of citizenship
+- [Prelims 2019 Q5](../03_PYQ_Prelims/2019.md) — Article 21 and the right to marry (linked personal-liberty ground)
 
 ---
 

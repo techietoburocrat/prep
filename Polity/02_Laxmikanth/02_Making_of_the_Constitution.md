@@ -59,7 +59,7 @@ Three layers, and Prelims tests all three:
 3. Representatives of each community were **elected by the members of that community in the Provincial Legislative Assembly**, by the method of **proportional representation with single transferable vote**
 
 > ⚠️ **The classic trap:** members were **NOT directly elected by the people.** They were elected by **Provincial Legislative Assemblies**.
-> This was asked as [Prelims 2013 Q2](../UPSC_Prelims_Polity_MCQs/2013.md) — answer: *elected by the Provincial Legislative Assemblies*.
+> This was asked as [Prelims 2013 Q2](../03_PYQ_Prelims/2013.md) — answer: *elected by the Provincial Legislative Assemblies*.
 
 Princely state representatives were **nominated** by the heads of the princely states.
 
@@ -105,6 +105,23 @@ The Assembly worked through **committees** — 8 major ones and several minor.
 | Steering Committee | **Dr. Rajendra Prasad** |
 | **Drafting Committee** | **Dr. B.R. Ambedkar** |
 
+```mermaid
+flowchart TD
+  CA["<b>CONSTITUENT ASSEMBLY</b><br/>President: Dr. Rajendra Prasad<br/>Constitutional Advisor: B.N. Rau"]
+  CA --> N["<b>NEHRU</b><br/><i>the Union</i>"]
+  CA --> P["<b>PATEL</b><br/><i>Provinces &amp; People</i>"]
+  CA --> R["<b>RAJENDRA PRASAD</b><br/><i>Procedure</i>"]
+  CA --> A["<b>AMBEDKAR</b><br/><i>Drafting</i>"]
+  N --> N1["Union Powers Committee"]
+  N --> N2["Union Constitution Committee"]
+  N --> N3["States Committee"]
+  P --> P1["Provincial Constitution Committee"]
+  P --> P2["Advisory Cttee on Fundamental Rights,<br/>Minorities &amp; Tribal Areas"]
+  R --> R1["Rules of Procedure Committee"]
+  R --> R2["Steering Committee"]
+  A --> A1["<b>DRAFTING COMMITTEE</b><br/>29 Aug 1947 · 7 members"]
+```
+
 > 🔑 **Memory hook — "N-P-R-A":**
 > **N**ehru took the **Union** (Union Powers, Union Constitution, States)
 > **P**atel took the **Provinces and People** (Provincial Constitution, Fundamental Rights & Minorities)
@@ -123,7 +140,7 @@ Seven members:
 7. T.T. Krishnamachari *(replaced D.P. Khaitan, who died)*
 
 > ⚠️ **A Prelims trap that has actually been asked:** the Drafting Committee was set up on **29 August 1947** — **not** on 26 November 1949.
-> [Prelims 2023 Q15](../UPSC_Prelims_Polity_MCQs/2023.md) used exactly this: Statement-II claimed the Drafting Committee was set up on 26 November 1949. **False.** Answer: (c).
+> [Prelims 2023 Q15](../03_PYQ_Prelims/2023.md) used exactly this: Statement-II claimed the Drafting Committee was set up on 26 November 1949. **False.** Answer: (c).
 
 ---
 
@@ -204,6 +221,20 @@ The Assembly wasn't only a constitution-writing body. It also acted as the **leg
 
 > 🔑 **December 1946 rhythm: 9 → 11 → 13.** Meet, elect, propose. Two days apart each time.
 
+```mermaid
+flowchart LR
+  A["<b>9 Dec 1946</b><br/>First meeting<br/><i>Sachchidananda Sinha,<br/>temporary President</i>"] --> B["<b>11 Dec 1946</b><br/>Rajendra Prasad<br/>elected President"]
+  B --> C["<b>13 Dec 1946</b><br/>Objectives Resolution<br/><i>moved by Nehru</i>"]
+  C --> D["<b>22 Jan 1947</b><br/>Objectives Resolution<br/>ADOPTED"]
+  D --> E["<b>29 Aug 1947</b><br/>Drafting Committee<br/><i>Ambedkar, 7 members</i>"]
+  E --> F["<b>Feb 1948</b><br/>Draft published<br/><i>8 months for public views</i>"]
+  F --> G["<b>26 Nov 1949</b><br/>✅ ADOPTED<br/><i>Constitution Day</i><br/>395 Art · 22 Parts · 8 Sch"]
+  G --> H["<b>26 Jan 1950</b><br/>✅ COMMENCED<br/><i>Republic Day</i><br/>chosen for Purna Swaraj 1930"]
+  D -.->|"becomes, in modified form"| PRE["<b>THE PREAMBLE</b>"]
+```
+
+> 💡 **Follow the dotted line.** The Objectives Resolution isn't a separate fact to memorise — it *becomes* the Preamble. That single arrow connects this chapter to [Chapter 4](04_Preamble.md).
+
 ### Adopted vs Commenced
 > **"Adopted in 49, Applied in 50."**
 > Constitution Day is the *adoption*; Republic Day is the *application*.
@@ -245,9 +276,9 @@ The Assembly wasn't only a constitution-writing body. It also acted as the **leg
 
 ## 🔗 Practice this chapter
 
-- [Prelims 2013 Q2](../UPSC_Prelims_Polity_MCQs/2013.md) — how were Constituent Assembly members from the provinces chosen?
-- [Prelims 2023 Q15](../UPSC_Prelims_Polity_MCQs/2023.md) — Constitution Day and the Drafting Committee date trap
-- [Prelims 2021 Q3](../UPSC_Prelims_Polity_MCQs/2021.md) — India's exact constitutional status on 26 January 1950
+- [Prelims 2013 Q2](../03_PYQ_Prelims/2013.md) — how were Constituent Assembly members from the provinces chosen?
+- [Prelims 2023 Q15](../03_PYQ_Prelims/2023.md) — Constitution Day and the Drafting Committee date trap
+- [Prelims 2021 Q3](../03_PYQ_Prelims/2021.md) — India's exact constitutional status on 26 January 1950
 
 ---
 

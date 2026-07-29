@@ -66,9 +66,22 @@ It shall be the duty of every citizen of India:
 >
 > **The State gets a duty, the child gets a right, the parent gets a duty.** That is one of the most elegant pieces of constitutional design in the book, and it makes a superb Mains illustration.
 
+```mermaid
+flowchart TD
+  A(["<b>86th AMENDMENT, 2002</b><br/><i>one amendment · three Parts of<br/>the Constitution · one goal</i>"])
+  A --> B["<b>PART III</b><br/>new <b>Article 21A</b><br/>Right to Education, 6–14<br/>🧒 <i>the CHILD gets a RIGHT</i><br/>✅ enforceable in court"]
+  A --> C["<b>PART IV</b><br/><b>Article 45</b> rewritten<br/>early childhood care, under 6<br/>🏛️ <i>the STATE gets a DIRECTIVE</i><br/>❌ not enforceable"]
+  A --> D["<b>PART IVA</b><br/>new <b>Article 51A(k)</b><br/>educate your child, 6–14<br/>👨‍👩‍👧 <i>the PARENT gets a DUTY</i><br/>❌ not directly enforceable"]
+  B --> E["<b>RTE Act, 2009</b><br/>gives the whole scheme teeth"]
+  C --> E
+  D --> E
+```
+
+> 🔑 **Trace where education travelled:** it began in **Part IV** as a non-enforceable directive → was promoted into **Part III** as a Fundamental Right → and simultaneously created a **Part IVA** duty on parents. **A promise became a right.** That is the single best proof that Directive Principles are not decorative.
+
 > 🔑 **Prelims traps:**
-> - [Prelims 2015 Q33](../UPSC_Prelims_Polity_MCQs/2015.md) — *"To uphold and protect the sovereignty, unity and integrity of India"* is a **Fundamental Duty**, not a Preamble or DPSP provision
-> - [Prelims 2020 Q7](../UPSC_Prelims_Polity_MCQs/2020.md) — the **Preamble, DPSP and Fundamental Duties** all reflect the UDHR
+> - [Prelims 2015 Q33](../03_PYQ_Prelims/2015.md) — *"To uphold and protect the sovereignty, unity and integrity of India"* is a **Fundamental Duty**, not a Preamble or DPSP provision
+> - [Prelims 2020 Q7](../03_PYQ_Prelims/2020.md) — the **Preamble, DPSP and Fundamental Duties** all reflect the UDHR
 
 ---
 
@@ -88,7 +101,7 @@ It shall be the duty of every citizen of India:
 
 > 💡 **So the correct answer to "are Fundamental Duties enforceable?" is: not directly, but they are legally operationalised.** Courts also use them as an **interpretive aid** — when deciding whether a restriction on a right is "reasonable", judges have cited Article 51A.
 
-> 🔑 [Prelims 2017 Q12](../UPSC_Prelims_Polity_MCQs/2017.md) asked whether a legislative process exists to enforce these duties and whether they are correlative to legal duties. Answer: **(d) Neither** — a trap that catches people who over-read the "Parliament can enforce" point.
+> 🔑 [Prelims 2017 Q12](../03_PYQ_Prelims/2017.md) asked whether a legislative process exists to enforce these duties and whether they are correlative to legal duties. Answer: **(d) Neither** — a trap that catches people who over-read the "Parliament can enforce" point.
 
 ---
 
@@ -125,7 +138,7 @@ Set up on the **operationalisation of Fundamental Duties**, it identified the **
 > *Skeleton:* The 42nd Amendment — the "Mini-Constitution", passed during the Emergency. What it *added*: Fundamental Duties, "Socialist Secular Integrity" in the Preamble, three new DPSPs, expanded Article 31C. What it *curtailed*: judicial review, expanded Article 31C over all DPSPs, extended Lok Sabha's term. Note that *Minerva Mills* (1980) and the 44th Amendment (1978) reversed the worst of it — but the Duties survived. Conclude on separating the content from its context.
 
 **3. "Rights and duties are two sides of the same coin." Discuss in the Indian constitutional context. (150 words)**
-> *Skeleton:* Article 51A(a) mirrors respect for the Constitution; 51A(g) mirrors the Article 21 right to a clean environment; 51A(k) mirrors the Article 21A right to education. Show how each duty has a corresponding right. Note [Prelims 2017 Q7](../UPSC_Prelims_Polity_MCQs/2017.md) — *"Rights are correlative with Duties."* Conclude with the education triad as the best example.
+> *Skeleton:* Article 51A(a) mirrors respect for the Constitution; 51A(g) mirrors the Article 21 right to a clean environment; 51A(k) mirrors the Article 21A right to education. Show how each duty has a corresponding right. Note [Prelims 2017 Q7](../03_PYQ_Prelims/2017.md) — *"Rights are correlative with Duties."* Conclude with the education triad as the best example.
 
 ---
 
@@ -143,7 +156,7 @@ Set up on the **operationalisation of Fundamental Duties**, it identified the **
 
 ## 🔗 Practice this chapter
 
-**Prelims:** [2015 Q33](../UPSC_Prelims_Polity_MCQs/2015.md) — sovereignty, unity and integrity · [2017 Q7, Q12](../UPSC_Prelims_Polity_MCQs/2017.md) — rights-duties relationship; enforceability · [2020 Q7](../UPSC_Prelims_Polity_MCQs/2020.md) — UDHR reflected in Preamble, DPSP and Duties
+**Prelims:** [2015 Q33](../03_PYQ_Prelims/2015.md) — sovereignty, unity and integrity · [2017 Q7, Q12](../03_PYQ_Prelims/2017.md) — rights-duties relationship; enforceability · [2020 Q7](../03_PYQ_Prelims/2020.md) — UDHR reflected in Preamble, DPSP and Duties
 
 ---
 

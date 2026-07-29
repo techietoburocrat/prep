@@ -40,6 +40,24 @@ That's the Indian Constitution. The **skeleton** is the Government of India Act,
 | **South African** | Procedure for **amendment** of the Constitution, **election of Rajya Sabha members** |
 | **Japanese** | **"Procedure established by law"** (Article 21) |
 
+```mermaid
+flowchart TD
+  IC(["<b>INDIAN<br/>CONSTITUTION</b>"])
+  G35["<b>GoI ACT 1935</b><br/>≈ 2/3 of the text<br/><i>federal scheme · Governor<br/>judiciary · PSC · emergency</i>"] ==> IC
+  US["<b>🇺🇸 USA</b> — <i>RIGHTS</i><br/>Fundamental Rights<br/>judicial review · VP<br/>impeachment"] --> IC
+  UK["<b>🇬🇧 BRITAIN</b> — <i>PROCEDURE</i><br/>parliamentary govt · writs<br/>single citizenship<br/>bicameralism · privileges"] --> IC
+  IE["<b>🇮🇪 IRELAND</b> — <i>IDEALS</i><br/>DPSP · President's election<br/>Rajya Sabha nomination"] --> IC
+  CA["<b>🇨🇦 CANADA</b> — <i>STRONG CENTRE</i><br/>residuary powers to Centre<br/>Governors appointed<br/>advisory jurisdiction"] --> IC
+  AU["<b>🇦🇺 AUSTRALIA</b> — <i>SHARING</i><br/>Concurrent List<br/>joint sitting · free trade"] --> IC
+  DE["<b>🇩🇪 WEIMAR</b> — <i>EMERGENCY</i><br/>suspension of FR"] --> IC
+  SU["<b>☭ USSR</b> — <i>DUTIES</i><br/>Fundamental Duties<br/>justice in Preamble"] --> IC
+  FR["<b>🇫🇷 FRANCE</b> — <i>SLOGAN</i><br/>Republic · liberty,<br/>equality, fraternity"] --> IC
+  ZA["<b>🇿🇦 SOUTH AFRICA</b><br/>amendment procedure<br/>Rajya Sabha election"] --> IC
+  JP["<b>🇯🇵 JAPAN</b><br/>'procedure established<br/>by law'"] --> IC
+```
+
+> ⚠️ **The thick arrow is the point.** Everyone remembers the exotic borrowings and forgets that the **1935 Act supplied roughly two-thirds of the actual text**. That's why our Governor, emergency provisions and federal scheme feel oddly undemocratic — they were designed by a colonial government to *control* India.
+
 ### 🧠 How to actually remember this
 
 Attach each country to **one anchor idea**, then everything else hangs off it:
@@ -95,7 +113,7 @@ Three amendment routes (detail in [Chapter 10](10_Amendment_of_the_Constitution.
 We chose **responsibility over stability**. Features: presence of nominal and real executives, majority party rule, **collective responsibility** of the executive to the legislature, ministers being members of the legislature, leadership of the PM, dissolution of the lower house.
 
 > ⚠️ **Key difference from Britain:** the British Parliament is **sovereign**; ours is **not** — it is limited by a written Constitution, judicial review, Fundamental Rights and federalism.
-> This exact comparison is [Mains 2023 GS-II Q4](../UPSC_Mains_Polity_PYQs/2023.md) and [Prelims 2021 Q15](../UPSC_Prelims_Polity_MCQs/2021.md).
+> This exact comparison is [Mains 2023 GS-II Q4](../04_PYQ_Mains/2023.md) and [Prelims 2021 Q15](../03_PYQ_Prelims/2021.md).
 
 ### 5. Synthesis of parliamentary sovereignty and judicial supremacy
 The Supreme Court can declare laws unconstitutional (**judicial review**), but Parliament can amend most of the Constitution. Neither is absolute. The balance point is the **basic structure doctrine**.
@@ -118,7 +136,7 @@ The Supreme Court can declare laws unconstitutional (**judicial review**), but P
 
 The words **"secular"** and **"socialist"** were added by the **42nd Amendment, 1976** — they were not in the original Preamble.
 
-> 🔑 Asked as [Mains 2019 GS-II Q5](../UPSC_Mains_Polity_PYQs/2019.md) (*"What can France learn from India's approach to secularism?"*) and [Mains 2024 GS-II Q15](../UPSC_Mains_Polity_PYQs/2024.md) (*compare with the US*). Expect it again.
+> 🔑 Asked as [Mains 2019 GS-II Q5](../04_PYQ_Mains/2019.md) (*"What can France learn from India's approach to secularism?"*) and [Mains 2024 GS-II Q15](../04_PYQ_Mains/2024.md) (*compare with the US*). Expect it again.
 
 ### 11. Universal adult franchise
 Every citizen **18 and above** votes, without any qualification of property, education, sex or religion. The voting age was reduced from 21 to 18 by the **61st Amendment, 1988**.
@@ -173,11 +191,11 @@ The **97th Amendment, 2011** gave co-operative societies constitutional status.
 
 ## 🔗 Practice this chapter
 
-- [Prelims 2021 Q15](../UPSC_Prelims_Polity_MCQs/2021.md) — how India's model differs from the British
-- [Prelims 2021 Q10](../UPSC_Prelims_Polity_MCQs/2021.md) — essential federal feature
-- [Prelims 2017 Q10](../UPSC_Prelims_Polity_MCQs/2017.md) — which is *not* a feature of Indian federalism
-- [Prelims 2020 Q7](../UPSC_Prelims_Polity_MCQs/2020.md) — parts reflecting the UDHR
-- [Mains 2023 GS-II Q4](../UPSC_Mains_Polity_PYQs/2023.md) · [2019 Q5](../UPSC_Mains_Polity_PYQs/2019.md) · [2024 Q15](../UPSC_Mains_Polity_PYQs/2024.md) — comparative constitutions
+- [Prelims 2021 Q15](../03_PYQ_Prelims/2021.md) — how India's model differs from the British
+- [Prelims 2021 Q10](../03_PYQ_Prelims/2021.md) — essential federal feature
+- [Prelims 2017 Q10](../03_PYQ_Prelims/2017.md) — which is *not* a feature of Indian federalism
+- [Prelims 2020 Q7](../03_PYQ_Prelims/2020.md) — parts reflecting the UDHR
+- [Mains 2023 GS-II Q4](../04_PYQ_Mains/2023.md) · [2019 Q5](../04_PYQ_Mains/2019.md) · [2024 Q15](../04_PYQ_Mains/2024.md) — comparative constitutions
 
 ---
 

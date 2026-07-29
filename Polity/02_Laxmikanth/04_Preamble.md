@@ -94,7 +94,7 @@ The head of state is **elected**, not hereditary. It also implies no privileged 
 | **FRATERNITY** — dignity of the individual, unity and integrity of the nation | A sense of common brotherhood | Fundamental Duties, Article 51A |
 
 > ⚠️ **Prelims trap that has been asked:** the Preamble mentions liberty of **thought, expression, belief, faith and worship**. It does **NOT** mention **economic liberty**.
-> [Prelims 2017 Q9](../UPSC_Prelims_Polity_MCQs/2017.md) tested exactly this. Answer: (b).
+> [Prelims 2017 Q9](../03_PYQ_Prelims/2017.md) tested exactly this. Answer: (b).
 
 > 🔑 **The word "integrity" was added by the 42nd Amendment, 1976**, along with "socialist" and "secular."
 
@@ -112,12 +112,19 @@ The head of state is **elected**, not hereditary. It also implies no privileged 
 
 > 💡 **The story behind Berubari:** India and Pakistan agreed to exchange some territory in the Berubari Union area of West Bengal. The question arose — can India *give away* territory? The President referred it to the Supreme Court under Article 143. The Court used the Preamble to interpret Article 1, and in the process said the Preamble was not itself part of the Constitution. Thirteen years later, *Kesavananda* corrected that.
 
+```mermaid
+flowchart LR
+  A["<b>Berubari Union</b><br/><b>1960</b><br/>❌ NOT part of<br/>the Constitution<br/><i>'a key to open the<br/>makers' minds'</i>"] --> B["<b>Kesavananda Bharati</b><br/><b>1973</b><br/>✅ IS part of the Constitution<br/><i>amendable under Art 368,<br/>subject to basic structure</i>"]
+  B --> C["<b>LIC of India</b><br/><b>1995</b><br/>✅ Reaffirmed as an<br/>integral part"]
+  C --> D["<b>BUT still:</b><br/>❌ non-justiciable<br/>❌ not a source of power<br/>❌ no independent legal effect"]
+```
+
 ### Two limits you must remember
 
 1. **The Preamble is non-justiciable.** You cannot go to court to enforce it directly.
 2. **It is not a source of power** for the legislature, nor a limitation on its powers.
 
-> 🔑 **This is exactly what [Prelims 2020 Q13](../UPSC_Prelims_Polity_MCQs/2020.md) tested:** the Preamble is *"a part of the Constitution but has no legal effect independently of other parts."* Answer: (d).
+> 🔑 **This is exactly what [Prelims 2020 Q13](../03_PYQ_Prelims/2020.md) tested:** the Preamble is *"a part of the Constitution but has no legal effect independently of other parts."* Answer: (d).
 
 ---
 
@@ -157,7 +164,7 @@ The head of state is **elected**, not hereditary. It also implies no privileged 
 > *Skeleton:* (i) Four ingredients — authority, nature, objectives, date. (ii) Significance — it is the Objectives Resolution crystallised; it guides interpretation of ambiguous provisions. (iii) Legal status journey — *Berubari* (1960) → *Kesavananda* (1973) → *LIC* (1995). (iv) But non-justiciable and not a source of power. (v) Conclude: interpretive authority without operative force.
 
 **2. Discuss each adjective attached to the word 'Republic' in the Preamble. Are they defendable in present circumstances? (250 words)**
-> *Actually asked — [Mains 2016 GS-II Q5](../UPSC_Mains_Polity_PYQs/2016.md).*
+> *Actually asked — [Mains 2016 GS-II Q5](../04_PYQ_Mains/2016.md).*
 > *Skeleton:* Take Sovereign, Socialist, Secular, Democratic one by one. For each, state the meaning and then test it against current reality — sovereignty vs globalisation and international treaty obligations; socialism vs post-1991 liberalisation and disinvestment; secularism vs contemporary majoritarian pressures; democracy vs falling deliberative quality in legislatures. Balanced conclusion: the adjectives remain **aspirational anchors** even where practice falls short.
 
 **3. "The Preamble reflects the tension between political democracy and social democracy that Ambedkar warned about." Examine. (250 words)**
@@ -182,12 +189,12 @@ The head of state is **elected**, not hereditary. It also implies no privileged 
 
 ## 🔗 Practice this chapter
 
-- [Prelims 2017 Q9](../UPSC_Prelims_Polity_MCQs/2017.md) — which objective is NOT in the Preamble
-- [Prelims 2017 Q5](../UPSC_Prelims_Polity_MCQs/2017.md) — where the mind of the makers is reflected
-- [Prelims 2020 Q13](../UPSC_Prelims_Polity_MCQs/2020.md) — legal status of the Preamble
-- [Prelims 2021 Q3](../UPSC_Prelims_Polity_MCQs/2021.md) — India's exact status on 26 Jan 1950 (the "socialist secular" trap)
-- [Prelims 2013 Q4](../UPSC_Prelims_Polity_MCQs/2013.md) — where 'Economic Justice' is provided
-- [Mains 2016 GS-II Q5](../UPSC_Mains_Polity_PYQs/2016.md) — the adjectives before 'Republic'
+- [Prelims 2017 Q9](../03_PYQ_Prelims/2017.md) — which objective is NOT in the Preamble
+- [Prelims 2017 Q5](../03_PYQ_Prelims/2017.md) — where the mind of the makers is reflected
+- [Prelims 2020 Q13](../03_PYQ_Prelims/2020.md) — legal status of the Preamble
+- [Prelims 2021 Q3](../03_PYQ_Prelims/2021.md) — India's exact status on 26 Jan 1950 (the "socialist secular" trap)
+- [Prelims 2013 Q4](../03_PYQ_Prelims/2013.md) — where 'Economic Justice' is provided
+- [Mains 2016 GS-II Q5](../04_PYQ_Mains/2016.md) — the adjectives before 'Republic'
 
 ---
 

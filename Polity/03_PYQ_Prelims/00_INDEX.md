@@ -2,7 +2,7 @@
 
 Objective polity questions from the UPSC Civil Services **Preliminary** examination, one file per year, with all four options and answer keys.
 
-> **Companion set:** the descriptive Mains questions live in [`../UPSC_Mains_Polity_PYQs/00_INDEX.md`](../UPSC_Mains_Polity_PYQs/00_INDEX.md) — 299 questions, 2000–2026. Prelims tests recall and precision; Mains tests argument. Use both.
+> **Companion set:** the descriptive Mains questions live in [`../04_PYQ_Mains/00_INDEX.md`](../04_PYQ_Mains/00_INDEX.md) — 299 questions, 2000–2026. Prelims tests recall and precision; Mains tests argument. Use both.
 
 ---
 
