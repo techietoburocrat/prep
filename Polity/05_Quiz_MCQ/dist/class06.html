@@ -1,0 +1,973 @@
+<title>Class VI Polity Quiz — NCERT Social and Political Life I</title>
+<style>
+:root{
+  --ink:#211A1B; --paper:#F5F1F0; --surface:#FFFFFF; --line:#DED4D3; --muted:#665A59;
+  --good:#1F7A4C; --good-soft:#E4F3EA; --bad:#B23A34; --bad-soft:#FBE7E5;
+  --accent:#7A2331; --accent-ink:#FFFFFF; --accent-soft:#F1E1E3;
+  --radius:10px;
+  --serif:Georgia,'Iowan Old Style','Palatino Linotype','Book Antiqua',serif;
+  --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --ink:#EDE7E7; --paper:#171213; --surface:#211A1B; --line:#332829; --muted:#A6989A;
+    --good:#3FBE7C; --good-soft:rgba(63,190,124,0.14); --bad:#E2665F; --bad-soft:rgba(226,102,95,0.14);
+    --accent:#D97A82; --accent-ink:#241012; --accent-soft:rgba(217,122,130,0.18);
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#EDE7E7; --paper:#171213; --surface:#211A1B; --line:#332829; --muted:#A6989A;
+  --good:#3FBE7C; --good-soft:rgba(63,190,124,0.14); --bad:#E2665F; --bad-soft:rgba(226,102,95,0.14);
+  --accent:#D97A82; --accent-ink:#241012; --accent-soft:rgba(217,122,130,0.18);
+}
+:root[data-theme="light"]{
+  --ink:#211A1B; --paper:#F5F1F0; --surface:#FFFFFF; --line:#DED4D3; --muted:#665A59;
+  --good:#1F7A4C; --good-soft:#E4F3EA; --bad:#B23A34; --bad-soft:#FBE7E5;
+  --accent:#7A2331; --accent-ink:#FFFFFF; --accent-soft:#F1E1E3;
+}
+*{box-sizing:border-box;}
+html,body{height:100%;}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;}
+.app{min-height:100dvh;display:flex;flex-direction:column;max-width:760px;margin:0 auto;padding:20px 20px 24px;}
+.screen{flex:1;display:flex;flex-direction:column;min-height:0;}
+.eyebrow{font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin:0 0 6px;}
+.menu-screen{gap:16px;justify-content:flex-start;padding-top:10px;}
+.menu-screen h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,36px);margin:0;text-wrap:balance;}
+.lede{color:var(--muted);line-height:1.55;max-width:64ch;margin:0;}
+.how{display:flex;flex-wrap:wrap;gap:8px 18px;margin:2px 0 4px;padding:0;list-style:none;}
+.how li{font-size:12.5px;color:var(--muted);display:flex;align-items:center;gap:6px;}
+.how li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none;}
+.menu-label{font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);margin:8px 0 -2px;}
+.lesson-list{display:flex;flex-direction:column;gap:10px;}
+.lesson-card{display:flex;align-items:center;gap:14px;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:15px 18px;font-family:var(--sans);cursor:pointer;width:100%;color:var(--ink);}
+.lesson-card:hover{border-color:var(--accent);}
+.lesson-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+.lesson-card.combined{background:var(--accent-soft);border-color:var(--accent);}
+.lesson-num{flex:none;width:38px;height:38px;border-radius:9px;background:var(--accent-soft);color:var(--accent);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:16px;font-weight:700;}
+.lesson-card.combined .lesson-num{background:var(--accent);color:var(--accent-ink);}
+.lesson-body{flex:1;min-width:0;}
+.lesson-title{font-family:var(--serif);font-size:16.5px;line-height:1.25;margin:0 0 2px;display:block;}
+.lesson-meta{font-size:12.5px;color:var(--muted);display:block;}
+.lesson-go{flex:none;color:var(--muted);font-size:20px;}
+.lesson-card:hover .lesson-go{color:var(--accent);}
+.quiz-screen{gap:14px;display:none;}
+.bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.chapter-tag{font-size:11px;text-transform:uppercase;letter-spacing:0.04em;background:var(--accent-soft);color:var(--accent);padding:5px 10px;border-radius:999px;white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis;}
+.progress-track{flex:1;min-width:60px;height:6px;background:var(--line);border-radius:999px;overflow:hidden;}
+.progress-fill{height:100%;background:var(--accent);width:0%;}
+.counter{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap;}
+.timer{font-family:var(--serif);font-size:15px;font-variant-numeric:tabular-nums;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:4px 10px;white-space:nowrap;}
+.card{flex:1;min-height:0;overflow-y:auto;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;display:flex;flex-direction:column;gap:15px;}
+.qblock{display:flex;flex-direction:column;gap:9px;}
+.question{font-family:var(--serif);font-size:clamp(17px,2.4vw,20px);line-height:1.45;margin:0;white-space:pre-line;}
+.stmt-head{font-size:12px;letter-spacing:0.05em;text-transform:uppercase;color:var(--muted);margin:0;padding-left:26px;}
+.stmt-list{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px;}
+.stmt-list li{display:flex;gap:10px;font-size:14.8px;line-height:1.5;}
+.stmt-list li .sn{flex:none;min-width:16px;color:var(--muted);font-variant-numeric:tabular-nums;}
+.stmt-list li .st{flex:1;min-width:0;}
+.stmt-list li .sr{color:var(--muted);}
+.ask{font-family:var(--serif);font-size:15.5px;line-height:1.45;margin:2px 0 0;font-style:italic;}
+.options{display:flex;flex-direction:column;gap:9px;}
+.option{display:flex;align-items:flex-start;gap:11px;text-align:left;background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:11px 13px;font-family:var(--sans);font-size:14.5px;color:var(--ink);cursor:pointer;line-height:1.4;width:100%;}
+.option:hover:not(:disabled){border-color:var(--accent);}
+.option:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+.option:disabled{cursor:default;}
+.opt-letter{flex:none;width:23px;height:23px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:var(--muted);}
+.option.correct{background:var(--good-soft);border-color:var(--good);}
+.option.correct .opt-letter{background:var(--good);border-color:var(--good);color:#fff;}
+.option.incorrect{background:var(--bad-soft);border-color:var(--bad);}
+.option.incorrect .opt-letter{background:var(--bad);border-color:var(--bad);color:#fff;}
+.feedback{font-size:13.5px;line-height:1.6;margin:0;padding:12px 14px;border-radius:8px;background:var(--paper);border-left:3px solid var(--accent);}
+.feedback .verdict{font-family:var(--serif);font-weight:700;font-style:italic;}
+.feedback.good{border-left-color:var(--good);}
+.feedback.good .verdict{color:var(--good);}
+.feedback.bad{border-left-color:var(--bad);}
+.feedback.bad .verdict{color:var(--bad);}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.hint{font-size:12px;color:var(--muted);text-align:center;flex:1;}
+.btn-primary{background:var(--accent);color:var(--accent-ink);border:none;border-radius:999px;padding:12px 24px;font-size:14.5px;font-weight:600;font-family:var(--sans);cursor:pointer;}
+.btn-primary:hover{filter:brightness(1.07);}
+.btn-primary:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+.btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:11px 20px;font-size:14px;font-family:var(--sans);cursor:pointer;}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
+.btn-ghost:disabled{opacity:0.35;cursor:not-allowed;}
+.btn-ghost:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+.result-screen{gap:18px;justify-content:center;display:none;}
+.result-screen h1{font-family:var(--serif);font-size:clamp(24px,4.5vw,32px);margin:0;}
+.result-sub{color:var(--muted);margin:-8px 0 0;font-size:14px;}
+.score-row{display:flex;gap:22px;flex-wrap:wrap;}
+.score-block{display:flex;flex-direction:column;gap:2px;}
+.score-num{font-family:var(--serif);font-size:30px;font-variant-numeric:tabular-nums;}
+.score-label{font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);}
+.breakdown-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px;max-height:280px;overflow-y:auto;}
+.breakdown{width:100%;border-collapse:collapse;font-size:13.5px;}
+.breakdown th,.breakdown td{padding:8px 12px;text-align:left;border-bottom:1px solid var(--line);}
+.breakdown th{color:var(--muted);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:0.05em;position:sticky;top:0;background:var(--surface);}
+.breakdown td.num{font-variant-numeric:tabular-nums;text-align:right;}
+.breakdown tr:last-child td{border-bottom:none;}
+.bd-bar{height:5px;border-radius:3px;background:var(--line);margin-top:4px;overflow:hidden;}
+.bd-bar span{display:block;height:100%;background:var(--accent);}
+.result-actions{display:flex;gap:10px;flex-wrap:wrap;}
+[hidden]{display:none !important;}
+.is-active{display:flex !important;}
+@media (prefers-reduced-motion: no-preference){
+  .option,.lesson-card{transition:background 0.15s ease,border-color 0.15s ease;}
+  .progress-fill{transition:width 0.25s ease;}
+}
+@media (max-width:480px){
+  .app{padding:16px 14px 18px;}
+  .nav{flex-wrap:wrap;}
+  .hint{order:3;width:100%;}
+  .card{padding:18px 16px;}
+}
+</style>
+
+<div class="app">
+  <section id="menu" class="screen menu-screen is-active">
+    <p class="eyebrow" id="courseEyebrow"></p>
+    <h1 id="courseTitle"></h1>
+    <p class="lede" id="courseLede"></p>
+    <ul class="how">
+      <li>Prelims-pattern: statements, pairs, assertion–reason</li>
+      <li>Options balanced — no length giveaways</li>
+      <li>Detailed explanation on every answer</li>
+      <li>Reshuffles each attempt · stopwatch</li>
+    </ul>
+    <p class="menu-label">Choose a lesson — or take the full syllabus</p>
+    <div class="lesson-list" id="lessonList"></div>
+  </section>
+
+  <section id="quiz" class="screen quiz-screen">
+    <header class="bar">
+      <span id="chapterTag" class="chapter-tag"></span>
+      <div class="progress-track"><div id="progressFill" class="progress-fill"></div></div>
+      <span id="counter" class="counter"></span>
+      <span id="timer" class="timer">00:00</span>
+    </header>
+    <main class="card">
+      <div id="qblock" class="qblock"></div>
+      <div id="options" class="options"></div>
+      <p id="feedback" class="feedback" hidden></p>
+    </main>
+    <footer class="nav">
+      <button id="prevBtn" class="btn-ghost" type="button">← Prev</button>
+      <span class="hint">Press 1–4 to answer · → next · ← prev</span>
+      <button id="nextBtn" class="btn-primary" type="button">Next →</button>
+    </footer>
+  </section>
+
+  <section id="result" class="screen result-screen">
+    <p class="eyebrow">Scorecard</p>
+    <h1 id="resultTitle">Quiz complete</h1>
+    <p class="result-sub" id="resultScope"></p>
+    <div class="score-row">
+      <div class="score-block"><span id="scoreText" class="score-num"></span><span class="score-label">Correct</span></div>
+      <div class="score-block"><span id="scorePct" class="score-num"></span><span class="score-label">Accuracy</span></div>
+      <div class="score-block"><span id="timeText" class="score-num"></span><span class="score-label">Time</span></div>
+    </div>
+    <div class="breakdown-wrap">
+      <table class="breakdown">
+        <thead><tr><th>Lesson</th><th>Score</th></tr></thead>
+        <tbody id="breakdownBody"></tbody>
+      </table>
+    </div>
+    <div class="result-actions">
+      <button id="reviewBtn" class="btn-ghost" type="button">Review answers</button>
+      <button id="restartBtn" class="btn-primary" type="button">Retake — new shuffle</button>
+      <button id="menuBtn" class="btn-ghost" type="button">↤ Lesson menu</button>
+    </div>
+  </section>
+</div>
+
+<script>
+/* ==========================================================================
+   DATA — generated from Polity/05_Quiz_MCQ/data/<class>.js by build.mjs
+   Question shape:
+     c    chapter tag (must match an entry in CHAPTERS)
+     q    stem
+     head optional column header for a "pairs" block, e.g. "Provision : Purpose"
+     L    optional array of numbered lines (statements, or "Left : Right" pairs)
+     ask  optional closing question line, e.g. "Which of the above are correct?"
+     o    four options
+     a    index of the correct option
+     e    explanation shown after answering
+   ========================================================================== */
+const COURSE = {
+  eyebrow: "NCERT Civics · Social and Political Life I",
+  title: "Class VI Polity Quiz — NCERT Social and Political Life I",
+  lede: "Prelims-pattern questions across all 9 chapters of Social and Political Life I. Multi-statement, match-the-pairs and assertion–reason sets. The statements themselves reshuffle on every attempt and the answer code is worked out afresh — so neither the wording, the length, nor the position of the false statement will ever give the answer away."
+};
+const CHAPTERS = [
+  "Ch1 · Understanding Diversity",
+  "Ch2 · Diversity and Discrimination",
+  "Ch3 · What is Government",
+  "Ch4 · Key Elements of a Democratic Government",
+  "Ch5 · Panchayati Raj",
+  "Ch6 · Rural Administration",
+  "Ch7 · Urban Administration",
+  "Ch8 · Rural Livelihoods",
+  "Ch9 · Urban Livelihoods"
+];
+
+/* Question shapes — see data/class10.js for the full note.
+   S : [statement, isTrue] pairs, reshuffled by the engine each attempt.
+       mode:'code' needs >=2 true of 3; mode:'count' takes any mix.
+   o : four hand-written options, parallel in length and plausibility.       */
+const AR = [
+  "Both A and R are true and R is the correct explanation of A",
+  "Both A and R are true but R is not the correct explanation of A",
+  "A is true but R is false",
+  "A is false but R is true"
+];
+
+const QUESTIONS = [
+
+/* ============ Ch1 · Understanding Diversity ============ */
+{c:'Ch1 · Understanding Diversity',
+ q:'The number of languages officially recognised by the Indian Constitution is:',
+ o:[
+    'Twenty-two',
+    'Eighteen',
+    'Twenty-eight',
+    'Fifteen'],
+ a:0,
+ e:'Twenty-two languages are officially recognised in the Eighth Schedule, while hundreds of other languages and dialects are actually spoken across the country. A dialect is a local or regional version of a language rather than a separate language.'},
+{c:'Ch1 · Understanding Diversity',
+ q:'Consider the following statements about why India is so diverse:',
+ S:[
+    ['Geography shapes what people grow, eat and wear in each region.',true],
+    ['People in cold regions dress differently from those on hot coasts.',true],
+    ['Diversity makes a country richer rather than weaker.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Coastal areas eat more fish and rice while the northern plains eat more wheat, and clothing follows climate — thick wool in Ladakh, light cotton in Kerala.'},
+{c:'Ch1 · Understanding Diversity',
+ q:'The phrase \'Unity in Diversity\' is best understood to mean that people:',
+ o:[
+    'Share one language, one faith and one way of dressing',
+    'Differ from one another yet live together as one nation',
+    'Must give up their differences to build a single nation',
+    'Live apart from one another in separate regional groups'],
+ a:1,
+ e:'The phrase captures the idea that India\'s many religions, languages, foods, festivals and dance forms coexist within a single nation. Difference is treated as the basis of the country\'s richness, not as an obstacle to its unity.'},
+{c:'Ch1 · Understanding Diversity',
+ q:'A \'dialect\' is best described as:',
+ o:[
+    'A written script used for several languages',
+    'A language recognised by the Constitution',
+    'A local or regional version of a language',
+    'A language spoken by fewer than a lakh people'],
+ a:2,
+ e:'India has 22 officially recognised languages but hundreds of dialects. The distinction matters because a dialect can be very different from the standard form of the same language while still not counting as a separate language.'},
+{c:'Ch1 · Understanding Diversity',
+ q:'Consider the following pairs:',
+ head:'Dance form : State most associated with it',
+ S:[
+    ['Bharatanatyam : Tamil Nadu',true],
+    ['Bhangra : Punjab',true],
+    ['Kathak : Kerala',false]],
+ ask:'Which of the pairs given above is/are correctly matched?',
+ mode:'code',unit:'pair',
+ e:'Kathak belongs to north India, not Kerala. Chhau, another of the chapter\'s examples, is associated with Odisha, Jharkhand and Bengal. Dance and art forms are one of the clearest markers of India\'s regional diversity.'},
+{c:'Ch1 · Understanding Diversity',
+ q:'Consider the following statements about diversity:',
+ S:[
+    ['Diversity means the differences among people in religion, language, food and region.',true],
+    ['Diversity is found only in India and not in other countries.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Diversity exists everywhere in the world; India is simply an unusually varied example of it. Recognising that helps place India\'s own experience of living with difference in a wider context.'},
+{c:'Ch1 · Understanding Diversity',
+ q:'A \'region\' in the sense used by the chapter means:',
+ o:[
+    'An administrative division created by the government',
+    'A group of villages served by one local council',
+    'An area where a single language is spoken',
+    'An area of land with its own geography and climate'],
+ a:3,
+ e:'Geography and climate are what define a region here — deserts in Rajasthan, mountains and snow in Ladakh, backwaters in Kerala, plains in Punjab. It is those physical conditions that go on to shape food, clothing and ways of living.'},
+
+/* ============ Ch2 · Diversity and Discrimination ============ */
+{c:'Ch2 · Diversity and Discrimination',
+ q:'Consider the following pairs:',
+ head:'Term : Meaning',
+ S:[
+    ['Stereotype : A fixed, oversimplified idea about a whole group',true],
+    ['Prejudice : Judging someone negatively before knowing them',true],
+    ['Discrimination : Holding a wrong belief without acting on it',false]],
+ ask:'Which of the pairs given above is/are correctly matched?',
+ mode:'code',unit:'pair',
+ e:'Discrimination is the acting, not merely the believing. The sequence runs stereotype, then prejudice, then discrimination: a fixed idea about a group leads to an unfair judgement about a person, which leads to treating them unfairly in practice.'},
+{c:'Ch2 · Diversity and Discrimination',
+ q:'Untouchability is abolished by which Article of the Indian Constitution?',
+ o:[
+    'Article 17',
+    'Article 21',
+    'Article 14',
+    'Article 25'],
+ a:0,
+ e:'Article 17 abolishes untouchability and makes practising it a punishable offence. Untouchability meant treating people of certain castes as impure — barring them from common wells and temples and from sitting with others.'},
+{c:'Ch2 · Diversity and Discrimination',
+ q:'Consider the following statements about discrimination:',
+ S:[
+    ['It means treating people unfairly because of the group they belong to.',true],
+    ['It can be based on religion, caste, gender or economic condition.',true],
+    ['It responds to who a person is taken to be, not to what they have done.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'That last point is the heart of what makes discrimination unjust. It is why the remedy has to be a change in attitudes as well as a change in the law.'},
+{c:'Ch2 · Diversity and Discrimination',
+ q:'Assertion (A): Dr B.R. Ambedkar devoted himself to writing equality into India\'s Constitution.\nReason (R): He had himself faced caste discrimination from childhood.',
+ o:AR,a:0,
+ e:'Both are true and R explains A. Having experienced exclusion at first hand, he became a great scholar and went on to lead the drafting of a Constitution designed to protect every citizen\'s equality — including the abolition of untouchability.'},
+{c:'Ch2 · Diversity and Discrimination',
+ q:'\'Equality\' in the sense used by this chapter means:',
+ o:[
+    'Making every person follow the same customs',
+    'Treating every person with the same respect and rights',
+    'Giving every person exactly the same amount of money',
+    'Ensuring that all communities are of the same size'],
+ a:1,
+ e:'Equality here is about respect and rights rather than identical outcomes. It is the standard against which discrimination is judged, and the reason the Constitution places specific prohibitions on treating people unequally.'},
+{c:'Ch2 · Diversity and Discrimination',
+ q:'Consider the following statements about untouchability:',
+ S:[
+    ['People of certain castes were not allowed to use common wells or temples.',true],
+    ['The practice has been banned and made punishable under the Constitution.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Exclusion from wells, temples and shared seating were the everyday forms it took. The constitutional ban makes the practice a crime, though the chapter is clear that changing the attitudes behind it is a slower business than changing the law.'},
+{c:'Ch2 · Diversity and Discrimination',
+ q:'A stereotype becomes harmful chiefly because it:',
+ o:[
+    'Is usually based on an old and outdated custom',
+    'Is repeated in conversation more than in writing',
+    'Stops us from seeing people as individuals',
+    'Applies to groups rather than to single persons'],
+ a:2,
+ e:'Once a whole group is assumed to share fixed qualities, the individual in front of us disappears behind the label. That is what turns a stereotype into prejudice, and prejudice into the unfair treatment we call discrimination.'},
+
+/* ============ Ch3 · What is Government ============ */
+{c:'Ch3 · What is Government',
+ q:'Consider the following as functions of a government:',
+ S:[
+    ['Maintaining law and order and punishing those who break the law.',true],
+    ['Providing services such as roads, schools, hospitals and water.',true],
+    ['Resolving disputes fairly through courts and other institutions.',true]],
+ ask:'How many of the above are functions of a government?',
+ mode:'count',
+ e:'All three, together with protecting the country through the army, the police and its relations with other states, and making the laws that everyone must follow. Without a government there would be no fair rules and no one to provide basic services.'},
+{c:'Ch3 · What is Government',
+ q:'The three levels at which government operates in India are:',
+ o:[
+    'Village, District and State',
+    'Ward, Town and Region',
+    'Panchayat, Tehsil and Block',
+    'Local, State and Central'],
+ a:3,
+ e:'Local government covers a village, a group of villages or a city; state government covers one state; and the central or Union government covers the whole country. Each level takes decisions for the area it is responsible for.'},
+{c:'Ch3 · What is Government',
+ q:'Consider the following pairs:',
+ head:'Type of government : Description',
+ S:[
+    ['Democracy : People choose their own leaders by voting',true],
+    ['Monarchy : A king or queen rules, usually by birth',true],
+    ['Democracy : Leaders inherit their office from their family',false]],
+ ask:'Which of the pairs given above is/are correctly matched?',
+ mode:'code',unit:'pair',
+ e:'Inheriting office is the mark of a monarchy, not a democracy. In a monarchy the ruler holds power because of the family they were born into; in a democracy leaders hold power because the people chose them in an election.'},
+{c:'Ch3 · What is Government',
+ q:'At the local level in a village, the government body is the:',
+ o:[
+    'Gram Panchayat',
+    'Municipality',
+    'Legislative Assembly',
+    'Tehsil office'],
+ a:0,
+ e:'A Panchayat governs at the village level and a Municipality at the level of a town or city. Both are forms of local government, the tier closest to people\'s daily lives and the first place they take everyday problems.'},
+{c:'Ch3 · What is Government',
+ q:'Consider the following statements:',
+ S:[
+    ['Government is a group of people with the power to make and enforce rules.',true],
+    ['A country can function normally without any government at all.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Without a government there would be chaos — no fair rules, no one to settle disputes, and no one to provide the services that no single household could arrange for itself. That is the basic case for having a government at all.'},
+{c:'Ch3 · What is Government',
+ q:'\'Law and order\' as used in this chapter refers to:',
+ o:[
+    'The system by which taxes are collected',
+    'Keeping peace, safety and the following of rules',
+    'The list of laws passed by the state assembly',
+    'The sequence in which court cases are heard'],
+ a:1,
+ e:'Maintaining law and order is the first of the government\'s functions — protecting people and their property, and punishing those who break the law. It is the reason a police force and a court system exist.'},
+{c:'Ch3 · What is Government',
+ q:'The Central Government of India is also called the:',
+ o:[
+    'State Government',
+    'General Assembly',
+    'Union Government',
+    'Federal Council'],
+ a:2,
+ e:'Central Government, Union Government and national government all name the same thing — the government responsible for the whole country, as distinct from the government of any one state or locality.'},
+
+/* ============ Ch4 · Key Elements of a Democratic Government ============ */
+{c:'Ch4 · Key Elements of a Democratic Government',
+ q:'Consider the following as key elements of a democratic government:',
+ S:[
+    ['People elect their own leaders through universal adult franchise.',true],
+    ['The government works within the limits set by the Constitution.',true],
+    ['The majority may set aside the rights of minorities when convenient.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Respecting and protecting minority rights is itself one of the key elements, not an exception to them. The others are the rule of law, resolving conflict through dialogue and discussion, and the citizen\'s right to question and criticise the government.'},
+{c:'Ch4 · Key Elements of a Democratic Government',
+ q:'\'Universal Adult Franchise\' means the right to vote belongs to:',
+ o:[
+    'Every citizen who owns property or has completed schooling',
+    'Every adult male citizen of the country above eighteen years',
+    'Every citizen chosen by lot from the electoral rolls',
+    'Every adult citizen, whatever their caste, faith, sex or wealth'],
+ a:3,
+ e:'Every citizen above eighteen may vote, regardless of religion, caste, gender or wealth. It is the mechanism by which the phrase \'by the people\' becomes real, and it was a radical choice for India to adopt from the very first election.'},
+{c:'Ch4 · Key Elements of a Democratic Government',
+ q:'The \'rule of law\' means that:',
+ o:[
+    'Everyone, including the powerful, must obey the law',
+    'The government may change any law whenever it wishes',
+    'Laws apply only to those who have agreed to them',
+    'Courts rather than legislatures should make the law'],
+ a:0,
+ e:'No one stands above the law, whatever their office or wealth. Together with the requirement that government act within constitutional limits, the rule of law is what prevents a democratically elected government from behaving arbitrarily.'},
+{c:'Ch4 · Key Elements of a Democratic Government',
+ q:'Consider the following statements about apartheid in South Africa:',
+ S:[
+    ['It denied voting rights to Black people on the basis of race.',true],
+    ['It was imposed by a white minority government on the Black majority.',true],
+    ['It was a set of private customs that had no backing in law.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Apartheid was written into law and enforced by the state, which is exactly what made it a system rather than mere prejudice. It is the chapter\'s illustration of what a government looks like when it is not genuinely democratic.'},
+{c:'Ch4 · Key Elements of a Democratic Government',
+ q:'South Africa\'s first fully democratic election, in which Nelson Mandela became President, was held in:',
+ o:[
+    '1989',
+    '1994',
+    '1990',
+    '1996'],
+ a:1,
+ e:'1994, after decades of struggle against apartheid during which Mandela was imprisoned for opposing the system. The election was the first in which all adults could vote regardless of race.'},
+{c:'Ch4 · Key Elements of a Democratic Government',
+ q:'Describing democracy as government \'of the people, by the people, for the people\' means that the government:',
+ o:[
+    'Must consult the people before taking any decision at all',
+    'Is owned by whichever party wins the largest number of seats',
+    'Belongs to the people, is chosen by them and works for them',
+    'Is run by officials chosen for their training and experience'],
+ a:2,
+ e:'Of the people means it belongs to them rather than to one family or ruler; by the people means they choose who runs it; and for the people means its purpose is their welfare rather than its own. All three have to hold together.'},
+{c:'Ch4 · Key Elements of a Democratic Government',
+ q:'A government being \'accountable\' means that it must:',
+ o:[
+    'Keep detailed accounts of all its spending',
+    'Hold a fresh election after every major decision',
+    'Obtain the approval of the courts for its policies',
+    'Explain and justify its actions to the people'],
+ a:3,
+ e:'Accountability is the obligation to answer. It is what gives the citizen\'s right to question and criticise the government its force — a right that would be empty if the government could simply decline to respond.'},
+
+/* ============ Ch5 · Panchayati Raj ============ */
+{c:'Ch5 · Panchayati Raj',
+ q:'The three tiers of the Panchayati Raj system, from the village upward, are:',
+ o:[
+    'Gram Panchayat, Panchayat Samiti, Zila Parishad',
+    'Gram Sabha, Gram Panchayat, Panchayat Samiti',
+    'Ward Committee, Gram Panchayat, Zila Parishad',
+    'Gram Panchayat, Zila Parishad, Panchayat Samiti'],
+ a:0,
+ e:'The Gram Panchayat governs a village, the Panchayat Samiti a block or group of villages, and the Zila Parishad a district. The Gram Sabha is not a tier of this structure but the meeting of all the adult voters of a village.'},
+{c:'Ch5 · Panchayati Raj',
+ q:'Consider the following statements about the Gram Sabha:',
+ S:[
+    ['It is the meeting of all the adult voters of a village.',true],
+    ['It keeps the Panchayat accountable by discussing its budget and work.',true],
+    ['It approves the annual budget of the Panchayat.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The Gram Sabha needs no election, because every adult voter of the village belongs to it by right — unlike the ward members, or panchs, who are elected. That is what makes it the body through which villagers hold their own Panchayat to account.'},
+{c:'Ch5 · Panchayati Raj',
+ q:'The Constitutional Amendment that gave Panchayati Raj constitutional status in 1992 was the:',
+ o:[
+    '86th Amendment',
+    '73rd Amendment',
+    '74th Amendment',
+    '69th Amendment'],
+ a:1,
+ e:'The 73rd Amendment, in force from 24 April 1993, deals with rural local government; the 74th deals with urban local bodies. The 73rd made elections every five years mandatory and reserved seats for women and for Scheduled Castes and Scheduled Tribes.'},
+{c:'Ch5 · Panchayati Raj',
+ q:'The Eleventh Schedule, added by the 73rd Amendment, lists how many subjects that states may devolve to Panchayats?',
+ o:[
+    'Twenty-two',
+    'Thirty-four',
+    'Twenty-nine',
+    'Eighteen'],
+ a:2,
+ e:'Twenty-nine subjects, covering agriculture, health, education, rural housing, poverty alleviation and more. The corresponding list for Municipalities is the Twelfth Schedule, which carries eighteen subjects.'},
+{c:'Ch5 · Panchayati Raj',
+ q:'Consider the following pairs:',
+ head:'Office : Nature of the post',
+ S:[
+    ['Sarpanch : Elected head of the Gram Panchayat',true],
+    ['Block Development Officer : Appointed officer, not elected',true],
+    ['Ward Panch : Officer appointed by the state government',false]],
+ ask:'Which of the pairs given above is/are correctly matched?',
+ mode:'code',unit:'pair',
+ e:'Ward panchs are elected, one from each ward of the village, and together with the Sarpanch they make up the Gram Panchayat. The Block Development Officer heads the administration of a Panchayat Samiti and helps implement its decisions.'},
+{c:'Ch5 · Panchayati Raj',
+ q:'To \'devolve\' power, in the language of this chapter, means to:',
+ o:[
+    'Divide powers equally between the Centre and the states',
+    'Transfer powers from an elected body to an appointed one',
+    'Take back powers that had earlier been given away',
+    'Hand down powers or funds to a lower level of government'],
+ a:3,
+ e:'Devolution runs downward — from the state to the Panchayat, for instance. The Eleventh Schedule exists precisely to list the subjects a state may hand down in this way, and the extent to which states actually do so varies a great deal.'},
+{c:'Ch5 · Panchayati Raj',
+ q:'A District Planning Committee exists in order to:',
+ o:[
+    'Combine the plans of all local bodies in a district',
+    'Approve the annual budget prepared by the Zila Parishad',
+    'Conduct elections to the Panchayats within the district',
+    'Settle disputes between neighbouring Gram Panchayats'],
+ a:0,
+ e:'It brings the separate development plans of every local body in the district together into a single district plan, so that rural and urban planning are not carried on in isolation from one another.'},
+
+/* ============ Ch6 · Rural Administration ============ */
+{c:'Ch6 · Rural Administration',
+ q:'The two main parts of rural administration described in the chapter are:',
+ o:[
+    'Conducting elections and registering births and deaths',
+    'Maintaining land records and maintaining law and order',
+    'Collecting taxes and running the primary schools',
+    'Building village roads and supplying drinking water'],
+ a:1,
+ e:'The first is handled by revenue officials and the second by the rural police. Both are functions of the district administration rather than of the elected Panchayat, which is a distinction worth keeping clear.'},
+{c:'Ch6 · Rural Administration',
+ q:'The village-level official responsible for maintaining land records is the:',
+ o:[
+    'Sarpanch',
+    'Commissioner',
+    'Patwari',
+    'Tehsildar'],
+ a:2,
+ e:'The Patwari, also called the Lekhpal in some states, records who owns which piece of land, the boundaries, the crops grown and the revenue due. The Tehsildar supervises the Patwaris of a whole Tehsil.'},
+{c:'Ch6 · Rural Administration',
+ q:'Consider the following statements about the Tehsildar:',
+ S:[
+    ['A Tehsil, also called a Taluka, is made up of a group of villages.',true],
+    ['The Tehsildar supervises the work of the Patwaris.',true],
+    ['The Tehsildar also hears the larger land disputes in the Tehsil.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Note that the Tehsildar is an appointed officer, not an elected representative, and hears the larger land disputes a Patwari cannot settle. Keeping appointed officials distinct from elected representatives is one of the chapter\'s main lessons.'},
+{c:'Ch6 · Rural Administration',
+ q:'Consider the following as reasons why land records matter:',
+ S:[
+    ['They prove who owns a particular piece of land.',true],
+    ['They are needed when land passes by inheritance.',true],
+    ['They are used to settle disputes over boundaries.',true]],
+ ask:'How many of the above are reasons the chapter gives?',
+ mode:'count',
+ e:'All three, and a farmer also needs them to obtain a loan against the land. Accurate records are therefore not a bureaucratic formality but the foundation of a rural household\'s security and access to credit.'},
+{c:'Ch6 · Rural Administration',
+ q:'An FIR is best described as:',
+ o:[
+    'The final report a court issues after a trial',
+    'A summons requiring a person to appear in court',
+    'A record of land revenue collected in a village',
+    'The first official written record of a reported crime'],
+ a:3,
+ e:'First Information Report. Filing it with the police is what sets an investigation in motion, which is why the right to have an FIR registered matters so much to someone seeking justice.'},
+{c:'Ch6 · Rural Administration',
+ q:'A \'Thana\' in the context of rural administration is:',
+ o:[
+    'A local police station',
+    'A group of villages',
+    'A land records office',
+    'A weekly village market'],
+ a:0,
+ e:'The rural police work from a Thana, and each covers a defined area of villages. Maintaining law and order there is the second of the two main branches of rural administration, alongside the revenue side.'},
+{c:'Ch6 · Rural Administration',
+ q:'\'Revenue\' in the context of this chapter refers chiefly to:',
+ o:[
+    'The funds a Panchayat receives from the state',
+    'Tax or money collected by the government, often on land',
+    'The income a farmer earns from selling their harvest',
+    'The wages paid to labourers working in the fields'],
+ a:1,
+ e:'Land revenue is the reason the record-keeping system exists in the first place: the state needed to know who held which land in order to tax it. Those same records now serve the landholder as proof of ownership.'},
+
+/* ============ Ch7 · Urban Administration ============ */
+{c:'Ch7 · Urban Administration',
+ q:'Consider the following pairs:',
+ head:'Urban local body : Where it applies',
+ S:[
+    ['Municipal Corporation : Big cities with a large population',true],
+    ['Nagar Panchayat : A small town changing over from a village',true],
+    ['Municipal Council : The largest metropolitan cities',false]],
+ ask:'Which of the pairs given above is/are correctly matched?',
+ mode:'code',unit:'pair',
+ e:'A Municipality or Municipal Council governs a medium-sized town, not the largest cities. Which body a place gets is decided mainly by its population, so the same town can move from one category to another as it grows.'},
+{c:'Ch7 · Urban Administration',
+ q:'Consider the following statements comparing the Mayor and the Commissioner:',
+ S:[
+    ['The Mayor heads the Municipal Corporation in a mostly ceremonial role.',true],
+    ['The Commissioner is an appointed officer who runs the daily administration.',true],
+    ['The Commissioner is elected by the councillors of the city.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The Commissioner is a government officer, appointed rather than elected, and is responsible for implementing decisions. The elected side of the city government is the councillors, one from each ward, who together form the Corporation.'},
+{c:'Ch7 · Urban Administration',
+ q:'The 74th Constitutional Amendment of 1992 dealt with:',
+ o:[
+    'Fundamental Duties',
+    'The right to education',
+    'Urban local bodies',
+    'Rural panchayats'],
+ a:2,
+ e:'It gave Municipalities constitutional status from 1 June 1993, made elections every five years mandatory, reserved at least one-third of seats for women and reserved seats for Scheduled Castes and Scheduled Tribes, and created Ward Committees in large cities.'},
+{c:'Ch7 · Urban Administration',
+ q:'The Twelfth Schedule, added by the 74th Amendment, lists how many subjects that may be devolved to Municipalities?',
+ o:[
+    'Twenty-nine',
+    'Twelve',
+    'Twenty-four',
+    'Eighteen'],
+ a:3,
+ e:'Eighteen subjects, including water supply, sanitation, urban planning and slum improvement. Keep the pair straight: the Eleventh Schedule carries 29 subjects for Panchayats, the Twelfth carries 18 for Municipalities.'},
+{c:'Ch7 · Urban Administration',
+ q:'Consider the following as services provided by a Municipal Corporation:',
+ S:[
+    ['Water supply, sanitation and the collection of garbage.',true],
+    ['Sanctioning building plans before construction begins.',true],
+    ['Registering births and deaths in the city.',true]],
+ ask:'How many of the above are services it provides?',
+ mode:'count',
+ e:'All three, along with building and maintaining roads and streetlights and looking after parks and public spaces. The money comes mainly from property tax, other local taxes and fees, and grants from the state government.'},
+{c:'Ch7 · Urban Administration',
+ q:'Consider the following statements about the Street Vendors Act, 2014:',
+ S:[
+    ['Every city\'s Municipal Corporation must set up a Town Vending Committee.',true],
+    ['A registered vendor receives a Certificate of Vending for a particular spot.',true],
+    ['A registered vendor may be moved from their spot without any notice.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'A registered vendor cannot be moved or have goods confiscated without proper notice of at least thirty days, and cannot be evicted at all until the survey and registration are complete. The Committee includes vendors themselves alongside officials.'},
+{c:'Ch7 · Urban Administration',
+ q:'The largest single source of a Municipal Corporation\'s own income is usually:',
+ o:[
+    'Property tax',
+    'Income tax',
+    'Customs duty',
+    'Excise duty'],
+ a:0,
+ e:'Property tax, paid by the owners of houses and buildings, together with water tax and other local taxes and fees. Grants from the state government make up the rest of a corporation\'s funds.'},
+
+/* ============ Ch8 · Rural Livelihoods ============ */
+{c:'Ch8 · Rural Livelihoods',
+ q:'\'Livelihood\' as used in this chapter means:',
+ o:[
+    'The kind of house a rural family lives in',
+    'The way a person or family earns a living',
+    'The amount of land a rural family owns',
+    'The standard of living a household enjoys'],
+ a:1,
+ e:'In villages a livelihood is closely tied to land, water and farming, but it also takes many other forms. Understanding the range of them is what the chapter sets out to do.'},
+{c:'Ch8 · Rural Livelihoods',
+ q:'Under MGNREGA, the number of days of paid work guaranteed each year to a rural household is:',
+ o:[
+    'Two hundred',
+    'Ninety',
+    'One hundred',
+    'Sixty'],
+ a:2,
+ e:'The Mahatma Gandhi National Rural Employment Guarantee Act of 2005 guarantees 100 days of paid work a year. If work is not provided within fifteen days of being asked for, the government must pay an unemployment allowance instead.'},
+{c:'Ch8 · Rural Livelihoods',
+ q:'Consider the following statements about farm labourers:',
+ S:[
+    ['They are landless workers who work on other people\'s fields.',true],
+    ['Their wages are low and their work is irregular.',true],
+    ['They are paid by the day, and only when there is work.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'That is why the months between seasons are so difficult. MGNREGA exists largely to provide a safety net during exactly those months.'},
+{c:'Ch8 · Rural Livelihoods',
+ q:'\'Diversification\' of livelihoods means that a family:',
+ o:[
+    'Grows more than one crop in the same season',
+    'Sends one member to work in a city each year',
+    'Borrows from more than one source of credit',
+    'Does more than one kind of work to reduce its risk'],
+ a:3,
+ e:'Because farm incomes depend on rain and season and are therefore uncertain, many rural families combine farming with dairy, a small shop, craft work or transport. Spreading the sources of income spreads the risk.'},
+{c:'Ch8 · Rural Livelihoods',
+ q:'Consider the following as non-farm rural livelihoods described in the chapter:',
+ S:[
+    ['Dairy farming and fishing.',true],
+    ['Work by artisans such as potters, weavers and carpenters.',true],
+    ['Migrant labour, where villagers work elsewhere and send money home.',true]],
+ ask:'How many of the above does the chapter describe?',
+ mode:'count',
+ e:'All three, along with running small shops and transporting produce to market. Migrant labour in particular is what links a village economy directly to towns and cities.'},
+{c:'Ch8 · Rural Livelihoods',
+ q:'Assertion (A): Farming income in a village is uncertain from one year to the next.\nReason (R): It depends heavily on rainfall or irrigation and on the season.',
+ o:AR,a:0,
+ e:'Both are true and R explains A. Irrigation is the artificial supply of water to crops, and where it is absent a household\'s whole year turns on the monsoon. That uncertainty is what drives both diversification and, too often, debt.'},
+{c:'Ch8 · Rural Livelihoods',
+ q:'Consider the following statements about rural debt:',
+ S:[
+    ['A moneylender is a private lender who may charge very high interest.',true],
+    ['Debt taken to meet farming costs can be hard to repay after a poor harvest.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'When the harvest fails or prices fall, the loan taken for seeds and fertiliser still has to be repaid, so the household borrows again the following season. That is how a single bad year turns into a lasting cycle of debt.'},
+
+/* ============ Ch9 · Urban Livelihoods ============ */
+{c:'Ch9 · Urban Livelihoods',
+ q:'Consider the following features of work in the organised sector:',
+ S:[
+    ['A fixed salary paid regularly.',true],
+    ['Job security, so the worker is unlikely to lose the job suddenly.',true],
+    ['Benefits such as paid leave, medical cover and a pension.',true]],
+ ask:'How many of the above are features of the organised sector?',
+ mode:'count',
+ e:'All three. Government employees and workers in registered companies with proper contracts are the standard examples. The term \'organised\' refers to the fact that the employment is formally registered and regulated.'},
+{c:'Ch9 · Urban Livelihoods',
+ q:'Consider the following statements about the unorganised sector:',
+ S:[
+    ['Workers often have no fixed employer, or are not officially registered.',true],
+    ['Income can rise and fall unpredictably from one day to the next.',true],
+    ['Employers must register every worker with the labour department.',false],
+    ['Workers are entitled to a pension and paid medical leave.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Registration and benefits are exactly what the sector lacks. The absence of those benefits is precisely what defines the sector. Street vendors, domestic workers and daily-wage construction workers all fall within it, and all face uncertain income, long hours and no safety net.'},
+{c:'Ch9 · Urban Livelihoods',
+ q:'A \'self-employed\' person is one who:',
+ o:[
+    'Works for themselves rather than for an employer',
+    'Works from home rather than at a workplace',
+    'Has more than one job at the same time',
+    'Employs other workers in a small business'],
+ a:0,
+ e:'A street vendor is the chapter\'s standard example. Self-employment sits within the unorganised sector: there is no employer to provide a salary, security or benefits, so the whole risk of the work falls on the worker.'},
+{c:'Ch9 · Urban Livelihoods',
+ q:'Under the Street Vendors Act, 2014, a Town Vending Committee is required to survey and register vendors at least once every:',
+ o:[
+    'Year',
+    'Five years',
+    'Two years',
+    'Ten years'],
+ a:1,
+ e:'At least once in five years. The Committee includes government officials, municipal officers and street vendors themselves, and registration is what entitles a vendor of at least fourteen years of age to a Certificate of Vending.'},
+{c:'Ch9 · Urban Livelihoods',
+ q:'Consider the following protections given to registered street vendors:',
+ S:[
+    ['They cannot be moved or have goods confiscated without at least thirty days\' notice.',true],
+    ['Where a vending zone cannot hold everyone, spots are allotted by a fair method such as a draw of lots.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Those who miss out in the draw are given space in a nearby zone rather than left with nowhere to trade. The Act\'s purpose is to treat vending as a livelihood with legal standing, not as an encroachment to be cleared.'},
+{c:'Ch9 · Urban Livelihoods',
+ q:'Consider the following difficulties faced by unorganised sector workers:',
+ S:[
+    ['Uncertain and irregular income from one day to the next.',true],
+    ['Long working hours, often without fixed timings.',true],
+    ['No paid sick leave, pension or medical insurance through the job.',true]],
+ ask:'How many of the above does the chapter list?',
+ mode:'count',
+ e:'All three, together with a general vulnerability — vendors can be told to move on, and workers can be underpaid or not paid at all with no legal protection of the kind organised sector employees enjoy.'},
+{c:'Ch9 · Urban Livelihoods',
+ q:'The chapter\'s conclusion about the two sectors of urban work is that:',
+ o:[
+    'The unorganised sector will disappear as cities develop',
+    'Workers should be moved from one sector to the other',
+    'Both are essential and a city cannot run without either',
+    'The organised sector alone sustains the city\'s economy'],
+ a:2,
+ e:'The two are interconnected, and every kind of work deserves dignity and respect. That point applies with particular force to sanitation workers, whose labour is essential to public health yet routinely undervalued.'}
+
+];
+
+/* ---------- Engine (identical across classes) ---------- */
+function shuffle(arr){const a=arr.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+
+/* Canonical Prelims answer-code sets. For an S-question the statements are
+   reshuffled on every attempt and the correct code is worked out from which
+   ones landed where — so neither the option nor the position of the false
+   statement can be memorised. */
+const SET_CODE3=["1 and 2 only","2 and 3 only","1 and 3 only","1, 2 and 3"];
+const SET_CODE2=["1 only","2 only","Both 1 and 2","Neither 1 nor 2"];
+const SET_COUNT=["Only one","Only two","All three","None"];
+const SET_COUNT4=["Only one","Only two","Only three","All four"];
+function buildCode(mode,n,trueIdx){
+  const c=trueIdx.length;
+  if(mode==='count'){
+    const set=n===4?SET_COUNT4:SET_COUNT;
+    const text=c===0?'None':c===1?'Only one':c===2?'Only two':c===3?(n===3?'All three':'Only three'):'All four';
+    return {set:set,text:text};
+  }
+  if(n===2){
+    const text=c===2?'Both 1 and 2':c===0?'Neither 1 nor 2':(trueIdx[0]===1?'1 only':'2 only');
+    return {set:SET_CODE2,text:text};
+  }
+  const text=c===3?'1, 2 and 3':trueIdx[0]+' and '+trueIdx[1]+' only';
+  return {set:SET_CODE3,text:text};
+}
+function joinList(a){return a.length===1?String(a[0]):a.slice(0,-1).join(', ')+' and '+a[a.length-1];}
+function verdictLine(n,trueIdx,unit){
+  const U=unit==='pair'?'pair':'statement', Uc=U.charAt(0).toUpperCase()+U.slice(1);
+  const all=[];for(let i=1;i<=n;i++)all.push(i);
+  const f=all.filter(function(i){return trueIdx.indexOf(i)<0;});
+  if(f.length===0)return 'All the '+U+'s here are correct.';
+  if(trueIdx.length===0)return 'None of the '+U+'s here is correct.';
+  return Uc+(trueIdx.length===1?' ':'s ')+joinList(trueIdx)+(trueIdx.length===1?' is':' are')+' correct; '+
+         U+(f.length===1?' ':'s ')+joinList(f)+(f.length===1?' is not.':' are not.');
+}
+function buildSession(pool){return shuffle(pool).map(function(item){
+  let lines=item.L,options,correctText,auto='';
+  if(item.S){
+    const st=shuffle(item.S), n=st.length, trueIdx=[];
+    lines=st.map(function(s){return s[0];});
+    st.forEach(function(s,i){if(s[1])trueIdx.push(i+1);});
+    const built=buildCode(item.mode||'code',n,trueIdx);
+    options=built.set.slice(); correctText=built.text;
+    auto=verdictLine(n,trueIdx,item.unit)+' ';
+  } else { options=item.o.slice(); correctText=item.o[item.a]; }
+  const order=shuffle(options.map(function(text,i){return {text:text,i:i};}));
+  return {chapter:item.c,question:item.q,head:item.head,lines:lines,ask:item.ask,
+          options:order.map(function(o){return o.text;}),
+          correct:order.findIndex(function(o){return o.text===correctText;}),
+          explain:auto+item.e};
+});}
+let session=[],current=0,answers=[],startTime=null,timerInterval=null,reviewMode=false,activeScope="";
+const el=id=>document.getElementById(id);
+const screens={menu:el('menu'),quiz:el('quiz'),result:el('result')};
+function show(name){Object.keys(screens).forEach(k=>screens[k].classList.toggle('is-active',k===name));}
+el('courseEyebrow').textContent=COURSE.eyebrow; el('courseTitle').textContent=COURSE.title; el('courseLede').textContent=COURSE.lede;
+function chapterCount(name){return QUESTIONS.filter(q=>q.c===name).length;}
+function buildMenu(){
+  const list=el('lessonList'); list.innerHTML='';
+  const combined=document.createElement('button');
+  combined.className='lesson-card combined'; combined.type='button';
+  combined.innerHTML='<span class="lesson-num">★</span><span class="lesson-body"><span class="lesson-title">Full Syllabus — Combined</span><span class="lesson-meta">All '+CHAPTERS.length+' lessons · '+QUESTIONS.length+' questions, shuffled</span></span><span class="lesson-go">→</span>';
+  combined.addEventListener('click',()=>startQuiz(null)); list.appendChild(combined);
+  CHAPTERS.forEach((name,idx)=>{
+    const shortTitle=name.replace(/^Ch\d+ · /,'');
+    const btn=document.createElement('button'); btn.className='lesson-card'; btn.type='button';
+    const num=document.createElement('span'); num.className='lesson-num'; num.textContent=String(idx+1);
+    const body=document.createElement('span'); body.className='lesson-body';
+    const t=document.createElement('span'); t.className='lesson-title'; t.textContent=shortTitle;
+    const m=document.createElement('span'); m.className='lesson-meta'; m.textContent=chapterCount(name)+' questions';
+    body.appendChild(t); body.appendChild(m);
+    const go=document.createElement('span'); go.className='lesson-go'; go.textContent='→';
+    btn.appendChild(num); btn.appendChild(body); btn.appendChild(go);
+    btn.addEventListener('click',()=>startQuiz(name)); list.appendChild(btn);
+  });
+}
+function formatTime(sec){const m=Math.floor(sec/60).toString().padStart(2,'0');const s=Math.floor(sec%60).toString().padStart(2,'0');return m+':'+s;}
+function startTimer(){startTime=Date.now();clearInterval(timerInterval);timerInterval=setInterval(()=>{el('timer').textContent=formatTime((Date.now()-startTime)/1000);},1000);}
+function stopTimer(){clearInterval(timerInterval);}
+function startQuiz(chapter){
+  const pool=chapter?QUESTIONS.filter(q=>q.c===chapter):QUESTIONS;
+  activeScope=chapter?chapter.replace(/^Ch\d+ · /,''):"Full Syllabus";
+  session=buildSession(pool); answers=new Array(session.length).fill(null); current=0; reviewMode=false;
+  show('quiz'); el('timer').textContent='00:00'; startTimer(); renderQuestion();
+}
+function renderStem(item){
+  const box=el('qblock'); box.innerHTML='';
+  const stem=document.createElement('p'); stem.className='question'; stem.textContent=item.question; box.appendChild(stem);
+  if(item.head){const h=document.createElement('p'); h.className='stmt-head'; h.textContent=item.head; box.appendChild(h);}
+  if(item.lines&&item.lines.length){
+    const ol=document.createElement('ul'); ol.className='stmt-list';
+    item.lines.forEach((line,i)=>{
+      const li=document.createElement('li');
+      const n=document.createElement('span'); n.className='sn'; n.textContent=(i+1)+'.';
+      const t=document.createElement('span'); t.className='st';
+      const split=line.indexOf(' : ');
+      if(split>-1){
+        t.textContent=line.slice(0,split);
+        const r=document.createElement('span'); r.className='sr'; r.textContent=' — '+line.slice(split+3);
+        t.appendChild(r);
+      } else { t.textContent=line; }
+      li.appendChild(n); li.appendChild(t); ol.appendChild(li);
+    });
+    box.appendChild(ol);
+  }
+  if(item.ask){const a=document.createElement('p'); a.className='ask'; a.textContent=item.ask; box.appendChild(a);}
+}
+function renderQuestion(){
+  const item=session[current]; const chosen=answers[current]; const reveal=chosen!==null||reviewMode;
+  el('chapterTag').textContent=item.chapter; el('counter').textContent=(current+1)+' / '+session.length;
+  el('progressFill').style.width=((current+1)/session.length*100)+'%';
+  renderStem(item);
+  const optsBox=el('options'); optsBox.innerHTML=''; const letters=['A','B','C','D','E'];
+  item.options.forEach((opt,i)=>{
+    const btn=document.createElement('button'); btn.className='option'; btn.type='button';
+    const l=document.createElement('span'); l.className='opt-letter'; l.textContent=letters[i];
+    const t=document.createElement('span'); t.className='opt-text'; t.textContent=opt;
+    btn.appendChild(l); btn.appendChild(t);
+    if(reveal){btn.disabled=true; if(i===item.correct)btn.classList.add('correct'); else if(i===chosen)btn.classList.add('incorrect');}
+    btn.addEventListener('click',()=>selectOption(i)); optsBox.appendChild(btn);
+  });
+  const fb=el('feedback');
+  if(reveal){
+    fb.hidden=false; let verdict,cls;
+    if(chosen===null){verdict='Skipped.';cls='bad';} else if(chosen===item.correct){verdict='Correct.';cls='good';} else {verdict='Not quite.';cls='bad';}
+    fb.className='feedback '+cls;
+    fb.innerHTML=''; const v=document.createElement('span'); v.className='verdict'; v.textContent=verdict;
+    fb.appendChild(v); fb.appendChild(document.createTextNode(' '+item.explain));
+  } else { fb.hidden=true; }
+  el('prevBtn').disabled=current===0;
+  const nextBtn=el('nextBtn');
+  nextBtn.textContent = reviewMode ? (current===session.length-1?'Back to results':'Next →') : (current===session.length-1?'Finish':'Next →');
+  el('options').scrollIntoView&&el('qblock').parentElement.scrollTo({top:0});
+}
+function selectOption(i){ if(reviewMode||answers[current]!==null)return; answers[current]=i; renderQuestion(); }
+function finishQuiz(){
+  stopTimer(); const elapsed=(Date.now()-startTime)/1000; let correctCount=0; const stats={};
+  session.forEach((item,i)=>{ if(!stats[item.chapter])stats[item.chapter]={correct:0,total:0}; stats[item.chapter].total++; if(answers[i]===item.correct){correctCount++;stats[item.chapter].correct++;} });
+  show('result');
+  el('resultScope').textContent=activeScope+' · '+session.length+' questions';
+  el('scoreText').textContent=correctCount+' / '+session.length; el('timeText').textContent=formatTime(elapsed);
+  el('scorePct').textContent=Math.round(correctCount/session.length*100)+'%';
+  const body=el('breakdownBody'); body.innerHTML='';
+  CHAPTERS.filter(c=>stats[c]).forEach(c=>{
+    const s=stats[c]; const row=document.createElement('tr');
+    const td1=document.createElement('td'); td1.textContent=c.replace(/^Ch\d+ · /,'');
+    const p=Math.round(s.correct/s.total*100);
+    const bar=document.createElement('div'); bar.className='bd-bar';
+    const fill=document.createElement('span'); fill.style.width=p+'%'; bar.appendChild(fill); td1.appendChild(bar);
+    const td2=document.createElement('td'); td2.className='num'; td2.textContent=s.correct+' / '+s.total;
+    row.appendChild(td1); row.appendChild(td2); body.appendChild(row);
+  });
+}
+function enterReview(){reviewMode=true;current=0;show('quiz');renderQuestion();}
+function exitReviewToResult(){reviewMode=false;show('result');}
+el('prevBtn').addEventListener('click',()=>{if(current>0){current--;renderQuestion();}});
+el('nextBtn').addEventListener('click',()=>{
+  if(reviewMode){ if(current===session.length-1)exitReviewToResult(); else {current++;renderQuestion();} }
+  else { if(current===session.length-1)finishQuiz(); else {current++;renderQuestion();} }
+});
+el('reviewBtn').addEventListener('click',enterReview);
+el('restartBtn').addEventListener('click',()=>{ const chapter=activeScope==="Full Syllabus"?null:CHAPTERS.find(c=>c.replace(/^Ch\d+ · /,'')===activeScope); startQuiz(chapter); });
+el('menuBtn').addEventListener('click',()=>{stopTimer();show('menu');});
+document.addEventListener('keydown',(e)=>{
+  if(!screens.quiz.classList.contains('is-active'))return;
+  if(['1','2','3','4','5'].includes(e.key)&&!reviewMode){selectOption(parseInt(e.key,10)-1);}
+  else if(e.key==='ArrowRight'||e.key==='Enter'){el('nextBtn').click();}
+  else if(e.key==='ArrowLeft'){el('prevBtn').click();}
+});
+buildMenu();
+</script>

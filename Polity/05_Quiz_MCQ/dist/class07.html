@@ -1,0 +1,972 @@
+<title>Class VII Polity Quiz — NCERT Social and Political Life II</title>
+<style>
+:root{
+  --ink:#211A1B; --paper:#F5F1F0; --surface:#FFFFFF; --line:#DED4D3; --muted:#665A59;
+  --good:#1F7A4C; --good-soft:#E4F3EA; --bad:#B23A34; --bad-soft:#FBE7E5;
+  --accent:#7A2331; --accent-ink:#FFFFFF; --accent-soft:#F1E1E3;
+  --radius:10px;
+  --serif:Georgia,'Iowan Old Style','Palatino Linotype','Book Antiqua',serif;
+  --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --ink:#EDE7E7; --paper:#171213; --surface:#211A1B; --line:#332829; --muted:#A6989A;
+    --good:#3FBE7C; --good-soft:rgba(63,190,124,0.14); --bad:#E2665F; --bad-soft:rgba(226,102,95,0.14);
+    --accent:#D97A82; --accent-ink:#241012; --accent-soft:rgba(217,122,130,0.18);
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#EDE7E7; --paper:#171213; --surface:#211A1B; --line:#332829; --muted:#A6989A;
+  --good:#3FBE7C; --good-soft:rgba(63,190,124,0.14); --bad:#E2665F; --bad-soft:rgba(226,102,95,0.14);
+  --accent:#D97A82; --accent-ink:#241012; --accent-soft:rgba(217,122,130,0.18);
+}
+:root[data-theme="light"]{
+  --ink:#211A1B; --paper:#F5F1F0; --surface:#FFFFFF; --line:#DED4D3; --muted:#665A59;
+  --good:#1F7A4C; --good-soft:#E4F3EA; --bad:#B23A34; --bad-soft:#FBE7E5;
+  --accent:#7A2331; --accent-ink:#FFFFFF; --accent-soft:#F1E1E3;
+}
+*{box-sizing:border-box;}
+html,body{height:100%;}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;}
+.app{min-height:100dvh;display:flex;flex-direction:column;max-width:760px;margin:0 auto;padding:20px 20px 24px;}
+.screen{flex:1;display:flex;flex-direction:column;min-height:0;}
+.eyebrow{font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin:0 0 6px;}
+.menu-screen{gap:16px;justify-content:flex-start;padding-top:10px;}
+.menu-screen h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,36px);margin:0;text-wrap:balance;}
+.lede{color:var(--muted);line-height:1.55;max-width:64ch;margin:0;}
+.how{display:flex;flex-wrap:wrap;gap:8px 18px;margin:2px 0 4px;padding:0;list-style:none;}
+.how li{font-size:12.5px;color:var(--muted);display:flex;align-items:center;gap:6px;}
+.how li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none;}
+.menu-label{font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);margin:8px 0 -2px;}
+.lesson-list{display:flex;flex-direction:column;gap:10px;}
+.lesson-card{display:flex;align-items:center;gap:14px;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:15px 18px;font-family:var(--sans);cursor:pointer;width:100%;color:var(--ink);}
+.lesson-card:hover{border-color:var(--accent);}
+.lesson-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+.lesson-card.combined{background:var(--accent-soft);border-color:var(--accent);}
+.lesson-num{flex:none;width:38px;height:38px;border-radius:9px;background:var(--accent-soft);color:var(--accent);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:16px;font-weight:700;}
+.lesson-card.combined .lesson-num{background:var(--accent);color:var(--accent-ink);}
+.lesson-body{flex:1;min-width:0;}
+.lesson-title{font-family:var(--serif);font-size:16.5px;line-height:1.25;margin:0 0 2px;display:block;}
+.lesson-meta{font-size:12.5px;color:var(--muted);display:block;}
+.lesson-go{flex:none;color:var(--muted);font-size:20px;}
+.lesson-card:hover .lesson-go{color:var(--accent);}
+.quiz-screen{gap:14px;display:none;}
+.bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.chapter-tag{font-size:11px;text-transform:uppercase;letter-spacing:0.04em;background:var(--accent-soft);color:var(--accent);padding:5px 10px;border-radius:999px;white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis;}
+.progress-track{flex:1;min-width:60px;height:6px;background:var(--line);border-radius:999px;overflow:hidden;}
+.progress-fill{height:100%;background:var(--accent);width:0%;}
+.counter{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap;}
+.timer{font-family:var(--serif);font-size:15px;font-variant-numeric:tabular-nums;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:4px 10px;white-space:nowrap;}
+.card{flex:1;min-height:0;overflow-y:auto;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;display:flex;flex-direction:column;gap:15px;}
+.qblock{display:flex;flex-direction:column;gap:9px;}
+.question{font-family:var(--serif);font-size:clamp(17px,2.4vw,20px);line-height:1.45;margin:0;white-space:pre-line;}
+.stmt-head{font-size:12px;letter-spacing:0.05em;text-transform:uppercase;color:var(--muted);margin:0;padding-left:26px;}
+.stmt-list{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px;}
+.stmt-list li{display:flex;gap:10px;font-size:14.8px;line-height:1.5;}
+.stmt-list li .sn{flex:none;min-width:16px;color:var(--muted);font-variant-numeric:tabular-nums;}
+.stmt-list li .st{flex:1;min-width:0;}
+.stmt-list li .sr{color:var(--muted);}
+.ask{font-family:var(--serif);font-size:15.5px;line-height:1.45;margin:2px 0 0;font-style:italic;}
+.options{display:flex;flex-direction:column;gap:9px;}
+.option{display:flex;align-items:flex-start;gap:11px;text-align:left;background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:11px 13px;font-family:var(--sans);font-size:14.5px;color:var(--ink);cursor:pointer;line-height:1.4;width:100%;}
+.option:hover:not(:disabled){border-color:var(--accent);}
+.option:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+.option:disabled{cursor:default;}
+.opt-letter{flex:none;width:23px;height:23px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:var(--muted);}
+.option.correct{background:var(--good-soft);border-color:var(--good);}
+.option.correct .opt-letter{background:var(--good);border-color:var(--good);color:#fff;}
+.option.incorrect{background:var(--bad-soft);border-color:var(--bad);}
+.option.incorrect .opt-letter{background:var(--bad);border-color:var(--bad);color:#fff;}
+.feedback{font-size:13.5px;line-height:1.6;margin:0;padding:12px 14px;border-radius:8px;background:var(--paper);border-left:3px solid var(--accent);}
+.feedback .verdict{font-family:var(--serif);font-weight:700;font-style:italic;}
+.feedback.good{border-left-color:var(--good);}
+.feedback.good .verdict{color:var(--good);}
+.feedback.bad{border-left-color:var(--bad);}
+.feedback.bad .verdict{color:var(--bad);}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.hint{font-size:12px;color:var(--muted);text-align:center;flex:1;}
+.btn-primary{background:var(--accent);color:var(--accent-ink);border:none;border-radius:999px;padding:12px 24px;font-size:14.5px;font-weight:600;font-family:var(--sans);cursor:pointer;}
+.btn-primary:hover{filter:brightness(1.07);}
+.btn-primary:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+.btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:11px 20px;font-size:14px;font-family:var(--sans);cursor:pointer;}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
+.btn-ghost:disabled{opacity:0.35;cursor:not-allowed;}
+.btn-ghost:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+.result-screen{gap:18px;justify-content:center;display:none;}
+.result-screen h1{font-family:var(--serif);font-size:clamp(24px,4.5vw,32px);margin:0;}
+.result-sub{color:var(--muted);margin:-8px 0 0;font-size:14px;}
+.score-row{display:flex;gap:22px;flex-wrap:wrap;}
+.score-block{display:flex;flex-direction:column;gap:2px;}
+.score-num{font-family:var(--serif);font-size:30px;font-variant-numeric:tabular-nums;}
+.score-label{font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);}
+.breakdown-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px;max-height:280px;overflow-y:auto;}
+.breakdown{width:100%;border-collapse:collapse;font-size:13.5px;}
+.breakdown th,.breakdown td{padding:8px 12px;text-align:left;border-bottom:1px solid var(--line);}
+.breakdown th{color:var(--muted);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:0.05em;position:sticky;top:0;background:var(--surface);}
+.breakdown td.num{font-variant-numeric:tabular-nums;text-align:right;}
+.breakdown tr:last-child td{border-bottom:none;}
+.bd-bar{height:5px;border-radius:3px;background:var(--line);margin-top:4px;overflow:hidden;}
+.bd-bar span{display:block;height:100%;background:var(--accent);}
+.result-actions{display:flex;gap:10px;flex-wrap:wrap;}
+[hidden]{display:none !important;}
+.is-active{display:flex !important;}
+@media (prefers-reduced-motion: no-preference){
+  .option,.lesson-card{transition:background 0.15s ease,border-color 0.15s ease;}
+  .progress-fill{transition:width 0.25s ease;}
+}
+@media (max-width:480px){
+  .app{padding:16px 14px 18px;}
+  .nav{flex-wrap:wrap;}
+  .hint{order:3;width:100%;}
+  .card{padding:18px 16px;}
+}
+</style>
+
+<div class="app">
+  <section id="menu" class="screen menu-screen is-active">
+    <p class="eyebrow" id="courseEyebrow"></p>
+    <h1 id="courseTitle"></h1>
+    <p class="lede" id="courseLede"></p>
+    <ul class="how">
+      <li>Prelims-pattern: statements, pairs, assertion–reason</li>
+      <li>Options balanced — no length giveaways</li>
+      <li>Detailed explanation on every answer</li>
+      <li>Reshuffles each attempt · stopwatch</li>
+    </ul>
+    <p class="menu-label">Choose a lesson — or take the full syllabus</p>
+    <div class="lesson-list" id="lessonList"></div>
+  </section>
+
+  <section id="quiz" class="screen quiz-screen">
+    <header class="bar">
+      <span id="chapterTag" class="chapter-tag"></span>
+      <div class="progress-track"><div id="progressFill" class="progress-fill"></div></div>
+      <span id="counter" class="counter"></span>
+      <span id="timer" class="timer">00:00</span>
+    </header>
+    <main class="card">
+      <div id="qblock" class="qblock"></div>
+      <div id="options" class="options"></div>
+      <p id="feedback" class="feedback" hidden></p>
+    </main>
+    <footer class="nav">
+      <button id="prevBtn" class="btn-ghost" type="button">← Prev</button>
+      <span class="hint">Press 1–4 to answer · → next · ← prev</span>
+      <button id="nextBtn" class="btn-primary" type="button">Next →</button>
+    </footer>
+  </section>
+
+  <section id="result" class="screen result-screen">
+    <p class="eyebrow">Scorecard</p>
+    <h1 id="resultTitle">Quiz complete</h1>
+    <p class="result-sub" id="resultScope"></p>
+    <div class="score-row">
+      <div class="score-block"><span id="scoreText" class="score-num"></span><span class="score-label">Correct</span></div>
+      <div class="score-block"><span id="scorePct" class="score-num"></span><span class="score-label">Accuracy</span></div>
+      <div class="score-block"><span id="timeText" class="score-num"></span><span class="score-label">Time</span></div>
+    </div>
+    <div class="breakdown-wrap">
+      <table class="breakdown">
+        <thead><tr><th>Lesson</th><th>Score</th></tr></thead>
+        <tbody id="breakdownBody"></tbody>
+      </table>
+    </div>
+    <div class="result-actions">
+      <button id="reviewBtn" class="btn-ghost" type="button">Review answers</button>
+      <button id="restartBtn" class="btn-primary" type="button">Retake — new shuffle</button>
+      <button id="menuBtn" class="btn-ghost" type="button">↤ Lesson menu</button>
+    </div>
+  </section>
+</div>
+
+<script>
+/* ==========================================================================
+   DATA — generated from Polity/05_Quiz_MCQ/data/<class>.js by build.mjs
+   Question shape:
+     c    chapter tag (must match an entry in CHAPTERS)
+     q    stem
+     head optional column header for a "pairs" block, e.g. "Provision : Purpose"
+     L    optional array of numbered lines (statements, or "Left : Right" pairs)
+     ask  optional closing question line, e.g. "Which of the above are correct?"
+     o    four options
+     a    index of the correct option
+     e    explanation shown after answering
+   ========================================================================== */
+const COURSE = {
+  eyebrow: "NCERT Civics · Social and Political Life II",
+  title: "Class VII Polity Quiz — NCERT Social and Political Life II",
+  lede: "Prelims-pattern questions across all 8 chapters of Social and Political Life II. Multi-statement, match-the-pairs and assertion–reason sets. The statements themselves reshuffle on every attempt and the answer code is worked out afresh — so neither the wording, the length, nor the position of the false statement will ever give the answer away."
+};
+const CHAPTERS = [
+  "Ch1 · On Equality",
+  "Ch2 · Role of the Government in Health",
+  "Ch3 · How the State Government Works",
+  "Ch4 · Growing Up as Boys and Girls",
+  "Ch5 · Women Change the World",
+  "Ch6 · Understanding Media",
+  "Ch7 · Markets Around Us",
+  "Ch8 · A Shirt in the Market"
+];
+
+/* Question shapes — see data/class10.js for the full note.
+   S : [statement, isTrue] pairs, reshuffled by the engine each attempt.
+       mode:'code' needs >=2 true of 3; mode:'count' takes any mix.
+   o : four hand-written options, parallel in length and plausibility.       */
+const AR = [
+  "Both A and R are true and R is the correct explanation of A",
+  "Both A and R are true but R is not the correct explanation of A",
+  "A is true but R is false",
+  "A is false but R is true"
+];
+
+const QUESTIONS = [
+
+/* ============ Ch1 · On Equality ============ */
+{c:'Ch1 · On Equality',
+ q:'Consider the following guarantees of equality recognised by the Indian Constitution:',
+ S:[
+    ['Every person is equal before the law.',true],
+    ['Every person may use public wells, roads, shops and bathing ghats.',true],
+    ['No one may be discriminated against on grounds of religion, race or caste.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The four constitutional guarantees are equality before the law, no discrimination on grounds of religion, race, caste, place of birth or sex, access to all public places, and the abolition of untouchability.'},
+{c:'Ch1 · On Equality',
+ q:'In the chapter\'s sense, \'dignity\' means:',
+ o:[
+    'Thinking of oneself and others as worthy of respect',
+    'Having enough wealth to live without depending on others',
+    'Holding a position of authority in one\'s community',
+    'Being treated politely by officials of the government'],
+ a:0,
+ e:'Equality is not only a matter of law and money but of respect. Dr B.R. Ambedkar put it sharply: it is disgraceful to live at the cost of one\'s self-respect, and without it a person is a cipher. Injuring someone\'s dignity treats them as less than fully human.'},
+{c:'Ch1 · On Equality',
+ q:'Article 15 of the Constitution forbids discrimination on grounds of:',
+ o:[
+    'Property, literacy, residence or descent',
+    'Religion, race, caste, sex or place of birth',
+    'Income, education, occupation or language',
+    'Age, marital status, region or profession'],
+ a:1,
+ e:'Article 15 also specifically guarantees access to shops, restaurants, hotels, wells, tanks, bathing ghats and roads. It is the provision most often invoked when someone is turned away from a public place because of who they are.'},
+{c:'Ch1 · On Equality',
+ q:'Consider the following statements about the Midday Meal Scheme:',
+ S:[
+    ['Tamil Nadu was the first state to introduce it.',true],
+    ['In 2001 the Supreme Court directed all states to start it within six months.',true],
+    ['Children of all castes eat together from the same meal.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The scheme covers children in government primary schools, and its effects go well beyond nutrition: attendance rises, mothers are freed from having to feed children at midday, and children of all castes eat together from the same meal — in many places cooked by Dalit women.'},
+{c:'Ch1 · On Equality',
+ q:'The government pursues equality through two broad tools, namely:',
+ o:[
+    'Taxation and control of the news media',
+    'Courts and the appointment of officials',
+    'Laws and government schemes or programmes',
+    'Elections and periodic public referendums'],
+ a:2,
+ e:'Passing a law is not enough by itself, so laws are paired with schemes designed to give communities treated unfairly for centuries the opportunities they never had. The Midday Meal Scheme is the chapter\'s central example of the second tool.'},
+{c:'Ch1 · On Equality',
+ q:'Assertion (A): Unfair treatment of Dalit children persists in schools even though the law forbids it.\nReason (R): A law can be changed quickly, but people\'s attitudes change very slowly.',
+ o:AR,a:0,
+ e:'Both are true and R explains A. Real equality arrives only when people genuinely believe no one is inferior — which is why the chapter insists the task is unfinished despite the constitutional guarantees being in place since 1950.'},
+{c:'Ch1 · On Equality',
+ q:'Consider the following statements about the struggle for equality in the United States:',
+ S:[
+    ['Rosa Parks refused to give up her bus seat to a white man in December 1955.',true],
+    ['The Civil Rights Act of 1964 banned discrimination on grounds of race, religion or national origin.',true],
+    ['After that Act, African Americans ceased to be over-represented among the poor.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Most African Americans remain among the poorest, and many can afford only under-resourced government schools. That is the chapter\'s wider point: no country is completely democratic or completely equal, and in every democracy people keep pushing to widen equality further.'},
+{c:'Ch1 · On Equality',
+ q:'Under the Rights of Persons with Disabilities Act, 2016, the government is required to:',
+ o:[
+    'Set up separate special schools for disabled children',
+    'Provide a monthly allowance to every disabled person',
+    'Reserve a share of seats in every legislative assembly',
+    'Place disabled children in regular mainstream schools'],
+ a:3,
+ e:'The Act requires free education, admission to regular schools rather than segregated ones, and accessible public buildings with ramps. Carrying a wheelchair user down a staircase because no ramp exists breaches both his safety and his dignity.'},
+
+/* ============ Ch2 · Role of the Government in Health ============ */
+{c:'Ch2 · Role of the Government in Health',
+ q:'Consider the following as elements of health in the sense used by the chapter:',
+ S:[
+    ['Clean drinking water and a pollution-free environment.',true],
+    ['Enough nourishing food and decent living conditions.',true],
+    ['Mental well-being, free of constant stress and anxiety.',true]],
+ ask:'How many of the above are part of what health means?',
+ mode:'count',
+ e:'Health means far more than the absence of illness. An undernourished body falls sick easily, cramped and dirty conditions breed disease, and a mind under constant fear is not healthy — so health describes the whole life a person leads, not only what happens at a clinic.'},
+{c:'Ch2 · Role of the Government in Health',
+ q:'India\'s health \'paradox\' refers to the fact that the country:',
+ o:[
+    'Has the doctors, medicines and money, yet cannot reach everyone',
+    'Produces few doctors but has excellent health outcomes',
+    'Spends more on health than any other developing country',
+    'Has eliminated communicable disease but not malnutrition'],
+ a:0,
+ e:'India trains over 30,000 new doctors a year, is the world\'s third largest producer of medicines and attracts medical tourists — yet roughly 5 lakh people die of tuberculosis annually, around 2 million malaria cases occur each year, and half of India\'s children are undernourished.'},
+{c:'Ch2 · Role of the Government in Health',
+ q:'Consider the following statements about public health services:',
+ S:[
+    ['They are financed largely out of the taxes that citizens pay.',true],
+    ['They are meant to provide quality care free or at low cost.',true],
+    ['They deal only with treating illness, not with preventing it.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Prevention is one of their central tasks — campaigns against tuberculosis, malaria, cholera and dengue reach every household in an area, something no single family could organise for itself. The chain runs from a village health centre up through the Primary Health Centre and district hospital.'},
+{c:'Ch2 · Role of the Government in Health',
+ q:'A Primary Health Centre in the public health system typically:',
+ o:[
+    'Operates in large cities alongside teaching hospitals',
+    'Covers many villages and supervises village health workers',
+    'Serves a single village and reports to the state capital',
+    'Handles only specialised surgery referred from districts'],
+ a:1,
+ e:'The structure runs village health centre, then Primary Health Centre covering many villages, then the district hospital which supervises all the health centres, and finally large specialised government hospitals in the big cities.'},
+{c:'Ch2 · Role of the Government in Health',
+ q:'Consider the following statements about the affordability of healthcare in India:',
+ S:[
+    ['Barely 20 per cent of people can afford all the medicines they need during an illness.',true],
+    ['About 40 per cent of those admitted to hospital borrow money or sell belongings to pay.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Private services are growing while public ones are not, so what is available is largely expensive and city-based. Some private practitioners also over-prescribe — unnecessary injections or saline drips where a simple tablet would do — which pushes costs higher still.'},
+{c:'Ch2 · Role of the Government in Health',
+ q:'Jan Aushadhi stores were set up mainly in order to:',
+ o:[
+    'Distribute branded medicines to private clinics',
+    'Register medical practitioners in small towns',
+    'Sell quality generic medicines at low prices',
+    'Provide free consultations in rural districts'],
+ a:2,
+ e:'Their slogan, Daam kam Dawai Uttam, captures the idea: low price, good medicine. Generic medicines are sold under the chemical name of the drug rather than a brand name, and are considerably cheaper than branded equivalents.'},
+{c:'Ch2 · Role of the Government in Health',
+ q:'Costa Rica achieved among the best health outcomes in Central America chiefly by:',
+ o:[
+    'Inviting private hospital chains to run its health system',
+    'Making health insurance compulsory for every household',
+    'Training far more doctors than its population required',
+    'Deciding to have no army and spending on basic needs'],
+ a:3,
+ e:'Its constitution provided for no army at all, and the money saved went into health, education, safe water, sanitation, nutrition and housing, with health education taught at every level of school. A country becomes healthy by investing in basic needs, not only by building hospitals.'},
+{c:'Ch2 · Role of the Government in Health',
+ q:'Assertion (A): The government has a duty to provide health services, including in emergencies.\nReason (R): Failure to give timely treatment amounts to a failure to protect the Right to Life.',
+ o:AR,a:0,
+ e:'Both are true and R explains A. Courts have ordered a state government to reimburse a man for treatment he ought to have received. The Constitution also makes it the duty of the State to raise the level of nutrition and the standard of living and to improve public health.'},
+{c:'Ch2 · Role of the Government in Health',
+ q:'The Kerala experience of 1996 involved the state government:',
+ o:[
+    'Transferring 40 per cent of its budget to local panchayats',
+    'Taking private hospitals in the state into public ownership',
+    'Building a new medical college in each district',
+    'Making health insurance free for its residents'],
+ a:0,
+ e:'With those funds panchayats could plan for water supply, food, women\'s development, education and better health centres and anganwadis, and health outcomes improved markedly. Shortages of medicines, beds and doctors nevertheless remained — progress rather than perfection.'},
+
+/* ============ Ch3 · How the State Government Works ============ */
+{c:'Ch3 · How the State Government Works',
+ q:'Consider the following statements about Members of the Legislative Assembly:',
+ S:[
+    ['Each state is divided into constituencies, and voters in each elect one representative.',true],
+    ['All the MLAs of a state together form the Legislative Assembly.',true],
+    ['MLAs normally stand for election in the name of a political party.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Himachal Pradesh, for instance, has 68 constituencies and therefore 68 MLAs — so a party needs 35 seats to command a majority there.'},
+{c:'Ch3 · How the State Government Works',
+ q:'The Governor of a state is:',
+ o:[
+    'Chosen by the Chief Minister from among senior MLAs',
+    'Head of the State, appointed by the Central Government',
+    'Head of the State, elected by the state\'s own voters',
+    'Leader of the ruling party in the Legislative Assembly'],
+ a:1,
+ e:'The Governor formally appoints the Chief Minister and the other ministers, and ensures the state government functions within the framework of the Constitution. Being appointed by the Centre, the office is distinct from the elected Chief Minister who wields real executive power.'},
+{c:'Ch3 · How the State Government Works',
+ q:'Consider the following pairs:',
+ head:'Body : What it does',
+ S:[
+    ['Legislature : All the MLAs, who debate, question and approve decisions',true],
+    ['Executive : The Chief Minister and ministers, who run the departments',true],
+    ['Legislature : Runs the Public Works and Health departments day to day',false]],
+ ask:'Which of the pairs given above is/are correctly matched?',
+ mode:'code',unit:'pair',
+ e:'Departments are run by the executive. The legislature holds the main authority: it supervises the executive, and the executive must get its decisions approved by it. Note that a minister has two roles at once — MLA for a constituency, and head of a department.'},
+{c:'Ch3 · How the State Government Works',
+ q:'A party is said to have a majority in a state assembly when its MLAs number:',
+ o:[
+    'The largest single bloc of seats',
+    'At least two thirds of the seats',
+    'More than half of the total seats',
+    'Exactly one third of the seats'],
+ a:2,
+ e:'More than half. The majority party becomes the ruling party and forms the government; all other MLAs together form the Opposition. Where no single party crosses the halfway mark, a group of parties may join hands to form a coalition government.'},
+{c:'Ch3 · How the State Government Works',
+ q:'The Chief Minister of a state is:',
+ o:[
+    'Directly elected by the voters of the whole state',
+    'Appointed by the Central Government on the Governor\'s advice',
+    'Selected by the members of the Opposition parties jointly',
+    'Chosen by the MLAs of the ruling party as their leader'],
+ a:3,
+ e:'The ruling party\'s MLAs pick their leader, who is then formally appointed Chief Minister by the Governor. The Chief Minister in turn selects the other ministers, and together they form the executive that runs the state\'s departments.'},
+{c:'Ch3 · How the State Government Works',
+ q:'Consider the following statements about how a state government is held to account:',
+ S:[
+    ['Ministers must answer questions put to them in the Legislative Assembly.',true],
+    ['Press conferences allow journalists to question ministers and report to the public.',true],
+    ['A government that commands a majority need not explain its actions at all.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'A majority does not exempt a government from scrutiny. Newspapers, television and public protest keep watch alongside the Assembly, and the minister must persuade the House that proper steps are being taken. That obligation to answer is what accountability means.'},
+{c:'Ch3 · How the State Government Works',
+ q:'Laws that apply within a single state are made by the:',
+ o:[
+    'Legislative Assembly of the state',
+    'Parliament of the Indian Union',
+    'Council of Ministers of the state',
+    'Office of the Governor of the state'],
+ a:0,
+ e:'State laws are made in the Legislative Assembly; laws for the whole country are made in Parliament. A state may, for example, legislate to require municipal corporations to build enough toilets or to appoint a health worker in every village.'},
+{c:'Ch3 · How the State Government Works',
+ q:'A coalition government is formed when:',
+ o:[
+    'Two parties agree to contest the next election jointly',
+    'No single party wins a majority and several govern together',
+    'The ruling party invites the Opposition to join the cabinet',
+    'The Governor dissolves the Assembly before its full term'],
+ a:1,
+ e:'A coalition is a group of parties joining together to form a government because no one of them commands more than half the seats on its own. It is the same arrangement that has often governed at the Centre since the 1990s.'},
+
+/* ============ Ch4 · Growing Up as Boys and Girls ============ */
+{c:'Ch4 · Growing Up as Boys and Girls',
+ q:'Consider the following statements about gender roles:',
+ S:[
+    ['They are learned from society rather than fixed by nature.',true],
+    ['They differ from one society and one period to another.',true],
+    ['They shape which toys, clothes and futures children are steered towards.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Gender roles are learned. The comparison of Samoa in the 1920s with a Madhya Pradesh town in the 1960s is the chapter\'s proof. In Samoan cooking-houses boys did most of the cooking; in the Indian town the streets belonged to boys while girls hurried home in groups. Neither pattern is natural.'},
+{c:'Ch4 · Growing Up as Boys and Girls',
+ q:'The three features the chapter attributes to housework are that it is:',
+ o:[
+    'Skilled, well rewarded and socially well respected',
+    'Optional, light in effort and quickly completed',
+    'Invisible, physically demanding and time consuming',
+    'Voluntary, seasonal and shared equally in families'],
+ a:2,
+ e:'It is invisible because it is unpaid and done at home; physically demanding because fetching water, carrying firewood, bending to wash and standing at a hot stove are strenuous; and time consuming, leaving women far less leisure than men.'},
+{c:'Ch4 · Growing Up as Boys and Girls',
+ q:'The term \'double burden\' describes the situation in which women:',
+ o:[
+    'Are paid less than men for performing identical work',
+    'Must obtain permission before taking up employment',
+    'Work in two separate jobs to make ends meet',
+    'Do paid work outside the home and unpaid work inside it'],
+ a:3,
+ e:'Central Statistical Organization data from 1998–99 shows the effect: in Haryana women worked 53 hours a week in total against men\'s 40, and in Tamil Nadu 54 against 44. Once housework is counted, women work more total hours than men.'},
+{c:'Ch4 · Growing Up as Boys and Girls',
+ q:'Consider the following statements about steps the government has taken on gender inequality:',
+ S:[
+    ['Anganwadis have been set up in villages to provide child care.',true],
+    ['Organisations employing more than thirty women must provide creche facilities.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Both free women to take up work outside the home, and both free girls from having to mind younger siblings instead of attending school. The chapter\'s key move is to treat unequal treatment of women\'s work as a public problem rather than a private family matter.'},
+{c:'Ch4 · Growing Up as Boys and Girls',
+ q:'\'Care-giving\' is described in the chapter as work that:',
+ o:[
+    'Has both a physical and a strong emotional component',
+    'Requires formal training and a recognised qualification',
+    'Is normally shared equally between men and women',
+    'Is counted in official measures of national income'],
+ a:0,
+ e:'Looking after and nurturing others involves more than physical labour. Because the emotional part is hard to see and impossible to price, care-giving is systematically de-valued — not given due recognition, so that the work and the person doing it are treated as worth less.'},
+{c:'Ch4 · Growing Up as Boys and Girls',
+ q:'Consider the following statements about domestic workers:',
+ S:[
+    ['Most of them are women, and some are children.',true],
+    ['Their wages are low partly because society does not value this work.',true],
+    ['Most of them are protected by a statutory minimum wage.',false],
+    ['Their working day is generally shorter than that of factory workers.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'A domestic worker\'s day can begin at five in the morning and end near midnight. Low pay and long hours go together with a lack of respect, which is why the chapter treats dignity, and not only wages, as part of the problem.'},
+{c:'Ch4 · Growing Up as Boys and Girls',
+ q:'The chapter notes that a person may hold several identities at once, meaning that:',
+ o:[
+    'A sense of identity develops in adulthood',
+    'Someone can be a girl, a sister and a musician together',
+    'A person\'s identity is fixed once and cannot change',
+    'Identity is decided entirely by a person\'s occupation'],
+ a:1,
+ e:'Identity is a sense of who you are, and one person holds many at the same time. Gender is only one of them — which is why reducing a child to \'boy\' or \'girl\' and assigning a whole future on that basis is so limiting.'},
+{c:'Ch4 · Growing Up as Boys and Girls',
+ q:'Assertion (A): Housework is widely treated as though it were not real work.\nReason (R): It is unpaid and done inside the home, so it does not appear in any record.',
+ o:AR,a:0,
+ e:'Both are true and R explains A. Work that carries no wage and leaves no trace in official statistics becomes invisible, and what is invisible is easily dismissed — even though a household stops functioning within a day if that work is withdrawn.'},
+
+/* ============ Ch5 · Women Change the World ============ */
+{c:'Ch5 · Women Change the World',
+ q:'A \'stereotype\' as used in the chapter means:',
+ o:[
+    'A legal rule restricting what certain people may do',
+    'An honest generalisation drawn from careful evidence',
+    'A fixed idea that a whole group must have certain qualities',
+    'A deliberate insult directed at a particular community'],
+ a:2,
+ e:'Believing that women make better nurses because they are patient, or that girls cannot handle technical subjects, are both stereotypes. They stop us from seeing people as individuals, and they shape which opportunities a child is offered.'},
+{c:'Ch5 · Women Change the World',
+ q:'The proportion of India\'s working women engaged in agricultural work is about:',
+ o:[
+    '64.2 per cent',
+    '45.9 per cent',
+    '31.7 per cent',
+    '83.6 per cent'],
+ a:3,
+ e:'83.6 per cent — planting, weeding, harvesting and threshing. The figure is striking against the classroom drawing exercise in which not a single child drew a farmer as a woman. Women farmers are everywhere, yet society has made them invisible in our imagination.'},
+{c:'Ch5 · Women Change the World',
+ q:'Consider the following statements about how stereotypes affect boys:',
+ S:[
+    ['Boys face pressure to choose subjects and careers said to have good job scope.',true],
+    ['Boys who do not behave like other boys are often teased and bullied.',true],
+    ['Gender stereotypes constrain only girls and leave boys unaffected.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Gender stereotypes trap everyone, only in different ways. A boy who prefers history and languages to mathematics and physics meets the same wall of expectation that pushes a girl towards marriage rather than a career.'},
+{c:'Ch5 · Women Change the World',
+ q:'Consider the following pairs:',
+ head:'Woman : Achievement',
+ S:[
+    ['Rashsundari Devi : Wrote Amar Jiban, the first known autobiography by an Indian woman',true],
+    ['Rokeya Sakhawat Hossain : Wrote Sultana\'s Dream and founded a girls\' school in Kolkata',true],
+    ['Ramabai : Earned the title Pandita and set up a Mission near Pune for widows',true]],
+ ask:'How many of the pairs given above are correctly matched?',
+ mode:'count',unit:'pair',
+ e:'All three. Rashsundari Devi taught herself to read in secret at a time when people believed a literate woman would be widowed; Rokeya learned Bangla and English against her family\'s wishes; Ramabai learned Sanskrit, knowledge then forbidden to women. Each went on to open doors for others.'},
+{c:'Ch5 · Women Change the World',
+ q:'Consider the following statements about literacy in India:',
+ S:[
+    ['In 1961 about 40 per cent of men and 15 per cent of women were literate.',true],
+    ['By 2011 the figures had risen to 82 per cent of men and 65 per cent of women.',true],
+    ['By 2011 the gap between male and female literacy had been closed.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Both figures improved greatly, but a gap of seventeen percentage points remained. India collects this data through the Census, which counts the whole population every ten years along with details of age, schooling, work and literacy.'},
+{c:'Ch5 · Women Change the World',
+ q:'Consider the following as reasons the chapter gives for children dropping out of school:',
+ S:[
+    ['There is no proper school nearby, or no regular teachers.',true],
+    ['Poor families educate boys in preference to girls.',true],
+    ['Children face discrimination from teachers and classmates.',true]],
+ ask:'How many of the above does the chapter give as reasons?',
+ mode:'count',
+ e:'All three, together with the absence of transport, which makes parents unwilling to send girls far from home. Lack of interest is emphatically not the explanation. Drop-out is highest at the secondary stage and worst among Adivasi children.'},
+{c:'Ch5 · Women Change the World',
+ q:'Consider the following pairs:',
+ head:'Strategy of the Women\'s Movement : Example',
+ S:[
+    ['Campaigning : The 2006 law against domestic violence',true],
+    ['Showing solidarity : International Women\'s Day on 8 March',true],
+    ['Raising awareness : The 1997 Supreme Court guidelines on sexual harassment',false]],
+ ask:'Which of the pairs given above is/are correctly matched?',
+ mode:'code',unit:'pair',
+ e:'The 1997 guidelines against sexual harassment at the workplace were won through campaigning, like the domestic violence law and the stricter dowry laws of the 1980s. Raising awareness works through street plays, songs and public meetings.'},
+{c:'Ch5 · Women Change the World',
+ q:'The chapter\'s central conclusion about how large-scale change happens is that it:',
+ o:[
+    'Usually comes about through collective struggle over many years',
+    'Depends chiefly on a single determined individual leader',
+    'Follows automatically once a good law has been enacted',
+    'Requires the support of the government of the day first'],
+ a:0,
+ e:'Rights did not fall from the sky. Individual women broke barriers, but the durable gains came from women and supportive men joining together — campaigning, raising awareness, protesting and showing solidarity — over decades.'},
+
+/* ============ Ch6 · Understanding Media ============ */
+{c:'Ch6 · Understanding Media',
+ q:'Consider the following statements about the media:',
+ S:[
+    ['Media is the plural of medium and covers all the ways we communicate.',true],
+    ['Media that reaches millions of people at once is called mass media.',true],
+    ['Print media refers to television and radio broadcasting.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Print media means newspapers and magazines; television and radio are electronic media, so named because they need electronic devices. Both families are mass media when they reach millions at once.'},
+{c:'Ch6 · Understanding Media',
+ q:'The principal source of revenue that keeps mass media running is:',
+ o:[
+    'Licence fees',
+    'Advertising',
+    'Government grants',
+    'Reader subscriptions'],
+ a:1,
+ e:'Studios, cameras, satellites, staff and current technology all cost enormous sums, and advertising pays for them. Ten seconds on a popular television channel can cost anywhere from ₹1,000 to ₹1,00,000, which is why the same advertisements repeat through a cricket match.'},
+{c:'Ch6 · Understanding Media',
+ q:'Assertion (A): The media is not genuinely independent.\nReason (R): Most media outlets are owned by big business houses and depend on advertisers\' money.',
+ o:AR,a:0,
+ e:'Both are true and R explains A. An outlet finds it hard to report against the very businesses that pay its bills. Government censorship is the other constraint — India\'s most severe period was the Emergency of 1975 to 1977.'},
+{c:'Ch6 · Understanding Media',
+ q:'A \'balanced report\' is best described as one that:',
+ o:[
+    'Avoids expressing any opinion on a controversial issue',
+    'Reports only facts that can be independently verified',
+    'Presents all sides of a story and lets readers decide',
+    'Gives equal space to the government and the opposition'],
+ a:2,
+ e:'The chapter\'s illustration is two newspapers covering the closure of polluting factories — one casting the protesters as a traffic nuisance, the other as people robbed of their livelihoods. Neither is balanced, and a reader who sees only one gets only one slice of the truth.'},
+{c:'Ch6 · Understanding Media',
+ q:'\'Censorship\' refers to the power of the government to:',
+ o:[
+    'Require newspapers to register before they begin publication',
+    'Set the prices at which newspapers may be sold to readers',
+    'Decide which journalists may attend official press briefings',
+    'Prevent the media from publishing or showing certain material'],
+ a:3,
+ e:'India\'s worst period of censorship was the Emergency between 1975 and 1977. Today the government censors films but for the most part not the news — yet the media is still not balanced, because ownership by business houses pulls in its own direction.'},
+{c:'Ch6 · Understanding Media',
+ q:'Consider the following statements about the media \'setting the agenda\':',
+ S:[
+    ['It means the media decides what counts as news in the first place.',true],
+    ['Reporting on pesticide levels in cola drinks is given as a good use of this power.',true],
+    ['Extensive coverage of Fashion Week is given as a good use of this power.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Fashion Week is the chapter\'s example of failure: it took front-page headlines in every newspaper in the same week that slum demolitions in Mumbai went unnoticed. Issues such as the lack of safe drinking water, which kills thousands every year, are seldom covered.'},
+{c:'Ch6 · Understanding Media',
+ q:'Khabar Lahriya is best described as:',
+ o:[
+    'A fortnightly newspaper run by Dalit women in Bundeli',
+    'A community radio station broadcasting crop prices',
+    'A documentary film unit training rural camera operators',
+    'A magazine investigating pesticide residues in food'],
+ a:0,
+ e:'Eight Dalit women run it in Chitrakoot district of Uttar Pradesh, reporting on Dalit issues, violence against women and political corruption. Local media of this kind exists precisely because big media ignores the concerns of ordinary people.'},
+{c:'Ch6 · Understanding Media',
+ q:'Consider the following questions the chapter urges an active viewer to ask of any report:',
+ S:[
+    ['What information is not being provided?',true],
+    ['From whose point of view is this written?',true],
+    ['Whose point of view has been left out, and why?',true]],
+ ask:'How many of the above does the chapter recommend asking?',
+ mode:'count',
+ e:'All three, along with asking what information you are actually learning. Television gives only a partial view of the world, showing far more of the rich and famous than of the lives of ordinary or poor people, so the questioning has to be deliberate.'},
+
+/* ============ Ch7 · Markets Around Us ============ */
+{c:'Ch7 · Markets Around Us',
+ q:'Consider the following reasons why goods in a weekly market cost less:',
+ S:[
+    ['Traders pay no shop rent, electricity bills or government fees.',true],
+    ['Many shops sell the same goods, so competition pushes prices down.',true],
+    ['A weekly market has no permanent shops and packs up by evening.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Bargaining is one of the weekly market\'s defining features, and it is exactly what a mall does not permit. Family members work in place of hired staff, which removes another cost, and almost everything a household needs is available in one place.'},
+{c:'Ch7 · Markets Around Us',
+ q:'Neighbourhood shops are often able to offer goods on credit because:',
+ o:[
+    'Their prices are higher than elsewhere',
+    'The seller knows the buyer personally',
+    'The law requires shops to extend credit',
+    'They buy their stock at wholesale rates'],
+ a:1,
+ e:'Credit means getting goods now and paying later, and it rests on a personal relationship — the shopkeeper records the amount in a notebook and the family settles it the following month. Proximity and being open on any day are the other advantages.'},
+{c:'Ch7 · Markets Around Us',
+ q:'Arrange the chain of markets in the order a product passes through it:',
+ o:[
+    'Wholesale trader, producer, consumer, retailer',
+    'Retailer, producer, wholesale trader, consumer',
+    'Producer, wholesale trader, retailer, consumer',
+    'Producer, retailer, wholesale trader, consumer'],
+ a:2,
+ e:'A wholesale trader buys in large quantities and sells on to other traders; the last trader in the chain, who sells to you, is the retailer. It is through these links that goods reach faraway places, since a factory would not sell a single mug to one customer.'},
+{c:'Ch7 · Markets Around Us',
+ q:'A \'wholesale\' transaction is one in which goods are bought and sold:',
+ o:[
+    'At a fixed price',
+    'Only for export',
+    'Without any profit',
+    'In large quantities'],
+ a:3,
+ e:'Buying in bulk is the whole meaning of the word. In a vegetable mandi the wholesaler\'s day begins around two in the morning when trucks arrive from the farms; he buys through auction in quintals and sells to hawkers who reach him by six.'},
+{c:'Ch7 · Markets Around Us',
+ q:'Consider the following statements about shopping malls:',
+ S:[
+    ['They sell both branded and non-branded goods.',true],
+    ['Branded goods are costlier, so fewer people can afford them.',true],
+    ['Buyers can bargain over prices as they do in a weekly market.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Malls have fixed prices, and the rent, air-conditioning and staff costs are passed on to the buyer. A dress that costs over ₹3,000 in a mall may cost roughly a fifth of that in a weekly market for a comparable garment.'},
+{c:'Ch7 · Markets Around Us',
+ q:'The chapter\'s conclusion about markets and equality is that:',
+ o:[
+    'Where you buy or sell depends largely on the money you have',
+    'Markets treat every buyer and every seller the same way',
+    'Competition in markets steadily reduces inequality',
+    'Sellers in every kind of market earn similar incomes'],
+ a:0,
+ e:'A weekly-market trader and a mall shop-owner operate on entirely different scales and earn very unequal amounts, and buyers differ just as sharply — some cannot afford even the cheapest goods while others shop freely. Money decides which market is open to you.'},
+{c:'Ch7 · Markets Around Us',
+ q:'Consider the following statements about buying and selling without a marketplace:',
+ S:[
+    ['Goods can be ordered by telephone or over the internet and delivered home.',true],
+    ['A car factory buys engines, gears and axles from other factories.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'A great deal of trade never appears in any visible marketplace. Sales representatives selling medicines to doctors in their clinics are another example — we see only the finished car in the showroom, not the hundreds of transactions behind it.'},
+{c:'Ch7 · Markets Around Us',
+ q:'When a security guard almost stops two ordinary-looking shoppers from entering a branded-clothes shop, this illustrates:',
+ o:[
+    'A standard practice for controlling shop crowding',
+    'A subtle form of discrimination based on appearance',
+    'A lawful restriction on entry to private property',
+    'A safety measure required of all large retailers'],
+ a:1,
+ e:'All persons have an equal right to enter any shop, yet in practice people are judged by how they look and what they seem able to afford. The episode links this chapter back to the book\'s opening theme of equality and dignity.'},
+
+/* ============ Ch8 · A Shirt in the Market ============ */
+{c:'Ch8 · A Shirt in the Market',
+ q:'Consider the following statements about the position of a small cotton farmer who borrows from a local trader:',
+ S:[
+    ['The loan carries a very high rate of interest.',true],
+    ['The farmer must promise to sell the entire crop to that same trader.',true],
+    ['The farmer can therefore bargain freely over the price of the cotton.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Tied to the lender as the only buyer, the farmer has no bargaining power at all — cotton worth ₹1,800 a quintal elsewhere may be taken at ₹1,500. The dependence continues because the same trader will be needed for the next loan, so the debt cycle repeats.'},
+{c:'Ch8 · A Shirt in the Market',
+ q:'Under the \'putting-out system\' used in the cloth trade, the merchant:',
+ o:[
+    'Employs weavers in a central workshop on monthly wages',
+    'Lends money to weavers so they can buy their own yarn',
+    'Supplies the yarn and collects the finished cloth from weavers',
+    'Rents looms to weavers and buys their cloth at market rates'],
+ a:2,
+ e:'Weavers work at home on the merchant\'s raw material. It looks advantageous — no capital to find, no worry about selling — but because weavers depend on the merchant for both the yarn and the market, the merchant holds all the power and pays a very low price.'},
+{c:'Ch8 · A Shirt in the Market',
+ q:'A cooperative, as the chapter defines it, is:',
+ o:[
+    'A company owned jointly by traders and the government',
+    'A group of merchants who agree to fix a common price',
+    'A body appointed by the state to regulate a local market',
+    'People with a common interest working for mutual benefit'],
+ a:3,
+ e:'In a weavers\' cooperative the members buy yarn together and do their own marketing, cutting out the merchant and securing a fair price. Government support helps — Tamil Nadu\'s free school uniform programme and the Co-optex stores both buy from handloom cooperatives.'},
+{c:'Ch8 · A Shirt in the Market',
+ q:'Consider the following statements about the garment export factory in the chapter:',
+ S:[
+    ['Most of its workers are women, employed on a temporary basis.',true],
+    ['Foreign buyers demand the lowest price, the highest quality and on-time delivery.',true],
+    ['Wages are lowest for thread-cutting, buttoning, ironing and packing.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Tailors are the highest paid, at roughly ₹3,000 a month, and the lowest-paid jobs are held largely by women. The pattern is consistent — pressure from powerful buyers rolls downhill and settles on the weakest workers.'},
+{c:'Ch8 · A Shirt in the Market',
+ q:'Of the ₹1,800 for which the shirt finally sells abroad, the share taken as profit by the foreign businessperson is about:',
+ o:[
+    '₹900',
+    '₹300',
+    '₹150',
+    '₹600'],
+ a:0,
+ e:'His costs come to ₹900 — ₹300 to buy the shirt, ₹400 on advertising and ₹200 on storage and display — leaving ₹900 of profit. The Delhi exporter, by contrast, clears about ₹150 per shirt, and pays only ₹25 of the ₹300 in workers\' wages.'},
+{c:'Ch8 · A Shirt in the Market',
+ q:'The chapter\'s overall conclusion about the market for the shirt is that:',
+ o:[
+    'Profits are shared equally between buyers and sellers',
+    'Gains are distributed very unequally along the chain',
+    'Each participant earns roughly in proportion to their effort',
+    'The producer at the start of the chain earns the most'],
+ a:1,
+ e:'At every step the poor are squeezed while the rich and powerful gain: the farmer tied to a moneylending trader, the weaver tied to a cloth merchant, the woman worker on a temporary contract, and at the far end a businessperson doubling his money on a single shirt.'},
+{c:'Ch8 · A Shirt in the Market',
+ q:'Assertion (A): Weavers in the putting-out system remain poor despite working very long hours.\nReason (R): They depend on the same merchant both for their raw material and for their market.',
+ o:AR,a:0,
+ e:'Both are true and R explains A. A weaver with two looms may have ₹40,000 invested and work up to twelve hours a day with a family member, yet earn only about ₹3,500 a month. Dependence at both ends of the transaction is what destroys their bargaining power.'},
+{c:'Ch8 · A Shirt in the Market',
+ q:'Consider the following statements about how the pressure from foreign buyers is passed on:',
+ S:[
+    ['The exporter cuts costs by keeping wages low and employment temporary.',true],
+    ['Buyers penalise the exporter for any defect or delay in delivery.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The exporter cannot pass the pressure back up to the buyer, so it moves down to the only place where costs can still be squeezed — the workforce. That is the mechanism by which a demand for a cheaper shirt in one country becomes a lower wage in another.'}
+
+];
+
+/* ---------- Engine (identical across classes) ---------- */
+function shuffle(arr){const a=arr.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+
+/* Canonical Prelims answer-code sets. For an S-question the statements are
+   reshuffled on every attempt and the correct code is worked out from which
+   ones landed where — so neither the option nor the position of the false
+   statement can be memorised. */
+const SET_CODE3=["1 and 2 only","2 and 3 only","1 and 3 only","1, 2 and 3"];
+const SET_CODE2=["1 only","2 only","Both 1 and 2","Neither 1 nor 2"];
+const SET_COUNT=["Only one","Only two","All three","None"];
+const SET_COUNT4=["Only one","Only two","Only three","All four"];
+function buildCode(mode,n,trueIdx){
+  const c=trueIdx.length;
+  if(mode==='count'){
+    const set=n===4?SET_COUNT4:SET_COUNT;
+    const text=c===0?'None':c===1?'Only one':c===2?'Only two':c===3?(n===3?'All three':'Only three'):'All four';
+    return {set:set,text:text};
+  }
+  if(n===2){
+    const text=c===2?'Both 1 and 2':c===0?'Neither 1 nor 2':(trueIdx[0]===1?'1 only':'2 only');
+    return {set:SET_CODE2,text:text};
+  }
+  const text=c===3?'1, 2 and 3':trueIdx[0]+' and '+trueIdx[1]+' only';
+  return {set:SET_CODE3,text:text};
+}
+function joinList(a){return a.length===1?String(a[0]):a.slice(0,-1).join(', ')+' and '+a[a.length-1];}
+function verdictLine(n,trueIdx,unit){
+  const U=unit==='pair'?'pair':'statement', Uc=U.charAt(0).toUpperCase()+U.slice(1);
+  const all=[];for(let i=1;i<=n;i++)all.push(i);
+  const f=all.filter(function(i){return trueIdx.indexOf(i)<0;});
+  if(f.length===0)return 'All the '+U+'s here are correct.';
+  if(trueIdx.length===0)return 'None of the '+U+'s here is correct.';
+  return Uc+(trueIdx.length===1?' ':'s ')+joinList(trueIdx)+(trueIdx.length===1?' is':' are')+' correct; '+
+         U+(f.length===1?' ':'s ')+joinList(f)+(f.length===1?' is not.':' are not.');
+}
+function buildSession(pool){return shuffle(pool).map(function(item){
+  let lines=item.L,options,correctText,auto='';
+  if(item.S){
+    const st=shuffle(item.S), n=st.length, trueIdx=[];
+    lines=st.map(function(s){return s[0];});
+    st.forEach(function(s,i){if(s[1])trueIdx.push(i+1);});
+    const built=buildCode(item.mode||'code',n,trueIdx);
+    options=built.set.slice(); correctText=built.text;
+    auto=verdictLine(n,trueIdx,item.unit)+' ';
+  } else { options=item.o.slice(); correctText=item.o[item.a]; }
+  const order=shuffle(options.map(function(text,i){return {text:text,i:i};}));
+  return {chapter:item.c,question:item.q,head:item.head,lines:lines,ask:item.ask,
+          options:order.map(function(o){return o.text;}),
+          correct:order.findIndex(function(o){return o.text===correctText;}),
+          explain:auto+item.e};
+});}
+let session=[],current=0,answers=[],startTime=null,timerInterval=null,reviewMode=false,activeScope="";
+const el=id=>document.getElementById(id);
+const screens={menu:el('menu'),quiz:el('quiz'),result:el('result')};
+function show(name){Object.keys(screens).forEach(k=>screens[k].classList.toggle('is-active',k===name));}
+el('courseEyebrow').textContent=COURSE.eyebrow; el('courseTitle').textContent=COURSE.title; el('courseLede').textContent=COURSE.lede;
+function chapterCount(name){return QUESTIONS.filter(q=>q.c===name).length;}
+function buildMenu(){
+  const list=el('lessonList'); list.innerHTML='';
+  const combined=document.createElement('button');
+  combined.className='lesson-card combined'; combined.type='button';
+  combined.innerHTML='<span class="lesson-num">★</span><span class="lesson-body"><span class="lesson-title">Full Syllabus — Combined</span><span class="lesson-meta">All '+CHAPTERS.length+' lessons · '+QUESTIONS.length+' questions, shuffled</span></span><span class="lesson-go">→</span>';
+  combined.addEventListener('click',()=>startQuiz(null)); list.appendChild(combined);
+  CHAPTERS.forEach((name,idx)=>{
+    const shortTitle=name.replace(/^Ch\d+ · /,'');
+    const btn=document.createElement('button'); btn.className='lesson-card'; btn.type='button';
+    const num=document.createElement('span'); num.className='lesson-num'; num.textContent=String(idx+1);
+    const body=document.createElement('span'); body.className='lesson-body';
+    const t=document.createElement('span'); t.className='lesson-title'; t.textContent=shortTitle;
+    const m=document.createElement('span'); m.className='lesson-meta'; m.textContent=chapterCount(name)+' questions';
+    body.appendChild(t); body.appendChild(m);
+    const go=document.createElement('span'); go.className='lesson-go'; go.textContent='→';
+    btn.appendChild(num); btn.appendChild(body); btn.appendChild(go);
+    btn.addEventListener('click',()=>startQuiz(name)); list.appendChild(btn);
+  });
+}
+function formatTime(sec){const m=Math.floor(sec/60).toString().padStart(2,'0');const s=Math.floor(sec%60).toString().padStart(2,'0');return m+':'+s;}
+function startTimer(){startTime=Date.now();clearInterval(timerInterval);timerInterval=setInterval(()=>{el('timer').textContent=formatTime((Date.now()-startTime)/1000);},1000);}
+function stopTimer(){clearInterval(timerInterval);}
+function startQuiz(chapter){
+  const pool=chapter?QUESTIONS.filter(q=>q.c===chapter):QUESTIONS;
+  activeScope=chapter?chapter.replace(/^Ch\d+ · /,''):"Full Syllabus";
+  session=buildSession(pool); answers=new Array(session.length).fill(null); current=0; reviewMode=false;
+  show('quiz'); el('timer').textContent='00:00'; startTimer(); renderQuestion();
+}
+function renderStem(item){
+  const box=el('qblock'); box.innerHTML='';
+  const stem=document.createElement('p'); stem.className='question'; stem.textContent=item.question; box.appendChild(stem);
+  if(item.head){const h=document.createElement('p'); h.className='stmt-head'; h.textContent=item.head; box.appendChild(h);}
+  if(item.lines&&item.lines.length){
+    const ol=document.createElement('ul'); ol.className='stmt-list';
+    item.lines.forEach((line,i)=>{
+      const li=document.createElement('li');
+      const n=document.createElement('span'); n.className='sn'; n.textContent=(i+1)+'.';
+      const t=document.createElement('span'); t.className='st';
+      const split=line.indexOf(' : ');
+      if(split>-1){
+        t.textContent=line.slice(0,split);
+        const r=document.createElement('span'); r.className='sr'; r.textContent=' — '+line.slice(split+3);
+        t.appendChild(r);
+      } else { t.textContent=line; }
+      li.appendChild(n); li.appendChild(t); ol.appendChild(li);
+    });
+    box.appendChild(ol);
+  }
+  if(item.ask){const a=document.createElement('p'); a.className='ask'; a.textContent=item.ask; box.appendChild(a);}
+}
+function renderQuestion(){
+  const item=session[current]; const chosen=answers[current]; const reveal=chosen!==null||reviewMode;
+  el('chapterTag').textContent=item.chapter; el('counter').textContent=(current+1)+' / '+session.length;
+  el('progressFill').style.width=((current+1)/session.length*100)+'%';
+  renderStem(item);
+  const optsBox=el('options'); optsBox.innerHTML=''; const letters=['A','B','C','D','E'];
+  item.options.forEach((opt,i)=>{
+    const btn=document.createElement('button'); btn.className='option'; btn.type='button';
+    const l=document.createElement('span'); l.className='opt-letter'; l.textContent=letters[i];
+    const t=document.createElement('span'); t.className='opt-text'; t.textContent=opt;
+    btn.appendChild(l); btn.appendChild(t);
+    if(reveal){btn.disabled=true; if(i===item.correct)btn.classList.add('correct'); else if(i===chosen)btn.classList.add('incorrect');}
+    btn.addEventListener('click',()=>selectOption(i)); optsBox.appendChild(btn);
+  });
+  const fb=el('feedback');
+  if(reveal){
+    fb.hidden=false; let verdict,cls;
+    if(chosen===null){verdict='Skipped.';cls='bad';} else if(chosen===item.correct){verdict='Correct.';cls='good';} else {verdict='Not quite.';cls='bad';}
+    fb.className='feedback '+cls;
+    fb.innerHTML=''; const v=document.createElement('span'); v.className='verdict'; v.textContent=verdict;
+    fb.appendChild(v); fb.appendChild(document.createTextNode(' '+item.explain));
+  } else { fb.hidden=true; }
+  el('prevBtn').disabled=current===0;
+  const nextBtn=el('nextBtn');
+  nextBtn.textContent = reviewMode ? (current===session.length-1?'Back to results':'Next →') : (current===session.length-1?'Finish':'Next →');
+  el('options').scrollIntoView&&el('qblock').parentElement.scrollTo({top:0});
+}
+function selectOption(i){ if(reviewMode||answers[current]!==null)return; answers[current]=i; renderQuestion(); }
+function finishQuiz(){
+  stopTimer(); const elapsed=(Date.now()-startTime)/1000; let correctCount=0; const stats={};
+  session.forEach((item,i)=>{ if(!stats[item.chapter])stats[item.chapter]={correct:0,total:0}; stats[item.chapter].total++; if(answers[i]===item.correct){correctCount++;stats[item.chapter].correct++;} });
+  show('result');
+  el('resultScope').textContent=activeScope+' · '+session.length+' questions';
+  el('scoreText').textContent=correctCount+' / '+session.length; el('timeText').textContent=formatTime(elapsed);
+  el('scorePct').textContent=Math.round(correctCount/session.length*100)+'%';
+  const body=el('breakdownBody'); body.innerHTML='';
+  CHAPTERS.filter(c=>stats[c]).forEach(c=>{
+    const s=stats[c]; const row=document.createElement('tr');
+    const td1=document.createElement('td'); td1.textContent=c.replace(/^Ch\d+ · /,'');
+    const p=Math.round(s.correct/s.total*100);
+    const bar=document.createElement('div'); bar.className='bd-bar';
+    const fill=document.createElement('span'); fill.style.width=p+'%'; bar.appendChild(fill); td1.appendChild(bar);
+    const td2=document.createElement('td'); td2.className='num'; td2.textContent=s.correct+' / '+s.total;
+    row.appendChild(td1); row.appendChild(td2); body.appendChild(row);
+  });
+}
+function enterReview(){reviewMode=true;current=0;show('quiz');renderQuestion();}
+function exitReviewToResult(){reviewMode=false;show('result');}
+el('prevBtn').addEventListener('click',()=>{if(current>0){current--;renderQuestion();}});
+el('nextBtn').addEventListener('click',()=>{
+  if(reviewMode){ if(current===session.length-1)exitReviewToResult(); else {current++;renderQuestion();} }
+  else { if(current===session.length-1)finishQuiz(); else {current++;renderQuestion();} }
+});
+el('reviewBtn').addEventListener('click',enterReview);
+el('restartBtn').addEventListener('click',()=>{ const chapter=activeScope==="Full Syllabus"?null:CHAPTERS.find(c=>c.replace(/^Ch\d+ · /,'')===activeScope); startQuiz(chapter); });
+el('menuBtn').addEventListener('click',()=>{stopTimer();show('menu');});
+document.addEventListener('keydown',(e)=>{
+  if(!screens.quiz.classList.contains('is-active'))return;
+  if(['1','2','3','4','5'].includes(e.key)&&!reviewMode){selectOption(parseInt(e.key,10)-1);}
+  else if(e.key==='ArrowRight'||e.key==='Enter'){el('nextBtn').click();}
+  else if(e.key==='ArrowLeft'){el('prevBtn').click();}
+});
+buildMenu();
+</script>
