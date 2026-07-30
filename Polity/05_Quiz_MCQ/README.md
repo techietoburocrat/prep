@@ -1,12 +1,14 @@
 # NCERT Polity Quizzes — source
 
-Durable source for the five NCERT Civics quiz artifacts. The earlier versions
+Durable source for the seven NCERT Polity quiz artifacts. The earlier versions
 lived only in session temp directories and were lost; everything now lives here
 and is rebuilt from source.
 
 ```
 _template.html     the quiz engine + styling, with a /*__DATA__*/ placeholder
 data/class06..10.js  one question bank per class (COURSE, CHAPTERS, QUESTIONS)
+data/class11icw.js   Class XI · Indian Constitution at Work (10 chapters)
+data/class11pt.js    Class XI · Political Theory (8 chapters)
 build.mjs          template + data  ->  dist/classNN.html  (self-contained)
 audit.mjs          static checks; exits non-zero on any problem
 simulate.mjs       replays 400 attempts and measures whether the quiz is guessable
@@ -22,13 +24,15 @@ node normalize.mjs class09    # optional: reformat + re-spread one bank
 
 Published artifacts (same URLs, updated in place):
 
-| Class | URL |
-|---|---|
-| VI   | https://claude.ai/code/artifact/417260c7-e66a-4a9f-8a4b-1e877415113f |
-| VII  | https://claude.ai/code/artifact/cad14910-a26a-4924-a35e-dcb51665d395 |
-| VIII | https://claude.ai/code/artifact/420d7bdf-930d-488b-bef4-0713ddd99b7b |
-| IX   | https://claude.ai/code/artifact/51ab6ef0-ca1e-46df-8d9e-56e885d2a923 |
-| X    | https://claude.ai/code/artifact/599fe569-4614-4506-8377-5915f7fb038f |
+| Class | Bank | URL |
+|---|---|---|
+| VI   | `class06`    | https://claude.ai/code/artifact/417260c7-e66a-4a9f-8a4b-1e877415113f |
+| VII  | `class07`    | https://claude.ai/code/artifact/cad14910-a26a-4924-a35e-dcb51665d395 |
+| VIII | `class08`    | https://claude.ai/code/artifact/420d7bdf-930d-488b-bef4-0713ddd99b7b |
+| IX   | `class09`    | https://claude.ai/code/artifact/51ab6ef0-ca1e-46df-8d9e-56e885d2a923 |
+| X    | `class10`    | https://claude.ai/code/artifact/599fe569-4614-4506-8377-5915f7fb038f |
+| XI — Indian Constitution at Work | `class11icw` | https://claude.ai/code/artifact/a0362033-f785-478f-82dc-6e3706ed2e8c |
+| XI — Political Theory | `class11pt` | https://claude.ai/code/artifact/d05d284a-9b17-4644-85a6-e91eeae6b81d |
 
 ## The problem this rebuild fixed
 
@@ -70,7 +74,16 @@ They cannot, because the statements move. The engine prepends its own line
 ("Statements 1 and 3 are correct; statement 2 is not.") and the authored text
 explains the *content*: which claim fails and why.
 
-**4. No anecdote recall.**
+**4. Vary how many statements are true — and how many there are.**
+A three-statement set where all three are true can only ever answer "1, 2 and 3",
+so a bank full of them collapses the answer-code distribution no matter how well
+the engine shuffles. The Class XI banks first came in at 44–47% on that one code;
+the fix was to convert most all-true sets into sets with a genuinely false
+statement, and to turn a further batch into **two-statement** sets, which open up
+"1 only", "2 only", "Both" and "Neither". Aim for no truth-mix above ~50% of the
+sets and no answer code above ~17% of the answers.
+
+**5. No anecdote recall.**
 Not "whose story describes a domestic worker" — that tests memory of a textbook
 character. Test the concept, the distinction, the article number, the year.
 
@@ -90,5 +103,9 @@ right one? The target is about 25%, the same as guessing. Far above 25% means
 "pick the longest" works; far *below* 25% is just as exploitable, because then
 "never pick the longest" works. Both directions fail the check.
 
-Current state: the correct answer lands on A/B/C/D at 25% each, and no bank has
-a usable length signal.
+It also prints the distribution of statement answer codes, which is where an
+all-true bank gives itself away.
+
+Current state: all seven banks are clean. The correct answer lands on A/B/C/D at
+25% each, no bank has a usable length signal, and no statement answer code
+exceeds 17%.

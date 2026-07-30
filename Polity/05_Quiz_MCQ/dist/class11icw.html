@@ -1,0 +1,1412 @@
+<title>Class XI Polity Quiz — Indian Constitution at Work</title>
+<style>
+:root{
+  --ink:#211A1B; --paper:#F5F1F0; --surface:#FFFFFF; --line:#DED4D3; --muted:#665A59;
+  --good:#1F7A4C; --good-soft:#E4F3EA; --bad:#B23A34; --bad-soft:#FBE7E5;
+  --accent:#7A2331; --accent-ink:#FFFFFF; --accent-soft:#F1E1E3;
+  --radius:10px;
+  --serif:Georgia,'Iowan Old Style','Palatino Linotype','Book Antiqua',serif;
+  --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --ink:#EDE7E7; --paper:#171213; --surface:#211A1B; --line:#332829; --muted:#A6989A;
+    --good:#3FBE7C; --good-soft:rgba(63,190,124,0.14); --bad:#E2665F; --bad-soft:rgba(226,102,95,0.14);
+    --accent:#D97A82; --accent-ink:#241012; --accent-soft:rgba(217,122,130,0.18);
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#EDE7E7; --paper:#171213; --surface:#211A1B; --line:#332829; --muted:#A6989A;
+  --good:#3FBE7C; --good-soft:rgba(63,190,124,0.14); --bad:#E2665F; --bad-soft:rgba(226,102,95,0.14);
+  --accent:#D97A82; --accent-ink:#241012; --accent-soft:rgba(217,122,130,0.18);
+}
+:root[data-theme="light"]{
+  --ink:#211A1B; --paper:#F5F1F0; --surface:#FFFFFF; --line:#DED4D3; --muted:#665A59;
+  --good:#1F7A4C; --good-soft:#E4F3EA; --bad:#B23A34; --bad-soft:#FBE7E5;
+  --accent:#7A2331; --accent-ink:#FFFFFF; --accent-soft:#F1E1E3;
+}
+*{box-sizing:border-box;}
+html,body{height:100%;}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;}
+.app{min-height:100dvh;display:flex;flex-direction:column;max-width:760px;margin:0 auto;padding:20px 20px 24px;}
+.screen{flex:1;display:flex;flex-direction:column;min-height:0;}
+.eyebrow{font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin:0 0 6px;}
+.menu-screen{gap:16px;justify-content:flex-start;padding-top:10px;}
+.menu-screen h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,36px);margin:0;text-wrap:balance;}
+.lede{color:var(--muted);line-height:1.55;max-width:64ch;margin:0;}
+.how{display:flex;flex-wrap:wrap;gap:8px 18px;margin:2px 0 4px;padding:0;list-style:none;}
+.how li{font-size:12.5px;color:var(--muted);display:flex;align-items:center;gap:6px;}
+.how li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none;}
+.menu-label{font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);margin:8px 0 -2px;}
+.lesson-list{display:flex;flex-direction:column;gap:10px;}
+.lesson-card{display:flex;align-items:center;gap:14px;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:15px 18px;font-family:var(--sans);cursor:pointer;width:100%;color:var(--ink);}
+.lesson-card:hover{border-color:var(--accent);}
+.lesson-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+.lesson-card.combined{background:var(--accent-soft);border-color:var(--accent);}
+.lesson-num{flex:none;width:38px;height:38px;border-radius:9px;background:var(--accent-soft);color:var(--accent);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:16px;font-weight:700;}
+.lesson-card.combined .lesson-num{background:var(--accent);color:var(--accent-ink);}
+.lesson-body{flex:1;min-width:0;}
+.lesson-title{font-family:var(--serif);font-size:16.5px;line-height:1.25;margin:0 0 2px;display:block;}
+.lesson-meta{font-size:12.5px;color:var(--muted);display:block;}
+.lesson-go{flex:none;color:var(--muted);font-size:20px;}
+.lesson-card:hover .lesson-go{color:var(--accent);}
+.quiz-screen{gap:14px;display:none;}
+.bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.chapter-tag{font-size:11px;text-transform:uppercase;letter-spacing:0.04em;background:var(--accent-soft);color:var(--accent);padding:5px 10px;border-radius:999px;white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis;}
+.progress-track{flex:1;min-width:60px;height:6px;background:var(--line);border-radius:999px;overflow:hidden;}
+.progress-fill{height:100%;background:var(--accent);width:0%;}
+.counter{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap;}
+.timer{font-family:var(--serif);font-size:15px;font-variant-numeric:tabular-nums;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:4px 10px;white-space:nowrap;}
+.card{flex:1;min-height:0;overflow-y:auto;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;display:flex;flex-direction:column;gap:15px;}
+.qblock{display:flex;flex-direction:column;gap:9px;}
+.question{font-family:var(--serif);font-size:clamp(17px,2.4vw,20px);line-height:1.45;margin:0;white-space:pre-line;}
+.stmt-head{font-size:12px;letter-spacing:0.05em;text-transform:uppercase;color:var(--muted);margin:0;padding-left:26px;}
+.stmt-list{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px;}
+.stmt-list li{display:flex;gap:10px;font-size:14.8px;line-height:1.5;}
+.stmt-list li .sn{flex:none;min-width:16px;color:var(--muted);font-variant-numeric:tabular-nums;}
+.stmt-list li .st{flex:1;min-width:0;}
+.stmt-list li .sr{color:var(--muted);}
+.ask{font-family:var(--serif);font-size:15.5px;line-height:1.45;margin:2px 0 0;font-style:italic;}
+.options{display:flex;flex-direction:column;gap:9px;}
+.option{display:flex;align-items:flex-start;gap:11px;text-align:left;background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:11px 13px;font-family:var(--sans);font-size:14.5px;color:var(--ink);cursor:pointer;line-height:1.4;width:100%;}
+.option:hover:not(:disabled){border-color:var(--accent);}
+.option:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+.option:disabled{cursor:default;}
+.opt-letter{flex:none;width:23px;height:23px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:var(--muted);}
+.option.correct{background:var(--good-soft);border-color:var(--good);}
+.option.correct .opt-letter{background:var(--good);border-color:var(--good);color:#fff;}
+.option.incorrect{background:var(--bad-soft);border-color:var(--bad);}
+.option.incorrect .opt-letter{background:var(--bad);border-color:var(--bad);color:#fff;}
+.feedback{font-size:13.5px;line-height:1.6;margin:0;padding:12px 14px;border-radius:8px;background:var(--paper);border-left:3px solid var(--accent);}
+.feedback .verdict{font-family:var(--serif);font-weight:700;font-style:italic;}
+.feedback.good{border-left-color:var(--good);}
+.feedback.good .verdict{color:var(--good);}
+.feedback.bad{border-left-color:var(--bad);}
+.feedback.bad .verdict{color:var(--bad);}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.hint{font-size:12px;color:var(--muted);text-align:center;flex:1;}
+.btn-primary{background:var(--accent);color:var(--accent-ink);border:none;border-radius:999px;padding:12px 24px;font-size:14.5px;font-weight:600;font-family:var(--sans);cursor:pointer;}
+.btn-primary:hover{filter:brightness(1.07);}
+.btn-primary:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+.btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:11px 20px;font-size:14px;font-family:var(--sans);cursor:pointer;}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
+.btn-ghost:disabled{opacity:0.35;cursor:not-allowed;}
+.btn-ghost:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+.result-screen{gap:18px;justify-content:center;display:none;}
+.result-screen h1{font-family:var(--serif);font-size:clamp(24px,4.5vw,32px);margin:0;}
+.result-sub{color:var(--muted);margin:-8px 0 0;font-size:14px;}
+.score-row{display:flex;gap:22px;flex-wrap:wrap;}
+.score-block{display:flex;flex-direction:column;gap:2px;}
+.score-num{font-family:var(--serif);font-size:30px;font-variant-numeric:tabular-nums;}
+.score-label{font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);}
+.breakdown-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px;max-height:280px;overflow-y:auto;}
+.breakdown{width:100%;border-collapse:collapse;font-size:13.5px;}
+.breakdown th,.breakdown td{padding:8px 12px;text-align:left;border-bottom:1px solid var(--line);}
+.breakdown th{color:var(--muted);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:0.05em;position:sticky;top:0;background:var(--surface);}
+.breakdown td.num{font-variant-numeric:tabular-nums;text-align:right;}
+.breakdown tr:last-child td{border-bottom:none;}
+.bd-bar{height:5px;border-radius:3px;background:var(--line);margin-top:4px;overflow:hidden;}
+.bd-bar span{display:block;height:100%;background:var(--accent);}
+.result-actions{display:flex;gap:10px;flex-wrap:wrap;}
+[hidden]{display:none !important;}
+.is-active{display:flex !important;}
+@media (prefers-reduced-motion: no-preference){
+  .option,.lesson-card{transition:background 0.15s ease,border-color 0.15s ease;}
+  .progress-fill{transition:width 0.25s ease;}
+}
+@media (max-width:480px){
+  .app{padding:16px 14px 18px;}
+  .nav{flex-wrap:wrap;}
+  .hint{order:3;width:100%;}
+  .card{padding:18px 16px;}
+}
+</style>
+
+<div class="app">
+  <section id="menu" class="screen menu-screen is-active">
+    <p class="eyebrow" id="courseEyebrow"></p>
+    <h1 id="courseTitle"></h1>
+    <p class="lede" id="courseLede"></p>
+    <ul class="how">
+      <li>Prelims-pattern: statements, pairs, assertion–reason</li>
+      <li>Options balanced — no length giveaways</li>
+      <li>Detailed explanation on every answer</li>
+      <li>Reshuffles each attempt · stopwatch</li>
+    </ul>
+    <p class="menu-label">Choose a lesson — or take the full syllabus</p>
+    <div class="lesson-list" id="lessonList"></div>
+  </section>
+
+  <section id="quiz" class="screen quiz-screen">
+    <header class="bar">
+      <span id="chapterTag" class="chapter-tag"></span>
+      <div class="progress-track"><div id="progressFill" class="progress-fill"></div></div>
+      <span id="counter" class="counter"></span>
+      <span id="timer" class="timer">00:00</span>
+    </header>
+    <main class="card">
+      <div id="qblock" class="qblock"></div>
+      <div id="options" class="options"></div>
+      <p id="feedback" class="feedback" hidden></p>
+    </main>
+    <footer class="nav">
+      <button id="prevBtn" class="btn-ghost" type="button">← Prev</button>
+      <span class="hint">Press 1–4 to answer · → next · ← prev</span>
+      <button id="nextBtn" class="btn-primary" type="button">Next →</button>
+    </footer>
+  </section>
+
+  <section id="result" class="screen result-screen">
+    <p class="eyebrow">Scorecard</p>
+    <h1 id="resultTitle">Quiz complete</h1>
+    <p class="result-sub" id="resultScope"></p>
+    <div class="score-row">
+      <div class="score-block"><span id="scoreText" class="score-num"></span><span class="score-label">Correct</span></div>
+      <div class="score-block"><span id="scorePct" class="score-num"></span><span class="score-label">Accuracy</span></div>
+      <div class="score-block"><span id="timeText" class="score-num"></span><span class="score-label">Time</span></div>
+    </div>
+    <div class="breakdown-wrap">
+      <table class="breakdown">
+        <thead><tr><th>Lesson</th><th>Score</th></tr></thead>
+        <tbody id="breakdownBody"></tbody>
+      </table>
+    </div>
+    <div class="result-actions">
+      <button id="reviewBtn" class="btn-ghost" type="button">Review answers</button>
+      <button id="restartBtn" class="btn-primary" type="button">Retake — new shuffle</button>
+      <button id="menuBtn" class="btn-ghost" type="button">↤ Lesson menu</button>
+    </div>
+  </section>
+</div>
+
+<script>
+/* ==========================================================================
+   DATA — generated from Polity/05_Quiz_MCQ/data/<class>.js by build.mjs
+   Question shape:
+     c    chapter tag (must match an entry in CHAPTERS)
+     q    stem
+     head optional column header for a "pairs" block, e.g. "Provision : Purpose"
+     L    optional array of numbered lines (statements, or "Left : Right" pairs)
+     ask  optional closing question line, e.g. "Which of the above are correct?"
+     o    four options
+     a    index of the correct option
+     e    explanation shown after answering
+   ========================================================================== */
+const COURSE = {
+  eyebrow: "NCERT Political Science · Indian Constitution at Work",
+  title: "Class XI Polity Quiz — Indian Constitution at Work",
+  lede: "Prelims-pattern questions across all 10 chapters of Indian Constitution at Work — the highest-yield NCERT for UPSC Polity. Multi-statement, match-the-pairs and assertion–reason sets. The statements themselves reshuffle on every attempt and the answer code is worked out afresh, so neither the wording, the length, nor the position of the false statement will ever give the answer away."
+};
+const CHAPTERS = [
+  "Ch1 · Constitution: Why and How?",
+  "Ch2 · Rights in the Indian Constitution",
+  "Ch3 · Election and Representation",
+  "Ch4 · Executive",
+  "Ch5 · Legislature",
+  "Ch6 · Judiciary",
+  "Ch7 · Federalism",
+  "Ch8 · Local Governments",
+  "Ch9 · Constitution as a Living Document",
+  "Ch10 · The Philosophy of the Constitution"
+];
+
+/* Question shapes
+   S-question : S is [statement, isTrue] pairs. The engine reshuffles them on
+                every attempt and then computes the correct answer code.
+                mode:'code' gives "1 and 2 only / 2 and 3 only / 1 and 3 only /
+                1, 2 and 3" and needs at least two true statements; mode:'count'
+                gives "Only one / Only two / All three / None" and takes any mix.
+                unit:'pair' words the auto-explanation as pairs, not statements.
+   o-question : four hand-written options, deliberately parallel in length,
+                grammar and plausibility, with a marking the correct one.
+   AR         : assertion-reason, using the standard four-option code below.   */
+const AR = [
+  "Both A and R are true and R is the correct explanation of A",
+  "Both A and R are true but R is not the correct explanation of A",
+  "A is true but R is false",
+  "A is false but R is true"
+];
+
+const QUESTIONS = [
+
+/* ============ Ch1 · Constitution: Why and How? ============ */
+{c:'Ch1 · Constitution: Why and How?',
+ q:'Consider the following statements about the functions a constitution performs:',
+ S:[
+    ['It specifies who has the power to make decisions and how government is constituted.',true],
+    ['It guarantees that persons of good character will be chosen to hold public office.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The allocation of decision-making power is one of the five functions; a constitution also supplies the basic rules that allow minimal coordination among members of a society, limits government, enable it to pursue social goals, and express a people\'s identity. What no constitution can do is determine the character of whoever wins office — which is exactly why the NCERT exercise lists \'ensuring that good people come to power\' as the one item that is not a function.'},
+{c:'Ch1 · Constitution: Why and How?',
+ q:'Consider the following statements about the Constituent Assembly:',
+ S:[
+    ['Its members were indirectly elected by members of the Provincial Legislative Assemblies constituted under the Government of India Act, 1935.',true],
+    ['After Partition its membership stood reduced to 299.',true],
+    ['The Constitution was adopted on 26 January 1950 and came into force on 26 November 1949.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The two dates are inverted in the false statement. The Constitution was adopted on 26 November 1949 and came into force on 26 January 1950; 284 members signed it on 24 January 1950. The Assembly first sat on 9 December 1946 and reassembled for divided India on 14 August 1947.'},
+{c:'Ch1 · Constitution: Why and How?',
+ q:'Consider the following pairs:',
+ head:'Provision : Constitution it was adapted from',
+ S:[
+    ['Directive Principles of State Policy : Irish Constitution',true],
+    ['Power of judicial review : United States Constitution',true],
+    ['Idea of residual powers : French Constitution',false]],
+ ask:'How many of the pairs given above are correctly matched?',
+ mode:'count',unit:'pair',
+ e:'Residuary powers, along with the quasi-federal form with a strong centre, came from the Canadian Constitution — France supplied the principles of liberty, equality and fraternity. Britain supplied first-past-the-post, the parliamentary form, the rule of law, the office of Speaker and the law-making procedure.'},
+{c:'Ch1 · Constitution: Why and How?',
+ q:'Which one of the following provisions of the Constitution was passed by the Constituent Assembly with virtually no debate at all?',
+ o:[
+    'The introduction of universal adult suffrage for all citizens',
+    'The adoption of a parliamentary form of executive government',
+    'The distribution of legislative powers through the three Lists',
+    'The reservation of seats for the Scheduled Castes and Tribes'],
+ a:0,
+ e:'Members felt no need whatever to discuss who should have the right to vote, though every other matter — a centralised or decentralised system, Centre–State relations, the powers of the judiciary, property rights — was argued at length. The textbook treats this as the single best testament to the Assembly\'s democratic commitment.'},
+{c:'Ch1 · Constitution: Why and How?',
+ q:'Consider the following statements about the factors that make a constitution effective:',
+ S:[
+    ['The mode of promulgation matters: constitutions crafted by unpopular or military leaders often remain defunct.',true],
+    ['A constitution succeeds best when made so rigid that no later generation can alter it.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Rigidity is the claim that fails. Too rigid a constitution is likely to break under the weight of change, while one too flexible gives no security, predictability or identity — successful constitutions strike a balance, which is why ours is called a living document. The two genuine factors are substantive provisions that give everyone some reason to go along with the constitution, and intelligent institutional design that fragments power so that no single group can subvert it.'},
+{c:'Ch1 · Constitution: Why and How?',
+ q:'Consider the following statements about constitution-making in Nepal:',
+ S:[
+    ['Its constitutions of 1948, 1951, 1959, 1962 and 1990 were all granted by the King.',true],
+    ['The King took over all powers in October 2002.',true],
+    ['Nepal became a democratic republic in 2008 and adopted a new constitution in 2015.',true],
+    ['The 1990 constitution abolished the monarchy outright.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'The 1990 constitution introduced multi-party competition but left the King holding final powers in many respects — abolition came only in 2008. Nepal is the textbook\'s counter-case to India: a constitution that is granted from above never acquires the authority of one produced by a popular movement.'},
+{c:'Ch1 · Constitution: Why and How?',
+ q:'Consider the following statements about the Objectives Resolution:',
+ S:[
+    ['It was moved by Jawaharlal Nehru in 1946 and defined the aims of the Constituent Assembly.',true],
+    ['It declared that all power and authority of independent India shall flow from the people.',true],
+    ['It provided that the completed Constitution would be submitted to a referendum of the people.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'No referendum was ever contemplated, and the Constitution was never put to one. The Resolution did promise adequate safeguards for minorities, backward and tribal areas and depressed classes, alongside an independent sovereign republic, guarantees of justice and equality, and a contribution to world peace — it is the direct source of the Preamble.'},
+{c:'Ch1 · Constitution: Why and How?',
+ q:'Assertion (A): The Indian Constitution carried enormous public authority even though it was never put to a referendum.\nReason (R): The Constituent Assembly that framed it had itself been elected on the basis of universal adult suffrage.',
+ o:AR,a:2,
+ e:'The assertion holds but the reason does not. Members were indirectly elected by the Provincial Legislative Assemblies constituted under the Government of India Act, 1935, on a restricted franchise. The Constitution drew its authority instead from framers who commanded public credibility, and from a people who adopted it as their own by abiding by its provisions.'},
+{c:'Ch1 · Constitution: Why and How?',
+ q:'Which one of the following most accurately states what the Chairman of the Drafting Committee said in answer to the charge that the Constitution was \'borrowed\'?',
+ o:[
+    'The Assembly deliberately confined itself to sources within the Commonwealth',
+    'Nothing genuinely new can be found in a constitution framed so late in world history',
+    'Borrowing from abroad was unavoidable because Indian traditions offered no guidance',
+    'Every borrowed article had already been tested and needed no further justification'],
+ a:1,
+ e:'Ambedkar asked in November 1948 whether anything could be new in a constitution framed at that hour in the history of the world, and answered that the only new things are the variations made to remove faults and accommodate the needs of the country. Each borrowed provision still had to be defended as suited to Indian problems.'},
+{c:'Ch1 · Constitution: Why and How?',
+ q:'Consider the following statements about how the Constituent Assembly worked:',
+ S:[
+    ['It had eight major committees, usually chaired by Nehru, Rajendra Prasad, Patel or Ambedkar.',true],
+    ['It met for 166 days spread over two years and eleven months, and its sessions were open to the press and the public.',true],
+    ['Its debates were confined to members of a single party, since no other party held seats.',false],
+    ['Every argument, query or concern raised was responded to with care and in writing.',true]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'The Congress did hold about 82 per cent of the seats after Partition, but it was itself so diverse that it accommodated almost every shade of opinion, and the Assembly also included 28 members from the Scheduled Castes and representation for all religions. Chairing the committees were men who disagreed sharply — Ambedkar had been a bitter critic of Congress and of Gandhi.'},
+
+/* ============ Ch2 · Rights in the Indian Constitution ============ */
+{c:'Ch2 · Rights in the Indian Constitution',
+ q:'Consider the following statements distinguishing Fundamental Rights from ordinary legal rights:',
+ S:[
+    ['A Fundamental Right can be changed only by amending the Constitution itself.',true],
+    ['Fundamental Rights are absolute and cannot be subjected to any restriction whatsoever.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Fundamental Rights are guaranteed by the Constitution rather than by ordinary law, and the judiciary can strike down executive or legislative action that violates them. But they are not unlimited — the government may impose reasonable restrictions, and the Constitution itself specifies the emergency circumstances in which some rights may be withdrawn.'},
+{c:'Ch2 · Rights in the Indian Constitution',
+ q:'Consider the following pairs:',
+ head:'Writ : What the court does',
+ S:[
+    ['Habeas corpus : Orders that an arrested person be produced before the court',true],
+    ['Quo warranto : Restrains a person from acting in an office they are not entitled to hold',true],
+    ['Certiorari : Stops a lower court from hearing a case that lies beyond its jurisdiction',false]],
+ ask:'How many of the pairs given above are correctly matched?',
+ mode:'count',unit:'pair',
+ e:'That description belongs to prohibition. Certiorari orders a lower court or authority to transfer a pending matter up to the higher court. The memory hook: prohibition stops proceedings where they are, certiorari moves them upward. Mandamus, the fifth writ, is issued against an office-holder failing in a legal duty.'},
+{c:'Ch2 · Rights in the Indian Constitution',
+ q:'Consider the following statements about the National Human Rights Commission:',
+ S:[
+    ['It was established by law in 1993.',true],
+    ['Its members include a former Chief Justice of the Supreme Court and a former Chief Justice of a High Court.',true],
+    ['It may inquire into a violation on its own initiative or on a petition from a victim.',true],
+    ['It has the power to prosecute those it finds guilty.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'The Commission has no power of prosecution — it can only recommend action to the government or recommend that the courts initiate proceedings. Its interventions on the disappeared youth in Punjab and on the Gujarat riot cases proved effective, and it was an NHRC-appointed team that secured the release of Machal Lalung in July 2005.'},
+{c:'Ch2 · Rights in the Indian Constitution',
+ q:'Under the constitutional provision on preventive detention, for what maximum period may such detention be extended before the case must go before an advisory board?',
+ o:[
+    'Six months',
+    'Twelve months',
+    'Three months',
+    'Six weeks'],
+ a:2,
+ e:'Preventive detention means arrest merely on the apprehension that a person is likely to engage in unlawful activity, without the ordinary safeguards. It may run for three months, after which the case goes to an advisory board for review. The textbook is candid that the provision has often been misused and stands in clear tension with the right to life and personal liberty.'},
+{c:'Ch2 · Rights in the Indian Constitution',
+ q:'Consider the following statements about the right to property:',
+ S:[
+    ['It was originally a Fundamental Right to acquire, possess and maintain property.',true],
+    ['In 1973 the Supreme Court held that it was not part of the basic structure of the Constitution.',true],
+    ['The 44th Amendment converted it into a legal right under Article 300A.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'All three trace the same journey. The right sat at the centre of the long battle between Parliament and the courts over land reform and the Directive Principles; once the Court held that it was not part of the basic structure, Parliament could abridge it, and the 44th Amendment moved it out of Part III altogether.'},
+{c:'Ch2 · Rights in the Indian Constitution',
+ q:'Consider the following statements about the three protections the Constitution gives to a person accused of an offence:',
+ S:[
+    ['No person may be punished for the same offence more than once.',true],
+    ['No law may declare an action illegal from a backdate.',true],
+    ['No person may be tried by an Indian court for an offence committed outside the country.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'There is no such territorial protection among the three. The genuine third guarantee is that no person shall be compelled to give evidence against himself or herself. All rest on the principle that no one is guilty unless a court has found them so, and that every accused must have an adequate opportunity to defend themselves.'},
+{c:'Ch2 · Rights in the Indian Constitution',
+ q:'Which one of the following best describes what Dr Ambedkar meant in calling the Right to Constitutional Remedies the \'heart and soul\' of the Constitution?',
+ o:[
+    'It places the Fundamental Rights beyond the reach of any future amending power',
+    'It obliges the government to justify every restriction before an advisory board',
+    'It requires the state to fund litigation brought by citizens against its own organs',
+    'It lets a citizen move the High Court or Supreme Court to have a violated right restored'],
+ a:3,
+ e:'Writing down a list of rights is not enough — there must be a way of realising them in practice and defending them against attack. That is what Article 32 supplies, empowering the Supreme Court and the High Courts to issue orders, directives and writs against the government for the enforcement of rights.'},
+{c:'Ch2 · Rights in the Indian Constitution',
+ q:'Assertion (A): Reservation of appointments in favour of a backward class not adequately represented in the services is not a violation of the right to equality.\nReason (R): Article 16(4) expressly provides that nothing in that article shall prevent the State from making such a provision.',
+ o:AR,a:0,
+ e:'Both are true and the reason explains the assertion. The Preamble promises equality of status and equality of opportunity, and the framers held that in a society of entrenched social inequality the mere grant of formal equality would not deliver real equality of opportunity. Read in that spirit, reservation is required for the fulfilment of the right, not an exception to it.'},
+{c:'Ch2 · Rights in the Indian Constitution',
+ q:'Consider the following statements about the Directive Principles of State Policy:',
+ S:[
+    ['They are non-justiciable, so a court cannot be asked to compel a government to implement them.',true],
+    ['The framers relied instead on their moral force and on popular pressure at elections.',true],
+    ['A court may direct a government to implement a Directive Principle it has neglected.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'That is precisely what non-justiciable means: no court can be asked to compel implementation. The chapter lists the Principles under three heads — goals, certain non-justiciable rights, and policies to adopt — and governments gave effect to them through zamindari abolition, bank nationalisation, minimum wages, panchayati raj and the mid-day meal scheme.'},
+{c:'Ch2 · Rights in the Indian Constitution',
+ q:'Consider the following statements about the Fundamental Duties:',
+ S:[
+    ['Ten duties were inserted into the Constitution by the 42nd Amendment in 1976.',true],
+    ['The enjoyment of Fundamental Rights was made conditional on the fulfilment of these duties.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The Constitution does not make the enjoyment of rights dependent on the performance of duties, and in that sense the insertion of the Fundamental Duties did not alter the status of the Fundamental Rights at all. The Constitution also says nothing about how the duties are to be enforced. They include abiding by the Constitution, defending the country, promoting harmony and protecting the environment.'},
+{c:'Ch2 · Rights in the Indian Constitution',
+ q:'Which one of the following correctly describes the constitutional position on conversion?',
+ o:[
+    'Propagation may include persuading others to convert, but forcible conversion is barred',
+    'Propagation is protected only where the convert is above the age of eighteen years',
+    'Propagation is confined to the members of a person\'s own religious denomination',
+    'Propagation is permitted only in institutions maintained by a religious community'],
+ a:0,
+ e:'The right to propagate one\'s religion includes persuading people to change their faith. Some resent conversions on the ground that they rest on intimidation or inducement — but the Constitution forbids only forcible conversion, while protecting the right to spread information about one\'s religion and so attract others to it.'},
+
+/* ============ Ch3 · Election and Representation ============ */
+{c:'Ch3 · Election and Representation',
+ q:'Consider the following statements about the First Past the Post system as prescribed by the Constitution:',
+ S:[
+    ['The country is divided into constituencies, each of which elects one representative.',true],
+    ['The winning candidate must secure more than fifty per cent of the votes polled.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Whoever has more votes than any other candidate is declared elected — which is why the system is also called the plurality system — a majority is not required, and where several candidates contest, the winner often takes well under half the votes. Every vote cast for a losing candidate yields no seat, which is exactly how a party can win a far larger share of seats than of votes.'},
+{c:'Ch3 · Election and Representation',
+ q:'In the Lok Sabha election of 1984, which the textbook uses to illustrate the vote–seat distortion, the Congress won 415 of 543 seats with approximately what share of the votes?',
+ o:[
+    '41 per cent',
+    '48 per cent',
+    '54 per cent',
+    '62 per cent'],
+ a:1,
+ e:'Just under half the votes produced more than four-fifths of the seats, a victory never achieved by any party in the Lok Sabha before or since. The mirror image in the same election was the BJP, which polled 7.4 per cent of the votes and won 2 seats.'},
+{c:'Ch3 · Election and Representation',
+ q:'Consider the following pairs:',
+ head:'Electoral system : Country cited as an example',
+ S:[
+    ['Whole country treated as a single constituency under proportional representation : Israel',true],
+    ['Proportional representation through multi-member constituencies : Argentina',true],
+    ['First Past the Post : Netherlands',false]],
+ ask:'How many of the pairs given above are correctly matched?',
+ mode:'count',unit:'pair',
+ e:'The Netherlands is a proportional representation country, cited alongside Israel; the FPTP examples are the United Kingdom and India. Portugal joins Argentina as an example of PR through multi-member constituencies, in which voters choose a party rather than a candidate and one constituency returns members of several parties.'},
+{c:'Ch3 · Election and Representation',
+ q:'Consider the following statements about the election of members of the Rajya Sabha:',
+ S:[
+    ['It follows the single transferable vote variant of proportional representation.',true],
+    ['The voters are the elected members of the State Legislative Assembly.',true],
+    ['Members of the Lok Sabha elected from that State vote in the election as well.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The voters are the elected members of the State Legislative Assembly alone. Each ranks the candidates by preference, and a candidate must secure a quota worked out as total votes polled divided by seats to be filled plus one, then plus one — so 200 MLAs electing 4 members gives a quota of 41.'},
+{c:'Ch3 · Election and Representation',
+ q:'Which one of the following is the essential difference between separate electorates and reserved constituencies?',
+ o:[
+    'Under reservation the elected member represents only the community concerned',
+    'Under reservation the returning officer is drawn from the community concerned',
+    'Under reservation all voters vote, but only candidates of that group may contest',
+    'Under reservation the seat rotates between communities at every general election'],
+ a:2,
+ e:'Separate electorates, introduced by the British, allowed only voters of a community to elect that community\'s representative. The Constituent Assembly rejected that as divisive — Tajamul Husain called separate electorates a curse that had barred India\'s progress — and adopted reserved constituencies instead, which keep the electorate whole.'},
+{c:'Ch3 · Election and Representation',
+ q:'Consider the following statements about the reservation of constituencies:',
+ S:[
+    ['Of the 543 elected Lok Sabha seats, 84 are reserved for Scheduled Castes and 47 for Scheduled Tribes.',true],
+    ['The Delimitation Commission is appointed by the President and works with the Election Commission.',true],
+    ['Reservation was provided initially for ten years and has since been extended up to 2030.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'All three are accurate as stated in the chapter. Seats reserved for Scheduled Tribes go to constituencies with the highest concentration of that population, while Scheduled Caste seats are also deliberately spread across regions of a State, because that population is distributed fairly evenly rather than concentrated.'},
+{c:'Ch3 · Election and Representation',
+ q:'Consider the following statements about the Election Commission of India:',
+ S:[
+    ['Article 324 vests in it the superintendence, direction and control of elections to Parliament and to State legislatures.',true],
+    ['It also conducts elections to panchayats and municipalities.',false],
+    ['It supervises elections to the offices of President and Vice-President.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Local body elections belong to the State Election Commissioner, an officer who works independently of the Election Commission of India, each having its own sphere of operation. Within its own sphere the ECI may postpone or cancel a poll, order a re-poll or a recount, enforce the model code and allot symbols to recognised parties.'},
+{c:'Ch3 · Election and Representation',
+ q:'Consider the following statements about the composition of the Election Commission:',
+ S:[
+    ['It has been a multi-member body continuously since 1993.',true],
+    ['The Chief Election Commissioner enjoys greater powers than the other Commissioners.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The CEC presides but does not outrank his colleagues — all three have equal powers and decide as a collective body. Two Commissioners were first appointed just before the 1989 poll, the body reverted to a single member soon after, and two were appointed again in 1993, since when it has stayed multi-member.'},
+{c:'Ch3 · Election and Representation',
+ q:'Assertion (A): The Chief Election Commissioner cannot be removed by the President acting on the advice of the Council of Ministers alone.\nReason (R): The Constitution extends exactly the same protection of tenure to the other Election Commissioners.',
+ o:AR,a:2,
+ e:'The assertion holds — removal of the CEC needs a recommendation passed by both Houses with a special majority, so that a ruling party cannot dismiss a Commissioner who refuses to favour it. But the other Election Commissioners enjoy no such protection and may be removed by the President, which is exactly why reformers press for a different mode of appointment.'},
+{c:'Ch3 · Election and Representation',
+ q:'Which one of the following changes in the qualification to vote was made by a constitutional amendment in 1989?',
+ o:[
+    'The minimum age to contest an Assembly seat was lowered to twenty-one',
+    'The educational qualification for voters was formally abolished',
+    'The property qualification for candidates was formally abolished',
+    'The voting age was lowered from twenty-one years to eighteen years'],
+ a:3,
+ e:'Until 1989 an adult Indian meant a citizen above twenty-one. The framers had already resisted any educational qualification for voting, holding a firm belief in the worth of all adult citizens as equals in deciding what is good for society; a candidate must still be at least twenty-five to contest a Lok Sabha or Assembly seat.'},
+{c:'Ch3 · Election and Representation',
+ q:'Consider the following statements about proposals for electoral reform discussed in the chapter:',
+ S:[
+    ['Election expenses should be met by the government out of a special fund.',true],
+    ['Candidates with a criminal case pending should be barred even while an appeal is undecided.',true],
+    ['A law should regulate parties so that they function transparently and democratically.',true],
+    ['Reservation of one-third of seats for women should be confined to local bodies.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'The reform proposal is for a special provision ensuring at least one-third women in Parliament and the State assemblies, not for confining reservation to local bodies — and such a provision has since been made through the Nari Shakti Vandan Adhiniyam of 2023. The chapter also notes there is no consensus on these suggestions, and limits to what law alone can achieve.'},
+
+/* ============ Ch4 · Executive ============ */
+{c:'Ch4 · Executive',
+ q:'Consider the following statements about the different types of executive:',
+ S:[
+    ['In a presidential system the President is both Head of State and head of government.',true],
+    ['In France the President appoints the Prime Minister and may also dismiss him at will.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'In France\'s semi-presidential system the President appoints the Prime Minister and the ministers but cannot dismiss them, because they are responsible to Parliament. Russia and Sri Lanka are the chapter\'s other semi-presidential examples; the United States and Brazil are presidential; Japan, Italy, Portugal and the United Kingdom are parliamentary.'},
+{c:'Ch4 · Executive',
+ q:'Consider the following statements about the Executive Presidency introduced in Sri Lanka in 1978:',
+ S:[
+    ['The President is directly elected by the people for a term of six years.',true],
+    ['The President is Head of State, head of government and Commander-in-Chief.',true],
+    ['The President is chosen indirectly by the members of the Sri Lankan Parliament.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Under the Executive Presidency the people elect the President directly — that is the whole point of the 1978 amendment. The President also chooses the Prime Minister from the majority party and may remove the Prime Minister and ministers, neither of which the Indian President can do.'},
+{c:'Ch4 · Executive',
+ q:'Which one of the following is the only ground on which the President of India may be impeached?',
+ o:[
+    'Violation of the Constitution',
+    'Proven misbehaviour or incapacity',
+    'Loss of confidence of the Lok Sabha',
+    'Wilful disregard of ministerial advice'],
+ a:0,
+ e:'Violation of the Constitution is the sole ground, and the motion requires a special majority in Parliament. Proven misbehaviour or incapacity is the ground for removing a judge of the Supreme Court or a High Court — a distinction the two chapters invite you to keep straight.'},
+{c:'Ch4 · Executive',
+ q:'Consider the following statements about Article 74(1) as it now stands:',
+ S:[
+    ['The President may require the Council to reconsider that advice.',true],
+    ['The President is free to reject the advice tendered after such reconsideration.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The reconsideration is a single, exhaustible power: once the Council sends the same advice back, the President must act on it. One amendment made explicit that the advice binds the President, and a later one added the power to send it back — the word \'shall\' in the article is what makes the advice binding.'},
+{c:'Ch4 · Executive',
+ q:'Which one of the following best explains what is meant by the President\'s \'pocket veto\'?',
+ o:[
+    'A bill lapses automatically if the House that passed it is dissolved thereafter',
+    'No time limit is prescribed within which a bill must be returned for reconsideration',
+    'A money bill may be withheld from assent and returned once to the Lok Sabha',
+    'Assent may be refused outright to any bill that a State legislature has passed'],
+ a:1,
+ e:'Because the Constitution sets no deadline, a bill may simply be kept pending indefinitely. The chapter\'s example is the Indian Post Office (Amendment) Bill of 1986, widely criticised for curtailing press freedom: Giani Zail Singh took no decision, R. Venkataraman later returned it, and the new government elected in 1989 never brought it back — so it never became law.'},
+{c:'Ch4 · Executive',
+ q:'Consider the following statements about the Vice-President of India:',
+ S:[
+    ['The method of election is similar to that of the President, except that members of State legislatures are not part of the electoral college.',true],
+    ['The Vice-President is the ex-officio Chairman of the Rajya Sabha.',true],
+    ['On a vacancy in the office of President, the Vice-President serves out the remainder of that full five-year term.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The Vice-President acts as President only until a new President is elected — B.D. Jatti did so on the death of Fakhruddin Ali Ahmed. Removal is by a resolution of the Rajya Sabha passed by a majority and agreed to by the Lok Sabha, making it the one removal that only the upper House can initiate.'},
+{c:'Ch4 · Executive',
+ q:'Consider the following statements about the doctrine of collective responsibility:',
+ S:[
+    ['The Council of Ministers is collectively responsible to the Lok Sabha.',true],
+    ['A vote of no confidence against even a single minister leads to the resignation of the entire Council.',true],
+    ['The Council of Ministers is collectively responsible to both Houses of Parliament.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Responsibility runs to the Lok Sabha alone, which is why the Rajya Sabha may criticise a government but cannot remove it. The principle rests on cabinet solidarity: a minister who disagrees with a decision must either accept it or resign, and a ministry that loses the confidence of the Lok Sabha is obliged to go.'},
+{c:'Ch4 · Executive',
+ q:'The 91st Amendment Act of 2003 capped the size of the Council of Ministers at what proportion of the strength of the House?',
+ o:[
+    'Twenty per cent',
+    'Twelve per cent',
+    'Fifteen per cent',
+    'Ten per cent'],
+ a:2,
+ e:'Before the cap there was no limit at all, which produced very large ministries and, where no party held a clear majority, a temptation to buy the support of members with ministerial office — a pattern seen in many States as well. The same ceiling applies to a State Assembly.'},
+{c:'Ch4 · Executive',
+ q:'Assertion (A): The importance of the office of President grew considerably in the period after 1989.\nReason (R): In the four parliamentary elections held between 1989 and 1998 no single party or coalition secured a majority in the Lok Sabha.',
+ o:AR,a:0,
+ e:'Both are true and the reason explains the assertion — presidential discretion is a function of political conditions, and there is more scope for it when governments are unstable. In March 1998 the BJP and its allies were 21 seats short; President Narayanan asked Vajpayee to furnish documentary proof of support and to win a confidence vote within ten days of being sworn in.'},
+{c:'Ch4 · Executive',
+ q:'Consider the following statements about IAS and IPS officers serving in a State:',
+ S:[
+    ['They work under the supervision of the State government to which they are allotted.',true],
+    ['They are appointed by the central government and may return to central service.',true],
+    ['Only the central government can take disciplinary action against them.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'All three hold, and together they explain why the chapter says the key administrative officers of the States are under the supervision and control of the Centre — a feature that strengthens central control over State administration and is revisited in the chapter on federalism.'},
+{c:'Ch4 · Executive',
+ q:'Consider the following statements about the effects of coalition politics since 1989 on the parliamentary executive:',
+ S:[
+    ['The President\'s discretionary role in selecting a Prime Minister has grown.',true],
+    ['Constant consultation among partners has eroded prime ministerial authority.',true],
+    ['The Prime Minister\'s freedom in choosing ministers and allotting portfolios has been curtailed.',true],
+    ['Policy is now settled by the Prime Minister alone rather than by negotiation.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Policy in a coalition is framed after a great deal of negotiation and compromise among allies, which is why the chapter concludes that the Prime Minister has to act more as a negotiator than as leader of the government. The position of the Prime Minister has been unassailable only when a single party has held a majority.'},
+
+/* ============ Ch5 · Legislature ============ */
+{c:'Ch5 · Legislature',
+ q:'Consider the following statements about bicameralism:',
+ S:[
+    ['The Constitution gives the States the option of a unicameral or a bicameral legislature.',true],
+    ['Six States at present have a bicameral legislature.',true],
+    ['Every State is required by the Constitution to maintain a bicameral legislature.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'States are given the option, and only six have exercised it — Andhra Pradesh, Bihar, Karnataka, Maharashtra, Telangana and Uttar Pradesh. The value of a second chamber is that every bill and policy is discussed twice, so a decision taken in haste in one House can be reconsidered in the other.'},
+{c:'Ch5 · Legislature',
+ q:'Consider the following statements about the Rajya Sabha:',
+ S:[
+    ['Seats are allotted to States in proportion to population, as fixed by the Fourth Schedule.',true],
+    ['One-third of its members retire every two years, so the House is never fully dissolved.',true],
+    ['The President nominates twelve members from literature, science, art and social service.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'All three hold. India rejected the symmetrical model of the United States Senate, under which Uttar Pradesh would have had as many seats as Sikkim; instead Uttar Pradesh sends 31 members and Sikkim one. Because it is never dissolved, the Rajya Sabha can be summoned for urgent business even when the Lok Sabha stands dissolved.'},
+{c:'Ch5 · Legislature',
+ q:'Consider the following statements about the German Bundesrat, which the chapter offers as a comparison:',
+ S:[
+    ['Its 69 seats are divided among the sixteen federal states on the basis of population bands.',true],
+    ['Its members are generally ministers in the state governments and are appointed, not elected.',true],
+    ['Members of the Bundesrat are directly elected by the voters of each federal state.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'They are appointed rather than elected, generally being ministers in the state governments, and all the members from one state must vote as a bloc on their government\'s instructions. That makes the Bundesrat a genuinely state-representing chamber, unlike the Rajya Sabha, whose members represent their parties more than their States.'},
+{c:'Ch5 · Legislature',
+ q:'Which one of the following powers may be exercised by the Lok Sabha but not by the Rajya Sabha?',
+ o:[
+    'Approving an amendment to the Constitution of India',
+    'Participating in the impeachment of the President',
+    'Establishing committees and considering their reports',
+    'Removing the Council of Ministers by a no-confidence vote'],
+ a:3,
+ e:'The Council of Ministers is responsible to the Lok Sabha alone, so the Rajya Sabha may criticise a government but cannot remove it — and money bills likewise lie outside its reach. The reason the chapter gives is democratic: the Rajya Sabha is elected by MLAs rather than directly by the people, and the people are the final authority.'},
+{c:'Ch5 · Legislature',
+ q:'Consider the following statements about the special powers of the Rajya Sabha:',
+ S:[
+    ['Its approval is necessary to move a subject from the State List to the Union or Concurrent List.',true],
+    ['It may reject a money bill outright and return it to the Lok Sabha.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The Rajya Sabha may approve a money bill or suggest changes but cannot reject it, and if it takes no action within fourteen days the bill is deemed to have been passed. Its amendments to a money bill may or may not be accepted by the Lok Sabha. Its genuine special powers lie elsewhere: moving a State List subject to the Union or Concurrent List, creating a new All-India Service, and initiating the removal of the Vice-President.'},
+{c:'Ch5 · Legislature',
+ q:'In which one of the following respects do the powers of the two Houses differ?',
+ o:[
+    'Introduction of a money bill, confined to the Lok Sabha alone',
+    'Approval of an amendment to the Constitution of India',
+    'Removal of a judge of the Supreme Court or a High Court',
+    'Election of the President and the Vice-President of India'],
+ a:0,
+ e:'Article 109 provides that a money bill shall not be introduced in the Council of States. In every other matter listed here the two Houses are co-equal — constitutional amendments, non-money bills, the impeachment of the President and the removal of the Vice-President all require both.'},
+{c:'Ch5 · Legislature',
+ q:'Consider the following statements about Question Hour and Zero Hour:',
+ S:[
+    ['Question Hour is held every day during a session and ministers are required to respond.',true],
+    ['During Zero Hour members may raise any matter they consider important.',true],
+    ['Ministers are bound to reply to matters raised during Zero Hour.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'That the minister need not reply is precisely what distinguishes Zero Hour from Question Hour. Question Hour is described as perhaps the most effective method of keeping vigil over the executive, and it records the highest attendance of any part of the day\'s proceedings.'},
+{c:'Ch5 · Legislature',
+ q:'Consider the following statements about the parliamentary committee system:',
+ S:[
+    ['India has developed departmentally related standing committees since 1983.',true],
+    ['Standing committees supervise a department\'s work, budget, expenditure and related bills.',true],
+    ['Members of a Joint Parliamentary Committee are drawn from both Houses.',true],
+    ['Parliament frequently rejects the recommendations made by its committees.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Parliament rarely rejects committee suggestions; it has largely approved their work with occasional alterations, which is why committees are described as miniature legislatures. Legally, though, no bill becomes law and no budget is sanctioned without the approval of Parliament itself.'},
+{c:'Ch5 · Legislature',
+ q:'Assertion (A): The anti-defection law has not succeeded in curbing defections.\nReason (R): It has instead given additional powers to party leaderships and to the presiding officers of the legislatures over individual members.',
+ o:AR,a:1,
+ e:'Both statements are true, but the reason does not explain the failure — it records a separate and unintended consequence. The law came through the 52nd Amendment of 1985 and was later modified by the 91st; defection covers absence against a party direction, voting against instructions, or voluntarily leaving the party, and a defector loses the seat and is barred from political office.'},
+{c:'Ch5 · Legislature',
+ q:'Consider the following statements about how a bill becomes law:',
+ S:[
+    ['A large part of the discussion on bills takes place in committees.',true],
+    ['A deadlock between the two Houses on a bill may be resolved through a joint session.',true],
+    ['A joint session may also be summoned to resolve a deadlock over a money bill.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'A money bill cannot deadlock: the Rajya Sabha may suggest changes but cannot reject it, and inaction for fourteen days means it is deemed passed. Joint sessions resolve disagreement over other bills, and in the few held so far the outcome has always favoured the Lok Sabha, which is much the larger House.'},
+{c:'Ch5 · Legislature',
+ q:'Which one of the following did the chapter cite as evidence that parliamentary approval cannot be taken for granted?',
+ o:[
+    'The Lok Pal Bill was returned by the President for reconsideration',
+    'The Prevention of Terrorism Bill of 2002 was rejected by the Rajya Sabha',
+    'The Prevention of Terrorism Bill of 2002 lapsed on the dissolution of the House',
+    'The Lok Pal Bill was struck down by the Supreme Court on review'],
+ a:1,
+ e:'A government holding a majority in the Lok Sabha but not in the Rajya Sabha must make substantial concessions to win both Houses, as happened under the Janata Party in 1977 and the NDA in 2000. The Lok Pal Bill is the chapter\'s other example of a measure that repeatedly failed to be enacted.'},
+
+/* ============ Ch6 · Judiciary ============ */
+{c:'Ch6 · Judiciary',
+ q:'Consider the following statements about the independence of the judiciary:',
+ S:[
+    ['The legislature has no role in the appointment of judges.',true],
+    ['Independence of the judiciary implies that it is not accountable to anyone at all.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Independence does not imply arbitrariness or an absence of accountability: the judiciary is part of the democratic structure and is answerable to the Constitution, to democratic traditions and to the people. The salaries and allowances of judges are likewise not subject to the approval of the legislature, and Parliament may not discuss the conduct of a judge except while a motion for removal is actually before it.'},
+{c:'Ch6 · Judiciary',
+ q:'Consider the following statements about the procedure evolved for judicial appointments:',
+ S:[
+    ['The Supreme Court considered the status of consultation with the Chief Justice repeatedly between 1982 and 1998.',true],
+    ['It finally held that the Chief Justice should recommend names in consultation with the four senior-most judges.',true],
+    ['The convention of appointing the senior-most judge as Chief Justice of India has never been departed from.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The convention was broken twice: A.N. Ray was appointed in 1973 over three senior judges, and M.H. Beg was appointed over H.R. Khanna in 1975. The recommendation by a collegium of senior judges established the principle of collegiality, so that today their decision carries the greater weight.'},
+{c:'Ch6 · Judiciary',
+ q:'On which one of the following grounds alone may a judge of the Supreme Court or a High Court be removed?',
+ o:[
+    'Persistent delay in delivering judgments',
+    'Loss of confidence of the collegium',
+    'Proven misbehaviour or incapacity',
+    'Violation of the Constitution'],
+ a:2,
+ e:'A motion setting out the charges must then be approved by a special majority in both Houses. Violation of the Constitution is the ground for impeaching the President — a pairing worth keeping straight, since the two procedures are otherwise similar.'},
+{c:'Ch6 · Judiciary',
+ q:'Consider the following statements about the only motion for the removal of a Supreme Court judge that has come before Parliament:',
+ S:[
+    ['It was signed by 108 members of Parliament in 1991.',true],
+    ['An inquiry commission of Supreme Court judges found the charges established.',true],
+    ['The judge was removed from office when the motion was finally put to the vote.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'He survived the motion. It secured two-thirds of those present and voting, but the Congress abstained, so it never reached the second requirement — a majority of the total strength of the House. No judge of the Supreme Court has ever been removed, and the case remains the clearest illustration of what a special majority means.'},
+{c:'Ch6 · Judiciary',
+ q:'Consider the following statements about the original jurisdiction of the Supreme Court:',
+ S:[
+    ['It covers disputes between the Union and the States and among the States themselves.',true],
+    ['A High Court may also hear a dispute of this kind if the parties agree.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Neither the High Courts nor the lower courts may deal with such cases at all, which is exactly why the jurisdiction is called original. In exercising it the Supreme Court acts as umpire in federal disputes, interpreting the powers of the Union and the States as the Constitution lays them down.'},
+{c:'Ch6 · Judiciary',
+ q:'Consider the following statements about the advisory jurisdiction of the Supreme Court:',
+ S:[
+    ['The President may refer a matter of public importance or of constitutional interpretation for advice.',true],
+    ['The Supreme Court is not bound to give advice on such a reference.',true],
+    ['Advice once tendered by the Supreme Court binds the President to act upon it.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The jurisdiction is optional at both ends: the Court need not advise, and the President need not accept the advice. Its usefulness is nevertheless twofold — it lets the government take a legal opinion before acting, which may avert litigation later, and it lets the government modify its action or legislation accordingly.'},
+{c:'Ch6 · Judiciary',
+ q:'Consider the following pairs:',
+ head:'Article : What it provides',
+ S:[
+    ['Article 32 : The right to move the Supreme Court for the enforcement of Fundamental Rights',true],
+    ['Article 137 : The power of the Supreme Court to review any judgment it has pronounced',true],
+    ['Article 144 : The power of the Supreme Court to transfer a case from one High Court to another',false]],
+ ask:'How many of the pairs given above are correctly matched?',
+ mode:'count',unit:'pair',
+ e:'Article 144 requires all authorities, civil and judicial, in the territory of India to act in aid of the Supreme Court. The High Courts issue writs under Article 226, and a law inconsistent with the Fundamental Rights may be declared void under Article 13.'},
+{c:'Ch6 · Judiciary',
+ q:'Which one of the following pairs of early public interest litigations is correctly described?',
+ o:[
+    'Hussainara Khatoon concerned torture in Tihar jail; Sunil Batra concerned Bihar undertrials',
+    'Both concerned bonded labour in stone quarries near the national capital',
+    'Both concerned the blinding of prisoners by the police while in custody',
+    'Hussainara Khatoon concerned Bihar undertrials; Sunil Batra concerned torture in Tihar jail'],
+ a:3,
+ e:'Newspaper reports in 1979 revealed that prisoners in Bihar had spent longer in jail than the maximum sentence for the offences charged, prompting an advocate\'s petition. In 1980 a Tihar inmate sent a scribbled note to Justice Krishna Iyer, who had it converted into a petition — though the Court later abandoned the practice of treating letters as petitions.'},
+{c:'Ch6 · Judiciary',
+ q:'Consider the following statements about judicial review:',
+ S:[
+    ['The term judicial review is nowhere mentioned in the Constitution.',true],
+    ['A law may be reviewed for violating Fundamental Rights or the federal distribution of powers.',true],
+    ['The review power does not extend to laws passed by State legislatures.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The review power extends to State legislation as well. It is implied rather than stated: India has a written constitution and the Supreme Court can strike down a law that offends the Fundamental Rights, and that combination gives it the power. Where a central law trespasses on the State List, a State may move the Court to have it declared unconstitutional.'},
+{c:'Ch6 · Judiciary',
+ q:'Consider the following statements about the ruling in the Kesavananda Bharati case of 1973:',
+ S:[
+    ['It held that no amendment may violate the basic structure of the Constitution.',true],
+    ['It held that the right to property was not part of the basic structure.',true],
+    ['It reserved to the Court itself the power to decide what falls within the basic structure.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'All three were part of the ruling, and the third is what makes the doctrine so consequential — the contents of the basic structure remain open and are settled case by case. The Court has never issued an exhaustive list, so debate about what belongs to it continues.'},
+{c:'Ch6 · Judiciary',
+ q:'Assertion (A): The power of judicial review is expressly conferred on the Supreme Court by a specific article of the Constitution.\nReason (R): India has a written constitution, and the Supreme Court can strike down a law that goes against the Fundamental Rights.',
+ o:AR,a:3,
+ e:'The assertion fails: the term judicial review is nowhere mentioned in the Constitution. The reason is true, and it is precisely what gives the Court the power implicitly — a written constitution plus the authority to strike down rights-violating law. Review also lies where a law offends the federal distribution of powers, and it reaches State legislation too.'},
+{c:'Ch6 · Judiciary',
+ q:'Consider the following statements about the structure of the judiciary in India:',
+ S:[
+    ['The Constitution provides for a single integrated judicial system with no separate State courts.',true],
+    ['The lower courts function under the direct superintendence of the higher courts.',true],
+    ['Each State maintains a separate system of State courts alongside the federal courts.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'India has no separate State courts at all — that is what a single integrated judicial system means, and it distinguishes India from federations running parallel systems. Decisions of the Supreme Court bind every other court, and it may transfer High Court judges, move any case to itself, or shift a case between High Courts.'},
+
+/* ============ Ch7 · Federalism ============ */
+{c:'Ch7 · Federalism',
+ q:'Consider the following statements about the key ideas associated with federalism:',
+ S:[
+    ['Federalism accommodates two sets of polities, each autonomous in its own sphere.',true],
+    ['Some federations provide for dual citizenship, though India has only single citizenship.',true],
+    ['India, in common with most federations, provides for dual citizenship of Union and State.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Some federal countries do provide dual citizenship, but India has only single citizenship. The genuine third idea is that an independent judiciary settles legal disputes about the division of power; people meanwhile hold two identities at once, of the region and of the nation.'},
+{c:'Ch7 · Federalism',
+ q:'Consider the following statements about federations that failed:',
+ S:[
+    ['Excessive centralisation and the domination of Russia contributed to the break-up of the USSR.',true],
+    ['The Federation of West Indies had a weak central government and independent unit economies.',true],
+    ['The West Indies federation was formally dissolved in 1962.',true],
+    ['Nigeria\'s difficulties arose from religious differences alone, with no economic dimension.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Nigeria is described as a case where religious, ethnic and economic differences overlap — conflict over who controls revenues from oil resources is central, with local communities resisting centralised control. Its federal constitution was decided at the Ibadan Constitutional Conference of 1950, and democracy returned in 1999.'},
+{c:'Ch7 · Federalism',
+ q:'Consider the following pairs:',
+ head:'Subject : List in which it is placed',
+ S:[
+    ['Police : State List',true],
+    ['Forests : Concurrent List',true],
+    ['Banking : Concurrent List',false]],
+ ask:'How many of the pairs given above are correctly matched?',
+ mode:'count',unit:'pair',
+ e:'Banking belongs to the Union List, along with defence, atomic energy, foreign affairs, war and peace, railways, post and telegraph, airways, ports, foreign trade and currency. Education, transfer of property other than agricultural land, trade unions, adulteration, adoption and succession share the Concurrent List with forests.'},
+{c:'Ch7 · Federalism',
+ q:'Under the Constitution, which authority alone may legislate on a subject that appears in none of the three Lists?',
+ o:[
+    'The Union legislature',
+    'The State legislature',
+    'Either legislature concurrently',
+    'Parliament with State ratification'],
+ a:0,
+ e:'Residuary powers rest with the Union. The chapter\'s illustration is cyber law — a subject that simply did not exist when the Constitution was framed, which is why a residuary clause is needed at all: no framer can anticipate every subject a future society will have to legislate on.'},
+{c:'Ch7 · Federalism',
+ q:'Consider the following statements about the provisions that create a strong central government:',
+ S:[
+    ['Parliament may form a new State, alter the boundary of a State or change its name.',true],
+    ['The executive power of the Union extends to giving directions to a State.',true],
+    ['The consent of the State legislature is required before a State boundary may be altered.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Only the view of the concerned State legislature need be secured, not its consent — which is why the very existence of a State lies in the hands of Parliament. Parliament may also legislate on a State List subject where the Rajya Sabha ratifies the move, and Article 257 makes Union executive power superior.'},
+{c:'Ch7 · Federalism',
+ q:'Consider the following statements about the Sarkaria Commission:',
+ S:[
+    ['It was appointed by the central government in 1983 to examine Centre–State relations.',true],
+    ['It submitted its report in 1988.',true],
+    ['It recommended that appointments of Governors be made strictly non-partisan.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'All three are accurate. The office is contentious because the Governor is not elected, is appointed by the central government, and has often been a retired military officer, civil servant or politician — and the controversy sharpens whenever different parties hold power at the two levels.'},
+{c:'Ch7 · Federalism',
+ q:'Consider the following statements about Article 356:',
+ S:[
+    ['It applies where the government of a State cannot be carried on in accordance with the Constitution.',true],
+    ['The Supreme Court has held that the validity of its imposition cannot be examined by the judiciary.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The Court has held precisely the opposite — the constitutional validity of a decision to impose President\'s Rule can be examined by the judiciary. The proclamation must in any case be ratified by Parliament, and may be extended up to three years. The article was used sparingly until 1967; thereafter governments were dismissed even where they held a majority, as in Kerala in 1959, or without any test of majority at all.'},
+{c:'Ch7 · Federalism',
+ q:'Consider the following pairs:',
+ head:'Year : State created',
+ S:[
+    ['1960 : Gujarat and Maharashtra',true],
+    ['1966 : Punjab and Haryana separated',true],
+    ['2000 : Telangana carved out of Andhra Pradesh',false]],
+ ask:'How many of the pairs given above are correctly matched?',
+ mode:'count',unit:'pair',
+ e:'Telangana was formed in 2014. The three States created in 2000 were Chhattisgarh from Madhya Pradesh, Uttarakhand from Uttar Pradesh and Jharkhand from Bihar — and that round was driven by administrative efficiency as well as by demands for separate statehood.'},
+{c:'Ch7 · Federalism',
+ q:'Which one of the following inter-State disputes concerns a city that today houses the capital of two States?',
+ o:[
+    'The dispute over the sharing of the waters of the Narmada',
+    'The dispute between Punjab and Haryana over Chandigarh',
+    'The dispute between Maharashtra and Karnataka over Belgaum',
+    'The long-standing border dispute between Manipur and Nagaland'],
+ a:1,
+ e:'An understanding reached by Prime Minister Rajiv Gandhi with the Punjab leadership in 1985 was that Chandigarh would be handed over to Punjab, but that has not happened. Border disputes are described as being more about sentiment, while water disputes are more serious because they touch drinking water and agriculture.'},
+{c:'Ch7 · Federalism',
+ q:'Consider the following statements about the position of Jammu and Kashmir under Article 370:',
+ S:[
+    ['The concurrence of the State was required for laws on Union and Concurrent List subjects.',true],
+    ['The Directive Principles did not apply to the State.',true],
+    ['No emergency on grounds of internal disturbance could be declared without the State\'s concurrence.',true],
+    ['The State had neither a separate constitution nor a separate flag.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'The State did have both a separate constitution and a flag, though Parliament\'s power to legislate on Union List subjects was fully accepted after two Presidential orders issued with the State government\'s concurrence. The special status ended with the Jammu and Kashmir Reorganisation Act of 2019, effective from 31 October 2019.'},
+{c:'Ch7 · Federalism',
+ q:'Assertion (A): The demands for autonomy raised by States from the mid-1960s onwards were a direct fallout of the political situation of that period.\nReason (R): Congress dominance had declined and opposition parties had come to power in a large number of States, so different parties ruled at the Centre and in many States.',
+ o:AR,a:0,
+ e:'Both are true and the reason explains the assertion. State governments protested at what they saw as unnecessary interference by the Congress government at the Centre, while the Congress was uncomfortable dealing with opposition-led States — and that context gave birth to the whole discussion of autonomy under a federal system.'},
+{c:'Ch7 · Federalism',
+ q:'Consider the following statements about the kinds of autonomy that States have demanded:',
+ S:[
+    ['Some demands seek a redistribution of powers in favour of the States.',true],
+    ['Financial autonomy means independent revenue sources and greater control over resources.',true],
+    ['Demands for greater autonomy have been confined to the States of the North East.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Tamil Nadu, Punjab and West Bengal are the States the chapter names, and the DMK, Akali Dal and CPI-M the parties. Cultural and linguistic demands have included opposition to the domination of Hindi in Tamil Nadu, and the Left Front government in West Bengal brought out a document in 1977 demanding a restructuring of Centre–State relations.'},
+
+/* ============ Ch8 · Local Governments ============ */
+{c:'Ch8 · Local Governments',
+ q:'Consider the following statements about the growth of local government in India:',
+ S:[
+    ['Elected local bodies called local boards were created after 1882 on the initiative of Lord Rippon.',true],
+    ['Village panchayats were established in a number of provinces following the Government of India Act, 1919.',true],
+    ['The Constitution as framed placed local government in the Union List.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Local government was assigned to the States, and appeared besides in the Directive Principles — which made the provision non-justiciable and advisory. Self-governing village communities are believed to have existed from the earliest times as sabhas, which in time took the shape of panchayats, literally an assembly of five persons.'},
+{c:'Ch8 · Local Governments',
+ q:'Which one of the following correctly describes the objections that Nehru and Ambedkar respectively raised to village self-government?',
+ o:[
+    'Both feared that villages lacked the revenue to sustain any elected body',
+    'Both feared that panchayats would be captured by the provincial governments',
+    'Nehru feared localism would threaten national unity; Ambedkar feared caste and faction',
+    'Nehru feared caste and faction; Ambedkar feared localism would threaten national unity'],
+ a:2,
+ e:'The turmoil of Partition had produced a strong unitary inclination, and Nehru looked on extreme localism as a threat to the unity and integration of the nation. A powerful voice in the Assembly led by Ambedkar held instead that the faction- and caste-ridden nature of rural society would defeat the whole purpose of rural local government.'},
+{c:'Ch8 · Local Governments',
+ q:'Consider the following statements about the 73rd and 74th Amendments:',
+ S:[
+    ['They were passed by Parliament in 1992 and came into force in 1993.',true],
+    ['The 73rd deals with rural local government and the 74th with urban local bodies.',true],
+    ['States were given one year to bring their own laws into conformity.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'All three are accurate. The amendments had been introduced in 1989, the year in which the P.K. Thungon Committee recommended constitutional recognition for local bodies together with periodic elections, listed functions and funds.'},
+{c:'Ch8 · Local Governments',
+ q:'Consider the following statements about the three-tier structure created by the 73rd Amendment:',
+ S:[
+    ['A Gram Panchayat covers a village or a group of villages.',true],
+    ['The intermediary body need not be constituted in smaller States.',true],
+    ['The Gram Sabha comprises all adult members registered as voters in the panchayat area.',true],
+    ['The role and functions of the Gram Sabha are laid down uniformly by the Constitution.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Creation of the Gram Sabha was made mandatory but its role and functions are decided by State legislation — which is one reason the body so often fails to meet regularly. The intermediary tier is variously called the Mandal, Block or Taluka Panchayat, and the Zilla Panchayat covers the whole rural area of a district.'},
+{c:'Ch8 · Local Governments',
+ q:'Consider the following statements about reservations in panchayat bodies:',
+ S:[
+    ['One-third of the positions in all panchayat institutions are reserved for women.',true],
+    ['Reservations apply to the office of chairperson as well as to ordinary membership.',true],
+    ['Reservation of seats for other backward classes is mandatory in every State.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Reservation for other backward classes is left to each State to provide if it finds it necessary. What is mandatory is one-third for women and proportionate reservation for Scheduled Castes and Tribes at all three levels — and because those quotas intersect, a Sarpanch\'s seat may fall to a Dalit woman or an Adivasi woman.'},
+{c:'Ch8 · Local Governments',
+ q:'Consider the following pairs:',
+ head:'Amendment : Schedule listing the subjects to be transferred',
+ S:[
+    ['73rd Amendment : Eleventh Schedule',true],
+    ['74th Amendment : Twelfth Schedule',true],
+    ['73rd Amendment : Ninth Schedule',false]],
+ ask:'How many of the pairs given above are correctly matched?',
+ mode:'count',unit:'pair',
+ e:'Twenty-nine subjects formerly in the State List are listed in the Eleventh Schedule for transfer to panchayats — among them agriculture, minor irrigation, rural housing, drinking water, poverty alleviation, education, health and sanitation, and the public distribution system. Article 243G, however, says the State legislature may endow panchayats with these powers, not that it shall.'},
+{c:'Ch8 · Local Governments',
+ q:'If a State government dissolves a panchayat before the end of its term, within what period must fresh elections be held?',
+ o:[
+    'Three months',
+    'One year',
+    'Ninety days',
+    'Six months'],
+ a:3,
+ e:'This provision is what secures the continued existence of elected local bodies. Before the 73rd Amendment many States held only indirect elections to district bodies, dissolved local bodies and handed them to government officers, or simply postponed elections from time to time.'},
+{c:'Ch8 · Local Governments',
+ q:'Consider the following statements about the electoral and financial machinery created for local bodies:',
+ S:[
+    ['The State Election Commissioner works under the control of the Election Commission of India.',false],
+    ['A State Finance Commission is appointed once in five years to examine local body finances.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The State Election Commissioner is autonomous like the Election Commissioner of India but is neither linked to that body nor under its control. The State Finance Commission reviews the distribution of revenues between the State and local governments and between rural and urban bodies, so that allocation is not left a political matter.'},
+{c:'Ch8 · Local Governments',
+ q:'Consider the following statements about the Census definition of an urban area used in the chapter:',
+ S:[
+    ['A minimum population of fifty thousand persons.',false],
+    ['At least seventy-five per cent of the male working population in non-agricultural occupations.',true],
+    ['A population density of at least four hundred persons per square kilometre.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The population threshold is five thousand, not fifty thousand. All three criteria must be met together, and the definition matters because it determines whether the 73rd or the 74th Amendment applies to a settlement. About 31 per cent of India\'s population lived in urban areas as per the 2011 Census.'},
+{c:'Ch8 · Local Governments',
+ q:'Which one of the following pairs of figures does the chapter use to show how weak the financial base of rural local bodies is?',
+ o:[
+    'They raise 0.24 per cent of total revenues but account for 4 per cent of total expenditure',
+    'They raise 4 per cent of total revenues but account for 24 per cent of total expenditure',
+    'They raise 2.4 per cent of total revenues but account for 14 per cent of total expenditure',
+    'They raise 0.4 per cent of total revenues but account for 2 per cent of total expenditure'],
+ a:0,
+ e:'Earning far less than they spend leaves local bodies dependent on whoever gives them grants. The contrast drawn is with Bolivia, where the Popular Participation Law of 1994 distributes 20 per cent of nationwide tax collections among 314 municipalities on a per capita basis.'},
+{c:'Ch8 · Local Governments',
+ q:'Consider the following statements about the scale of local democracy after the amendments:',
+ S:[
+    ['More than 32 lakh members are elected to local bodies every five years.',true],
+    ['At least 13 lakh of them are women.',true],
+    ['The State Assemblies and Parliament together have fewer than 5,000 elected representatives.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'All three figures are the chapter\'s, and the comparison is the point: local bodies multiplied India\'s elected representatives several hundredfold. There are over 600 Zilla Panchayats, about 6,000 block panchayats and 2,40,000 Gram Panchayats, alongside over 100 city corporations and 1,400 town municipalities.'},
+{c:'Ch8 · Local Governments',
+ q:'Assertion (A): The 73rd Amendment made the transfer of all twenty-nine Eleventh Schedule subjects to the panchayats compulsory for every State.\nReason (R): Article 243G provides that the legislature of a State may endow the panchayats with such powers and authority.',
+ o:AR,a:3,
+ e:'The assertion fails on the strength of the reason itself: the article says the State legislature may endow panchayats with these powers, not that it shall, and each State decides how many of the twenty-nine to transfer. That single word is why many States have transferred little, and why the election of so many representatives has remained somewhat symbolic.'},
+
+/* ============ Ch9 · Constitution as a Living Document ============ */
+{c:'Ch9 · Constitution as a Living Document',
+ q:'Consider the following statements about constitutions elsewhere in the world:',
+ S:[
+    ['The Soviet Union had four constitutions in its life of seventy-four years.',true],
+    ['France has had five republics, the fifth beginning with a new constitution in 1958.',true],
+    ['The Constitution of the United States has been amended only twenty-seven times.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'All three are accurate. The Soviet constitutions were those of 1918, 1924, 1936 and 1977, and the Russian Federation adopted a new one in 1993 after the collapse of 1991. India\'s survival under a single constitution is what the chapter sets out to explain.'},
+{c:'Ch9 · Constitution as a Living Document',
+ q:'Consider the following statements about the methods of amending the Constitution:',
+ S:[
+    ['Some articles may be amended by a simple majority, without recourse to Article 368.',true],
+    ['Amendments to some articles additionally require ratification by the legislatures of half the States.',true],
+    ['An amendment bill may be referred to the people through a national referendum.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'No referendum is required at any stage. Articles worded \'Parliament may by law\' — such as those on admitting new States or increasing the area of a State — fall outside Article 368 entirely, and the President has no power to return an amendment bill for reconsideration.'},
+{c:'Ch9 · Constitution as a Living Document',
+ q:'Which one of the following correctly states what a special majority means for an amendment to the Constitution?',
+ o:[
+    'At least three-fourths of those voting, in a joint sitting of both the Houses',
+    'At least half the total strength of the House, and two-thirds of those actually voting',
+    'At least two-thirds of the total strength of the House, and half of those actually voting',
+    'At least half of those actually voting, and two-thirds of the total strength of the House'],
+ a:1,
+ e:'Both conditions must be met, and in each House separately — there is no provision for a joint session on an amendment bill. With 545 members in the Lok Sabha the floor is 273, so even where only 300 members vote, 273 must support the bill, since two-thirds of 300 would not be enough.'},
+{c:'Ch9 · Constitution as a Living Document',
+ q:'Consider the following statements about the requirement of ratification by the States:',
+ S:[
+    ['It applies to amendments affecting the distribution of powers between the States and the Centre.',true],
+    ['A State legislature may itself initiate a bill to amend the Constitution.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'All amendments are initiated only in Parliament. The requirement of State ratification exists because federalism means the powers of the States must not lie at the mercy of the central government, but the threshold is deliberately kept modest — the consent of only half the States, by a simple majority in each — so that the process does not become impracticable.'},
+{c:'Ch9 · Constitution as a Living Document',
+ q:'Consider the following statements about the pattern of amendments to the Constitution:',
+ S:[
+    ['Ten amendments were made in the three years between 1974 and 1976.',true],
+    ['Ten amendments were also made in the three years between 2001 and 2003.',true],
+    ['The 2001 to 2003 period was one in which a single party held a large majority.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The later burst came in a period of coalition politics, of different parties ruling in different States, and of bitter rivalry between the BJP and its opponents. The comparison is the chapter\'s point: the frequency of amendment does not depend merely on the nature of the ruling party\'s majority.'},
+{c:'Ch9 · Constitution as a Living Document',
+ q:'Consider the following statements about amendments that were purely technical in effect:',
+ S:[
+    ['The 15th Amendment raised the retirement age of High Court judges from sixty to sixty-two.',true],
+    ['The 54th Amendment increased the salaries of judges of the High Courts and the Supreme Court.',true],
+    ['The 42nd Amendment is generally regarded as a purely technical change of this kind.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The 42nd Amendment is the chapter\'s leading example of a controversial amendment, not a technical one — it altered the Preamble, the Seventh Schedule and 53 articles. Extending the reservation of legislative seats every ten years, by contrast, has required six amendments that changed nothing of substance.'},
+{c:'Ch9 · Constitution as a Living Document',
+ q:'Consider the following statements about the 42nd Amendment:',
+ S:[
+    ['It was an attempt to override the Supreme Court\'s ruling in the Kesavananda Bharati case.',true],
+    ['It extended the duration of the Lok Sabha from five years to six.',true],
+    ['It inserted the Fundamental Duties into the Constitution.',true],
+    ['It was passed with the full participation of the opposition parties.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Many opposition MPs were in jail when it was passed, in the background of the internal emergency declared from June 1975. It altered the Preamble, the Seventh Schedule and 53 articles, and restricted the review powers of the judiciary; the 43rd and 44th Amendments later cancelled most of what it and the 38th and 39th had done.'},
+{c:'Ch9 · Constitution as a Living Document',
+ q:'Consider the following statements about amendments that reflected a broad political consensus:',
+ S:[
+    ['The 52nd and 91st Amendments deal with defection.',true],
+    ['The 61st Amendment lowered the voting age from twenty-one to eighteen.',true],
+    ['The 73rd and 74th Amendments deal with local government.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'All three groups belong to the post-1984 consensus that the chapter identifies, along with the 77th, 81st and 82nd Amendments clarifying and expanding reservations in jobs and admissions — measures that passed without much difficulty once an overall consensus emerged after 1992-93.'},
+{c:'Ch9 · Constitution as a Living Document',
+ q:'Which one of the following statements about the basic structure doctrine is correct?',
+ o:[
+    'The Supreme Court has issued a definitive list of the features that make up the basic structure',
+    'The features of the basic structure are enumerated in a schedule to the Constitution itself',
+    'Parliament may amend any part of the Constitution provided it does not violate the basic structure',
+    'Parliament has lost the power to amend the Constitution since the doctrine was laid down'],
+ a:2,
+ e:'The ruling both restricts and permits: it sets specific limits on the amending power while allowing Parliament to amend any and all parts within that limit, and it makes the judiciary the final authority on what the basic structure contains. There is no mention of the theory anywhere in the constitutional text.'},
+{c:'Ch9 · Constitution as a Living Document',
+ q:'Consider the following statements about the Commission to Review the Working of the Constitution:',
+ S:[
+    ['It was appointed in the year 2000 under a retired Chief Justice of the Supreme Court.',true],
+    ['Opposition parties and many other organisations boycotted it.',true],
+    ['It recommended measures that would have set aside the basic structure doctrine.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The Venkatachaliah Commission stuck to the theory of basic structure and suggested nothing that would endanger it — which the chapter treats as evidence of how deeply the doctrine has been internalised in constitutional practice. Even an exercise empowered to review the whole Constitution treated it as an outer limit.'},
+{c:'Ch9 · Constitution as a Living Document',
+ q:'Assertion (A): The theory of basic structure is itself an example of a living constitution.\nReason (R): The theory is nowhere mentioned in the constitutional text and emerged entirely from judicial interpretation.',
+ o:AR,a:0,
+ e:'Both are true and the reason explains the assertion. The judiciary and its interpretation have in effect amended the Constitution without any formal amendment; the same has happened with the fifty per cent ceiling on reservations and with the idea of the creamy layer among other backward classes.'},
+{c:'Ch9 · Constitution as a Living Document',
+ q:'In which case did the Supreme Court repeat its Kesavananda stand after the 42nd Amendment had asserted parliamentary supremacy?',
+ o:[
+    'The Golaknath case',
+    'The Sunil Batra case',
+    'The Olga Tellis case',
+    'The Minerva Mills case'],
+ a:3,
+ e:'Attempts were first made to have the Court reconsider its 1973 ruling; when those failed, the 42nd Amendment was passed, and the Court held its ground in 1980. Four decades on, that ruling still dominates our interpretation of the Constitution, and political parties, governments and Parliament have all accepted the idea of an inviolable basic structure.'},
+
+/* ============ Ch10 · The Philosophy of the Constitution ============ */
+{c:'Ch10 · The Philosophy of the Constitution',
+ q:'Consider the following statements about what a political philosophy approach to the Constitution involves:',
+ S:[
+    ['Understanding the conceptual structure — the possible meanings of terms such as rights or democracy.',true],
+    ['Working out a coherent vision of society and polity from an interpretation of key concepts.',true],
+    ['Reading the Constitution together with the Constituent Assembly Debates.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'All three are the chapter\'s components. The debates matter because a philosophical treatment of a value is incomplete without a detailed justification for it, and when the framers chose to guide society by a set of values there must have been a corresponding set of reasons, many of them never fully spelt out.'},
+{c:'Ch10 · The Philosophy of the Constitution',
+ q:'Which one of the following is offered as the reason why students of politics should revisit the Constituent Assembly debates?',
+ o:[
+    'The values of the framers and of our own world have not diverged as sharply as in America',
+    'The debates supply binding rules of interpretation that the courts are obliged to follow',
+    'The framers anticipated in the debates almost every question a later age would raise',
+    'The debates are the only record in which the text of each article was finally settled'],
+ a:0,
+ e:'Applying eighteenth-century American standards to the twenty-first century would be absurd, but in India the world of the framers and our present-day world have not changed so drastically — a history of our Constitution is still very much a history of the present. The second reason is that we have forgotten the reasons behind practices we now take for granted.'},
+{c:'Ch10 · The Philosophy of the Constitution',
+ q:'Consider the following statements about the reasons for having a constitution:',
+ S:[
+    ['Constitutions restrict the exercise of power by states that monopolise force and coercion.',true],
+    ['Constitutions exist only to limit those in power, never to empower the deprived.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The chapter\'s most important theoretical claim is precisely the reverse: constitutions exist not only to limit people in power but to empower those who have traditionally been deprived of it, giving vulnerable people the power to achieve collective good. Constitutions also provide peaceful, democratic means of bringing about social transformation, and for a colonised people a constitution embodies the first real exercise of political self-determination.'},
+{c:'Ch10 · The Philosophy of the Constitution',
+ q:'Consider the following statements about the sources of the Constitution\'s commitment to individual freedom:',
+ S:[
+    ['Rammohan Roy protested against curtailment of press freedom early in the nineteenth century.',true],
+    ['Freedom from arbitrary arrest owes much to opposition to the Rowlatt Act.',true],
+    ['The demand for a free press was abandoned by Indian opinion after the 1919 reforms.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Indians continued to demand a free press throughout British rule. The commitment to freedom was the product of more than a century of activity rather than of calm deliberation around a table — and for over forty years before 1950, every resolution, scheme, bill and report of the Congress treated individual rights as non-negotiable.'},
+{c:'Ch10 · The Philosophy of the Constitution',
+ q:'Which one of the following distinguishes the liberalism of the Indian Constitution from classical liberalism?',
+ o:[
+    'It makes the enjoyment of individual rights conditional on civic duties',
+    'It was always linked to social justice and to the recognition of community values',
+    'It confines the protection of rights to citizens rather than to all persons',
+    'It treats economic liberty as prior to every other kind of individual freedom'],
+ a:1,
+ e:'Classical liberalism always privileges the rights of individuals over the demands of social justice and community values. The clearest Indian instance of the difference is reservation for the Scheduled Castes and Tribes: the framers held that the mere grant of equality would not overcome age-old injustice or give real meaning to the right to vote.'},
+{c:'Ch10 · The Philosophy of the Constitution',
+ q:'Consider the following statements about the two streams of Indian liberalism identified in the chapter:',
+ S:[
+    ['The first stream, beginning with Rammohan Roy, emphasised individual rights and particularly the rights of women.',true],
+    ['The second stream included K.C. Sen, Justice Ranade and Swami Vivekananda.',true],
+    ['The second stream introduced the spirit of social justice within orthodox Hinduism.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'All three are accurate. For Vivekananda such a reordering of Hindu society could not have been possible without liberal principles. The two streams together explain why the Constitution combines a strong commitment to individual freedom with an equally strong commitment to social justice.'},
+{c:'Ch10 · The Philosophy of the Constitution',
+ q:'Consider the following statements about why the Constitution recognises community-based rights:',
+ S:[
+    ['Communities in India often stand in hierarchical relations, as in the case of caste.',true],
+    ['Where communities do see each other as equals they may become rivals, as religious communities do.',true],
+    ['Indians are attached to their communities far more than people in France or Germany are.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The chapter explicitly denies the third claim: individuals everywhere belong to cultural communities, and the French and Germans are deeply attached to their linguistic communities too. What differs is that India openly acknowledges the value of communities and has many of them, so no single community must be allowed to dominate the rest.'},
+{c:'Ch10 · The Philosophy of the Constitution',
+ q:'Which one of the following best describes what is meant by principled distance?',
+ o:[
+    'The state withdraws from religious matters except where public order is directly threatened',
+    'The state defers to each religious community on all questions internal to that community',
+    'The state stays distant from all religions so it may intervene or abstain as its values require',
+    'The state maintains an equal ceremonial distance from every organised religion at all times'],
+ a:2,
+ e:'Western secularism is built on mutual exclusion — the state neither helps nor hinders religion. India departed from that on two grounds: a person\'s freedom depends on the standing of her community, and religiously sanctioned untouchability could not have been dissolved without active state intervention.'},
+{c:'Ch10 · The Philosophy of the Constitution',
+ q:'Consider the following statements about universal franchise as an achievement of the Constitution:',
+ S:[
+    ['The Constitution of India Bill of 1895 was the first non-official attempt at drafting a constitution for India.',true],
+    ['The Motilal Nehru Report of 1928 held that every person of either sex aged twenty-one was entitled to vote.',true],
+    ['The Constituent Assembly debated the question of who should have the vote at great length.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Universal suffrage was the one provision passed with virtually no debate at all — members felt no need whatever to discuss who should have the right to vote. That commitment ran back to the Constitution of India Bill of 1895 and the Motilal Nehru Report of 1928, and it came when Western democracies had only recently enfranchised women and the working class.'},
+{c:'Ch10 · The Philosophy of the Constitution',
+ q:'Consider the following statements about asymmetric federalism as a philosophical achievement:',
+ S:[
+    ['Article 371A confers validity on pre-existing laws within Nagaland.',true],
+    ['Article 371A protects local identity through restrictions on immigration.',true],
+    ['Indian federalism is constitutionally symmetric, in the manner of American federalism.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Unlike the constitutional symmetry of American federalism, Indian federalism has been constitutionally asymmetric, and it was always part of the original design to have a unique relationship with some sub-units. The chapter adds that although the framers did not envisage it, India has since become a multi-lingual federation.'},
+{c:'Ch10 · The Philosophy of the Constitution',
+ q:'Consider the following statements about the criticism that the Constituent Assembly was unrepresentative:',
+ S:[
+    ['On the dimension of voice it was indeed unrepresentative, being chosen by a restricted franchise.',true],
+    ['On the dimension of opinion a vast range of issues and social concerns was in fact articulated.',true],
+    ['The statue of Ambedkar holding the Constitution in town squares expresses a Dalit sense of ownership.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'All three form the chapter\'s answer. The voice component matters because people must be recognised in their own language rather than in the language of the masters; but members raised matters based on the perceived interests of various social sections, not merely their own individual concerns.'},
+{c:'Ch10 · The Philosophy of the Constitution',
+ q:'Consider the following statements about the limitations of the Constitution acknowledged in the chapter:',
+ S:[
+    ['It has a centralised idea of national unity.',true],
+    ['It glossed over important issues of gender justice, particularly within the family.',true],
+    ['It is unclear why basic socio-economic rights were relegated to the Directive Principles.',true],
+    ['These limitations are serious enough to jeopardise the philosophy of the Constitution.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'The chapter names three real limitations but concludes that they are not serious enough to jeopardise the philosophy of the document. The Preamble makes the humblest and most radical of claims: the Constitution is not granted by a body of great men but prepared and adopted by \'We, the people of India\'.'},
+{c:'Ch10 · The Philosophy of the Constitution',
+ q:'Assertion (A): The making of the Indian Constitution was a process of selective adaptation rather than of borrowing.\nReason (R): As early as 1841 it was noticed that Dalit people in northern India were using the newly introduced legal system to bring suits against their landlords.',
+ o:AR,a:1,
+ e:'Both statements are true, but the reason does not establish the assertion. Selective adaptation describes how the framers amalgamated western and traditional Indian values while drafting. The 1841 example makes a separate point — that for those at the bottom of the traditional order, modern instruments were seized as a means of protest against their own tradition.'}
+
+];
+
+/* ---------- Engine (identical across classes) ---------- */
+function shuffle(arr){const a=arr.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+
+/* Canonical Prelims answer-code sets. For an S-question the statements are
+   reshuffled on every attempt and the correct code is worked out from which
+   ones landed where — so neither the option nor the position of the false
+   statement can be memorised. */
+const SET_CODE3=["1 and 2 only","2 and 3 only","1 and 3 only","1, 2 and 3"];
+const SET_CODE2=["1 only","2 only","Both 1 and 2","Neither 1 nor 2"];
+const SET_COUNT=["Only one","Only two","All three","None"];
+const SET_COUNT4=["Only one","Only two","Only three","All four"];
+function buildCode(mode,n,trueIdx){
+  const c=trueIdx.length;
+  if(mode==='count'){
+    const set=n===4?SET_COUNT4:SET_COUNT;
+    const text=c===0?'None':c===1?'Only one':c===2?'Only two':c===3?(n===3?'All three':'Only three'):'All four';
+    return {set:set,text:text};
+  }
+  if(n===2){
+    const text=c===2?'Both 1 and 2':c===0?'Neither 1 nor 2':(trueIdx[0]===1?'1 only':'2 only');
+    return {set:SET_CODE2,text:text};
+  }
+  const text=c===3?'1, 2 and 3':trueIdx[0]+' and '+trueIdx[1]+' only';
+  return {set:SET_CODE3,text:text};
+}
+function joinList(a){return a.length===1?String(a[0]):a.slice(0,-1).join(', ')+' and '+a[a.length-1];}
+function verdictLine(n,trueIdx,unit){
+  const U=unit==='pair'?'pair':'statement', Uc=U.charAt(0).toUpperCase()+U.slice(1);
+  const all=[];for(let i=1;i<=n;i++)all.push(i);
+  const f=all.filter(function(i){return trueIdx.indexOf(i)<0;});
+  if(f.length===0)return 'All the '+U+'s here are correct.';
+  if(trueIdx.length===0)return 'None of the '+U+'s here is correct.';
+  return Uc+(trueIdx.length===1?' ':'s ')+joinList(trueIdx)+(trueIdx.length===1?' is':' are')+' correct; '+
+         U+(f.length===1?' ':'s ')+joinList(f)+(f.length===1?' is not.':' are not.');
+}
+function buildSession(pool){return shuffle(pool).map(function(item){
+  let lines=item.L,options,correctText,auto='';
+  if(item.S){
+    const st=shuffle(item.S), n=st.length, trueIdx=[];
+    lines=st.map(function(s){return s[0];});
+    st.forEach(function(s,i){if(s[1])trueIdx.push(i+1);});
+    const built=buildCode(item.mode||'code',n,trueIdx);
+    options=built.set.slice(); correctText=built.text;
+    auto=verdictLine(n,trueIdx,item.unit)+' ';
+  } else { options=item.o.slice(); correctText=item.o[item.a]; }
+  const order=shuffle(options.map(function(text,i){return {text:text,i:i};}));
+  return {chapter:item.c,question:item.q,head:item.head,lines:lines,ask:item.ask,
+          options:order.map(function(o){return o.text;}),
+          correct:order.findIndex(function(o){return o.text===correctText;}),
+          explain:auto+item.e};
+});}
+let session=[],current=0,answers=[],startTime=null,timerInterval=null,reviewMode=false,activeScope="";
+const el=id=>document.getElementById(id);
+const screens={menu:el('menu'),quiz:el('quiz'),result:el('result')};
+function show(name){Object.keys(screens).forEach(k=>screens[k].classList.toggle('is-active',k===name));}
+el('courseEyebrow').textContent=COURSE.eyebrow; el('courseTitle').textContent=COURSE.title; el('courseLede').textContent=COURSE.lede;
+function chapterCount(name){return QUESTIONS.filter(q=>q.c===name).length;}
+function buildMenu(){
+  const list=el('lessonList'); list.innerHTML='';
+  const combined=document.createElement('button');
+  combined.className='lesson-card combined'; combined.type='button';
+  combined.innerHTML='<span class="lesson-num">★</span><span class="lesson-body"><span class="lesson-title">Full Syllabus — Combined</span><span class="lesson-meta">All '+CHAPTERS.length+' lessons · '+QUESTIONS.length+' questions, shuffled</span></span><span class="lesson-go">→</span>';
+  combined.addEventListener('click',()=>startQuiz(null)); list.appendChild(combined);
+  CHAPTERS.forEach((name,idx)=>{
+    const shortTitle=name.replace(/^Ch\d+ · /,'');
+    const btn=document.createElement('button'); btn.className='lesson-card'; btn.type='button';
+    const num=document.createElement('span'); num.className='lesson-num'; num.textContent=String(idx+1);
+    const body=document.createElement('span'); body.className='lesson-body';
+    const t=document.createElement('span'); t.className='lesson-title'; t.textContent=shortTitle;
+    const m=document.createElement('span'); m.className='lesson-meta'; m.textContent=chapterCount(name)+' questions';
+    body.appendChild(t); body.appendChild(m);
+    const go=document.createElement('span'); go.className='lesson-go'; go.textContent='→';
+    btn.appendChild(num); btn.appendChild(body); btn.appendChild(go);
+    btn.addEventListener('click',()=>startQuiz(name)); list.appendChild(btn);
+  });
+}
+function formatTime(sec){const m=Math.floor(sec/60).toString().padStart(2,'0');const s=Math.floor(sec%60).toString().padStart(2,'0');return m+':'+s;}
+function startTimer(){startTime=Date.now();clearInterval(timerInterval);timerInterval=setInterval(()=>{el('timer').textContent=formatTime((Date.now()-startTime)/1000);},1000);}
+function stopTimer(){clearInterval(timerInterval);}
+function startQuiz(chapter){
+  const pool=chapter?QUESTIONS.filter(q=>q.c===chapter):QUESTIONS;
+  activeScope=chapter?chapter.replace(/^Ch\d+ · /,''):"Full Syllabus";
+  session=buildSession(pool); answers=new Array(session.length).fill(null); current=0; reviewMode=false;
+  show('quiz'); el('timer').textContent='00:00'; startTimer(); renderQuestion();
+}
+function renderStem(item){
+  const box=el('qblock'); box.innerHTML='';
+  const stem=document.createElement('p'); stem.className='question'; stem.textContent=item.question; box.appendChild(stem);
+  if(item.head){const h=document.createElement('p'); h.className='stmt-head'; h.textContent=item.head; box.appendChild(h);}
+  if(item.lines&&item.lines.length){
+    const ol=document.createElement('ul'); ol.className='stmt-list';
+    item.lines.forEach((line,i)=>{
+      const li=document.createElement('li');
+      const n=document.createElement('span'); n.className='sn'; n.textContent=(i+1)+'.';
+      const t=document.createElement('span'); t.className='st';
+      const split=line.indexOf(' : ');
+      if(split>-1){
+        t.textContent=line.slice(0,split);
+        const r=document.createElement('span'); r.className='sr'; r.textContent=' — '+line.slice(split+3);
+        t.appendChild(r);
+      } else { t.textContent=line; }
+      li.appendChild(n); li.appendChild(t); ol.appendChild(li);
+    });
+    box.appendChild(ol);
+  }
+  if(item.ask){const a=document.createElement('p'); a.className='ask'; a.textContent=item.ask; box.appendChild(a);}
+}
+function renderQuestion(){
+  const item=session[current]; const chosen=answers[current]; const reveal=chosen!==null||reviewMode;
+  el('chapterTag').textContent=item.chapter; el('counter').textContent=(current+1)+' / '+session.length;
+  el('progressFill').style.width=((current+1)/session.length*100)+'%';
+  renderStem(item);
+  const optsBox=el('options'); optsBox.innerHTML=''; const letters=['A','B','C','D','E'];
+  item.options.forEach((opt,i)=>{
+    const btn=document.createElement('button'); btn.className='option'; btn.type='button';
+    const l=document.createElement('span'); l.className='opt-letter'; l.textContent=letters[i];
+    const t=document.createElement('span'); t.className='opt-text'; t.textContent=opt;
+    btn.appendChild(l); btn.appendChild(t);
+    if(reveal){btn.disabled=true; if(i===item.correct)btn.classList.add('correct'); else if(i===chosen)btn.classList.add('incorrect');}
+    btn.addEventListener('click',()=>selectOption(i)); optsBox.appendChild(btn);
+  });
+  const fb=el('feedback');
+  if(reveal){
+    fb.hidden=false; let verdict,cls;
+    if(chosen===null){verdict='Skipped.';cls='bad';} else if(chosen===item.correct){verdict='Correct.';cls='good';} else {verdict='Not quite.';cls='bad';}
+    fb.className='feedback '+cls;
+    fb.innerHTML=''; const v=document.createElement('span'); v.className='verdict'; v.textContent=verdict;
+    fb.appendChild(v); fb.appendChild(document.createTextNode(' '+item.explain));
+  } else { fb.hidden=true; }
+  el('prevBtn').disabled=current===0;
+  const nextBtn=el('nextBtn');
+  nextBtn.textContent = reviewMode ? (current===session.length-1?'Back to results':'Next →') : (current===session.length-1?'Finish':'Next →');
+  el('options').scrollIntoView&&el('qblock').parentElement.scrollTo({top:0});
+}
+function selectOption(i){ if(reviewMode||answers[current]!==null)return; answers[current]=i; renderQuestion(); }
+function finishQuiz(){
+  stopTimer(); const elapsed=(Date.now()-startTime)/1000; let correctCount=0; const stats={};
+  session.forEach((item,i)=>{ if(!stats[item.chapter])stats[item.chapter]={correct:0,total:0}; stats[item.chapter].total++; if(answers[i]===item.correct){correctCount++;stats[item.chapter].correct++;} });
+  show('result');
+  el('resultScope').textContent=activeScope+' · '+session.length+' questions';
+  el('scoreText').textContent=correctCount+' / '+session.length; el('timeText').textContent=formatTime(elapsed);
+  el('scorePct').textContent=Math.round(correctCount/session.length*100)+'%';
+  const body=el('breakdownBody'); body.innerHTML='';
+  CHAPTERS.filter(c=>stats[c]).forEach(c=>{
+    const s=stats[c]; const row=document.createElement('tr');
+    const td1=document.createElement('td'); td1.textContent=c.replace(/^Ch\d+ · /,'');
+    const p=Math.round(s.correct/s.total*100);
+    const bar=document.createElement('div'); bar.className='bd-bar';
+    const fill=document.createElement('span'); fill.style.width=p+'%'; bar.appendChild(fill); td1.appendChild(bar);
+    const td2=document.createElement('td'); td2.className='num'; td2.textContent=s.correct+' / '+s.total;
+    row.appendChild(td1); row.appendChild(td2); body.appendChild(row);
+  });
+}
+function enterReview(){reviewMode=true;current=0;show('quiz');renderQuestion();}
+function exitReviewToResult(){reviewMode=false;show('result');}
+el('prevBtn').addEventListener('click',()=>{if(current>0){current--;renderQuestion();}});
+el('nextBtn').addEventListener('click',()=>{
+  if(reviewMode){ if(current===session.length-1)exitReviewToResult(); else {current++;renderQuestion();} }
+  else { if(current===session.length-1)finishQuiz(); else {current++;renderQuestion();} }
+});
+el('reviewBtn').addEventListener('click',enterReview);
+el('restartBtn').addEventListener('click',()=>{ const chapter=activeScope==="Full Syllabus"?null:CHAPTERS.find(c=>c.replace(/^Ch\d+ · /,'')===activeScope); startQuiz(chapter); });
+el('menuBtn').addEventListener('click',()=>{stopTimer();show('menu');});
+document.addEventListener('keydown',(e)=>{
+  if(!screens.quiz.classList.contains('is-active'))return;
+  if(['1','2','3','4','5'].includes(e.key)&&!reviewMode){selectOption(parseInt(e.key,10)-1);}
+  else if(e.key==='ArrowRight'||e.key==='Enter'){el('nextBtn').click();}
+  else if(e.key==='ArrowLeft'){el('prevBtn').click();}
+});
+buildMenu();
+</script>
