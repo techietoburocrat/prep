@@ -1,5 +1,27 @@
 # Chapter 5: Legislature
 
+## 🎯 Chapter Outcome — what you should walk away with
+
+> **The one thing this chapter exists to teach:** Parliament matters not chiefly because it makes laws, but because it is **the only body that can make and unmake a government**. That is why it is called the most representative organ and the centre of the democratic process.
+
+**After reading it, here is what you now understand:**
+
+1. **Why two Houses** — to represent all sections *and* all regions, and above all so that a decision taken in haste in one House can be reconsidered in the other. Only **six States** are bicameral: Andhra Pradesh, Bihar, Karnataka, Maharashtra, Telangana and Uttar Pradesh.
+2. **How the Rajya Sabha is built** — indirect election, seats allotted by **population** (not the American equal-representation model), a six-year term with a third retiring every two years, which makes it a **permanent House** that is never dissolved, plus 12 members nominated by the President.
+3. **The contrast with Germany's Bundesrat**, whose members are appointed state ministers voting as a bloc on their government's instructions — a genuinely state-representing chamber, unlike our Rajya Sabha, whose members represent their **parties** more than their States.
+4. **What only the Lok Sabha can do** — money bills and removing the government — and *why*: the Rajya Sabha is elected by MLAs, not by the people, so it may criticise a government but cannot remove it.
+5. **The money-bill rule precisely** (Article 109): the Rajya Sabha may suggest changes but cannot reject, and **fourteen days of inaction means the bill is deemed passed**. There is no joint session for a money bill — and in the few joint sessions ever held, the outcome has always favoured the Lok Sabha.
+6. **Question Hour vs Zero Hour** — in Question Hour ministers **must** reply; in Zero Hour any matter may be raised but ministers **need not** reply.
+7. **Committees as "miniature legislatures"**, and the CAG–PAC link that turns financial control into policy control.
+8. **Anti-defection (52nd Amendment 1985, modified by the 91st)** — what counts as defection, that the presiding officer decides, and the twist the chapter insists on: it ended up **empowering party bosses** rather than curbing defection.
+
+**Self-check — answer these three without looking:**
+1. Why can the Rajya Sabha criticise a government but not remove it?
+2. The Rajya Sabha simply sits on a money bill and does nothing. What happens?
+3. Name the three acts that count as defection under the anti-defection law.
+
+---
+
 ## The Big Idea
 ⭐ **"Legislature is not merely a law making body. Lawmaking is but one of the functions of the legislature. It is the CENTRE of all democratic political process."**
 

@@ -1,5 +1,28 @@
 # Chapter 2: Freedom
 
+## 🎯 Chapter Outcome — what you should walk away with
+
+> **The one thing this chapter exists to teach:** freedom has **two halves** — the absence of external constraints, *and* the conditions that let a person actually develop their capabilities. Hold both, and the whole chapter falls into place.
+
+**After reading it, here is what you now understand:**
+
+1. **The two opening lives** — Mandela's 27 years in jail, seeking freedom for *all* South Africans including the white population; and Aung San Suu Kyi's claim that **real freedom is freedom from fear**: "unless you can live free from fear you cannot live a dignified human life."
+2. **Swaraj as a double idea** — *swa* (self) + *raj* (rule) = rule **of** the self *and* rule **over** self. Tilak's "Swaraj is my birth right"; Gandhi's *Hind Swaraj* (**1909**) treating it as liberation — redeeming self-respect, self-responsibility and self-realisation from institutions of dehumanisation.
+3. **The two sources of constraint** — domination and external control (colonial rule, apartheid, which democracy answers by letting people retain control over rulers), and **social inequality (caste) plus extreme economic inequality**. Bose's Lahore speech (19 Oct 1929) demanding "all round freedom" is the Indian statement of the second.
+4. **That law both limits *and* protects freedom** — it is what protects you from the bully.
+5. **Mill's harm principle** in operating detail: interference is justified only to **prevent harm to others**; self-regarding actions are off-limits to the state; harm must be **serious** and to **definite individuals**; minor harm earns only **social disapproval** — don't call the police over loud music, just refuse to greet him.
+6. **India's constitutional phrasing — "reasonable restrictions"** — defensible by reason, not excessive, not disproportionate. And the warning: "we must not develop a habit of imposing restrictions."
+7. **Negative liberty** ("over what area am I master?" — an inviolable minimum area of non-interference) **vs positive liberty** ("who governs me?" — "I govern myself"), the flower image, the three enabling conditions (material, political, social) — and the chapter's own warning that **tyrants have justified their rule by invoking positive liberty**.
+8. **Mill's four arguments for free expression**, the ban list (*The Satanic Verses*, *Ramayana Retold*, *The Last Temptation of Christ*), and "once one begins to ban, one develops a habit of banning."
+9. **The test is coercion.** A rule you voluntarily accept — cricket whites, a Royal household contract — is not a curtailment of your freedom.
+
+**Self-check — answer these three without looking:**
+1. Your neighbour plays loud music late at night. What does the harm principle say you should — and should not — do?
+2. State negative and positive liberty in one line each.
+3. Why is being required to wear cricket whites not a loss of freedom?
+
+---
+
 ## The Big Idea (Overview)
 ⭐ **"Human history provides many examples of people and communities which have been DOMINATED, or ENSLAVED, or EXPLOITED by more powerful groups. But it also provides us with INSPIRING EXAMPLES OF HEROIC STRUGGLES AGAINST SUCH DOMINATION."**
 

@@ -1,5 +1,31 @@
 # Chapter 4: Social Justice
 
+## 🎯 Chapter Outcome — what you should walk away with
+
+> **The one thing this chapter exists to teach:** justice means **giving each person their due** — and what counts as "due" has shifted from *the station you occupy in the social order* to *your humanity*, measured in the opportunity to develop your talents.
+
+**After reading it, here is what you now understand:**
+
+1. **Why justice is "a lot like love"** — intuitively understood, passionately advocated, nobody argues against it — but unlike love it concerns **life in society**, the ordering of public life, and the distribution of social goods and duties.
+2. **Socrates' two answers** to the challenge that the unjust prosper: if everyone were unjust nobody would be secure, so justice is in our **long-term interest**; and justice is not good-to-friends-harm-to-enemies but **"involves the well-being of all people"** — the just ruler as a doctor.
+3. **Kant as the hinge** — human beings possess **dignity**, so what is due to each is the opportunity to develop talents and pursue chosen goals.
+4. **The three principles of justice**, and how each works:
+   - **Equal treatment for equals** — judged on work and actions, not group; ₹100 to one caste and ₹75 to another is unjust; a male teacher paid more than a female one is "unjustifiable and wrong".
+   - **Proportionate justice** — equal marks for everyone who sits an exam would itself be unjust; reward in proportion to effort, skill and danger, **provided everybody starts from the same base line of equal rights**. (Which is why the chapter says miners, skilled craftsmen and policemen are under-rewarded.)
+   - **Special needs** — it "does not *contradict* equal treatment so much as **extend** it"; treating the deprived identically with the privileged produces "an unequal society, not an egalitarian and just one".
+5. **That the three principles conflict** and governments must harmonise them — captured in the blindfolded-justice problem: she is impartial, "but how then does she see the special needs of people?"
+6. **Rawls' veil of ignorance properly** — you decide without knowing your family, caste or wealth, and you still reason **selfishly**; but since no one knows who they will be, each envisages society **from the point of view of the worst-off**. Its merit is that it needs no heroism: "fairness would be the outcome of **rational action, not benevolence or generosity**."
+7. **What makes a society unjust** — the rich and poor "living in different worlds altogether", and the deprived having "no chance at all to improve their condition however hard they may work". Hence the **basic minimum**: nourishment, housing, clean water, education, a minimum wage.
+8. **The free market's strongest argument and its decisive weakness.** Strongest: **neutrality** — "the market does not care about the caste or religion… if you have the merit, nothing else matters." Weakness: business goes where it is most profitable, so "free markets eventually tend to work in the interest of the strong, the wealthy and the powerful" — few private schools in remote rural areas, and quality out of reach of the poor.
+9. **Ambedkar's definition of a just society** — one in which the "ascending sense of reverence and descending sense of contempt is dissolved into the creation of a compassionate society" — and **Mill's**: justice is what "some individual person can claim from us as his **moral right**", not charity.
+
+**Self-check — answer these three without looking:**
+1. Why does the veil of ignorance **not** require anyone to be selfless?
+2. Which principle of justice do reservations rest on, and why is it not a contradiction of equal treatment?
+3. State the free market's best argument, then the chapter's answer to it.
+
+---
+
 ## The Big Idea (Overview)
 ⭐⭐ **The chapter's opening analogy — justice is like love:**
 > **"Just as we INTUITIVELY UNDERSTAND WHAT LOVE MEANS even if we cannot explain all its different shades of meaning, WE ALSO HAVE AN INTUITIVE UNDERSTANDING OF JUSTICE even though we may not be able to DEFINE IT PRECISELY. In that sense JUSTICE IS A LOT LIKE LOVE."**

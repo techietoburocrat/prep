@@ -1,5 +1,28 @@
 # Chapter 3: Equality
 
+## 🎯 Chapter Outcome — what you should walk away with
+
+> **The one thing this chapter exists to teach:** **equal respect does not mean identical treatment.** Equality means that a person's treatment and opportunities **must not be pre-determined by birth or social circumstance**.
+
+**After reading it, here is what you now understand:**
+
+1. **The paradox that opens the chapter** — everybody accepts equality as an ideal, and everywhere we meet inequality: slums beside luxury housing, air-conditioned classrooms beside schools with no drinking water.
+2. **What actually makes a society unjust** — not unequal status or wealth as such, but **unequal access to education, health care and safe housing**. A general's rank is acceptable "provided the privileges are not misused"; a slum child denied food and schooling "through no fault of his or her own" is not.
+3. **Why the natural/social distinction is unreliable, and what replaces it.** "Weaker sex, lesser intelligence" justified denying women rights; black Africans being "better at manual work" justified slavery — both now seen as **differences of power, not inborn traits**. And technology keeps moving the line (computers for the blind, wheelchairs, Stephen Hawking). So the working distinction becomes **choice vs circumstance of birth**.
+4. **The three dimensions** — political (equal citizenship and the vote, but these are only *legal* rights, hence the demand for a level playing field), social (minimum conditions; otherwise "a huge pool of potential talent tends to be wasted"; India's special obstacle is **custom**), and economic.
+5. **Why entrenched inequality is the dangerous kind** — untouched across generations, it breeds resentment and violence, and the wealth it concentrates blocks reform.
+6. **Feminism as a political doctrine of equal rights for women and men** (so men can be feminists), **patriarchy** as a system valuing men more, the **sex/gender** distinction — "only women can become pregnant… does not require that only women should look after children" — and the **double burden**.
+7. **The four ideological answers** — Marx (private ownership of resources converts wealth into political power), liberals (fair competition; the problem is "not inequality as such but unjust and entrenched inequalities"), socialism (regulation and public provision of education and health), and **Lohia's five inequalities plus civil liberties and non-violence = the seven revolutions, *Sapta Kranti***.
+8. **The three steps toward equality** — formal equality; **differential treatment** (ramps for the disabled, night-shift protection for call-centre women — "not infringements of equality but **enhancement** of equality"); and **affirmative action**, which corrects "the cumulative effect of past inequalities" and is **temporary and time-bound**.
+9. **That the real dispute is about policies, not the goal** — quotas vs early skill development, economic criterion vs caste — and the test is simply which makes society more egalitarian.
+
+**Self-check — answer these three without looking:**
+1. Why is a ramp for a wheelchair user an *enhancement* of equality rather than a violation of it?
+2. What replaced the natural/social inequality distinction, and what were the two reasons for abandoning it?
+3. Name Lohia's five inequalities.
+
+---
+
 ## The Big Idea (Overview)
 **This chapter examines five questions:**
 1. **"WHAT IS EQUALITY? Why should we be concerned about this MORAL AND POLITICAL IDEAL?"**

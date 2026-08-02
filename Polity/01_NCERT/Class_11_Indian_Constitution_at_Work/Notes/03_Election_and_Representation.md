@@ -1,5 +1,28 @@
 # Chapter 3: Election and Representation
 
+## 🎯 Chapter Outcome — what you should walk away with
+
+> **The one thing this chapter exists to teach:** *how you count votes decides who governs.* The same votes, counted two different ways, produce two completely different parliaments.
+
+**After reading it, here is what you now understand:**
+
+1. **What FPTP actually requires** — one representative per constituency, and a *plurality*, not a majority. The winner often takes well under half the votes.
+2. **The 1984 result as the proof**: Congress won **48% of votes → 415 seats**; the BJP won **7.4% → 2 seats**. And you can explain *why* — every vote cast for a losing candidate is wasted and yields no seat.
+3. **What Proportional Representation does differently**, and — the detail most people miss — **that India already uses PR by Single Transferable Vote**, for the President, Vice-President, Rajya Sabha and Vidhan Parishads. You can work the quota: total votes ÷ (seats + 1), then + 1.
+4. **The five reasons India chose FPTP anyway** — it is simple, it gives voters a known candidate rather than a party list, it makes a representative locally accountable, it tends to manufacture stable majorities, and it discourages parties built on a single community.
+5. **Why separate electorates were rejected and reserved constituencies adopted instead.** Under a separate electorate only voters of that community elect their representative; under a reserved constituency *everyone* votes and only the candidature is restricted — the electorate stays whole.
+6. **How the Election Commission is built**: Article 324 gives it superintendence, direction and control — **but not over local bodies** (those go to the State Election Commissioner, Ch 8). The CEC presides but does **not** outrank the other Commissioners, and only the CEC has special-majority protection from removal.
+7. **The chapter's real lesson about institutions** — the EC became powerful not by acquiring new powers but **by using powers it had held all along**.
+
+**Self-check — answer these three without looking:**
+1. 200 MLAs are electing 4 Rajya Sabha members. What is the quota?
+2. State the difference between a separate electorate and a reserved constituency in one sentence.
+3. Which election commissioner can be removed only by a special majority of both Houses — and how are the others removed?
+
+**Where this leads:** this is how the people who staff Chapters 4 and 5 are chosen. Also carry the definition of *special majority* forward — it returns for impeachment (Ch 4), for removing judges (Ch 6) and for amendment (Ch 9).
+
+---
+
 ## The Big Idea
 **The chess-and-cricket analogy the chapter opens with:** What if the black knight suddenly started moving straight instead of two-and-a-half squares? What if a cricket match had no umpires? **In any sport we need rules, and an impartial umpire whose decision all players accept — and both must be agreed upon *before* the game begins.**
 

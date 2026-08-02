@@ -1,5 +1,27 @@
 # Chapter 6: Judiciary
 
+## 🎯 Chapter Outcome — what you should walk away with
+
+> **The one thing this chapter exists to teach:** judicial independence is **not** the absence of accountability. The judiciary is free of restraint, interference and fear or favour — and is answerable to the Constitution, to democratic traditions and to the people.
+
+**After reading it, here is what you now understand:**
+
+1. **The six safeguards of independence**, and the design behind them: the **executive appoints** and the **legislature removes**, so neither controls a judge alone.
+2. **How the collegium evolved between 1982 and 1998** — from "consultation" to advice that must be followed, exercised by the CJI with the four senior-most judges — and that the seniority convention for appointing the CJI was broken twice (A.N. Ray in 1973 over three seniors, M.H. Beg in 1975 over H.R. Khanna).
+3. **What a special majority really means, through the Ramaswami case (1991–93).** The motion cleared two-thirds of those present and voting — but the Congress abstained, so it never reached a majority of the **total strength** of the House. He survived. **No Supreme Court judge has ever been removed.**
+4. **That India has a single integrated judiciary** — there are **no separate State courts**, which distinguishes India from federations running parallel systems, and lets the Supreme Court transfer judges and move cases between High Courts.
+5. **The five jurisdictions**, and the detail that matters most: **advisory jurisdiction is optional at both ends** — the Court need not advise, and the President need not accept the advice.
+6. **PIL from 1979** — *Hussainara Khatoon* (undertrials jailed longer than their maximum sentence), *Sunil Batra*, *Bandhua Mukti Morcha* — and Bhagwati's reason for relaxing procedure: the problems of the poor are **"qualitatively different"**, and adversarial procedure would leave them unable to enforce their rights at all. You also know the *costs* — overburdened courts and a blurred separation of powers.
+7. **That judicial review is nowhere written in the Constitution.** It is implicit in having a written constitution plus the power to strike down laws (Arts 13, 32, 226), and rests on two grounds: violation of Fundamental Rights, and violation of the federal distribution of powers.
+8. **Kesavananda Bharati (1973) and its three effects** — the amending power is limited by basic structure; any part may be amended within that limit; and **the Court decides what basic structure is**.
+
+**Self-check — answer these three without looking:**
+1. Justice Ramaswami secured two-thirds of those voting. Why was he not removed?
+2. Where in the text of the Constitution is judicial review to be found?
+3. What does the Supreme Court do in its **original** jurisdiction that no other court in India may do?
+
+---
+
 ## The Big Idea
 *"Many times, courts are seen only as **arbitrators in disputes between individuals or private parties.** But **judiciary performs some POLITICAL functions also.**"*
 

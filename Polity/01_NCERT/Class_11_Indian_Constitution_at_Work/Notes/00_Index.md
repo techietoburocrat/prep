@@ -22,6 +22,23 @@ Unlike Classes 7, 8 and 10, the PDFs in this folder are **correctly named** — 
 | 9 | [Constitution as a Living Document](09_Constitution_as_a_Living_Document.md) | Three methods of amendment; why 106 amendments do not mean 106 changes; the 42nd Amendment; basic structure |
 | 10 | [The Philosophy of the Constitution](10_The_Philosophy_of_the_Constitution.md) | The moral vision — individual freedom, social justice, diversity, secularism as *principled distance*; criticisms and limitations |
 
+## 🎯 Chapter outcomes at a glance
+
+Every chapter note now **opens with a "Chapter Outcome" block** — the one thing that chapter exists to teach, a numbered list of what you should understand after reading it, and three self-check questions to answer without looking. Use it two ways: read it *before* the chapter to know what you are looking for, and *after* to confirm you got it.
+
+| # | The one thing this chapter exists to teach |
+|---|---|
+| 1 | A constitution doesn't just govern a government — it **creates** one, then limits, empowers and identifies it |
+| 2 | A right is only as real as the machinery that enforces it — Asian Games workers vs Machal Lalung |
+| 3 | **How you count votes decides who governs** — the same votes, counted two ways, give two different parliaments |
+| 4 | India chose an executive that can be **removed**, not merely one that is elected |
+| 5 | Parliament matters because it is the only body that can **make and unmake a government** |
+| 6 | Judicial independence is **not** the absence of accountability |
+| 7 | A deliberately strong centre, because the framers had watched other federations break apart |
+| 8 | 32 lakh elected representatives who **raise 0.24% and spend 4%** — that gap is the third tier's whole story |
+| 9 | **106 amendments ≠ 106 changes** — it survives by amendment *and* reinterpretation |
+| 10 | A constitution exists not only to **limit** the powerful but to **empower the deprived** |
+
 ## How the chapters connect (the architecture of the book)
 
 1. **Chapter 1** sets up everything: a constitution **creates** government, **limits** it, **empowers** it, and gives a people its **identity**. Every later chapter is one of those functions in operation.

@@ -1,5 +1,29 @@
 # Chapter 6: Citizenship
 
+## 🎯 Chapter Outcome — what you should walk away with
+
+> **The one thing this chapter exists to teach:** citizenship is **full and equal membership of a political community** — and therefore **"equal rights need not mean uniform policies."** If the purpose is to make people more equal, different needs and claims must be taken into account.
+
+**After reading it, here is what you now understand:**
+
+1. **What citizenship carries** — a collective political identity, political, civil and socio-economic rights, and help and protection when travelling — and that **its value is clearest in its absence**: refugees and illegal migrants whom no state will accept live in precarious conditions.
+2. **That every right now enjoyed was won after struggle** — the French Revolution of 1789, anti-colonial movements in Asia and Africa, South Africa's blacks until the early 1990s, and India's women's and Dalit movements.
+3. **The railway-compartment image** — those who fought each other to get in "once inside discover a shared interest in keeping others out" — and the **two double standards** it exposes: we are indignant when Indian workers abroad are ill-treated yet resent outsiders at home, and we welcome skilled and affluent migrants more readily than poor ones.
+4. **That the remedy is the right to protest** — provided it does not harm life, property or the State — and that "disputes should be settled by **negotiation and discussion rather than force** — this is one of the obligations of citizenship."
+5. **Martin Luther King's three arguments against segregation** — equal self-worth regardless of colour; that it is "social leprosy on the body politic" which **diminishes the quality of life for the white community also** (parks closed rather than shared, baseball teams disbanded); and that artificial boundaries prevent cooperation for the country's overall benefit.
+6. **The urban poor as contributors, not burdens** — hawkers, petty traders, scavengers, domestic workers, plumbers, mechanics — the **National Policy on Urban Street Vendors of January 2004**, and the quiet barrier that even voting requires **a fixed address**.
+7. ***Olga Tellis* v. Bombay Municipal Corporation (1985)** — Article 21 includes the **right to livelihood**, so evicted pavement dwellers must first be given alternative accommodation.
+8. **T.H. Marshall** — citizenship as a **status** in which all who hold it are equal; equality implying that the **quality** of rights improves *and* the **quantity** of people holding them grows; the three rights (civil, political, social); and class as "a system of inequality" that **citizenship counters**.
+9. **How different nation-states handle belonging** — France's demand for assimilation in *public* life, and why the turban and head-scarf rule burdened only some ("those whose religions did not demand such practices naturally did not face the same problem"); Israel and Germany's religious or ethnic criteria; and India's choice, which **Partition "only strengthened the resolve"** to make — equal rights **without forcing people to give up** their beliefs, languages or cultural practices.
+10. **Statelessness and the limits of global citizenship** — the stateless often cannot legally work, educate their children or own property, and **"no alternative identity exists for them"**. Global citizenship **supplements** state membership; it never replaces it, because socio-economic inequality "can ultimately only be solved by the governments and people of that particular society".
+
+**Self-check — answer these three without looking:**
+1. What did *Olga Tellis* actually decide, and from which article did it flow?
+2. Why did the French rule on religious symbols burden some citizens more than others?
+3. Why can global citizenship not substitute for national citizenship?
+
+---
+
 ## The Big Idea (Overview)
 ⭐⭐⭐ **THE DEFINITION that governs the whole chapter:**
 > **"CITIZENSHIP IMPLIES FULL AND EQUAL MEMBERSHIP OF A POLITICAL COMMUNITY."**

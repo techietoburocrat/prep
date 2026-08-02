@@ -1,5 +1,30 @@
 # Chapter 5: Rights
 
+## 🎯 Chapter Outcome — what you should walk away with
+
+> **The one thing this chapter exists to teach:** a right is an **entitlement or justified claim**, not a want — and legal recognition gives a right a special status but **is not the basis on which it is claimed**.
+
+**After reading it, here is what you now understand:**
+
+1. **Want ≠ right.** Wanting to choose your own school uniform or stay out late is not a right; society must recognise the claim as **legitimate**.
+2. **The two grounds** — **dignity and self-respect** (livelihood, freedom of expression — universal rights) and **well-being** (education develops our capacity to reason and enables informed choices). And the corollary: anything **injurious** to well-being cannot be a right, which is the argument against a "right" to drugs or smoking.
+3. **Natural rights (17th–18th c.)** — given by nature or God, not conferred by any ruler, **inalienable**, and **three** in number: **life, liberty, property**. Their power lay in the claim that "no state should take away what has been given by the law of nature".
+4. **Why the language shifted to human rights** — natural law "appears unacceptable today", so rights are now guarantees human beings themselves arrive at, held **simply because they are human**.
+5. **Kant's line**: "everything has either a **price** or a **dignity**" — a price has an equivalent and is replaceable; dignity admits of no equivalent. A person may be uneducated, poor, powerless, even dishonest, "yet he remains a human being and deserves some minimum dignity." The two moral arguments: treat others as we would wish to be treated, and **never as a means to our ends**.
+6. **How rights expand** — through the struggles of the excluded, who alter the *interpretation* of existing rights; and through new threats creating new rights (the environment; war and crisis for women and children).
+7. **The state's double obligation** — what it **must do** (provide education; make protective laws; if the right to life is read as quality of life, ensure a clean environment) and what it **must not do** (arrest at will; it must justify itself before a court). Behind both: "the sovereign state exists **not for its own sake but for the sake of the individual**."
+8. **The four kinds of rights** — political, civil liberties, economic and cultural — and the pavement-dweller argument: "for a person living on the pavements, political rights by themselves have **little value**."
+9. **The four responsibilities that come with rights** — the common good and future generations; respecting others' rights ("I cannot use the right to free speech to incite a crowd to kill my neighbour"); balancing conflicting rights (privacy); and vigilance about limitations.
+10. **The national-security test** — the question is whether the person poses an **imminent threat**, and the safeguards that must survive are **legal counsel and the chance to be heard before a magistrate or court**. The warning: governments can become authoritarian and "undermine the very reasons for which governments exist".
+11. **The UDHR** — adopted and proclaimed by the UN **General Assembly** on **10 December 1948** as "a common standard of achievement for all peoples and all nations", with dignity as the foundation of freedom, justice and peace.
+
+**Self-check — answer these three without looking:**
+1. Why is wanting to stay out late not a right, while a livelihood is?
+2. State the state's double obligation, with one example of each side.
+3. What is the test for curtailing liberty on national-security grounds, and which safeguards must remain in place?
+
+---
+
 ## The Big Idea (Overview)
 ⭐⭐ **How widely we invoke rights today:**
 - **"As members of a democratic country we may speak of such rights as THE RIGHT TO VOTE, THE RIGHT TO FORM POLITICAL PARTIES, THE RIGHT TO CONTEST ELECTIONS."**

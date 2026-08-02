@@ -1,5 +1,28 @@
 # Chapter 2: Rights in the Indian Constitution
 
+## 🎯 Chapter Outcome — what you should walk away with
+
+> **The one thing this chapter exists to teach:** a right is only as real as the machinery that enforces it. The chapter's two opening stories carry the whole argument — the Asian Games workers whose right *was* enforced, and Machal Lalung, whose right was never available in practice.
+
+**After reading it, here is what you now understand:**
+
+1. **That the demand for a bill of rights is older than independence** — the Motilal Nehru Committee asked for one in **1928** — and what the six Fundamental Rights cover (E-F-E-R-C-C).
+2. **That equality permits reservation.** Article 16(4) means differential treatment for the backward is *not* a violation of the equality right. This is the constitutional half of an argument you meet again in Political Theory Ch 3 and 4.
+3. **How Article 21 grew.** It began as a narrow protection and was expanded by judicial interpretation into dignity, shelter and livelihood — your first concrete example of the Constitution as a *living* document (Ch 9).
+4. **The five writs (HM-PQC) and what each actually does** — and why Ambedkar called Article 32 "the heart and soul" of the Constitution: a right without a remedy is not a right.
+5. **That the DPSPs are non-justiciable but not decorative.** No court can order their implementation, yet zamindari abolition, bank nationalisation, minimum wages, panchayati raj, the right to education and the mid-day meal scheme all came from them.
+6. **The whole journey of the right to property** — Fundamental Right → *Kesavananda* holds it is **not** basic structure → 44th Amendment 1978 → an ordinary legal right under **Article 300A**. This is the single best worked example of the Parliament–judiciary conflict.
+7. **That the Fundamental Duties inserted by the 42nd Amendment did *not* make rights conditional** — the Constitution says nothing about how the duties are to be enforced, and the enjoyment of rights was never made dependent on performing them.
+
+**Self-check — answer these three without looking:**
+1. Which writ *stops* a lower court from hearing a case beyond its jurisdiction, and which one **quashes** an order it has already made?
+2. Why is reservation not a violation of the right to equality?
+3. The NHRC investigated the Punjab disappearances and the Gujarat riots. What is the one thing it cannot do?
+
+**Where this leads:** Ch 6 gives you the courts that enforce all this, and Ch 9 gives you the amendments that were fought over it.
+
+---
+
 ## The Big Idea
 A constitution is not only about the composition of the organs of government. It is also **a document that sets limits on the power of government and ensures a democratic system in which all persons enjoy certain rights.** **Part III** of the Constitution of India lists the **Fundamental Rights** — and also **mentions the limits on these rights.** Over the past six decades the scope of rights has **changed and, in some respects, expanded** — largely through judicial interpretation.
 

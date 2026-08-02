@@ -1,5 +1,28 @@
 # Chapter 7: Federalism
 
+## 🎯 Chapter Outcome — what you should walk away with
+
+> **The one thing this chapter exists to teach:** India built a deliberately **strong centre** because its framers had watched other federations break apart — and the word "federation" never once appears in the Constitution. Article 1 says "**Union of States**".
+
+**After reading it, here is what you now understand:**
+
+1. **Why federations failed elsewhere** — the USSR's over-centralisation and Russian domination, the West Indies Federation's weak centre (1958, dissolved 1962), Nigeria's regional, religious and oil-revenue splits. The chain the chapter draws is **domination → resentment → secession → civil war**.
+2. **The four key ideas of federalism** — two levels of polity, two identities, a supreme written constitution, an independent judiciary to umpire — and the one place India departs: **single citizenship**, not dual.
+3. **The three Lists, residuary powers to the Union** (which is why cyber law is central), and centralised finance — States carry "immense responsibilities" with "meagre revenue".
+4. **The seven strong-centre provisions**, and why each counts: the very existence of States, emergency powers, financial dependence, the Governor's power to reserve bills, legislation on the State List via a Rajya Sabha resolution plus Article 257, the **All-India Services** (the Centre alone disciplines them), and Articles 33–34.
+5. **The three phases of Centre–State relations** — Congress dominance through the 1950s–60s, the autonomy demands once opposition parties won States from the mid-1960s, and **mature federalism under coalitions from the 1990s**.
+6. **The four kinds of autonomy demand** — over powers, finance, administration and culture/language — with the States and parties attached to each (Tamil Nadu, Punjab, West Bengal; DMK, Akali Dal, CPI-M; the 1977 Left Front document).
+7. **Article 356 fully** — its exact trigger, Parliamentary ratification, the three-year limit, its sparing use until 1967 and misuse thereafter (Kerala 1959, dismissals without any test of majority), and that **the Supreme Court can examine the validity of its imposition**.
+8. **Article 370's four residual differences** and the 2019 reorganisation into two Union Territories from 31 October 2019.
+9. **The verdict**: "national unity cannot be built by streamlining differences" — federalism as a rainbow.
+
+**Self-check — answer these three without looking:**
+1. A State's boundary is to be altered. Is that State's **consent** required?
+2. Why do the All-India Services count as a strong-centre provision, when States supervise them day to day?
+3. Name the two water disputes the chapter cites, and say why it treats water as more serious than boundary disputes.
+
+---
+
 ## The Big Idea
 **The chapter opens with two maps — India in 1947 and India in 2017 — and asks you to notice how dramatically they differ.** *"Boundaries of States have changed, names of States have changed, and the number of States has changed."*
 

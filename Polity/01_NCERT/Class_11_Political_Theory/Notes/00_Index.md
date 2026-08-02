@@ -20,6 +20,21 @@ The PDFs in this folder are **correctly named** — the current edition's table 
 | 7 | [Nationalism](07_Nationalism.md) | The nation as an **imagined community**; five assumptions; self-determination reinterpreted; **Tagore's critique** |
 | 8 | [Secularism](08_Secularism.md) | Inter- vs intra-religious domination; **mutual exclusion vs principled distance**; Nehru vs Ataturk; five criticisms answered |
 
+## 🎯 Chapter outcomes at a glance
+
+Every chapter note now **opens with a "Chapter Outcome" block** — the one thing that chapter exists to teach, a numbered list of what you should understand after reading it, and three self-check questions to answer without looking. Read it *before* the chapter to know what you are looking for, and *after* to confirm you got it.
+
+| # | The one thing this chapter exists to teach |
+|---|---|
+| 1 | Politics isn't what politicians do — it arises **wherever differing visions must produce collective decisions** |
+| 2 | Freedom has **two halves**: absence of constraints, *and* the conditions to actually develop |
+| 3 | **Equal respect ≠ identical treatment** — treatment must not be pre-determined by birth or circumstance |
+| 4 | Justice is giving each their **due** — and "due" shifted from your *station* to your *humanity* |
+| 5 | A right is a **justified claim**, not a want — and law recognises rights, it doesn't create them |
+| 6 | Citizenship is full and **equal** membership — so **equal rights need not mean uniform policies** |
+| 7 | A nation is an **imagined community**, which is why it must be imagined politically, not culturally |
+| 8 | Secularism opposes domination **between** religions *and* **within** them — hence **principled distance** |
+
 ## How the chapters connect (the architecture of the book)
 
 1. **Chapter 1** is the method chapter: what political theory *does*, and why political concepts admit **many definitions** while mathematical ones do not.
