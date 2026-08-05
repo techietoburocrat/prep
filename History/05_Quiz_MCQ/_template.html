@@ -1,0 +1,367 @@
+<title>__TITLE__</title>
+<style>
+:root{
+  --ink:#1A1E26; --paper:#F1F4F8; --surface:#FFFFFF; --line:#D4DAE3; --muted:#596372;
+  --good:#1F7A4C; --good-soft:#E2F1E9; --bad:#B23A34; --bad-soft:#FAE6E4;
+  --accent:#27467B; --accent-ink:#FFFFFF; --accent-soft:#E3EAF5;
+  --radius:10px;
+  --serif:Georgia,'Iowan Old Style','Palatino Linotype','Book Antiqua',serif;
+  --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --ink:#E5EAF2; --paper:#0F131A; --surface:#181D26; --line:#272F3B; --muted:#95A0B1;
+    --good:#3FBE7C; --good-soft:rgba(63,190,124,0.14); --bad:#E2665F; --bad-soft:rgba(226,102,95,0.14);
+    --accent:#84AEE2; --accent-ink:#0E1520; --accent-soft:rgba(132,174,226,0.18);
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#E5EAF2; --paper:#0F131A; --surface:#181D26; --line:#272F3B; --muted:#95A0B1;
+  --good:#3FBE7C; --good-soft:rgba(63,190,124,0.14); --bad:#E2665F; --bad-soft:rgba(226,102,95,0.14);
+  --accent:#84AEE2; --accent-ink:#0E1520; --accent-soft:rgba(132,174,226,0.18);
+}
+:root[data-theme="light"]{
+  --ink:#1A1E26; --paper:#F1F4F8; --surface:#FFFFFF; --line:#D4DAE3; --muted:#596372;
+  --good:#1F7A4C; --good-soft:#E2F1E9; --bad:#B23A34; --bad-soft:#FAE6E4;
+  --accent:#27467B; --accent-ink:#FFFFFF; --accent-soft:#E3EAF5;
+}
+*{box-sizing:border-box;}
+html,body{height:100%;}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;}
+.app{min-height:100dvh;display:flex;flex-direction:column;max-width:760px;margin:0 auto;padding:20px 20px 24px;}
+.screen{flex:1;display:flex;flex-direction:column;min-height:0;}
+.eyebrow{font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin:0 0 6px;}
+.menu-screen{gap:16px;justify-content:flex-start;padding-top:10px;}
+.menu-screen h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,36px);margin:0;text-wrap:balance;}
+.lede{color:var(--muted);line-height:1.55;max-width:64ch;margin:0;}
+.how{display:flex;flex-wrap:wrap;gap:8px 18px;margin:2px 0 4px;padding:0;list-style:none;}
+.how li{font-size:12.5px;color:var(--muted);display:flex;align-items:center;gap:6px;}
+.how li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none;}
+.menu-label{font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);margin:8px 0 -2px;}
+.lesson-list{display:flex;flex-direction:column;gap:10px;}
+.lesson-card{display:flex;align-items:center;gap:14px;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:15px 18px;font-family:var(--sans);cursor:pointer;width:100%;color:var(--ink);}
+.lesson-card:hover{border-color:var(--accent);}
+.lesson-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+.lesson-card.combined{background:var(--accent-soft);border-color:var(--accent);}
+.lesson-num{flex:none;width:38px;height:38px;border-radius:9px;background:var(--accent-soft);color:var(--accent);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:16px;font-weight:700;}
+.lesson-card.combined .lesson-num{background:var(--accent);color:var(--accent-ink);}
+.lesson-body{flex:1;min-width:0;}
+.lesson-title{font-family:var(--serif);font-size:16.5px;line-height:1.25;margin:0 0 2px;display:block;}
+.lesson-meta{font-size:12.5px;color:var(--muted);display:block;}
+.lesson-go{flex:none;color:var(--muted);font-size:20px;}
+.lesson-card:hover .lesson-go{color:var(--accent);}
+.quiz-screen{gap:14px;display:none;}
+.bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.chapter-tag{font-size:11px;text-transform:uppercase;letter-spacing:0.04em;background:var(--accent-soft);color:var(--accent);padding:5px 10px;border-radius:999px;white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis;}
+.progress-track{flex:1;min-width:60px;height:6px;background:var(--line);border-radius:999px;overflow:hidden;}
+.progress-fill{height:100%;background:var(--accent);width:0%;}
+.counter{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap;}
+.timer{font-family:var(--serif);font-size:15px;font-variant-numeric:tabular-nums;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:4px 10px;white-space:nowrap;}
+.card{flex:1;min-height:0;overflow-y:auto;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;display:flex;flex-direction:column;gap:15px;}
+.qblock{display:flex;flex-direction:column;gap:9px;}
+.question{font-family:var(--serif);font-size:clamp(17px,2.4vw,20px);line-height:1.45;margin:0;white-space:pre-line;}
+.stmt-head{font-size:12px;letter-spacing:0.05em;text-transform:uppercase;color:var(--muted);margin:0;padding-left:26px;}
+.stmt-list{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px;}
+.stmt-list li{display:flex;gap:10px;font-size:14.8px;line-height:1.5;}
+.stmt-list li .sn{flex:none;min-width:16px;color:var(--muted);font-variant-numeric:tabular-nums;}
+.stmt-list li .st{flex:1;min-width:0;}
+.stmt-list li .sr{color:var(--muted);}
+.ask{font-family:var(--serif);font-size:15.5px;line-height:1.45;margin:2px 0 0;font-style:italic;}
+.options{display:flex;flex-direction:column;gap:9px;}
+.option{display:flex;align-items:flex-start;gap:11px;text-align:left;background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:11px 13px;font-family:var(--sans);font-size:14.5px;color:var(--ink);cursor:pointer;line-height:1.4;width:100%;}
+.option:hover:not(:disabled){border-color:var(--accent);}
+.option:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+.option:disabled{cursor:default;}
+.opt-letter{flex:none;width:23px;height:23px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:var(--muted);}
+.option.correct{background:var(--good-soft);border-color:var(--good);}
+.option.correct .opt-letter{background:var(--good);border-color:var(--good);color:#fff;}
+.option.incorrect{background:var(--bad-soft);border-color:var(--bad);}
+.option.incorrect .opt-letter{background:var(--bad);border-color:var(--bad);color:#fff;}
+.feedback{font-size:13.5px;line-height:1.6;margin:0;padding:12px 14px;border-radius:8px;background:var(--paper);border-left:3px solid var(--accent);}
+.feedback .verdict{font-family:var(--serif);font-weight:700;font-style:italic;}
+.feedback.good{border-left-color:var(--good);}
+.feedback.good .verdict{color:var(--good);}
+.feedback.bad{border-left-color:var(--bad);}
+.feedback.bad .verdict{color:var(--bad);}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.hint{font-size:12px;color:var(--muted);text-align:center;flex:1;}
+.btn-primary{background:var(--accent);color:var(--accent-ink);border:none;border-radius:999px;padding:12px 24px;font-size:14.5px;font-weight:600;font-family:var(--sans);cursor:pointer;}
+.btn-primary:hover{filter:brightness(1.07);}
+.btn-primary:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+.btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:11px 20px;font-size:14px;font-family:var(--sans);cursor:pointer;}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
+.btn-ghost:disabled{opacity:0.35;cursor:not-allowed;}
+.btn-ghost:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+.result-screen{gap:18px;justify-content:center;display:none;}
+.result-screen h1{font-family:var(--serif);font-size:clamp(24px,4.5vw,32px);margin:0;}
+.result-sub{color:var(--muted);margin:-8px 0 0;font-size:14px;}
+.score-row{display:flex;gap:22px;flex-wrap:wrap;}
+.score-block{display:flex;flex-direction:column;gap:2px;}
+.score-num{font-family:var(--serif);font-size:30px;font-variant-numeric:tabular-nums;}
+.score-label{font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);}
+.breakdown-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px;max-height:280px;overflow-y:auto;}
+.breakdown{width:100%;border-collapse:collapse;font-size:13.5px;}
+.breakdown th,.breakdown td{padding:8px 12px;text-align:left;border-bottom:1px solid var(--line);}
+.breakdown th{color:var(--muted);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:0.05em;position:sticky;top:0;background:var(--surface);}
+.breakdown td.num{font-variant-numeric:tabular-nums;text-align:right;}
+.breakdown tr:last-child td{border-bottom:none;}
+.bd-bar{height:5px;border-radius:3px;background:var(--line);margin-top:4px;overflow:hidden;}
+.bd-bar span{display:block;height:100%;background:var(--accent);}
+.result-actions{display:flex;gap:10px;flex-wrap:wrap;}
+[hidden]{display:none !important;}
+.is-active{display:flex !important;}
+@media (prefers-reduced-motion: no-preference){
+  .option,.lesson-card{transition:background 0.15s ease,border-color 0.15s ease;}
+  .progress-fill{transition:width 0.25s ease;}
+}
+@media (max-width:480px){
+  .app{padding:16px 14px 18px;}
+  .nav{flex-wrap:wrap;}
+  .hint{order:3;width:100%;}
+  .card{padding:18px 16px;}
+}
+</style>
+
+<div class="app">
+  <section id="menu" class="screen menu-screen is-active">
+    <p class="eyebrow" id="courseEyebrow"></p>
+    <h1 id="courseTitle"></h1>
+    <p class="lede" id="courseLede"></p>
+    <ul class="how">
+      <li>Prelims-pattern: statements, pairs, assertion–reason</li>
+      <li>Options balanced — no length giveaways</li>
+      <li>Detailed explanation on every answer</li>
+      <li>Reshuffles each attempt · stopwatch</li>
+    </ul>
+    <p class="menu-label">Choose a lesson — or take the full syllabus</p>
+    <div class="lesson-list" id="lessonList"></div>
+  </section>
+
+  <section id="quiz" class="screen quiz-screen">
+    <header class="bar">
+      <span id="chapterTag" class="chapter-tag"></span>
+      <div class="progress-track"><div id="progressFill" class="progress-fill"></div></div>
+      <span id="counter" class="counter"></span>
+      <span id="timer" class="timer">00:00</span>
+    </header>
+    <main class="card">
+      <div id="qblock" class="qblock"></div>
+      <div id="options" class="options"></div>
+      <p id="feedback" class="feedback" hidden></p>
+    </main>
+    <footer class="nav">
+      <button id="prevBtn" class="btn-ghost" type="button">← Prev</button>
+      <span class="hint">Press 1–4 to answer · → next · ← prev</span>
+      <button id="nextBtn" class="btn-primary" type="button">Next →</button>
+    </footer>
+  </section>
+
+  <section id="result" class="screen result-screen">
+    <p class="eyebrow">Scorecard</p>
+    <h1 id="resultTitle">Quiz complete</h1>
+    <p class="result-sub" id="resultScope"></p>
+    <div class="score-row">
+      <div class="score-block"><span id="scoreText" class="score-num"></span><span class="score-label">Correct</span></div>
+      <div class="score-block"><span id="scorePct" class="score-num"></span><span class="score-label">Accuracy</span></div>
+      <div class="score-block"><span id="timeText" class="score-num"></span><span class="score-label">Time</span></div>
+    </div>
+    <div class="breakdown-wrap">
+      <table class="breakdown">
+        <thead><tr><th>Lesson</th><th>Score</th></tr></thead>
+        <tbody id="breakdownBody"></tbody>
+      </table>
+    </div>
+    <div class="result-actions">
+      <button id="reviewBtn" class="btn-ghost" type="button">Review answers</button>
+      <button id="restartBtn" class="btn-primary" type="button">Retake — new shuffle</button>
+      <button id="menuBtn" class="btn-ghost" type="button">↤ Lesson menu</button>
+    </div>
+  </section>
+</div>
+
+<script>
+/* ==========================================================================
+   DATA — generated from Polity/05_Quiz_MCQ/data/<class>.js by build.mjs
+   Question shape:
+     c    chapter tag (must match an entry in CHAPTERS)
+     q    stem
+     head optional column header for a "pairs" block, e.g. "Provision : Purpose"
+     L    optional array of numbered lines (statements, or "Left : Right" pairs)
+     ask  optional closing question line, e.g. "Which of the above are correct?"
+     o    four options
+     a    index of the correct option
+     e    explanation shown after answering
+   ========================================================================== */
+/*__DATA__*/
+
+/* ---------- Engine (identical across classes) ---------- */
+function shuffle(arr){const a=arr.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+
+/* Canonical Prelims answer-code sets. For an S-question the statements are
+   reshuffled on every attempt and the correct code is worked out from which
+   ones landed where — so neither the option nor the position of the false
+   statement can be memorised. */
+const SET_CODE3=["1 and 2 only","2 and 3 only","1 and 3 only","1, 2 and 3"];
+const SET_CODE2=["1 only","2 only","Both 1 and 2","Neither 1 nor 2"];
+const SET_COUNT=["Only one","Only two","All three","None"];
+const SET_COUNT4=["Only one","Only two","Only three","All four"];
+function buildCode(mode,n,trueIdx){
+  const c=trueIdx.length;
+  if(mode==='count'){
+    const set=n===4?SET_COUNT4:SET_COUNT;
+    const text=c===0?'None':c===1?'Only one':c===2?'Only two':c===3?(n===3?'All three':'Only three'):'All four';
+    return {set:set,text:text};
+  }
+  if(n===2){
+    const text=c===2?'Both 1 and 2':c===0?'Neither 1 nor 2':(trueIdx[0]===1?'1 only':'2 only');
+    return {set:SET_CODE2,text:text};
+  }
+  const text=c===3?'1, 2 and 3':trueIdx[0]+' and '+trueIdx[1]+' only';
+  return {set:SET_CODE3,text:text};
+}
+function joinList(a){return a.length===1?String(a[0]):a.slice(0,-1).join(', ')+' and '+a[a.length-1];}
+function verdictLine(n,trueIdx,unit){
+  const U=unit==='pair'?'pair':'statement', Uc=U.charAt(0).toUpperCase()+U.slice(1);
+  const all=[];for(let i=1;i<=n;i++)all.push(i);
+  const f=all.filter(function(i){return trueIdx.indexOf(i)<0;});
+  if(f.length===0)return 'All the '+U+'s here are correct.';
+  if(trueIdx.length===0)return 'None of the '+U+'s here is correct.';
+  return Uc+(trueIdx.length===1?' ':'s ')+joinList(trueIdx)+(trueIdx.length===1?' is':' are')+' correct; '+
+         U+(f.length===1?' ':'s ')+joinList(f)+(f.length===1?' is not.':' are not.');
+}
+function buildSession(pool){return shuffle(pool).map(function(item){
+  let lines=item.L,options,correctText,auto='';
+  if(item.S){
+    const st=shuffle(item.S), n=st.length, trueIdx=[];
+    lines=st.map(function(s){return s[0];});
+    st.forEach(function(s,i){if(s[1])trueIdx.push(i+1);});
+    const built=buildCode(item.mode||'code',n,trueIdx);
+    options=built.set.slice(); correctText=built.text;
+    auto=verdictLine(n,trueIdx,item.unit)+' ';
+  } else { options=item.o.slice(); correctText=item.o[item.a]; }
+  const order=shuffle(options.map(function(text,i){return {text:text,i:i};}));
+  return {chapter:item.c,question:item.q,head:item.head,lines:lines,ask:item.ask,
+          options:order.map(function(o){return o.text;}),
+          correct:order.findIndex(function(o){return o.text===correctText;}),
+          explain:auto+item.e};
+});}
+let session=[],current=0,answers=[],startTime=null,timerInterval=null,reviewMode=false,activeScope="";
+const el=id=>document.getElementById(id);
+const screens={menu:el('menu'),quiz:el('quiz'),result:el('result')};
+function show(name){Object.keys(screens).forEach(k=>screens[k].classList.toggle('is-active',k===name));}
+el('courseEyebrow').textContent=COURSE.eyebrow; el('courseTitle').textContent=COURSE.title; el('courseLede').textContent=COURSE.lede;
+function chapterCount(name){return QUESTIONS.filter(q=>q.c===name).length;}
+function buildMenu(){
+  const list=el('lessonList'); list.innerHTML='';
+  const combined=document.createElement('button');
+  combined.className='lesson-card combined'; combined.type='button';
+  combined.innerHTML='<span class="lesson-num">★</span><span class="lesson-body"><span class="lesson-title">Full Syllabus — Combined</span><span class="lesson-meta">All '+CHAPTERS.length+' lessons · '+QUESTIONS.length+' questions, shuffled</span></span><span class="lesson-go">→</span>';
+  combined.addEventListener('click',()=>startQuiz(null)); list.appendChild(combined);
+  CHAPTERS.forEach((name,idx)=>{
+    const shortTitle=name.replace(/^Ch\d+ · /,'');
+    const btn=document.createElement('button'); btn.className='lesson-card'; btn.type='button';
+    const num=document.createElement('span'); num.className='lesson-num'; num.textContent=String(idx+1);
+    const body=document.createElement('span'); body.className='lesson-body';
+    const t=document.createElement('span'); t.className='lesson-title'; t.textContent=shortTitle;
+    const m=document.createElement('span'); m.className='lesson-meta'; m.textContent=chapterCount(name)+' questions';
+    body.appendChild(t); body.appendChild(m);
+    const go=document.createElement('span'); go.className='lesson-go'; go.textContent='→';
+    btn.appendChild(num); btn.appendChild(body); btn.appendChild(go);
+    btn.addEventListener('click',()=>startQuiz(name)); list.appendChild(btn);
+  });
+}
+function formatTime(sec){const m=Math.floor(sec/60).toString().padStart(2,'0');const s=Math.floor(sec%60).toString().padStart(2,'0');return m+':'+s;}
+function startTimer(){startTime=Date.now();clearInterval(timerInterval);timerInterval=setInterval(()=>{el('timer').textContent=formatTime((Date.now()-startTime)/1000);},1000);}
+function stopTimer(){clearInterval(timerInterval);}
+function startQuiz(chapter){
+  const pool=chapter?QUESTIONS.filter(q=>q.c===chapter):QUESTIONS;
+  activeScope=chapter?chapter.replace(/^Ch\d+ · /,''):"Full Syllabus";
+  session=buildSession(pool); answers=new Array(session.length).fill(null); current=0; reviewMode=false;
+  show('quiz'); el('timer').textContent='00:00'; startTimer(); renderQuestion();
+}
+function renderStem(item){
+  const box=el('qblock'); box.innerHTML='';
+  const stem=document.createElement('p'); stem.className='question'; stem.textContent=item.question; box.appendChild(stem);
+  if(item.head){const h=document.createElement('p'); h.className='stmt-head'; h.textContent=item.head; box.appendChild(h);}
+  if(item.lines&&item.lines.length){
+    const ol=document.createElement('ul'); ol.className='stmt-list';
+    item.lines.forEach((line,i)=>{
+      const li=document.createElement('li');
+      const n=document.createElement('span'); n.className='sn'; n.textContent=(i+1)+'.';
+      const t=document.createElement('span'); t.className='st';
+      const split=line.indexOf(' : ');
+      if(split>-1){
+        t.textContent=line.slice(0,split);
+        const r=document.createElement('span'); r.className='sr'; r.textContent=' — '+line.slice(split+3);
+        t.appendChild(r);
+      } else { t.textContent=line; }
+      li.appendChild(n); li.appendChild(t); ol.appendChild(li);
+    });
+    box.appendChild(ol);
+  }
+  if(item.ask){const a=document.createElement('p'); a.className='ask'; a.textContent=item.ask; box.appendChild(a);}
+}
+function renderQuestion(){
+  const item=session[current]; const chosen=answers[current]; const reveal=chosen!==null||reviewMode;
+  el('chapterTag').textContent=item.chapter; el('counter').textContent=(current+1)+' / '+session.length;
+  el('progressFill').style.width=((current+1)/session.length*100)+'%';
+  renderStem(item);
+  const optsBox=el('options'); optsBox.innerHTML=''; const letters=['A','B','C','D','E'];
+  item.options.forEach((opt,i)=>{
+    const btn=document.createElement('button'); btn.className='option'; btn.type='button';
+    const l=document.createElement('span'); l.className='opt-letter'; l.textContent=letters[i];
+    const t=document.createElement('span'); t.className='opt-text'; t.textContent=opt;
+    btn.appendChild(l); btn.appendChild(t);
+    if(reveal){btn.disabled=true; if(i===item.correct)btn.classList.add('correct'); else if(i===chosen)btn.classList.add('incorrect');}
+    btn.addEventListener('click',()=>selectOption(i)); optsBox.appendChild(btn);
+  });
+  const fb=el('feedback');
+  if(reveal){
+    fb.hidden=false; let verdict,cls;
+    if(chosen===null){verdict='Skipped.';cls='bad';} else if(chosen===item.correct){verdict='Correct.';cls='good';} else {verdict='Not quite.';cls='bad';}
+    fb.className='feedback '+cls;
+    fb.innerHTML=''; const v=document.createElement('span'); v.className='verdict'; v.textContent=verdict;
+    fb.appendChild(v); fb.appendChild(document.createTextNode(' '+item.explain));
+  } else { fb.hidden=true; }
+  el('prevBtn').disabled=current===0;
+  const nextBtn=el('nextBtn');
+  nextBtn.textContent = reviewMode ? (current===session.length-1?'Back to results':'Next →') : (current===session.length-1?'Finish':'Next →');
+  el('options').scrollIntoView&&el('qblock').parentElement.scrollTo({top:0});
+}
+function selectOption(i){ if(reviewMode||answers[current]!==null)return; answers[current]=i; renderQuestion(); }
+function finishQuiz(){
+  stopTimer(); const elapsed=(Date.now()-startTime)/1000; let correctCount=0; const stats={};
+  session.forEach((item,i)=>{ if(!stats[item.chapter])stats[item.chapter]={correct:0,total:0}; stats[item.chapter].total++; if(answers[i]===item.correct){correctCount++;stats[item.chapter].correct++;} });
+  show('result');
+  el('resultScope').textContent=activeScope+' · '+session.length+' questions';
+  el('scoreText').textContent=correctCount+' / '+session.length; el('timeText').textContent=formatTime(elapsed);
+  el('scorePct').textContent=Math.round(correctCount/session.length*100)+'%';
+  const body=el('breakdownBody'); body.innerHTML='';
+  CHAPTERS.filter(c=>stats[c]).forEach(c=>{
+    const s=stats[c]; const row=document.createElement('tr');
+    const td1=document.createElement('td'); td1.textContent=c.replace(/^Ch\d+ · /,'');
+    const p=Math.round(s.correct/s.total*100);
+    const bar=document.createElement('div'); bar.className='bd-bar';
+    const fill=document.createElement('span'); fill.style.width=p+'%'; bar.appendChild(fill); td1.appendChild(bar);
+    const td2=document.createElement('td'); td2.className='num'; td2.textContent=s.correct+' / '+s.total;
+    row.appendChild(td1); row.appendChild(td2); body.appendChild(row);
+  });
+}
+function enterReview(){reviewMode=true;current=0;show('quiz');renderQuestion();}
+function exitReviewToResult(){reviewMode=false;show('result');}
+el('prevBtn').addEventListener('click',()=>{if(current>0){current--;renderQuestion();}});
+el('nextBtn').addEventListener('click',()=>{
+  if(reviewMode){ if(current===session.length-1)exitReviewToResult(); else {current++;renderQuestion();} }
+  else { if(current===session.length-1)finishQuiz(); else {current++;renderQuestion();} }
+});
+el('reviewBtn').addEventListener('click',enterReview);
+el('restartBtn').addEventListener('click',()=>{ const chapter=activeScope==="Full Syllabus"?null:CHAPTERS.find(c=>c.replace(/^Ch\d+ · /,'')===activeScope); startQuiz(chapter); });
+el('menuBtn').addEventListener('click',()=>{stopTimer();show('menu');});
+document.addEventListener('keydown',(e)=>{
+  if(!screens.quiz.classList.contains('is-active'))return;
+  if(['1','2','3','4','5'].includes(e.key)&&!reviewMode){selectOption(parseInt(e.key,10)-1);}
+  else if(e.key==='ArrowRight'||e.key==='Enter'){el('nextBtn').click();}
+  else if(e.key==='ArrowLeft'){el('prevBtn').click();}
+});
+buildMenu();
+</script>

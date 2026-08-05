@@ -1,0 +1,4 @@
+# Claude chat transcripts + memory backup.
+# Synced to the cloud by OneDrive and pinned to stay on local disk.
+# Kept out of git: ~80MB and grows with every session.
+.claude-archive/

@@ -1,0 +1,1461 @@
+<title>Class VI History Quiz — Our Pasts I</title>
+<style>
+:root{
+  --ink:#1A1E26; --paper:#F1F4F8; --surface:#FFFFFF; --line:#D4DAE3; --muted:#596372;
+  --good:#1F7A4C; --good-soft:#E2F1E9; --bad:#B23A34; --bad-soft:#FAE6E4;
+  --accent:#27467B; --accent-ink:#FFFFFF; --accent-soft:#E3EAF5;
+  --radius:10px;
+  --serif:Georgia,'Iowan Old Style','Palatino Linotype','Book Antiqua',serif;
+  --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --ink:#E5EAF2; --paper:#0F131A; --surface:#181D26; --line:#272F3B; --muted:#95A0B1;
+    --good:#3FBE7C; --good-soft:rgba(63,190,124,0.14); --bad:#E2665F; --bad-soft:rgba(226,102,95,0.14);
+    --accent:#84AEE2; --accent-ink:#0E1520; --accent-soft:rgba(132,174,226,0.18);
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#E5EAF2; --paper:#0F131A; --surface:#181D26; --line:#272F3B; --muted:#95A0B1;
+  --good:#3FBE7C; --good-soft:rgba(63,190,124,0.14); --bad:#E2665F; --bad-soft:rgba(226,102,95,0.14);
+  --accent:#84AEE2; --accent-ink:#0E1520; --accent-soft:rgba(132,174,226,0.18);
+}
+:root[data-theme="light"]{
+  --ink:#1A1E26; --paper:#F1F4F8; --surface:#FFFFFF; --line:#D4DAE3; --muted:#596372;
+  --good:#1F7A4C; --good-soft:#E2F1E9; --bad:#B23A34; --bad-soft:#FAE6E4;
+  --accent:#27467B; --accent-ink:#FFFFFF; --accent-soft:#E3EAF5;
+}
+*{box-sizing:border-box;}
+html,body{height:100%;}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;}
+.app{min-height:100dvh;display:flex;flex-direction:column;max-width:760px;margin:0 auto;padding:20px 20px 24px;}
+.screen{flex:1;display:flex;flex-direction:column;min-height:0;}
+.eyebrow{font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin:0 0 6px;}
+.menu-screen{gap:16px;justify-content:flex-start;padding-top:10px;}
+.menu-screen h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,36px);margin:0;text-wrap:balance;}
+.lede{color:var(--muted);line-height:1.55;max-width:64ch;margin:0;}
+.how{display:flex;flex-wrap:wrap;gap:8px 18px;margin:2px 0 4px;padding:0;list-style:none;}
+.how li{font-size:12.5px;color:var(--muted);display:flex;align-items:center;gap:6px;}
+.how li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none;}
+.menu-label{font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);margin:8px 0 -2px;}
+.lesson-list{display:flex;flex-direction:column;gap:10px;}
+.lesson-card{display:flex;align-items:center;gap:14px;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:15px 18px;font-family:var(--sans);cursor:pointer;width:100%;color:var(--ink);}
+.lesson-card:hover{border-color:var(--accent);}
+.lesson-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+.lesson-card.combined{background:var(--accent-soft);border-color:var(--accent);}
+.lesson-num{flex:none;width:38px;height:38px;border-radius:9px;background:var(--accent-soft);color:var(--accent);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:16px;font-weight:700;}
+.lesson-card.combined .lesson-num{background:var(--accent);color:var(--accent-ink);}
+.lesson-body{flex:1;min-width:0;}
+.lesson-title{font-family:var(--serif);font-size:16.5px;line-height:1.25;margin:0 0 2px;display:block;}
+.lesson-meta{font-size:12.5px;color:var(--muted);display:block;}
+.lesson-go{flex:none;color:var(--muted);font-size:20px;}
+.lesson-card:hover .lesson-go{color:var(--accent);}
+.quiz-screen{gap:14px;display:none;}
+.bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.chapter-tag{font-size:11px;text-transform:uppercase;letter-spacing:0.04em;background:var(--accent-soft);color:var(--accent);padding:5px 10px;border-radius:999px;white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis;}
+.progress-track{flex:1;min-width:60px;height:6px;background:var(--line);border-radius:999px;overflow:hidden;}
+.progress-fill{height:100%;background:var(--accent);width:0%;}
+.counter{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap;}
+.timer{font-family:var(--serif);font-size:15px;font-variant-numeric:tabular-nums;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:4px 10px;white-space:nowrap;}
+.card{flex:1;min-height:0;overflow-y:auto;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;display:flex;flex-direction:column;gap:15px;}
+.qblock{display:flex;flex-direction:column;gap:9px;}
+.question{font-family:var(--serif);font-size:clamp(17px,2.4vw,20px);line-height:1.45;margin:0;white-space:pre-line;}
+.stmt-head{font-size:12px;letter-spacing:0.05em;text-transform:uppercase;color:var(--muted);margin:0;padding-left:26px;}
+.stmt-list{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px;}
+.stmt-list li{display:flex;gap:10px;font-size:14.8px;line-height:1.5;}
+.stmt-list li .sn{flex:none;min-width:16px;color:var(--muted);font-variant-numeric:tabular-nums;}
+.stmt-list li .st{flex:1;min-width:0;}
+.stmt-list li .sr{color:var(--muted);}
+.ask{font-family:var(--serif);font-size:15.5px;line-height:1.45;margin:2px 0 0;font-style:italic;}
+.options{display:flex;flex-direction:column;gap:9px;}
+.option{display:flex;align-items:flex-start;gap:11px;text-align:left;background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:11px 13px;font-family:var(--sans);font-size:14.5px;color:var(--ink);cursor:pointer;line-height:1.4;width:100%;}
+.option:hover:not(:disabled){border-color:var(--accent);}
+.option:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+.option:disabled{cursor:default;}
+.opt-letter{flex:none;width:23px;height:23px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:var(--muted);}
+.option.correct{background:var(--good-soft);border-color:var(--good);}
+.option.correct .opt-letter{background:var(--good);border-color:var(--good);color:#fff;}
+.option.incorrect{background:var(--bad-soft);border-color:var(--bad);}
+.option.incorrect .opt-letter{background:var(--bad);border-color:var(--bad);color:#fff;}
+.feedback{font-size:13.5px;line-height:1.6;margin:0;padding:12px 14px;border-radius:8px;background:var(--paper);border-left:3px solid var(--accent);}
+.feedback .verdict{font-family:var(--serif);font-weight:700;font-style:italic;}
+.feedback.good{border-left-color:var(--good);}
+.feedback.good .verdict{color:var(--good);}
+.feedback.bad{border-left-color:var(--bad);}
+.feedback.bad .verdict{color:var(--bad);}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.hint{font-size:12px;color:var(--muted);text-align:center;flex:1;}
+.btn-primary{background:var(--accent);color:var(--accent-ink);border:none;border-radius:999px;padding:12px 24px;font-size:14.5px;font-weight:600;font-family:var(--sans);cursor:pointer;}
+.btn-primary:hover{filter:brightness(1.07);}
+.btn-primary:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+.btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:11px 20px;font-size:14px;font-family:var(--sans);cursor:pointer;}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
+.btn-ghost:disabled{opacity:0.35;cursor:not-allowed;}
+.btn-ghost:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+.result-screen{gap:18px;justify-content:center;display:none;}
+.result-screen h1{font-family:var(--serif);font-size:clamp(24px,4.5vw,32px);margin:0;}
+.result-sub{color:var(--muted);margin:-8px 0 0;font-size:14px;}
+.score-row{display:flex;gap:22px;flex-wrap:wrap;}
+.score-block{display:flex;flex-direction:column;gap:2px;}
+.score-num{font-family:var(--serif);font-size:30px;font-variant-numeric:tabular-nums;}
+.score-label{font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);}
+.breakdown-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px;max-height:280px;overflow-y:auto;}
+.breakdown{width:100%;border-collapse:collapse;font-size:13.5px;}
+.breakdown th,.breakdown td{padding:8px 12px;text-align:left;border-bottom:1px solid var(--line);}
+.breakdown th{color:var(--muted);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:0.05em;position:sticky;top:0;background:var(--surface);}
+.breakdown td.num{font-variant-numeric:tabular-nums;text-align:right;}
+.breakdown tr:last-child td{border-bottom:none;}
+.bd-bar{height:5px;border-radius:3px;background:var(--line);margin-top:4px;overflow:hidden;}
+.bd-bar span{display:block;height:100%;background:var(--accent);}
+.result-actions{display:flex;gap:10px;flex-wrap:wrap;}
+[hidden]{display:none !important;}
+.is-active{display:flex !important;}
+@media (prefers-reduced-motion: no-preference){
+  .option,.lesson-card{transition:background 0.15s ease,border-color 0.15s ease;}
+  .progress-fill{transition:width 0.25s ease;}
+}
+@media (max-width:480px){
+  .app{padding:16px 14px 18px;}
+  .nav{flex-wrap:wrap;}
+  .hint{order:3;width:100%;}
+  .card{padding:18px 16px;}
+}
+</style>
+
+<div class="app">
+  <section id="menu" class="screen menu-screen is-active">
+    <p class="eyebrow" id="courseEyebrow"></p>
+    <h1 id="courseTitle"></h1>
+    <p class="lede" id="courseLede"></p>
+    <ul class="how">
+      <li>Prelims-pattern: statements, pairs, assertion–reason</li>
+      <li>Options balanced — no length giveaways</li>
+      <li>Detailed explanation on every answer</li>
+      <li>Reshuffles each attempt · stopwatch</li>
+    </ul>
+    <p class="menu-label">Choose a lesson — or take the full syllabus</p>
+    <div class="lesson-list" id="lessonList"></div>
+  </section>
+
+  <section id="quiz" class="screen quiz-screen">
+    <header class="bar">
+      <span id="chapterTag" class="chapter-tag"></span>
+      <div class="progress-track"><div id="progressFill" class="progress-fill"></div></div>
+      <span id="counter" class="counter"></span>
+      <span id="timer" class="timer">00:00</span>
+    </header>
+    <main class="card">
+      <div id="qblock" class="qblock"></div>
+      <div id="options" class="options"></div>
+      <p id="feedback" class="feedback" hidden></p>
+    </main>
+    <footer class="nav">
+      <button id="prevBtn" class="btn-ghost" type="button">← Prev</button>
+      <span class="hint">Press 1–4 to answer · → next · ← prev</span>
+      <button id="nextBtn" class="btn-primary" type="button">Next →</button>
+    </footer>
+  </section>
+
+  <section id="result" class="screen result-screen">
+    <p class="eyebrow">Scorecard</p>
+    <h1 id="resultTitle">Quiz complete</h1>
+    <p class="result-sub" id="resultScope"></p>
+    <div class="score-row">
+      <div class="score-block"><span id="scoreText" class="score-num"></span><span class="score-label">Correct</span></div>
+      <div class="score-block"><span id="scorePct" class="score-num"></span><span class="score-label">Accuracy</span></div>
+      <div class="score-block"><span id="timeText" class="score-num"></span><span class="score-label">Time</span></div>
+    </div>
+    <div class="breakdown-wrap">
+      <table class="breakdown">
+        <thead><tr><th>Lesson</th><th>Score</th></tr></thead>
+        <tbody id="breakdownBody"></tbody>
+      </table>
+    </div>
+    <div class="result-actions">
+      <button id="reviewBtn" class="btn-ghost" type="button">Review answers</button>
+      <button id="restartBtn" class="btn-primary" type="button">Retake — new shuffle</button>
+      <button id="menuBtn" class="btn-ghost" type="button">↤ Lesson menu</button>
+    </div>
+  </section>
+</div>
+
+<script>
+/* ==========================================================================
+   DATA — generated from Polity/05_Quiz_MCQ/data/<class>.js by build.mjs
+   Question shape:
+     c    chapter tag (must match an entry in CHAPTERS)
+     q    stem
+     head optional column header for a "pairs" block, e.g. "Provision : Purpose"
+     L    optional array of numbered lines (statements, or "Left : Right" pairs)
+     ask  optional closing question line, e.g. "Which of the above are correct?"
+     o    four options
+     a    index of the correct option
+     e    explanation shown after answering
+   ========================================================================== */
+const COURSE = {
+  eyebrow: "NCERT History · Our Pasts I",
+  title: "Class VI History Quiz — Our Pasts I",
+  lede: "Prelims-pattern questions across all 10 chapters of Ancient India, from the first stone tools to the invention of zero. Multi-statement, match-the-pairs and assertion-reason sets. The statements reshuffle on every attempt and the answer code is computed afresh, so neither the wording, the length, nor the position of the false statement will ever give the answer away."
+};
+const CHAPTERS = [
+  "Ch1 · What, Where, How and When?",
+  "Ch2 · From Hunting-Gathering to Growing Food",
+  "Ch3 · In the Earliest Cities",
+  "Ch4 · What Books and Burials Tell Us",
+  "Ch5 · Kingdoms, Kings and an Early Republic",
+  "Ch6 · New Questions and Ideas",
+  "Ch7 · From a Kingdom to an Empire",
+  "Ch8 · Villages, Towns and Trade",
+  "Ch9 · New Empires and Kingdoms",
+  "Ch10 · Buildings, Paintings and Books"
+];
+
+/* Question shapes
+   S-question : S is [statement, isTrue] pairs. The engine reshuffles them on
+                every attempt and then computes the correct answer code.
+                mode:'code' over 3 statements gives "1 and 2 only / ..." and
+                needs at least two true; over 2 statements it gives "1 only /
+                2 only / Both / Neither" and takes any mix. mode:'count' gives
+                "Only one / Only two / All three / None".
+                unit:'pair' words the auto-explanation as pairs.
+   o-question : four hand-written options, deliberately parallel in length,
+                grammar and plausibility, with a marking the correct one.
+   AR         : assertion-reason, using the standard four-option code below.   */
+const AR = [
+  "Both A and R are true and R is the correct explanation of A",
+  "Both A and R are true but R is not the correct explanation of A",
+  "A is true but R is false",
+  "A is false but R is true"
+];
+
+const QUESTIONS = [
+
+/* ============ Ch1 · What, Where, How and When? ============ */
+{c:'Ch1 · What, Where, How and When?',
+ q:'Consider the following statements about sources for reconstructing ancient Indian history:',
+ S:[
+    ['Inscriptions are contemporary with the events they record and are not altered by copying.',true],
+    ['Manuscripts had to be copied by hand repeatedly, which introduced errors and interpolations.',true],
+    ['Coins are classified purely as literary sources because many of them carry written legends.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Coins straddle both categories: they are physical artefacts recovered by excavation and they often carry legends that can be read, so they serve archaeology and epigraphy at once. The reliability of inscriptions rests on their being cut once, at the time, on a durable surface, whereas a manuscript surviving today may be a copy of a copy several generations removed from the original.'},
+{c:'Ch1 · What, Where, How and When?',
+ q:'The study of coins and the study of inscriptions are known respectively as:',
+ o:[
+    'Numismatics and epigraphy',
+    'Epigraphy and numismatics',
+    'Palaeography and numismatics',
+    'Numismatics and palaeography'],
+ a:0,
+ e:'Numismatics is the study of coins, epigraphy the study of inscriptions on hard surfaces such as stone, metal and pottery. Palaeography is a related but distinct discipline concerned with the forms of ancient writing and how scripts changed over time, which is what allows an undated inscription to be placed within a period.'},
+{c:'Ch1 · What, Where, How and When?',
+ q:'Consider the following statements about manuscripts in ancient India:',
+ S:[
+    ['They were commonly written on palm leaf and on birch bark known as bhurja patra.',true],
+    ['They survive in far greater numbers than inscriptions because their materials resist decay.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Palm leaf and birch bark are organic and perish readily, being destroyed by damp, fire and insects, which is precisely why manuscripts had to be recopied to survive at all. Inscriptions cut into stone or metal endure far better, which is one reason the epigraphic record of ancient India is richer than the manuscript record for the earliest periods.'},
+{c:'Ch1 · What, Where, How and When?',
+ q:'The name "India" is generally traced to which of the following?',
+ o:[
+    'Magadha, the kingdom of the Ganga plain',
+    'Sindhu, the Sanskrit name of the Indus river',
+    'Jambu, the rose-apple tree of the Puranas',
+    'Bharata, a people named in the Rigveda'],
+ a:1,
+ e:'Iranians and Greeks approaching from the north-west pronounced the initial "s" of Sindhu as "h", producing Hindos and Indos, and the land beyond came to be called India; the same root gives Hindustan. Jambudvipa is a separate Puranic name meaning land of the jambu tree, while Bharata was a Rigvedic people whose name later stood for the whole country.'},
+{c:'Ch1 · What, Where, How and When?',
+ q:'Consider the following statements about who appears in ancient written records:',
+ S:[
+    ['Kings, priests and wealthy donors are comparatively well represented in them.',true],
+    ['Farmers, herders, artisans and labourers are largely absent from them.',true],
+    ['Archaeology partly compensates for this silence by recovering ordinary domestic remains.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Records were commissioned by those with the wealth and authority to commission them, so they preserve what the powerful wished remembered. A broken cooking pot, a hearth or a modest burial speaks for people whom no inscription ever named, which is why archaeological and literary sources must be used together rather than one being preferred to the other.'},
+{c:'Ch1 · What, Where, How and When?',
+ q:'Assertion (A): Radiocarbon dating cannot be used to determine the age of a stone hand-axe directly.\nReason (R): Radiocarbon dating measures the decay of carbon-14, which is present only in organic material.',
+ o:AR,a:0,
+ e:'Stone contains no carbon-14, so the method cannot be applied to a stone tool itself; archaeologists instead date organic material such as charcoal, bone or seeds found in the same layer and infer the tool\'s age from that association. This is a good illustration of why stratigraphy matters, since the inference depends entirely on the layer being undisturbed.'},
+{c:'Ch1 · What, Where, How and When?',
+ q:'Consider the following statements about the geography of early settlement:',
+ S:[
+    ['The Narmada valley is associated with some of the earliest people of the subcontinent.',true],
+    ['Agriculture in the subcontinent began in the region of the Sulaiman and Kirthar hills.',true],
+    ['The first cities of the subcontinent arose along the Garo hills of the north-east.',false],
+    ['Rivers were favoured for settlement because they provided water, fertile silt and transport.',true]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'The Garo hills are associated with early agriculture, not with cities; the first cities arose along the Indus and its tributaries, and a second phase of urban growth followed much later along the Ganga. The attraction of rivers was cumulative, since alluvial silt renewed soil fertility each flood season while the river itself carried far more cargo than any land route.'},
+{c:'Ch1 · What, Where, How and When?',
+ q:'In archaeological dating, the abbreviation "BP" is measured from which reference year?',
+ o:[
+    'The first year of the Common Era',
+    'The current year of measurement',
+    'The year 1950 of the Common Era',
+    'The year 1900 of the Common Era'],
+ a:2,
+ e:'BP means Before Present, and "present" is fixed by convention at 1950 rather than floating with the current year. The date was chosen because atmospheric nuclear testing after 1950 altered the carbon-14 content of the atmosphere, making later material an unreliable baseline for calibrating radiocarbon measurements.'},
+{c:'Ch1 · What, Where, How and When?',
+ q:'Consider the following statements about the survival of archaeological evidence:',
+ S:[
+    ['Stone, baked clay and metal survive far better than wood, cloth and leather.',true],
+    ['The absence of an object from the record is reliable proof that it was never used.',false],
+    ['The Stone Age is so named partly because stone is what survived to be found.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The record has been filtered by thousands of years of decay, and that filter is not random: it systematically removes organic, everyday and perishable materials. Concluding that a thing did not exist because its traces have not been found is therefore an error of reasoning, and it is one that competitive examinations test directly.'},
+{c:'Ch1 · What, Where, How and When?',
+ q:'The term "Jambudvipa", used in ancient texts and in Ashokan inscriptions, refers to:',
+ o:[
+    'The valley of the Indus and its tributaries',
+    'The forested tracts south of the Vindhyas',
+    'The seven rivers of the Rigvedic heartland',
+    'The Indian subcontinent as a whole'],
+ a:3,
+ e:'Jambudvipa means the land of the jambu or rose-apple tree and was used in Puranic and Buddhist literature for the subcontinent. The seven rivers of the Rigvedic heartland were called Sapta Sindhava, a much smaller region confined largely to the Punjab and the north-west, and the two terms should not be conflated.'},
+{c:'Ch1 · What, Where, How and When?',
+ q:'Consider the following statements about the BCE and CE dating system:',
+ S:[
+    ['BCE dates count downward as one moves forward in time, so 500 BCE is later than 1000 BCE.',true],
+    ['There is no year zero, and 1 BCE is followed immediately by 1 CE.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The absence of a year zero is a genuine quirk of the historical calendar and a common source of arithmetic slips when converting between systems. Astronomers later defined a year zero for computational convenience, but historians never adopted it, so historical date arithmetic must always account for the missing year.'},
+
+/* ============ Ch2 · From Hunting-Gathering to Growing Food ============ */
+{c:'Ch2 · From Hunting-Gathering to Growing Food',
+ q:'Consider the following statements about the Mesolithic period:',
+ S:[
+    ['It is characterised by microliths, very small stone tools hafted into handles.',true],
+    ['It falls broadly between about twelve thousand and ten thousand years ago.',true],
+    ['Its people had already adopted settled agriculture as their principal livelihood.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Farming defines the Neolithic, not the Mesolithic; Mesolithic communities remained hunter-gatherers, although some had begun to herd animals. Microliths mattered because they were modular, since many small blades set into a wooden or bone shaft could form a sickle, a saw or an arrow, and a blunted blade could be replaced without discarding the whole tool.'},
+{c:'Ch2 · From Hunting-Gathering to Growing Food',
+ q:'Which of the following animals was the first to be domesticated?',
+ o:[
+    'The dog',
+    'The goat',
+    'The sheep',
+    'The cow'],
+ a:0,
+ e:'The dog was domesticated well before the food-producing animals, most likely from wolves drawn to human camps, and it long preceded the Neolithic. Sheep and goats were domesticated next, followed by cattle, which eventually became the most important animal of all because they supplied traction for the plough as well as milk, hide and dung.'},
+{c:'Ch2 · From Hunting-Gathering to Growing Food',
+ q:'Consider the following pairs:',
+ head:'Site : Feature for which it is known',
+ S:[
+    ['Burzahom : Pit-dwellings and dogs buried with their masters',true],
+    ['Koldihwa : Earliest evidence of rice cultivation',true],
+    ['Paiyampalli : Earliest evidence of cotton cultivation',false]],
+ ask:'Which of the pairs given above is/are correctly matched?',
+ mode:'code',unit:'pair',
+ e:'Paiyampalli in Tamil Nadu is associated with millets and pulses; the earliest cotton in the subcontinent comes from Mehrgarh in the north-west. Burzahom in Kashmir is distinctive for houses dug into the ground and entered from above, and for burials in which dogs accompanied their owners, a practice found at few other Neolithic sites.'},
+{c:'Ch2 · From Hunting-Gathering to Growing Food',
+ q:'Mehrgarh, the most important Neolithic site of the subcontinent, is located near which pass?',
+ o:[
+    'The Zoji La Pass',
+    'The Bolan Pass',
+    'The Khyber Pass',
+    'The Nathu La Pass'],
+ a:1,
+ e:'Mehrgarh lies on the Bolan Pass in Baluchistan, one of the principal routes linking the subcontinent to Iran and Central Asia, and its position on that route is not accidental. Its long occupation carries the record from the earliest farming through to the Harappan period, making it the bridge between the Neolithic village and the first cities.'},
+{c:'Ch2 · From Hunting-Gathering to Growing Food',
+ q:'Consider the following statements about Mehrgarh:',
+ S:[
+    ['Its houses were of mud brick with compartments that probably stored grain.',true],
+    ['Its inhabitants used iron tools to clear land for cultivation.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Iron was unknown anywhere in the subcontinent at this date and appears only around a thousand years before the Common Era, long after Mehrgarh was first settled. The storage compartments matter because the ability to hold grain is what allows a community to keep a surplus and remain in one place, and the dead there were sometimes buried with goats.'},
+{c:'Ch2 · From Hunting-Gathering to Growing Food',
+ q:'Assertion (A): Farming did not spread outward from a single point of origin in the subcontinent.\nReason (R): A crop tended to be domesticated in the region where its wild ancestor already grew.',
+ o:AR,a:0,
+ e:'Wheat and barley were domesticated in the north-west where their wild forms occur, rice north of the Vindhyas in the Ganga region, and millets in the Deccan and the south. Independent domestication in several ecological zones is the natural consequence of this, and it also explains why later regional economies specialised in the crops they did.'},
+{c:'Ch2 · From Hunting-Gathering to Growing Food',
+ q:'Consider the following statements about Bhimbetka:',
+ S:[
+    ['It consists of natural rock shelters and caves in the Vindhyas of Madhya Pradesh.',true],
+    ['It is famous for prehistoric rock paintings executed largely in mineral pigments.',true],
+    ['It was occupied only during the Neolithic and shows no earlier phase of use.',false],
+    ['It has been inscribed as a UNESCO World Heritage Site.',true]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Bhimbetka has an exceptionally long occupation running from the Palaeolithic through the Mesolithic and beyond, which is precisely what makes it so valuable as a continuous record. Its paintings, in red ochre and white with some green and yellow, depict hunting, animals and group activity, and constitute the oldest surviving art in the subcontinent.'},
+{c:'Ch2 · From Hunting-Gathering to Growing Food',
+ q:'Evidence for the earliest use of fire in the subcontinent comes principally from:',
+ o:[
+    'The Adamgarh shelters of Madhya Pradesh',
+    'The Bagor settlement site of Rajasthan',
+    'The Kurnool caves of Andhra Pradesh',
+    'The Hunsgi valley sites of Karnataka'],
+ a:2,
+ e:'Ash deposits in the Kurnool caves provide the evidence for early control of fire, which transformed human life in several ways at once by extending the usable day, deterring predators, providing warmth and above all making food easier to digest. Adamgarh and Bagor are Mesolithic sites important for microliths and early herding.'},
+{c:'Ch2 · From Hunting-Gathering to Growing Food',
+ q:'Consider the following statements about the consequences of adopting agriculture:',
+ S:[
+    ['It supported larger populations by raising the food yield from a given area of land.',true],
+    ['It narrowed the range of foods eaten and made communities vulnerable to crop failure.',true],
+    ['Skeletal evidence shows early farmers were consistently healthier than hunter-gatherers.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Skeletons from early farming communities are often shorter and show worse dentition and more disease than those of the hunter-gatherers preceding them, a reversal that surprises most readers. Agriculture raised aggregate output while narrowing diet, increasing labour and creating the storable surplus from which inequality and hierarchy could grow.'},
+{c:'Ch2 · From Hunting-Gathering to Growing Food',
+ q:'A site at which stone tools were manufactured but where people did not live is described as a:',
+ o:[
+    'Habitation site',
+    'Megalithic site',
+    'Chalcolithic site',
+    'Factory site'],
+ a:3,
+ e:'Factory sites cluster near sources of workable stone, usually along rivers and streams, and yield waste flakes and half-finished tools without the hearths and food remains that mark a habitation site. Where both kinds of evidence occur together the site is described as a habitation-cum-factory site.'},
+{c:'Ch2 · From Hunting-Gathering to Growing Food',
+ q:'Consider the following statements about Daojali Hading:',
+ S:[
+    ['It lies in the north-east of the subcontinent, in present-day Assam.',true],
+    ['It has yielded jadeite, a stone that may have been brought from China.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The presence of jadeite at a north-eastern Neolithic site is significant because it suggests contact along routes connecting the subcontinent to China long before any written record of such exchange. Stone mortars and pestles from the site indicate the processing of grain, placing it firmly within the food-producing phase.'},
+
+/* ============ Ch3 · In the Earliest Cities ============ */
+{c:'Ch3 · In the Earliest Cities',
+ q:'Which of the following characterises the people of the Harappan civilisation?',
+ S:[
+    ['They possessed great palaces and monumental temples.',false],
+    ['They worshipped both male and female figures on the evidence of seals and figurines.',true],
+    ['They employed horse-drawn chariots in warfare.',false],
+    ['They used standardised weights across the whole extent of the civilisation.',true]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'No structure at any Harappan site has been conclusively identified as a palace or a temple, and evidence for the horse is scanty and disputed while no seal depicts one. What the material does support is a widely shared religious imagery and an enforced system of weights, which together indicate cultural cohesion without telling us how the civilisation was governed.'},
+{c:'Ch3 · In the Earliest Cities',
+ q:'Consider the following pairs:',
+ head:'Site : Feature for which it is known',
+ S:[
+    ['Lothal : Dockyard and bead-making workshop',true],
+    ['Kalibangan : Ploughed field with furrows crossing at right angles',true],
+    ['Chanhudaro : Three-part city plan and a large inscribed signboard',false]],
+ ask:'Which of the pairs given above is/are correctly matched?',
+ mode:'code',unit:'pair',
+ e:'The three-part plan and the signboard belong to Dholavira in Kutch; Chanhudaro is distinctive as the only major Harappan city without a citadel, and functioned essentially as a craft town producing beads, shell objects and bangles. The Kalibangan field is important as the earliest ploughed field known anywhere in the subcontinent.'},
+{c:'Ch3 · In the Earliest Cities',
+ q:'Harappa and Mohenjodaro were first excavated respectively by:',
+ o:[
+    'Daya Ram Sahni and R. D. Banerji',
+    'R. D. Banerji and Daya Ram Sahni',
+    'John Marshall and Daya Ram Sahni',
+    'Daya Ram Sahni and John Marshall'],
+ a:0,
+ e:'Daya Ram Sahni excavated Harappa in 1921 and R. D. Banerji excavated Mohenjodaro in 1922. John Marshall, then Director-General of the Archaeological Survey, announced the discovery of the civilisation to the world in 1924, an announcement that pushed the known history of the subcontinent back by roughly two thousand years.'},
+{c:'Ch3 · In the Earliest Cities',
+ q:'Consider the following statements about Harappan drainage:',
+ S:[
+    ['Drains were laid out before the houses along the streets were built.',true],
+    ['The drains were covered and sloped so that water flowed by gravity.',true],
+    ['Only the largest houses of the citadel were connected to the drainage network.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Connection to the drains appears to have been effectively universal rather than a privilege of the elite, which is what marks the system as a civic rather than a courtly amenity. Planning the network before construction required surveying the gradient across the whole settlement in advance, and inspection holes along the drains show it was designed to be maintained over generations.'},
+{c:'Ch3 · In the Earliest Cities',
+ q:'The Great Bath at Mohenjodaro was made watertight by the use of:',
+ o:[
+    'Lime plaster with a lining of soapstone',
+    'Gypsum mortar with a lining of bitumen',
+    'Lime plaster with a lining of terracotta',
+    'Gypsum mortar with a lining of faience'],
+ a:1,
+ e:'Bricks were set on edge in gypsum mortar and a layer of natural bitumen was applied to the sides and floor, a two-stage waterproofing solution of considerable sophistication. The tank was fed from a well in an adjoining room and emptied through a large corbelled drain, and its location on the citadel points to a public or ceremonial function.'},
+{c:'Ch3 · In the Earliest Cities',
+ q:'Consider the following statements about the Harappan script:',
+ S:[
+    ['It comprises roughly three hundred and seventy-five to four hundred distinct signs.',true],
+    ['Its inscriptions are very short, averaging about five signs.',true],
+    ['It was deciphered in the twentieth century using a bilingual inscription.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'No bilingual text comparable to the Rosetta Stone has ever been found, and this is the central obstacle: the underlying language is unknown and the inscriptions are far too short to support statistical analysis. The script is generally written from right to left, and longer texts sometimes alternate direction line by line in the boustrophedon manner.'},
+{c:'Ch3 · In the Earliest Cities',
+ q:'Consider the following pairs:',
+ head:'Raw material : Probable source',
+ S:[
+    ['Lapis lazuli : Afghanistan',true],
+    ['Gold : Karnataka',true],
+    ['Copper : Rajasthan and Oman',true]],
+ ask:'Which of the pairs given above is/are correctly matched?',
+ mode:'code',unit:'pair',
+ e:'The Harappan cities stood on alluvial plains that yielded grain but almost no stone, metal or gemstone, so every hard material had to be procured from a distance. The trading outpost of Shortughai in Afghanistan exists precisely because of lapis lazuli, and the reach of this network from Karnataka to Oman is among the strongest indicators of organised long-distance exchange.'},
+{c:'Ch3 · In the Earliest Cities',
+ q:'In Mesopotamian records, the terms Meluhha, Magan and Dilmun are generally identified with:',
+ o:[
+    'Bahrain, Oman and the Indus region',
+    'The Indus region, Bahrain and Oman',
+    'The Indus region, Oman and Bahrain',
+    'Oman, the Indus region and Bahrain'],
+ a:2,
+ e:'Meluhha supplied carnelian beads, ivory, copper, gold, shell and even peacocks to Mesopotamia, and Harappan seals and etched carnelian beads found at Mesopotamian sites confirm the identification. Because the Harappan script cannot be read, these references in a neighbouring literate civilisation are among the few written windows onto Harappan trade.'},
+{c:'Ch3 · In the Earliest Cities',
+ q:'Consider the following statements about Harappan weights:',
+ S:[
+    ['They were made of chert and were generally cubical in shape.',true],
+    ['The lower denominations follow a binary sequence in which sixteen is a key unit.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'A sequence running one, two, four, eight, sixteen and so on allows any whole number within its range to be composed from the fewest possible weights, which is an efficient design rather than an arbitrary one. That the same weights occur from Gujarat to Afghanistan indicates a standard defined and enforced across the entire civilisation.'},
+{c:'Ch3 · In the Earliest Cities',
+ q:'Consider the following pairs:',
+ head:'Artefact : Material',
+ S:[
+    ['Dancing Girl of Mohenjodaro : Bronze',true],
+    ['Priest-King of Mohenjodaro : Steatite',true],
+    ['Male torso from Harappa : White marble',false]],
+ ask:'Which of the pairs given above is/are correctly matched?',
+ mode:'code',unit:'pair',
+ e:'The Harappan male torso is of red sandstone and is admired for its naturalism; white marble belongs to the much later Amaravati sculptures of the Satavahana period. The Dancing Girl was cast by the lost-wax method, a technique demanding considerable metallurgical control at this date.'},
+{c:'Ch3 · In the Earliest Cities',
+ q:'Which of the following materials was NOT known to the Harappans?',
+ o:[
+    'Bronze, used for tools and vessels',
+    'Faience, used for beads and bangles',
+    'Carnelian, used for beads and inlay',
+    'Iron, used for tools and weapons'],
+ a:3,
+ e:'The Harappan is a Bronze Age civilisation and iron had not yet been discovered anywhere in the subcontinent; iron appears only around a thousand years before the Common Era. Faience is particularly striking because it is artificial, made by grinding sand or quartz, mixing it with colour and gum and firing it to a glaze.'},
+{c:'Ch3 · In the Earliest Cities',
+ q:'Consider the following statements about the decline of the Harappan civilisation:',
+ S:[
+    ['The drying or shifting of the Ghaggar-Hakra river system is among the leading explanations.',true],
+    ['A weakening of the monsoon around this period is supported by palaeoclimatic evidence.',true],
+    ['The theory of destruction by an invading people is now generally accepted by scholars.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The invasion hypothesis rested on unburied skeletons at Mohenjodaro, but these belong to different periods and show no battle wounds, and there is no destruction layer, no burnt city and no mass grave. Current scholarship treats the decline as a gradual, multi-causal de-urbanisation in which hydrological and climatic change were probably decisive.'},
+{c:'Ch3 · In the Earliest Cities',
+ q:'The southernmost and easternmost sites of the Harappan civilisation are respectively:',
+ o:[
+    'Daimabad and Alamgirpur',
+    'Alamgirpur and Daimabad',
+    'Sutkagendor and Daimabad',
+    'Daimabad and Sutkagendor'],
+ a:0,
+ e:'Daimabad in Maharashtra marks the southern limit and is famous for a hoard of bronze figures including a chariot; Alamgirpur in Uttar Pradesh marks the eastern limit. Sutkagendor on the Makran coast is the westernmost site, and Manda in Jammu the northernmost within India, while Shortughai in Afghanistan lies further north still.'},
+
+/* ============ Ch4 · What Books and Burials Tell Us ============ */
+{c:'Ch4 · What Books and Burials Tell Us',
+ q:'Consider the following pairs:',
+ head:'Veda : Principal character',
+ S:[
+    ['Samaveda : Hymns set to melody for chanting',true],
+    ['Atharvaveda : Charms, spells and folk remedies',true],
+    ['Yajurveda : The oldest of the four collections',false]],
+ ask:'Which of the pairs given above is/are correctly matched?',
+ mode:'code',unit:'pair',
+ e:'The Rigveda is the oldest of the four; the Yajurveda is the collection of ritual formulae setting out how sacrifices were to be performed. The Samaveda is significant beyond ritual because its system of melodic recitation is regarded as the root of the Indian classical music tradition.'},
+{c:'Ch4 · What Books and Burials Tell Us',
+ q:'The Rigveda consists of how many hymns arranged in how many books?',
+ o:[
+    'About 1,280 hymns in eight mandalas',
+    'About 1,028 hymns in ten mandalas',
+    'About 1,028 hymns in eight mandalas',
+    'About 1,280 hymns in ten mandalas'],
+ a:1,
+ e:'The Rigveda contains roughly one thousand and twenty-eight hymns, called suktas, distributed across ten books called mandalas. Mandalas two to seven form the oldest core and are attributed to particular priestly families, while the first, eighth, ninth and tenth are later additions, a distinction that matters for dating the ideas they contain.'},
+{c:'Ch4 · What Books and Burials Tell Us',
+ q:'Consider the following statements about Rigvedic political organisation:',
+ S:[
+    ['The raja was a leader in war rather than a ruler of a fixed territory.',true],
+    ['Assemblies known as the sabha and the samiti had a significant role.',true],
+    ['A regular tax of one-sixth of produce was collected from cultivators.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Regular assessed taxation belongs to the later mahajanapada period; in Rigvedic society the offering called bali was voluntary and the raja\'s wealth came largely from plunder and gifts. There was no capital, no standing army and no hereditary bureaucracy, and the word jana denotes a people rather than a territory, which is the essential difference from later kingship.'},
+{c:'Ch4 · What Books and Burials Tell Us',
+ q:'The Rigvedic term "gavishti", used in the sense of war, literally means:',
+ o:[
+    'Contest of chariots',
+    'Division of plunder',
+    'Search for cattle',
+    'Gathering of clans'],
+ a:2,
+ e:'Cattle were the principal measure of wealth in Rigvedic society, so conflict took the form of raiding herds rather than annexing land, which was abundant. The vocabulary preserves this throughout: related words describe the chief as protector of cattle and the daughter as one who milks, and the same association explains why cattle later became central to debates over sacrifice.'},
+{c:'Ch4 · What Books and Burials Tell Us',
+ q:'The Battle of Ten Kings, in which Sudas of the Bharatas was victorious, was fought on the banks of which river?',
+ o:[
+    'The Vitasta, the modern Jhelum',
+    'The Asikni, the modern Chenab',
+    'The Shutudri, the modern Sutlej',
+    'The Parushni, the modern Ravi'],
+ a:3,
+ e:'Sudas, aided by the priest Vasishtha, defeated a confederacy of ten tribes supported by the priest Vishvamitra. The episode is significant twice over: it shows priests taking sides in political conflict, and the victorious Bharata people gave their name to the country, a lineage that runs through to the wording of Article 1 of the Constitution.'},
+{c:'Ch4 · What Books and Burials Tell Us',
+ q:'Consider the following statements about the Purusha Sukta:',
+ S:[
+    ['It describes the emergence of the four varnas from a cosmic being.',true],
+    ['It occurs in the tenth mandala, one of the latest portions of the Rigveda.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Its position among the latest portions is historically important because it indicates that the fourfold varna order was a late Vedic development rather than a feature of the earliest society. The varna scheme of four categories must also be distinguished from jati, the far more numerous birth-based groups that constitute the lived structure of caste in later centuries.'},
+{c:'Ch4 · What Books and Burials Tell Us',
+ q:'Assertion (A): The Later Vedic period saw the political centre of gravity shift eastward into the Ganga valley.\nReason (R): Iron tools allowed the dense forests and heavy soils of that region to be cleared and cultivated.',
+ o:AR,a:0,
+ e:'Iron axes cleared forest that stone and copper could not, and iron ploughshares broke alluvial soils too heavy for wooden ploughs, generating a surplus large enough to sustain permanent settlements. That surplus in turn made territory rather than herds the basis of wealth, and territorial wealth is what produces kings, taxes and standing armies.'},
+{c:'Ch4 · What Books and Burials Tell Us',
+ q:'Consider the following statements comparing Harappan and Rigvedic culture:',
+ S:[
+    ['The Harappans built planned cities, whereas Rigvedic society was pastoral and without cities.',true],
+    ['The horse was central to Rigvedic life but is barely attested at Harappan sites.',true],
+    ['Both cultures possessed a system of writing that has been deciphered.',false],
+    ['Both cultures made extensive use of iron for tools and weapons.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'The Harappans had writing but it remains undeciphered, while Rigvedic society had none at all and transmitted its texts orally. Neither culture used iron in the periods concerned, since the Harappan is a Bronze Age civilisation and iron enters the record only in the Later Vedic phase, a distinction that examiners exploit regularly.'},
+{c:'Ch4 · What Books and Burials Tell Us',
+ q:'In megalithic burials, a circular opening cut into one of the stone slabs is known as a port-hole. Its purpose was to:',
+ o:[
+    'Allow the grave to be reopened for later burials',
+    'Allow offerings to be placed without disturbance',
+    'Allow rainwater to drain out of the stone chamber',
+    'Allow the position of the grave to be identified'],
+ a:0,
+ e:'Port-holes indicate that megalithic graves served families or clans over time rather than single individuals, since the chamber could be entered again when another member died. Megaliths were deliberately visible above ground for the same reason, so that the burial could be located again generations later.'},
+{c:'Ch4 · What Books and Burials Tell Us',
+ q:'Consider the following statements about megalithic burials:',
+ S:[
+    ['At Brahmagiri, one burial was richly furnished while another nearby held very little.',true],
+    ['Such differences in grave goods are read as evidence of social inequality.',true],
+    ['Megaliths are confined entirely to the southern peninsula of the subcontinent.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Megalithic traditions extend well beyond the peninsula, with menhirs in Kashmir and megalithic types in the north-east as well as across the Deccan. The Brahmagiri contrast, where one grave held gold and carnelian beads and a conch shell while another held little more than a pot, provides archaeological evidence of stratification that no text records.'},
+{c:'Ch4 · What Books and Burials Tell Us',
+ q:'Consider the following statements about Inamgaon:',
+ S:[
+    ['Adults there were generally buried with the head pointing north.',true],
+    ['One man was buried in a large four-legged jar in the courtyard of a large house.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Inamgaon is a Chalcolithic settlement in Maharashtra whose value lies in how completely a village can be reconstructed without a single written word, from crops and animal bones to houses and graves. The unique jar burial in the courtyard of the largest house at the site is generally read as marking a person of special standing, perhaps a chief.'},
+
+/* ============ Ch5 · Kingdoms, Kings and an Early Republic ============ */
+{c:'Ch5 · Kingdoms, Kings and an Early Republic',
+ q:'Consider the following statements about the mahajanapadas:',
+ S:[
+    ['They maintained fortified capitals and standing armies.',true],
+    ['They collected regular assessed taxes rather than voluntary offerings.',true],
+    ['All sixteen of them were governed by hereditary monarchs.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Several mahajanapadas, including Vajji, Malla, Shakya and Kamboja, were ganas or sanghas governed by assemblies of many rulers rather than by a single king. Fortification served more than defence, since a walled settlement controls who and what passes through its gates, which is what makes taxing trade practicable.'},
+{c:'Ch5 · Kingdoms, Kings and an Early Republic',
+ q:'The principal land tax of the mahajanapada period, known as bhaga, amounted to:',
+ o:[
+    'One-twelfth of the agricultural produce',
+    'One-sixth of the agricultural produce',
+    'One-fourth of the agricultural produce',
+    'One-eighth of the agricultural produce'],
+ a:1,
+ e:'Because the king took a sixth he was styled shadbhagin, the taker of a sixth. Farmers bore the principal burden because agriculture had become the largest and most reliable source of surplus, while craftspersons paid instead through vishti, unpaid labour for the king for one day in every month.'},
+{c:'Ch5 · Kingdoms, Kings and an Early Republic',
+ q:'Consider the following pairs:',
+ head:'Mahajanapada : Capital',
+ S:[
+    ['Vatsa : Kaushambi',true],
+    ['Avanti : Ujjain',true],
+    ['Gandhara : Rajapura',false]],
+ ask:'Which of the pairs given above is/are correctly matched?',
+ mode:'code',unit:'pair',
+ e:'The capital of Gandhara was Taxila, a celebrated centre of learning where Panini is believed to have worked and a gateway on the route to Persia; Rajapura was the capital of Kamboja. Avanti and Vatsa were among the most powerful of the mahajanapadas and both were eventually absorbed by Magadha.'},
+{c:'Ch5 · Kingdoms, Kings and an Early Republic',
+ q:'Consider the following statements about the ganas and sanghas:',
+ S:[
+    ['Decisions were reached by discussion, and by vote where agreement failed.',true],
+    ['Women, slaves and landless labourers were excluded from the assembly.',true],
+    ['The Buddha was born into the Shakya gana and Mahavira into the Vajji sangha.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Voting used counting sticks called shalakas, collected by a designated officer, and the assembly met in a hall known as the santhagara. That both great teachers of the age emerged from republics rather than monarchies is unlikely to be coincidence, since these were societies already accustomed to debate and collective decision-making.'},
+{c:'Ch5 · Kingdoms, Kings and an Early Republic',
+ q:'Which ruler shifted the capital of Magadha from Rajagriha to Pataliputra?',
+ o:[
+    'Ajatasattu, of the Haryanka dynasty',
+    'Shishunaga, of the Shishunaga dynasty',
+    'Udayin, of the Haryanka dynasty',
+    'Bimbisara, of the Haryanka dynasty'],
+ a:2,
+ e:'Udayin moved the capital to Pataliputra, which stood at the confluence of the Ganga, Son, Gandak and Punpun and therefore commanded river traffic while being protected by water on several sides. Bimbisara had annexed Anga, Ajatasattu destroyed the Vajji confederacy, and Shishunaga broke the power of Avanti.'},
+{c:'Ch5 · Kingdoms, Kings and an Early Republic',
+ q:'Consider the following statements about the rise of Magadha:',
+ S:[
+    ['Its forests supplied elephants for the army as well as timber for building.',true],
+    ['Its capital was moved from Pataliputra to Rajagriha to command the river traffic.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The movement of the capital ran the other way, from Rajagriha to Pataliputra, which stood at the confluence of four rivers. Magadha\'s decisive advantages were resources its rivals could not replicate, namely iron ore to the south and elephant forests, reinforced by the Ganga and the Son, which carried troops and goods cheaply and yielded customs revenue.'},
+{c:'Ch5 · Kingdoms, Kings and an Early Republic',
+ q:'In the Ashvamedha, the specially chosen horse was allowed to wander freely for a period of:',
+ o:[
+    'Six months',
+    'Two years',
+    'Three months',
+    'One year'],
+ a:3,
+ e:'The horse wandered for a year guarded by the king\'s soldiers, and any ruler through whose land it passed either allowed it through, thereby accepting subordination, or stopped it and fought. On its return a grand sacrifice was held at which other rajas performed menial services, so the ritual publicly tested and recorded a hierarchy rather than merely proclaiming one.'},
+{c:'Ch5 · Kingdoms, Kings and an Early Republic',
+ q:'Consider the following statements about Panini:',
+ S:[
+    ['He composed the Ashtadhyayi, a systematic grammar of Sanskrit.',true],
+    ['The work is arranged in eight chapters and consists of some four thousand rules.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The Ashtadhyayi is widely regarded as the most complete and scientific grammar produced in the ancient world, using a compressed symbolic notation and an ordered system in which more specific rules override general ones. Its formal structure has attracted sustained attention from modern linguists and from computer scientists working on formal grammars.'},
+{c:'Ch5 · Kingdoms, Kings and an Early Republic',
+ q:'Consider the following statements about Alexander\'s campaign in the subcontinent:',
+ S:[
+    ['He defeated Porus at the Hydaspes and afterwards restored his kingdom to him.',true],
+    ['His army refused to advance further east and turned back at the Beas.',true],
+    ['He defeated the Nanda ruler of Magadha before withdrawing.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Alexander never reached the Gangetic plain and never fought the Nandas, whose reputed strength in war elephants was among the reasons his exhausted troops refused to go on. The campaign mattered less for conquest than for opening sustained Indo-Greek contact and leaving a political vacuum in the north-west that Chandragupta Maurya soon filled.'},
+{c:'Ch5 · Kingdoms, Kings and an Early Republic',
+ q:'The word "janapada" is derived from a compound literally meaning:',
+ o:[
+    'The land where the people set their foot',
+    'The gathering of the people in assembly',
+    'The share of produce taken by the raja',
+    'The clan that performs the sacrifices'],
+ a:0,
+ e:'Jana means the people and pada means foot, so a janapada is the territory a people occupies. The shift from jana to janapada marks the moment at which belonging to a place began to matter as much as belonging to a group, and territory rather than cattle became the basis of wealth and therefore of political power.'},
+{c:'Ch5 · Kingdoms, Kings and an Early Republic',
+ q:'Consider the following statements about Ajatasattu:',
+ S:[
+    ['He sent his minister Vassakara to sow dissension among the Vajji leaders.',true],
+    ['He is credited with the use of war engines including a stone-hurling catapult.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Unable to overcome the Vajji confederacy in the field, Ajatasattu had its unity undermined from within over a period of years before attacking. The episode is instructive because the strength of a confederacy lay precisely in its cohesion, which made internal division the most effective line of attack against it.'},
+
+/* ============ Ch6 · New Questions and Ideas ============ */
+{c:'Ch6 · New Questions and Ideas',
+ q:'Consider the following pairs:',
+ head:'Event in the Buddha\'s life : Place',
+ S:[
+    ['Enlightenment : Bodh Gaya',true],
+    ['First sermon : Sarnath',true],
+    ['Mahaparinirvana : Lumbini',false]],
+ ask:'Which of the pairs given above is/are correctly matched?',
+ mode:'code',unit:'pair',
+ e:'Lumbini was the place of the Buddha\'s birth and is marked by an Ashokan pillar bearing an inscription recording the emperor\'s visit; he died at Kushinagar in Malla territory. The first sermon at Sarnath is known as the turning of the wheel of dhamma, which is why the wheel became its symbol in early Buddhist art.'},
+{c:'Ch6 · New Questions and Ideas',
+ q:'According to the Four Noble Truths, the cause of suffering is:',
+ o:[
+    'Avidya, or ignorance',
+    'Tanha, or craving',
+    'Karma, or action',
+    'Maya, or illusion'],
+ a:1,
+ e:'The second of the Four Noble Truths identifies craving or thirst as the origin of suffering, and the third holds that removing craving ends it. The structure is diagnostic rather than credal: a condition is named, its cause identified, its curability asserted and a course of treatment prescribed in the Eightfold Path.'},
+{c:'Ch6 · New Questions and Ideas',
+ q:'Consider the following statements about the Buddhist doctrine of anatta:',
+ S:[
+    ['It denies the existence of a permanent, unchanging self or soul.',true],
+    ['It marks a fundamental divergence from both Jaina and Upanishadic teaching.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Jainism holds that every living being and even the elements possess a jiva, while the Upanishads affirm an atman identical with brahman, so both traditions assert precisely what Buddhism denies. Any statement attributing belief in an eternal soul to Buddhism is therefore incorrect, and this is among the most frequently tested distinctions in the subject.'},
+{c:'Ch6 · New Questions and Ideas',
+ q:'Consider the following statements about Mahavira:',
+ S:[
+    ['He was the twenty-fourth tirthankara rather than the founder of Jainism.',true],
+    ['He was born at Kundagrama near Vaishali into a clan of the Vajji sangha.',true],
+    ['He added celibacy as a fifth vow to the four taught by Parshvanatha.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Parshvanatha, the twenty-third tirthankara and generally accepted as historical, taught non-violence, truth, non-stealing and non-possession; Mahavira added brahmacharya. Describing Mahavira as the founder of Jainism is the single most common error about the tradition and appears regularly as a distractor.'},
+{c:'Ch6 · New Questions and Ideas',
+ q:'The three jewels of Jainism, or triratna, consist of right:',
+ o:[
+    'View, right intention and right mindfulness',
+    'Effort, right concentration and right speech',
+    'Faith, right knowledge and right conduct',
+    'Speech, right action and right livelihood'],
+ a:2,
+ e:'The Jaina triratna comprises samyak darshana, samyak jnana and samyak charitra. It must not be confused with the Buddhist triratna, which consists of the Buddha, the Dhamma and the Sangha; the remaining choices list components of the Buddhist Eightfold Path, a further source of confusion the examiner may exploit.'},
+{c:'Ch6 · New Questions and Ideas',
+ q:'Consider the following pairs:',
+ head:'Buddhist Council : Ruler under whom it was held',
+ S:[
+    ['First Council at Rajagriha : Ajatasattu',true],
+    ['Third Council at Pataliputra : Ashoka',true],
+    ['Fourth Council in Kashmir : Kalasoka',false]],
+ ask:'Which of the pairs given above is/are correctly matched?',
+ mode:'code',unit:'pair',
+ e:'The Fourth Council was convened by Kanishka in Kashmir and presided over by Vasumitra, and it was there that Buddhism formally divided into Hinayana and Mahayana with texts compiled in Sanskrit. Kalasoka presided over the Second Council at Vaishali, at which the first major schism occurred over questions of monastic discipline.'},
+{c:'Ch6 · New Questions and Ideas',
+ q:'Consider the following statements about the doctrine of anekantavada:',
+ S:[
+    ['It holds that reality has many aspects and no single viewpoint captures it wholly.',true],
+    ['It is illustrated by the parable of the blind men describing an elephant.',true],
+    ['It was formulated by Makkhali Gosala as the central teaching of the Ajivikas.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Anekantavada is a Jaina doctrine, complemented by syadvada, which qualifies every assertion by the standpoint from which it is made. Makkhali Gosala founded the Ajivikas, whose distinctive teaching was niyati, a thoroughgoing determinism holding that all events are predetermined and human effort changes nothing.'},
+{c:'Ch6 · New Questions and Ideas',
+ q:'The Buddhist canon known as the Tripitaka comprises which three collections?',
+ o:[
+    'Vinaya, Jataka and Abhidhamma Pitakas',
+    'Sutta, Jataka and Therigatha Pitakas',
+    'Vinaya, Sutta and Therigatha Pitakas',
+    'Vinaya, Sutta and Abhidhamma Pitakas'],
+ a:3,
+ e:'The Vinaya Pitaka contains monastic rules, the Sutta Pitaka the discourses and the Abhidhamma Pitaka the philosophical and psychological analysis. The Jataka stories and the Therigatha, the verses of the elder nuns, are both contained within the Sutta Pitaka rather than forming separate baskets of their own.'},
+{c:'Ch6 · New Questions and Ideas',
+ q:'Consider the following statements about the early Buddhist sangha:',
+ S:[
+    ['It admitted members irrespective of the varna into which they were born.',true],
+    ['Its rules required a quorum and provided for decisions by vote where consent failed.',true],
+    ['Women were admitted from the outset without any question arising.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Women were admitted only after Mahaprajapati Gautami pressed the case with Ananda\'s support, and she became the first bhikkhuni. The procedural rules are remarkable in their own right, since a formal motion was placed before the assembly and read up to three times, silence indicating consent, with counting sticks used where a vote proved necessary.'},
+{c:'Ch6 · New Questions and Ideas',
+ q:'The motto "Satyameva Jayate", inscribed on the State Emblem of India, is drawn from which text?',
+ o:[
+    'The Mundaka Upanishad',
+    'The Chandogya Upanishad',
+    'The Katha Upanishad',
+    'The Aitareya Upanishad'],
+ a:0,
+ e:'The phrase, meaning truth alone triumphs, comes from the Mundaka Upanishad. Each of the other texts is associated with a well-known passage of its own, the Chandogya with tat tvam asi, the Katha with the dialogue of Nachiketa and Yama, and the Aitareya with prajnanam brahma.'},
+{c:'Ch6 · New Questions and Ideas',
+ q:'Consider the following statements about the Upanishads:',
+ S:[
+    ['They form the concluding portion of the Vedic corpus and are termed Vedanta.',true],
+    ['They hold that liberation comes through knowledge rather than through ritual.',true],
+    ['Women take no part in their dialogues, which are conducted only among priests.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Gargi Vachaknavi challenges Yajnavalkya in open debate and Maitreyi chooses knowledge over wealth, so learned women appear prominently. Kings such as Janaka also appear as teachers, and the story of Satyakama Jabala, admitted to study on the strength of his truthfulness alone, questions birth as the measure of worth from within the tradition itself.'},
+{c:'Ch6 · New Questions and Ideas',
+ q:'Consider the following pairs:',
+ head:'School : Distinguishing doctrine',
+ S:[
+    ['Ajivika : Determinism, holding all events to be predetermined',true],
+    ['Charvaka : Materialism, denying the soul and the afterlife',true]],
+ ask:'Which of the pairs given above is/are correctly matched?',
+ mode:'code',unit:'pair',
+ e:'The Ajivikas received the patronage of Ashoka and of his grandson Dasharatha, who granted them the Barabar caves, the earliest rock-cut caves in the subcontinent. The Charvaka or Lokayata school is significant as India\'s explicitly materialist and atheist tradition, accepting only what the senses perceive and rejecting Vedic authority outright.'},
+
+/* ============ Ch7 · From a Kingdom to an Empire ============ */
+{c:'Ch7 · From a Kingdom to an Empire',
+ q:'Consider the following statements about the sources for Mauryan history:',
+ S:[
+    ['The Arthashastra is a prescriptive treatise on statecraft rather than a description of Mauryan practice.',true],
+    ['The Indica of Megasthenes survives only in fragments quoted by later Greek writers.',true],
+    ['The Mudrarakshasa is a contemporary official chronicle of Chandragupta\'s reign.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The Mudrarakshasa is a Sanskrit play by Vishakhadatta composed several centuries after the events it dramatises, and it is literature rather than record. Recognising the character and limits of each source is what separates a careful answer from a careless one, and the Ashokan edicts remain the most reliable because they are contemporary and uncopied.'},
+{c:'Ch7 · From a Kingdom to an Empire',
+ q:'The Kalinga war and the remorse it produced are recorded in which of Ashoka\'s inscriptions?',
+ o:[
+    'Minor Rock Edict at Maski',
+    'Major Rock Edict XIII',
+    'Major Rock Edict XII',
+    'Major Pillar Edict VII'],
+ a:1,
+ e:'Rock Edict XIII gives the casualty figures and expresses the emperor\'s remorse, and it also names five Hellenistic kings to whom envoys were sent, which allows Mauryan chronology to be anchored to the well-dated Greek world. Rock Edict XII is the great declaration on religious tolerance, a separate and equally important text.'},
+{c:'Ch7 · From a Kingdom to an Empire',
+ q:'Consider the following statements about Rock Edict XIII:',
+ S:[
+    ['It is conspicuously absent from the inscriptions installed in Kalinga itself.',true],
+    ['Two Separate Rock Edicts concerned with humane administration were installed there instead.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Publishing a triumphal casualty count in the newly conquered province would have inflamed it, so Dhauli and Jaugada received instead instructions to officials on the just treatment of the conquered, including the declaration that all men are the emperor\'s children. The omission shows that the message was deliberately varied according to its audience.'},
+{c:'Ch7 · From a Kingdom to an Empire',
+ q:'Consider the following statements about Ashoka\'s dhamma:',
+ S:[
+    ['It enjoined respect for both brahmanas and shramanas.',true],
+    ['It was propagated through a special class of officers appointed for the purpose.',true],
+    ['It required all subjects of the empire to adopt Buddhism.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Ashoka was personally a Buddhist, but the dhamma set out in the edicts is a broad ethical code addressed to subjects of every faith and makes no mention of the Four Noble Truths, the Eightfold Path or nirvana. The officers created to propagate it were the dhamma mahamattas, who also supervised welfare arrangements for women, prisoners and the aged.'},
+{c:'Ch7 · From a Kingdom to an Empire',
+ q:'The four provincial capitals of the Mauryan empire, governed by royal princes, were:',
+ o:[
+    'Taxila, Mathura, Suvarnagiri and Tosali',
+    'Taxila, Ujjain, Shravasti and Tosali',
+    'Taxila, Ujjain, Suvarnagiri and Tosali',
+    'Taxila, Ujjain, Suvarnagiri and Kaushambi'],
+ a:2,
+ e:'Provincial governors were normally royal princes called kumaras, and Ashoka himself served as governor at Ujjain before his accession. The empire was not administered uniformly: control was tight around Pataliputra, delegated in the provinces and comparatively loose in forested regions, where the state sought resources and safe passage rather than close supervision.'},
+{c:'Ch7 · From a Kingdom to an Empire',
+ q:'Consider the following statements about the scripts and languages of the Ashokan edicts:',
+ S:[
+    ['They are written predominantly in Prakrit rather than in Sanskrit.',true],
+    ['Kharoshthi, written from right to left, was used in the north-west.',true],
+    ['A bilingual inscription in Greek and Aramaic was set up at Kandahar.',true]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Using the vernacular and adapting the script to the region reflects a deliberate concern that the message be understood by those it addressed. Brahmi, employed across most of the subcontinent, is the ancestor of almost all later Indian scripts as well as of Tibetan, Thai and Burmese writing.'},
+{c:'Ch7 · From a Kingdom to an Empire',
+ q:'The Brahmi script of the Ashokan edicts was deciphered in 1837 by:',
+ o:[
+    'John Marshall',
+    'Alexander Cunningham',
+    'Mortimer Wheeler',
+    'James Prinsep'],
+ a:3,
+ e:'Prinsep worked outward from short donative inscriptions on the Sanchi railings, many ending in the same characters, which he correctly took to mean "gift". The edicts he could now read were issued by a king styling himself Devanampiya Piyadassi, and the identification with Ashoka was confirmed only later, when the Maski edict was found naming him directly.'},
+{c:'Ch7 · From a Kingdom to an Empire',
+ q:'Consider the following statements about the Barabar caves:',
+ S:[
+    ['They were granted to the Ajivikas by Ashoka and his grandson Dasharatha.',true],
+    ['They are the earliest surviving rock-cut caves in the subcontinent.',true],
+    ['The facade of the Lomas Rishi cave imitates a wooden structure in stone.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'That a Buddhist emperor granted caves to a rival sect is the strongest material evidence that the tolerance proclaimed in Rock Edict XII was actually practised. The Lomas Rishi facade is doubly valuable because it preserves in stone the form of a wooden architecture that has otherwise entirely perished.'},
+{c:'Ch7 · From a Kingdom to an Empire',
+ q:'The Lion Capital adopted as the State Emblem of India originally surmounted a pillar at:',
+ o:[
+    'Sarnath, near Varanasi',
+    'Sanchi, in central India',
+    'Rampurva, in north Bihar',
+    'Lauriya, in north Bihar'],
+ a:0,
+ e:'The Sarnath capital carries four lions set back to back, an abacus bearing four animals separated by wheels, and an inverted lotus base, and it was originally crowned by a large wheel now lost. In the State Emblem only three lions are visible, and the twenty-four-spoked wheel of the abacus appears as the Ashoka Chakra on the national flag.'},
+{c:'Ch7 · From a Kingdom to an Empire',
+ q:'Consider the following statements about the Mauryan pillars:',
+ S:[
+    ['Their shafts were monolithic, each carved from a single block of stone.',true],
+    ['The stone was quarried at Chunar and transported over long distances.',true],
+    ['Their characteristic lustrous polish was widely reproduced in later periods.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The Mauryan polish is a mirror-like surface finish whose technique is still not fully understood and which was not successfully reproduced after the period, making it a reliable diagnostic feature. Quarrying at a single source and transporting shafts weighing tens of tonnes across hundreds of kilometres is itself evidence of organisational capacity.'},
+{c:'Ch7 · From a Kingdom to an Empire',
+ q:'The last Mauryan ruler, Brihadratha, was assassinated in 185 BCE by:',
+ o:[
+    'Demetrius, the Bactrian Greek king',
+    'Pushyamitra Shunga, his commander',
+    'Mahapadma Nanda, a rival claimant',
+    'Kharavela, the ruler of Kalinga'],
+ a:1,
+ e:'Pushyamitra Shunga killed Brihadratha during a review of the army and founded the Shunga dynasty. The empire had lasted barely fifty years after Ashoka\'s death, a collapse usually attributed less to any single cause than to the structural fragility of a highly centralised polity that depended on a capable monarch at its centre.'},
+
+/* ============ Ch8 · Villages, Towns and Trade ============ */
+{c:'Ch8 · Villages, Towns and Trade',
+ q:'Consider the following pairs:',
+ head:'Term used in Tamil sources : Group it denoted',
+ S:[
+    ['Vellalar : Large landowners',true],
+    ['Uzhavar : Ploughmen who cultivated their own land',true],
+    ['Kadaisiyar : Village headmen who collected taxes',false]],
+ ask:'Which of the pairs given above is/are correctly matched?',
+ mode:'code',unit:'pair',
+ e:'Kadaisiyar, together with adimai, denoted landless labourers including slaves, who stood at the bottom of the village order. The headman collecting taxes belongs to the northern vocabulary, where the grama bhojaka combined that role with those of largest landowner, judge and sometimes policeman.'},
+{c:'Ch8 · Villages, Towns and Trade',
+ q:'Consider the following statements about the grama bhojaka:',
+ S:[
+    ['The office was often hereditary and its holder was usually the largest landowner.',true],
+    ['He collected taxes on the king\'s behalf and also acted as judge.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Combining landholding, revenue collection, judicial authority and sometimes policing in one hereditary office produced an extraordinary concentration of local power. The state gained cheap administrative reach at the cost of creating an unchallengeable local authority, and unpicking that concentration has been an object of Indian land reform and local government legislation ever since.'},
+{c:'Ch8 · Villages, Towns and Trade',
+ q:'Consider the following pairs:',
+ head:'Tamil work : Author',
+ S:[
+    ['Silappadikaram : Ilango Adigal',true],
+    ['Manimekalai : Sattanar',true],
+    ['Tirukkural : Tolkappiyar',false]],
+ ask:'Which of the pairs given above is/are correctly matched?',
+ mode:'code',unit:'pair',
+ e:'The Tirukkural, a work of one thousand three hundred and thirty couplets on ethics, polity and love, is attributed to Thiruvalluvar; Tolkappiyar composed the Tolkappiyam, the earliest Tamil grammar. Manimekalai is a sequel to Silappadikaram and is strongly Buddhist in its outlook.'},
+{c:'Ch8 · Villages, Towns and Trade',
+ q:'The emblems of the Chera, Chola and Pandya rulers were respectively:',
+ o:[
+    'The fish, the tiger and the bow',
+    'The bow, the fish and the tiger',
+    'The bow, the tiger and the fish',
+    'The tiger, the bow and the fish'],
+ a:2,
+ e:'These three were the crowned kings of Tamilakam, known collectively as the muvendar. Their capitals were Vanji, Uraiyur and Madurai and their principal ports Muziris, Puhar and Korkai, the last being celebrated for its pearl fisheries.'},
+{c:'Ch8 · Villages, Towns and Trade',
+ q:'Consider the following statements about Sangam literature:',
+ S:[
+    ['It was composed in Tamil under the patronage of the Pandyas of Madurai.',true],
+    ['It is largely secular, dealing with love, war, kings and everyday life.',true],
+    ['Women are entirely absent from the ranks of its poets.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Around thirty of the roughly four hundred and seventy-three Sangam poets were women, of whom Avvaiyar is the most celebrated. The predominantly secular character of the corpus distinguishes it sharply from most contemporary literature of northern India and makes it unusually valuable as a source for ordinary social and economic life.'},
+{c:'Ch8 · Villages, Towns and Trade',
+ q:'Which of the following was found at Arikamedu, indicating trade with the Roman world?',
+ S:[
+    ['Amphorae used for carrying wine and olive oil',true],
+    ['Arretine ware, a stamped red-glazed pottery from Italy',true],
+    ['Rouletted ware with wheel-impressed decoration',true]],
+ ask:'Which of the items given above is/are correct?',
+ mode:'code',
+ e:'Arikamedu near Puducherry also yielded a large brick structure that may have been a warehouse, together with bead-making and dyeing facilities producing goods for export. Sangam poems independently describe yavanas arriving in ships and paying in gold for pepper, so the literary and archaeological evidence corroborate one another precisely.'},
+{c:'Ch8 · Villages, Towns and Trade',
+ q:'The Roman writer Pliny complained that India was draining Rome of its precious metal, describing it as:',
+ o:[
+    'The workshop of the eastern seas',
+    'The granary of the Indian Ocean',
+    'The treasury of the southern lands',
+    'The sink of the world\'s gold'],
+ a:3,
+ e:'India exported pepper, which Romans called black gold, along with muslin, pearls, gemstones and ivory, and imported chiefly gold and silver coin. Large hoards of Roman gold coins found in Tamil Nadu and Kerala confirm the complaint archaeologically, and indicate a substantial trade surplus with the leading power of the age.'},
+{c:'Ch8 · Villages, Towns and Trade',
+ q:'Consider the following statements about the shrenis of the early historic period:',
+ S:[
+    ['They received deposits and paid interest, acting in effect as banks.',true],
+    ['They were barred by royal order from making donations to religious institutions.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Far from being barred from religious giving, guilds were among the most prominent donors of the age, and their gifts are recorded in inscriptions at Sanchi, Bharhut, Karle and Amaravati. A donor could also deposit a sum with a guild on condition that the interest perpetually funded lamps or robes for a monastery, an arrangement amounting to an endowment with a permanent income stream.'},
+{c:'Ch8 · Villages, Towns and Trade',
+ q:'The discovery attributed to Hippalus that transformed Indian Ocean trade concerned:',
+ o:[
+    'The regularity of the monsoon winds',
+    'The technique of building larger hulls',
+    'The use of the lodestone for navigation',
+    'The location of a passage through Suez'],
+ a:0,
+ e:'Recognising that the winds reversed predictably with the seasons allowed ships to cross the open Arabian Sea directly instead of creeping along the coast through many intermediaries. The voyage fell to roughly forty days, middlemen were bypassed and the volume of Indo-Roman trade rose sharply as a result.'},
+{c:'Ch8 · Villages, Towns and Trade',
+ q:'Consider the following statements about Kanishka:',
+ S:[
+    ['The era beginning in 78 CE and associated with him is India\'s national calendar.',true],
+    ['He convened the Fourth Buddhist Council, held in Kashmir.',true],
+    ['The two capitals of his empire were Peshawar and Mathura.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The Saka era beginning in 78 CE was adopted as India\'s national calendar in 1957 and is used alongside the Gregorian in official publications. Kanishka\'s court is associated with Ashvaghosha, who wrote the Buddhacharita, with the physician Charaka and with the Mahayana philosopher Nagarjuna.'},
+{c:'Ch8 · Villages, Towns and Trade',
+ q:'Consider the following pairs:',
+ head:'School of art : Principal medium',
+ S:[
+    ['Gandhara : Grey schist',true],
+    ['Mathura : Spotted red sandstone',true],
+    ['Amaravati : Black basalt',false]],
+ ask:'Which of the pairs given above is/are correctly matched?',
+ mode:'code',unit:'pair',
+ e:'Amaravati sculpture is executed in white marble or limestone and is distinguished by crowded narrative panels of slender, dynamic figures that influenced Sri Lankan and South-East Asian art. Gandhara shows strong Hellenistic influence with heavy realistic drapery, while Mathura is indigenous in derivation with thin clinging drapery and a more robust, energetic treatment.'},
+{c:'Ch8 · Villages, Towns and Trade',
+ q:'Consider the following pairs:',
+ head:'Chinese pilgrim : Indian ruler during whose reign he travelled',
+ S:[
+    ['Fa Xian : Chandragupta II',true],
+    ['Xuan Zang : Harshavardhana',true]],
+ ask:'Which of the pairs given above is/are correctly matched?',
+ mode:'code',unit:'pair',
+ e:'Fa Xian travelled between roughly 399 and 414 in search of Buddhist texts, particularly the Vinaya, while Xuan Zang came in the seventh century and studied for years at Nalanda under Shilabhadra. Their accounts are valuable as outsiders\' descriptions, though both were Buddhist monks and their emphasis reflects that commitment.'},
+
+/* ============ Ch9 · New Empires and Kingdoms ============ */
+{c:'Ch9 · New Empires and Kingdoms',
+ q:'Consider the following statements about the Prayag Prashasti:',
+ S:[
+    ['It was composed by Harishena in praise of Samudragupta.',true],
+    ['It is inscribed on a pillar that already bore inscriptions of Ashoka.',true],
+    ['It records that rulers of the north were defeated and then reinstated as tributaries.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'It was the rulers of the south who were defeated and then reinstated, while those of the Ganga valley were uprooted and their territories annexed, a distinction that marks the real limit of directly administered Gupta territory. That the eulogy of a conqueror shares a pillar with the edicts of a king who renounced conquest is among the more striking accidents of Indian epigraphy.'},
+{c:'Ch9 · New Empires and Kingdoms',
+ q:'Assertion (A): A prashasti must be used with caution as a historical source.\nReason (R): It was composed by a court poet for the purpose of praising the ruler.',
+ o:AR,a:0,
+ e:'Prashastis supply reliable names, campaigns, geography and dynastic sequence, but their evaluations are those of a paid encomiast and defeats are simply omitted. The sound approach is to accept the factual scaffolding while discounting the assessment, and noting that limitation explicitly is what distinguishes a careful answer.'},
+{c:'Ch9 · New Empires and Kingdoms',
+ q:'Which Gupta ruler defeated the Shakas of western India, thereby gaining access to the western ports?',
+ o:[
+    'Kumaragupta I',
+    'Chandragupta II',
+    'Samudragupta',
+    'Chandragupta I'],
+ a:1,
+ e:'The defeat of the Shakas brought Gujarat and Malwa under Gupta control and with them the ports of the western seaboard, which greatly stimulated trade and yielded the title Shakari. It was during his reign that the Chinese pilgrim Fa Xian travelled in India, and he is traditionally associated with Kalidasa and the court known as the nine gems.'},
+{c:'Ch9 · New Empires and Kingdoms',
+ q:'Consider the following statements about Gupta administration:',
+ S:[
+    ['It relied extensively on land grants recorded on copper plates.',true],
+    ['Such grants were frequently tax-free and hereditary.',true],
+    ['It was appreciably more centralised than the Mauryan system had been.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The Guptas were markedly less centralised than the Mauryas, governing the core directly and the periphery through subordinate and tributary rulers. Granting land permanently and tax-free surrendered both the revenue and, increasingly, the administrative authority over the area concerned, a process historians debate under the heading of Indian feudalism.'},
+{c:'Ch9 · New Empires and Kingdoms',
+ q:'Consider the following statements about the reign of Harshavardhana:',
+ S:[
+    ['He moved his capital from Thanesar to Kanauj.',true],
+    ['His attempt to expand south of the Narmada was checked by Pulakeshin II.',true],
+    ['His court poet Banabhatta composed the Harshacharita.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The Narmada became in effect the boundary between Harsha and the Chalukyas of Badami after his defeat. His reign is unusually well documented, since the court biography, Xuan Zang\'s account, Harsha\'s own three surviving plays and contemporary copper plates can all be set against one another.'},
+{c:'Ch9 · New Empires and Kingdoms',
+ q:'The Aihole inscription, which records the victory of Pulakeshin II over Harshavardhana, was composed by:',
+ o:[
+    'Banabhatta',
+    'Vishakhadatta',
+    'Ravikirti',
+    'Harishena'],
+ a:2,
+ e:'Ravikirti composed the inscription in Sanskrit and, with notable self-assurance, compared himself in it to Kalidasa and Bharavi. Harishena composed the Prayag Prashasti for Samudragupta, Banabhatta the Harshacharita, and Vishakhadatta the play Mudrarakshasa about Chandragupta Maurya and Chanakya.'},
+{c:'Ch9 · New Empires and Kingdoms',
+ q:'Consider the following pairs:',
+ head:'South Indian assembly : Body it represented',
+ S:[
+    ['Sabha : Assembly of a brahmadeya village',true],
+    ['Nagaram : Assembly of merchants',true],
+    ['Ur : Assembly of the ruling dynasty',false]],
+ ask:'Which of the pairs given above is/are correctly matched?',
+ mode:'code',unit:'pair',
+ e:'The ur was the assembly of an ordinary village, composed of its landholding cultivators. The sabha, governing villages granted to brahmanas, was the most elaborately organised of the three and worked through committees known as variyams charged with irrigation, gardens, justice, temples and gold.'},
+{c:'Ch9 · New Empires and Kingdoms',
+ q:'Consider the following statements about the Uttaramerur inscriptions:',
+ S:[
+    ['They describe selection to village committees by drawing tickets from a pot.',true],
+    ['A person who had not submitted accounts of a previous term was disqualified.',true],
+    ['They belong to the reign of the Chola ruler Parantaka I.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The procedure specified age limits, property and learning qualifications, a bar on those who had served within the previous three years, and disqualification for failing to render accounts, all administered through a public drawing of lots by a young boy. It is sophisticated local self-government, though participation was restricted to qualified propertied men rather than being open to all.'},
+{c:'Ch9 · New Empires and Kingdoms',
+ q:'A subordinate ruler who retained his own territory, army and revenue while owing tribute and troops to an overlord was known as a:',
+ o:[
+    'Uparika',
+    'Vishayapati',
+    'Nagaraka',
+    'Samanta'],
+ a:3,
+ e:'The samanta attended the overlord\'s court, brought gifts and supplied troops when summoned, but declared independence whenever the overlord weakened. An uparika governed a province and a vishayapati a district, while a nagaraka administered a city, so all three were officers rather than subordinate rulers in their own right.'},
+{c:'Ch9 · New Empires and Kingdoms',
+ q:'Consider the following statements about the Gupta period:',
+ S:[
+    ['Skandagupta repelled the Huna invasions and repaired the Sudarshana lake.',true],
+    ['The earliest epigraphic record of sati in India belongs to this period.',true],
+    ['Fa Xian records that chandalas had to signal their approach on entering a town.',true]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'These facts complicate the golden age label, which was itself a product of nationalist historiography written partly to answer colonial claims of Indian backwardness. The period produced exceptional literature, science and art while caste rigidity intensified and the position of women declined, so the achievement and the constraint must be stated together.'},
+{c:'Ch9 · New Empires and Kingdoms',
+ q:'The Arab conquest of Sindh under Muhammad bin Qasim, which defeated Raja Dahir, took place in:',
+ o:[
+    '712 CE',
+    '612 CE',
+    '812 CE',
+    '912 CE'],
+ a:0,
+ e:'The political consequences within the subcontinent were limited and largely confined to Sindh, but the contact proved intellectually significant. Indian mathematics and astronomy, including the decimal numeral system and the work of Brahmagupta, passed to the Arab world through this channel and thence reached Europe as the so-called Arabic numerals.'},
+
+/* ============ Ch10 · Buildings, Paintings and Books ============ */
+{c:'Ch10 · Buildings, Paintings and Books',
+ q:'Consider the following pairs:',
+ head:'Part of a stupa : Description',
+ S:[
+    ['Anda : The hemispherical dome containing the relic chamber',true],
+    ['Harmika : The square railing set above the dome',true],
+    ['Torana : The path along which devotees walk around the stupa',false]],
+ ask:'Which of the pairs given above is/are correctly matched?',
+ mode:'code',unit:'pair',
+ e:'The torana is the ornately carved gateway set at the cardinal directions; the circumambulatory path is the pradakshina patha, enclosed by a railing called the vedika. Worship at a stupa consists of walking around it, so the carvings on the railings and gateways were designed to unfold as a narrative to a moving viewer.'},
+{c:'Ch10 · Buildings, Paintings and Books',
+ q:'In early Buddhist art, the first sermon at Sarnath was conventionally represented by which symbol?',
+ o:[
+    'The riderless horse',
+    'The wheel',
+    'The lotus',
+    'The empty throne'],
+ a:1,
+ e:'For roughly four centuries Buddhist art avoided depicting the Buddha in human form and used symbols instead, with each standing for a particular event: the bodhi tree for the enlightenment, the stupa for the mahaparinirvana, the riderless horse for the great departure and the wheel for the first sermon.'},
+{c:'Ch10 · Buildings, Paintings and Books',
+ q:'Consider the following statements about the Ajanta caves:',
+ S:[
+    ['Their paintings were executed in the tempera technique on dried plaster.',true],
+    ['They include both chaitya halls and viharas and are entirely Buddhist.',true],
+    ['They contain Buddhist, Hindu and Jain caves side by side.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'It is Ellora that contains caves of three religions carved into a single cliff over several centuries; Ajanta is Buddhist throughout. The tempera distinction matters because in true fresco the pigment is applied to wet plaster, whereas at Ajanta the plaster was allowed to dry first and pigment applied with a binding medium.'},
+{c:'Ch10 · Buildings, Paintings and Books',
+ q:'Consider the following statements about the Kailashnatha temple at Ellora:',
+ S:[
+    ['It was carved from a single mass of rock, working downward from the top.',true],
+    ['It was executed under the Rashtrakuta ruler Krishna I.',true],
+    ['It was assembled course by course in the manner of a structural temple.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Roughly two hundred thousand tonnes of rock were removed to realise it, and because stone cannot be added back the entire design had to be resolved before the first cut was made. This is architecture achieved by subtraction rather than construction, which is what distinguishes it from every structural temple of the period.'},
+{c:'Ch10 · Buildings, Paintings and Books',
+ q:'The innermost sanctum of a temple, housing the principal image, is termed the:',
+ o:[
+    'Ardhamandapa',
+    'Mahamandapa',
+    'Garbhagriha',
+    'Antarala'],
+ a:2,
+ e:'Garbhagriha means womb-house and denotes the small, dark chamber that only the priest ordinarily enters. The antarala is the vestibule linking it to the hall, while the ardhamandapa and mahamandapa are respectively the entrance porch and the principal pillared hall in which devotees gather.'},
+{c:'Ch10 · Buildings, Paintings and Books',
+ q:'Consider the following statements distinguishing the Nagara and Dravida temple styles:',
+ S:[
+    ['The Nagara tower is curvilinear while the Dravida tower is a stepped pyramid.',true],
+    ['Dravida temples are typically enclosed by a boundary wall with gateway towers.',true],
+    ['The amalaka is a characteristic crowning element of the Dravida vimana.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The amalaka, a ribbed disc-shaped stone, crowns the Nagara shikhara. A further terminological trap is that in the southern style the tower over the sanctum is called the vimana, and the word shikhara refers only to the small crowning element placed on top of it.'},
+{c:'Ch10 · Buildings, Paintings and Books',
+ q:'Consider the following statements about Mahabalipuram:',
+ S:[
+    ['The Pancha Rathas are monolithic, each carved from a single boulder.',true],
+    ['Each of the rathas is executed in a different architectural style.',true],
+    ['The Shore Temple is a structural temple rather than a rock-cut one.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The rathas function in effect as an architectural sample book in stone, preserving the experiments from which the mature southern temple emerged. The Pallava sequence runs from rock-cut cave shrines under Mahendravarman to monolithic rathas under Mamalla and then to structural temples under Rajasimha, and it is the standard illustration of how temple architecture evolved.'},
+{c:'Ch10 · Buildings, Paintings and Books',
+ q:'Consider the following pairs:',
+ head:'Work : Author',
+ S:[
+    ['Abhijnana Shakuntalam : Kalidasa',true],
+    ['Panchatantra : Vishnu Sharma',true],
+    ['Mrichchhakatika : Banabhatta',false]],
+ ask:'Which of the pairs given above is/are correctly matched?',
+ mode:'code',unit:'pair',
+ e:'The Mrichchhakatika, or Little Clay Cart, is by Shudraka and is unusual for centring on ordinary characters rather than royalty; Banabhatta wrote the Harshacharita and Kadambari. The Panchatantra became one of the most widely translated works in world literature, passing through Persian and Arabic into every major European language.'},
+{c:'Ch10 · Buildings, Paintings and Books',
+ q:'Consider the following statements about Aryabhata:',
+ S:[
+    ['He explained eclipses as caused by shadows rather than by a demon.',true],
+    ['He held that the earth stands motionless while the heavens revolve about it.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Aryabhata stated the opposite, holding that the earth rotates on its axis and that the apparent westward movement of the stars follows from this. He also gave a value for pi which he described as asanna, meaning approaching, indicating an understanding that it could not be exact, and he calculated the earth\'s circumference to within a fraction of a percent of the modern figure.'},
+{c:'Ch10 · Buildings, Paintings and Books',
+ q:'The first systematic rules for arithmetic with zero and with negative numbers were set out by:',
+ o:[
+    'Varahamihira',
+    'Bhaskara II',
+    'Baudhayana',
+    'Brahmagupta'],
+ a:3,
+ e:'Brahmagupta laid down these rules in the Brahmasphutasiddhanta of 628 CE, treating negatives as debts and positives as fortunes. Varahamihira compiled the Brihat Samhita, Bhaskara II wrote the Siddhanta Shiromani including the Lilavati, and Baudhayana composed the Sulbasutras, which contain a statement of the theorem later named after Pythagoras.'},
+{c:'Ch10 · Buildings, Paintings and Books',
+ q:'Consider the following pairs:',
+ head:'Text : Field with which it is chiefly concerned',
+ S:[
+    ['Charaka Samhita : Medicine',true],
+    ['Sushruta Samhita : Surgery',true],
+    ['Natyashastra : Astronomy',false]],
+ ask:'Which of the pairs given above is/are correctly matched?',
+ mode:'code',unit:'pair',
+ e:'The Natyashastra of Bharata is the foundational treatise on drama, dance, music and aesthetics, and is the source of the theory of rasa on which the Indian classical dance forms rest. Sushruta is called the father of surgery and describes some three hundred procedures, including reconstruction of the nose from a skin flap.'},
+{c:'Ch10 · Buildings, Paintings and Books',
+ q:'The resistance of the Mehrauli iron pillar to corrosion is principally attributed to:',
+ o:[
+    'Its unusually high phosphorus content',
+    'Its unusually high manganese content',
+    'A surface coating of molten tin applied to it',
+    'A surface coating of beeswax renewed yearly'],
+ a:0,
+ e:'The phosphorus content, together with the absence of sulphur and magnesium and the alternating wet and dry conditions of Delhi, produced a thin protective passive layer over the surface. The pillar is attributed to a king named Chandra, generally identified with Chandragupta II, and forge-welding a mass of this size was itself a considerable achievement.'},
+{c:'Ch10 · Buildings, Paintings and Books',
+ q:'Consider the following statements about the great stupas:',
+ S:[
+    ['Bharhut is executed in white marble and is the latest of the three great stupas.',false],
+    ['The gateways of Sanchi were carved under the Mauryas before the stupa was enlarged.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'It is Amaravati that is executed in white marble, while Bharhut belongs to the Shunga period and preserves the earliest extensive narrative relief sculpture, its scenes accompanied by inscribed labels. Sanchi was begun by Ashoka and enlarged in stone by the Shungas, and its celebrated carved gateways were added later still, under the Satavahanas.'},
+{c:'Ch10 · Buildings, Paintings and Books',
+ q:'Consider the following statements about chaityas and viharas:',
+ S:[
+    ['A chaitya is a prayer hall, usually apsidal, containing a stupa at its far end.',true],
+    ['A vihara is a monastery, with cells cut around a central hall.',true],
+    ['Stone ribs carved in chaitya ceilings imitate an earlier wooden architecture.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The imitation of timber in stone is valuable evidence because it preserves the form of a wooden architecture that has entirely perished, the same point illustrated by the Lomas Rishi cave facade of the Mauryan period. Karle is generally regarded as the largest and finest of the surviving chaitya halls.'}
+
+];
+
+/* ---------- Engine (identical across classes) ---------- */
+function shuffle(arr){const a=arr.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+
+/* Canonical Prelims answer-code sets. For an S-question the statements are
+   reshuffled on every attempt and the correct code is worked out from which
+   ones landed where — so neither the option nor the position of the false
+   statement can be memorised. */
+const SET_CODE3=["1 and 2 only","2 and 3 only","1 and 3 only","1, 2 and 3"];
+const SET_CODE2=["1 only","2 only","Both 1 and 2","Neither 1 nor 2"];
+const SET_COUNT=["Only one","Only two","All three","None"];
+const SET_COUNT4=["Only one","Only two","Only three","All four"];
+function buildCode(mode,n,trueIdx){
+  const c=trueIdx.length;
+  if(mode==='count'){
+    const set=n===4?SET_COUNT4:SET_COUNT;
+    const text=c===0?'None':c===1?'Only one':c===2?'Only two':c===3?(n===3?'All three':'Only three'):'All four';
+    return {set:set,text:text};
+  }
+  if(n===2){
+    const text=c===2?'Both 1 and 2':c===0?'Neither 1 nor 2':(trueIdx[0]===1?'1 only':'2 only');
+    return {set:SET_CODE2,text:text};
+  }
+  const text=c===3?'1, 2 and 3':trueIdx[0]+' and '+trueIdx[1]+' only';
+  return {set:SET_CODE3,text:text};
+}
+function joinList(a){return a.length===1?String(a[0]):a.slice(0,-1).join(', ')+' and '+a[a.length-1];}
+function verdictLine(n,trueIdx,unit){
+  const U=unit==='pair'?'pair':'statement', Uc=U.charAt(0).toUpperCase()+U.slice(1);
+  const all=[];for(let i=1;i<=n;i++)all.push(i);
+  const f=all.filter(function(i){return trueIdx.indexOf(i)<0;});
+  if(f.length===0)return 'All the '+U+'s here are correct.';
+  if(trueIdx.length===0)return 'None of the '+U+'s here is correct.';
+  return Uc+(trueIdx.length===1?' ':'s ')+joinList(trueIdx)+(trueIdx.length===1?' is':' are')+' correct; '+
+         U+(f.length===1?' ':'s ')+joinList(f)+(f.length===1?' is not.':' are not.');
+}
+function buildSession(pool){return shuffle(pool).map(function(item){
+  let lines=item.L,options,correctText,auto='';
+  if(item.S){
+    const st=shuffle(item.S), n=st.length, trueIdx=[];
+    lines=st.map(function(s){return s[0];});
+    st.forEach(function(s,i){if(s[1])trueIdx.push(i+1);});
+    const built=buildCode(item.mode||'code',n,trueIdx);
+    options=built.set.slice(); correctText=built.text;
+    auto=verdictLine(n,trueIdx,item.unit)+' ';
+  } else { options=item.o.slice(); correctText=item.o[item.a]; }
+  const order=shuffle(options.map(function(text,i){return {text:text,i:i};}));
+  return {chapter:item.c,question:item.q,head:item.head,lines:lines,ask:item.ask,
+          options:order.map(function(o){return o.text;}),
+          correct:order.findIndex(function(o){return o.text===correctText;}),
+          explain:auto+item.e};
+});}
+let session=[],current=0,answers=[],startTime=null,timerInterval=null,reviewMode=false,activeScope="";
+const el=id=>document.getElementById(id);
+const screens={menu:el('menu'),quiz:el('quiz'),result:el('result')};
+function show(name){Object.keys(screens).forEach(k=>screens[k].classList.toggle('is-active',k===name));}
+el('courseEyebrow').textContent=COURSE.eyebrow; el('courseTitle').textContent=COURSE.title; el('courseLede').textContent=COURSE.lede;
+function chapterCount(name){return QUESTIONS.filter(q=>q.c===name).length;}
+function buildMenu(){
+  const list=el('lessonList'); list.innerHTML='';
+  const combined=document.createElement('button');
+  combined.className='lesson-card combined'; combined.type='button';
+  combined.innerHTML='<span class="lesson-num">★</span><span class="lesson-body"><span class="lesson-title">Full Syllabus — Combined</span><span class="lesson-meta">All '+CHAPTERS.length+' lessons · '+QUESTIONS.length+' questions, shuffled</span></span><span class="lesson-go">→</span>';
+  combined.addEventListener('click',()=>startQuiz(null)); list.appendChild(combined);
+  CHAPTERS.forEach((name,idx)=>{
+    const shortTitle=name.replace(/^Ch\d+ · /,'');
+    const btn=document.createElement('button'); btn.className='lesson-card'; btn.type='button';
+    const num=document.createElement('span'); num.className='lesson-num'; num.textContent=String(idx+1);
+    const body=document.createElement('span'); body.className='lesson-body';
+    const t=document.createElement('span'); t.className='lesson-title'; t.textContent=shortTitle;
+    const m=document.createElement('span'); m.className='lesson-meta'; m.textContent=chapterCount(name)+' questions';
+    body.appendChild(t); body.appendChild(m);
+    const go=document.createElement('span'); go.className='lesson-go'; go.textContent='→';
+    btn.appendChild(num); btn.appendChild(body); btn.appendChild(go);
+    btn.addEventListener('click',()=>startQuiz(name)); list.appendChild(btn);
+  });
+}
+function formatTime(sec){const m=Math.floor(sec/60).toString().padStart(2,'0');const s=Math.floor(sec%60).toString().padStart(2,'0');return m+':'+s;}
+function startTimer(){startTime=Date.now();clearInterval(timerInterval);timerInterval=setInterval(()=>{el('timer').textContent=formatTime((Date.now()-startTime)/1000);},1000);}
+function stopTimer(){clearInterval(timerInterval);}
+function startQuiz(chapter){
+  const pool=chapter?QUESTIONS.filter(q=>q.c===chapter):QUESTIONS;
+  activeScope=chapter?chapter.replace(/^Ch\d+ · /,''):"Full Syllabus";
+  session=buildSession(pool); answers=new Array(session.length).fill(null); current=0; reviewMode=false;
+  show('quiz'); el('timer').textContent='00:00'; startTimer(); renderQuestion();
+}
+function renderStem(item){
+  const box=el('qblock'); box.innerHTML='';
+  const stem=document.createElement('p'); stem.className='question'; stem.textContent=item.question; box.appendChild(stem);
+  if(item.head){const h=document.createElement('p'); h.className='stmt-head'; h.textContent=item.head; box.appendChild(h);}
+  if(item.lines&&item.lines.length){
+    const ol=document.createElement('ul'); ol.className='stmt-list';
+    item.lines.forEach((line,i)=>{
+      const li=document.createElement('li');
+      const n=document.createElement('span'); n.className='sn'; n.textContent=(i+1)+'.';
+      const t=document.createElement('span'); t.className='st';
+      const split=line.indexOf(' : ');
+      if(split>-1){
+        t.textContent=line.slice(0,split);
+        const r=document.createElement('span'); r.className='sr'; r.textContent=' — '+line.slice(split+3);
+        t.appendChild(r);
+      } else { t.textContent=line; }
+      li.appendChild(n); li.appendChild(t); ol.appendChild(li);
+    });
+    box.appendChild(ol);
+  }
+  if(item.ask){const a=document.createElement('p'); a.className='ask'; a.textContent=item.ask; box.appendChild(a);}
+}
+function renderQuestion(){
+  const item=session[current]; const chosen=answers[current]; const reveal=chosen!==null||reviewMode;
+  el('chapterTag').textContent=item.chapter; el('counter').textContent=(current+1)+' / '+session.length;
+  el('progressFill').style.width=((current+1)/session.length*100)+'%';
+  renderStem(item);
+  const optsBox=el('options'); optsBox.innerHTML=''; const letters=['A','B','C','D','E'];
+  item.options.forEach((opt,i)=>{
+    const btn=document.createElement('button'); btn.className='option'; btn.type='button';
+    const l=document.createElement('span'); l.className='opt-letter'; l.textContent=letters[i];
+    const t=document.createElement('span'); t.className='opt-text'; t.textContent=opt;
+    btn.appendChild(l); btn.appendChild(t);
+    if(reveal){btn.disabled=true; if(i===item.correct)btn.classList.add('correct'); else if(i===chosen)btn.classList.add('incorrect');}
+    btn.addEventListener('click',()=>selectOption(i)); optsBox.appendChild(btn);
+  });
+  const fb=el('feedback');
+  if(reveal){
+    fb.hidden=false; let verdict,cls;
+    if(chosen===null){verdict='Skipped.';cls='bad';} else if(chosen===item.correct){verdict='Correct.';cls='good';} else {verdict='Not quite.';cls='bad';}
+    fb.className='feedback '+cls;
+    fb.innerHTML=''; const v=document.createElement('span'); v.className='verdict'; v.textContent=verdict;
+    fb.appendChild(v); fb.appendChild(document.createTextNode(' '+item.explain));
+  } else { fb.hidden=true; }
+  el('prevBtn').disabled=current===0;
+  const nextBtn=el('nextBtn');
+  nextBtn.textContent = reviewMode ? (current===session.length-1?'Back to results':'Next →') : (current===session.length-1?'Finish':'Next →');
+  el('options').scrollIntoView&&el('qblock').parentElement.scrollTo({top:0});
+}
+function selectOption(i){ if(reviewMode||answers[current]!==null)return; answers[current]=i; renderQuestion(); }
+function finishQuiz(){
+  stopTimer(); const elapsed=(Date.now()-startTime)/1000; let correctCount=0; const stats={};
+  session.forEach((item,i)=>{ if(!stats[item.chapter])stats[item.chapter]={correct:0,total:0}; stats[item.chapter].total++; if(answers[i]===item.correct){correctCount++;stats[item.chapter].correct++;} });
+  show('result');
+  el('resultScope').textContent=activeScope+' · '+session.length+' questions';
+  el('scoreText').textContent=correctCount+' / '+session.length; el('timeText').textContent=formatTime(elapsed);
+  el('scorePct').textContent=Math.round(correctCount/session.length*100)+'%';
+  const body=el('breakdownBody'); body.innerHTML='';
+  CHAPTERS.filter(c=>stats[c]).forEach(c=>{
+    const s=stats[c]; const row=document.createElement('tr');
+    const td1=document.createElement('td'); td1.textContent=c.replace(/^Ch\d+ · /,'');
+    const p=Math.round(s.correct/s.total*100);
+    const bar=document.createElement('div'); bar.className='bd-bar';
+    const fill=document.createElement('span'); fill.style.width=p+'%'; bar.appendChild(fill); td1.appendChild(bar);
+    const td2=document.createElement('td'); td2.className='num'; td2.textContent=s.correct+' / '+s.total;
+    row.appendChild(td1); row.appendChild(td2); body.appendChild(row);
+  });
+}
+function enterReview(){reviewMode=true;current=0;show('quiz');renderQuestion();}
+function exitReviewToResult(){reviewMode=false;show('result');}
+el('prevBtn').addEventListener('click',()=>{if(current>0){current--;renderQuestion();}});
+el('nextBtn').addEventListener('click',()=>{
+  if(reviewMode){ if(current===session.length-1)exitReviewToResult(); else {current++;renderQuestion();} }
+  else { if(current===session.length-1)finishQuiz(); else {current++;renderQuestion();} }
+});
+el('reviewBtn').addEventListener('click',enterReview);
+el('restartBtn').addEventListener('click',()=>{ const chapter=activeScope==="Full Syllabus"?null:CHAPTERS.find(c=>c.replace(/^Ch\d+ · /,'')===activeScope); startQuiz(chapter); });
+el('menuBtn').addEventListener('click',()=>{stopTimer();show('menu');});
+document.addEventListener('keydown',(e)=>{
+  if(!screens.quiz.classList.contains('is-active'))return;
+  if(['1','2','3','4','5'].includes(e.key)&&!reviewMode){selectOption(parseInt(e.key,10)-1);}
+  else if(e.key==='ArrowRight'||e.key==='Enter'){el('nextBtn').click();}
+  else if(e.key==='ArrowLeft'){el('prevBtn').click();}
+});
+buildMenu();
+</script>
