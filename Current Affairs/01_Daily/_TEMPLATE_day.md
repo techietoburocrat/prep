@@ -18,6 +18,11 @@
 
 > 🏛️ **Bodies involved:** *any institution named here gets the five fields from [00_INSTITUTIONS.md](../00_INSTITUTIONS.md) — full form · type + instrument · parent · head · the distinguisher — plus its siblings.*
 
+> 🎯 **Where you can use this:** *tag every place this item can be deployed — GS papers with the specific topic, essay themes, interview angles. Aim for 5–8 tags spanning at least two papers.*
+> `GS-x topic` · `GS-y topic` · `Essay: theme` · `Interview: angle`
+>
+> *In the exam hall there is time to **retrieve** an example, never to **think of** one. Tagging is what makes retrieval possible — and it stops the classic failure of knowing forty schemes and citing the same three.*
+
 **Theme:** · **Static hook:** · **Source:**
 
 ---

@@ -195,10 +195,14 @@ A ~47% score gets your name on the final list. **This is a consistency exam, not
 **Five things worth acting on:**
 
 1. **Optional = 500 marks and the biggest lever in the exam.** The two optional papers alone give an
-   AIR-1 **311 of their 902** written marks — at 61–64% efficiency, far above any GS paper. There is
-   no optional-subject folder in `Mission/` yet. **Picking and starting the optional is the highest-value
-   thing you can do next.** Note the 2025 top-10 spread: Medical Science, Commerce, Anthropology,
-   Economics, Sociology — no single "best" optional. Pick what you can revise fastest.
+   AIR-1 **311 of their 902** written marks — at 61–64% efficiency, far above any GS paper.
+   ✅ **Optional is chosen: Public Administration** (Paper I Administrative Theory, Paper II Indian
+   Administration). ⚠️ **But there is still no `Public Administration/` folder in `Mission/`.** That is
+   now the single biggest structural gap in this repo — 500 marks with zero infrastructure, while
+   Polity and Ethics (its two heaviest overlaps) are already built. **Scaffolding it is the
+   highest-value thing you can do next.** For context on the field: the 2025 top-10 spread was Medical
+   Science, Commerce, Anthropology, Economics, Sociology — no single "best" optional exists, so the
+   Pub Ad choice is sound; what matters now is starting it.
 2. **GS III is nobody's paper.** Even AIR-1s average 105/250. Don't panic at low mocks. But 115+ in
    GS III is a genuine rank-mover *precisely because* it's rare.
 3. **Interview is the highest-efficiency component of all — toppers take ~68% of it.**
@@ -213,6 +217,13 @@ A ~47% score gets your name on the final list. **This is a consistency exam, not
 ---
 
 ## 5. CUT-OFFS — the number that actually decides your fate (General category)
+
+> 🔴 **You are SC category — so this table is the harder benchmark, not your actual line.**
+> The **SC series for 2015–2025** (Prelims, Mains and Final, with the General gap computed) lives in
+> [Geography/00_START_HERE.md § Cut-offs](Geography/00_START_HERE.md). Headline: the SC final cut-off
+> averages **~898 vs General's ~956 — a ~65-mark cushion, about 3% of 2025** — and **the gap is
+> closing fast** (Prelims gap was 16.2 in 2023, 8.7 in 2025, the narrowest ever recorded).
+> **Keep targeting the General numbers below.** Treat the cushion as insurance, never as budget.
 
 | Year | Prelims | /max | Mains written | /max | **Final** | /max | **Final %** |
 |---|---|---|---|---|---|---|---|
