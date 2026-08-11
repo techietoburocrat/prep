@@ -5,7 +5,7 @@
 
 ## 📌 Read This First (2 minutes)
 
-Hi you. Before chapter 1, understand what this book is and how we're going to treat it.
+Hi there. Before chapter 1, understand what this book is and how we're going to treat it.
 
 ### What this book is
 

@@ -136,11 +136,11 @@ The single biggest failure in current affairs is **source overload**: three news
 
 ### ✅ Decided, 3 Aug 2026 — *no newspaper*
 
-you works full-time and has ~45 min in the evening. **He reads no newspaper.** Sourcing is entirely Claude's job; the table above describes what *Claude* reads, not what you reads.
+You work full-time and have ~45 min in the evening. **You read no newspaper.** Sourcing is entirely Claude's job; the table above describes what *Claude* reads, not what you read.
 
 | | |
 |---|---|
-| **you reads** | The weekly compiled brief in [01_Daily/](01_Daily/), one day's portion at a time. Nothing else |
+| **You read** | The weekly compiled brief in [01_Daily/](01_Daily/), one day's portion at a time. Nothing else |
 | **Claude reads** | The week's news + **PIB and the official body pages in [00_SOURCES.md](00_SOURCES.md)** — primary sources preferred over reportage on every item |
 | **Monthly compilation** | Optional now. If a Vision/Insights/Forum PDF is ever dropped in, it gets used as a **cross-check** against the compiled weeks — a way to catch what was missed, not a second thing to read |
 
@@ -248,7 +248,7 @@ Most items are one or the other. A few are both. **Don't write a paragraph where
 | Monthly digests | ⬜ First one due Sun 30 Aug 2026 |
 | Quizzes | ✅ Engine copied, audit passes clean. First bank `2026-08` due Sun 9 Aug |
 | Source decision | ✅ **No newspaper.** Claude compiles from news + primary sources |
-| Operating model | ✅ Claude compiles and files; you reads 45 min/day and takes the Sunday quiz |
+| Operating model | ✅ Claude compiles and files; you read 45 min/day and take the Sunday quiz |
 
 **Next three things, in order:**
 1. **Tonight, 45 min.** Open [Week_01_Aug03-09.md](01_Daily/2026-08_August/Week_01_Aug03-09.md), read **Mon 3 Aug only**, then cover the right column and recall it

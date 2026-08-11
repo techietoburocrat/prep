@@ -4,7 +4,7 @@
 
 > 🔑 **The one-line summary:** together these are **~25–35 Prelims questions — a quarter of the paper**, the single biggest cluster in Prelims, bigger than Polity or History. Plus **~90 of GS-I's 250** and a solid block of GS-III. They are won on **physical geography + the atlas**, not on the number of books finished.
 
-Created 8 August 2026. Merged into one subject **9 August 2026** at your call — *"we are preparing Geography and Environment together, I do not classify things."*
+Created 8 August 2026. Merged into one subject **9 August 2026** by decision — *"we are preparing Geography and Environment together, I do not classify things."*
 
 > ### 🔗 Why the merge is correct, not just convenient
 >

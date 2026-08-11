@@ -17,7 +17,7 @@ Publishing convention:
 |---|---|
 | Source location | `<Subject>/<NN_Folder>/dist/<name>.html`, or `<Subject>/<NN_Folder>/<name>.html` for one-offs |
 | Updating | Republish the **same file path**, or pass the existing URL as `url` — both keep the URL. A new path mints a new URL. |
-| Account | Personal only — `[redacted]`. Never the Delight work account. |
+| Account | Personal account only. Never the work account. |
 
 ---
 
@@ -60,7 +60,7 @@ Quiz `dist/` files are **generated** — edit `Polity/05_Quiz_MCQ/data/<class>.j
 
 | Artifact | URL | Source |
 |---|---|---|
-| UPSC Self-Study Plan — you, CSE 2027 | [09843f75](https://claude.ai/code/artifact/09843f75-6060-4fbb-9bd3-c36b20207b6f) | ⚠️ none |
+| UPSC Self-Study Plan — CSE 2027 | [09843f75](https://claude.ai/code/artifact/09843f75-6060-4fbb-9bd3-c36b20207b6f) | ⚠️ none |
 
 ## Not yet populated
 

@@ -5,7 +5,7 @@
 
 ## 📌 Read This First (2 minutes, seriously)
 
-Hi you. Before you read a single chapter, understand **what this book actually is** and **why you're reading it**.
+Hi there. Before you read a single chapter, understand **what this book actually is** and **why you're reading it**.
 
 ### What this book is
 
