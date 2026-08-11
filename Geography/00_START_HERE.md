@@ -375,12 +375,14 @@ STAGE 7 ── 🗺️ Map work — 15 min EVERY day ............ 18 hrs  ✅ BU
            ✅ 06_Maps/ — 113 items + a 40-week daily rotation
            ← ◄── START THE HABIT TONIGHT: Week 1 Day 1
 
-STAGE 8 ── PYQs ...................................... 32 hrs  🟡 MOSTLY DONE
+STAGE 8 ── PYQs ...................................... 32 hrs  ✅ BUILT
            ✅ MAINS GS-I: 88 questions, 2013–2025, all 13 papers
            ✅ MAINS GS-III: 56 environment/disaster questions
               → 04_PYQ_Mains/00_INDEX.md + 90_Topic_Analysis.md
-           ⚠️ PRELIMS: blocked — needs the official UPSC PDFs
-              → drop them in 03_PYQ_Prelims/papers/ and say so
+           ✅ PRELIMS: 201 questions, all 15 years 2011–2025
+              → 03_PYQ_Prelims/00_INDEX.md
+           ⚠️ 103 of 201 keys missing — download the official UPSC
+              answer keys into 03_PYQ_Prelims/papers/ and say so
 
 STAGE 9 ── Quiz build + consolidation ................ 18 hrs  🟡 STARTED
            ✅ 05_Quiz_MCQ/ — 108 questions in 2 banks, engine

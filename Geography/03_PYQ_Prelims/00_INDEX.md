@@ -1,123 +1,110 @@
 # 📝 GEOGRAPHY + ENVIRONMENT — PRELIMS PYQs
-### Stage 8 · ⚠️ **PARTIALLY COMPLETE — read the honesty note first**
+### Stage 8 · **201 questions, 2011–2025**
 
-[← Geography START HERE](../00_START_HERE.md) · [✅ Mains PYQs (complete)](../04_PYQ_Mains/00_INDEX.md)
+[← Geography START HERE](../00_START_HERE.md) · [Mains PYQs](../04_PYQ_Mains/00_INDEX.md)
 
 ---
 
-## 🔴 WHAT I DID AND DID NOT DO — please read this
+## ✅ WHAT'S HERE
 
-> ⭐ **You asked me to collect the Prelims questions and, if possible, the answer keys.**
+⭐ **201 Geography and Environment questions across all 15 years from 2011 to 2025, with their full option sets.** ⭐ **Sourced verbatim — the wording, the numbered statements and the four options are as published, not paraphrased.**
+
+| Year | Qs | Keys | | Year | Qs | Keys |
+|---|---|---|---|---|---|---|
+| [2011](2011.md) | 18 | ⚠️ 0 | | [2019](2019.md) | 12 | ⚠️ 0 |
+| [2012](2012.md) | 11 | ⚠️ 0 | | [2020](2020.md) | 5 | ✅ 5 |
+| [2013](2013.md) | 20 | ⚠️ 2 | | [2021](2021.md) | 12 | ⚠️ 0 |
+| [2014](2014.md) | 20 | ✅ 20 | | [2022](2022.md) | 13 | ⚠️ 0 |
+| [2015](2015.md) | 19 | ✅ 19 | | [2023](2023.md) | 13 | ✅ 13 |
+| [2016](2016.md) | 7 | ✅ 6 | | [2024](2024.md) | 18 | ⚠️ 0 |
+| [2017](2017.md) | 9 | ✅ 9 | | [2025](2025.md) | 14 | ✅ 14 |
+| [2018](2018.md) | 10 | ✅ 10 | | **Total** | **201** | **98** |
+
+⭐ **Every question is tagged by topic and every answer sits behind a collapsible block, so the file works as a practice paper rather than a reading list.**
+
+---
+
+## ⚠️ THE KEYS — 98 of 201, and why I did not fill the rest
+
+⭐ **The compilation that carried the verbatim questions marks the correct option for only about half the years.** ⭐ **The other 103 questions are marked** ⚠️ **"Key not given in the source" rather than being filled in from elsewhere.**
+
+> 🔴 ⭐⭐ **That was a deliberate choice, and here is the evidence for it.**
 >
-> ⭐⭐ **I could not source verbatim MCQs with verified keys, and I have NOT written them from memory.**
+> ⭐ **I found two coaching sites that publish year-wise answer keys, and cross-checked them against each other for 2022:**
+>
+> | 2022 question | ⭐ Source A | ⭐ Source B |
+> |---|---|---|
+> | Cloud effects on radiation | **(d)** | **(b)** |
+> | Tea-producing states | **(c)** | **(b)** |
+> | West African lake that dried up | (b) | (b) ✅ |
+> | Mountain peak pairs | (b) | (b) ✅ |
+>
+> ⭐⭐ **They disagree on half the sample.** ⭐ **Their question numbering also differs from the compilation's, because each site filters and orders the geography subset its own way — so merging keys by position would silently attach the wrong answer to the wrong question.**
+>
+> 👉 ⭐⭐ **A missing key costs you nothing. ⭐ A wrong key installs a false fact that you then defend in the exam hall.** ⭐ **So the gaps stay visible.**
 
-⭐ **Why not, stated plainly:** ⭐ **a Prelims MCQ is only useful if the four options and the key are EXACT.** ⭐ **Reconstructing them from memory would produce plausible-looking questions with wrong options and wrong keys — and you would study them believing they were real.** ⭐⭐ **A wrong answer key doesn't just waste time; it installs a false fact that you then defend in the exam hall.** ⭐ **That is a worse outcome than an empty folder, so I left it empty rather than fill it with something that looks right.**
+⭐ *This is the same failure mode your [target sheet](../../00_TARGET_Topper_Marks.md) already documents for cut-off tables, where one source's rows are systematically shifted by a year. **Coaching secondary data needs cross-checking every time.***
 
-⭐ **What blocked the sourcing:**
-- ⭐ **The large question banks (UnlockIAS, Testbook, SuperKalam) render their questions via JavaScript** — the fetch returns the page furniture and the topic counts, not the question text.
-- ⭐ **Mrunal returned HTTP 403.**
-- ⭐ **The official UPSC question-paper PDFs are the authoritative source but are not reachable through my fetch tool.**
+### ✅ How to close the gap — 20 minutes
 
-⭐ **The Mains half had no such problem** — those questions are published as plain text in multiple compilations and I was able to triangulate them across three independent sources. ⭐ **[That folder is complete](../04_PYQ_Mains/00_INDEX.md).**
+⭐ **UPSC publishes the official final answer keys after each cycle closes.** ⭐ **They are the only keys worth trusting.**
 
----
-
-## ✅ HOW TO FINISH THIS — the concrete route
-
-> ⭐⭐ **This is a 20-minute download job for you, then I can do the rest.**
-
-| Step | ⭐ What to do |
+| Step | Action |
 |---|---|
-| ⭐ **1** | ⭐ **Go to ⭐ [upsc.gov.in → Examination → Previous Question Papers](https://upsc.gov.in/examinations/previous-question-papers)** |
-| ⭐ **2** | ⭐ **Download the ⭐ Civil Services (Preliminary) ⭐ General Studies Paper-I PDFs** for each year you want |
-| ⭐ **3** | ⭐ **Also download the ⭐ ANSWER KEYS** — UPSC publishes the official final keys after the cycle closes ⭐ *(these are the only keys worth trusting; coaching keys disagree with each other and with UPSC every year)* |
-| ⭐ **4** | ⭐ **Drop them into ⭐ `Geography/03_PYQ_Prelims/papers/`** |
-| ⭐ **5** | ⭐ **Tell me they're there.** ⭐ **I'll extract the geography and environment questions, tag them by topic, link each to the note that answers it, and build year files in the same shape as [the Mains folder](../04_PYQ_Mains/00_INDEX.md)** |
-
-⭐ *Alternative if you'd rather not download 15 PDFs: your [Polity folder](../../Polity/03_PYQ_Prelims/00_INDEX.md) has Prelims 2013–2023 already built — tell me where those came from and I'll use the same source.*
+| ⭐ **1** | Go to ⭐ **[upsc.gov.in → Examination → Previous Question Papers](https://upsc.gov.in/examinations/previous-question-papers)** and the **Answer Keys** section |
+| ⭐ **2** | Download the **CS(P) GS Paper-I** keys for ⭐ **2011, 2012, 2013, 2019, 2021, 2022 and 2024** — those are the years with gaps |
+| ⭐ **3** | Drop them into ⭐ **[papers/](papers/)** and tell me |
+| ⭐ **4** | I'll fill all 103 gaps by matching on question text rather than position, and flag anything ambiguous |
 
 ---
 
-## 📊 WHAT I *CAN* TELL YOU RELIABLY — the shape of the paper
+## 📊 THE TOPIC DISTRIBUTION — measured on this corpus
 
-⭐ **This section is real, sourced data. ⭐ Use it to plan; you just can't practise from it yet.**
+⭐ **Tags counted across all 201 questions. ⭐ A question can carry more than one tag, so the column sums above 201.**
 
-### ⭐⭐ Geography questions per year
-
-| Year | theIASHub | PWOnlyIAS |
-|---|---|---|
-| 2025 | — | **14** |
-| 2024 | **20** | 18 |
-| 2023 | **16** | 16 ✅ *agree* |
-| 2022 | **16** | ⚠️ **8** |
-| 2021 | **10** | 14 |
-| 2020 | **10** | — |
-| 2019 | **14** | — |
-| 2018 | **10** | — |
-
-⚠️ ⭐ **The 2022 row disagrees by a factor of two — because there is ⭐ NO OFFICIAL SUBJECT TAGGING. ⭐ Every such table is a coaching institute's private judgement about which bucket a question belongs in.** *This is documented in [your START_HERE](../00_START_HERE.md) too.*
-
-> ⭐⭐ **The defensible conclusion: ⭐ Geography is ~10–20 questions a year, ~15 average, never fewer than 8. ⭐ Combined with Environment (~10–22/yr), the merged pair is reliably ⭐ 25–35 questions — a quarter of the paper.**
-
-### ⭐⭐⭐ Topic distribution — 503 Geography questions, 1995–2025
-
-⭐ **This is the most useful table on the page.** *Source: [UnlockIAS](https://www.unlockias.in/upsc-prelims-pyq/geography), 503 questions across 25 sub-topics.*
-
-| Rank | ⭐ Sub-topic | ⭐ Questions | ⭐ Your note |
+| Rank | ⭐ Topic | ⭐ Count | ⭐ Your note |
 |---|---|---|---|
-| ⭐ **1** | ⭐⭐ **Atmosphere & Climatology** | ⭐ **64** | [Cl.11 Ch.8–12](../01_NCERT/Class_11_Fundamentals_of_Physical_Geography/Notes/10_Atmospheric_Circulation_and_Weather_Systems.md) · [Leong Part B](../02_Standard_Reference_Books/GC_Leong/Part_B_Climate_Types/00_Comparison_Matrix.md) · [Leong A12](../02_Standard_Reference_Books/GC_Leong/Part_A_Physical/12_Weather_Elements_and_Local_Winds.md) |
-| ⭐ **2** | ⭐⭐ **Population & Demography** | ⭐ **54** | [Cl.12 *Fundamentals* Ch.2–4](../01_NCERT/Class_12_Fundamentals_of_Human_Geography/Notes/02_The_World_Population.md) · [Cl.12 *India* Ch.1–3](../01_NCERT/Class_12_India_People_and_Economy/Notes/01_Population.md) |
-| ⭐ **3** | ⭐⭐ **Economic & Mineral Geography** | ⭐ **47** | [Cl.12 *India* Ch.7–8](../01_NCERT/Class_12_India_People_and_Economy/Notes/07_Mineral_and_Energy_Resources.md) |
-| ⭐ **4** | ⭐⭐ **Indian Rivers & Water Resources** | ⭐ **46** | [Cl.11 *India* Ch.3](../01_NCERT/Class_11_India_Physical_Environment/Notes/03_Drainage_System.md) · [Leong A4](../02_Standard_Reference_Books/GC_Leong/Part_A_Physical/04_River_Landforms.md) |
-| ⭐ **5** | ⭐⭐ **World Political Geography & Borders** | ⭐ **44** | 🗺️ **[06_Maps](../06_Maps/) — this is a MAP topic, not a reading topic** |
-| ⭐ **6** | ⭐⭐ **Indian Agriculture & Land Use** | ⭐ **44** | [Cl.12 *India* Ch.5](../01_NCERT/Class_12_India_People_and_Economy/Notes/05_Land_Resources_and_Agriculture.md) |
-| ⭐ **7** | ⭐ **Indian Physical Geography** | ⭐ **42** | [Cl.11 *India* Ch.2](../01_NCERT/Class_11_India_Physical_Environment/Notes/02_Structure_and_Physiography.md) |
-| ⭐ **8** | ⭐ **World Physical Geography** | ⭐ **32** | [Leong Part A](../02_Standard_Reference_Books/GC_Leong/Part_A_Physical/) |
-| ⭐ **9** | ⭐ **Transport & Infrastructure** | ⭐ **27** | [Cl.12 *India* Ch.10](../01_NCERT/Class_12_India_People_and_Economy/Notes/10_Transport_and_Communication.md) |
-| ⭐ **10** | ⭐ **Astronomy & Earth–Sun System** | ⭐ **24** | [Leong A1](../02_Standard_Reference_Books/GC_Leong/Part_A_Physical/01_Earth_Universe_Motions_and_Time.md) |
-| ⭐ **11** | ⭐ **Geomorphology** | ⭐ **23** | [Cl.11 Ch.6–7](../01_NCERT/Class_11_Fundamentals_of_Physical_Geography/Notes/07_Landforms_and_their_Evolution.md) · [Leong A2, A5–A8](../02_Standard_Reference_Books/GC_Leong/Part_A_Physical/) |
-| ⭐ **12** | ⭐ **Oceanography** | ⭐ **19** | [Leong A11](../02_Standard_Reference_Books/GC_Leong/Part_A_Physical/11_Oceans_Currents_Tides_Salinity.md) |
-| | *+ 13 smaller sub-topics* | | |
+| ⭐ **1** | ⭐⭐ **Political & Map** | **47** | 🗺️ **[06_Maps](../06_Maps/00_INDEX.md) — this is MAP work, not reading** |
+| ⭐ **2** | ⭐⭐ **Resources & Industry** | **45** | [Cl.12 *India* Ch.7–8](../01_NCERT/Class_12_India_People_and_Economy/Notes/07_Mineral_and_Energy_Resources.md) |
+| ⭐ **3** | ⭐⭐ **Climatology** | **44** | [Cl.11 Ch.8–12](../01_NCERT/Class_11_Fundamentals_of_Physical_Geography/Notes/10_Atmospheric_Circulation_and_Weather_Systems.md) · [Leong Part B](../02_Standard_Reference_Books/GC_Leong/Part_B_Climate_Types/00_Comparison_Matrix.md) |
+| ⭐ **4** | ⭐⭐ **Rivers & Water** | **39** | [Cl.11 *India* Ch.3](../01_NCERT/Class_11_India_Physical_Environment/Notes/03_Drainage_System.md) · [Leong A4](../02_Standard_Reference_Books/GC_Leong/Part_A_Physical/04_River_Landforms.md) |
+| ⭐ **5** | ⭐ **Agriculture & Soils** | **35** | [Cl.12 *India* Ch.5](../01_NCERT/Class_12_India_People_and_Economy/Notes/05_Land_Resources_and_Agriculture.md) · [Cl.11 *India* Ch.6](../01_NCERT/Class_11_India_Physical_Environment/Notes/06_Soils.md) |
+| ⭐ **6** | ⭐ **Environment** | **27** | [Shankar](../02_Standard_Reference_Books/Shankar_IAS_Environment/00_INDEX.md) |
+| ⭐ **7** | ⭐ **Earth & Universe** | **26** | [Leong A1](../02_Standard_Reference_Books/GC_Leong/Part_A_Physical/01_Earth_Universe_Motions_and_Time.md) |
+| ⭐ **8** | ⭐ **Oceanography** | **22** | [Leong A11](../02_Standard_Reference_Books/GC_Leong/Part_A_Physical/11_Oceans_Currents_Tides_Salinity.md) |
+| ⭐ **9** | ⭐ **Geomorphology** | **20** | [Cl.11 Ch.6–7](../01_NCERT/Class_11_Fundamentals_of_Physical_Geography/Notes/07_Landforms_and_their_Evolution.md) |
+| ⭐ **10** | **Population & Society** | **8** | [Cl.12 *Fundamentals* Ch.2–4](../01_NCERT/Class_12_Fundamentals_of_Human_Geography/Notes/02_The_World_Population.md) |
 
-> ⭐⭐⭐ **THE FOUR THINGS THIS TABLE TELLS YOU — and they are genuinely actionable right now:**
+> ⭐⭐⭐ **THE FINDING THAT SHOULD CHANGE WHAT YOU DO: ⭐ "Political & Map" is the single largest category at 47 of 201.**
 >
-> ⭐ **1. ⭐ CLIMATOLOGY IS #1 IN BOTH PRELIMS AND MAINS.** ⭐ **[Cl.11 Ch.10](../01_NCERT/Class_11_Fundamentals_of_Physical_Geography/Notes/10_Atmospheric_Circulation_and_Weather_Systems.md) and [Leong Part B](../02_Standard_Reference_Books/GC_Leong/Part_B_Climate_Types/00_Comparison_Matrix.md) are the highest-return files you own.**
+> ⭐ **It is also the only category that reading cannot touch.** ⭐ **You cannot revise your way to knowing which countries the Andes cross, which lakes the equator passes through, or which rivers join the Ganga downstream of Prayagraj from west to east — all three of which were actually asked.**
 >
-> ⭐ **2. ⭐⭐ POPULATION & DEMOGRAPHY IS #2 — at 54 questions — and it is almost never asked in Mains.** ⭐⭐ **This is a Prelims-only goldmine that candidates systematically under-prepare because it feels less "geographical."** ⭐ *Your [Cl.12 human geography notes](../01_NCERT/Class_12_Fundamentals_of_Human_Geography/Notes/00_Index.md) are worth more than you'd guess from the Mains corpus.*
->
-> ⭐ **3. ⭐⭐ "World Political Geography & Borders" at 44 questions is ⭐ PURE MAP WORK.** ⭐ **No amount of reading substitutes for the atlas.** ⭐ **This single row justifies the [15-minute daily map habit](../00_START_HERE.md) on its own.**
->
-> ⭐ **4. ⭐ GEOMORPHOLOGY is only 23 — LOWER than most candidates assume.** ⭐ *Landform taxonomy earns its place in Prelims but not in the volume people give it. Compare with Mains, where it is asked essentially never.*
+> 👉 ⭐⭐ **This is the hard evidence for the [15-minute daily map habit](../06_Maps/00_INDEX.md). ⭐ Start the rotation tonight.**
+
+⚠️ ⭐ **One correction to an earlier note.** ⭐ **I previously cited a secondary compilation putting "Population & Demography" second at 54 of 503 questions. ⭐ Measured on this actual corpus it is LAST, at 8 of 201.** ⭐ **The difference is almost certainly what each source counts as "geography" — demography questions often sit in the economy or society bucket. ⭐ Treat the 8 as the floor and the 54 as the ceiling, and don't over-invest either way.**
 
 ---
 
-## 🗂️ Planned structure — once the papers are in
+## ⭐⭐ HOW TO USE THIS FOLDER
 
-```
-03_PYQ_Prelims/
-├── 00_INDEX.md          ← this file
-├── papers/              ← ⬅️ PUT THE UPSC PDFs HERE
-├── 2011.md … 2026.md    ← year files, same shape as the Mains folder
-└── 90_Topic_Analysis.md ← topic-wise consolidation + the map-question list
-```
-
-⭐ **Each year file will carry: the question verbatim · all four options · the ⭐ official UPSC key in a collapsible block · topic tags · and a 🔗 link to the note that answers it** — ⭐ *exactly the format your [Polity Prelims files](../../Polity/03_PYQ_Prelims/2019.md) already use.*
+1. ⭐⭐ **Do a whole YEAR at a time, closed-book, timed.** ⭐ **Fifteen geography questions in about eighteen minutes is the real Prelims pace. ⭐ Reading them is not practising them.**
+2. ⭐ **Start with a fully-keyed year** — ⭐ **[2014](2014.md), [2015](2015.md), [2023](2023.md) or [2025](2025.md)** — so you can mark yourself immediately.
+3. ⭐⭐ **For the unkeyed years, answer first and then reason it out from your notes.** ⭐ *This is slower but arguably better practice: deriving the answer from the causal chain is exactly what the exam rewards, and you'll remember it longer than a ticked key.*
+4. ⭐ **Log every question you get wrong by TOPIC, not by year.** ⭐ **The topic is what tells you which note to reread; the year tells you nothing.**
+5. ⭐⭐ **Anything tagged `Political & Map` that you miss goes straight into the [map rotation](../06_Maps/03_Daily_Rotation.md) log as a ⚠️ item.**
 
 ---
 
-## ⚠️ On the date range
+## ⚠️ On coverage and the date range
 
-⭐ **You asked for 2000–2026. For Prelims, note:**
+⭐ **Question counts per year vary from 5 to 20 in this corpus, which is wider than the true variation.** ⭐ **Years like 2016 (7) and 2020 (5) are almost certainly under-represented by the compilation rather than genuinely light** — ⭐ *independent trackers put 2020 at around 10.* ⭐ **So treat the per-year counts as a floor.**
 
-| Period | ⭐ Status |
-|---|---|
-| ⭐ **2011 – 2026** | ⭐ **The comparable era.** ⭐ *CSE 2026 Prelims was held ~May 2026, so it exists* |
-| ⚠️ **2000 – 2010** | ⚠️ ⭐ **A different exam: Prelims was GS 150 marks + an Optional paper of 300.** ⭐ **Question counts and difficulty are not comparable, though the questions do exist and UnlockIAS's bank goes back to 1995** |
-
-⭐ **Recommendation: ⭐ build 2011–2026 first. ⭐ If you still want 2000–2010 afterwards, it's an add-on, not a foundation.**
+⭐ **On 2000–2010: ⭐ before 2011 Prelims was a different exam — GS of 150 marks plus an Optional paper of 300.** ⭐ **Counts and difficulty are not comparable, and no compilation treats those questions as current-relevant. ⭐ Build 2011–2025 first; the earlier decade is an add-on, not a foundation.**
 
 ---
 
-*Stage 8 of 11 · ⚠️ **Prelims pending your PDF download** · [Mains PYQs — complete](../04_PYQ_Mains/00_INDEX.md) · [Geography START HERE](../00_START_HERE.md)*
+**Sources:** [LotusArise — Geography questions in UPSC Prelims](https://lotusarise.com/geography-questions-in-upsc-prelims/) *(verbatim questions)* · [EduRev 2023](https://edurev.in/t/330246/UPSC-Prelims-Previous-Year-Questions-2023-Geography) · [EduRev 2024](https://edurev.in/t/363266/UPSC-Prelims-Previous-Year-Questions-2024-Geography) · [BYJU'S](https://byjus.com/free-ias-prep/upsc-prelims-geography-questions/) and [SuperKalam](https://superkalam.com/upsc-preparation/resources/geography-questions-in-upsc-prelims-previous-years) *(consulted for keys; found to disagree — not merged)*
 
-**Sources for the data on this page:** [UnlockIAS](https://www.unlockias.in/upsc-prelims-pyq/geography) · [theIASHub](https://theiashub.com/upsc/geography-questions-in-upsc-prelims/) · [PWOnlyIAS](https://pwonlyias.com/upsc-prelims-subject-wise-weightage-2025/)
+---
+
+*Stage 8 of 11 · [Mains PYQs](../04_PYQ_Mains/00_INDEX.md) · [Maps](../06_Maps/00_INDEX.md) · [START_HERE](../00_START_HERE.md)*
