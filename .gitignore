@@ -2,3 +2,7 @@
 # Synced to the cloud by OneDrive and pinned to stay on local disk.
 # Kept out of git: ~80MB and grows with every session.
 .claude-archive/
+
+# Stale renders kept local until they are regenerated from the current notes.
+History/01_NCERT/Class_06_Our_Pasts_I/Notes_PDF/00_Index.pdf
+History/01_NCERT/Class_06_Our_Pasts_I/Notes_PDF/_Class6_History_COMPLETE.pdf
