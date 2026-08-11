@@ -371,9 +371,21 @@ STAGE E2 ─ 🌱 Shankar IAS Environment ................ 43 hrs  ✅ DONE
            → 02_Standard_Reference_Books/Shankar_IAS_Environment/00_INDEX.md
            ⚠️ every volatile figure tagged [VERIFY] — refresh before Prelims
 
-STAGE 7 ── 🗺️ Map work — 15 min EVERY day, from day 1 . 18 hrs  ← ◄── YOU ARE HERE
-STAGE 8 ── PYQs: Prelims 2011→26 (geo + env), Mains ... 32 hrs  ← ◄── AND HERE
-STAGE 9 ── Quiz build + one-page consolidation ....... 18 hrs
+STAGE 7 ── 🗺️ Map work — 15 min EVERY day ............ 18 hrs  ✅ BUILT
+           ✅ 06_Maps/ — 113 items + a 40-week daily rotation
+           ← ◄── START THE HABIT TONIGHT: Week 1 Day 1
+
+STAGE 8 ── PYQs ...................................... 32 hrs  🟡 MOSTLY DONE
+           ✅ MAINS GS-I: 88 questions, 2013–2025, all 13 papers
+           ✅ MAINS GS-III: 56 environment/disaster questions
+              → 04_PYQ_Mains/00_INDEX.md + 90_Topic_Analysis.md
+           ⚠️ PRELIMS: blocked — needs the official UPSC PDFs
+              → drop them in 03_PYQ_Prelims/papers/ and say so
+
+STAGE 9 ── Quiz build + consolidation ................ 18 hrs  🟡 STARTED
+           ✅ 05_Quiz_MCQ/ — 108 questions in 2 banks, engine
+              copied from Polity, audit + simulate both clean
+           ⬜ 3 banks left: physical · india · human
 ```
 
 **Why E1 was folded into E2 rather than done separately:** NCERT Class 12 Biology ch.13–16 (*Organisms and Populations · Ecosystem · Biodiversity and Conservation · Environmental Issues*) covers the same ground as Shankar's opening chapters at a similar depth. Doing both would have meant writing population interactions, energy flow and biodiversity twice. It is written once, into [Shankar Part A](02_Standard_Reference_Books/Shankar_IAS_Environment/Part_A_Ecology/01_Ecology_Fundamentals.md), which discharges E1 and saves ~4 hrs.

@@ -1,0 +1,918 @@
+<title>Environment & Ecology — Prelims Quiz</title>
+<style>
+:root{
+  --ink:#211A1B; --paper:#F5F1F0; --surface:#FFFFFF; --line:#DED4D3; --muted:#665A59;
+  --good:#1F7A4C; --good-soft:#E4F3EA; --bad:#B23A34; --bad-soft:#FBE7E5;
+  --accent:#7A2331; --accent-ink:#FFFFFF; --accent-soft:#F1E1E3;
+  --radius:10px;
+  --serif:Georgia,'Iowan Old Style','Palatino Linotype','Book Antiqua',serif;
+  --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --ink:#EDE7E7; --paper:#171213; --surface:#211A1B; --line:#332829; --muted:#A6989A;
+    --good:#3FBE7C; --good-soft:rgba(63,190,124,0.14); --bad:#E2665F; --bad-soft:rgba(226,102,95,0.14);
+    --accent:#D97A82; --accent-ink:#241012; --accent-soft:rgba(217,122,130,0.18);
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#EDE7E7; --paper:#171213; --surface:#211A1B; --line:#332829; --muted:#A6989A;
+  --good:#3FBE7C; --good-soft:rgba(63,190,124,0.14); --bad:#E2665F; --bad-soft:rgba(226,102,95,0.14);
+  --accent:#D97A82; --accent-ink:#241012; --accent-soft:rgba(217,122,130,0.18);
+}
+:root[data-theme="light"]{
+  --ink:#211A1B; --paper:#F5F1F0; --surface:#FFFFFF; --line:#DED4D3; --muted:#665A59;
+  --good:#1F7A4C; --good-soft:#E4F3EA; --bad:#B23A34; --bad-soft:#FBE7E5;
+  --accent:#7A2331; --accent-ink:#FFFFFF; --accent-soft:#F1E1E3;
+}
+*{box-sizing:border-box;}
+html,body{height:100%;}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;}
+.app{min-height:100dvh;display:flex;flex-direction:column;max-width:760px;margin:0 auto;padding:20px 20px 24px;}
+.screen{flex:1;display:flex;flex-direction:column;min-height:0;}
+.eyebrow{font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin:0 0 6px;}
+.menu-screen{gap:16px;justify-content:flex-start;padding-top:10px;}
+.menu-screen h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,36px);margin:0;text-wrap:balance;}
+.lede{color:var(--muted);line-height:1.55;max-width:64ch;margin:0;}
+.how{display:flex;flex-wrap:wrap;gap:8px 18px;margin:2px 0 4px;padding:0;list-style:none;}
+.how li{font-size:12.5px;color:var(--muted);display:flex;align-items:center;gap:6px;}
+.how li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none;}
+.menu-label{font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);margin:8px 0 -2px;}
+.lesson-list{display:flex;flex-direction:column;gap:10px;}
+.lesson-card{display:flex;align-items:center;gap:14px;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:15px 18px;font-family:var(--sans);cursor:pointer;width:100%;color:var(--ink);}
+.lesson-card:hover{border-color:var(--accent);}
+.lesson-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+.lesson-card.combined{background:var(--accent-soft);border-color:var(--accent);}
+.lesson-num{flex:none;width:38px;height:38px;border-radius:9px;background:var(--accent-soft);color:var(--accent);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:16px;font-weight:700;}
+.lesson-card.combined .lesson-num{background:var(--accent);color:var(--accent-ink);}
+.lesson-body{flex:1;min-width:0;}
+.lesson-title{font-family:var(--serif);font-size:16.5px;line-height:1.25;margin:0 0 2px;display:block;}
+.lesson-meta{font-size:12.5px;color:var(--muted);display:block;}
+.lesson-go{flex:none;color:var(--muted);font-size:20px;}
+.lesson-card:hover .lesson-go{color:var(--accent);}
+.quiz-screen{gap:14px;display:none;}
+.bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.chapter-tag{font-size:11px;text-transform:uppercase;letter-spacing:0.04em;background:var(--accent-soft);color:var(--accent);padding:5px 10px;border-radius:999px;white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis;}
+.progress-track{flex:1;min-width:60px;height:6px;background:var(--line);border-radius:999px;overflow:hidden;}
+.progress-fill{height:100%;background:var(--accent);width:0%;}
+.counter{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap;}
+.timer{font-family:var(--serif);font-size:15px;font-variant-numeric:tabular-nums;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:4px 10px;white-space:nowrap;}
+.card{flex:1;min-height:0;overflow-y:auto;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;display:flex;flex-direction:column;gap:15px;}
+.qblock{display:flex;flex-direction:column;gap:9px;}
+.question{font-family:var(--serif);font-size:clamp(17px,2.4vw,20px);line-height:1.45;margin:0;white-space:pre-line;}
+.stmt-head{font-size:12px;letter-spacing:0.05em;text-transform:uppercase;color:var(--muted);margin:0;padding-left:26px;}
+.stmt-list{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px;}
+.stmt-list li{display:flex;gap:10px;font-size:14.8px;line-height:1.5;}
+.stmt-list li .sn{flex:none;min-width:16px;color:var(--muted);font-variant-numeric:tabular-nums;}
+.stmt-list li .st{flex:1;min-width:0;}
+.stmt-list li .sr{color:var(--muted);}
+.ask{font-family:var(--serif);font-size:15.5px;line-height:1.45;margin:2px 0 0;font-style:italic;}
+.options{display:flex;flex-direction:column;gap:9px;}
+.option{display:flex;align-items:flex-start;gap:11px;text-align:left;background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:11px 13px;font-family:var(--sans);font-size:14.5px;color:var(--ink);cursor:pointer;line-height:1.4;width:100%;}
+.option:hover:not(:disabled){border-color:var(--accent);}
+.option:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+.option:disabled{cursor:default;}
+.opt-letter{flex:none;width:23px;height:23px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:var(--muted);}
+.option.correct{background:var(--good-soft);border-color:var(--good);}
+.option.correct .opt-letter{background:var(--good);border-color:var(--good);color:#fff;}
+.option.incorrect{background:var(--bad-soft);border-color:var(--bad);}
+.option.incorrect .opt-letter{background:var(--bad);border-color:var(--bad);color:#fff;}
+.feedback{font-size:13.5px;line-height:1.6;margin:0;padding:12px 14px;border-radius:8px;background:var(--paper);border-left:3px solid var(--accent);}
+.feedback .verdict{font-family:var(--serif);font-weight:700;font-style:italic;}
+.feedback.good{border-left-color:var(--good);}
+.feedback.good .verdict{color:var(--good);}
+.feedback.bad{border-left-color:var(--bad);}
+.feedback.bad .verdict{color:var(--bad);}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.hint{font-size:12px;color:var(--muted);text-align:center;flex:1;}
+.btn-primary{background:var(--accent);color:var(--accent-ink);border:none;border-radius:999px;padding:12px 24px;font-size:14.5px;font-weight:600;font-family:var(--sans);cursor:pointer;}
+.btn-primary:hover{filter:brightness(1.07);}
+.btn-primary:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+.btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:11px 20px;font-size:14px;font-family:var(--sans);cursor:pointer;}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
+.btn-ghost:disabled{opacity:0.35;cursor:not-allowed;}
+.btn-ghost:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+.result-screen{gap:18px;justify-content:center;display:none;}
+.result-screen h1{font-family:var(--serif);font-size:clamp(24px,4.5vw,32px);margin:0;}
+.result-sub{color:var(--muted);margin:-8px 0 0;font-size:14px;}
+.score-row{display:flex;gap:22px;flex-wrap:wrap;}
+.score-block{display:flex;flex-direction:column;gap:2px;}
+.score-num{font-family:var(--serif);font-size:30px;font-variant-numeric:tabular-nums;}
+.score-label{font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);}
+.breakdown-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px;max-height:280px;overflow-y:auto;}
+.breakdown{width:100%;border-collapse:collapse;font-size:13.5px;}
+.breakdown th,.breakdown td{padding:8px 12px;text-align:left;border-bottom:1px solid var(--line);}
+.breakdown th{color:var(--muted);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:0.05em;position:sticky;top:0;background:var(--surface);}
+.breakdown td.num{font-variant-numeric:tabular-nums;text-align:right;}
+.breakdown tr:last-child td{border-bottom:none;}
+.bd-bar{height:5px;border-radius:3px;background:var(--line);margin-top:4px;overflow:hidden;}
+.bd-bar span{display:block;height:100%;background:var(--accent);}
+.result-actions{display:flex;gap:10px;flex-wrap:wrap;}
+[hidden]{display:none !important;}
+.is-active{display:flex !important;}
+@media (prefers-reduced-motion: no-preference){
+  .option,.lesson-card{transition:background 0.15s ease,border-color 0.15s ease;}
+  .progress-fill{transition:width 0.25s ease;}
+}
+@media (max-width:480px){
+  .app{padding:16px 14px 18px;}
+  .nav{flex-wrap:wrap;}
+  .hint{order:3;width:100%;}
+  .card{padding:18px 16px;}
+}
+</style>
+
+<div class="app">
+  <section id="menu" class="screen menu-screen is-active">
+    <p class="eyebrow" id="courseEyebrow"></p>
+    <h1 id="courseTitle"></h1>
+    <p class="lede" id="courseLede"></p>
+    <ul class="how">
+      <li>Prelims-pattern: statements, pairs, assertion–reason</li>
+      <li>Options balanced — no length giveaways</li>
+      <li>Detailed explanation on every answer</li>
+      <li>Reshuffles each attempt · stopwatch</li>
+    </ul>
+    <p class="menu-label">Choose a lesson — or take the full syllabus</p>
+    <div class="lesson-list" id="lessonList"></div>
+  </section>
+
+  <section id="quiz" class="screen quiz-screen">
+    <header class="bar">
+      <span id="chapterTag" class="chapter-tag"></span>
+      <div class="progress-track"><div id="progressFill" class="progress-fill"></div></div>
+      <span id="counter" class="counter"></span>
+      <span id="timer" class="timer">00:00</span>
+    </header>
+    <main class="card">
+      <div id="qblock" class="qblock"></div>
+      <div id="options" class="options"></div>
+      <p id="feedback" class="feedback" hidden></p>
+    </main>
+    <footer class="nav">
+      <button id="prevBtn" class="btn-ghost" type="button">← Prev</button>
+      <span class="hint">Press 1–4 to answer · → next · ← prev</span>
+      <button id="nextBtn" class="btn-primary" type="button">Next →</button>
+    </footer>
+  </section>
+
+  <section id="result" class="screen result-screen">
+    <p class="eyebrow">Scorecard</p>
+    <h1 id="resultTitle">Quiz complete</h1>
+    <p class="result-sub" id="resultScope"></p>
+    <div class="score-row">
+      <div class="score-block"><span id="scoreText" class="score-num"></span><span class="score-label">Correct</span></div>
+      <div class="score-block"><span id="scorePct" class="score-num"></span><span class="score-label">Accuracy</span></div>
+      <div class="score-block"><span id="timeText" class="score-num"></span><span class="score-label">Time</span></div>
+    </div>
+    <div class="breakdown-wrap">
+      <table class="breakdown">
+        <thead><tr><th>Lesson</th><th>Score</th></tr></thead>
+        <tbody id="breakdownBody"></tbody>
+      </table>
+    </div>
+    <div class="result-actions">
+      <button id="reviewBtn" class="btn-ghost" type="button">Review answers</button>
+      <button id="restartBtn" class="btn-primary" type="button">Retake — new shuffle</button>
+      <button id="menuBtn" class="btn-ghost" type="button">↤ Lesson menu</button>
+    </div>
+  </section>
+</div>
+
+<script>
+/* ==========================================================================
+   DATA — generated from Polity/05_Quiz_MCQ/data/<class>.js by build.mjs
+   Question shape:
+     c    chapter tag (must match an entry in CHAPTERS)
+     q    stem
+     head optional column header for a "pairs" block, e.g. "Provision : Purpose"
+     L    optional array of numbered lines (statements, or "Left : Right" pairs)
+     ask  optional closing question line, e.g. "Which of the above are correct?"
+     o    four options
+     a    index of the correct option
+     e    explanation shown after answering
+   ========================================================================== */
+const COURSE = {
+  eyebrow: "Shankar IAS · Environment",
+  title: "Environment & Ecology — Prelims Quiz",
+  lede: "Prelims-pattern questions across ecology, biodiversity, protected areas, pollution, climate change, Indian environmental law and the international conventions. Statement sets reshuffle on every attempt and the answer code is recomputed, so the wording and position of the false statement never give the answer away."
+};
+const CHAPTERS = [
+  "E1 · Ecology & Ecosystems",
+  "E2 · Biodiversity & Hotspots",
+  "E3 · Protected Areas",
+  "E4 · Species & Conservation",
+  "E5 · Pollution",
+  "E6 · Climate Change",
+  "E7 · Indian Environmental Law",
+  "E8 · International Conventions"
+];
+
+const AR = [
+  "Both A and R are true and R is the correct explanation of A",
+  "Both A and R are true but R is not the correct explanation of A",
+  "A is true but R is false",
+  "A is false but R is true"
+];
+
+const QUESTIONS = [
+
+/* ============ E1 · Ecology & Ecosystems ============ */
+{c:'E1 · Ecology & Ecosystems',
+ q:'Consider the following statements about energy and nutrients in an ecosystem:',
+ S:[
+    ['Energy flows in one direction and is ultimately lost as heat.',true],
+    ['Nutrients cycle within the system and are used repeatedly.',true],
+    ['Roughly ten per cent of energy passes to the next trophic level.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'This asymmetry is the foundation of the subject. Because energy is lost at every transfer, food chains rarely exceed four or five links; because matter is recycled, the same nitrogen atom can be reused indefinitely. An ecosystem therefore needs a fresh energy input every day but not a fresh supply of atoms.'},
+{c:'E1 · Ecology & Ecosystems',
+ q:'Which one of the following ecological pyramids can never be inverted?',
+ o:[
+    'Pyramid of energy',
+    'Pyramid of biomass',
+    'Pyramid of numbers',
+    'Pyramid of species'],
+ a:0,
+ e:'The energy pyramid measures a rate, and the second law of thermodynamics forbids more energy at a higher level than was supplied to it. Numbers can invert in a single-tree ecosystem and biomass can invert in the ocean, because both measure a standing crop at one instant rather than a flow over time.'},
+{c:'E1 · Ecology & Ecosystems',
+ q:'Consider the following statements about biomagnification:',
+ S:[
+    ['The substance must be persistent and resistant to breakdown.',true],
+    ['The substance must be fat-soluble rather than water-soluble.',true],
+    ['Concentrations fall steadily at each higher trophic level.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Concentrations rise, not fall. Energy shrinks by ninety per cent at each step but the toxin does not, so the same quantity of poison ends up concentrated into a tenth of the biomass at every level. Persistence and fat-solubility are what stop the body excreting it.'},
+{c:'E1 · Ecology & Ecosystems',
+ q:'An organism\'s functional role in a community — what it eats, when it is active and what preys on it — is termed its:',
+ o:[
+    'Habitat',
+    'Niche',
+    'Biome',
+    'Guild'],
+ a:1,
+ e:'The niche is the profession; the habitat is the address. Gause\'s competitive exclusion principle holds that two species cannot occupy the same niche indefinitely, and the way they avoid it — feeding at different heights, times or prey sizes — is what makes high biodiversity possible at all.'},
+{c:'E1 · Ecology & Ecosystems',
+ q:'Consider the following statements about the phosphorus cycle:',
+ S:[
+    ['Phosphorus is often the limiting nutrient in freshwater systems.',true],
+    ['The reservoir for phosphorus is the atmosphere.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The reservoir is rock, which makes phosphorus a sedimentary rather than a gaseous cycle and effectively a one-way street on human timescales. Because it limits freshwater productivity, phosphate from detergents and fertiliser is the usual trigger of eutrophication.'},
+{c:'E1 · Ecology & Ecosystems',
+ q:'In eutrophication, the immediate cause of fish mortality is:',
+ o:[
+    'Sudden rise in the water temperature',
+    'Toxins released directly by the growing algae',
+    'Oxygen depletion as the algal bloom decomposes',
+    'Physical blocking of gills by algal filaments'],
+ a:2,
+ e:'It is the decay of the bloom, not the growth of it, that kills. Aerobic bacteria decomposing the dead algal mass consume the dissolved oxygen the fish need. Saying \'decomposition of the bloom depletes dissolved oxygen\' is what distinguishes a real answer from a vague one.'},
+{c:'E1 · Ecology & Ecosystems',
+ q:'Consider the following statements about ecological succession:',
+ S:[
+    ['Primary succession begins on a surface that has no soil.',true],
+    ['Lichens are typical pioneers of a xerarch succession.',true],
+    ['Secondary succession is slower than primary succession.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Secondary succession is far faster, because the soil survives and soil formation is the slow step. This is why preventing soil loss matters more than replanting: a cleared forest with intact soil recovers in decades, but one whose soil has eroded away is starting again from primary succession.'},
+{c:'E1 · Ecology & Ecosystems',
+ q:'The relationship between a coral polyp and its zooxanthellae is best described as:',
+ o:[
+    'Commensalism',
+    'Parasitism',
+    'Amensalism',
+    'Mutualism'],
+ a:3,
+ e:'Both partners benefit: the algae photosynthesise and supply the coral with most of its energy, and the coral provides shelter and nutrients. Bleaching is precisely the breakdown of this mutualism under thermal stress, which is why the coral starves rather than dies immediately.'},
+{c:'E1 · Ecology & Ecosystems',
+ q:'Consider the following statements about the tundra as an ecosystem:',
+ S:[
+    ['Permafrost prevents meltwater from draining downward.',true],
+    ['High evaporation rates keep the summer surface dry.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Evaporation is negligible in the cold, which is one of the three reasons a polar desert is waterlogged in summer. The others are the impermeable permafrost and the flat terrain that prevents run-off — so a tiny water input simply accumulates at the surface.'},
+{c:'E1 · Ecology & Ecosystems',
+ q:'Consider the following statements about mangroves:',
+ S:[
+    ['Pneumatophores allow gas exchange in waterlogged, anoxic mud.',true],
+    ['Vivipary means the seed germinates while still on the parent tree.',true],
+    ['Mangroves are intolerant of saline conditions.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Mangroves are salt-tolerant by definition, excluding salt at the roots and excreting the remainder through leaf glands. Vivipary is the adaptation to a moving substrate: an ordinary seed would be washed away before it could root, so the seedling drops ready to establish itself.'},
+
+/* ============ E2 · Biodiversity & Hotspots ============ */
+{c:'E2 · Biodiversity & Hotspots',
+ q:'Consider the following statements about the criteria for a biodiversity hotspot:',
+ S:[
+    ['It must have lost at least 70 per cent of its original vegetation.',true],
+    ['It must lie wholly within a single national boundary.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Hotspots routinely cross borders — Indo-Burma spans several countries. The second criterion is the one most candidates miss: a hotspot is defined partly by how DAMAGED it is, which makes the concept a triage tool for directing scarce funding rather than simply a label for species richness.'},
+{c:'E2 · Biodiversity & Hotspots',
+ q:'The Nicobar Islands form part of which biodiversity hotspot?',
+ o:[
+    'Sundaland',
+    'Himalaya',
+    'Western Ghats',
+    'Indo-Burma'],
+ a:0,
+ e:'Sundaland, whose core lies in Indonesia, Malaysia and Brunei. The Andamans are generally grouped with Indo-Burma, so the two island groups fall in different hotspots — a distinction that is regularly tested because people treat Andaman and Nicobar as one unit.'},
+{c:'E2 · Biodiversity & Hotspots',
+ q:'Which of the following IUCN Red List categories together constitute \'threatened\' species?',
+ o:[
+    'Extinct in the Wild, Endangered and Vulnerable',
+    'Critically Endangered, Endangered and Vulnerable',
+    'Endangered, Vulnerable and Near Threatened',
+    'Critically Endangered, Endangered and Data Deficient'],
+ a:1,
+ e:'Threatened is an umbrella for exactly three categories: Critically Endangered, Endangered and Vulnerable. Near Threatened and Data Deficient are not threatened — and Data Deficient does not mean safe, only unassessed, since many such species prove to be threatened once studied.'},
+{c:'E2 · Biodiversity & Hotspots',
+ q:'Consider the following statements about invasive alien species in India:',
+ S:[
+    ['Lantana camara was introduced from tropical America.',true],
+    ['Prosopis juliflora spreads aggressively in dry grasslands.',true],
+    ['Water hyacinth is native to Indian freshwater systems.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Water hyacinth is South American and is nicknamed the terror of Bengal. Invasives typically succeed through enemy release: arriving without the predators and parasites that regulated them at home, they occupy a niche more efficiently and competitively exclude the natives.'},
+{c:'E2 · Biodiversity & Hotspots',
+ q:'Which one of the following pairs of species category and example is correctly matched?',
+ o:[
+    'Flagship species — the fig tree',
+    'Keystone species — the giant panda',
+    'Indicator species — lichens',
+    'Umbrella species — the mayfly larva'],
+ a:2,
+ e:'Lichens indicate air quality, as amphibians indicate water quality and mayfly larvae river health. The fig is a keystone species and the panda a flagship one. Keystone is an ecological fact; flagship is a marketing choice — and the two diverge often, which is why unglamorous keystone species attract almost no funding.'},
+{c:'E2 · Biodiversity & Hotspots',
+ q:'Consider the following statements about conservation approaches:',
+ S:[
+    ['Sacred groves are a traditional form of in-situ conservation.',true],
+    ['Ex-situ conservation preserves ecological relationships intact.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Ex-situ conserves the species but not its ecology: captive populations lose behaviour, gut flora and genetic diversity over generations, and have nowhere to return to if the habitat is gone. It is a lifeboat, not a destination — which is why in-situ is always the primary approach.'},
+
+/* ============ E3 · Protected Areas ============ */
+{c:'E3 · Protected Areas',
+ q:'Consider the following statements about India\'s protected area categories:',
+ S:[
+    ['Grazing is prohibited outright inside a national park.',true],
+    ['Certain rights may be permitted inside a wildlife sanctuary.',true],
+    ['Biosphere reserves are constituted under a dedicated statute.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Biosphere reserves have no separate law at all. They are an administrative designation under the UNESCO Man and the Biosphere programme, and their legal teeth come entirely from the national parks and sanctuaries that sit inside them. Most candidates assume there is a Biosphere Reserve Act; there is not.'},
+{c:'E3 · Protected Areas',
+ q:'Conservation Reserves and Community Reserves were introduced into Indian law by the:',
+ o:[
+    'Forest Conservation Act of 1980',
+    'Biological Diversity Act of 2002',
+    'Environment Protection Act of 1986',
+    'Wildlife Protection Act amendment of 2002'],
+ a:3,
+ e:'The 2002 amendment to the Wildlife Protection Act created both. The Community Reserve is the notable innovation: it is the one category designed for conservation on private or community land rather than government land, and it leaves existing rights unaffected.'},
+{c:'E3 · Protected Areas',
+ q:'In the UNESCO biosphere reserve model, the zone in which settlements and farming are permitted is the:',
+ o:[
+    'Transition zone',
+    'Restoration zone',
+    'Core zone',
+    'Buffer zone'],
+ a:0,
+ e:'The transition zone. The core is legally protected and strictly undisturbed, and the buffer permits research and limited use. The presence of a transition zone at all is what makes the model distinctive: unlike a national park, it is designed on the premise that conservation and livelihoods must coexist.'},
+{c:'E3 · Protected Areas',
+ q:'Consider the following statements about tiger and elephant reserves:',
+ S:[
+    ['The NTCA is the authority governing tiger reserves.',true],
+    ['Elephant reserves enjoy the same statutory protection as tiger reserves.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Project Elephant remains an administrative scheme without independent legal status, which is a large part of why elephant corridors stay poorly protected while tiger cores are defended in court. Institutional design, not enthusiasm, explains the difference in outcomes.'},
+{c:'E3 · Protected Areas',
+ q:'Under the Indian Forest Act, 1927, the relationship between the two main categories is that:',
+ o:[
+    'A protected forest is more strictly regulated than a reserved forest',
+    'A reserved forest is more strictly regulated than a protected forest',
+    'Both categories carry identical restrictions on use',
+    'Neither category restricts the removal of forest produce'],
+ a:1,
+ e:'Reserved is the stricter of the two, despite protected sounding stronger. In a reserved forest everything is prohibited unless permitted; in a protected forest everything is permitted unless prohibited. The counter-intuitive naming is exactly why it gets asked.'},
+{c:'E3 · Protected Areas',
+ q:'Consider the following statements about the Ramsar Convention definition of a wetland:',
+ S:[
+    ['It includes artificial as well as natural water bodies.',true],
+    ['It covers marine water not exceeding six metres deep at low tide.',true],
+    ['It excludes temporary and seasonal water bodies.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Temporary wetlands are expressly included, as are artificial ones such as reservoirs and paddy fields. The breadth of the definition is deliberate, and the six-metre figure is the detail most often lifted straight into a Prelims question.'},
+
+/* ============ E4 · Species & Conservation ============ */
+{c:'E4 · Species & Conservation',
+ q:'The catastrophic decline of India\'s vulture populations in the 1990s was caused principally by:',
+ o:[
+    'Avian influenza spreading through colonies',
+    'Loss of nesting cliffs to quarrying',
+    'Veterinary diclofenac in cattle carcasses',
+    'Competition from expanding crow populations'],
+ a:2,
+ e:'Diclofenac given to cattle causes renal failure in vultures that feed on the carcasses, and because many birds feed on one carcass a single treated animal can kill dozens. India banned veterinary diclofenac in 2006 and promoted meloxicam as the safe substitute.'},
+{c:'E4 · Species & Conservation',
+ q:'Consider the following statements about the consequences of the vulture collapse:',
+ S:[
+    ['Rabies incidence increased as a documented public-health cost.',true],
+    ['Carcass decomposition became faster than before.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Carcasses that vultures once stripped in hours now rot for days. The episode is the clearest demonstration available that ecosystem services are real and expensive to replace: a scavenger widely regarded as useless turned out to be performing free public sanitation at national scale.'},
+{c:'E4 · Species & Conservation',
+ q:'Shahtoosh differs from pashmina in that shahtoosh:',
+ o:[
+    'Comes from sheep reared in the Nilgiri hills',
+    'Is a synthetic fibre developed in the 1970s',
+    'Is combed from a living domesticated goat',
+    'Requires the killing of the Tibetan antelope'],
+ a:3,
+ e:'Shahtoosh comes from the chiru, or Tibetan antelope, which must be killed to obtain it, and the trade is banned. Pashmina is combed from the living Changthangi goat of Ladakh. The contrast is a standard Prelims pairing.'},
+{c:'E4 · Species & Conservation',
+ q:'Consider the following statements about Project Cheetah:',
+ S:[
+    ['The Asiatic cheetah was declared extinct in India in 1952.',true],
+    ['Animals introduced at Kuno were of the African subspecies.',true],
+    ['Asiatic cheetahs survive in the wild only in Iran.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'All three hold, and together they make the scientific objection clear: because the animals introduced are a different subspecies from the one that was lost, this is an introduction rather than a restoration. Prey density and habitat suitability are the other contested points.'},
+{c:'E4 · Species & Conservation',
+ q:'Which one of the following is India\'s national aquatic animal?',
+ o:[
+    'Gangetic dolphin',
+    'Saltwater crocodile',
+    'Indian humpback whale',
+    'Olive ridley turtle'],
+ a:0,
+ e:'The Gangetic dolphin, declared in 2009. It is functionally blind and navigates by echolocation, and its main threats are barrages fragmenting the river, bycatch and pollution. Project Dolphin was launched in 2020.'},
+{c:'E4 · Species & Conservation',
+ q:'Consider the following statements about the Asiatic lion:',
+ S:[
+    ['Its only wild population is in Gujarat.',true],
+    ['A single site makes the population vulnerable to epidemic.',true],
+    ['A second home has already been fully established elsewhere.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The proposed second home at Kuno was never populated with lions; the site instead received cheetahs, which is a genuine and citable policy tension. Concentrating an entire species in one location leaves it exposed to a single epidemic, fire or flood.'},
+
+/* ============ E5 · Pollution ============ */
+{c:'E5 · Pollution',
+ q:'India\'s Air Quality Index reported for a city on a given day is derived from:',
+ o:[
+    'The arithmetic mean of all monitored pollutants',
+    'The worst-performing individual pollutant',
+    'The pollutant with the longest atmospheric life',
+    'The average of particulate readings alone'],
+ a:1,
+ e:'The AQI reports the sub-index of the worst pollutant rather than an average, so a single pollutant in the severe band puts the whole city in that band. The index was launched in 2015 and has six categories from Good through Severe.'},
+{c:'E5 · Pollution',
+ q:'Consider the following statements about photochemical smog:',
+ S:[
+    ['It forms from nitrogen oxides and volatile organic compounds.',true],
+    ['Strong sunlight is required for the reactions to proceed.',true],
+    ['It is a reducing rather than an oxidising mixture.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Photochemical smog is oxidising and produces ozone and PAN. The reducing type is the classical London smog, formed in cool humid winter conditions from coal-derived sulphur dioxide and particulates. The two are distinguished by season, chemistry and colour.'},
+{c:'E5 · Pollution',
+ q:'Ground-level ozone is described as a secondary pollutant because it is:',
+ o:[
+    'Regulated under a secondary schedule of standards',
+    'Emitted in smaller quantities than other pollutants',
+    'Formed in the atmosphere from other pollutants',
+    'Confined to the second layer of the atmosphere'],
+ a:2,
+ e:'It is not emitted directly but formed when nitrogen oxides react with volatile organic compounds in sunlight. It damages the respiratory system and measurably reduces crop yields — the same molecule that shields us in the stratosphere is a pollutant at ground level.'},
+{c:'E5 · Pollution',
+ q:'Consider the following statements about groundwater contamination in India:',
+ S:[
+    ['Arsenic contamination is concentrated in the Gangetic alluvium.',true],
+    ['Fluoride causes both dental and skeletal disorders.',true],
+    ['Both contaminants are primarily of industrial origin.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Both are geogenic — naturally present in the rock and sediment. They became a public-health catastrophe because of a development success: the mass shift from contaminated surface water to tubewells solved a bacteriological problem and created a geochemical one.'},
+{c:'E5 · Pollution',
+ q:'In the biomedical waste colour code, sharps such as needles and scalpel blades are placed in containers of which colour?',
+ o:[
+    'Blue',
+    'Yellow',
+    'Red',
+    'White'],
+ a:3,
+ e:'White or translucent containers take sharps. Yellow is for incineration of anatomical and soiled waste, red for autoclaving contaminated recyclable plastics, and blue for glassware and metallic implants. The codes come from the Bio-Medical Waste Rules of 2016.'},
+{c:'E5 · Pollution',
+ q:'Consider the following statements about extended producer responsibility:',
+ S:[
+    ['It applies in India to plastics, e-waste, batteries and tyres.',true],
+    ['Its purpose is to shift disposal costs onto municipalities.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'EPR does the opposite: it moves the disposal cost off the municipality and onto the producer\'s balance sheet, which is what makes it work. By internalising an externality it is intended to change design decisions upstream — less packaging, more recyclable material.'},
+{c:'E5 · Pollution',
+ q:'Which one of the following best explains why Delhi\'s air quality deteriorates sharply in winter?',
+ o:[
+    'Temperature inversion traps pollutants near the ground',
+    'Wind speeds increase and concentrate the pollution',
+    'Ozone formation accelerates in cold, dry conditions',
+    'Emissions rise steeply during the colder months'],
+ a:0,
+ e:'Emissions are not dramatically higher in December than in July; what changes is the atmosphere\'s capacity to disperse them. Winter inversion collapses the mixing layer to a few hundred metres and the wind drops, so the same emissions occupy a fraction of the volume.'},
+
+/* ============ E6 · Climate Change ============ */
+{c:'E6 · Climate Change',
+ q:'Consider the following statements about greenhouse gases:',
+ S:[
+    ['Methane has a higher global warming potential than carbon dioxide.',true],
+    ['Nitrous oxide is both a greenhouse gas and ozone-depleting.',true],
+    ['Water vapour is a forcing rather than a feedback.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Water vapour is a feedback: its concentration is set by temperature and it leaves the atmosphere within days, so it amplifies whatever carbon dioxide does rather than driving change itself. Treating it as a driver is a standard denialist move and getting it right matters.'},
+{c:'E6 · Climate Change',
+ q:'Methane reduction is described as a fast lever on warming principally because methane:',
+ o:[
+    'Is emitted in far larger quantities than carbon dioxide',
+    'Has a short atmospheric lifetime of about a decade',
+    'Cannot be absorbed by oceans or vegetation',
+    'Is produced only by identifiable industrial sources'],
+ a:1,
+ e:'Its lifetime is roughly twelve years against centuries for carbon dioxide, so cutting methane produces relief on the near-term temperature curve quickly. Carbon dioxide cuts determine the long-run outcome. Both are needed, for different reasons and on different timescales.'},
+{c:'E6 · Climate Change',
+ q:'Consider the following statements about the Antarctic ozone hole:',
+ S:[
+    ['The hole is most pronounced during the southern spring.',true],
+    ['A single chlorine atom destroys one ozone molecule only.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Chlorine is regenerated in the reaction cycle, so one atom destroys tens of thousands of ozone molecules — it acts as a catalyst. The hole appears in September and October because the returning spring sunlight triggers reactions primed on the ice-crystal surfaces during the dark winter.'},
+{c:'E6 · Climate Change',
+ q:'The Kigali Amendment of 2016 targets hydrofluorocarbons, which are significant because they:',
+ o:[
+    'Accumulate in Arctic marine food chains',
+    'Deplete stratospheric ozone more than CFCs',
+    'Are potent greenhouse gases though ozone-safe',
+    'Form the main precursor of acid rain'],
+ a:2,
+ e:'HFCs were the substitute adopted to replace CFCs and do not deplete ozone, but they are extremely powerful greenhouse gases. Kigali therefore used an ozone treaty to deliver a climate outcome — an unusually elegant piece of institutional design.'},
+{c:'E6 · Climate Change',
+ q:'Ocean acidification is a distinct problem from global warming because it:',
+ o:[
+    'Occurs only in the deep ocean below the thermocline',
+    'Can be reversed by solar radiation management',
+    'Results from a different set of human emissions',
+    'Reduces carbonate availability for shell formation'],
+ a:3,
+ e:'Dissolved carbon dioxide forms carbonic acid, releasing hydrogen ions that convert carbonate into bicarbonate and leave less carbonate for corals and molluscs to build with. It arises from the same emissions as warming but by a different mechanism, and no amount of shading the planet would address it.'},
+{c:'E6 · Climate Change',
+ q:'Consider the following statements about permafrost thaw:',
+ S:[
+    ['It releases carbon dioxide and methane from ancient organic matter.',true],
+    ['Arctic permafrost holds more carbon than the atmosphere.',true],
+    ['The release can be halted by reducing emissions afterwards.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Once triggered the release continues regardless of subsequent emission cuts, which is exactly what makes it a tipping point rather than merely an impact. That distinction — between an impact you can still influence and one you cannot — is the heart of the tipping-point concept.'},
+{c:'E6 · Climate Change',
+ q:'Which one of the following would NOT by itself contribute to a rise in global sea level?',
+ o:[
+    'Melting of Arctic sea ice',
+    'Melting of the Greenland ice sheet',
+    'Thermal expansion of seawater',
+    'Retreat of mountain glaciers'],
+ a:0,
+ e:'Sea ice already floats and displaces its own weight, so its melting leaves sea level unchanged. Land ice and thermal expansion both raise it. The distinction is muddled constantly and is worth getting exactly right.'},
+
+/* ============ E7 · Indian Environmental Law ============ */
+{c:'E7 · Indian Environmental Law',
+ q:'Which one of the following was India\'s first major environmental statute?',
+ o:[
+    'Environment Protection Act, 1986',
+    'Water Act, 1974',
+    'Air Act, 1981',
+    'Forest Conservation Act, 1980'],
+ a:1,
+ e:'The Water (Prevention and Control of Pollution) Act of 1974 came first and created the Central and State Pollution Control Boards. The Environment Protection Act of 1986 is the umbrella legislation, enacted in direct response to the Bhopal disaster of 1984.'},
+{c:'E7 · Indian Environmental Law',
+ q:'Consider the following statements about constitutional provisions on the environment:',
+ S:[
+    ['Article 51A(g) makes environmental protection a fundamental duty.',true],
+    ['Both provisions are directly enforceable in a court of law.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Neither is directly enforceable, which is precisely why the Supreme Court\'s reading of a clean environment into the right to life under Article 21 matters so much. Both provisions were inserted by the 42nd Amendment of 1976, which also moved forests to the Concurrent List.'},
+{c:'E7 · Indian Environmental Law',
+ q:'The Forest (Conservation) Act of 1980 is regarded as a turning point chiefly because it:',
+ o:[
+    'Banned all commercial felling nationwide',
+    'Created the first national parks in India',
+    'Required central approval for any forest diversion',
+    'Transferred forest ownership to gram sabhas'],
+ a:2,
+ e:'It removed the diversion decision from the states and required prior central government approval for using forest land for non-forest purposes, which is the main reason India\'s deforestation rate fell sharply after 1980.'},
+{c:'E7 · Indian Environmental Law',
+ q:'Consider the following statements about the Biological Diversity Act, 2002:',
+ S:[
+    ['It establishes a three-tier structure of national, state and local bodies.',true],
+    ['Biodiversity Management Committees maintain People\'s Biodiversity Registers.',true],
+    ['The National Biodiversity Authority is headquartered at New Delhi.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The National Biodiversity Authority sits at Chennai. The Act implements the Convention on Biological Diversity\'s third objective — fair and equitable benefit sharing — and is the instrument through which India regulates access and resists biopiracy.'},
+{c:'E7 · Indian Environmental Law',
+ q:'In the EIA process, the stage at which the Terms of Reference are issued is:',
+ o:[
+    'Consulting the public',
+    'Appraisal',
+    'Screening the proposal',
+    'Scoping'],
+ a:3,
+ e:'Scoping determines what the study must examine, and it therefore often decides the outcome: if the Terms of Reference omit cumulative impacts or a downstream district, the assessment will be silent on them, and silence reads as no impact.'},
+{c:'E7 · Indian Environmental Law',
+ q:'Consider the following statements about the National Green Tribunal:',
+ S:[
+    ['Appeals from its orders lie to the Supreme Court.',true],
+    ['Its jurisdiction extends to the Wildlife Protection Act, 1972.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The Wildlife Protection Act and the Indian Forest Act fall outside the scheduled statutes over which the tribunal has jurisdiction, which is a real and testable limitation. The presence of expert members is the design feature that gives it technical competence a generalist court lacks.'},
+{c:'E7 · Indian Environmental Law',
+ q:'The Traditional Knowledge Digital Library was created principally to:',
+ o:[
+    'Supply prior art to foreign patent examiners',
+    'Register geographical indications for exports',
+    'Catalogue endangered medicinal plant species',
+    'Digitise India\'s regional language manuscripts'],
+ a:0,
+ e:'It renders Ayurveda, Unani, Siddha and Yoga knowledge searchable in multiple languages and shares it with patent offices, so examiners can find prior art. It converts an oral and Sanskrit tradition into a form patent systems can actually check, after the turmeric, neem and basmati cases.'},
+
+/* ============ E8 · International Conventions ============ */
+{c:'E8 · International Conventions',
+ q:'Consider the following pairs of convention and its subject:',
+ S:[
+    ['Ramsar Convention and wetlands',true],
+    ['Basel Convention and hazardous waste movement',true],
+    ['Rotterdam Convention and migratory species',false]],
+ ask:'Which of the pairs given above is/are correctly matched?',
+ mode:'code',unit:'pair',
+ e:'Rotterdam deals with prior informed consent for hazardous chemicals and pesticides in trade; migratory species come under the Bonn Convention. Basel, Rotterdam and Stockholm together form the chemicals cluster and hold joint conferences of the parties.'},
+{c:'E8 · International Conventions',
+ q:'Which one of the following are the three conventions that emerged from the Rio Earth Summit of 1992?',
+ o:[
+    'UNCCD, Basel and Stockholm',
+    'UNFCCC, CBD and UNCCD',
+    'UNFCCC, CITES and Ramsar',
+    'CBD, Montreal Protocol and CITES'],
+ a:1,
+ e:'The climate, biodiversity and desertification conventions are the three Rio conventions, though the UNCCD was mandated at Rio and formally adopted in 1994. CITES dates from 1973, Ramsar from 1971 and Montreal from 1987.'},
+{c:'E8 · International Conventions',
+ q:'Consider the following statements comparing the Kyoto Protocol and the Paris Agreement:',
+ S:[
+    ['Paris relies on nationally determined contributions.',true],
+    ['Paris makes the content of each target legally binding.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Under Paris the procedural obligations bind but the substance of each target does not. The trade-off is deliberate: Kyoto had strong obligations on few countries and Paris has weak obligations on nearly all of them, on the reasoning that broad coverage achieves more than narrow stringency.'},
+{c:'E8 · International Conventions',
+ q:'Under CITES, species for which commercial international trade is prohibited are listed in:',
+ o:[
+    'Appendix III',
+    'The Montreux Record',
+    'Appendix I',
+    'Appendix II'],
+ a:2,
+ e:'Appendix I prohibits commercial trade, Appendix II regulates it, and Appendix III covers species a member state has listed unilaterally. CITES governs trade, which is a different system from the IUCN Red List, which assesses risk, and from India\'s Wildlife Protection Act schedules.'},
+{c:'E8 · International Conventions',
+ q:'The Montreal Protocol is often contrasted with climate agreements because ozone depletion involved:',
+ o:[
+    'A larger number of affected countries',
+    'Higher economic costs of compliance',
+    'Weaker scientific consensus at the outset',
+    'A handful of substances and a few producers'],
+ a:3,
+ e:'Concentrated production, available substitutes and modest costs are what made Montreal tractable, along with a risk the public understood personally. Climate change has none of those features, so Montreal is proof that treaties work when a problem is concentrated and cheap to fix, not that they work in general.'},
+{c:'E8 · International Conventions',
+ q:'Consider the following statements about the Nagoya Protocol:',
+ S:[
+    ['It operationalises access and benefit sharing under the CBD.',true],
+    ['It was adopted at the tenth Conference of the Parties in 2010.',true],
+    ['It regulates the transboundary movement of living modified organisms.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Living modified organisms fall under the Cartagena Protocol on Biosafety, which is the CBD\'s other protocol. Nagoya is the anti-biopiracy instrument, adopted alongside the Aichi Targets, and it is the international counterpart to India\'s Biological Diversity Act.'},
+{c:'E8 · International Conventions',
+ q:'The headline target of the Kunming-Montreal Global Biodiversity Framework agreed in 2022 is to:',
+ o:[
+    'Protect thirty per cent of land and sea by 2030',
+    'Restore all degraded wetlands by 2035',
+    'End all trade in endangered species by 2030',
+    'Halve global deforestation rates by 2030'],
+ a:0,
+ e:'The so-called thirty by thirty target. The framework succeeded the Aichi Targets, essentially none of which were fully met — a failure usually attributed to the absence of financing and accountability mechanisms rather than to the targets themselves.'},
+{c:'E8 · International Conventions',
+ q:'Consider the following statements about India and international environmental bodies:',
+ S:[
+    ['The International Solar Alliance is headquartered in India.',true],
+    ['UNEP is headquartered at Geneva.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'UNEP is at Nairobi, notably the first major United Nations body headquartered in a developing country. The International Solar Alliance sits at Gurugram, making it the first major international organisation based in India, and India has been an Arctic Council observer since 2013.'},
+{c:'E8 · International Conventions',
+ q:'The Intergovernmental Panel on Climate Change is best described as a body that:',
+ o:[
+    'Conducts original climate research programmes',
+    'Assesses and synthesises published research',
+    'Enforces emission targets on member states',
+    'Funds adaptation projects in developing countries'],
+ a:1,
+ e:'The IPCC conducts no research of its own; it assesses the published literature. It was established in 1988 by UNEP and the WMO, works through three working groups, and has its Summary for Policymakers approved line by line by governments — which is both its strength and its weakness.'}
+
+];
+
+/* ---------- Engine (identical across classes) ---------- */
+function shuffle(arr){const a=arr.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+
+/* Canonical Prelims answer-code sets. For an S-question the statements are
+   reshuffled on every attempt and the correct code is worked out from which
+   ones landed where — so neither the option nor the position of the false
+   statement can be memorised. */
+const SET_CODE3=["1 and 2 only","2 and 3 only","1 and 3 only","1, 2 and 3"];
+const SET_CODE2=["1 only","2 only","Both 1 and 2","Neither 1 nor 2"];
+const SET_COUNT=["Only one","Only two","All three","None"];
+const SET_COUNT4=["Only one","Only two","Only three","All four"];
+function buildCode(mode,n,trueIdx){
+  const c=trueIdx.length;
+  if(mode==='count'){
+    const set=n===4?SET_COUNT4:SET_COUNT;
+    const text=c===0?'None':c===1?'Only one':c===2?'Only two':c===3?(n===3?'All three':'Only three'):'All four';
+    return {set:set,text:text};
+  }
+  if(n===2){
+    const text=c===2?'Both 1 and 2':c===0?'Neither 1 nor 2':(trueIdx[0]===1?'1 only':'2 only');
+    return {set:SET_CODE2,text:text};
+  }
+  const text=c===3?'1, 2 and 3':trueIdx[0]+' and '+trueIdx[1]+' only';
+  return {set:SET_CODE3,text:text};
+}
+function joinList(a){return a.length===1?String(a[0]):a.slice(0,-1).join(', ')+' and '+a[a.length-1];}
+function verdictLine(n,trueIdx,unit){
+  const U=unit==='pair'?'pair':'statement', Uc=U.charAt(0).toUpperCase()+U.slice(1);
+  const all=[];for(let i=1;i<=n;i++)all.push(i);
+  const f=all.filter(function(i){return trueIdx.indexOf(i)<0;});
+  if(f.length===0)return 'All the '+U+'s here are correct.';
+  if(trueIdx.length===0)return 'None of the '+U+'s here is correct.';
+  return Uc+(trueIdx.length===1?' ':'s ')+joinList(trueIdx)+(trueIdx.length===1?' is':' are')+' correct; '+
+         U+(f.length===1?' ':'s ')+joinList(f)+(f.length===1?' is not.':' are not.');
+}
+function buildSession(pool){return shuffle(pool).map(function(item){
+  let lines=item.L,options,correctText,auto='';
+  if(item.S){
+    const st=shuffle(item.S), n=st.length, trueIdx=[];
+    lines=st.map(function(s){return s[0];});
+    st.forEach(function(s,i){if(s[1])trueIdx.push(i+1);});
+    const built=buildCode(item.mode||'code',n,trueIdx);
+    options=built.set.slice(); correctText=built.text;
+    auto=verdictLine(n,trueIdx,item.unit)+' ';
+  } else { options=item.o.slice(); correctText=item.o[item.a]; }
+  const order=shuffle(options.map(function(text,i){return {text:text,i:i};}));
+  return {chapter:item.c,question:item.q,head:item.head,lines:lines,ask:item.ask,
+          options:order.map(function(o){return o.text;}),
+          correct:order.findIndex(function(o){return o.text===correctText;}),
+          explain:auto+item.e};
+});}
+let session=[],current=0,answers=[],startTime=null,timerInterval=null,reviewMode=false,activeScope="";
+const el=id=>document.getElementById(id);
+const screens={menu:el('menu'),quiz:el('quiz'),result:el('result')};
+function show(name){Object.keys(screens).forEach(k=>screens[k].classList.toggle('is-active',k===name));}
+el('courseEyebrow').textContent=COURSE.eyebrow; el('courseTitle').textContent=COURSE.title; el('courseLede').textContent=COURSE.lede;
+function chapterCount(name){return QUESTIONS.filter(q=>q.c===name).length;}
+function buildMenu(){
+  const list=el('lessonList'); list.innerHTML='';
+  const combined=document.createElement('button');
+  combined.className='lesson-card combined'; combined.type='button';
+  combined.innerHTML='<span class="lesson-num">★</span><span class="lesson-body"><span class="lesson-title">Full Syllabus — Combined</span><span class="lesson-meta">All '+CHAPTERS.length+' lessons · '+QUESTIONS.length+' questions, shuffled</span></span><span class="lesson-go">→</span>';
+  combined.addEventListener('click',()=>startQuiz(null)); list.appendChild(combined);
+  CHAPTERS.forEach((name,idx)=>{
+    const shortTitle=name.replace(/^Ch\d+ · /,'');
+    const btn=document.createElement('button'); btn.className='lesson-card'; btn.type='button';
+    const num=document.createElement('span'); num.className='lesson-num'; num.textContent=String(idx+1);
+    const body=document.createElement('span'); body.className='lesson-body';
+    const t=document.createElement('span'); t.className='lesson-title'; t.textContent=shortTitle;
+    const m=document.createElement('span'); m.className='lesson-meta'; m.textContent=chapterCount(name)+' questions';
+    body.appendChild(t); body.appendChild(m);
+    const go=document.createElement('span'); go.className='lesson-go'; go.textContent='→';
+    btn.appendChild(num); btn.appendChild(body); btn.appendChild(go);
+    btn.addEventListener('click',()=>startQuiz(name)); list.appendChild(btn);
+  });
+}
+function formatTime(sec){const m=Math.floor(sec/60).toString().padStart(2,'0');const s=Math.floor(sec%60).toString().padStart(2,'0');return m+':'+s;}
+function startTimer(){startTime=Date.now();clearInterval(timerInterval);timerInterval=setInterval(()=>{el('timer').textContent=formatTime((Date.now()-startTime)/1000);},1000);}
+function stopTimer(){clearInterval(timerInterval);}
+function startQuiz(chapter){
+  const pool=chapter?QUESTIONS.filter(q=>q.c===chapter):QUESTIONS;
+  activeScope=chapter?chapter.replace(/^Ch\d+ · /,''):"Full Syllabus";
+  session=buildSession(pool); answers=new Array(session.length).fill(null); current=0; reviewMode=false;
+  show('quiz'); el('timer').textContent='00:00'; startTimer(); renderQuestion();
+}
+function renderStem(item){
+  const box=el('qblock'); box.innerHTML='';
+  const stem=document.createElement('p'); stem.className='question'; stem.textContent=item.question; box.appendChild(stem);
+  if(item.head){const h=document.createElement('p'); h.className='stmt-head'; h.textContent=item.head; box.appendChild(h);}
+  if(item.lines&&item.lines.length){
+    const ol=document.createElement('ul'); ol.className='stmt-list';
+    item.lines.forEach((line,i)=>{
+      const li=document.createElement('li');
+      const n=document.createElement('span'); n.className='sn'; n.textContent=(i+1)+'.';
+      const t=document.createElement('span'); t.className='st';
+      const split=line.indexOf(' : ');
+      if(split>-1){
+        t.textContent=line.slice(0,split);
+        const r=document.createElement('span'); r.className='sr'; r.textContent=' — '+line.slice(split+3);
+        t.appendChild(r);
+      } else { t.textContent=line; }
+      li.appendChild(n); li.appendChild(t); ol.appendChild(li);
+    });
+    box.appendChild(ol);
+  }
+  if(item.ask){const a=document.createElement('p'); a.className='ask'; a.textContent=item.ask; box.appendChild(a);}
+}
+function renderQuestion(){
+  const item=session[current]; const chosen=answers[current]; const reveal=chosen!==null||reviewMode;
+  el('chapterTag').textContent=item.chapter; el('counter').textContent=(current+1)+' / '+session.length;
+  el('progressFill').style.width=((current+1)/session.length*100)+'%';
+  renderStem(item);
+  const optsBox=el('options'); optsBox.innerHTML=''; const letters=['A','B','C','D','E'];
+  item.options.forEach((opt,i)=>{
+    const btn=document.createElement('button'); btn.className='option'; btn.type='button';
+    const l=document.createElement('span'); l.className='opt-letter'; l.textContent=letters[i];
+    const t=document.createElement('span'); t.className='opt-text'; t.textContent=opt;
+    btn.appendChild(l); btn.appendChild(t);
+    if(reveal){btn.disabled=true; if(i===item.correct)btn.classList.add('correct'); else if(i===chosen)btn.classList.add('incorrect');}
+    btn.addEventListener('click',()=>selectOption(i)); optsBox.appendChild(btn);
+  });
+  const fb=el('feedback');
+  if(reveal){
+    fb.hidden=false; let verdict,cls;
+    if(chosen===null){verdict='Skipped.';cls='bad';} else if(chosen===item.correct){verdict='Correct.';cls='good';} else {verdict='Not quite.';cls='bad';}
+    fb.className='feedback '+cls;
+    fb.innerHTML=''; const v=document.createElement('span'); v.className='verdict'; v.textContent=verdict;
+    fb.appendChild(v); fb.appendChild(document.createTextNode(' '+item.explain));
+  } else { fb.hidden=true; }
+  el('prevBtn').disabled=current===0;
+  const nextBtn=el('nextBtn');
+  nextBtn.textContent = reviewMode ? (current===session.length-1?'Back to results':'Next →') : (current===session.length-1?'Finish':'Next →');
+  el('options').scrollIntoView&&el('qblock').parentElement.scrollTo({top:0});
+}
+function selectOption(i){ if(reviewMode||answers[current]!==null)return; answers[current]=i; renderQuestion(); }
+function finishQuiz(){
+  stopTimer(); const elapsed=(Date.now()-startTime)/1000; let correctCount=0; const stats={};
+  session.forEach((item,i)=>{ if(!stats[item.chapter])stats[item.chapter]={correct:0,total:0}; stats[item.chapter].total++; if(answers[i]===item.correct){correctCount++;stats[item.chapter].correct++;} });
+  show('result');
+  el('resultScope').textContent=activeScope+' · '+session.length+' questions';
+  el('scoreText').textContent=correctCount+' / '+session.length; el('timeText').textContent=formatTime(elapsed);
+  el('scorePct').textContent=Math.round(correctCount/session.length*100)+'%';
+  const body=el('breakdownBody'); body.innerHTML='';
+  CHAPTERS.filter(c=>stats[c]).forEach(c=>{
+    const s=stats[c]; const row=document.createElement('tr');
+    const td1=document.createElement('td'); td1.textContent=c.replace(/^Ch\d+ · /,'');
+    const p=Math.round(s.correct/s.total*100);
+    const bar=document.createElement('div'); bar.className='bd-bar';
+    const fill=document.createElement('span'); fill.style.width=p+'%'; bar.appendChild(fill); td1.appendChild(bar);
+    const td2=document.createElement('td'); td2.className='num'; td2.textContent=s.correct+' / '+s.total;
+    row.appendChild(td1); row.appendChild(td2); body.appendChild(row);
+  });
+}
+function enterReview(){reviewMode=true;current=0;show('quiz');renderQuestion();}
+function exitReviewToResult(){reviewMode=false;show('result');}
+el('prevBtn').addEventListener('click',()=>{if(current>0){current--;renderQuestion();}});
+el('nextBtn').addEventListener('click',()=>{
+  if(reviewMode){ if(current===session.length-1)exitReviewToResult(); else {current++;renderQuestion();} }
+  else { if(current===session.length-1)finishQuiz(); else {current++;renderQuestion();} }
+});
+el('reviewBtn').addEventListener('click',enterReview);
+el('restartBtn').addEventListener('click',()=>{ const chapter=activeScope==="Full Syllabus"?null:CHAPTERS.find(c=>c.replace(/^Ch\d+ · /,'')===activeScope); startQuiz(chapter); });
+el('menuBtn').addEventListener('click',()=>{stopTimer();show('menu');});
+document.addEventListener('keydown',(e)=>{
+  if(!screens.quiz.classList.contains('is-active'))return;
+  if(['1','2','3','4','5'].includes(e.key)&&!reviewMode){selectOption(parseInt(e.key,10)-1);}
+  else if(e.key==='ArrowRight'||e.key==='Enter'){el('nextBtn').click();}
+  else if(e.key==='ArrowLeft'){el('prevBtn').click();}
+});
+buildMenu();
+</script>
