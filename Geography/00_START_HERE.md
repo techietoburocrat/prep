@@ -317,7 +317,7 @@ Honest estimate, built bottom-up rather than guessed:
 | 0 | Atlas setup + PYQ skim to calibrate | **3** |
 | 1 | NCERT 6–10 fast pass (5 thin books) | **22** |
 | 2 | ⭐ Class 11 *Fundamentals of Physical Geography* + notes | **25** |
-| 3 | G.C. Leong — selected chapters, interleaved with Stage 2 | **28** |
+| 3 | ✅ G.C. Leong — **written as a delta over the NCERTs, not a second read** | ~~28~~ → **16** |
 | 4 | Class 11 *India — Physical Environment* | **18** |
 | 5 | Class 12 *Fundamentals of Human Geography* | **13** |
 | 6 | Class 12 *India — People and Economy* | **16** |
@@ -325,8 +325,8 @@ Honest estimate, built bottom-up rather than guessed:
 | 8 | PYQs — Prelims (~300 Qs merged) + Mains | **32** |
 | 9 | Quiz build + consolidation notes | **18** |
 | | **Geography subtotal** | **~193 hrs** |
-| **E1** | 🌱 NCERT Cl.12 Biology ch.13–16 (ecology core) | **12** |
-| **E2** | 🌱 Shankar IAS Environment | **35** |
+| **E1** | ✅ 🌱 NCERT Cl.12 Biology ch.13–16 — **absorbed into E2 Part A** | ~~12~~ → **0** |
+| **E2** | ✅ 🌱 Shankar IAS Environment — **full notes, not a delta** | ~~35~~ → **43** |
 | | **First pass total, merged** | **~240 hrs** |
 | | + revision cycles and map upkeep through to Prelims | **+60 hrs** |
 | | **Through to exam day** | **~300 hrs** |
@@ -351,30 +351,34 @@ Do it in this order. The order is not arbitrary — physical geography is a **ca
 STAGE 0 ── Atlas + syllabus + PYQ calibration ......... 3 hrs   ┐
                                                                 │ do this
 STAGE 1 ── NCERT 6→10, fast pass, light notes ........ 22 hrs   ┘ first week
-           ◄── YOU ARE HERE: Class 6, The Earth Our Habitat
+           ✅ DONE
 
 STAGE 2 ── ⭐ Cl.11 Fundamentals of Physical Geography  25 hrs  ┐
-              ↕ interleave — same topics, two depths            │ THE CORE
-STAGE 3 ── G.C. Leong, selected chapters ............. 28 hrs   ┘ ~4 weeks
+           ✅ DONE                                              │ THE CORE
+STAGE 3 ── G.C. Leong — written as a DELTA ........... 16 hrs   ┘ ✅ DONE
+           ✅ DONE 11 Aug 2026 · 25 files, 5,526 lines
+           → 02_Standard_Reference_Books/GC_Leong/00_INDEX.md
 
-STAGE E1 ─ 🌱 Cl.12 Biology ch.13–16 (ecology core) ... 12 hrs  ← slot here, NOT later:
-                                                                  ecosystems/biomes make
-                                                                  sense right after climate
+STAGE E1 ─ 🌱 Cl.12 Biology ch.13–16 (ecology core) ... ~~12~~ hrs
+           ✅ ABSORBED into Shankar Part A — same content, one pass
 
-STAGE 4 ── Cl.11 India — Physical Environment ........ 18 hrs
-STAGE 5 ── Cl.12 Fundamentals of Human Geography ..... 13 hrs
-STAGE 6 ── Cl.12 India — People and Economy .......... 16 hrs
+STAGE 4 ── Cl.11 India — Physical Environment ........ 18 hrs  ✅ DONE
+STAGE 5 ── Cl.12 Fundamentals of Human Geography ..... 13 hrs  ✅ DONE
+STAGE 6 ── Cl.12 India — People and Economy .......... 16 hrs  ✅ DONE
 
-STAGE E2 ─ 🌱 Shankar IAS Environment ................ 35 hrs  ← the big environment block
-                                                                  (biodiversity, climate change,
-                                                                   protected areas, Acts, pollution)
+STAGE E2 ─ 🌱 Shankar IAS Environment ................ 43 hrs  ✅ DONE
+           ✅ DONE 11 Aug 2026 · 21 files, 3,510 lines
+           → 02_Standard_Reference_Books/Shankar_IAS_Environment/00_INDEX.md
+           ⚠️ every volatile figure tagged [VERIFY] — refresh before Prelims
 
-STAGE 7 ── 🗺️ Map work — 15 min EVERY day, from day 1 . 18 hrs  ← runs in parallel throughout
-STAGE 8 ── PYQs: Prelims 2011→26 (geo + env), Mains ... 32 hrs
+STAGE 7 ── 🗺️ Map work — 15 min EVERY day, from day 1 . 18 hrs  ← ◄── YOU ARE HERE
+STAGE 8 ── PYQs: Prelims 2011→26 (geo + env), Mains ... 32 hrs  ← ◄── AND HERE
 STAGE 9 ── Quiz build + one-page consolidation ....... 18 hrs
 ```
 
-**Why E1 sits in the middle rather than at the end:** ecosystems, biomes and food chains are *downstream of climate*. Doing the ecology core straight after Stages 2–3 means you meet "tropical rainforest biome" while the climate logic that produces it is still fresh — one continuous explanation instead of two disconnected ones months apart. E2 comes later because Shankar IAS is largely factual (Acts, conventions, protected areas) and factual material should sit closer to the exam.
+**Why E1 was folded into E2 rather than done separately:** NCERT Class 12 Biology ch.13–16 (*Organisms and Populations · Ecosystem · Biodiversity and Conservation · Environmental Issues*) covers the same ground as Shankar's opening chapters at a similar depth. Doing both would have meant writing population interactions, energy flow and biodiversity twice. It is written once, into [Shankar Part A](02_Standard_Reference_Books/Shankar_IAS_Environment/Part_A_Ecology/01_Ecology_Fundamentals.md), which discharges E1 and saves ~4 hrs.
+
+**All reading stages are now complete.** What remains is *practice and retention*, not new material: the daily map habit, the PYQ pass, and the quiz engine.
 
 ### Why Stage 2 and 3 are interleaved, not sequential
 
@@ -529,7 +533,21 @@ Geography/
 │   ├── Class_12_Fundamentals_of_Human_Geography/
 │   └── Class_12_India_People_and_Economy/
 │        └── each: Notes/ + Textbook_PDF/
-├── 02_Standard_Reference_Books/   ← G.C. Leong, Environment_overlap.md
+├── 02_Standard_Reference_Books/
+│   ├── GC_Leong/                  ✅ DONE — 25 files, 5,526 lines
+│   │    ├── 00_INDEX.md           ← triage + skip register + NCERT cross-link map
+│   │    ├── Part_A_Physical/      ← 12 delta notes (karst, lakes, coral, currents…)
+│   │    ├── Part_B_Climate_Types/ ⭐ 11 climates + 00_Comparison_Matrix.md
+│   │    └── Textbook_PDF/         ⚠️ empty — book not downloaded
+│   └── Shankar_IAS_Environment/   ✅ DONE — 21 files, 3,510 lines
+│        ├── 00_INDEX.md           ← overlap policy + ⚠️ VOLATILE-FIGURES register
+│        ├── 00_QUICK_REVISION_TABLES.md  ⭐⭐ the revision core
+│        ├── Part_A_Ecology/       ← 4 files (absorbs old Stage E1)
+│        ├── Part_B_Biodiversity/  ← 4 (hotspots, zones, PA network, species)
+│        ├── Part_C_Pollution/     ← 3 (air, water/soil, waste)
+│        ├── Part_D_Climate_Change/← 3
+│        ├── Part_E_Governance/    ← 5 (Acts, EIA, conventions, bodies, SDGs)
+│        └── Textbook_PDF/         ⚠️ empty — book not downloaded
 ├── 03_PYQ_Prelims/                ← target ~150 Qs, 2011→2026
 ├── 04_PYQ_Mains/                  ← target 96 Qs, 2013→2025
 ├── 05_Quiz_MCQ/                   ← data/ + dist/
