@@ -12,10 +12,10 @@
 |---|---|
 | **Subject** | Geography → **Physical Geography** → Geomorphology |
 | **Merged with** | 🌱 **Environment** → **disaster management** (earthquakes, volcanoes, floods, landslides) |
-| **Prelims (GS-I)** | ⭐⭐⭐ Very high. Earthquake terms, volcano types, and **erosional/depositional landforms** |
+| **Prelims (GS-I)** | ⭐ Very high. Earthquake terms, volcano types, and **erosional/depositional landforms** |
 | **Mains (GS-I)** | "Important geophysical phenomena such as earthquakes, tsunami, volcanic activity" — **a syllabus line, verbatim** |
 | **Mains (GS-III)** | 🌱 **Disaster and disaster management** — an explicit GS-III item |
-| **Weightage** | ⭐⭐⭐ — **the highest-value chapter in Class 7** |
+| **Weightage** | ⭐ — **the highest-value chapter in Class 7** |
 | **Later** | Cl.11 *Fundamentals* — plate tectonics, weathering, landform evolution |
 
 ---
@@ -27,7 +27,7 @@
 - [ ] **Define** focus, epicentre, seismograph; name the three seismic wave types.
 - [ ] **Distinguish** active, dormant and extinct volcanoes.
 - [ ] **Define** weathering and erosion, and state the difference.
-- [ ] ⭐ **Name and describe** the landforms made by **river, sea, ice and wind** — erosional and depositional.
+- [ ] **Name and describe** the landforms made by **river, sea, ice and wind** — erosional and depositional.
 - [ ] 🌱 **List** earthquake preparedness measures.
 
 ---
@@ -39,7 +39,7 @@
 | **Origin** | Inside the Earth | On the surface |
 | **Effect** | **Build up** — raise land | **Wear down** — level land |
 | **Agents** | Plate movement, volcanism, earthquakes | River, sea, ice, wind, rain |
-| **Speed** | ⭐ Can be **sudden** (quake, eruption) or slow (mountain building) | ⭐ Almost always **slow** |
+| **Speed** | Can be **sudden** (quake, eruption) or slow (mountain building) | Almost always **slow** |
 
 **Sudden vs diastrophic forces:**
 
@@ -88,8 +88,8 @@ The crust is not one continuous shell. It is broken into large slabs — **litho
 
 | Term | Meaning |
 |---|---|
-| ⭐ **Focus / Hypocentre** | The point **inside the Earth** where the earthquake originates |
-| ⭐ **Epicentre** | The point **on the surface, directly above the focus**. Damage is greatest here |
+| **Focus / Hypocentre** | The point **inside the Earth** where the earthquake originates |
+| **Epicentre** | The point **on the surface, directly above the focus**. Damage is greatest here |
 | **Fault** | The fracture along which movement occurs |
 | **Seismograph** | The instrument that records earthquake waves |
 | **Richter scale** | Measures **magnitude** (energy released) |
@@ -111,9 +111,9 @@ The crust is not one continuous shell. It is broken into large slabs — **litho
 
 | Wave | Name | Character |
 |---|---|---|
-| **P** | **Primary** | ⭐ **Fastest**, arrives first. Longitudinal. Travels through **solids AND liquids** |
-| **S** | **Secondary** | Slower. Transverse. ⭐ Travels through **solids only** |
-| **L** | **Surface** | ⭐ **Slowest but most destructive.** Travels along the surface |
+| **P** | **Primary** | **Fastest**, arrives first. Longitudinal. Travels through **solids AND liquids** |
+| **S** | **Secondary** | Slower. Transverse. Travels through **solids only** |
+| **L** | **Surface** | **Slowest but most destructive.** Travels along the surface |
 
 > 🔬 **A genuinely elegant consequence worth knowing:** because **S-waves cannot pass through liquid**, and they are blocked in a region on the far side of the Earth, scientists deduced that **the outer core must be liquid** — without ever going there. **The earthquake is the X-ray, and the shadow it casts told us what's inside the planet.** That's how we know the structure in Ch.2.
 
@@ -168,7 +168,7 @@ The crust is not one continuous shell. It is broken into large slabs — **litho
 
 ---
 
-## 6️⃣ ⭐⭐⭐ Landforms by Agent — The Core Table
+## 6️⃣ ⭐ Landforms by Agent — The Core Table
 
 **This is the highest-yield content in Class 7.** Each agent both **erodes** (carves) and **deposits** (builds).
 
@@ -176,11 +176,11 @@ The crust is not one continuous shell. It is broken into large slabs — **litho
 
 | **EROSIONAL** | **DEPOSITIONAL** |
 |---|---|
-| ⭐ **Waterfall** — river drops over hard/soft rock boundary | ⭐ **Flood plain** — silt spread over the valley floor |
-| **V-shaped valley** — in the upper course | ⭐ **Levee** — natural embankment of coarse silt along the banks |
-| **Gorge / canyon** | ⭐ **Meander** — a looping bend in the middle course |
-| | ⭐ **Ox-bow lake** — a cut-off meander loop |
-| | ⭐ **Delta** — triangular deposit at the river's mouth |
+| **Waterfall** — river drops over hard/soft rock boundary | **Flood plain** — silt spread over the valley floor |
+| **V-shaped valley** — in the upper course | **Levee** — natural embankment of coarse silt along the banks |
+| **Gorge / canyon** | **Meander** — a looping bend in the middle course |
+| | **Ox-bow lake** — a cut-off meander loop |
+| | **Delta** — triangular deposit at the river's mouth |
 
 ```
    HOW AN OX-BOW LAKE FORMS
@@ -194,7 +194,7 @@ The crust is not one continuous shell. It is broken into large slabs — **litho
                                neck narrows              (cut off)
 ```
 
-> ⭐ **Ox-bow lake formation is a standing Prelims and interview question.** The reason it happens: the river erodes the **outer** bank of a bend (faster water) and deposits on the **inner** bank (slower water), so the loop grows steadily more exaggerated until the neck is breached during a flood and the river takes the short cut. The abandoned loop becomes a crescent lake. **Erosion and deposition working on the same bend, on opposite sides.**
+> **Ox-bow lake formation is a standing Prelims and interview question.** The reason it happens: the river erodes the **outer** bank of a bend (faster water) and deposits on the **inner** bank (slower water), so the loop grows steadily more exaggerated until the neck is breached during a flood and the river takes the short cut. The abandoned loop becomes a crescent lake. **Erosion and deposition working on the same bend, on opposite sides.**
 
 **Waterfall example:** **Angel Falls** (Venezuela, world's highest), **Niagara**, **Jog Falls** (India).
 
@@ -202,9 +202,9 @@ The crust is not one continuous shell. It is broken into large slabs — **litho
 
 | **EROSIONAL** | **DEPOSITIONAL** |
 |---|---|
-| ⭐ **Sea cave** — hollow cut into a cliff | ⭐ **Beach** — deposited sand |
-| ⭐ **Sea arch** — cave cut right through a headland | **Sand bar, spit** |
-| ⭐ **Stack** — arch roof collapses, leaving a pillar | |
+| **Sea cave** — hollow cut into a cliff | **Beach** — deposited sand |
+| **Sea arch** — cave cut right through a headland | **Sand bar, spit** |
+| **Stack** — arch roof collapses, leaving a pillar | |
 | **Sea cliff** — steep rock face | |
 
 ```
@@ -217,24 +217,24 @@ The crust is not one continuous shell. It is broken into large slabs — **litho
    CLIFF        CAVE          ARCH           STACK
 ```
 
-> ⭐ **Learn this as a sequence, not four separate facts.** Waves attack a weak point in a cliff → a **cave** forms → the cave is cut right through the headland → it becomes an **arch** → the arch roof eventually collapses → the remaining isolated pillar is a **stack**. **One process, four stages.** Questions often ask which comes after which.
+> **Learn this as a sequence, not four separate facts.** Waves attack a weak point in a cliff → a **cave** forms → the cave is cut right through the headland → it becomes an **arch** → the arch roof eventually collapses → the remaining isolated pillar is a **stack**. **One process, four stages.** Questions often ask which comes after which.
 
 ### 🧊 Ice (Glaciers)
 
 | **EROSIONAL** | **DEPOSITIONAL** |
 |---|---|
-| ⭐ **U-shaped valley** (vs the river's V-shape) | ⭐ **Moraine** — ridges of deposited rock debris |
+| **U-shaped valley** (vs the river's V-shape) | **Moraine** — ridges of deposited rock debris |
 | **Cirque** — armchair hollow at a glacier's head | **Glacial till / drift** — unsorted deposited material |
 | **Horn, arête** | **Outwash plain** |
 
-> ⭐ **V-shaped vs U-shaped is a classic distinction.** A **river** cuts downward, producing a narrow **V**. A **glacier** is a broad mass of ice that scours the sides as well as the base, producing a wide, flat-bottomed **U**. **The shape of a valley tells you which agent carved it** — useful for reading a landscape.
+> **V-shaped vs U-shaped is a classic distinction.** A **river** cuts downward, producing a narrow **V**. A **glacier** is a broad mass of ice that scours the sides as well as the base, producing a wide, flat-bottomed **U**. **The shape of a valley tells you which agent carved it** — useful for reading a landscape.
 
 ### 💨 Wind (Deserts)
 
 | **EROSIONAL** | **DEPOSITIONAL** |
 |---|---|
-| ⭐ **Mushroom rock** — narrow base, broad top | ⭐ **Sand dunes** |
-| **Deflation hollow** | ⭐ **Loess** — very fine wind-blown silt deposited far away |
+| **Mushroom rock** — narrow base, broad top | **Sand dunes** |
+| **Deflation hollow** | **Loess** — very fine wind-blown silt deposited far away |
 
 > 🍄 **Why mushroom rocks have that shape** — an example of a landform that explains itself once you see the mechanism. **Wind carries sand, and sand is heavy, so most of it travels close to the ground.** The lower part of a rock is therefore sandblasted much harder than the upper part. Over time the base is eaten away while the top survives — leaving a narrow stem and a broad cap. **The landform is a record of where the abrasive was.**
 
@@ -246,17 +246,17 @@ The crust is not one continuous shell. It is broken into large slabs — **litho
 
 | Topic | The specific thing |
 |---|---|
-| **Focus vs epicentre** ⭐⭐⭐ | Focus is inside; epicentre is directly above it on the surface |
-| **P, S, L waves** ⭐⭐⭐ | P fastest (solid+liquid) · S solids only · L slowest, **most destructive** |
-| **River landforms** ⭐⭐⭐ | Waterfall, meander, ox-bow lake, flood plain, levee, delta |
-| **Sea landform sequence** ⭐⭐⭐ | Cliff → cave → arch → **stack** |
-| **U-shaped vs V-shaped valley** ⭐⭐⭐ | Glacier vs river |
-| **Mushroom rock** ⭐⭐ | Wind erosion; sand travels low, so the base erodes faster |
-| **Loess** ⭐⭐ | Fine wind-blown silt; northern China |
-| **Plate boundaries** ⭐⭐ | Convergent (mountains) · divergent (ridges) · transform (quakes) |
-| **Active/dormant/extinct** ⭐⭐ | **Barren Island** = India's only active volcano |
-| **Weathering vs erosion** ⭐⭐ | Breaking in place vs wearing away **and removal** |
-| **Richter vs Mercalli** ⭐⭐ | Magnitude (energy) vs intensity (damage) |
+| **Focus vs epicentre** ⭐ | Focus is inside; epicentre is directly above it on the surface |
+| **P, S, L waves** ⭐ | P fastest (solid+liquid) · S solids only · L slowest, **most destructive** |
+| **River landforms** ⭐ | Waterfall, meander, ox-bow lake, flood plain, levee, delta |
+| **Sea landform sequence** ⭐ | Cliff → cave → arch → **stack** |
+| **U-shaped vs V-shaped valley** ⭐ | Glacier vs river |
+| **Mushroom rock** | Wind erosion; sand travels low, so the base erodes faster |
+| **Loess** | Fine wind-blown silt; northern China |
+| **Plate boundaries** | Convergent (mountains) · divergent (ridges) · transform (quakes) |
+| **Active/dormant/extinct** | **Barren Island** = India's only active volcano |
+| **Weathering vs erosion** | Breaking in place vs wearing away **and removal** |
+| **Richter vs Mercalli** | Magnitude (energy) vs intensity (damage) |
 
 **Trap 1:** *"The focus is on the surface."* **No — that's the epicentre.** The focus is underground.
 **Trap 2:** *"P-waves are the most destructive."* **No — L (surface) waves are.** P-waves are merely the fastest.
@@ -303,14 +303,14 @@ The crust is not one continuous shell. It is broken into large slabs — **litho
 1. **Endogenic forces build up; exogenic forces wear down.** Sudden (quakes, eruptions) vs diastrophic (slow).
 2. **Plates float on the mantle and move a few cm/year.** Three boundaries: convergent, divergent, transform.
 3. **The Himalayas and Himalayan earthquakes are the same event** — India still driving into Asia.
-4. ⭐ **Focus = inside the Earth. Epicentre = directly above it on the surface.**
-5. ⭐ **P fastest (solids + liquids) · S solids only · L slowest but most destructive.** S-wave blocking proved the outer core is liquid.
+4. **Focus = inside the Earth. Epicentre = directly above it on the surface.**
+5. **P fastest (solids + liquids) · S solids only · L slowest but most destructive.** S-wave blocking proved the outer core is liquid.
 6. **Volcanoes: active / dormant / extinct.** **Barren Island** is India's only active one. Volcanic soil is exceptionally fertile.
 7. **Weathering breaks in place; erosion removes.**
-8. ⭐ **River:** waterfall, V-valley (erosional); meander, ox-bow lake, flood plain, levee, delta (depositional).
-9. ⭐ **Sea:** cliff → cave → arch → **stack** (a sequence); beach (depositional).
-10. ⭐ **Ice:** **U-shaped** valley, cirque (erosional); moraine (depositional).
-11. ⭐ **Wind:** mushroom rock (erosional); sand dunes, **loess** (depositional).
+8. **River:** waterfall, V-valley (erosional); meander, ox-bow lake, flood plain, levee, delta (depositional).
+9. **Sea:** cliff → cave → arch → **stack** (a sequence); beach (depositional).
+10. **Ice:** **U-shaped** valley, cirque (erosional); moraine (depositional).
+11. **Wind:** mushroom rock (erosional); sand dunes, **loess** (depositional).
 12. 🌱 **Earthquakes don't kill people — buildings do.** The policy answer is code enforcement, not prediction.
 
 ---

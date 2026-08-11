@@ -12,9 +12,9 @@
 |---|---|
 | **Subject** | Geography → **Resource / Environmental Geography** |
 | **Merged with** | 🌱🌱🌱 **Environment** — soil erosion, water scarcity, deforestation, wildlife loss |
-| **Prelims (GS-I)** | ⭐⭐⭐ **Soil formation factors, soil conservation methods**, land use, rainwater harvesting |
+| **Prelims (GS-I)** | ⭐ **Soil formation factors, soil conservation methods**, land use, rainwater harvesting |
 | **Mains (GS-III)** | 🌱 Land degradation, water security, conservation — recurring |
-| **Weightage** | ⭐⭐⭐ |
+| **Weightage** | ⭐ |
 | **Later** | Cl.10 Ch.1 repeats soil in more detail; Shankar IAS on conservation |
 
 ---
@@ -23,9 +23,9 @@
 
 - [ ] **Distinguish** land use from land cover; list the factors affecting land use.
 - [ ] **Define** land degradation and name its causes.
-- [ ] ⭐ **List** the five factors of soil formation.
+- [ ] **List** the five factors of soil formation.
 - [ ] **Describe** the soil profile — horizons A, B, C.
-- [ ] ⭐ **Name and explain** the soil conservation methods.
+- [ ] **Name and explain** the soil conservation methods.
 - [ ] 🌱 **Explain** water scarcity and rainwater harvesting.
 - [ ] 🌱 **Name** the key conservation institutions and lists (IUCN Red List, CITES).
 
@@ -44,7 +44,7 @@
 ### Land ownership
 
 | **Private land** | Owned by individuals |
-| **Community land** | ⭐ Owned by the community for collective use — **"common property resources"**: grazing land, village ponds, burial grounds, forests |
+| **Community land** | Owned by the community for collective use — **"common property resources"**: grazing land, village ponds, burial grounds, forests |
 
 > 🌱 **Community land matters more than its brief mention suggests.** These commons supply fodder, fuelwood, fruit and medicinal plants to the rural poor, who often own no private land. **Their steady enclosure and conversion is a quiet driver of rural poverty**, and it links to Elinor Ostrom's work on managing commons — a good, specific reference for an essay or GS-III answer on resource governance.
 
@@ -62,13 +62,13 @@
 
 ---
 
-## 2️⃣ ⭐ Soil
+## 2️⃣ Soil
 
 > **Soil** = the thin top layer of the Earth's crust made of **weathered rock (minerals) + organic matter (humus) + water + air**, capable of supporting plant life.
 
 > ⚠️ **Soil is renewable, but on a timescale that makes it effectively non-renewable to us.** It takes **hundreds to thousands of years to form one centimetre** of topsoil. It can be lost in a single monsoon. **That asymmetry — slow to build, fast to lose — is the entire argument for soil conservation**, and it's the sentence to put in an answer.
 
-### ⭐ The five factors of soil formation
+### The five factors of soil formation
 
 | Factor | Effect |
 |---|---|
@@ -107,19 +107,19 @@
 | Glaciers | **Faulty farming — ploughing up and down a slope** |
 | | Construction and mining |
 
-⭐ **Gully erosion** creates deep channels that make land uncultivable — the resulting terrain is called **badland**, and in Madhya Pradesh's Chambal region, **ravines**.
+**Gully erosion** creates deep channels that make land uncultivable — the resulting terrain is called **badland**, and in Madhya Pradesh's Chambal region, **ravines**.
 
-### ⭐⭐ Soil conservation methods — the highest-yield table in this chapter
+### Soil conservation methods — the highest-yield table in this chapter
 
 | Method | What it is |
 |---|---|
-| ⭐ **Contour ploughing** | Ploughing **along the contour lines** (across the slope, not up and down) — each furrow acts as a small barrier slowing run-off |
-| ⭐ **Terrace farming** | Cutting **broad flat steps** into a steep hillside — reduces slope, so water slows and soil stays. Classic in the Himalayas and the Western Ghats |
-| ⭐ **Contour barriers** | Stone, grass or soil barriers built along contours, with trenches in front to collect water |
-| ⭐ **Rock dam** | Rocks piled to **slow water flow**, preventing gullies and soil loss |
-| ⭐ **Intercropping** | Growing **different crops in alternate rows, sown at different times**, so the ground is never left bare |
-| ⭐ **Shelter belts** | **Rows of trees planted to break the wind** — used in coastal and dry regions to check wind erosion and stabilise dunes |
-| ⭐ **Mulching** | Covering bare ground between plants with **organic matter (straw, leaves)** — retains moisture and protects soil |
+| **Contour ploughing** | Ploughing **along the contour lines** (across the slope, not up and down) — each furrow acts as a small barrier slowing run-off |
+| **Terrace farming** | Cutting **broad flat steps** into a steep hillside — reduces slope, so water slows and soil stays. Classic in the Himalayas and the Western Ghats |
+| **Contour barriers** | Stone, grass or soil barriers built along contours, with trenches in front to collect water |
+| **Rock dam** | Rocks piled to **slow water flow**, preventing gullies and soil loss |
+| **Intercropping** | Growing **different crops in alternate rows, sown at different times**, so the ground is never left bare |
+| **Shelter belts** | **Rows of trees planted to break the wind** — used in coastal and dry regions to check wind erosion and stabilise dunes |
+| **Mulching** | Covering bare ground between plants with **organic matter (straw, leaves)** — retains moisture and protects soil |
 | **Strip cropping** | Alternating strips of crops to reduce wind speed across the field |
 
 > 🌾 **Why contour ploughing works — the mechanism, which is simple and worth stating.** Water runs downhill. If your furrows run **up and down the slope**, each one is a channel accelerating water downhill, carrying soil with it. If your furrows run **across the slope**, each one is a tiny dam that catches and slows the water, letting it soak in. **Same field, same plough, opposite outcome — decided entirely by direction.**
@@ -135,7 +135,7 @@
 | Cause | Detail |
 |---|---|
 | **Growing population** | More people, more demand |
-| **Agriculture** | ⭐ **Irrigation is by far the largest user of India's water** |
+| **Agriculture** | **Irrigation is by far the largest user of India's water** |
 | **Industry** | Manufacturing and cooling |
 | **Pollution** | Contamination shrinks the usable fraction |
 | **Uneven distribution** | Cherrapunji has ~11,000 mm; Jaisalmer ~100 mm |
@@ -145,12 +145,12 @@
 
 | Method | Detail |
 |---|---|
-| ⭐ **Rainwater harvesting** | Collecting and storing rain where it falls — rooftop systems, check dams, percolation tanks |
+| **Rainwater harvesting** | Collecting and storing rain where it falls — rooftop systems, check dams, percolation tanks |
 | **Drip / sprinkler irrigation** | Delivers water directly to roots; drastically less waste than flood irrigation |
 | **Watershed management** | Managing an entire drainage basin as a unit |
 | **Canal lining** | Prevents seepage losses |
 | **Recycling and treating** | Reusing industrial and household water |
-| **Traditional systems** | ⭐ Stepwells (*baolis*), tanks, *johads*, *khadins*, *kuls* — India has centuries-old local water technologies |
+| **Traditional systems** | Stepwells (*baolis*), tanks, *johads*, *khadins*, *kuls* — India has centuries-old local water technologies |
 
 > 💧 **Traditional water systems are worth naming specifically** — they show up in Prelims and give a Mains answer texture: **johads** (Rajasthan earthen check dams), **khadins** (Jaisalmer), **kuls** (Himachal), **zabo** (Nagaland), **eri** tanks (Tamil Nadu), **bamboo drip irrigation** (Meghalaya), **stepwells/baolis** (Gujarat, Rajasthan — Rani-ki-Vav is a UNESCO site).
 >
@@ -173,9 +173,9 @@ Deforestation · habitat loss · poaching · forest fires · pollution · **inva
 | Measure | Detail |
 |---|---|
 | **Protected areas** | National parks, wildlife sanctuaries, biosphere reserves |
-| **Legal** | ⭐ **Wildlife Protection Act 1972**, **Forest Conservation Act 1980** |
-| ⭐ **IUCN Red List** | International classification of species by extinction risk — Extinct, Critically Endangered, Endangered, Vulnerable, Near Threatened, Least Concern |
-| ⭐ **CITES** | Convention on International Trade in Endangered Species — regulates cross-border trade |
+| **Legal** | **Wildlife Protection Act 1972**, **Forest Conservation Act 1980** |
+| **IUCN Red List** | International classification of species by extinction risk — Extinct, Critically Endangered, Endangered, Vulnerable, Near Threatened, Least Concern |
+| **CITES** | Convention on International Trade in Endangered Species — regulates cross-border trade |
 | **Awareness** | **Vanamahotsav**, school programmes, community conservation |
 | **Social forestry** | Planting trees on community and wasteland |
 
@@ -189,16 +189,16 @@ Deforestation · habitat loss · poaching · forest fires · pollution · **inva
 
 | Topic | The specific thing |
 |---|---|
-| **Five soil formation factors** ⭐⭐⭐ | Parent rock · climate · relief · organisms · time |
-| **Soil conservation methods** ⭐⭐⭐ | Contour ploughing, terrace farming, contour barriers, rock dam, intercropping, shelter belts, mulching |
-| **Soil profile horizons** ⭐⭐ | A (topsoil/humus) · B (subsoil) · C (weathered rock) · bedrock |
-| **Gully erosion → ravines/badland** ⭐⭐ | Chambal region |
-| ⭐ **Soil takes centuries to form, one season to lose** | The conservation argument in one line |
-| **Rainwater harvesting** ⭐⭐⭐ | And traditional systems — johads, khadins, kuls, eri |
-| **IUCN Red List categories** ⭐⭐⭐ | Extinct → CE → E → V → NT → LC |
-| **CITES** ⭐⭐ | Regulates international trade in endangered species |
-| **WPA 1972 / FCA 1980** ⭐⭐ | Core Indian conservation statutes |
-| **Community land** ⭐ | Common property resources |
+| **Five soil formation factors** ⭐ | Parent rock · climate · relief · organisms · time |
+| **Soil conservation methods** ⭐ | Contour ploughing, terrace farming, contour barriers, rock dam, intercropping, shelter belts, mulching |
+| **Soil profile horizons** | A (topsoil/humus) · B (subsoil) · C (weathered rock) · bedrock |
+| **Gully erosion → ravines/badland** | Chambal region |
+| **Soil takes centuries to form, one season to lose** | The conservation argument in one line |
+| **Rainwater harvesting** ⭐ | And traditional systems — johads, khadins, kuls, eri |
+| **IUCN Red List categories** ⭐ | Extinct → CE → E → V → NT → LC |
+| **CITES** | Regulates international trade in endangered species |
+| **WPA 1972 / FCA 1980** | Core Indian conservation statutes |
+| **Community land** | Common property resources |
 
 **Trap 1:** *"Ploughing up and down a slope prevents erosion."* **The opposite** — it channels water downhill. **Contour** ploughing (across the slope) is correct.
 **Trap 2:** *"Soil is a non-renewable resource."* Technically renewable — but so slowly (centuries per cm) that it must be treated as effectively finite.
@@ -220,11 +220,11 @@ Deforestation · habitat loss · poaching · forest fires · pollution · **inva
 | **Horizon A / B / C** | Topsoil / subsoil / weathered parent rock |
 | **Soil erosion** | Removal of the topsoil layer |
 | **Gully erosion** | Deep channels cut by run-off — creates **ravines / badland** |
-| ⭐ **Contour ploughing** | Ploughing across the slope, along contour lines |
-| ⭐ **Terrace farming** | Flat steps cut into a hillside |
-| ⭐ **Shelter belt** | Rows of trees planted to break the wind |
-| ⭐ **Mulching** | Covering bare soil with organic matter |
-| ⭐ **Intercropping** | Alternate rows of different crops sown at different times |
+| **Contour ploughing** | Ploughing across the slope, along contour lines |
+| **Terrace farming** | Flat steps cut into a hillside |
+| **Shelter belt** | Rows of trees planted to break the wind |
+| **Mulching** | Covering bare soil with organic matter |
+| **Intercropping** | Alternate rows of different crops sown at different times |
 | 🌱 **Rainwater harvesting** | Collecting and storing rainwater where it falls |
 | 🌱 **Johad / khadin / kul / eri** | Traditional Indian water-harvesting structures |
 | 🌱 **IUCN Red List** | Global classification of species by extinction risk |
@@ -236,11 +236,11 @@ Deforestation · habitat loss · poaching · forest fires · pollution · **inva
 
 1. **Only ~30% of Earth is land**, and not all of it is usable.
 2. **Community land (common property resources)** supports the rural poor who own no private land.
-3. ⭐ **Five soil formation factors: parent rock, climate, relief, organisms, time.**
+3. **Five soil formation factors: parent rock, climate, relief, organisms, time.**
 4. **Soil profile: A (topsoil, humus) → B (subsoil) → C (weathered rock) → bedrock.** Erosion takes A first.
-5. ⭐ **Soil takes centuries per centimetre to form and can be lost in one monsoon.** That asymmetry is the whole conservation argument.
-6. ⭐ **Conservation methods: contour ploughing, terrace farming, contour barriers, rock dams, intercropping, shelter belts, mulching.**
-7. ⭐ **Contour ploughing works because furrows across a slope act as small dams; furrows down a slope act as channels.**
+5. **Soil takes centuries per centimetre to form and can be lost in one monsoon.** That asymmetry is the whole conservation argument.
+6. **Conservation methods: contour ploughing, terrace farming, contour barriers, rock dams, intercropping, shelter belts, mulching.**
+7. **Contour ploughing works because furrows across a slope act as small dams; furrows down a slope act as channels.**
 8. **Gully erosion → ravines/badland** — Chambal.
 9. 🌱 **Agriculture is India's largest water user.** Under 1% of Earth's water is readily usable.
 10. 🌱 **Traditional water systems (johads, khadins, kuls, eri, stepwells) were decentralised and locally matched** — their decline is a real cause of groundwater collapse.

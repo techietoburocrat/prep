@@ -15,7 +15,7 @@
 | **Prelims (GS-I)** | Solstices and equinox dates, midnight sun, leap year logic, why seasons happen |
 | **Mains (GS-I)** | Underpins the monsoon, insolation and every climate answer |
 | **Also feeds** | **Agriculture** (cropping seasons — *kharif*, *rabi*), **Current Affairs** (solstice/equinox in the news), **Culture** (Makar Sankranti, Onam and most Indian festivals are solar-calendar events) |
-| **Weightage** | ⭐⭐⭐ — the causal engine behind climate. Class 11 assumes every word of it |
+| **Weightage** | ⭐ — the causal engine behind climate. Class 11 assumes every word of it |
 | **Class 11 picks this up in** | *Fundamentals of Physical Geography* — insolation, heat budget, seasons |
 
 ---
@@ -25,7 +25,7 @@
 - [ ] **Distinguish** rotation from revolution, with periods and consequences.
 - [ ] **Explain** the circle of illumination and why it produces day and night.
 - [ ] **Explain** why a leap year exists, and why it's every 4 years.
-- [ ] ⭐ **Explain** why seasons happen — and **demolish** the "distance from the Sun" misconception.
+- [ ] **Explain** why seasons happen — and **demolish** the "distance from the Sun" misconception.
 - [ ] **State** the four cardinal dates: 21 June, 22 December, 21 March, 23 September.
 - [ ] **Describe** what happens at each solstice and equinox, in *both* hemispheres.
 - [ ] **Explain** the midnight sun and the polar night.
@@ -126,14 +126,14 @@ A year is not a whole number of days. Those extra **6 hours** have to go somewhe
 
 ---
 
-## 3️⃣ ⭐ The Tilt — Why Seasons Exist
+## 3️⃣ The Tilt — Why Seasons Exist
 
 This is the most important section in the chapter.
 
 ### The two facts that together cause seasons
 
 1. **The axis is tilted** — 23½° from vertical, or **66½° to the orbital plane**.
-2. ⭐ **The tilt always points in the same direction in space** — towards the Pole Star — no matter where the Earth is in its orbit.
+2. **The tilt always points in the same direction in space** — towards the Pole Star — no matter where the Earth is in its orbit.
 
 Fact 2 is the one people miss, and without it seasons don't work.
 
@@ -277,15 +277,15 @@ Seasons aren't just weather. They are the **clock the living world runs on** —
 
 | Topic | The specific thing |
 |---|---|
-| **Solstice / equinox dates** ⭐⭐⭐ | 21 June, 22 Dec, 21 March, 23 Sept |
-| **Where the Sun is overhead** ⭐⭐⭐ | Cancer (21 Jun) · Capricorn (22 Dec) · equator (both equinoxes) |
-| **Cause of seasons** ⭐⭐⭐ | **Axial tilt + fixed direction of tilt.** NOT distance |
-| **Perihelion / aphelion** ⭐⭐ | Closest in **January**, farthest in **July** — the opposite of intuition |
-| **Leap year** ⭐⭐ | 365¼ days; 4 × 6 hrs = 1 day added to February |
-| **Midnight sun** ⭐⭐ | Beyond the polar circles; ~6 months day/night at the poles |
-| **Rotation direction** ⭐ | **West to east** — hence the Sun "rises" in the east |
-| **Circle of illumination** ⭐ | Divides day from night; does **not** coincide with the axis |
-| **Earthday / year** ⭐ | 24 hrs / 365¼ days |
+| **Solstice / equinox dates** ⭐ | 21 June, 22 Dec, 21 March, 23 Sept |
+| **Where the Sun is overhead** ⭐ | Cancer (21 Jun) · Capricorn (22 Dec) · equator (both equinoxes) |
+| **Cause of seasons** ⭐ | **Axial tilt + fixed direction of tilt.** NOT distance |
+| **Perihelion / aphelion** | Closest in **January**, farthest in **July** — the opposite of intuition |
+| **Leap year** | 365¼ days; 4 × 6 hrs = 1 day added to February |
+| **Midnight sun** | Beyond the polar circles; ~6 months day/night at the poles |
+| **Rotation direction** | **West to east** — hence the Sun "rises" in the east |
+| **Circle of illumination** | Divides day from night; does **not** coincide with the axis |
+| **Earthday / year** | 24 hrs / 365¼ days |
 
 **Trap 1:** *"Seasons are caused by distance from the Sun."* **No.** Earth is *closest* in January. Tilt is the cause.
 **Trap 2:** *"21 June is the longest day everywhere."* **No** — only in the **Northern** Hemisphere. It's the shortest day in Australia.
@@ -333,7 +333,7 @@ Seasons aren't just weather. They are the **clock the living world runs on** —
 2. **Rotation is west → east**, which is why the Sun appears to rise in the east.
 3. **The circle of illumination** splits day from night, and does **not** align with the axis — hence unequal day lengths.
 4. **365¼ days** → the spare 6 hours accumulate → **leap year every 4th year, 29 February**.
-5. ⭐ **Seasons are caused by the axial tilt (23½°) plus the fact that the tilt points the same way all year.** Not by distance.
+5. **Seasons are caused by the axial tilt (23½°) plus the fact that the tilt points the same way all year.** Not by distance.
 6. **Earth is closest to the Sun in January, farthest in July** — the exact opposite of the intuitive explanation.
 7. **21 June:** Sun over Cancer; longest day in the north; midnight sun beyond the Arctic Circle.
 8. **22 December:** Sun over Capricorn; longest day in the south.

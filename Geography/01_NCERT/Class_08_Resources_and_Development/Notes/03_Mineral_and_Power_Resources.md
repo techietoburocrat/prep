@@ -12,21 +12,21 @@
 |---|---|
 | **Subject** | Geography → **Economic Geography** |
 | **Merged with** | 🌱🌱 **Environment** → fossil fuels, climate change, the energy transition |
-| **Prelims (GS-I)** | ⭐⭐⭐ Mineral classification, distribution, energy types — asked very frequently |
-| **Mains (GS-I)** | ⭐ **"Distribution of key natural resources across the world"** — a syllabus line, verbatim |
+| **Prelims (GS-I)** | ⭐ Mineral classification, distribution, energy types — asked very frequently |
+| **Mains (GS-I)** | **"Distribution of key natural resources across the world"** — a syllabus line, verbatim |
 | **Mains (GS-III)** | 🌱 Energy security, renewables, climate commitments |
 | **Also feeds** | **Economy**, **Current Affairs**, **International Relations** |
-| **Weightage** | ⭐⭐⭐ |
+| **Weightage** | ⭐ |
 
 ---
 
 ## 🎯 Learning Outcomes
 
 - [ ] **Define** mineral and ore.
-- [ ] ⭐ **Classify** minerals: metallic (ferrous/non-ferrous), non-metallic, mineral fuels.
+- [ ] **Classify** minerals: metallic (ferrous/non-ferrous), non-metallic, mineral fuels.
 - [ ] **Name** the major producing regions for key minerals, in the world and India.
 - [ ] **Distinguish** open-cast from shaft mining, and quarrying from drilling.
-- [ ] ⭐ **Distinguish** conventional from non-conventional energy, with examples of each.
+- [ ] **Distinguish** conventional from non-conventional energy, with examples of each.
 - [ ] 🌱 **Explain** why the energy transition is happening and where India stands.
 
 ---
@@ -38,7 +38,7 @@
 
 ⚠️ **Not every mineral deposit is an ore.** If extraction costs more than the mineral is worth, it stays rock. **"Ore" is an economic word, not a geological one** — the same point as Ch.1's "resources become."
 
-### ⭐ Classification
+### Classification
 
 ```
    MINERALS
@@ -74,11 +74,11 @@
 
 | Mineral | Major producers |
 |---|---|
-| **Iron ore** | ⭐ Australia, Brazil, China, India, Russia |
-| **Coal** | ⭐ China, India, USA, Australia, Indonesia |
-| **Petroleum** | ⭐ **West Asia (Gulf)**, USA, Russia, Saudi Arabia, Venezuela |
+| **Iron ore** | Australia, Brazil, China, India, Russia |
+| **Coal** | China, India, USA, Australia, Indonesia |
+| **Petroleum** | **West Asia (Gulf)**, USA, Russia, Saudi Arabia, Venezuela |
 | **Bauxite** | Australia, Guinea, China, Brazil |
-| **Copper** | ⭐ **Chile**, Peru, USA |
+| **Copper** | **Chile**, Peru, USA |
 | **Gold** | China, Australia, Russia, South Africa |
 | **Manganese** | South Africa, Australia, **India** |
 | **Tin** | China, Indonesia, Myanmar |
@@ -87,13 +87,13 @@
 
 | Mineral | Where |
 |---|---|
-| **Iron ore** | ⭐ **Odisha, Jharkhand, Chhattisgarh, Karnataka** — the Chhotanagpur belt |
-| **Coal** | ⭐ **Jharkhand (Jharia, Bokaro), Odisha, Chhattisgarh, West Bengal (Raniganj), MP** |
+| **Iron ore** | **Odisha, Jharkhand, Chhattisgarh, Karnataka** — the Chhotanagpur belt |
+| **Coal** | **Jharkhand (Jharia, Bokaro), Odisha, Chhattisgarh, West Bengal (Raniganj), MP** |
 | **Bauxite** | Odisha, Jharkhand, Gujarat, Maharashtra |
 | **Manganese** | Odisha, Karnataka, MP, Maharashtra |
-| **Mica** | ⭐ **Jharkhand, Bihar, Andhra Pradesh, Rajasthan** — India is a leading producer |
+| **Mica** | **Jharkhand, Bihar, Andhra Pradesh, Rajasthan** — India is a leading producer |
 | **Copper** | Rajasthan (Khetri), Jharkhand, MP (Malanjkhand) |
-| **Petroleum** | ⭐ **Mumbai High (offshore), Gujarat (Ankleshwar), Assam (Digboi)** |
+| **Petroleum** | **Mumbai High (offshore), Gujarat (Ankleshwar), Assam (Digboi)** |
 | **Limestone** | MP, Rajasthan, Andhra Pradesh, Gujarat |
 | **Gold** | Kolar (Karnataka — now largely closed), Hutti |
 
@@ -105,8 +105,8 @@
 
 | Method | Detail |
 |---|---|
-| ⭐ **Open-cast / surface mining** | Minerals **near the surface** are removed by stripping off the overburden. Cheaper, safer, but hugely destructive to the landscape |
-| ⭐ **Shaft mining** | Deep vertical shafts sunk to reach minerals **far below the surface**. Expensive, dangerous |
+| **Open-cast / surface mining** | Minerals **near the surface** are removed by stripping off the overburden. Cheaper, safer, but hugely destructive to the landscape |
+| **Shaft mining** | Deep vertical shafts sunk to reach minerals **far below the surface**. Expensive, dangerous |
 | **Quarrying** | Minerals near the surface simply **dug out** — stone, marble |
 | **Drilling** | Deep wells bored to bring up **liquids and gases** — petroleum, natural gas |
 
@@ -114,7 +114,7 @@
 
 ---
 
-## 2️⃣ ⭐ Power Resources
+## 2️⃣ Power Resources
 
 ### The two families
 
@@ -132,11 +132,11 @@
 | Source | Detail |
 |---|---|
 | **Firewood** | Still a major domestic fuel in rural India |
-| ⭐ **Coal** | The most abundant fossil fuel. Called **"Black Gold"**. Types by carbon content: **peat < lignite < bituminous < anthracite** (anthracite is the highest quality) |
-| ⭐ **Petroleum** | **"Liquid Gold."** Found between sedimentary rock layers. Refined into petrol, diesel, kerosene, plastics |
+| **Coal** | The most abundant fossil fuel. Called **"Black Gold"**. Types by carbon content: **peat < lignite < bituminous < anthracite** (anthracite is the highest quality) |
+| **Petroleum** | **"Liquid Gold."** Found between sedimentary rock layers. Refined into petrol, diesel, kerosene, plastics |
 | **Natural gas** | Cleanest fossil fuel. Found with petroleum. **CNG/PNG** |
-| ⭐ **Hydel power** | From falling water. **~1/4 of world electricity.** India: Bhakra Nangal, Damodar Valley, Nagarjuna Sagar |
-| ⭐ **Nuclear** | From **uranium and thorium**. India's uranium: Jharkhand, Rajasthan (Aravalli). ⭐ **Thorium: Kerala's monazite sands** — India has among the world's largest thorium reserves |
+| **Hydel power** | From falling water. **~1/4 of world electricity.** India: Bhakra Nangal, Damodar Valley, Nagarjuna Sagar |
+| **Nuclear** | From **uranium and thorium**. India's uranium: Jharkhand, Rajasthan (Aravalli). **Thorium: Kerala's monazite sands** — India has among the world's largest thorium reserves |
 
 > 🇮🇳 **The thorium point is genuinely important for India** and shows up in S&T and energy questions. India has limited uranium but **vast thorium reserves in the monazite sands of Kerala and Odisha's beaches.** This is why India's nuclear programme is built as a **three-stage plan** designed to eventually run on thorium. **Cross-tag to Science & Technology.**
 
@@ -144,8 +144,8 @@
 
 | Source | Detail |
 |---|---|
-| ☀️ **Solar** | Photovoltaic cells. ⭐ India's potential is huge — **Rajasthan, Gujarat**. **Bhadla Solar Park (Rajasthan)** is among the world's largest |
-| 💨 **Wind** | ⭐ India is among the world's largest wind-power producers. **Tamil Nadu (Muppandal), Gujarat, Maharashtra, Karnataka** |
+| ☀️ **Solar** | Photovoltaic cells. India's potential is huge — **Rajasthan, Gujarat**. **Bhadla Solar Park (Rajasthan)** is among the world's largest |
+| 💨 **Wind** | India is among the world's largest wind-power producers. **Tamil Nadu (Muppandal), Gujarat, Maharashtra, Karnataka** |
 | 🌊 **Tidal** | From tidal movement. Potential in the **Gulf of Khambhat and Gulf of Kachchh** (Cl.7 Ch.5) |
 | 🌋 **Geothermal** | Heat from the Earth's interior. **Manikaran (HP), Puga Valley (Ladakh)**. Global leaders: **Iceland, USA, New Zealand** |
 | 🔥 **Biogas** | From organic waste and dung. Rural India — **gobar gas plants** |
@@ -153,7 +153,7 @@
 > 🌱 **Why the transition is happening — three reasons, and it's worth being able to give all three:**
 > 1. **Fossil fuels are finite** and increasingly costly to extract.
 > 2. **They drive climate change** — the enhanced greenhouse effect (Cl.6 Ch.1).
-> 3. ⭐ **Renewables have become cheaper.** Solar costs have fallen dramatically; in India solar power is now often cheaper per unit than new coal. **This is the decisive change — the transition is now economic, not only environmental.** Answers that mention only the environmental argument miss the strongest one.
+> 3. **Renewables have become cheaper.** Solar costs have fallen dramatically; in India solar power is now often cheaper per unit than new coal. **This is the decisive change — the transition is now economic, not only environmental.** Answers that mention only the environmental argument miss the strongest one.
 
 > 🇮🇳 **India's commitments — high-value for [Current Affairs](../../../../Current%20Affairs/00_START_HERE.md) and GS-III:**
 > - **500 GW non-fossil capacity by 2030**
@@ -169,18 +169,18 @@
 
 | Topic | The specific thing |
 |---|---|
-| **Ferrous vs non-ferrous** ⭐⭐⭐ | Ferrous contains iron — incl. **manganese, nickel, cobalt, chromite** |
-| **Mineral fuels** ⭐⭐⭐ | Coal, petroleum, natural gas, uranium |
-| **Coal grades** ⭐⭐⭐ | **Peat < lignite < bituminous < anthracite** (best) |
-| **Conventional vs non-conventional** ⭐⭐⭐ | ⚠️ **Hydel and nuclear are CONVENTIONAL** |
-| **Indian mineral belt** ⭐⭐⭐ | Chhotanagpur — Jharkhand, Odisha, Chhattisgarh, WB |
-| **Petroleum in India** ⭐⭐⭐ | **Mumbai High, Gujarat (Ankleshwar), Assam (Digboi)** |
-| **Digboi** ⭐⭐ | Asia's first oil well, 1889 |
-| **Thorium in monazite sands** ⭐⭐⭐ | **Kerala** — India's three-stage nuclear plan depends on it |
-| **Open-cast vs shaft mining** ⭐⭐ | Surface vs deep |
-| **Placer deposits** ⭐⭐ | Gold, silver, tin, platinum — in valley floors and sands |
-| **ISA** ⭐⭐ | International Solar Alliance, HQ in **Gurugram, India** |
-| **India's targets** ⭐⭐ | 500 GW non-fossil by 2030; net zero by 2070 |
+| **Ferrous vs non-ferrous** ⭐ | Ferrous contains iron — incl. **manganese, nickel, cobalt, chromite** |
+| **Mineral fuels** ⭐ | Coal, petroleum, natural gas, uranium |
+| **Coal grades** ⭐ | **Peat < lignite < bituminous < anthracite** (best) |
+| **Conventional vs non-conventional** ⭐ | ⚠️ **Hydel and nuclear are CONVENTIONAL** |
+| **Indian mineral belt** ⭐ | Chhotanagpur — Jharkhand, Odisha, Chhattisgarh, WB |
+| **Petroleum in India** ⭐ | **Mumbai High, Gujarat (Ankleshwar), Assam (Digboi)** |
+| **Digboi** | Asia's first oil well, 1889 |
+| **Thorium in monazite sands** ⭐ | **Kerala** — India's three-stage nuclear plan depends on it |
+| **Open-cast vs shaft mining** | Surface vs deep |
+| **Placer deposits** | Gold, silver, tin, platinum — in valley floors and sands |
+| **ISA** | International Solar Alliance, HQ in **Gurugram, India** |
+| **India's targets** | 500 GW non-fossil by 2030; net zero by 2070 |
 
 **Trap 1:** *"Hydel power is a non-conventional source."* ⚠️ **Conventional** — it's renewable but long-established.
 **Trap 2:** *"Manganese is a non-ferrous mineral."* **Ferrous.**
@@ -215,15 +215,15 @@
 ## 🔁 60-Second Recap
 
 1. **Mineral = definite chemical composition. Ore = profitably extractable.** "Ore" is an economic word.
-2. ⭐ **Metallic (ferrous / non-ferrous) · non-metallic · mineral fuels.** Manganese, nickel, cobalt, chromite are **ferrous**.
+2. **Metallic (ferrous / non-ferrous) · non-metallic · mineral fuels.** Manganese, nickel, cobalt, chromite are **ferrous**.
 3. **Placer deposits hold gold, silver, tin, platinum** — because they resist weathering and the river sorts them by density.
-4. ⭐ **India's mineral belt = Chhotanagpur Plateau** (Jharkhand, Odisha, Chhattisgarh, WB) — which is why the steel plants are there.
+4. **India's mineral belt = Chhotanagpur Plateau** (Jharkhand, Odisha, Chhattisgarh, WB) — which is why the steel plants are there.
 5. **Petroleum: Mumbai High, Gujarat, Assam. Digboi = Asia's first oil well (1889).**
 6. **Mining: open-cast (surface), shaft (deep), quarrying (stone), drilling (liquids/gases).**
 7. 🌱 **India's mineral belt overlaps its tribal belt and its forests** — hence mining conflicts are simultaneously environmental, constitutional and law-and-order issues.
-8. ⚠️ ⭐ **Conventional = firewood, fossil fuels, HYDEL and NUCLEAR.** Non-conventional = solar, wind, tidal, geothermal, biogas.
+8. ⚠️ **Conventional = firewood, fossil fuels, HYDEL and NUCLEAR.** Non-conventional = solar, wind, tidal, geothermal, biogas.
 9. **Coal grades: peat < lignite < bituminous < anthracite.**
-10. ⭐ **Thorium in Kerala's monazite sands** underpins India's three-stage nuclear programme.
+10. **Thorium in Kerala's monazite sands** underpins India's three-stage nuclear programme.
 11. 🌱 **The energy transition is driven by cost as much as by climate** — solar is now often cheaper than new coal.
 12. 🇮🇳 **500 GW non-fossil by 2030; net zero by 2070; ISA headquartered in Gurugram.**
 

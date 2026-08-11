@@ -1,7 +1,7 @@
 # 📕 G.C. LEONG — *Certificate Physical and Human Geography*
 ### Stage 3 of 11 · The delta over NCERT · UPSC CSE 2027
 
-[← Geography START HERE](../../00_START_HERE.md) · [Part A — Physical](Part_A_Physical/) · [⭐ Part B — Climate Types](Part_B_Climate_Types/00_Comparison_Matrix.md)
+[← Geography START HERE](../../00_START_HERE.md) · [Part A — Physical](Part_A_Physical/) · [ Part B — Climate Types](Part_B_Climate_Types/00_Comparison_Matrix.md)
 
 ---
 
@@ -31,10 +31,10 @@ Leong is on every UPSC booklist, and most candidates read it cover to cover. Tha
 
 | Leong's real value | Why NCERT can't supply it |
 |---|---|
-| ⭐⭐⭐ **The 11 climate types, in full** | NCERT Cl.11 Ch.12 gives you Köppen's **letter codes in three pages** and stops. `Cs` does not tell you the Mediterranean gets its rain in winter, grows olives and grapes, and burns every August. **Leong devotes a chapter to each region.** This is ~60% of the book's total value |
-| ⭐⭐ **Named specifics** | Ocean currents by name, local winds by name, lakes by name, dune types by name. NCERT teaches the *mechanism* and gives two examples. **Prelims asks for the names** |
-| ⭐⭐ **Karst, coral reefs, lakes** | Genuinely thin or absent in NCERT, and all three are recurring Prelims topics |
-| ⭐ **Intrusive igneous landforms, fold & fault types** | NCERT Cl.11 Ch.5–6 gestures at these. Leong has the full taxonomy with diagrams |
+| ⭐ **The 11 climate types, in full** | NCERT Cl.11 Ch.12 gives you Köppen's **letter codes in three pages** and stops. `Cs` does not tell you the Mediterranean gets its rain in winter, grows olives and grapes, and burns every August. **Leong devotes a chapter to each region.** This is ~60% of the book's total value |
+| **Named specifics** | Ocean currents by name, local winds by name, lakes by name, dune types by name. NCERT teaches the *mechanism* and gives two examples. **Prelims asks for the names** |
+| **Karst, coral reefs, lakes** | Genuinely thin or absent in NCERT, and all three are recurring Prelims topics |
+| **Intrusive igneous landforms, fold & fault types** | NCERT Cl.11 Ch.5–6 gestures at these. Leong has the full taxonomy with diagrams |
 | ❌ **The entire Human Geography half** | **Superseded.** Class 12 *Fundamentals of Human Geography* + *India: People and Economy* — both fully noted — are newer, Indian-focused, and syllabus-aligned. Leong's human half is decades out of date |
 
 ---
@@ -60,9 +60,9 @@ Three verdicts. **Nothing is skipped silently; every skip is listed with its rea
 | 9 | **Siberian type** — Cool Temp. Continental / Taiga | `Df`/`Dw` | [09_Siberian_Type_Taiga.md](Part_B_Climate_Types/09_Siberian_Type_Taiga.md) |
 | 10 | **Laurentian type** — Cool Temp. Eastern Margin | `Dfb`/`Dwb` | [10_Laurentian_Type_Cool_Temperate_Eastern_Margin.md](Part_B_Climate_Types/10_Laurentian_Type_Cool_Temperate_Eastern_Margin.md) |
 | 11 | **Arctic / Tundra & Ice Cap** | `ET`/`EF` | [11_Arctic_Tundra_and_Ice_Cap.md](Part_B_Climate_Types/11_Arctic_Tundra_and_Ice_Cap.md) |
-| ⭐ | **ALL ELEVEN, side by side** | — | [⭐ 00_Comparison_Matrix.md](Part_B_Climate_Types/00_Comparison_Matrix.md) |
+| | **ALL ELEVEN, side by side** | — | [ 00_Comparison_Matrix.md](Part_B_Climate_Types/00_Comparison_Matrix.md) |
 
-> ⭐⭐ **Read the [Comparison Matrix](Part_B_Climate_Types/00_Comparison_Matrix.md) LAST, then revise from it FOREVER.** UPSC asks about climates *contrastively* — "which of these has a winter rainfall maximum?" — never one region in isolation. The matrix is the file you'll actually reopen in April 2027.
+> **Read the [Comparison Matrix](Part_B_Climate_Types/00_Comparison_Matrix.md) LAST, then revise from it FOREVER.** UPSC asks about climates *contrastively* — "which of these has a winter rainfall maximum?" — never one region in isolation. The matrix is the file you'll actually reopen in April 2027.
 
 ### 🟡 DELTA NOTE — Part A, physical geography (12 files)
 
@@ -71,17 +71,17 @@ Each covers **only what NCERT left thin.** Sizes vary a lot on purpose — `03_W
 | # | File | Delta size | What's genuinely new |
 |---|---|---|---|
 | 1 | [Earth, Universe, Motions & Time](Part_A_Physical/01_Earth_Universe_Motions_and_Time.md) | 🟡 small | Eclipses, longitude→time arithmetic, **International Date Line** |
-| 2 | [Earth Movements & Vulcanicity](Part_A_Physical/02_Earth_Movements_and_Vulcanicity.md) | 🟢 **large** | ⭐ **Intrusive igneous landforms** (batholith→dyke), fold types, fault types, rift valley & block mountain |
+| 2 | [Earth Movements & Vulcanicity](Part_A_Physical/02_Earth_Movements_and_Vulcanicity.md) | 🟢 **large** | **Intrusive igneous landforms** (batholith→dyke), fold types, fault types, rift valley & block mountain |
 | 3 | [Weathering, Denudation & Mass Movement](Part_A_Physical/03_Weathering_and_Mass_Movement.md) | 🔵 tiny | Mass-movement taxonomy only. **NCERT Ch.6 covers this well** |
-| 4 | [River Landforms](Part_A_Physical/04_River_Landforms.md) | 🟡 medium | ⭐ **River capture**, delta types, drainage patterns, antecedent vs superimposed |
-| 5 | [⭐ Karst & Limestone](Part_A_Physical/05_Karst_and_Limestone_Landforms.md) | 🟢 **large** | ⭐ **Near-absent from NCERT.** Full surface + underground taxonomy |
-| 6 | [Glacial Landforms](Part_A_Physical/06_Glacial_Landforms.md) | 🟡 medium | Drumlin/esker/kame detail, fjords, ⭐ **Himalayan glaciers + GLOF** |
-| 7 | [Arid & Desert Landforms](Part_A_Physical/07_Arid_and_Desert_Landforms.md) | 🟡 medium | ⭐ **Dune types**, erg/reg/hamada, loess, yardang/zeugen |
-| 8 | [Coastal Landforms](Part_A_Physical/08_Coastal_Landforms.md) | 🟡 medium | Cave→arch→stack sequence, spit/tombolo, ⭐ **submergent vs emergent — India's two coasts** |
-| 9 | [⭐ Lakes](Part_A_Physical/09_Lakes.md) | 🟢 **large** | ⭐ **NCERT is silent.** Classification by origin + every named lake UPSC asks about |
-| 10 | [⭐ Islands & Coral Reefs](Part_A_Physical/10_Islands_and_Coral_Reefs.md) | 🟢 **large** | ⭐ **Darwin's atoll theory**, the 6 conditions for coral growth, bleaching |
-| 11 | [⭐ Oceans, Currents, Tides & Salinity](Part_A_Physical/11_Oceans_Currents_Tides_Salinity.md) | 🟢 **large** | ⭐ **Every named current**, ocean-floor relief, upwelling, tidal bores |
-| 12 | [⭐ Weather Elements & Local Winds](Part_A_Physical/12_Weather_Elements_and_Local_Winds.md) | 🟢 **large** | ⭐ **Every named local wind**, rainfall types, fog types, inversion |
+| 4 | [River Landforms](Part_A_Physical/04_River_Landforms.md) | 🟡 medium | **River capture**, delta types, drainage patterns, antecedent vs superimposed |
+| 5 | [ Karst & Limestone](Part_A_Physical/05_Karst_and_Limestone_Landforms.md) | 🟢 **large** | **Near-absent from NCERT.** Full surface + underground taxonomy |
+| 6 | [Glacial Landforms](Part_A_Physical/06_Glacial_Landforms.md) | 🟡 medium | Drumlin/esker/kame detail, fjords, **Himalayan glaciers + GLOF** |
+| 7 | [Arid & Desert Landforms](Part_A_Physical/07_Arid_and_Desert_Landforms.md) | 🟡 medium | **Dune types**, erg/reg/hamada, loess, yardang/zeugen |
+| 8 | [Coastal Landforms](Part_A_Physical/08_Coastal_Landforms.md) | 🟡 medium | Cave→arch→stack sequence, spit/tombolo, **submergent vs emergent — India's two coasts** |
+| 9 | [ Lakes](Part_A_Physical/09_Lakes.md) | 🟢 **large** | **NCERT is silent.** Classification by origin + every named lake UPSC asks about |
+| 10 | [ Islands & Coral Reefs](Part_A_Physical/10_Islands_and_Coral_Reefs.md) | 🟢 **large** | **Darwin's atoll theory**, the 6 conditions for coral growth, bleaching |
+| 11 | [ Oceans, Currents, Tides & Salinity](Part_A_Physical/11_Oceans_Currents_Tides_Salinity.md) | 🟢 **large** | **Every named current**, ocean-floor relief, upwelling, tidal bores |
+| 12 | [ Weather Elements & Local Winds](Part_A_Physical/12_Weather_Elements_and_Local_Winds.md) | 🟢 **large** | **Every named local wind**, rainfall types, fog types, inversion |
 
 ### 🔴 SKIP REGISTER — what is deliberately not noted, and why
 
@@ -111,14 +111,14 @@ Use this when revising: it tells you which pair of files together cover a topic 
 | Earth's motions, eclipses, time | [Cl.6 Ch.3](../../01_NCERT/Class_06_The_Earth_Our_Habitat/Notes/03_Motions_of_the_Earth.md) · [Cl.11 Ch.2](../../01_NCERT/Class_11_Fundamentals_of_Physical_Geography/Notes/02_Origin_and_Evolution_of_the_Earth.md) | [A1](Part_A_Physical/01_Earth_Universe_Motions_and_Time.md) |
 | Interior, plates, volcanoes, quakes | [Cl.11 Ch.3](../../01_NCERT/Class_11_Fundamentals_of_Physical_Geography/Notes/03_Interior_of_the_Earth.md) · [Ch.4](../../01_NCERT/Class_11_Fundamentals_of_Physical_Geography/Notes/04_Distribution_of_Oceans_and_Continents.md) | [A2](Part_A_Physical/02_Earth_Movements_and_Vulcanicity.md) |
 | Rocks & minerals | [Cl.11 Ch.5](../../01_NCERT/Class_11_Fundamentals_of_Physical_Geography/Notes/05_Minerals_and_Rocks.md) | [A2](Part_A_Physical/02_Earth_Movements_and_Vulcanicity.md) |
-| Weathering & mass movement | [Cl.11 Ch.6](../../01_NCERT/Class_11_Fundamentals_of_Physical_Geography/Notes/06_Geomorphic_Processes.md) ⭐ *strong* | [A3](Part_A_Physical/03_Weathering_and_Mass_Movement.md) *(tiny)* |
+| Weathering & mass movement | [Cl.11 Ch.6](../../01_NCERT/Class_11_Fundamentals_of_Physical_Geography/Notes/06_Geomorphic_Processes.md) *strong* | [A3](Part_A_Physical/03_Weathering_and_Mass_Movement.md) *(tiny)* |
 | Landforms — river, glacial, arid, coastal, karst | [Cl.11 Ch.7](../../01_NCERT/Class_11_Fundamentals_of_Physical_Geography/Notes/07_Landforms_and_their_Evolution.md) | [A4](Part_A_Physical/04_River_Landforms.md) · [A5](Part_A_Physical/05_Karst_and_Limestone_Landforms.md) · [A6](Part_A_Physical/06_Glacial_Landforms.md) · [A7](Part_A_Physical/07_Arid_and_Desert_Landforms.md) · [A8](Part_A_Physical/08_Coastal_Landforms.md) |
 | Atmosphere, insolation, temperature | [Cl.11 Ch.8](../../01_NCERT/Class_11_Fundamentals_of_Physical_Geography/Notes/08_Composition_and_Structure_of_Atmosphere.md) · [Ch.9](../../01_NCERT/Class_11_Fundamentals_of_Physical_Geography/Notes/09_Solar_Radiation_Heat_Balance_Temperature.md) | [A12](Part_A_Physical/12_Weather_Elements_and_Local_Winds.md) |
-| ⭐ Pressure, winds, cyclones, ENSO | [Cl.11 Ch.10](../../01_NCERT/Class_11_Fundamentals_of_Physical_Geography/Notes/10_Atmospheric_Circulation_and_Weather_Systems.md) ⭐⭐ *the core* | [A12](Part_A_Physical/12_Weather_Elements_and_Local_Winds.md) — **local winds only** |
+| Pressure, winds, cyclones, ENSO | [Cl.11 Ch.10](../../01_NCERT/Class_11_Fundamentals_of_Physical_Geography/Notes/10_Atmospheric_Circulation_and_Weather_Systems.md) *the core* | [A12](Part_A_Physical/12_Weather_Elements_and_Local_Winds.md) — **local winds only** |
 | Humidity, clouds, precipitation | [Cl.11 Ch.11](../../01_NCERT/Class_11_Fundamentals_of_Physical_Geography/Notes/11_Water_in_the_Atmosphere.md) | [A12](Part_A_Physical/12_Weather_Elements_and_Local_Winds.md) |
-| ⭐⭐ **Climate classification** | [Cl.11 Ch.12](../../01_NCERT/Class_11_Fundamentals_of_Physical_Geography/Notes/12_World_Climate_and_Climate_Change.md) — **Köppen codes only, 3 pages** | ⭐⭐ **[ALL of Part B](Part_B_Climate_Types/00_Comparison_Matrix.md) — the 11 regions.** *The single biggest gap Leong fills* |
+| **Climate classification** | [Cl.11 Ch.12](../../01_NCERT/Class_11_Fundamentals_of_Physical_Geography/Notes/12_World_Climate_and_Climate_Change.md) — **Köppen codes only, 3 pages** | **[ALL of Part B](Part_B_Climate_Types/00_Comparison_Matrix.md) — the 11 regions.** *The single biggest gap Leong fills* |
 | Oceans, currents, tides, salinity | [Cl.11 Ch.13](../../01_NCERT/Class_11_Fundamentals_of_Physical_Geography/Notes/13_Water_Oceans.md) · [Ch.14](../../01_NCERT/Class_11_Fundamentals_of_Physical_Geography/Notes/14_Movements_of_Ocean_Water.md) | [A11](Part_A_Physical/11_Oceans_Currents_Tides_Salinity.md) — **named currents** |
-| Lakes, islands, coral | ❌ **nothing substantial** | ⭐ [A9](Part_A_Physical/09_Lakes.md) · [A10](Part_A_Physical/10_Islands_and_Coral_Reefs.md) |
+| Lakes, islands, coral | ❌ **nothing substantial** | [A9](Part_A_Physical/09_Lakes.md) · [A10](Part_A_Physical/10_Islands_and_Coral_Reefs.md) |
 | Biomes & ecosystems | [Cl.11 Ch.15](../../01_NCERT/Class_11_Fundamentals_of_Physical_Geography/Notes/15_Life_on_the_Earth.md) · [Ch.16](../../01_NCERT/Class_11_Fundamentals_of_Physical_Geography/Notes/16_Biodiversity_and_Conservation.md) | **Part B** — vegetation section of every climate file |
 
 ---
@@ -129,7 +129,7 @@ Identical to your NCERT notes, so nothing new to learn:
 
 | Marker | Meaning |
 |---|---|
-| ⭐ / ⭐⭐ / ⭐⭐⭐ | Rising exam importance. ⭐⭐⭐ = has been asked, will be asked again |
+| /  / ⭐ | Rising exam importance. ⭐ = has been asked, will be asked again |
 | 🌱 | **Environment overlay** — per the [merge decision](../../00_START_HERE.md), every topic is closed from both sides in one sitting |
 | `[P]` | **Prelims** — facts, names, map pins, one-liners |
 | `[M]` | **Mains** — causes, consequences, current linkage, a usable example |
@@ -144,7 +144,7 @@ Same shape, every time, so revision becomes mechanical rather than exploratory:
 ```
 1️⃣  WHERE          — latitude band · continental margin · named regions   🗺️
 2️⃣  WHY THERE      — the causal chain back up to pressure belts, winds,
-                      currents. Never a standalone fact                    ⭐⭐
+                      currents. Never a standalone fact                    
 3️⃣  TEMPERATURE    — means, annual range, diurnal range, seasons
 4️⃣  RAINFALL       — total, REGIME (which season), mechanism
 5️⃣  VEGETATION     — species + the ADAPTATION that explains them
@@ -154,7 +154,7 @@ Same shape, every time, so revision becomes mechanical rather than exploratory:
 9️⃣  [P] / [M] / 🎯 — the split, and the PYQ hooks
 ```
 
-> ⭐ **Section 2 is the one that matters.** Anyone can memorise that the Mediterranean has dry summers. Being able to *derive* it from the poleward shift of the subtropical high in July is what separates a 90-mark GS-I from a 60. **Every climate file explains itself from the [Ch.10 circulation chain](../../01_NCERT/Class_11_Fundamentals_of_Physical_Geography/Notes/10_Atmospheric_Circulation_and_Weather_Systems.md) rather than asserting itself.**
+> **Section 2 is the one that matters.** Anyone can memorise that the Mediterranean has dry summers. Being able to *derive* it from the poleward shift of the subtropical high in July is what separates a 90-mark GS-I from a 60. **Every climate file explains itself from the [Ch.10 circulation chain](../../01_NCERT/Class_11_Fundamentals_of_Physical_Geography/Notes/10_Atmospheric_Circulation_and_Weather_Systems.md) rather than asserting itself.**
 
 ---
 
@@ -166,7 +166,7 @@ Same shape, every time, so revision becomes mechanical rather than exploratory:
 | Part A — 12 delta files | — | **5 hrs** | Delta-only. Was ~18 hrs as a full read |
 | Comparison matrix + consolidation | — | **2 hrs** | |
 | Map pins → [06_Maps/](../../06_Maps/) | — | *folded into the daily 15 min* | |
-| **Total** | **28 hrs** | ⭐ **~16 hrs** | **12 hours saved**, because the NCERTs are already done |
+| **Total** | **28 hrs** | **~16 hrs** | **12 hours saved**, because the NCERTs are already done |
 
 👉 **Those 12 hours are not free time — they're already spoken for.** Push them into [Stage E2, Shankar IAS Environment](../../00_START_HERE.md), which is the largest remaining block in the subject and entirely unstarted.
 
@@ -177,7 +177,7 @@ Same shape, every time, so revision becomes mechanical rather than exploratory:
 1. **Start with Part B, not Part A.** The climate types are the reason the book is on your list, and they're the part with no NCERT substitute. Part A is a supplement to notes you already have; Part B is the notes you don't.
 2. **Within Part B, read [Equatorial](Part_B_Climate_Types/01_Equatorial_Hot_Wet.md) first** and read it slowly. Every other climate is easiest to learn as a *departure* from it — less rain, more seasonal, greater range. The files are ordered so that each builds on the last.
 3. **Open the atlas for section 1️⃣ of every climate file.** Do not read the region names off the page — find them. A climate you can't point to is a climate you'll confuse with its neighbour in the exam hall.
-4. **Part A is reference, not reading.** Skim it once so you know what's in it, then return by topic. The exceptions are ⭐ [A9 Lakes](Part_A_Physical/09_Lakes.md), ⭐ [A10 Coral Reefs](Part_A_Physical/10_Islands_and_Coral_Reefs.md) and ⭐ [A11 Ocean Currents](Part_A_Physical/11_Oceans_Currents_Tides_Salinity.md) — **read those three properly.** They are pure Prelims currency and NCERT gave you almost nothing.
+4. **Part A is reference, not reading.** Skim it once so you know what's in it, then return by topic. The exceptions are [A9 Lakes](Part_A_Physical/09_Lakes.md), [A10 Coral Reefs](Part_A_Physical/10_Islands_and_Coral_Reefs.md) and [A11 Ocean Currents](Part_A_Physical/11_Oceans_Currents_Tides_Salinity.md) — **read those three properly.** They are pure Prelims currency and NCERT gave you almost nothing.
 5. **After Part B, go straight to [Stage 8 PYQs](../../00_START_HERE.md).** You'll now recognise the climate questions, and solving them will tell you where Part A needs a second look.
 
 ---

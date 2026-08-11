@@ -13,23 +13,23 @@
 | **Subject** | Geography → **Economic Geography** → Industrial geography |
 | **Merged with** | 🌱 **Environment** → industrial pollution, **the Bhopal disaster** |
 | **Prelims (GS-I)** | Industry classification, major industrial regions, case-study cities |
-| **Mains (GS-I)** | ⭐ **"Factors responsible for the location of primary, secondary and tertiary sector industries"** — a syllabus line, **verbatim** |
+| **Mains (GS-I)** | **"Factors responsible for the location of primary, secondary and tertiary sector industries"** — a syllabus line, **verbatim** |
 | **Mains (GS-III)** | Industrial policy, manufacturing, industrial disasters |
-| **Weightage** | ⭐⭐ in Class 8 · ⭐⭐⭐ as a **Mains syllabus line** |
+| **Weightage** | in Class 8 · ⭐ as a **Mains syllabus line** |
 
 ---
 
 ## 🎯 Learning Outcomes
 
 - [ ] **Classify** industries by raw material, size and ownership.
-- [ ] ⭐ **List and explain** the factors affecting industrial location.
+- [ ] **List and explain** the factors affecting industrial location.
 - [ ] **Describe** the industrial system — inputs, processes, outputs.
 - [ ] **Compare** the paired case studies: Jamshedpur/Pittsburgh, Ahmedabad/Osaka, Bengaluru/Silicon Valley.
 - [ ] 🌱 **Explain** industrial pollution and the lessons of Bhopal.
 
 ---
 
-## 1️⃣ ⭐ Classification of Industries
+## 1️⃣ Classification of Industries
 
 ```
    INDUSTRIES
@@ -42,7 +42,7 @@
       │
       ├── BY SIZE (capital + workers)
       │     ├── COTTAGE / HOUSEHOLD — smallest; family labour, simple tools
-      │     │                          ⭐ basketry, pottery, handloom, handicrafts
+      │     │                          basketry, pottery, handloom, handicrafts
       │     ├── SMALL SCALE          — some machinery, modest capital
       │     └── LARGE SCALE          — big capital, big workforce, heavy machinery
       │
@@ -51,7 +51,7 @@
             ├── PUBLIC       — owned by government (SAIL, BHEL, ONGC)
             ├── JOINT        — government + private jointly (Maruti Udyog was one)
             └── COOPERATIVE  — owned by producers/suppliers/workers
-                                ⭐ AMUL, Sudha Dairy, coir cooperatives in Kerala
+                                AMUL, Sudha Dairy, coir cooperatives in Kerala
 ```
 
 > 🥛 **AMUL is the cooperative example worth knowing properly.** Founded in Gujarat, owned by the dairy farmers who supply it, it made India the world's largest milk producer — the **"White Revolution"** or **Operation Flood**, led by **Verghese Kurien**. **It is the standard Indian counter-example to the claim that only private or state ownership can scale**, and it works in an essay on cooperative federalism, rural livelihoods or inclusive growth.
@@ -75,22 +75,22 @@
 
 ---
 
-## 3️⃣ ⭐⭐ Factors Affecting Industrial Location
+## 3️⃣ Factors Affecting Industrial Location
 
 **This is a Mains syllabus line, so learn it as a list you can deploy.**
 
 | Factor | Why it matters | Example |
 |---|---|---|
-| ⭐ **Raw materials** | Heavy/bulky/perishable materials pull industry towards the source | Iron & steel near coal and iron ore fields; sugar mills near cane fields |
-| ⭐ **Power** | Heavy industry needs abundant, cheap energy | Aluminium smelters near hydel power |
-| ⭐ **Labour** | Skilled or cheap labour, depending on the industry | IT near universities; textiles near cheap labour |
-| ⭐ **Transport** | Links inputs to plant and plant to market | Ports, rail junctions, highways |
-| ⭐ **Market** | Perishable or bulky finished goods locate near consumers | Bakeries, newspapers, cement |
+| **Raw materials** | Heavy/bulky/perishable materials pull industry towards the source | Iron & steel near coal and iron ore fields; sugar mills near cane fields |
+| **Power** | Heavy industry needs abundant, cheap energy | Aluminium smelters near hydel power |
+| **Labour** | Skilled or cheap labour, depending on the industry | IT near universities; textiles near cheap labour |
+| **Transport** | Links inputs to plant and plant to market | Ports, rail junctions, highways |
+| **Market** | Perishable or bulky finished goods locate near consumers | Bakeries, newspapers, cement |
 | **Capital** | Investment availability | Mumbai, Delhi as finance centres |
 | **Water** | Many processes need large volumes | Textiles, paper, steel |
 | **Government policy** | Incentives, SEZs, industrial corridors | Freight corridors, PLI schemes |
 
-> ⭐ **The organising principle — worth understanding rather than listing:** industry locates where the **total cost of assembling inputs and delivering outputs is lowest.**
+> **The organising principle — worth understanding rather than listing:** industry locates where the **total cost of assembling inputs and delivering outputs is lowest.**
 >
 > - **Weight-losing industries** (where the raw material is much heavier than the product) locate **near the raw material** — sugar (cane loses most of its weight), iron and steel (ore and coal are bulky).
 > - **Weight-gaining or perishable-output industries** locate **near the market** — soft drinks (adding water), bread, newspapers.
@@ -117,20 +117,20 @@ NCERT again uses **paired comparison** — same industry, two countries.
 
 | | **Jamshedpur** | **Pittsburgh** |
 |---|---|---|
-| **Founded** | ⭐ **1907**, by **Jamsetji Tata** — India's first large steel plant | 19th century |
+| **Founded** | **1907**, by **Jamsetji Tata** — India's first large steel plant | 19th century |
 | **Iron ore** | Odisha and Jharkhand mines nearby | Brought from the **Great Lakes** by ship |
 | **Coal** | Jharia coalfields nearby | Local Appalachian coal |
 | **Water** | Subarnarekha and Kharkai rivers | Ohio, Monongahela, Allegheny rivers |
 | **Character** | Raw materials **all within ~100 km** | Ore transported far; coal local |
 
-> ⭐ **Iron and steel is the textbook weight-losing industry.** It needs roughly 1.5 tonnes of iron ore and large quantities of coal to make a tonne of steel — so plants locate at the raw material, not the market. **Jamshedpur is the near-perfect case:** ore, coal, limestone and water all within a short radius. That is why Tata put it there.
+> **Iron and steel is the textbook weight-losing industry.** It needs roughly 1.5 tonnes of iron ore and large quantities of coal to make a tonne of steel — so plants locate at the raw material, not the market. **Jamshedpur is the near-perfect case:** ore, coal, limestone and water all within a short radius. That is why Tata put it there.
 
 ### 🧵 Cotton Textiles — Ahmedabad 🇮🇳 vs Osaka 🇯🇵
 
 | | **Ahmedabad** | **Osaka** |
 |---|---|---|
-| **Nicknamed** | ⭐ **"Manchester of India"** | ⭐ **"Manchester of Japan"** |
-| **Raw cotton** | Local — Gujarat's **black soil** grows cotton | ⭐ **Imported entirely** |
+| **Nicknamed** | **"Manchester of India"** | **"Manchester of Japan"** |
+| **Raw cotton** | Local — Gujarat's **black soil** grows cotton | **Imported entirely** |
 | **Climate** | Warm, moist — good for spinning | Humid |
 | **Location** | Near cotton fields and markets | Port city, on a plain, near Kobe |
 | **Labour** | Abundant local | Abundant |
@@ -143,14 +143,14 @@ NCERT again uses **paired comparison** — same industry, two countries.
 
 | | **Bengaluru** | **Silicon Valley** |
 |---|---|---|
-| **Nicknamed** | ⭐ **"Silicon Valley of India"** | The original |
+| **Nicknamed** | **"Silicon Valley of India"** | The original |
 | **Location** | Deccan plateau, Karnataka | Near San Francisco, California |
-| **Advantages** | ⭐ **Pleasant climate**, skilled English-speaking workforce, universities and research institutes (IISc), lower costs | Universities (**Stanford**), venture capital, skilled migration |
-| **Key factor** | ⭐ **Skilled labour** — not raw material |
+| **Advantages** | **Pleasant climate**, skilled English-speaking workforce, universities and research institutes (IISc), lower costs | Universities (**Stanford**), venture capital, skilled migration |
+| **Key factor** | **Skilled labour** — not raw material |
 
 > 💻 **IT breaks the classical location model entirely, and that's the point of including it.** It has no bulky raw material, no heavy power need and no transport constraint on its product — software moves as data. **So it locates purely where the skilled people are, and skilled people go where universities, climate and quality of life are.**
 >
-> ⭐ **This is a genuinely useful observation for a Mains answer:** as economies shift from manufacturing to knowledge industries, **industrial location becomes governed by human capital rather than physical resources.** That inverts centuries of economic geography — and it explains why Bengaluru, not the Chhotanagpur mineral belt, became India's fastest-growing industrial city.
+> **This is a genuinely useful observation for a Mains answer:** as economies shift from manufacturing to knowledge industries, **industrial location becomes governed by human capital rather than physical resources.** That inverts centuries of economic geography — and it explains why Bengaluru, not the Chhotanagpur mineral belt, became India's fastest-growing industrial city.
 
 ---
 
@@ -166,15 +166,15 @@ NCERT again uses **paired comparison** — same industry, two countries.
 | **Noise** | Machinery, construction |
 | **Thermal** | Hot water discharged into rivers, killing aquatic life |
 
-### ⭐ The Bhopal Gas Tragedy
+### The Bhopal Gas Tragedy
 
 | | |
 |---|---|
-| **When** | ⭐ **Night of 2–3 December 1984** |
+| **When** | **Night of 2–3 December 1984** |
 | **Where** | **Bhopal, Madhya Pradesh** — Union Carbide pesticide plant |
-| **What** | Leak of ⭐ **methyl isocyanate (MIC)** gas |
+| **What** | Leak of **methyl isocyanate (MIC)** gas |
 | **Toll** | Thousands killed immediately; hundreds of thousands affected. **Health effects persist across generations** |
-| **Legacy** | ⭐ **The world's worst industrial disaster** |
+| **Legacy** | **The world's worst industrial disaster** |
 
 > 🌱 **What Bhopal changed, and why it matters for your answers:** it directly drove India's environmental legislation — the **Environment (Protection) Act 1986**, the **Public Liability Insurance Act 1991**, and later the **National Green Tribunal (2010)**. **The Act that underpins most Indian environmental regulation exists because of Bhopal.**
 >
@@ -191,20 +191,20 @@ NCERT again uses **paired comparison** — same industry, two countries.
 
 | Topic | The specific thing |
 |---|---|
-| **Industry classification** ⭐⭐⭐ | Raw material / size / ownership |
-| **Factors of location** ⭐⭐⭐ | Raw material, power, labour, transport, market, capital, water, policy |
-| ⭐ **Weight-losing vs weight-gaining** | Locate at raw material vs at market |
-| **Jamshedpur 1907, Jamsetji Tata** ⭐⭐ | India's first large steel plant |
-| **"Manchester of India"** ⭐⭐ | **Ahmedabad** (Osaka = Manchester of Japan) |
-| **Bengaluru = Silicon Valley of India** ⭐⭐ | Located by **skilled labour**, not raw material |
-| **AMUL / White Revolution** ⭐⭐ | Cooperative; Verghese Kurien; Operation Flood |
-| 🌱 **Bhopal, 2–3 Dec 1984, MIC gas** ⭐⭐⭐ | World's worst industrial disaster → **EPA 1986** |
+| **Industry classification** ⭐ | Raw material / size / ownership |
+| **Factors of location** ⭐ | Raw material, power, labour, transport, market, capital, water, policy |
+| **Weight-losing vs weight-gaining** | Locate at raw material vs at market |
+| **Jamshedpur 1907, Jamsetji Tata** | India's first large steel plant |
+| **"Manchester of India"** | **Ahmedabad** (Osaka = Manchester of Japan) |
+| **Bengaluru = Silicon Valley of India** | Located by **skilled labour**, not raw material |
+| **AMUL / White Revolution** | Cooperative; Verghese Kurien; Operation Flood |
+| 🌱 **Bhopal, 2–3 Dec 1984, MIC gas** ⭐ | World's worst industrial disaster → **EPA 1986** |
 
 **Trap 1:** *"Ahmedabad is the Manchester of Japan."* **Osaka** is. Ahmedabad is the Manchester of **India**.
-**Trap 2:** *"Osaka's textile industry is based on local cotton."* ⭐ **It imports all its cotton.**
+**Trap 2:** *"Osaka's textile industry is based on local cotton."* **It imports all its cotton.**
 **Trap 3:** *"Cottage industry uses heavy machinery."* **Simple tools and family labour.**
 **Trap 4:** *"SAIL is a private company."* **Public sector.**
-**Trap 5:** *"The Bhopal leak was chlorine gas."* ⭐ **Methyl isocyanate (MIC).**
+**Trap 5:** *"The Bhopal leak was chlorine gas."* **Methyl isocyanate (MIC).**
 
 ---
 
@@ -216,7 +216,7 @@ NCERT again uses **paired comparison** — same industry, two countries.
 | **Agro / mineral / marine / forest-based** | Classification by raw material source |
 | **Cottage industry** | Smallest scale; family labour, simple tools |
 | **Public / private / joint / cooperative sector** | Classification by ownership |
-| ⭐ **Weight-losing industry** | Raw material heavier than product → locates at the source |
+| **Weight-losing industry** | Raw material heavier than product → locates at the source |
 | **Industrial region** | An area of concentrated industrial activity |
 | **Smelting** | Extracting metal from ore by heating |
 | **White Revolution / Operation Flood** | India's cooperative dairy transformation |
@@ -232,11 +232,11 @@ NCERT again uses **paired comparison** — same industry, two countries.
 1. **Classified by raw material** (agro/mineral/marine/forest), **size** (cottage/small/large), **ownership** (private/public/joint/cooperative).
 2. **AMUL is the cooperative model** — White Revolution, Verghese Kurien.
 3. **Industrial system: inputs → processes → outputs — and 🌱 waste, the unpriced output.**
-4. ⭐ **Location factors: raw material, power, labour, transport, market, capital, water, policy** — a Mains syllabus line.
-5. ⭐ **Weight-losing industries locate at the raw material; weight-gaining/perishable ones at the market.** This one distinction explains most industrial maps.
+4. **Location factors: raw material, power, labour, transport, market, capital, water, policy** — a Mains syllabus line.
+5. **Weight-losing industries locate at the raw material; weight-gaining/perishable ones at the market.** This one distinction explains most industrial maps.
 6. **Jamshedpur (1907, Jamsetji Tata)** — all raw materials within ~100 km. The textbook weight-losing case.
-7. **Ahmedabad = Manchester of India; Osaka = Manchester of Japan.** ⭐ **Osaka has no local cotton at all** — proving raw material is one factor, not a rule.
-8. ⭐ **IT breaks the classical model** — it locates by **skilled labour**, which is why Bengaluru rather than the mineral belt became India's boom city.
+7. **Ahmedabad = Manchester of India; Osaka = Manchester of Japan.** **Osaka has no local cotton at all** — proving raw material is one factor, not a rule.
+8. **IT breaks the classical model** — it locates by **skilled labour**, which is why Bengaluru rather than the mineral belt became India's boom city.
 9. 🌱 **Bhopal, 2–3 December 1984, methyl isocyanate** — the world's worst industrial disaster.
 10. 🌱 **Bhopal produced the Environment (Protection) Act 1986** — and it was a land-use planning failure as much as an industrial one.
 

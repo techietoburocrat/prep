@@ -13,19 +13,19 @@
 | **Subject** | Geography → **Economic Geography** |
 | **Merged with** | 🌱🌱 **Environment** → **sustainable development**, conservation |
 | **Prelims (GS-I)** | Resource classification — renewable/non-renewable, actual/potential, biotic/abiotic |
-| **Mains (GS-III)** | ⭐ **Sustainable development** is a recurring theme across environment, economy and governance answers |
+| **Mains (GS-III)** | **Sustainable development** is a recurring theme across environment, economy and governance answers |
 | **Also feeds** | **Economy** (factors of production), **Ethics** (intergenerational equity) |
-| **Weightage** | ⭐⭐⭐ as **framing** |
+| **Weightage** | ⭐ as **framing** |
 
 ---
 
 ## 🎯 Learning Outcomes
 
 - [ ] **Define** a resource and state the three conditions that make something one.
-- [ ] ⭐ **Classify** resources by origin, exhaustibility, distribution and development.
+- [ ] **Classify** resources by origin, exhaustibility, distribution and development.
 - [ ] **Distinguish** actual from potential resources with examples.
 - [ ] **Distinguish** renewable from non-renewable, and note the complication in "renewable".
-- [ ] ⭐ **Define** sustainable development and state its principles.
+- [ ] **Define** sustainable development and state its principles.
 - [ ] **Explain** why human resources are the ultimate resource.
 
 ---
@@ -46,7 +46,7 @@
    └──────────────────────────────────────────────────┘
 ```
 
-> ⭐ **This is why "resources are not, they become."**
+> **This is why "resources are not, they become."**
 >
 > | Substance | Before | After |
 > |---|---|---|
@@ -62,13 +62,13 @@
 
 ---
 
-## 2️⃣ ⭐ Classification of Resources
+## 2️⃣ Classification of Resources
 
 ### By origin
 
 | | **NATURAL** | **HUMAN-MADE** | **HUMAN** |
 |---|---|---|---|
-| **What** | Drawn from nature, used with little modification | Things people build using natural resources | ⭐ **People themselves** — their number, skill, knowledge, health |
+| **What** | Drawn from nature, used with little modification | Things people build using natural resources | **People themselves** — their number, skill, knowledge, health |
 | **Examples** | Air, water, soil, minerals, forests | Buildings, roads, machinery, bridges, technology | Doctors, engineers, teachers, farmers |
 
 ### Natural resources, sub-classified
@@ -112,7 +112,7 @@ Not the same as non-use. It means matching consumption to regeneration, avoiding
 
 ---
 
-## 4️⃣ ⭐🌱 Sustainable Development
+## 4️⃣ 🌱 Sustainable Development
 
 > **Sustainable development** = development that meets the needs of the **present** without compromising the ability of **future generations** to meet their own needs.
 
@@ -129,7 +129,7 @@ Not the same as non-use. It means matching consumption to regeneration, avoiding
 | **Change personal attitudes and practices** | Individual behaviour matters |
 | **Enable communities to care for their own environments** | Local control, not only central regulation |
 
-> ⭐ **The core of the idea is intergenerational equity** — the notion that people not yet born have a claim on resources we are currently spending. That is an **ethical** proposition as much as an economic one, which is why it connects directly to your [Ethics notes](../../../../Ethics/00_START_HERE.md).
+> **The core of the idea is intergenerational equity** — the notion that people not yet born have a claim on resources we are currently spending. That is an **ethical** proposition as much as an economic one, which is why it connects directly to your [Ethics notes](../../../../Ethics/00_START_HERE.md).
 >
 > 🎯 **The nuance that scores in Mains:** sustainable development is not "stop developing." It explicitly commits to **improving quality of life**. The tension is between *how fast* and *at what cost*, not between development and conservation as such. Answers that frame it as an either/or lose marks; answers that frame it as a **rate and distribution problem** do well.
 
@@ -141,13 +141,13 @@ Not the same as non-use. It means matching consumption to regeneration, avoiding
 
 | Topic | The specific thing |
 |---|---|
-| **Actual vs potential** ⭐⭐⭐ | Known and in use vs exists but unexploited |
-| **Renewable vs non-renewable** ⭐⭐⭐ | And that renewability is a **rate**, not a guarantee |
-| **Biotic vs abiotic** ⭐⭐ | From living vs non-living sources |
-| **Three conditions for a resource** ⭐⭐ | Utility + technology + economic viability |
-| **Sustainable development definition** ⭐⭐⭐ | Brundtland, 1987 — present needs without compromising future ability |
-| **Human resources** ⭐⭐ | People are the ultimate resource |
-| **SDGs** ⭐⭐ | 17 goals, adopted 2015, target 2030 |
+| **Actual vs potential** ⭐ | Known and in use vs exists but unexploited |
+| **Renewable vs non-renewable** ⭐ | And that renewability is a **rate**, not a guarantee |
+| **Biotic vs abiotic** | From living vs non-living sources |
+| **Three conditions for a resource** | Utility + technology + economic viability |
+| **Sustainable development definition** ⭐ | Brundtland, 1987 — present needs without compromising future ability |
+| **Human resources** | People are the ultimate resource |
+| **SDGs** | 17 goals, adopted 2015, target 2030 |
 
 **Trap 1:** *"Renewable resources cannot be exhausted."* **They can** — if used faster than they regenerate. Groundwater and forests are the standard examples.
 **Trap 2:** *"Fossil fuels are abiotic."* ⚠️ **Biotic** — they formed from ancient living matter, despite being found in rock.
@@ -163,14 +163,14 @@ Not the same as non-use. It means matching consumption to regeneration, avoiding
 | **Utility** | Usability — the property that makes something a resource |
 | **Natural resource** | Drawn from nature with little modification |
 | **Human-made resource** | Built by people from natural materials |
-| ⭐ **Human resource** | People — their number, skills, knowledge and health |
+| **Human resource** | People — their number, skills, knowledge and health |
 | **Biotic** | Derived from living things — **includes fossil fuels** |
 | **Abiotic** | Derived from non-living things |
 | **Renewable** | Replenishes naturally — **at a rate** |
 | **Non-renewable** | Limited stock; takes geological time to form |
 | **Ubiquitous / localised** | Found everywhere / only in certain places |
-| ⭐ **Actual resource** | Quantity known and currently in use |
-| ⭐ **Potential resource** | Exists but not yet used |
+| **Actual resource** | Quantity known and currently in use |
+| **Potential resource** | Exists but not yet used |
 | **Conservation** | Careful use allowing time for renewal |
 | 🌱 **Sustainable development** | Meeting present needs without compromising future generations |
 | 🌱 **Intergenerational equity** | Fairness between present and future generations |
@@ -180,15 +180,15 @@ Not the same as non-use. It means matching consumption to regeneration, avoiding
 
 ## 🔁 60-Second Recap
 
-1. ⭐ **"Resources are not, they become."** Something is a resource only when utility, technology and economic viability all exist.
+1. **"Resources are not, they become."** Something is a resource only when utility, technology and economic viability all exist.
 2. **Coal, petroleum, uranium, silicon, lithium** — the substances never changed; human knowledge did.
 3. **Three origins: natural, human-made, human.**
 4. **Biotic (from living, including fossil fuels) vs abiotic (from non-living).**
-5. **Renewable vs non-renewable** — and ⭐ **renewability is a rate**, so forests and groundwater *can* be exhausted.
-6. ⭐ **Actual = known and in use. Potential = exists but unexploited** (Rajasthan's solar).
+5. **Renewable vs non-renewable** — and **renewability is a rate**, so forests and groundwater *can* be exhausted.
+6. **Actual = known and in use. Potential = exists but unexploited** (Rajasthan's solar).
 7. **Ubiquitous vs localised** — air vs iron ore.
 8. **Conservation = using at a rate that permits renewal**, not non-use.
-9. ⭐ 🌱 **Sustainable development (Brundtland 1987): meeting present needs without compromising future generations' ability to meet theirs.**
+9. 🌱 **Sustainable development (Brundtland 1987): meeting present needs without compromising future generations' ability to meet theirs.**
 10. **It is not anti-development** — it explicitly commits to improving quality of life. The question is rate and distribution.
 11. **People are the ultimate resource** — nothing is a resource until someone knows how to use it.
 

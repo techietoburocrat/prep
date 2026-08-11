@@ -15,7 +15,7 @@
 | **Prelims (GS-I)** | Mountain types, named ranges, highest/oldest/longest superlatives, plateau and plain examples |
 | **Mains (GS-I)** | "Salient features of world's physical geography" — **directly**. Also settlement patterns and industrial location |
 | **Mains (GS-III)** | 🌱 Landslides, Himalayan fragility, disaster management |
-| **Weightage** | ⭐⭐ in Class 6 · ⭐⭐⭐ once Class 11 develops it |
+| **Weightage** | in Class 6 · ⭐ once Class 11 develops it |
 | **Class 11 picks this up in** | *Fundamentals of Physical Geography* — plate tectonics, weathering, erosion, landform evolution |
 
 ---
@@ -71,13 +71,13 @@ Every landform on Earth is the current score in a contest between two opposing s
 - Steep slopes → **little land for farming**, thin soil.
 - **Sparsely populated** — the harshest of the three landforms to live on.
 
-### ⭐ The three types of mountain — the most testable content here
+### The three types of mountain — the most testable content here
 
 | Type | How it forms | Diagram | Examples |
 |---|---|---|---|
-| **FOLD** | Two plates collide; layers of rock **buckle and fold upward** | `∧∧∧` | ⭐ **Himalayas**, **Alps**, **Andes**, **Rockies** — the world's great young ranges |
-| **BLOCK** | The crust **cracks (faults)**; some blocks are pushed up (**horst**), others drop down (**graben / rift valley**) | `▔▔│▁▁│▔▔` | ⭐ **Vosges** (France), **Black Forest** (Germany), **Satpura** (India), East African Rift |
-| **VOLCANIC** | Built up by **lava and ash** accumulating around a vent | `◬` | ⭐ **Mt. Kilimanjaro** (Africa), **Mt. Fuji** (Japan), **Mt. Etna** |
+| **FOLD** | Two plates collide; layers of rock **buckle and fold upward** | `∧∧∧` | **Himalayas**, **Alps**, **Andes**, **Rockies** — the world's great young ranges |
+| **BLOCK** | The crust **cracks (faults)**; some blocks are pushed up (**horst**), others drop down (**graben / rift valley**) | `▔▔│▁▁│▔▔` | **Vosges** (France), **Black Forest** (Germany), **Satpura** (India), East African Rift |
+| **VOLCANIC** | Built up by **lava and ash** accumulating around a vent | `◬` | **Mt. Kilimanjaro** (Africa), **Mt. Fuji** (Japan), **Mt. Etna** |
 
 ```
    FOLD MOUNTAIN                 BLOCK MOUNTAIN            VOLCANIC MOUNTAIN
@@ -102,7 +102,7 @@ Every landform on Earth is the current score in a contest between two opposing s
 | **Peaks** | Sharp, jagged | Blunt, eroded |
 | **Slopes** | Steep | Gentle |
 | **Seismic** | **Active** — earthquakes | Stable |
-| **Example** | **Himalayas** (world's **youngest** major range) | ⭐ **Aravalli** (among the **world's oldest** ranges) |
+| **Example** | **Himalayas** (world's **youngest** major range) | **Aravalli** (among the **world's oldest** ranges) |
 
 > 🎯 **The Aravalli–Himalaya contrast is worth carrying.** The Aravallis were once comparable in scale to today's Himalayas. Hundreds of millions of years of erosion have reduced them to low hills. **Every mountain is on that trajectory.**
 
@@ -119,12 +119,12 @@ Every landform on Earth is the current score in a contest between two opposing s
 | Range | Where | Note |
 |---|---|---|
 | **Himalayas** | Asia | Highest range. **Mt. Everest, 8,849 m** — highest point on Earth |
-| **Andes** | South America | ⭐ **World's longest mountain range** (~7,000 km) |
+| **Andes** | South America | **World's longest mountain range** (~7,000 km) |
 | **Alps** | Europe | Classic fold range |
 | **Rockies** | North America | |
 | **Urals** | Between Europe and Asia | Old, worn; the continental boundary |
 | **Atlas** | NW Africa | |
-| **Aravalli** | India | ⭐ Among the **world's oldest** ranges |
+| **Aravalli** | India | Among the **world's oldest** ranges |
 
 ### 🌱 Why mountains matter — beyond scenery
 
@@ -164,9 +164,9 @@ Also called **tablelands** — the name is the definition.
 
 - Vary hugely in height — from a few hundred to several thousand metres.
 - May be **young or very old**.
-- ⭐ The **Deccan Plateau** in India is **one of the oldest landforms on Earth**.
-- ⭐ The **Tibetan Plateau** is the **highest in the world** (~4,000–6,000 m) — the *"Roof of the World"*.
-- ⭐ The **East African Plateau** (Kenya, Tanzania, Uganda) is rich in **gold and diamonds**.
+- The **Deccan Plateau** in India is **one of the oldest landforms on Earth**.
+- The **Tibetan Plateau** is the **highest in the world** (~4,000–6,000 m) — the *"Roof of the World"*.
+- The **East African Plateau** (Kenya, Tanzania, Uganda) is rich in **gold and diamonds**.
 - The **Western Plateau of Australia** and the **Guiana Highlands** (South America) are other examples.
 
 ```
@@ -184,7 +184,7 @@ Also called **tablelands** — the name is the definition.
 
 | Use | Detail |
 |---|---|
-| ⛏️ **Minerals** | ⭐ **The most important point.** Plateaus are **the world's storehouse of minerals** — old, stable, deeply eroded rock exposes ore bodies |
+| ⛏️ **Minerals** | **The most important point.** Plateaus are **the world's storehouse of minerals** — old, stable, deeply eroded rock exposes ore bodies |
 | 🏭 **Industry** | Mineral wealth → mining → heavy industry |
 | ⚡ **Waterfalls** | Rivers dropping over escarpments create falls — **Jog Falls** (India), **Victoria Falls** (Africa) |
 | 🌾 **Lava soils** | Weathered volcanic rock gives **black soil**, ideal for **cotton** |
@@ -219,12 +219,12 @@ Most great plains are built by **rivers and their tributaries**. A river flowing
 
 | Plain | River system |
 |---|---|
-| ⭐ **Indo-Gangetic Plain** | Ganga, Indus, Brahmaputra — **among the most densely populated regions on Earth** |
+| **Indo-Gangetic Plain** | Ganga, Indus, Brahmaputra — **among the most densely populated regions on Earth** |
 | **Yangtze Plain** | Yangtze (China) |
 | **Mississippi Plain** | Mississippi (USA) |
 | **Amazon Plain** | Amazon (South America) |
 
-### ⭐ Why plains support the most people
+### Why plains support the most people
 
 This causal chain is worth learning as a chain, because it recurs throughout geography:
 
@@ -264,11 +264,11 @@ Plains are the most productive and the most **modified** landform:
 |---|---|---|---|
 | **Height** | High, steep | Elevated, flat-topped | Low (<200 m), flat |
 | **Formed by** | Folding, faulting, volcanism | Uplift + long erosion | **River deposition** |
-| **Soil** | Thin, poor | Variable; lava soils fertile | ⭐ **Deep, fertile alluvium** |
-| **Population** | **Sparse** | Moderate | ⭐ **Very dense** |
-| **Farming** | Difficult; terraced | Moderate | ⭐ **Excellent** |
+| **Soil** | Thin, poor | Variable; lava soils fertile | **Deep, fertile alluvium** |
+| **Population** | **Sparse** | Moderate | **Very dense** |
+| **Farming** | Difficult; terraced | Moderate | **Excellent** |
 | **Chief value** | 💧 **Water, forests, hydro-power, tourism** | ⛏️ **Minerals** | 🌾 **Agriculture, transport, settlement** |
-| **Transport** | Very difficult | Moderate | ⭐ Easy and cheap |
+| **Transport** | Very difficult | Moderate | Easy and cheap |
 | **India example** | Himalayas, Western Ghats | Deccan, Chhotanagpur | Indo-Gangetic Plain |
 | 🌱 **Chief vulnerability** | Landslides, glacier loss, fragile soils | Mining damage, deforestation | Floods, groundwater loss, pollution |
 
@@ -282,16 +282,16 @@ Plains are the most productive and the most **modified** landform:
 
 | Topic | The specific thing |
 |---|---|
-| **Three mountain types** ⭐⭐⭐ | Fold (Himalayas, Alps, Andes, Rockies) · Block (Vosges, Black Forest, Satpura) · Volcanic (Kilimanjaro, Fuji) |
-| **World's longest range** ⭐⭐⭐ | **Andes** (~7,000 km) — *not* the Himalayas |
-| **Highest plateau** ⭐⭐ | **Tibetan Plateau** — "Roof of the World" |
-| **Oldest landforms** ⭐⭐ | **Aravalli** (range) · **Deccan** (plateau) |
-| **Plateaus = minerals** ⭐⭐ | Especially **East African** (gold, diamonds) and **Chhotanagpur** (coal, iron) |
-| **Horst and graben** ⭐⭐ | Raised block / sunken block in block mountains |
-| **Range vs system vs chain** ⭐ | Line / series of ranges / long belt of mixed ranges |
-| **Waterfalls at escarpments** ⭐ | Jog Falls, Victoria Falls |
-| **Plains = alluvium = density** ⭐⭐ | Indo-Gangetic Plain |
-| 🌱 **Mountains as water towers** ⭐⭐ | Perennial rivers depend on snowmelt |
+| **Three mountain types** ⭐ | Fold (Himalayas, Alps, Andes, Rockies) · Block (Vosges, Black Forest, Satpura) · Volcanic (Kilimanjaro, Fuji) |
+| **World's longest range** ⭐ | **Andes** (~7,000 km) — *not* the Himalayas |
+| **Highest plateau** | **Tibetan Plateau** — "Roof of the World" |
+| **Oldest landforms** | **Aravalli** (range) · **Deccan** (plateau) |
+| **Plateaus = minerals** | Especially **East African** (gold, diamonds) and **Chhotanagpur** (coal, iron) |
+| **Horst and graben** | Raised block / sunken block in block mountains |
+| **Range vs system vs chain** | Line / series of ranges / long belt of mixed ranges |
+| **Waterfalls at escarpments** | Jog Falls, Victoria Falls |
+| **Plains = alluvium = density** | Indo-Gangetic Plain |
+| 🌱 **Mountains as water towers** | Perennial rivers depend on snowmelt |
 
 **Trap 1:** *"The Himalayas are the world's longest mountain range."* **No — the Andes.** The Himalayas are the **highest**, not the longest.
 **Trap 2:** *"Satpura is a fold mountain."* **No — block mountain.** So are the Vosges and the Black Forest.
@@ -339,14 +339,14 @@ Plains are the most productive and the most **modified** landform:
 1. **Landforms are the running score between internal forces (building up) and external forces (wearing down).**
 2. **Three great landforms: mountains, plateaus, plains.**
 3. **Three mountain types: fold** (Himalayas, Alps, Andes, Rockies), **block** (Vosges, Black Forest, Satpura — horst and graben), **volcanic** (Kilimanjaro, Fuji).
-4. ⭐ **Andes = longest range. Himalayas = highest. Aravalli = among the oldest.**
+4. **Andes = longest range. Himalayas = highest. Aravalli = among the oldest.**
 5. **Range** (a line) → **system** (series of ranges) → **chain** (long mixed belt).
 6. 🌱 **Mountains are water towers** — snow and glaciers give India its perennial rivers. Glacier retreat is therefore a water-security threat.
 7. 🌱 **Mountain ecosystems are fragile** — thin soil, slow growth, unstable slopes. Hence landslides.
 8. **Plateaus are flat-topped with steep sides.** **Tibetan = highest** ("Roof of the World"); **Deccan = one of the oldest**.
 9. ⛏️ **Plateaus are the world's storehouse of minerals**, because long erosion exposes ore-bearing rock. Chhotanagpur is India's example.
 10. 🌾 **Plains are built by river deposition of alluvium** — the most fertile soil there is.
-11. ⭐ **Flat land → fertile soil → surplus food → cheap transport → dense settlement.** This chain explains the Indo-Gangetic Plain and every river civilisation in history.
+11. **Flat land → fertile soil → surplus food → cheap transport → dense settlement.** This chain explains the Indo-Gangetic Plain and every river civilisation in history.
 12. 🌱 **Plains are the most modified landform** — floods, groundwater depletion, soil degradation, and the Indo-Gangetic air-quality trap.
 13. 🔑 **Mountains give water. Plateaus give minerals. Plains give food.**
 

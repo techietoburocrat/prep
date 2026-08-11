@@ -38,16 +38,16 @@ Genuinely low. This is a **fast pass** — Stage 1 of eleven, ~4–5 hours for t
 
 | # | Chapter | What it really is | Weight | 🌱 |
 |---|---|---|---|---|
-| **1** | [The Earth in the Solar System](01_The_Earth_in_the_Solar_System.md) | Our address in space; why Earth alone has life | ⭐⭐ | 🌱 |
-| **2** | [Globe: Latitudes and Longitudes](02_Globe_Latitudes_and_Longitudes.md) | **The addressing system for the whole planet.** Also time zones | ⭐⭐⭐ | |
-| **3** | [Motions of the Earth](03_Motions_of_the_Earth.md) | Rotation → day/night. Revolution + tilt → **seasons** | ⭐⭐⭐ | |
-| **4** | [Maps](04_Maps.md) | Scale, direction, symbols; map vs globe | ⭐⭐ | |
-| **5** | [Major Domains of the Earth](05_Major_Domains_of_the_Earth.md) | Litho-, atmo-, hydro-, **biosphere**. Continents & oceans | ⭐⭐⭐ | 🌱🌱🌱 |
-| **6** | [Major Landforms of the Earth](06_Major_Landforms_of_the_Earth.md) | Mountains, plateaus, plains — and why people live where they do | ⭐⭐ | 🌱 |
-| **7** | [Our Country — India](07_Our_Country_India.md) | India's location, extent, neighbours, physical divisions | ⭐⭐⭐ | |
-| **8** | [India: Climate, Vegetation and Wildlife](08_India_Climate_Vegetation_Wildlife.md) | Monsoon in miniature; forest types; **conservation** | ⭐⭐ | 🌱🌱🌱 |
+| **1** | [The Earth in the Solar System](01_The_Earth_in_the_Solar_System.md) | Our address in space; why Earth alone has life | | 🌱 |
+| **2** | [Globe: Latitudes and Longitudes](02_Globe_Latitudes_and_Longitudes.md) | **The addressing system for the whole planet.** Also time zones | ⭐ | |
+| **3** | [Motions of the Earth](03_Motions_of_the_Earth.md) | Rotation → day/night. Revolution + tilt → **seasons** | ⭐ | |
+| **4** | [Maps](04_Maps.md) | Scale, direction, symbols; map vs globe | | |
+| **5** | [Major Domains of the Earth](05_Major_Domains_of_the_Earth.md) | Litho-, atmo-, hydro-, **biosphere**. Continents & oceans | ⭐ | 🌱🌱🌱 |
+| **6** | [Major Landforms of the Earth](06_Major_Landforms_of_the_Earth.md) | Mountains, plateaus, plains — and why people live where they do | | 🌱 |
+| **7** | [Our Country — India](07_Our_Country_India.md) | India's location, extent, neighbours, physical divisions | ⭐ | |
+| **8** | [India: Climate, Vegetation and Wildlife](08_India_Climate_Vegetation_Wildlife.md) | Monsoon in miniature; forest types; **conservation** | | 🌱🌱🌱 |
 
-⭐⭐⭐ = concepts that Class 11 will build directly on, or that UPSC asks about in some form.
+⭐ = concepts that Class 11 will build directly on, or that UPSC asks about in some form.
 
 ---
 

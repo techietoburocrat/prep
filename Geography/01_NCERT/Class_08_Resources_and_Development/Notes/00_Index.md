@@ -22,12 +22,12 @@ Still **Stage 1 — fast pass**, ~4 hours. But two chapters are unusually high-y
 
 | # | Chapter | What it really is | Weight | 🌱 |
 |---|---|---|---|---|
-| **1** | [Resources](01_Resources.md) | What counts as a resource; **sustainable development** | ⭐⭐⭐ | 🌱🌱 |
-| **2** | [Land, Soil, Water, Vegetation and Wildlife](02_Land_Soil_Water_Vegetation_Wildlife.md) | **Soil formation and conservation**; water scarcity | ⭐⭐⭐ | 🌱🌱🌱 |
-| **3** | [Mineral and Power Resources](03_Mineral_and_Power_Resources.md) | Mineral types; **conventional vs non-conventional energy** | ⭐⭐⭐ | 🌱🌱 |
-| **4** | [Agriculture](04_Agriculture.md) | Farming systems; **major crops and their conditions** | ⭐⭐⭐ | 🌱 |
-| **5** | [Industries](05_Industries.md) | Classification; **factors of industrial location** | ⭐⭐ | 🌱 |
-| **6** | [Human Resources](06_Human_Resources.md) | Population distribution, growth, **age-sex pyramid** | ⭐⭐⭐ | |
+| **1** | [Resources](01_Resources.md) | What counts as a resource; **sustainable development** | ⭐ | 🌱🌱 |
+| **2** | [Land, Soil, Water, Vegetation and Wildlife](02_Land_Soil_Water_Vegetation_Wildlife.md) | **Soil formation and conservation**; water scarcity | ⭐ | 🌱🌱🌱 |
+| **3** | [Mineral and Power Resources](03_Mineral_and_Power_Resources.md) | Mineral types; **conventional vs non-conventional energy** | ⭐ | 🌱🌱 |
+| **4** | [Agriculture](04_Agriculture.md) | Farming systems; **major crops and their conditions** | ⭐ | 🌱 |
+| **5** | [Industries](05_Industries.md) | Classification; **factors of industrial location** | | 🌱 |
+| **6** | [Human Resources](06_Human_Resources.md) | Population distribution, growth, **age-sex pyramid** | ⭐ | |
 
 ---
 
@@ -47,7 +47,7 @@ Still **Stage 1 — fast pass**, ~4 hours. But two chapters are unusually high-y
         Agriculture (primary)               Ch.4
         Industry (secondary)                Ch.5
         ↓
-   ⭐ AND THE MOST IMPORTANT RESOURCE OF ALL
+   AND THE MOST IMPORTANT RESOURCE OF ALL
         People                              Ch.6
 ```
 
@@ -59,7 +59,7 @@ Still **Stage 1 — fast pass**, ~4 hours. But two chapters are unusually high-y
 
 | Ch | The environment content |
 |---|---|
-| 1 | ⭐ **Sustainable development** — the concept the whole environment syllabus rests on |
+| 1 | **Sustainable development** — the concept the whole environment syllabus rests on |
 | 2 | **Soil erosion and conservation**, land degradation, water scarcity, **rainwater harvesting** |
 | 3 | **Fossil fuels vs renewables**; why the energy transition is happening |
 | 4 | Green Revolution's environmental cost; irrigation and groundwater |

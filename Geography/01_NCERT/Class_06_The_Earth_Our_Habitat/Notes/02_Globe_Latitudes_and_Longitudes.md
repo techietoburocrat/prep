@@ -15,7 +15,7 @@
 | **Prelims (GS-I)** | *Indian and World Geography.* Important parallels, countries on the Tropic of Cancer, IST, International Date Line, time calculation |
 | **Mains (GS-I)** | Underpins "salient features of world's physical geography." The **two-time-zone debate** is a live governance question |
 | **Also feeds** | **Polity/Governance** (single vs multiple time zones), **Current Affairs**, **Astronomy/S&T** |
-| **Weightage** | ⭐⭐⭐ — **one of the two most important chapters in this book.** Everything later assumes it |
+| **Weightage** | ⭐ — **one of the two most important chapters in this book.** Everything later assumes it |
 | **Class 11 picks this up in** | *Fundamentals of Physical Geography* — latitude drives insolation, pressure belts, wind systems |
 
 > 🧭 **Do not fast-pass this chapter.** Chapter 1 you can skim. This one you learn properly, because Chapter 3 (seasons), Chapter 8 (Indian climate) and the whole of Class 11 physical geography are built directly on it.
@@ -82,11 +82,11 @@ A **globe** is a true model of the Earth — a sphere on a fixed stand, showing 
 |---|---|
 | **Shape** | Slightly flattened at the poles, slightly bulging at the equator. Not a perfect sphere — technically an **oblate spheroid** |
 | **Axis** | The imaginary line through the centre, from North Pole to South Pole, around which the Earth spins |
-| **Tilt** | ⭐ The axis is **not upright.** It leans at **23½° from the vertical** — equivalently, it makes an angle of **66½° with its orbital plane** |
+| **Tilt** | The axis is **not upright.** It leans at **23½° from the vertical** — equivalently, it makes an angle of **66½° with its orbital plane** |
 | **Poles** | The two points where the axis meets the surface: **North Pole** and **South Pole** |
 | **Equator** | The imaginary circle exactly midway between the poles, dividing Earth into the **Northern** and **Southern Hemispheres** |
 
-> ⭐ **The tilt is the single most consequential fact in this book.** It is why we have seasons (Ch.3), why the Tropics and Circles sit where they do, and therefore why climate zones and biomes are arranged the way they are. **A tilt of 0° would mean no seasons anywhere.** Hold on to it — Chapter 3 is entirely about its consequences.
+> **The tilt is the single most consequential fact in this book.** It is why we have seasons (Ch.3), why the Tropics and Circles sit where they do, and therefore why climate zones and biomes are arranged the way they are. **A tilt of 0° would mean no seasons anywhere.** Hold on to it — Chapter 3 is entirely about its consequences.
 
 > 🌐 **Globe vs map — the honest trade-off:** a globe is accurate but useless in practice. You cannot fold it, carry it, or see the whole world at once, and you cannot show a small area in detail. A map is a flat compromise that distorts something (shape, area, distance or direction) but is portable and detailed. **Chapter 4 is about how we make that compromise deliberately.**
 
@@ -153,7 +153,7 @@ But they are **not the same size.** They are circles that shrink as you move pol
 
 **Useful number:** 1° of latitude ≈ **111 km**, everywhere on Earth. (This is *not* true of longitude — see below. It's the key asymmetry between the two.)
 
-### ⭐ The five important parallels — memorise exactly
+### The five important parallels — memorise exactly
 
 | Parallel | Value | Why it exists |
 |---|---|---|
@@ -260,7 +260,7 @@ This is the payoff of latitude, and the point at which this chapter stops being 
 | **Total** | 360 meridians (179 E + 179 W + 0° + 180°) |
 | **Shape** | **Semi-circles** running pole to pole — not full circles |
 
-### ⭐ Why longitudes are fundamentally different from latitudes
+### Why longitudes are fundamentally different from latitudes
 
 This is the distinction that gets tested, and the one people muddle.
 
@@ -322,7 +322,7 @@ The Earth completes one full rotation — **360°** — in **24 hours**.
 
 **Direction rule:** the Earth rotates **west → east**, so places to the **EAST see the Sun first**.
 
-> **East = ahead. West = behind.** ⭐
+> **East = ahead. West = behind.**
 
 That is why the sun rises in Arunachal Pradesh before it rises in Gujarat, and why Japan's date changes before India's.
 
@@ -345,7 +345,7 @@ That is why the sun rises in Arunachal Pradesh before it rises in Gujarat, and w
 |---|---|
 | **India's longitudinal extent** | **68°7′E to 97°25′E** — a spread of ~**29°** |
 | **Real time difference across India** | ~**2 hours** (29° ÷ 15) |
-| **Standard Meridian of India** | ⭐ **82°30′E** |
+| **Standard Meridian of India** | **82°30′E** |
 | **Passes through** | **Mirzapur**, Uttar Pradesh (near Prayagraj) |
 | **IST** | **GMT + 5:30** |
 | **Why 82°30′?** | It runs near the **centre** of the country, so the error is shared roughly equally east and west |
@@ -381,7 +381,7 @@ The **180° meridian**, on the opposite side of the globe from Greenwich, runnin
 | **West → East** (e.g. Japan → USA) | **Repeat a day** — go *back* one day |
 | **East → West** (e.g. USA → Japan) | **Skip a day** — go *forward* one day |
 
-**⭐ Why it isn't a straight line:** it deliberately **zigzags** around Russia's east, the Aleutian Islands, Kiribati, Fiji and Samoa — so that a single country or island group isn't split across two different dates. **The physics wants a straight line; politics and daily life bend it.**
+** Why it isn't a straight line:** it deliberately **zigzags** around Russia's east, the Aleutian Islands, Kiribati, Fiji and Samoa — so that a single country or island group isn't split across two different dates. **The physics wants a straight line; politics and daily life bend it.**
 
 > 🧳 A traveller flying Tokyo → Los Angeles can land at an *earlier local time on an earlier date* than they departed — the classic "arrive before you left." Nothing paradoxical is happening: you crossed the line where the calendar resets.
 
@@ -421,16 +421,16 @@ Parallels + meridians together form the **geographic grid** (or graticule), and 
 
 | Topic | The specific thing |
 |---|---|
-| **Tropic of Cancer states** ⭐⭐⭐ | **8 states**, west→east: Gujarat, Rajasthan, MP, Chhattisgarh, Jharkhand, WB, Tripura, Mizoram |
-| **Standard Meridian of India** ⭐⭐⭐ | **82°30′E**, through **Mirzapur (UP)**. IST = GMT + 5:30 |
-| **Values of the five parallels** ⭐⭐⭐ | 0°, 23½°N/S, 66½°N/S |
-| **Time calculation** ⭐⭐ | 15° = 1 hr; 1° = 4 min. **East = ahead** |
-| **Parallels vs meridians** ⭐⭐ | Parallels: circles, unequal, never meet. Meridians: semi-circles, equal, meet at poles |
-| **International Date Line** ⭐⭐ | 180°; zigzags to keep countries whole |
-| **India's longitudinal extent** ⭐⭐ | 68°7′E – 97°25′E; ~2 hrs of real time difference |
-| 🌱 **Heat zones** ⭐⭐ | Torrid / Temperate / Frigid, and their boundaries |
-| **Prime Meridian** ⭐ | Greenwich; chosen by convention in **1884** |
-| **Longest parallel** ⭐ | The **equator** |
+| **Tropic of Cancer states** ⭐ | **8 states**, west→east: Gujarat, Rajasthan, MP, Chhattisgarh, Jharkhand, WB, Tripura, Mizoram |
+| **Standard Meridian of India** ⭐ | **82°30′E**, through **Mirzapur (UP)**. IST = GMT + 5:30 |
+| **Values of the five parallels** ⭐ | 0°, 23½°N/S, 66½°N/S |
+| **Time calculation** | 15° = 1 hr; 1° = 4 min. **East = ahead** |
+| **Parallels vs meridians** | Parallels: circles, unequal, never meet. Meridians: semi-circles, equal, meet at poles |
+| **International Date Line** | 180°; zigzags to keep countries whole |
+| **India's longitudinal extent** | 68°7′E – 97°25′E; ~2 hrs of real time difference |
+| 🌱 **Heat zones** | Torrid / Temperate / Frigid, and their boundaries |
+| **Prime Meridian** | Greenwich; chosen by convention in **1884** |
+| **Longest parallel** | The **equator** |
 
 **Trap 1:** *"Odisha / Bihar is on the Tropic of Cancer."* **No.** Neither is. Verify on the atlas.
 **Trap 2:** *"All lines of longitude are different lengths."* **No** — all meridians are **equal**. It's the *parallels* that vary.

@@ -12,9 +12,9 @@
 |---|---|
 | **Subject** | Geography → **Physical Geography** → **Climatology** |
 | **Merged with** | 🌱🌱 **Environment** → air pollution, greenhouse gases, global warming |
-| **Prelims (GS-I)** | ⭐⭐⭐ Atmospheric layers, composition, pressure, wind types, **the three rainfall types** |
+| **Prelims (GS-I)** | ⭐ Atmospheric layers, composition, pressure, wind types, **the three rainfall types** |
 | **Mains (GS-I)** | The monsoon; global circulation |
-| **Weightage** | ⭐⭐⭐ — **the direct parent of Class 11's hardest chapters** |
+| **Weightage** | ⭐ — **the direct parent of Class 11's hardest chapters** |
 | **Later** | Cl.11 *Fundamentals* — insolation, heat budget, pressure belts, planetary winds |
 
 > ⚠️ **Read this one slowly.** Class 11's atmospheric circulation is where most candidates struggle, and the reason is almost always that the Class 7 foundation — pressure differences cause wind — was skimmed.
@@ -26,9 +26,9 @@
 - [ ] **State** the composition of air and the role of each major gas.
 - [ ] **Name** the five layers and their defining features.
 - [ ] **Explain** what air pressure is and how it varies with altitude and temperature.
-- [ ] ⭐ **Explain** the causal chain: **uneven heating → pressure difference → wind**.
+- [ ] **Explain** the causal chain: **uneven heating → pressure difference → wind**.
 - [ ] **Distinguish** permanent, seasonal and local winds, with examples.
-- [ ] ⭐ **Distinguish** the **three types of rainfall** and where each occurs.
+- [ ] **Distinguish** the **three types of rainfall** and where each occurs.
 - [ ] **Define** humidity, and distinguish weather from climate.
 - [ ] 🌱 **Explain** air pollution and the greenhouse gases.
 
@@ -54,10 +54,10 @@
 
 | Layer | Height | Key feature |
 |---|---|---|
-| **Troposphere** | to ~13 km | ⭐ **All weather.** Temperature **falls** ~6.5°C per km |
-| **Stratosphere** | to ~50 km | ⭐ **Ozone layer.** Cloudless, stable — **aircraft fly here** |
-| **Mesosphere** | to ~80 km | ⭐ **Meteors burn up.** Coldest layer |
-| **Thermosphere** | to ~400 km | ⭐ **Ionosphere** — reflects radio waves. Temperature rises steeply |
+| **Troposphere** | to ~13 km | **All weather.** Temperature **falls** ~6.5°C per km |
+| **Stratosphere** | to ~50 km | **Ozone layer.** Cloudless, stable — **aircraft fly here** |
+| **Mesosphere** | to ~80 km | **Meteors burn up.** Coldest layer |
+| **Thermosphere** | to ~400 km | **Ionosphere** — reflects radio waves. Temperature rises steeply |
 | **Exosphere** | beyond | Thinnest; merges into space |
 
 *(Detail as in [Class 6 Ch.5](../../Class_06_The_Earth_Our_Habitat/Notes/05_Major_Domains_of_the_Earth.md) — this is the second pass.)*
@@ -76,7 +76,7 @@
 
 ---
 
-## 4️⃣ ⭐ Air Pressure — The Engine of Everything
+## 4️⃣ Air Pressure — The Engine of Everything
 
 > **Air pressure** = the weight of the column of air pressing down on a unit area.
 
@@ -86,12 +86,12 @@ Air is invisible but it is **not weightless.** The atmosphere pressing on your s
 
 | Factor | Effect |
 |---|---|
-| **Altitude ↑** | ⭐ Pressure **falls** — less air above you |
-| **Temperature ↑** | ⭐ Air expands, becomes lighter, rises → **LOW pressure** |
+| **Altitude ↑** | Pressure **falls** — less air above you |
+| **Temperature ↑** | Air expands, becomes lighter, rises → **LOW pressure** |
 | **Temperature ↓** | Air contracts, becomes denser, sinks → **HIGH pressure** |
 
 ```
-   ⭐ THE CAUSAL CHAIN — LEARN THIS AS A CHAIN
+   THE CAUSAL CHAIN — LEARN THIS AS A CHAIN
 
    SUN HEATS THE EARTH UNEVENLY
    (equator gets vertical rays, poles get slanting rays)
@@ -103,7 +103,7 @@ Air is invisible but it is **not weightless.** The atmosphere pressing on your s
             ↓
    AIR FLOWS FROM HIGH PRESSURE TO LOW PRESSURE
             ↓
-   ⭐ THAT FLOW IS WIND
+   THAT FLOW IS WIND
 ```
 
 > 🎈 **The comparison that fits: a hot-air balloon.** Heat the air inside and it expands, becomes less dense than the surrounding air, and rises. That is precisely what happens over a hot patch of ground — the air above it rises, leaving lower pressure behind, and cooler air rushes in sideways to replace it. **The sideways rush is the wind.**
@@ -112,7 +112,7 @@ Air is invisible but it is **not weightless.** The atmosphere pressing on your s
 
 ---
 
-## 5️⃣ ⭐ Winds
+## 5️⃣ Winds
 
 > **Wind** = air moving horizontally, from high pressure to low pressure.
 
@@ -120,9 +120,9 @@ Air is invisible but it is **not weightless.** The atmosphere pressing on your s
 
 | Type | Meaning | Examples |
 |---|---|---|
-| **PERMANENT (Planetary)** | Blow constantly, in the same direction, all year | ⭐ **Trade winds, Westerlies, Polar easterlies** |
-| **SEASONAL** | Change direction with the season | ⭐ **MONSOON** |
-| **LOCAL** | Blow in a small area, for a short period | ⭐ **Loo** (N India, hot summer), **land and sea breeze**, Chinook, Mistral |
+| **PERMANENT (Planetary)** | Blow constantly, in the same direction, all year | **Trade winds, Westerlies, Polar easterlies** |
+| **SEASONAL** | Change direction with the season | **MONSOON** |
+| **LOCAL** | Blow in a small area, for a short period | **Loo** (N India, hot summer), **land and sea breeze**, Chinook, Mistral |
 
 > 🌍 **The trade winds got their name from trade, not from wind direction.** Their reliability made sailing-ship commerce possible across the Atlantic and Indian Oceans — European ships to the Americas, Arab dhows to India. **Wind patterns wrote the map of pre-industrial world trade.** Worth a line in an essay or a history answer.
 
@@ -138,19 +138,19 @@ Air is invisible but it is **not weightless.** The atmosphere pressing on your s
 
 ---
 
-## 6️⃣ Moisture and ⭐ The Three Types of Rainfall
+## 6️⃣ Moisture and The Three Types of Rainfall
 
 **Humidity** = the amount of water vapour in the air. Air that cannot hold more is **saturated**.
 
 **How rain happens:** air is heated → rises → cools with altitude → water vapour condenses around dust particles → forms clouds → droplets combine until too heavy to stay aloft → **precipitation**.
 
-### ⭐ The three rainfall types — high-value Prelims content
+### The three rainfall types — high-value Prelims content
 
 | Type | Mechanism | Where |
 |---|---|---|
-| ☀️ **CONVECTIONAL** | Intense heating → air rises vertically → cools → heavy rain, often with thunder, usually in the **afternoon** | ⭐ **Equatorial regions** — daily afternoon downpours |
-| ⛰️ **OROGRAPHIC (Relief)** | Moist air forced to **rise over a mountain**, cools, rains on the **windward** side; **rain shadow** on the leeward | ⭐ **Western Ghats**, Meghalaya, Himalayan foothills |
-| 🌀 **CYCLONIC (Frontal)** | Warm and cold air masses **meet**; warm air is forced up over the cold; rain along the boundary | ⭐ **Temperate regions**; also tropical cyclones |
+| ☀️ **CONVECTIONAL** | Intense heating → air rises vertically → cools → heavy rain, often with thunder, usually in the **afternoon** | **Equatorial regions** — daily afternoon downpours |
+| ⛰️ **OROGRAPHIC (Relief)** | Moist air forced to **rise over a mountain**, cools, rains on the **windward** side; **rain shadow** on the leeward | **Western Ghats**, Meghalaya, Himalayan foothills |
+| 🌀 **CYCLONIC (Frontal)** | Warm and cold air masses **meet**; warm air is forced up over the cold; rain along the boundary | **Temperate regions**; also tropical cyclones |
 
 ```
    OROGRAPHIC RAINFALL — the one that shapes India
@@ -165,7 +165,7 @@ Air is invisible but it is **not weightless.** The atmosphere pressing on your s
    Mumbai, Mangaluru        Pune, interior Deccan
 ```
 
-> ⭐ **Orographic rainfall is the one that decides Indian geography.** It explains why the Konkan coast is drenched and the Deccan interior is semi-arid, why Mawsynram is among the wettest places on Earth, and why the entire monsoon works. Whenever a question asks *why does place X get so much/so little rain*, orographic effect and rain shadow should be your first thought.
+> **Orographic rainfall is the one that decides Indian geography.** It explains why the Konkan coast is drenched and the Deccan interior is semi-arid, why Mawsynram is among the wettest places on Earth, and why the entire monsoon works. Whenever a question asks *why does place X get so much/so little rain*, orographic effect and rain shadow should be your first thought.
 
 ---
 
@@ -173,7 +173,7 @@ Air is invisible but it is **not weightless.** The atmosphere pressing on your s
 
 | Pollutant | Chief source | Effect |
 |---|---|---|
-| **Carbon dioxide (CO₂)** | Fossil fuel burning | ⭐ **Global warming** |
+| **Carbon dioxide (CO₂)** | Fossil fuel burning | **Global warming** |
 | **Sulphur dioxide (SO₂)** | Coal burning, industry | **Acid rain** |
 | **Nitrogen oxides (NOₓ)** | Vehicles | Acid rain, smog |
 | **Carbon monoxide (CO)** | Incomplete combustion | Toxic — blocks oxygen transport in blood |
@@ -199,16 +199,16 @@ Air is invisible but it is **not weightless.** The atmosphere pressing on your s
 
 | Topic | The specific thing |
 |---|---|
-| **Air composition** ⭐⭐⭐ | N₂ 78% · O₂ 21% · CO₂ ~0.03% |
-| **Pressure → wind chain** ⭐⭐⭐ | Uneven heating → pressure difference → air flows high to low |
-| **Three rainfall types** ⭐⭐⭐ | Convectional (equatorial) · **Orographic** (mountains) · Cyclonic (fronts) |
-| **Rain shadow** ⭐⭐⭐ | Leeward side is dry — Western Ghats |
-| **Wind types** ⭐⭐ | Permanent (trades, westerlies) · Seasonal (monsoon) · Local (loo, breezes) |
-| **Five layers** ⭐⭐ | Weather in troposphere; ozone in stratosphere |
-| **Pressure vs altitude** ⭐⭐ | Falls with height |
-| **Warm air = low pressure** ⭐⭐ | It expands, becomes lighter, rises |
-| 🌱 **Greenhouse gases** ⭐⭐⭐ | CO₂, CH₄, water vapour, N₂O, CFCs. **Not O₂ or N₂** |
-| 🌱 **Condensation nuclei** ⭐ | Dust particles are needed for water vapour to condense |
+| **Air composition** ⭐ | N₂ 78% · O₂ 21% · CO₂ ~0.03% |
+| **Pressure → wind chain** ⭐ | Uneven heating → pressure difference → air flows high to low |
+| **Three rainfall types** ⭐ | Convectional (equatorial) · **Orographic** (mountains) · Cyclonic (fronts) |
+| **Rain shadow** ⭐ | Leeward side is dry — Western Ghats |
+| **Wind types** | Permanent (trades, westerlies) · Seasonal (monsoon) · Local (loo, breezes) |
+| **Five layers** | Weather in troposphere; ozone in stratosphere |
+| **Pressure vs altitude** | Falls with height |
+| **Warm air = low pressure** | It expands, becomes lighter, rises |
+| 🌱 **Greenhouse gases** ⭐ | CO₂, CH₄, water vapour, N₂O, CFCs. **Not O₂ or N₂** |
+| 🌱 **Condensation nuclei** | Dust particles are needed for water vapour to condense |
 
 **Trap 1:** *"Warm air creates high pressure."* **No — LOW.** Warm air expands, becomes lighter, and rises.
 **Trap 2:** *"Nitrogen is directly usable by plants."* **No** — it must be fixed by bacteria into nitrates.
@@ -250,12 +250,12 @@ Air is invisible but it is **not weightless.** The atmosphere pressing on your s
 2. **Plants cannot use atmospheric nitrogen directly** — bacteria must fix it.
 3. **Dust matters:** water vapour needs **condensation nuclei** to form droplets.
 4. **Five layers:** weather in the **troposphere**, ozone in the **stratosphere**, meteors burn in the **mesosphere**, radio reflects off the **ionosphere**.
-5. ⭐ **The chain: uneven heating → warm air rises (LOW pressure), cool air sinks (HIGH pressure) → air flows high to low → that flow is WIND.**
+5. **The chain: uneven heating → warm air rises (LOW pressure), cool air sinks (HIGH pressure) → air flows high to low → that flow is WIND.**
 6. **Pressure falls with altitude.**
 7. **Three wind types:** permanent (trades, westerlies), seasonal (**monsoon**), local (loo, sea/land breeze).
 8. **Sea and land breezes are the monsoon in miniature** — same mechanism, smaller scale.
-9. ⭐ **Three rainfall types: convectional** (equatorial, afternoon thunderstorms), **orographic** (mountains — windward wet, leeward rain shadow), **cyclonic** (air masses meeting).
-10. ⭐ **Orographic rainfall and the rain shadow explain most of India's rainfall pattern.**
+9. **Three rainfall types: convectional** (equatorial, afternoon thunderstorms), **orographic** (mountains — windward wet, leeward rain shadow), **cyclonic** (air masses meeting).
+10. **Orographic rainfall and the rain shadow explain most of India's rainfall pattern.**
 11. 🌱 **Greenhouse gases: CO₂, methane, water vapour, N₂O, CFCs — not oxygen or nitrogen.**
 12. 🌱 **Ozone depletion ≠ global warming.** Different gas, layer, effect and treaty.
 

@@ -15,7 +15,7 @@
 | **Prelims (GS-I)** | Amazon basin facts, Ganga–Brahmaputra basin, tribes, crops |
 | **Mains (GS-I)** | Human–environment interaction; population distribution |
 | **Mains (GS-III)** | 🌱 Deforestation, indigenous rights, sustainable development |
-| **Weightage** | ⭐⭐ |
+| **Weightage** | |
 
 > 🎯 **NCERT is teaching you a method here, not just two places.** Two regions with **similar physical conditions** and **very different human outcomes** — set side by side so the differences stand out. **That comparative structure is exactly what Mains answers reward**, so read it as a template, not as trivia.
 
@@ -26,7 +26,7 @@
 - [ ] **Locate** both basins and name the countries each covers.
 - [ ] **Describe** the climate, vegetation and wildlife of each.
 - [ ] **Describe** the people, their livelihoods and their settlements.
-- [ ] ⭐ **Explain** why one basin is sparsely populated and the other densely so.
+- [ ] **Explain** why one basin is sparsely populated and the other densely so.
 - [ ] 🌱 **Explain** Amazon deforestation — its causes, and why "lungs of the world" is a contested phrase.
 
 ---
@@ -38,11 +38,11 @@
 | | |
 |---|---|
 | **Where** | **South America**, largely in **Brazil**; also Peru, Colombia, Ecuador, Bolivia, Venezuela, Guyana |
-| **River** | ⭐ **Amazon — the world's largest river by volume** |
+| **River** | **Amazon — the world's largest river by volume** |
 | **Position** | Lies **along the equator** (roughly 0°) |
 | **Climate** | **Hot and wet all year.** Days and nights almost equally hot and humid. Rain nearly every day |
 | **Rainfall** | Very high, year-round — no true dry season |
-| **Vegetation** | ⭐ **Tropical evergreen rainforest** — the world's largest |
+| **Vegetation** | **Tropical evergreen rainforest** — the world's largest |
 
 ### The rainforest structure
 
@@ -67,10 +67,10 @@
 | | |
 |---|---|
 | **Who** | Indigenous peoples — hundreds of distinct groups |
-| **Farming** | ⭐ **Slash-and-burn agriculture** (locally *milpa*): clear a patch, burn the vegetation, cultivate 2–3 years, move on and let it regenerate |
+| **Farming** | **Slash-and-burn agriculture** (locally *milpa*): clear a patch, burn the vegetation, cultivate 2–3 years, move on and let it regenerate |
 | **Crops** | **Tapioca, pineapple, sweet potato; cassava/manioc** is the staple. Also coffee, maize, cocoa |
 | **Other food** | Hunting, fishing, gathering |
-| **Houses** | ⭐ **Maloca** — large, apartment-like communal dwellings with steeply slanting roofs |
+| **Houses** | **Maloca** — large, apartment-like communal dwellings with steeply slanting roofs |
 
 > 🌱 **Slash-and-burn is sustainable at low population density and destructive at high density.** With a long fallow — 15–20 years — the forest fully regenerates and the practice can continue indefinitely. **Compress the cycle because more people need more land, and the soil never recovers.** Exactly the same point as *jhum* cultivation in your History notes. **The practice isn't the problem; the population-to-land ratio is.**
 
@@ -78,7 +78,7 @@
 
 | Cause | Detail |
 |---|---|
-| ⭐ **Cattle ranching** | The **largest single driver** in the Amazon |
+| **Cattle ranching** | The **largest single driver** in the Amazon |
 | **Soy cultivation** | Largely for animal feed export |
 | **Logging** | Legal and illegal timber |
 | **Roads and settlement** | The Trans-Amazonian Highway opened the interior |
@@ -103,27 +103,27 @@
 
 | | |
 |---|---|
-| **Where** | ⭐ **India, Bangladesh, Nepal, Bhutan** — the northern plains |
+| **Where** | **India, Bangladesh, Nepal, Bhutan** — the northern plains |
 | **Rivers** | **Ganga** and **Brahmaputra**, plus tributaries |
 | **Position** | **Tropical/subtropical**, roughly 23½°N–30°N |
-| **Climate** | ⭐ **Monsoon climate** — hot wet summers, cool dry winters. **Distinct seasons**, unlike the Amazon |
+| **Climate** | **Monsoon climate** — hot wet summers, cool dry winters. **Distinct seasons**, unlike the Amazon |
 | **Relief** | Plains, with mountains to the north |
 | **Vegetation** | Tropical **deciduous** forest, plus **mangroves in the Sundarbans delta** |
 
-### ⭐ The comparison — the heart of the chapter
+### The comparison — the heart of the chapter
 
 | | 🌴 **AMAZON BASIN** | 🇮🇳 **GANGA–BRAHMAPUTRA BASIN** |
 |---|---|---|
 | **Latitude** | Equatorial (~0°) | Tropical/subtropical (~23½–30°N) |
-| **Climate** | Hot and wet **all year**, no real seasons | ⭐ **Monsoon — distinct wet and dry seasons** |
+| **Climate** | Hot and wet **all year**, no real seasons | **Monsoon — distinct wet and dry seasons** |
 | **Vegetation** | Tropical **evergreen** rainforest | Tropical **deciduous** + mangrove |
-| **Soil** | ⭐ **Poor** — nutrients locked in vegetation | ⭐ **Deep fertile alluvium**, renewed by annual floods |
-| **Population** | ⭐ **Sparse** | ⭐ **One of the most densely populated regions on Earth** |
-| **Agriculture** | Slash-and-burn, subsistence | ⭐ **Intensive settled farming — paddy, wheat, sugarcane, jute** |
+| **Soil** | **Poor** — nutrients locked in vegetation | **Deep fertile alluvium**, renewed by annual floods |
+| **Population** | **Sparse** | **One of the most densely populated regions on Earth** |
+| **Agriculture** | Slash-and-burn, subsistence | **Intensive settled farming — paddy, wheat, sugarcane, jute** |
 | **Settlements** | Scattered, small | Dense; **Allahabad/Prayagraj, Kanpur, Varanasi, Patna, Kolkata** |
 | **Transport** | River-based | Road, rail, river, air — highly developed |
 
-> ⭐ **Why the difference? The answer is soil, and it's a genuinely satisfying explanation.**
+> **Why the difference? The answer is soil, and it's a genuinely satisfying explanation.**
 >
 > Both basins are hot and wet. But:
 > - The **Amazon's** heavy year-round rain **leaches nutrients out of the soil**, and what nutrients remain are locked in living vegetation, recycled fast. Clear the forest and the land is exhausted in a few years. **It cannot support dense permanent agriculture.**
@@ -139,18 +139,18 @@
 
 | Topic | The specific thing |
 |---|---|
-| **Amazon = largest river by volume** ⭐⭐ | (The Nile is the longest — a standing pairing) |
-| **Maloca** ⭐⭐ | Large communal Amazon dwelling with slanting roof |
-| **Slash-and-burn / milpa** ⭐⭐ | Sustainable only with long fallow |
-| **Cattle ranching = biggest Amazon driver** ⭐⭐ | Not logging |
-| **Amazon = carbon sink, not "lungs"** ⭐⭐⭐ | A mature rainforest is near oxygen-neutral |
-| **Ganga–Brahmaputra countries** ⭐⭐ | India, Bangladesh, Nepal, Bhutan |
-| **Why one is dense and one sparse** ⭐⭐⭐ | **Soil** — leached vs annually renewed alluvium |
-| **Sundarbans** ⭐⭐ | Mangroves in the delta; Royal Bengal Tiger |
+| **Amazon = largest river by volume** | (The Nile is the longest — a standing pairing) |
+| **Maloca** | Large communal Amazon dwelling with slanting roof |
+| **Slash-and-burn / milpa** | Sustainable only with long fallow |
+| **Cattle ranching = biggest Amazon driver** | Not logging |
+| **Amazon = carbon sink, not "lungs"** ⭐ | A mature rainforest is near oxygen-neutral |
+| **Ganga–Brahmaputra countries** | India, Bangladesh, Nepal, Bhutan |
+| **Why one is dense and one sparse** ⭐ | **Soil** — leached vs annually renewed alluvium |
+| **Sundarbans** | Mangroves in the delta; Royal Bengal Tiger |
 
 **Trap 1:** *"The Amazon is the world's longest river."* **The largest by volume.** The **Nile** is the longest.
 **Trap 2:** *"Rainforest soil is rich because the vegetation is lush."* **Poor** — nutrients are in the biomass.
-**Trap 3:** *"Logging is the main cause of Amazon deforestation."* ⭐ **Cattle ranching** is the largest driver.
+**Trap 3:** *"Logging is the main cause of Amazon deforestation."* **Cattle ranching** is the largest driver.
 **Trap 4:** *"The Amazon produces 20% of the world's oxygen."* **Contested and essentially wrong** — a mature forest is near oxygen-neutral. Its importance is carbon storage and rainfall generation.
 
 **Mains:** GS-I — human–environment interaction; population distribution and its physical causes. GS-III — deforestation, indigenous rights, the development-vs-conservation tension.
@@ -177,12 +177,12 @@
 
 1. **Amazon Basin:** equatorial, hot and wet **all year**, tropical **evergreen** rainforest, **sparse** population.
 2. **Ganga–Brahmaputra Basin:** subtropical, **monsoon** climate with distinct seasons, **deciduous** forest, **extremely dense** population.
-3. ⭐ **The reason for the difference is SOIL** — Amazon soil is leached and poor; the Ganga plain is annually renewed alluvium.
+3. **The reason for the difference is SOIL** — Amazon soil is leached and poor; the Ganga plain is annually renewed alluvium.
 4. **Amazon = world's largest river by volume.** The **Nile** is the longest.
 5. **Amazon people:** slash-and-burn farming, manioc staple, **maloca** communal houses.
 6. **Slash-and-burn is sustainable with a long fallow** and destructive when the cycle is compressed.
 7. 🌱 **Cattle ranching is the largest driver of Amazon deforestation** — not logging.
-8. 🌱 ⭐ **"Lungs of the world" is misleading.** A mature rainforest is near oxygen-neutral; the Amazon matters as a **carbon sink** and a **rainfall engine**.
+8. 🌱 **"Lungs of the world" is misleading.** A mature rainforest is near oxygen-neutral; the Amazon matters as a **carbon sink** and a **rainfall engine**.
 9. **The flood paradox:** the annual flood that destroys is also what fertilises.
 10. **Method note:** NCERT is teaching **comparison** — similar physical conditions, different human outcomes.
 

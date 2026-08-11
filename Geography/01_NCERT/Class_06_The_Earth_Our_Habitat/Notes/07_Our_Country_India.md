@@ -12,10 +12,10 @@
 |---|---|
 | **Subject** | Geography → **Indian Geography** (physical + political) |
 | **Merged with** | 🌱 **Environment** → physical diversity is the direct cause of India's biological diversity |
-| **Prelims (GS-I)** | ⭐⭐⭐ **Very high.** Latitudinal/longitudinal extent, neighbours, states, rivers, passes, islands, physical divisions |
+| **Prelims (GS-I)** | ⭐ **Very high.** Latitudinal/longitudinal extent, neighbours, states, rivers, passes, islands, physical divisions |
 | **Mains (GS-I)** | Directly — Indian physiography, drainage, settlement patterns |
 | **Mains (GS-II)** | **Border management, neighbourhood policy** — every land neighbour here is a foreign-policy file |
-| **Weightage** | ⭐⭐⭐ — with Ch.2 and Ch.5, one of the three highest-value chapters in the book |
+| **Weightage** | ⭐ — with Ch.2 and Ch.5, one of the three highest-value chapters in the book |
 | **Class 11 picks this up in** | *India: Physical Environment* — the whole book |
 
 > 🗺️ **This chapter is unusable without the atlas.** Every fact below should be traced with a finger before it's memorised. The map is the content.
@@ -56,7 +56,7 @@ India qualifies for a specific, physical reason:
 
 **Mountains to the north, sea on the other three sides.** For most of history this made India **hard to enter, hard to leave, and internally connected** — which is why it developed a distinct civilisation, and why its climate (the monsoon) works the way it does.
 
-> ⭐ **The Himalayas do two enormous jobs at once**, and both matter for the exam:
+> **The Himalayas do two enormous jobs at once**, and both matter for the exam:
 > 1. **They block the freezing Central Asian winter winds**, which is why north India is far warmer in winter than other places at the same latitude.
 > 2. **They trap the monsoon** — moisture-laden winds hit the wall, are forced up, cool, and dump their rain on India instead of passing over.
 >
@@ -68,9 +68,9 @@ India qualifies for a specific, physical reason:
 
 | | Value |
 |---|---|
-| **Latitudinal extent** | ⭐ **8°4′N to 37°6′N** |
-| **Longitudinal extent** | ⭐ **68°7′E to 97°25′E** |
-| **Area** | ⭐ **3.28 million sq km** = **~2.4% of the world's land** |
+| **Latitudinal extent** | **8°4′N to 37°6′N** |
+| **Longitudinal extent** | **68°7′E to 97°25′E** |
+| **Area** | **3.28 million sq km** = **~2.4% of the world's land** |
 | **Rank by area** | **7th largest country** |
 | **Rank by population** | **1st** |
 | **Standard Meridian** | **82°30′E**, through **Mirzapur (UP)** — IST = GMT + 5:30 |
@@ -80,7 +80,7 @@ India qualifies for a specific, physical reason:
 | **Land frontier** | ~15,200 km |
 | **Coastline** | ~7,500 km (including islands) |
 
-### ⭐ The extent paradox — a genuinely good insight
+### The extent paradox — a genuinely good insight
 
 India spans **~30° of latitude** and **~29° of longitude** — almost the same number. **Yet the two behave completely differently.**
 
@@ -107,7 +107,7 @@ India spans **~30° of latitude** and **~29° of longitude** — almost the same
 | **China** | N | Ladakh, Himachal, Uttarakhand, Sikkim, Arunachal |
 | **Nepal** | N | Uttarakhand, UP, Bihar, West Bengal, Sikkim |
 | **Bhutan** | N | Sikkim, West Bengal, Assam, Arunachal |
-| **Bangladesh** | E | ⭐ West Bengal, Assam, Meghalaya, Tripura, Mizoram — **longest land border** |
+| **Bangladesh** | E | West Bengal, Assam, Meghalaya, Tripura, Mizoram — **longest land border** |
 | **Myanmar** | E | Arunachal, Nagaland, Manipur, Mizoram |
 | 🌊 **Sri Lanka** | S | Separated by the **Palk Strait** and **Gulf of Mannar** |
 | 🌊 **Maldives** | SW | In the **Arabian Sea**, south-west of Lakshadweep |
@@ -116,8 +116,8 @@ India spans **~30° of latitude** and **~29° of longitude** — almost the same
 > **"Pakistan Afghanistan China Nepal Bhutan Bangladesh Myanmar"** → **PACN-BBM**.
 
 > 🎯 **Two facts that get asked constantly:**
-> - ⭐ **Longest land border: Bangladesh** (~4,096 km) — *not* China or Pakistan.
-> - ⭐ **Shortest land border: Afghanistan** (~106 km, via Pakistan-occupied Kashmir).
+> - **Longest land border: Bangladesh** (~4,096 km) — *not* China or Pakistan.
+> - **Shortest land border: Afghanistan** (~106 km, via Pakistan-occupied Kashmir).
 
 > 🏛️ **This table is also a GS-II table.** Every row is a live foreign-policy file — the LAC with China, the LoC with Pakistan, riverine and enclave issues with Bangladesh, Nepal's open border, Myanmar's Free Movement Regime. **Learning the geography now makes the international-relations material much cheaper later.** Cross-tag it in your [Current Affairs](../../../../Current%20Affairs/00_START_HERE.md) notes.
 
@@ -137,7 +137,7 @@ India spans **~30° of latitude** and **~29° of longitude** — almost the same
 
 ---
 
-## 3️⃣ ⭐ The Six Physical Divisions
+## 3️⃣ The Six Physical Divisions
 
 This is the spine of the chapter. Learn the list, then the detail.
 
@@ -167,9 +167,9 @@ This is the spine of the chapter. Learn the list, then the detail.
 
 | Range | Also called | Character |
 |---|---|---|
-| **Himadri** | **Greater Himalaya** | ⭐ **Highest** — permanently snow-covered. Contains the tallest peaks |
+| **Himadri** | **Greater Himalaya** | **Highest** — permanently snow-covered. Contains the tallest peaks |
 | **Himachal** | **Lesser Himalaya** | Middle range. **Hill stations** — Shimla, Mussoorie, Nainital, Darjeeling |
-| **Shiwalik** | **Outer Himalaya** | ⭐ **Lowest and youngest.** Between it and the Himachal lie flat valleys called **Duns** (e.g. **Dehra Dun**) |
+| **Shiwalik** | **Outer Himalaya** | **Lowest and youngest.** Between it and the Himachal lie flat valleys called **Duns** (e.g. **Dehra Dun**) |
 
 > 🧠 **Memory hook, north → south: "Hi-Hi-Shi"** — **Hi**madri (highest), **Hi**machal (middle), **Shi**walik (lowest). Height decreases as you move south, and age decreases too — the Shiwaliks are the youngest.
 
@@ -200,7 +200,7 @@ This is the spine of the chapter. Learn the list, then the detail.
 
 - Built by three great river systems: **Indus, Ganga, Brahmaputra** and their tributaries.
 - Made of **deep alluvium** — extremely fertile.
-- ⭐ **The most densely populated part of India.**
+- **The most densely populated part of India.**
 - Flat, well-watered, easy to farm and to travel across.
 
 > This is the causal chain from Ch.6 playing out in India: flat land → fertile soil → surplus → dense population → the political heartland. **Uttar Pradesh and Bihar are where they are demographically because of alluvium.**
@@ -214,20 +214,20 @@ This is the spine of the chapter. Learn the list, then the detail.
 ### 4️⃣ The Peninsular Plateau
 
 - **South of the Northern Plains**; triangular.
-- ⭐ Made of **very old, hard igneous and metamorphic rock** — one of the oldest landmasses on Earth.
-- ⭐ **Rich in minerals** (the Ch.6 logic: old + eroded = exposed ore).
+- Made of **very old, hard igneous and metamorphic rock** — one of the oldest landmasses on Earth.
+- **Rich in minerals** (the Ch.6 logic: old + eroded = exposed ore).
 - **Aravalli** hills to the north-west — among the world's oldest ranges.
 - Bounded by:
 
 | Feature | Detail |
 |---|---|
-| **Western Ghats / Sahyadri** | ⭐ **Continuous**, higher; crossed only through passes (**Palghat**, Thal Ghat, Bhor Ghat). A **biodiversity hotspot** |
-| **Eastern Ghats** | ⭐ **Broken and discontinuous** — cut through by east-flowing rivers. Lower |
+| **Western Ghats / Sahyadri** | **Continuous**, higher; crossed only through passes (**Palghat**, Thal Ghat, Bhor Ghat). A **biodiversity hotspot** |
+| **Eastern Ghats** | **Broken and discontinuous** — cut through by east-flowing rivers. Lower |
 | **Vindhya & Satpura** | Divide north from south. **Satpura is a block mountain** |
 | **Narmada & Tapi** | Flow **west** through rift valleys, into the Arabian Sea |
 | **Deccan Plateau** | The great lava plateau; **black soil**, ideal for cotton |
 
-> ⭐ **Western vs Eastern Ghats is a favourite comparison.** Western: **continuous, higher, more rainfall, biodiversity hotspot**. Eastern: **discontinuous, lower, cut by rivers**. The reason for the difference is drainage — the peninsula tilts east, so the big rivers flow east and have sawn the Eastern Ghats into fragments.
+> **Western vs Eastern Ghats is a favourite comparison.** Western: **continuous, higher, more rainfall, biodiversity hotspot**. Eastern: **discontinuous, lower, cut by rivers**. The reason for the difference is drainage — the peninsula tilts east, so the big rivers flow east and have sawn the Eastern Ghats into fragments.
 
 ### 5️⃣ The Coastal Plains
 
@@ -243,8 +243,8 @@ This is the spine of the chapter. Learn the list, then the detail.
 
 | Group | Sea | Origin |
 |---|---|---|
-| ⭐ **Andaman & Nicobar Islands** | **Bay of Bengal** | **Volcanic / tectonic** — the emergent tops of a submerged mountain range |
-| ⭐ **Lakshadweep Islands** | **Arabian Sea** | **Coral** — built by coral polyps |
+| **Andaman & Nicobar Islands** | **Bay of Bengal** | **Volcanic / tectonic** — the emergent tops of a submerged mountain range |
+| **Lakshadweep Islands** | **Arabian Sea** | **Coral** — built by coral polyps |
 
 > ⚠️ **Do not mix these up.** **Andaman = Bay of Bengal, volcanic. Lakshadweep = Arabian Sea, coral.** Also worth knowing: **Barren Island** (Andamans) is **India's only active volcano**, and **Indira Point** (Great Nicobar) is India's **southernmost point**.
 
@@ -255,15 +255,15 @@ This is the spine of the chapter. Learn the list, then the detail.
 | | **HIMALAYAN RIVERS** | **PENINSULAR RIVERS** |
 |---|---|---|
 | **Source** | Himalayan glaciers | Peninsular plateau, rain-fed |
-| **Flow** | ⭐ **Perennial** — flow all year on snowmelt | **Seasonal** — shrink sharply in summer |
+| **Flow** | **Perennial** — flow all year on snowmelt | **Seasonal** — shrink sharply in summer |
 | **Course** | Long, meandering; large deltas | Shorter, fixed courses in hard rock |
 | **Examples** | **Indus, Ganga, Brahmaputra** | **Godavari, Krishna, Kaveri, Mahanadi, Narmada, Tapi** |
 
 **East-flowing (into the Bay of Bengal):** Ganga, Brahmaputra, **Mahanadi, Godavari, Krishna, Kaveri** — these form **deltas**.
 
-⭐ **West-flowing (into the Arabian Sea):** **Narmada and Tapi** — and they form **estuaries, not deltas**, because they flow fast through **rift valleys** which carry sediment straight out to sea rather than depositing it.
+**West-flowing (into the Arabian Sea):** **Narmada and Tapi** — and they form **estuaries, not deltas**, because they flow fast through **rift valleys** which carry sediment straight out to sea rather than depositing it.
 
-> ⭐ **"Narmada and Tapi flow west and form estuaries" is a standing Prelims favourite.** Know it *with* the reason — rift valleys, steep gradient, no sediment deposition.
+> **"Narmada and Tapi flow west and form estuaries" is a standing Prelims favourite.** Know it *with* the reason — rift valleys, steep gradient, no sediment deposition.
 
 > 🧠 **Godavari** is the **longest peninsular river**, nicknamed the **"Dakshina Ganga"** (Ganga of the South).
 
@@ -295,20 +295,20 @@ This is the merge paying off, and it's the link into Chapter 8.
 
 | Topic | The specific thing |
 |---|---|
-| **Latitudinal / longitudinal extent** ⭐⭐⭐ | **8°4′N–37°6′N**, **68°7′E–97°25′E** |
-| **Area & rank** ⭐⭐⭐ | **3.28 mn sq km**, **2.4%** of world land, **7th largest** |
-| **Neighbours** ⭐⭐⭐ | 7 land + 2 sea. **Bangladesh longest**, **Afghanistan shortest** |
-| **Six physical divisions** ⭐⭐⭐ | Himalayas, N. Plains, Thar, Peninsular Plateau, Coastal Plains, Islands |
-| **Three Himalayan ranges** ⭐⭐⭐ | Himadri > Himachal > Shiwalik (**Duns** between the last two) |
-| **Narmada & Tapi** ⭐⭐⭐ | **West-flowing**, through **rift valleys**, form **estuaries** |
-| **Islands** ⭐⭐⭐ | Andaman = Bay of Bengal, **volcanic** · Lakshadweep = Arabian Sea, **coral** |
-| **Western vs Eastern Ghats** ⭐⭐ | Continuous & higher vs **discontinuous** & lower |
-| **Passes** ⭐⭐ | Zoji La (Ladakh), Nathu La (Sikkim), Shipki La (HP), Bomdi La (Arunachal) |
-| **Highest peaks** ⭐⭐ | Everest (Nepal) · K2 (highest claimed by India) · **Kanchenjunga** (highest wholly within India) |
-| **Barren Island** ⭐⭐ | India's **only active volcano** (Andamans) |
-| **Indira Point** ⭐ | India's **southernmost point** (Great Nicobar) |
-| **Chilika & Pulicat** ⭐ | Lagoons on the **east** coast |
-| **Godavari** ⭐ | **Longest peninsular river**, "Dakshina Ganga" |
+| **Latitudinal / longitudinal extent** ⭐ | **8°4′N–37°6′N**, **68°7′E–97°25′E** |
+| **Area & rank** ⭐ | **3.28 mn sq km**, **2.4%** of world land, **7th largest** |
+| **Neighbours** ⭐ | 7 land + 2 sea. **Bangladesh longest**, **Afghanistan shortest** |
+| **Six physical divisions** ⭐ | Himalayas, N. Plains, Thar, Peninsular Plateau, Coastal Plains, Islands |
+| **Three Himalayan ranges** ⭐ | Himadri > Himachal > Shiwalik (**Duns** between the last two) |
+| **Narmada & Tapi** ⭐ | **West-flowing**, through **rift valleys**, form **estuaries** |
+| **Islands** ⭐ | Andaman = Bay of Bengal, **volcanic** · Lakshadweep = Arabian Sea, **coral** |
+| **Western vs Eastern Ghats** | Continuous & higher vs **discontinuous** & lower |
+| **Passes** | Zoji La (Ladakh), Nathu La (Sikkim), Shipki La (HP), Bomdi La (Arunachal) |
+| **Highest peaks** | Everest (Nepal) · K2 (highest claimed by India) · **Kanchenjunga** (highest wholly within India) |
+| **Barren Island** | India's **only active volcano** (Andamans) |
+| **Indira Point** | India's **southernmost point** (Great Nicobar) |
+| **Chilika & Pulicat** | Lagoons on the **east** coast |
+| **Godavari** | **Longest peninsular river**, "Dakshina Ganga" |
 
 **Trap 1:** *"China is India's longest land border."* **No — Bangladesh** (~4,096 km).
 **Trap 2:** *"Lakshadweep is volcanic."* **No — coral.** The **Andamans** are volcanic/tectonic.
@@ -352,17 +352,17 @@ This is the merge paying off, and it's the link into Chapter 8.
 ## 🔁 60-Second Recap
 
 1. **India is a subcontinent** — walled by the Himalayas, sea on three sides.
-2. ⭐ **The Himalayas block cold Central Asian winds AND trap the monsoon.** Without them India would be a desert.
+2. **The Himalayas block cold Central Asian winds AND trap the monsoon.** Without them India would be a desert.
 3. **Extent: 8°4′N–37°6′N, 68°7′E–97°25′E. Area 3.28 mn sq km = 2.4% of world land. 7th largest.**
 4. **~30° of latitude gives climatic variety; ~29° of longitude gives only a 2-hour time spread** — the payoff of Ch.2.
 5. **9 neighbours: 7 land** (Pakistan, Afghanistan, China, Nepal, Bhutan, Bangladesh, Myanmar) **+ 2 sea** (Sri Lanka, Maldives).
-6. ⭐ **Longest border: Bangladesh. Shortest: Afghanistan.**
+6. **Longest border: Bangladesh. Shortest: Afghanistan.**
 7. **Six physical divisions:** Himalayas · Northern Plains · Thar Desert · Peninsular Plateau · Coastal Plains · Islands.
 8. **Himalayas north→south: Himadri (highest) > Himachal (hill stations) > Shiwalik (lowest, youngest).** **Duns** lie between the last two.
 9. **Kanchenjunga is the highest peak wholly within India;** Everest is in Nepal.
-10. ⭐ **Western Ghats: continuous, higher, hotspot. Eastern Ghats: discontinuous, lower**, cut by east-flowing rivers.
-11. ⭐ **Narmada and Tapi flow WEST through rift valleys and form ESTUARIES, not deltas.**
-12. ⭐ **Andaman & Nicobar = Bay of Bengal, volcanic. Lakshadweep = Arabian Sea, coral.** Barren Island is India's only active volcano.
+10. **Western Ghats: continuous, higher, hotspot. Eastern Ghats: discontinuous, lower**, cut by east-flowing rivers.
+11. **Narmada and Tapi flow WEST through rift valleys and form ESTUARIES, not deltas.**
+12. **Andaman & Nicobar = Bay of Bengal, volcanic. Lakshadweep = Arabian Sea, coral.** Barren Island is India's only active volcano.
 13. **Himalayan rivers are perennial (snow-fed); peninsular rivers are seasonal (rain-fed).**
 14. 🌱 **2.4% of the world's land, ~8% of its species, 4 biodiversity hotspots** — because of the physical variety in points 3–13.
 

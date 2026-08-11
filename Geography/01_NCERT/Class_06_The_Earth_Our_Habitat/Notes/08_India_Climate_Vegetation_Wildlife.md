@@ -12,10 +12,10 @@
 |---|---|
 | **Subject** | Geography → **Indian Geography** → Climatology + Biogeography |
 | **Merged with** | 🌱🌱🌱 **Environment** — forest types, wildlife, **conservation**, protected areas. With Ch.5, the most environment-dense chapter in the book |
-| **Prelims (GS-I)** | ⭐⭐⭐ Monsoon mechanism, seasons, vegetation types and where they occur, national parks, wildlife conservation projects |
+| **Prelims (GS-I)** | ⭐ Monsoon mechanism, seasons, vegetation types and where they occur, national parks, wildlife conservation projects |
 | **Mains (GS-I)** | Indian monsoon — a recurring theme |
 | **Mains (GS-III)** | 🌱 Biodiversity, conservation, deforestation, protected-area law, human–wildlife conflict |
-| **Weightage** | ⭐⭐⭐ |
+| **Weightage** | ⭐ |
 | **Class 11/12 picks this up in** | *India: Physical Environment* (climate, vegetation) · **Cl.12 Biology ch.15–16** · **Shankar IAS** (protected areas, Acts) |
 
 ---
@@ -93,7 +93,7 @@ The whole mechanism rests on one physical fact: **land heats and cools faster th
 
 **Why the winds arrive wet:** crossing the Indian Ocean, Arabian Sea and Bay of Bengal, they pick up enormous quantities of water vapour. When they meet the Western Ghats and the Himalayas, they are forced to rise, cool, condense — and rain.
 
-### ⭐ Windward and leeward — the rain-shadow effect
+### Windward and leeward — the rain-shadow effect
 
 ```
    AIR RISES, COOLS, RAINS — THEN DESCENDS DRY
@@ -111,7 +111,7 @@ The whole mechanism rests on one physical fact: **land heats and cools faster th
     e.g. Mumbai, Mangaluru   e.g. Pune, interior Karnataka
 ```
 
-> ⭐ **This single mechanism explains one of India's sharpest contrasts.** The Konkan coast is drenched; a hundred kilometres inland, across the Ghats, is semi-arid scrub. **Same latitude, same monsoon, opposite outcomes — decided entirely by which side of a mountain you stand on.** It is the clearest demonstration in Indian geography that relief controls climate, and climate controls vegetation.
+> **This single mechanism explains one of India's sharpest contrasts.** The Konkan coast is drenched; a hundred kilometres inland, across the Ghats, is semi-arid scrub. **Same latitude, same monsoon, opposite outcomes — decided entirely by which side of a mountain you stand on.** It is the clearest demonstration in Indian geography that relief controls climate, and climate controls vegetation.
 
 **The extreme case:** **Mawsynram** and **Cherrapunji** in Meghalaya are among the **wettest places on Earth** (~11,000 mm/year), because moisture-laden Bay of Bengal winds are funnelled into the Khasi Hills and forced sharply upward. Meanwhile **Jaisalmer** in the Thar gets ~100 mm. **Both are India.**
 
@@ -123,10 +123,10 @@ The whole mechanism rests on one physical fact: **land heats and cools faster th
 |---|---|---|
 | ❄️ **Cold Weather (Winter)** | **December – February** | Cool, dry. Clear skies. North India cold; the south stays mild. Some rain in Tamil Nadu from the **retreating north-east monsoon** |
 | 🔥 **Hot Weather (Summer)** | **March – May** | Very hot and dry. **Loo** — hot dry winds in the north. Low pressure builds over the land, setting up the monsoon |
-| ☔ **South-West Monsoon (Rainy)** | **June – September** | ⭐ **The main rainy season.** ~75% of annual rainfall. Winds blow sea → land |
+| ☔ **South-West Monsoon (Rainy)** | **June – September** | **The main rainy season.** ~75% of annual rainfall. Winds blow sea → land |
 | 🍂 **Retreating Monsoon (Autumn)** | **October – November** | Monsoon withdraws. Skies clear, humidity stays high. **Tamil Nadu's main rainy season** falls here |
 
-> ⭐ **Tamil Nadu is the exception worth knowing.** Most of India gets its rain from the **south-west** monsoon (June–Sept). **Tamil Nadu gets most of its rain from the retreating / north-east monsoon (Oct–Dec)**, because by then the winds blow from land to sea *across the Bay of Bengal*, picking up moisture before hitting the Coromandel coast. **This is a standing Prelims question.**
+> **Tamil Nadu is the exception worth knowing.** Most of India gets its rain from the **south-west** monsoon (June–Sept). **Tamil Nadu gets most of its rain from the retreating / north-east monsoon (Oct–Dec)**, because by then the winds blow from land to sea *across the Bay of Bengal*, picking up moisture before hitting the Coromandel coast. **This is a standing Prelims question.**
 
 ---
 
@@ -134,15 +134,15 @@ The whole mechanism rests on one physical fact: **land heats and cools faster th
 
 **Natural vegetation** = plant life that grows on its own, without human help. What grows where is decided mainly by **rainfall**, then temperature and altitude.
 
-### ⭐ The five types — the master table
+### The five types — the master table
 
 | Type | Rainfall | Where in India | Trees | Character |
 |---|---|---|---|---|
 | 🌴 **Tropical Evergreen (Rainforest)** | **>200 cm** | Western Ghats (windward), Andaman & Nicobar, NE India | Rosewood, ebony, mahogany | **Never shed all leaves at once** → always green. Dense, multi-layered |
-| 🌳 **Tropical Deciduous (Monsoon)** | **100–200 cm** | ⭐ **Most widespread in India** — central India, eastern slopes of Western Ghats | **Teak, sal, peepal, neem, sheesham** | **Shed leaves in the dry season** to save water. Commercially the most valuable |
+| 🌳 **Tropical Deciduous (Monsoon)** | **100–200 cm** | **Most widespread in India** — central India, eastern slopes of Western Ghats | **Teak, sal, peepal, neem, sheesham** | **Shed leaves in the dry season** to save water. Commercially the most valuable |
 | 🌵 **Thorny Bushes & Scrub** | **<70 cm** | Rajasthan, Gujarat, parts of MP, Haryana, Punjab | **Cactus, khair, babool, kikar** | Long roots, thick/waxy stems, leaves reduced to **spines** to cut water loss |
 | 🌲 **Mountain (Montane)** | Varies | Himalayas | **Conifers** — pine, deodar, fir, spruce, silver fir | **Conical shape, sloping branches** so snow slides off |
-| 🌊 **Mangrove (Tidal)** | Coastal | ⭐ **Sundarbans (WB)**, Mahanadi, Godavari, Krishna, Kaveri deltas | **Sundari tree**, mangrove species | Grow in **saline, waterlogged tidal** conditions. **Stilt roots** and breathing roots |
+| 🌊 **Mangrove (Tidal)** | Coastal | **Sundarbans (WB)**, Mahanadi, Godavari, Krishna, Kaveri deltas | **Sundari tree**, mangrove species | Grow in **saline, waterlogged tidal** conditions. **Stilt roots** and breathing roots |
 
 > 🍂 **Why deciduous trees shed leaves — the reasoning, not the fact.** Leaves lose water through transpiration. In the dry season, water is scarce. Dropping every leaf is a **water-conservation strategy** — the tree goes dormant rather than dying of thirst. Evergreens don't need to, because their rainfall never really stops. **The forest type is the vegetation's answer to the rainfall pattern.**
 
@@ -194,7 +194,7 @@ Every winter, birds fly thousands of kilometres from Siberia and Central Asia to
 
 ## 6️⃣ 🌱 Conservation — Learn This Section Properly
 
-### ⭐ The three types of protected area — a favourite distinction
+### The three types of protected area — a favourite distinction
 
 | | **NATIONAL PARK** | **WILDLIFE SANCTUARY** | **BIOSPHERE RESERVE** |
 |---|---|---|---|
@@ -221,14 +221,14 @@ Every winter, birds fly thousands of kilometres from Siberia and Central Asia to
 
 | Park | State | Famous for |
 |---|---|---|
-| **Kaziranga** | Assam | ⭐ **One-horned rhinoceros** |
-| **Gir** | Gujarat | ⭐ **Only home of the Asiatic lion** |
-| **Jim Corbett** | Uttarakhand | ⭐ **India's first national park (1936)**; tigers |
+| **Kaziranga** | Assam | **One-horned rhinoceros** |
+| **Gir** | Gujarat | **Only home of the Asiatic lion** |
+| **Jim Corbett** | Uttarakhand | **India's first national park (1936)**; tigers |
 | **Sundarbans** | West Bengal | Royal Bengal Tiger; mangroves |
 | **Ranthambore** | Rajasthan | Tigers |
 | **Bandipur / Nagarhole** | Karnataka | Tigers, elephants |
 | **Periyar** | Kerala | Elephants |
-| **Keoladeo (Bharatpur)** | Rajasthan | ⭐ **Migratory birds** |
+| **Keoladeo (Bharatpur)** | Rajasthan | **Migratory birds** |
 | **Kanha / Bandhavgarh** | Madhya Pradesh | Tigers, barasingha |
 | **Silent Valley** | Kerala | Lion-tailed macaque; a landmark conservation campaign |
 
@@ -236,7 +236,7 @@ Every winter, birds fly thousands of kilometres from Siberia and Central Asia to
 
 | Cause | How it works |
 |---|---|
-| **Habitat loss** ⭐ | **The biggest cause by far.** Forests cleared for farms, dams, mines, roads, cities |
+| **Habitat loss** | **The biggest cause by far.** Forests cleared for farms, dams, mines, roads, cities |
 | **Habitat fragmentation** | Roads and railways cut habitat into isolated patches too small to sustain populations |
 | **Poaching** | Tiger skin and bone, rhino horn, elephant ivory, pangolin scales |
 | **Human–wildlife conflict** | As habitat shrinks, animals raid crops; retaliatory killing follows |
@@ -257,7 +257,7 @@ Be able to argue this in more than one register:
 | **Scientific** | Undiscovered species hold undiscovered medicines. A lost species is a lost, unrepeatable experiment |
 | **Cultural** | Sacred groves, animals in Indian religion and art; the Bishnoi tradition |
 | **Ethical** | Species have value beyond their usefulness to us |
-| **Constitutional** | ⭐ **Article 48A** (DPSP — the State shall protect forests and wildlife) and **Article 51A(g)** (Fundamental Duty of every citizen to protect the natural environment) |
+| **Constitutional** | **Article 48A** (DPSP — the State shall protect forests and wildlife) and **Article 51A(g)** (Fundamental Duty of every citizen to protect the natural environment) |
 
 > 🏛️ **Those two Article numbers are worth learning now** — they connect directly to your [Polity notes](../../../../Polity/00_START_HERE.md) and appear in environment answers constantly. **48A = the State's duty. 51A(g) = the citizen's duty.** Conservation is a constitutional obligation in India, not merely a policy preference.
 
@@ -269,21 +269,21 @@ Be able to argue this in more than one register:
 
 | Topic | The specific thing |
 |---|---|
-| **Monsoon mechanism** ⭐⭐⭐ | Differential heating of land and sea → pressure difference → wind reversal |
-| **Four seasons + months** ⭐⭐⭐ | Winter (Dec–Feb) · Summer (Mar–May) · SW monsoon (Jun–Sep) · Retreating (Oct–Nov) |
-| **Tamil Nadu's rain** ⭐⭐⭐ | From the **retreating / north-east** monsoon (Oct–Dec), not the SW monsoon |
-| **Five vegetation types + rainfall** ⭐⭐⭐ | >200 cm evergreen · 100–200 deciduous · <70 thorny · montane · mangrove |
-| **Most widespread forest** ⭐⭐ | **Tropical deciduous (monsoon) forest** |
-| **NP vs Sanctuary vs Biosphere Reserve** ⭐⭐⭐ | Strictest / species-focused / largest and includes people |
-| **Gir** ⭐⭐ | Only home of the **Asiatic lion** |
-| **Kaziranga** ⭐⭐ | **One-horned rhino** |
-| **Jim Corbett** ⭐⭐ | India's **first** national park (1936) |
-| **Project Tiger** ⭐⭐ | **1973** |
-| **Sundarbans** ⭐⭐ | Largest mangrove forest; **Sundari** tree; Royal Bengal Tiger |
-| **Wettest / driest** ⭐⭐ | **Mawsynram / Cherrapunji** (Meghalaya) vs **Jaisalmer** |
-| **Rain shadow** ⭐⭐ | Windward wet, leeward dry — the Western Ghats |
-| **National symbols** ⭐ | Tiger, peacock, Ganges dolphin, elephant, banyan, lotus, mango |
-| **Articles 48A & 51A(g)** ⭐⭐ | State duty / citizen duty on environment |
+| **Monsoon mechanism** ⭐ | Differential heating of land and sea → pressure difference → wind reversal |
+| **Four seasons + months** ⭐ | Winter (Dec–Feb) · Summer (Mar–May) · SW monsoon (Jun–Sep) · Retreating (Oct–Nov) |
+| **Tamil Nadu's rain** ⭐ | From the **retreating / north-east** monsoon (Oct–Dec), not the SW monsoon |
+| **Five vegetation types + rainfall** ⭐ | >200 cm evergreen · 100–200 deciduous · <70 thorny · montane · mangrove |
+| **Most widespread forest** | **Tropical deciduous (monsoon) forest** |
+| **NP vs Sanctuary vs Biosphere Reserve** ⭐ | Strictest / species-focused / largest and includes people |
+| **Gir** | Only home of the **Asiatic lion** |
+| **Kaziranga** | **One-horned rhino** |
+| **Jim Corbett** | India's **first** national park (1936) |
+| **Project Tiger** | **1973** |
+| **Sundarbans** | Largest mangrove forest; **Sundari** tree; Royal Bengal Tiger |
+| **Wettest / driest** | **Mawsynram / Cherrapunji** (Meghalaya) vs **Jaisalmer** |
+| **Rain shadow** | Windward wet, leeward dry — the Western Ghats |
+| **National symbols** | Tiger, peacock, Ganges dolphin, elephant, banyan, lotus, mango |
+| **Articles 48A & 51A(g)** | State duty / citizen duty on environment |
 
 **Trap 1:** *"Tamil Nadu gets its rain from the south-west monsoon."* **No — the retreating/north-east monsoon.**
 **Trap 2:** *"Tropical evergreen is India's most widespread forest."* **No — tropical deciduous.**
@@ -329,12 +329,12 @@ Be able to argue this in more than one register:
 ## 🔁 60-Second Recap
 
 1. **Weather = today's outfit. Climate = the wardrobe.**
-2. ⭐ **The monsoon is caused by land heating and cooling faster than the sea**, creating pressure differences that reverse the wind. **It is a giant, slow sea breeze.**
+2. **The monsoon is caused by land heating and cooling faster than the sea**, creating pressure differences that reverse the wind. **It is a giant, slow sea breeze.**
 3. **Monsoon = seasonal wind reversal**, not "rain". There is a wet SW monsoon and a dry NE one.
 4. **~75% of India's rain falls June–September.**
 5. **Four seasons:** Winter (Dec–Feb) · Summer (Mar–May, the *loo*) · SW monsoon (Jun–Sep) · Retreating (Oct–Nov).
-6. ⭐ **Tamil Nadu gets most of its rain from the retreating/NE monsoon (Oct–Dec).**
-7. ⭐ **Rain shadow:** windward Ghats ~2,500–5,000 mm; leeward interior ~600 mm. Relief controls climate.
+6. **Tamil Nadu gets most of its rain from the retreating/NE monsoon (Oct–Dec).**
+7. **Rain shadow:** windward Ghats ~2,500–5,000 mm; leeward interior ~600 mm. Relief controls climate.
 8. **Mawsynram/Cherrapunji are among the wettest places on Earth; Jaisalmer is near-desert.** Both India.
 9. **Five vegetation types by rainfall:** evergreen (>200 cm) · **deciduous (100–200 cm, most widespread)** · thorny (<70 cm) · montane · mangrove.
 10. **Vegetation form follows climate:** deciduous trees shed leaves to save water; conifers are conical to shed snow; thorny plants reduce leaves to spines.

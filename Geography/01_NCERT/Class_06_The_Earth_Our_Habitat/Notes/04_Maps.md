@@ -15,7 +15,7 @@
 | **Prelims (GS-I)** | Rarely asked directly — but **map-based questions across the whole paper assume this literacy** |
 | **Mains (GS-I)** | Indirect. Matters for reading and describing spatial patterns |
 | **Also feeds** | Every other chapter you will ever read. **This is the skill chapter** |
-| **Weightage** | ⭐⭐ as content · ⭐⭐⭐ as a **skill** |
+| **Weightage** | as content · ⭐ as a **skill** |
 | **Class 11 picks this up in** | *Practical Work in Geography* (map projections, scale, survey maps) |
 
 > 🗺️ **Read this chapter with the atlas open.** It is the only chapter in the book where the point is not to know things but to be able to *do* something. Reading it without the atlas is like reading about swimming.
@@ -97,7 +97,7 @@ Everything about map-reading reduces to these three.
 
 **Example:** a scale of **1 cm = 100 km** means every centimetre you measure represents 100 real kilometres. Measure 5.5 cm between two cities → they are 550 km apart.
 
-### ⭐ Large scale vs small scale — the counter-intuitive bit
+### Large scale vs small scale — the counter-intuitive bit
 
 This trips almost everyone up, because the naming feels backwards.
 
@@ -220,12 +220,12 @@ This chapter is a skill. Fifteen minutes, atlas open:
 
 | Topic | The specific thing |
 |---|---|
-| **Large vs small scale** ⭐⭐ | **Large scale = small area + more detail.** The counter-intuitive one |
-| **Three components** ⭐⭐ | Distance (scale), direction, symbols |
-| **Sketch vs plan** ⭐⭐ | Sketch = not to scale · Plan = large-scale, small area, detailed |
-| **Map types** ⭐ | Physical / political / thematic |
-| **Cardinal + intermediate directions** ⭐ | N, S, E, W + NE, SE, SW, NW |
-| **Conventional symbols** ⭐ | Standardised, language-independent |
+| **Large vs small scale** | **Large scale = small area + more detail.** The counter-intuitive one |
+| **Three components** | Distance (scale), direction, symbols |
+| **Sketch vs plan** | Sketch = not to scale · Plan = large-scale, small area, detailed |
+| **Map types** | Physical / political / thematic |
+| **Cardinal + intermediate directions** | N, S, E, W + NE, SE, SW, NW |
+| **Conventional symbols** | Standardised, language-independent |
 
 **Trap 1:** *"A large-scale map covers a large area."* **The reverse.** Large scale = **small** area, more detail.
 **Trap 2:** *"A sketch is drawn to scale."* No — that's a **plan**.
@@ -268,7 +268,7 @@ This chapter is a skill. Fifteen minutes, atlas open:
 1. **A curved Earth cannot be flattened without distortion** — every map trades away shape, area, distance or direction.
 2. **Greenland looks Africa-sized on common projections; Africa is ~14× bigger.** Distortion is a design choice, not an error.
 3. **Three components of a map:** distance (scale), direction, symbols.
-4. ⭐ **Large scale = small area, more detail. Small scale = large area, less detail.** Think camera zoom: **zoomed in = large scale.**
+4. **Large scale = small area, more detail. Small scale = large area, less detail.** Think camera zoom: **zoomed in = large scale.**
 5. **Four cardinal (N, S, E, W) + four intermediate (NE, SE, SW, NW) directions.**
 6. **A compass needle aligns north–south** because the Earth is a magnet. **Magnetic north ≠ true north** (magnetic declination).
 7. **North is at the top by convention** — but check the north arrow.

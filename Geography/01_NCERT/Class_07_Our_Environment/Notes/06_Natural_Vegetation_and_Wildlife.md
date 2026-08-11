@@ -12,10 +12,10 @@
 |---|---|
 | **Subject** | Geography → **Biogeography** |
 | **Merged with** | 🌱🌱🌱 **Environment — the densest environment chapter in the whole NCERT series.** This *is* the biomes chapter |
-| **Prelims (GS-I)** | ⭐⭐⭐ Vegetation types, where each occurs, characteristic trees and animals, grassland names by region |
+| **Prelims (GS-I)** | ⭐ Vegetation types, where each occurs, characteristic trees and animals, grassland names by region |
 | **Mains (GS-I)** | World physical geography; natural vegetation belts |
 | **Mains (GS-III)** | 🌱 Biodiversity, deforestation, conservation |
-| **Weightage** | ⭐⭐⭐ |
+| **Weightage** | ⭐ |
 | **Later** | **Cl.12 Biology ch.15–16** and **Shankar IAS** develop this considerably |
 
 ---
@@ -23,8 +23,8 @@
 ## 🎯 Learning Outcomes
 
 - [ ] **Explain** why vegetation forms latitudinal belts.
-- [ ] ⭐ **Name and describe** the six forest types with their locations, trees and animals.
-- [ ] ⭐ **Name** the world's grasslands **by region** — the highest-frequency Prelims item here.
+- [ ] **Name and describe** the six forest types with their locations, trees and animals.
+- [ ] **Name** the world's grasslands **by region** — the highest-frequency Prelims item here.
 - [ ] **Describe** thorny scrub and tundra vegetation.
 - [ ] **Explain** how vegetation changes with **altitude** as well as latitude.
 - [ ] 🌱 **Explain** causes of deforestation and habitat loss, and conservation responses.
@@ -52,20 +52,20 @@
 
 ---
 
-## 1️⃣ ⭐ Forests
+## 1️⃣ Forests
 
 ### The master table
 
 | Type | Where | Rainfall/Climate | Trees | Animals |
 |---|---|---|---|---|
 | 🌴 **TROPICAL EVERGREEN (Rainforest)** | Near the **equator** — Amazon, Congo, SE Asia, Western Ghats | Hot, **>200 cm**, rain all year | **Rosewood, ebony, mahogany**; dense, multi-layered canopy | Monkeys, apes, sloths, jaguars, elephants, snakes, birds |
-| 🌳 **TROPICAL DECIDUOUS (Monsoon)** | India, N. Australia, C. America | **100–200 cm**, marked dry season | ⭐ **Sal, teak, neem, shisham** | **Tiger, elephant, lion, deer, monkeys** |
+| 🌳 **TROPICAL DECIDUOUS (Monsoon)** | India, N. Australia, C. America | **100–200 cm**, marked dry season | **Sal, teak, neem, shisham** | **Tiger, elephant, lion, deer, monkeys** |
 | 🌾 **TEMPERATE EVERGREEN** | Mid-latitude **east coasts** — SE USA, SE China, SE Brazil | Moderate rain all year | Oak, pine, eucalyptus | — |
 | 🍂 **TEMPERATE DECIDUOUS** | NE USA, China, NZ, Europe | Cold winters, moderate rain | **Oak, ash, beech** | Deer, fox, wolves, bears |
-| 🫒 **MEDITERRANEAN** | ⭐ Around the Mediterranean, plus **California, SW Africa, SW Australia, central Chile** | **Hot dry summers, mild wet winters** | ⭐ **Citrus — oranges, figs, olives, grapes** | — |
-| 🌲 **CONIFEROUS (TAIGA)** | High northern latitudes — **Siberia, Canada, Scandinavia** | Very cold | ⭐ **Chir, pine, cedar** — softwood, needle leaves, conical | Silver fox, mink, polar bear |
+| 🫒 **MEDITERRANEAN** | Around the Mediterranean, plus **California, SW Africa, SW Australia, central Chile** | **Hot dry summers, mild wet winters** | **Citrus — oranges, figs, olives, grapes** | — |
+| 🌲 **CONIFEROUS (TAIGA)** | High northern latitudes — **Siberia, Canada, Scandinavia** | Very cold | **Chir, pine, cedar** — softwood, needle leaves, conical | Silver fox, mink, polar bear |
 
-> ⭐ **The Mediterranean type is a favourite Prelims item** for a specific reason: it occurs in **five widely separated places** on the west coasts of continents around 30–40° latitude — the Mediterranean basin, California, central Chile, South Africa's Cape, and south-west Australia. **Same climate, same vegetation, five different continents.** And it is the world's orchard: citrus, olives, grapes, figs. **"Mediterranean = citrus fruits" is the association to lock in.**
+> **The Mediterranean type is a favourite Prelims item** for a specific reason: it occurs in **five widely separated places** on the west coasts of continents around 30–40° latitude — the Mediterranean basin, California, central Chile, South Africa's Cape, and south-west Australia. **Same climate, same vegetation, five different continents.** And it is the world's orchard: citrus, olives, grapes, figs. **"Mediterranean = citrus fruits" is the association to lock in.**
 
 > 🌲 **Why taiga trees are softwood and conical** — the mechanism, so you don't have to memorise it:
 > - **Conical shape + sloping branches** → snow slides off instead of accumulating and snapping them
@@ -80,7 +80,7 @@
 
 ---
 
-## 2️⃣ ⭐ Grasslands — The Highest-Frequency Prelims Item
+## 2️⃣ Grasslands — The Highest-Frequency Prelims Item
 
 Grasslands occur where there is **too little rain for forest, too much for desert.**
 
@@ -88,9 +88,9 @@ Grasslands occur where there is **too little rain for forest, too much for deser
 
 | Name | Region |
 |---|---|
-| ⭐ **Savanna** | **Africa** |
-| ⭐ **Campos** | **Brazil** |
-| ⭐ **Llanos** | **Venezuela** |
+| **Savanna** | **Africa** |
+| **Campos** | **Brazil** |
+| **Llanos** | **Venezuela** |
 
 **Character:** tall grass (up to 3–4 m), scattered trees, hot climate. **Animals:** elephant, zebra, giraffe, deer, leopard — Africa's great herds.
 
@@ -98,11 +98,11 @@ Grasslands occur where there is **too little rain for forest, too much for deser
 
 | Name | Region |
 |---|---|
-| ⭐ **Prairie** | **North America** |
-| ⭐ **Pampas** | **Argentina** |
-| ⭐ **Steppe** | **Central Asia / Russia** |
-| ⭐ **Veld** | **South Africa** |
-| ⭐ **Downs** | **Australia** |
+| **Prairie** | **North America** |
+| **Pampas** | **Argentina** |
+| **Steppe** | **Central Asia / Russia** |
+| **Veld** | **South Africa** |
+| **Downs** | **Australia** |
 
 **Character:** shorter grass, very few trees. **Animals:** wild buffalo, bison, antelope.
 
@@ -123,7 +123,7 @@ Grasslands occur where there is **too little rain for forest, too much for deser
 |---|---|---|
 | **Where** | Dry desert regions — Sahara, Thar, Arabia | **Polar regions** — northern Canada, Siberia, Greenland |
 | **Climate** | Very low rainfall, extreme temperatures | Extremely cold; ground frozen (**permafrost**) |
-| **Vegetation** | Cactus, acacia, date palm; **leaves reduced to spines**, long roots, thick stems | ⭐ **Mosses, lichens, sedges** — **no trees** |
+| **Vegetation** | Cactus, acacia, date palm; **leaves reduced to spines**, long roots, thick stems | **Mosses, lichens, sedges** — **no trees** |
 | **Animals** | Camel, desert fox, snakes, lizards | **Polar bear, reindeer, seal, walrus, musk ox, arctic fox** |
 
 > 🌵 **Every desert-plant feature is a water strategy:** spines instead of leaves (minimal surface for evaporation, plus defence against grazing), thick waxy stems (water storage), very long or very wide root systems (reaching deep water or catching brief rain over a large area).
@@ -140,7 +140,7 @@ Grasslands occur where there is **too little rain for forest, too much for deser
 
 | Cause | Mechanism |
 |---|---|
-| ⭐ **Deforestation** | Clearing for agriculture, settlement, industry, mining, roads |
+| **Deforestation** | Clearing for agriculture, settlement, industry, mining, roads |
 | **Habitat fragmentation** | Roads and railways cut habitat into patches too small to sustain populations |
 | **Poaching** | Ivory, horn, skin, bone, pangolin scales |
 | **Forest fires** | Natural and human-caused |
@@ -155,7 +155,7 @@ Grasslands occur where there is **too little rain for forest, too much for deser
 | **Protected areas** | National parks, wildlife sanctuaries, biosphere reserves (Cl.6 Ch.8) |
 | **Species projects** | Project Tiger (1973), Project Elephant (1992) |
 | **Afforestation** | Planting new forest; social forestry |
-| **Legal protection** | ⭐ **Wildlife Protection Act 1972**, **Forest Conservation Act 1980** |
+| **Legal protection** | **Wildlife Protection Act 1972**, **Forest Conservation Act 1980** |
 | **International** | **CITES** (trade in endangered species), **Ramsar** (wetlands), **CBD** (biodiversity) |
 | **Awareness** | **Vanamahotsav**, community conservation, sacred groves |
 
@@ -167,15 +167,15 @@ Grasslands occur where there is **too little rain for forest, too much for deser
 
 | Topic | The specific thing |
 |---|---|
-| **Grassland names by region** ⭐⭐⭐ | Savanna(Africa) · Campos(Brazil) · Llanos(Venezuela) · Prairie(N.America) · Pampas(Argentina) · Steppe(C.Asia) · Veld(S.Africa) · Downs(Australia) |
-| **Mediterranean = citrus** ⭐⭐⭐ | Hot dry summers, mild wet winters; 5 world regions |
-| **Taiga / coniferous** ⭐⭐⭐ | Siberia, Canada, Scandinavia; softwood; **world's largest land biome** |
-| **Rainforest trees** ⭐⭐ | Rosewood, ebony, mahogany |
-| **Monsoon forest trees** ⭐⭐ | **Sal, teak, neem, shisham** |
-| **Tundra** ⭐⭐ | Mosses and lichens, **no trees**, permafrost |
-| **Vegetation follows latitude** ⭐⭐ | And repeats vertically with altitude |
-| 🌱 **Rainforest soil is poor** ⭐⭐ | Nutrients are in the vegetation, not the soil |
-| 🌱 **WPA 1972 / FCA 1980** ⭐⭐ | The two core Indian conservation statutes |
+| **Grassland names by region** ⭐ | Savanna(Africa) · Campos(Brazil) · Llanos(Venezuela) · Prairie(N.America) · Pampas(Argentina) · Steppe(C.Asia) · Veld(S.Africa) · Downs(Australia) |
+| **Mediterranean = citrus** ⭐ | Hot dry summers, mild wet winters; 5 world regions |
+| **Taiga / coniferous** ⭐ | Siberia, Canada, Scandinavia; softwood; **world's largest land biome** |
+| **Rainforest trees** | Rosewood, ebony, mahogany |
+| **Monsoon forest trees** | **Sal, teak, neem, shisham** |
+| **Tundra** | Mosses and lichens, **no trees**, permafrost |
+| **Vegetation follows latitude** | And repeats vertically with altitude |
+| 🌱 **Rainforest soil is poor** | Nutrients are in the vegetation, not the soil |
+| 🌱 **WPA 1972 / FCA 1980** | The two core Indian conservation statutes |
 
 **Trap 1:** *"Pampas is in North America."* **No — Argentina.** **Prairie** is North America.
 **Trap 2:** *"Veld is in Australia."* **No — South Africa.** **Downs** is Australia.
@@ -208,13 +208,13 @@ Grasslands occur where there is **too little rain for forest, too much for deser
 
 ## 🔁 60-Second Recap
 
-1. ⭐ **Vegetation forms belts because latitude sets temperature and rainfall.** The same sequence repeats vertically with altitude.
+1. **Vegetation forms belts because latitude sets temperature and rainfall.** The same sequence repeats vertically with altitude.
 2. **Six forest types:** tropical evergreen · tropical deciduous · temperate evergreen · temperate deciduous · Mediterranean · coniferous.
-3. ⭐ **Mediterranean = citrus**, hot dry summers, and occurs in **five** separate world regions.
-4. ⭐ **Taiga (coniferous) is the world's largest land biome** — Siberia, Canada, Scandinavia. Conical shape sheds snow; needles cut water loss.
+3. **Mediterranean = citrus**, hot dry summers, and occurs in **five** separate world regions.
+4. **Taiga (coniferous) is the world's largest land biome** — Siberia, Canada, Scandinavia. Conical shape sheds snow; needles cut water loss.
 5. 🌱 **Rainforest soil is poor** — nutrients live in the vegetation. Clear it and it exhausts in a few years.
-6. ⭐ **Tropical grasslands:** Savanna (Africa), Campos (Brazil), Llanos (Venezuela).
-7. ⭐ **Temperate grasslands:** Prairie (N. America), Pampas (Argentina), Steppe (C. Asia), Veld (S. Africa), Downs (Australia).
+6. **Tropical grasslands:** Savanna (Africa), Campos (Brazil), Llanos (Venezuela).
+7. **Temperate grasslands:** Prairie (N. America), Pampas (Argentina), Steppe (C. Asia), Veld (S. Africa), Downs (Australia).
 8. 🌾 **Temperate grasslands became the world's breadbaskets** — and are arguably the most completely destroyed biome, because ploughed land doesn't look like destruction.
 9. **Thorny scrub:** spines, thick stems, long roots — every feature a water strategy.
 10. ❄️ **Tundra has no trees because of permafrost**, not merely cold. Thawing permafrost releases **methane** — a positive feedback loop.

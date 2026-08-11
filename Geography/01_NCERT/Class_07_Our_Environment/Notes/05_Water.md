@@ -12,10 +12,10 @@
 |---|---|
 | **Subject** | Geography → **Physical Geography** → **Oceanography** |
 | **Merged with** | 🌱 **Environment** → water scarcity, ocean warming, **tsunami** as disaster management |
-| **Prelims (GS-I)** | ⭐⭐⭐ Tides (spring/neap), ocean currents (warm/cold), water distribution, tsunami |
+| **Prelims (GS-I)** | ⭐ Tides (spring/neap), ocean currents (warm/cold), water distribution, tsunami |
 | **Mains (GS-I)** | Ocean currents and their effect on climate and fishing |
 | **Mains (GS-III)** | 🌱 Water security, disaster management |
-| **Weightage** | ⭐⭐⭐ |
+| **Weightage** | ⭐ |
 | **Later** | Cl.11 *Fundamentals* — ocean circulation, salinity, temperature |
 
 ---
@@ -24,8 +24,8 @@
 
 - [ ] **State** the 97/3 water distribution and its consequence.
 - [ ] **Describe** the water cycle.
-- [ ] ⭐ **Distinguish** waves, tides and currents by cause.
-- [ ] ⭐ **Distinguish** spring tides from neap tides, with the Moon–Sun geometry.
+- [ ] **Distinguish** waves, tides and currents by cause.
+- [ ] **Distinguish** spring tides from neap tides, with the Moon–Sun geometry.
 - [ ] **Explain** warm and cold currents and their effects on climate and fishing.
 - [ ] 🌱 **Explain** what a tsunami is and why it is not a tidal wave.
 
@@ -67,11 +67,11 @@
 
 ---
 
-## 3️⃣ ⭐ The Three Ocean Movements — Keep These Separate
+## 3️⃣ The Three Ocean Movements — Keep These Separate
 
 | | 🌊 **WAVES** | 🌕 **TIDES** | 🔄 **CURRENTS** |
 |---|---|---|---|
-| **Caused by** | **WIND** blowing over the surface | ⭐ **Gravitational pull of the MOON** (and Sun) | Differences in **temperature and salinity**, plus prevailing winds |
+| **Caused by** | **WIND** blowing over the surface | **Gravitational pull of the MOON** (and Sun) | Differences in **temperature and salinity**, plus prevailing winds |
 | **Scale** | Surface, local | Whole ocean, coastal effect | Vast, continuous, ocean-wide |
 | **Timing** | Continuous, irregular | **Twice daily**, predictable | Constant, flowing year-round |
 | **Motion** | Up-and-down of water | Rise and fall of sea level | **Horizontal flow** — like a river in the sea |
@@ -86,12 +86,12 @@
 
 **High tide** = water rises and covers more shore. **Low tide** = water falls and exposes more shore.
 
-### ⭐ Spring tides vs neap tides
+### Spring tides vs neap tides
 
 | | 🌊 **SPRING TIDE** | 🌙 **NEAP TIDE** |
 |---|---|---|
 | **When** | **Full moon** and **new moon** | **First and third quarter** moon |
-| **Geometry** | ⭐ Sun, Moon and Earth in a **STRAIGHT LINE** | ⭐ Sun and Moon at **RIGHT ANGLES** to Earth |
+| **Geometry** | Sun, Moon and Earth in a **STRAIGHT LINE** | Sun and Moon at **RIGHT ANGLES** to Earth |
 | **Pulls** | **Combine** — reinforce each other | **Oppose** — partially cancel |
 | **Result** | **HIGHEST high tides, lowest lows** | **Lowest high tides** — smallest range |
 
@@ -124,7 +124,7 @@
 |---|---|---|
 | **From** | Equatorial regions → toward the poles | Polar regions → toward the equator |
 | **Effect on coasts** | **Warms** them | **Cools** them |
-| **Examples** | ⭐ **Gulf Stream**, North Atlantic Drift, Kuroshio | ⭐ **Labrador Current**, Humboldt (Peru) Current, Benguela |
+| **Examples** | **Gulf Stream**, North Atlantic Drift, Kuroshio | **Labrador Current**, Humboldt (Peru) Current, Benguela |
 
 ### Why currents matter — three real consequences
 
@@ -151,11 +151,11 @@ Currents move enormous quantities of warmth from the tropics toward the poles �
 | | **Ordinary wave** | **Tsunami** |
 |---|---|---|
 | **Caused by** | Wind | **Seabed displacement** (earthquake) |
-| **Depth affected** | Surface only | ⭐ **The entire water column** |
+| **Depth affected** | Surface only | **The entire water column** |
 | **Wavelength** | Short | Extremely long (100+ km) |
-| **Speed in deep ocean** | Slow | ⭐ **~800 km/hr** — as fast as a jet |
-| **Height in deep ocean** | Visible | ⭐ **Often under 1 m — barely noticeable** |
-| **On reaching shallow water** | — | ⭐ **Slows, and height builds enormously** |
+| **Speed in deep ocean** | Slow | **~800 km/hr** — as fast as a jet |
+| **Height in deep ocean** | Visible | **Often under 1 m — barely noticeable** |
+| **On reaching shallow water** | — | **Slows, and height builds enormously** |
 
 > ⚠️ **"Tidal wave" is a wrong and misleading name.** A tsunami has **nothing to do with tides** — tides are lunar, tsunamis are seismic. The word *tsunami* is Japanese for "harbour wave," which is more accurate: it is barely detectable in the open sea and devastating at the coast.
 
@@ -165,7 +165,7 @@ Currents move enormous quantities of warmth from the tropics toward the poles �
 
 > 🌱 **Two lessons that regularly appear in GS-III:**
 > 1. **India had no tsunami warning system in 2004.** It now does — the **Indian Tsunami Early Warning Centre (ITEWC)** at INCOIS, Hyderabad, operational since 2007.
-> 2. ⭐ **Coasts with intact mangroves and coral reefs suffered measurably less damage** than cleared stretches nearby. **Natural barriers work.** This is the strongest available argument for mangrove conservation, and it links straight back to Cl.6 Ch.8.
+> 2. **Coasts with intact mangroves and coral reefs suffered measurably less damage** than cleared stretches nearby. **Natural barriers work.** This is the strongest available argument for mangrove conservation, and it links straight back to Cl.6 Ch.8.
 
 ---
 
@@ -173,16 +173,16 @@ Currents move enormous quantities of warmth from the tropics toward the poles �
 
 | Topic | The specific thing |
 |---|---|
-| **Waves / tides / currents** ⭐⭐⭐ | **Wind / Moon / temperature** — keep the causes separate |
-| **Spring vs neap tide** ⭐⭐⭐ | Straight line (highest range) vs right angles (lowest range) |
-| **Spring tide timing** ⭐⭐⭐ | **Full moon and new moon** — twice a month, not seasonal |
-| **Warm vs cold currents** ⭐⭐⭐ | Gulf Stream (warm) · Labrador, Humboldt (cold) |
-| **Fishing grounds** ⭐⭐⭐ | Where **warm and cold currents meet** — Grand Banks, Japan coast |
-| **North Atlantic Drift** ⭐⭐ | Why NW Europe is far milder than its latitude |
-| **Tsunami ≠ tidal wave** ⭐⭐⭐ | Seismic, not lunar. ~800 km/hr, low in deep water |
-| **2004 tsunami** ⭐⭐ | 26 Dec 2004; ITEWC established at INCOIS Hyderabad |
-| **Mangroves reduced tsunami damage** ⭐⭐ | The conservation argument |
-| **Water distribution** ⭐⭐ | 97% salt / 3% fresh; under 1% usable |
+| **Waves / tides / currents** ⭐ | **Wind / Moon / temperature** — keep the causes separate |
+| **Spring vs neap tide** ⭐ | Straight line (highest range) vs right angles (lowest range) |
+| **Spring tide timing** ⭐ | **Full moon and new moon** — twice a month, not seasonal |
+| **Warm vs cold currents** ⭐ | Gulf Stream (warm) · Labrador, Humboldt (cold) |
+| **Fishing grounds** ⭐ | Where **warm and cold currents meet** — Grand Banks, Japan coast |
+| **North Atlantic Drift** | Why NW Europe is far milder than its latitude |
+| **Tsunami ≠ tidal wave** ⭐ | Seismic, not lunar. ~800 km/hr, low in deep water |
+| **2004 tsunami** | 26 Dec 2004; ITEWC established at INCOIS Hyderabad |
+| **Mangroves reduced tsunami damage** | The conservation argument |
+| **Water distribution** | 97% salt / 3% fresh; under 1% usable |
 
 **Trap 1:** *"Spring tides occur in the spring season."* **No** — at full and new moon, twice every month, all year.
 **Trap 2:** *"Tsunamis are caused by tides or by strong winds."* **No — by seabed displacement**, usually an undersea earthquake.
@@ -217,12 +217,12 @@ Currents move enormous quantities of warmth from the tropics toward the poles �
 
 1. **97% salt, 3% fresh — and under 1% readily usable.**
 2. **The water cycle moves a fixed total.** We don't consume water; we degrade and relocate it.
-3. ⭐ **Waves = wind. Tides = Moon. Currents = temperature.** Never mix these three.
-4. ⭐ **Spring tide:** Sun–Moon–Earth **aligned** (full/new moon) → **greatest** range. **Neap tide:** **right angles** (quarter moons) → **least** range.
+3. **Waves = wind. Tides = Moon. Currents = temperature.** Never mix these three.
+4. **Spring tide:** Sun–Moon–Earth **aligned** (full/new moon) → **greatest** range. **Neap tide:** **right angles** (quarter moons) → **least** range.
 5. **"Spring tide" is not seasonal** — it happens twice a month, year-round.
 6. **Warm currents** (Gulf Stream) **warm** coasts; **cold currents** (Labrador, Humboldt) **cool** them.
-7. ⭐ **The North Atlantic Drift is why London is mild and Newfoundland freezes at the same latitude.**
-8. ⭐ **Best fishing grounds are where warm and cold currents meet** — nutrient upwelling feeds plankton. Also produces dense fog.
+7. **The North Atlantic Drift is why London is mild and Newfoundland freezes at the same latitude.**
+8. **Best fishing grounds are where warm and cold currents meet** — nutrient upwelling feeds plankton. Also produces dense fog.
 9. 🌱 **A tsunami is seismic, not tidal.** ~800 km/hr, under 1 m high in deep ocean, builds enormously in shallow water.
 10. 🌱 **2004 Indian Ocean tsunami → India built the ITEWC (2007).** **Intact mangroves measurably reduced damage** — the conservation argument.
 

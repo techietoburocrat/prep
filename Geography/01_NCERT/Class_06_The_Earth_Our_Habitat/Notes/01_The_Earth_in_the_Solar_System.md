@@ -15,7 +15,7 @@
 | **Prelims (GS-I)** | *Indian and World Geography — Physical.* Solar system facts, planet order/properties, Moon, asteroids vs meteors vs comets |
 | **Mains (GS-I)** | Weak directly. Feeds "salient features of world's physical geography" as background |
 | **Also feeds** | **Science & Technology** (space missions — Chandrayaan, Mangalyaan, Aditya-L1 all assume this vocabulary), **Current Affairs** (ISRO launches) |
-| **Weightage** | ⭐⭐ — 0–1 Prelims Qs directly, but the vocabulary is load-bearing for everything after |
+| **Weightage** | — 0–1 Prelims Qs directly, but the vocabulary is load-bearing for everything after |
 | **Class 11 picks this up in** | *Fundamentals of Physical Geography* Ch.1–2 (origin of the Earth, interior) |
 
 > 🧭 **Don't over-invest.** UPSC is a geography exam, not an astronomy exam. Learn the vocabulary, the planet order, the Moon facts, and the habitability logic. Skip the rest.
@@ -306,14 +306,14 @@ This is where geography and environment become the same subject. Earth supports 
 | **Distance** | ~**3,84,400 km** |
 | **Time to orbit Earth** | ~**27 days** |
 | **Time to rotate once** | ~**27 days** — *the same* |
-| **Consequence** | ⭐ **We only ever see one side of the Moon** |
+| **Consequence** | **We only ever see one side of the Moon** |
 | **Atmosphere** | **None** |
 | **Water** | None liquid (ice traces at the poles — a Chandrayaan finding) |
 | **Surface** | Craters, mountains, plains. Extreme temperature swings |
 | **Gravity** | ~1/6th of Earth's |
 | **First human landing** | **Neil Armstrong, 21 July 1969** (Apollo 11) |
 
-**⭐ Why one side always faces us** — a favourite question, and genuinely elegant:
+** Why one side always faces us** — a favourite question, and genuinely elegant:
 
 The Moon takes the **same time to spin once as it takes to go around Earth once** (~27 days). This is called **tidal locking**.
 
@@ -340,17 +340,17 @@ The Moon takes the **same time to spin once as it takes to go around Earth once*
 
 | Topic | The specific thing |
 |---|---|
-| **Venus is the hottest planet** ⭐⭐⭐ | Not Mercury. Because of its thick CO₂ atmosphere |
-| **Meteoroid / meteor / meteorite** ⭐⭐ | -oid in space · -or burning · -ite landed |
-| **Comet tail direction** ⭐⭐ | Always points **away from the Sun** |
-| **Why one side of the Moon faces us** ⭐⭐ | Rotation period = revolution period (~27 days) |
-| **Asteroid belt** ⭐ | Between **Mars and Jupiter** |
-| **Pluto's demotion** ⭐ | Failed the "cleared its orbit" criterion, 2006 |
-| **Light year** ⭐ | A unit of **distance**, not time. ~9.46 trillion km |
-| **Saptarishi / Pole Star** ⭐ | Ursa Major; Pole Star sits above the North Pole |
-| **Inner vs outer planets** ⭐ | Rocky/small/few moons vs gaseous/huge/many moons + rings |
-| **Earth = 71% water** ⭐ | Hence "Blue Planet" |
-| 🌱 **Greenhouse effect** ⭐⭐⭐ | **Natural and essential.** The problem is its *enhancement* |
+| **Venus is the hottest planet** ⭐ | Not Mercury. Because of its thick CO₂ atmosphere |
+| **Meteoroid / meteor / meteorite** | -oid in space · -or burning · -ite landed |
+| **Comet tail direction** | Always points **away from the Sun** |
+| **Why one side of the Moon faces us** | Rotation period = revolution period (~27 days) |
+| **Asteroid belt** | Between **Mars and Jupiter** |
+| **Pluto's demotion** | Failed the "cleared its orbit" criterion, 2006 |
+| **Light year** | A unit of **distance**, not time. ~9.46 trillion km |
+| **Saptarishi / Pole Star** | Ursa Major; Pole Star sits above the North Pole |
+| **Inner vs outer planets** | Rocky/small/few moons vs gaseous/huge/many moons + rings |
+| **Earth = 71% water** | Hence "Blue Planet" |
+| 🌱 **Greenhouse effect** ⭐ | **Natural and essential.** The problem is its *enhancement* |
 
 **Trap 1:** *"Mercury is closest, so it's hottest."* **No — Venus.** Atmosphere beats distance.
 **Trap 2:** *"A light year measures time."* **No — distance.** The word "year" is doing misleading work.
@@ -404,7 +404,7 @@ Almost never directly. Deploy it as:
 4. **A light year is a distance** (~9.46 trillion km), not a time. Starlight shows you the past.
 5. **Order:** Mercury, Venus, Earth, Mars, [asteroid belt], Jupiter, Saturn, Uranus, Neptune.
 6. **Inner four:** small, rocky, few moons. **Outer four:** huge, gaseous, many moons, all with rings.
-7. ⭐ **Venus is the hottest planet**, not Mercury — thick CO₂ atmosphere.
+7. **Venus is the hottest planet**, not Mercury — thick CO₂ atmosphere.
 8. **-oid** in space, **-or** burning in the sky, **-ite** on the ground.
 9. **Comet tails always point away from the Sun.** Halley's returns ~every 76 years.
 10. **Pluto was demoted in 2006** for failing to clear its orbital neighbourhood.
@@ -422,7 +422,7 @@ Almost never directly. Deploy it as:
    1. Mercury is the hottest planet in the solar system.
    2. Venus rotates in a direction opposite to most planets.
    3. Saturn is less dense than water.
-   Which are correct? → *2 and 3 only. Venus is the hottest, not Mercury.*
+Which are correct? → *2 and 3 only. Venus is the hottest, not Mercury.*
 
 2. The tail of a comet:
    (a) trails behind its direction of motion (b) always points away from the Sun (c) always points towards the Sun (d) points towards Earth

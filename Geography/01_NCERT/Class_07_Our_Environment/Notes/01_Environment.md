@@ -14,7 +14,7 @@
 | **Merged with** | 🌱🌱🌱 **Environment** — this chapter *is* environment |
 | **Prelims (GS-I)** | Ecosystem definition, components of environment, biotic/abiotic |
 | **Mains (GS-III)** | Foundational framing for every environment answer |
-| **Weightage** | ⭐⭐ as content · ⭐⭐⭐ as **framing** |
+| **Weightage** | as content · ⭐ as **framing** |
 | **Later** | Cl.12 Biology ch.13–16 · Shankar IAS ch.1 |
 
 ---
@@ -129,10 +129,10 @@ Humans have always modified the environment. What changed is **scale and speed.*
 
 | Topic | The specific thing |
 |---|---|
-| **Three environments** ⭐⭐ | Natural · human · human-made |
-| **Biotic vs abiotic** ⭐⭐ | Living vs non-living |
-| **Ecosystem definition** ⭐⭐⭐ | Living **+** non-living **+ their interaction** |
-| **Four domains** ⭐⭐ | Litho, atmo, hydro, bio |
+| **Three environments** | Natural · human · human-made |
+| **Biotic vs abiotic** | Living vs non-living |
+| **Ecosystem definition** ⭐ | Living **+** non-living **+ their interaction** |
+| **Four domains** | Litho, atmo, hydro, bio |
 
 **Trap:** *"An ecosystem is the community of living organisms in an area."* **Incomplete** — the non-living environment and the interaction are part of the definition. (A "community" is only the living part.)
 
@@ -159,7 +159,7 @@ Humans have always modified the environment. What changed is **scale and speed.*
 
 1. **Three environments: natural, human, human-made.**
 2. **Biotic = living, abiotic = non-living.** Both together form the environment.
-3. ⭐ **An ecosystem is living + non-living + their interaction** — all three parts of the definition matter.
+3. **An ecosystem is living + non-living + their interaction** — all three parts of the definition matter.
 4. **The four domains** (litho, atmo, hydro, bio) each get a chapter in this book.
 5. 🌱 **The environmental problem is one of scale and speed**, not of use as such — humans now modify the planet faster than it can adjust.
 

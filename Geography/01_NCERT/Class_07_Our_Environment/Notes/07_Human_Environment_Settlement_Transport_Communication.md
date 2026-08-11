@@ -13,9 +13,9 @@
 | **Subject** | Geography → **Human Geography** → Settlement & transport geography |
 | **Merged with** | 🌱 **Environment** → urbanisation pressure, transport emissions |
 | **Prelims (GS-I)** | Settlement types, transport modes, National Highways, canals (Suez, Panama) |
-| **Mains (GS-I)** | ⭐ "Factors responsible for the location of industries"; urbanisation, settlement patterns |
+| **Mains (GS-I)** | "Factors responsible for the location of industries"; urbanisation, settlement patterns |
 | **Mains (GS-III)** | Infrastructure — roads, ports, railways, airports (a syllabus line) |
-| **Weightage** | ⭐⭐ |
+| **Weightage** | |
 | **Later** | **Cl.12 *Fundamentals of Human Geography*** develops this entire chapter |
 
 ---
@@ -25,7 +25,7 @@
 - [ ] **Distinguish** temporary from permanent settlements.
 - [ ] **Distinguish** rural from urban settlements.
 - [ ] **Distinguish** compact from scattered settlements, and explain what causes each.
-- [ ] ⭐ **List** the factors determining where settlements grow.
+- [ ] **List** the factors determining where settlements grow.
 - [ ] **Compare** the four modes of transport on cost, speed and suitability.
 - [ ] **Name** the major canals and their significance.
 - [ ] **Distinguish** mass communication from personal communication.
@@ -63,7 +63,7 @@
 | **Houses** | Local materials — mud, thatch, stone, bamboo | Concrete, brick, multi-storey |
 | **Services** | Limited | Extensive |
 
-### ⭐ Compact vs scattered — and what causes the difference
+### Compact vs scattered — and what causes the difference
 
 | | **COMPACT (Nucleated)** | **SCATTERED (Dispersed)** |
 |---|---|---|
@@ -73,11 +73,11 @@
 
 > 🔑 **The pattern is a *response* to the land, not a cultural preference.** Where flat fertile land and a single water source exist, it makes sense to cluster and farm outward. Where usable land comes in isolated pockets — a terrace here, a clearing there — houses spread out to sit near their own patch. **You can read the terrain from the settlement pattern on a map.**
 
-### ⭐ Why settlements grow where they do
+### Why settlements grow where they do
 
 | Factor | Why |
 |---|---|
-| ⭐ **Water** | The single most important. Nearly every ancient city sits on a river |
+| **Water** | The single most important. Nearly every ancient city sits on a river |
 | **Flat land** | Easy to build on, farm, and cross |
 | **Fertile soil** | Food supply |
 | **Favourable climate** | Neither extreme heat nor extreme cold |
@@ -97,16 +97,16 @@
 
 | | 🛣️ **ROADWAYS** | 🚂 **RAILWAYS** | 🚢 **WATERWAYS** | ✈️ **AIRWAYS** |
 |---|---|---|---|---|
-| **Best for** | Short distances, door-to-door | Bulk goods, long distances over land | ⭐ **Heavy, bulky goods over long distances** | Urgent, high-value, light goods |
-| **Cost** | Moderate | Lower per tonne | ⭐ **Cheapest** | ⭐ **Most expensive** |
-| **Speed** | Moderate | Fast | ⭐ **Slowest** | ⭐ **Fastest** |
-| **Reach** | ⭐ **Most flexible** — reaches everywhere | Fixed routes | Only where water goes | Airports only |
+| **Best for** | Short distances, door-to-door | Bulk goods, long distances over land | **Heavy, bulky goods over long distances** | Urgent, high-value, light goods |
+| **Cost** | Moderate | Lower per tonne | **Cheapest** | **Most expensive** |
+| **Speed** | Moderate | Fast | **Slowest** | **Fastest** |
+| **Reach** | **Most flexible** — reaches everywhere | Fixed routes | Only where water goes | Airports only |
 
-**Roads:** metalled (pucca) and unmetalled (kutcha). India has one of the world's largest road networks. **National Highways** connect major cities; ⭐ the **Golden Quadrilateral** links Delhi–Mumbai–Chennai–Kolkata.
+**Roads:** metalled (pucca) and unmetalled (kutcha). India has one of the world's largest road networks. **National Highways** connect major cities; the **Golden Quadrilateral** links Delhi–Mumbai–Chennai–Kolkata.
 
-⭐ **Highest road:** the **Manali–Leh** highway, among the highest motorable roads in the world.
+**Highest road:** the **Manali–Leh** highway, among the highest motorable roads in the world.
 
-**Railways:** ⭐ India has one of the **largest rail networks in Asia**. Introduced in **1853** (Bombay to Thane).
+**Railways:** India has one of the **largest rail networks in Asia**. Introduced in **1853** (Bombay to Thane).
 
 **Waterways:**
 - **Inland** — rivers and canals
@@ -114,8 +114,8 @@
 
 | Canal | Connects | Significance |
 |---|---|---|
-| ⭐ **Suez Canal** | Mediterranean ↔ Red Sea | Cuts the Europe–Asia voyage by ~7,000 km — no need to round Africa |
-| ⭐ **Panama Canal** | Atlantic ↔ Pacific | Avoids sailing around South America |
+| **Suez Canal** | Mediterranean ↔ Red Sea | Cuts the Europe–Asia voyage by ~7,000 km — no need to round Africa |
+| **Panama Canal** | Atlantic ↔ Pacific | Avoids sailing around South America |
 
 > 🚢 **Why water transport is the cheapest** — worth understanding rather than memorising. Water **supports the weight of the vessel**, so no energy is spent holding the cargo up; only forward motion costs energy. And ships scale enormously — a single container vessel carries what thousands of trucks would.
 >
@@ -148,15 +148,15 @@
 
 | Topic | The specific thing |
 |---|---|
-| **Compact vs scattered** ⭐⭐ | Plains cluster; hills and forests disperse |
-| **Rural vs urban** ⭐⭐ | Primary occupations vs secondary/tertiary |
-| **Factors for settlement** ⭐⭐ | **Water first**, then flat land, soil, climate, resources, defence |
-| **Cheapest transport** ⭐⭐⭐ | **Waterways** · **Airways** most expensive · **Roads** most flexible |
-| **Suez / Panama Canal** ⭐⭐ | Mediterranean–Red Sea / Atlantic–Pacific |
-| **Golden Quadrilateral** ⭐⭐ | Delhi–Mumbai–Chennai–Kolkata |
-| **Indian railways** ⭐ | Began **1853**, Bombay–Thane; among Asia's largest networks |
-| **Manali–Leh highway** ⭐ | Among the world's highest motorable roads |
-| **Mass vs personal communication** ⭐ | Many at once vs one-to-one |
+| **Compact vs scattered** | Plains cluster; hills and forests disperse |
+| **Rural vs urban** | Primary occupations vs secondary/tertiary |
+| **Factors for settlement** | **Water first**, then flat land, soil, climate, resources, defence |
+| **Cheapest transport** ⭐ | **Waterways** · **Airways** most expensive · **Roads** most flexible |
+| **Suez / Panama Canal** | Mediterranean–Red Sea / Atlantic–Pacific |
+| **Golden Quadrilateral** | Delhi–Mumbai–Chennai–Kolkata |
+| **Indian railways** | Began **1853**, Bombay–Thane; among Asia's largest networks |
+| **Manali–Leh highway** | Among the world's highest motorable roads |
+| **Mass vs personal communication** | Many at once vs one-to-one |
 
 **Trap 1:** *"Airways are the cheapest for bulk goods."* **No — the most expensive.** Waterways are cheapest.
 **Trap 2:** *"Compact settlements are found in hilly regions."* **Reverse** — compact in plains, scattered in hills.
@@ -190,11 +190,11 @@
 
 1. **Farming turned temporary settlements into permanent ones.**
 2. **Rural = primary occupations. Urban = secondary and tertiary.**
-3. ⭐ **Compact settlements in fertile plains; scattered in hills, forests and deserts** — the pattern is a response to terrain.
-4. ⭐ **Water is the first requirement for a settlement.** Every ancient civilisation is a river civilisation.
-5. ⭐ **Waterways cheapest, airways most expensive, roads most flexible, railways best for bulk overland.**
+3. **Compact settlements in fertile plains; scattered in hills, forests and deserts** — the pattern is a response to terrain.
+4. **Water is the first requirement for a settlement.** Every ancient civilisation is a river civilisation.
+5. **Waterways cheapest, airways most expensive, roads most flexible, railways best for bulk overland.**
 6. **~80% of world trade by volume goes by sea** — because water carries the weight and ships scale enormously.
-7. ⭐ **Suez: Mediterranean ↔ Red Sea. Panama: Atlantic ↔ Pacific.**
+7. **Suez: Mediterranean ↔ Red Sea. Panama: Atlantic ↔ Pacific.**
 8. **Golden Quadrilateral: Delhi–Mumbai–Chennai–Kolkata.** Indian railways began **1853**.
 9. **Communication: personal (one-to-one) vs mass (print and electronic).**
 10. 🌱 **Transport is a fast-growing emissions source** — hence EVs, metros, freight corridors and inland waterways.

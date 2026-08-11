@@ -230,7 +230,7 @@ Read line 3 again. **"Changes in… and the effects of such changes"** is UPSC's
 | 3 | **Resources and Development** | 8 | Thin |
 | 4 | **Contemporary India I** | 9 | Indian geography starts here |
 | 5 | **Contemporary India II** | 10 | |
-| 6 | ⭐ **Fundamentals of Physical Geography** | 11 | **The single most PYQ-dense book in the entire set.** If you read one book, this |
+| 6 | **Fundamentals of Physical Geography** | 11 | **The single most PYQ-dense book in the entire set.** If you read one book, this |
 | 7 | **India — Physical Environment** | 11 | Indian physical geography, in depth |
 | 8 | **Fundamentals of Human Geography** | 12 | Population, settlement, economic activity |
 | 9 | **India — People and Economy** | 12 | Feeds GS-I *and* GS-III |
@@ -241,8 +241,8 @@ Read line 3 again. **"Changes in… and the effects of such changes"** is UPSC's
 
 | # | Book | Why |
 |---|---|---|
-| 12 | ⭐ **NCERT Class 12 Biology, chapters 13–16** | *Organisms and Populations · Ecosystem · Biodiversity and Conservation · Environmental Issues.* **Only these four chapters** — ignore the rest of the book. This is the ecology foundation, and it is short |
-| 13 | ⭐ **Shankar IAS — Environment** | The standard reference. Covers ecology, biodiversity, climate change, protected areas, conventions, Acts, pollution. **The single highest-yield non-NCERT book in the merged subject** |
+| 12 | **NCERT Class 12 Biology, chapters 13–16** | *Organisms and Populations · Ecosystem · Biodiversity and Conservation · Environmental Issues.* **Only these four chapters** — ignore the rest of the book. This is the ecology foundation, and it is short |
+| 13 | **Shankar IAS — Environment** | The standard reference. Covers ecology, biodiversity, climate change, protected areas, conventions, Acts, pollution. **The single highest-yield non-NCERT book in the merged subject** |
 | 14 | *(reference, not reading)* **India State of Forest Report** + current-affairs environment | Latest forest/tiger/wetland figures. Pull from your [Current Affairs](../Current%20Affairs/00_START_HERE.md) work rather than reading cover to cover |
 
 ### Tier 2 — ❌ NOT FOR YOU. Ever.
@@ -269,7 +269,7 @@ Read line 3 again. **"Changes in… and the effects of such changes"** is UPSC's
 |---|---|
 | **Flipkart** | [flipkart.com/oxford-student-atlas-india-for-competitive-exams-6th](https://www.flipkart.com/oxford-student-atlas-india-for-competitive-exams-6th/p/itm275e6a52f36ce) |
 | **Price** | **₹252** (MRP ₹425, ~41% off) |
-| **Rating** | ⭐ **4.6/5 from 5,290+ ratings** |
+| **Rating** | **4.6/5 from 5,290+ ratings** |
 | **Sold by** | OUP India — the actual publisher |
 
 That review count is the deciding factor. 5,290 ratings at 4.6 is the most validated study-material listing you'll find in Indian e-commerce, and it's the publisher's own listing rather than a reseller's.
@@ -282,7 +282,7 @@ That review count is the deciding factor. 5,290 ratings at 4.6 is the most valid
 |---|---|
 | **Flipkart** | [flipkart.com/orient-blackswan-school-atlas-9th](https://www.flipkart.com/orient-blackswan-school-atlas-9th/p/itm7ac15fad7e793) |
 | **Price** | ₹327 (MRP ₹505) |
-| **Rating** | ⭐ 4.3/5 from 80 ratings |
+| **Rating** | 4.3/5 from 80 ratings |
 
 Coaching sites often advise *"Oxford for India maps, Orient BlackSwan for world maps."* That advice is real, but it is **optimisation for someone who has already finished the syllabus.** You are starting Geography today. Two atlases means split attention and a weaker daily habit.
 
@@ -316,7 +316,7 @@ Honest estimate, built bottom-up rather than guessed:
 |---|---|---|
 | 0 | Atlas setup + PYQ skim to calibrate | **3** |
 | 1 | NCERT 6–10 fast pass (5 thin books) | **22** |
-| 2 | ⭐ Class 11 *Fundamentals of Physical Geography* + notes | **25** |
+| 2 | Class 11 *Fundamentals of Physical Geography* + notes | **25** |
 | 3 | ✅ G.C. Leong — **written as a delta over the NCERTs, not a second read** | ~~28~~ → **16** |
 | 4 | Class 11 *India — Physical Environment* | **18** |
 | 5 | Class 12 *Fundamentals of Human Geography* | **13** |
@@ -353,7 +353,7 @@ STAGE 0 ── Atlas + syllabus + PYQ calibration ......... 3 hrs   ┐
 STAGE 1 ── NCERT 6→10, fast pass, light notes ........ 22 hrs   ┘ first week
            ✅ DONE
 
-STAGE 2 ── ⭐ Cl.11 Fundamentals of Physical Geography  25 hrs  ┐
+STAGE 2 ── Cl.11 Fundamentals of Physical Geography  25 hrs  ┐
            ✅ DONE                                              │ THE CORE
 STAGE 3 ── G.C. Leong — written as a DELTA ........... 16 hrs   ┘ ✅ DONE
            ✅ DONE 11 Aug 2026 · 25 files, 5,526 lines
@@ -542,7 +542,7 @@ Geography/
 │   ├── Class_08_Resources_and_Development/
 │   ├── Class_09_Contemporary_India_I/
 │   ├── Class_10_Contemporary_India_II/
-│   ├── Class_11_Fundamentals_of_Physical_Geography/   ⭐ the core
+│   ├── Class_11_Fundamentals_of_Physical_Geography/   the core
 │   ├── Class_11_India_Physical_Environment/
 │   ├── Class_12_Fundamentals_of_Human_Geography/
 │   └── Class_12_India_People_and_Economy/
@@ -551,11 +551,11 @@ Geography/
 │   ├── GC_Leong/                  ✅ DONE — 25 files, 5,526 lines
 │   │    ├── 00_INDEX.md           ← triage + skip register + NCERT cross-link map
 │   │    ├── Part_A_Physical/      ← 12 delta notes (karst, lakes, coral, currents…)
-│   │    ├── Part_B_Climate_Types/ ⭐ 11 climates + 00_Comparison_Matrix.md
+│   │    ├── Part_B_Climate_Types/ 11 climates + 00_Comparison_Matrix.md
 │   │    └── Textbook_PDF/         ⚠️ empty — book not downloaded
 │   └── Shankar_IAS_Environment/   ✅ DONE — 21 files, 3,510 lines
 │        ├── 00_INDEX.md           ← overlap policy + ⚠️ VOLATILE-FIGURES register
-│        ├── 00_QUICK_REVISION_TABLES.md  ⭐⭐ the revision core
+│        ├── 00_QUICK_REVISION_TABLES.md  the revision core
 │        ├── Part_A_Ecology/       ← 4 files (absorbs old Stage E1)
 │        ├── Part_B_Biodiversity/  ← 4 (hotspots, zones, PA network, species)
 │        ├── Part_C_Pollution/     ← 3 (air, water/soil, waste)

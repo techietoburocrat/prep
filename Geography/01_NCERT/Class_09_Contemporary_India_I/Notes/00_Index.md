@@ -13,7 +13,7 @@ That makes Class 9 the **single best value book in the junior series** for Preli
 
 | Classes 6–8 | Class 9 |
 |---|---|
-| Skim, light notes | ⭐ **Read properly.** Take the map work seriously |
+| Skim, light notes | **Read properly.** Take the map work seriously |
 | ~4–6 hrs per book | **~7–8 hrs** |
 | Vocabulary install | **Actual exam content** |
 
@@ -25,12 +25,12 @@ That makes Class 9 the **single best value book in the junior series** for Preli
 
 | # | Chapter | What it really is | Weight | 🌱 |
 |---|---|---|---|---|
-| **1** | [India — Size and Location](01_India_Size_and_Location.md) | Extent, neighbours, and **why India's position matters strategically** | ⭐⭐⭐ | |
-| **2** | [Physical Features of India](02_Physical_Features_of_India.md) | ⭐ **The six divisions in real detail** — Bhabar, Terai, Bhangar, Khadar | ⭐⭐⭐ | |
-| **3** | [Drainage](03_Drainage.md) | ⭐ **Every major river system**, Himalayan and Peninsular | ⭐⭐⭐ | 🌱🌱 |
-| **4** | [Climate](04_Climate.md) | ⭐ **The monsoon mechanism properly** — jet streams, ITCZ, El Niño | ⭐⭐⭐ | 🌱🌱 |
-| **5** | [Natural Vegetation and Wildlife](05_Natural_Vegetation_and_Wildlife.md) | India's forest types and conservation | ⭐⭐⭐ | 🌱🌱🌱 |
-| **6** | [Population](06_Population.md) | Size, density, growth, composition, **NPP 2000** | ⭐⭐⭐ | |
+| **1** | [India — Size and Location](01_India_Size_and_Location.md) | Extent, neighbours, and **why India's position matters strategically** | ⭐ | |
+| **2** | [Physical Features of India](02_Physical_Features_of_India.md) | **The six divisions in real detail** — Bhabar, Terai, Bhangar, Khadar | ⭐ | |
+| **3** | [Drainage](03_Drainage.md) | **Every major river system**, Himalayan and Peninsular | ⭐ | 🌱🌱 |
+| **4** | [Climate](04_Climate.md) | **The monsoon mechanism properly** — jet streams, ITCZ, El Niño | ⭐ | 🌱🌱 |
+| **5** | [Natural Vegetation and Wildlife](05_Natural_Vegetation_and_Wildlife.md) | India's forest types and conservation | ⭐ | 🌱🌱🌱 |
+| **6** | [Population](06_Population.md) | Size, density, growth, composition, **NPP 2000** | ⭐ | |
 
 ---
 
@@ -50,7 +50,7 @@ That makes Class 9 the **single best value book in the junior series** for Preli
    WHO LIVES THERE?                      Ch.6   population
 ```
 
-⭐ **This is the standard order for describing any country** — location → relief → drainage → climate → biota → people — and each step depends on the one before. **Class 11's *India: Physical Environment* uses exactly the same sequence.** Learn the order and the second pass gets much easier.
+**This is the standard order for describing any country** — location → relief → drainage → climate → biota → people — and each step depends on the one before. **Class 11's *India: Physical Environment* uses exactly the same sequence.** Learn the order and the second pass gets much easier.
 
 ---
 

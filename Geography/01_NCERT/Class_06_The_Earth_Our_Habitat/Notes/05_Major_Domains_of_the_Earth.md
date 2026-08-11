@@ -15,7 +15,7 @@
 | **Prelims (GS-I)** | Continents & oceans (sizes, order, extremes), atmospheric layers & composition, ozone, Mariana Trench, water distribution |
 | **Mains (GS-I)** | "Salient features of world's physical geography" — directly |
 | **Mains (GS-III)** | 🌱 Ecosystems, biodiversity, climate change, pollution — **all of it descends from this chapter** |
-| **Weightage** | ⭐⭐⭐ — **the highest-value chapter in Class 6 Geography** |
+| **Weightage** | ⭐ — **the highest-value chapter in Class 6 Geography** |
 | **Class 11/12 picks this up in** | *Fundamentals of Physical Geography* (atmosphere, oceans) · **Cl.12 Biology ch.13–16** (ecosystem, biodiversity) · **Shankar IAS** (everything) |
 
 > 🔴 **Do not fast-pass this chapter.** Chapters 1 and 4 you can skim. This one you learn properly. It is the trunk that the entire environment half of the merged subject grows out of.
@@ -102,7 +102,7 @@ The solid outer shell: the **crust** plus the rigid upper mantle. It carries two
 | # | Continent | Share of land | Must-know facts |
 |---|---|---|---|
 | **1** | **ASIA** | ~30% | **Largest** continent. **Largest population.** Separated from Europe by the **Ural Mountains**. Contains **Mt. Everest (8,849 m)** — the highest point on Earth — and the **Dead Sea**, the lowest land point. The **Tropic of Cancer passes through it** |
-| **2** | **AFRICA** | ~20% | **Only continent the Equator, Tropic of Cancer, Tropic of Capricorn AND Prime Meridian all cross** ⭐. **Largest desert: Sahara.** **Longest river: Nile.** Largest hot desert on Earth. Site of the **Great Rift Valley** |
+| **2** | **AFRICA** | ~20% | **Only continent the Equator, Tropic of Cancer, Tropic of Capricorn AND Prime Meridian all cross** . **Largest desert: Sahara.** **Longest river: Nile.** Largest hot desert on Earth. Site of the **Great Rift Valley** |
 | **3** | **NORTH AMERICA** | ~16% | Linked to South America by the narrow **Isthmus of Panama**. Surrounded by ocean on three sides. Contains the **Great Lakes** |
 | **4** | **SOUTH AMERICA** | ~12% | The **Amazon** — world's **largest river by volume** and largest rainforest. The **Andes**, the world's **longest mountain range** (~7,000 km). **Angel Falls**, the highest waterfall |
 | **5** | **ANTARCTICA** | ~9% | Centred on the **South Pole**. Permanently **ice-covered**. **No permanent human population** — only research stations. India's: **Maitri, Bharati** (and the earlier Dakshin Gangotri) |
@@ -118,9 +118,9 @@ The solid outer shell: the **crust** plus the rigid upper mantle. It carries two
 
 | # | Ocean | Must-know facts |
 |---|---|---|
-| **1** | **PACIFIC** | **Largest** — covers about a third of the Earth. Roughly **circular**. Contains the **Mariana Trench**, the **deepest point on Earth (~11,000 m)** ⭐. Ringed by the **"Ring of Fire"** — most of the world's volcanoes and earthquakes |
+| **1** | **PACIFIC** | **Largest** — covers about a third of the Earth. Roughly **circular**. Contains the **Mariana Trench**, the **deepest point on Earth (~11,000 m)** . Ringed by the **"Ring of Fire"** — most of the world's volcanoes and earthquakes |
 | **2** | **ATLANTIC** | **S-shaped.** Busiest ocean for **trade** — it separates the two most industrialised coastlines. Most indented coastline → best natural harbours |
-| **3** | **INDIAN** | ⭐ **The only ocean named after a country.** Roughly **triangular**. India's peninsula juts into it. Strategically central to India |
+| **3** | **INDIAN** | **The only ocean named after a country.** Roughly **triangular**. India's peninsula juts into it. Strategically central to India |
 | **4** | **SOUTHERN** | Encircles **Antarctica**. Recognised as a distinct ocean relatively recently |
 | **5** | **ARCTIC** | **Smallest and shallowest.** Around the **North Pole**, largely ice-covered. Connected to the Pacific by the **Bering Strait** |
 
@@ -184,9 +184,9 @@ The envelope of gases held to the Earth by **gravity**, extending ~1,600 km up, 
 
 | Layer | Key fact |
 |---|---|
-| **Troposphere** | ⭐ **All weather.** Height ~8 km at poles, ~18 km at equator. Temperature **falls** with height |
-| **Stratosphere** | ⭐ **Ozone layer.** Aircraft fly here — no clouds, no turbulence. Temperature **rises** with height |
-| **Mesosphere** | ⭐ **Meteors burn up here.** The **coldest** layer |
+| **Troposphere** | **All weather.** Height ~8 km at poles, ~18 km at equator. Temperature **falls** with height |
+| **Stratosphere** | **Ozone layer.** Aircraft fly here — no clouds, no turbulence. Temperature **rises** with height |
+| **Mesosphere** | **Meteors burn up here.** The **coldest** layer |
 | **Thermosphere** | Contains the **ionosphere**, which **reflects radio waves**. Very hot |
 | **Exosphere** | Outermost, thinnest; merges with space |
 
@@ -203,7 +203,7 @@ The envelope of gases held to the Earth by **gravity**, extending ~1,600 km up, 
 | **Why it matters** | Without it, UV would cause **skin cancer, cataracts, immune damage**, and would kill phytoplankton — the base of the entire marine food chain |
 | **What damaged it** | **CFCs** (chlorofluorocarbons) from refrigerants, aerosols, foams |
 | **The response** | **Montreal Protocol, 1987** — phased out CFCs |
-| **Status** | ⭐ **Healing.** The ozone layer is on track to recover by roughly the middle of this century |
+| **Status** | **Healing.** The ozone layer is on track to recover by roughly the middle of this century |
 
 > 🌱🎯 **The Montreal Protocol is the most useful example in the entire environment syllabus, and you should learn it now.**
 >
@@ -225,7 +225,7 @@ The envelope of gases held to the Earth by **gravity**, extending ~1,600 km up, 
 
 All the water on Earth — ocean, sea, river, lake, groundwater, glacier, water vapour.
 
-### ⭐ The water distribution — a fact with real consequences
+### The water distribution — a fact with real consequences
 
 ```
    ALL THE WATER ON EARTH
@@ -357,20 +357,20 @@ This is the payoff of the chapter — and a genuinely strong structure for a Mai
 
 | Topic | The specific thing |
 |---|---|
-| **Continent size order** ⭐⭐⭐ | Asia > Africa > N. America > S. America > Antarctica > Europe > Australia |
-| **Africa's four lines** ⭐⭐⭐ | Equator + both Tropics + Prime Meridian. **Unique to Africa** |
-| **Atmospheric layers in order** ⭐⭐⭐ | Tropo → Strato → Meso → Thermo → Exo |
-| **Where weather happens** ⭐⭐⭐ | **Troposphere** |
-| **Where ozone is** ⭐⭐⭐ | **Stratosphere** |
-| **Air composition** ⭐⭐⭐ | N₂ 78% · O₂ 21% · others 1% |
-| **Water split** ⭐⭐⭐ | **97% salt / 3% fresh**; most fresh water is frozen |
-| **Mariana Trench** ⭐⭐ | Deepest point on Earth, in the **Pacific** |
-| **Ocean size order** ⭐⭐ | Pacific > Atlantic > Indian > Southern > Arctic |
-| **Where meteors burn** ⭐⭐ | **Mesosphere** |
-| **Ionosphere** ⭐⭐ | In the **thermosphere**; reflects radio waves |
-| **Montreal Protocol** ⭐⭐ | **1987**, phased out CFCs, ozone recovering |
-| **Highest / lowest points** ⭐ | Everest (8,849 m) · Dead Sea (lowest land) · Mariana Trench (lowest overall) |
-| 🌱 **Ecosystem definition** ⭐⭐ | Living **+ non-living**, as one unit |
+| **Continent size order** ⭐ | Asia > Africa > N. America > S. America > Antarctica > Europe > Australia |
+| **Africa's four lines** ⭐ | Equator + both Tropics + Prime Meridian. **Unique to Africa** |
+| **Atmospheric layers in order** ⭐ | Tropo → Strato → Meso → Thermo → Exo |
+| **Where weather happens** ⭐ | **Troposphere** |
+| **Where ozone is** ⭐ | **Stratosphere** |
+| **Air composition** ⭐ | N₂ 78% · O₂ 21% · others 1% |
+| **Water split** ⭐ | **97% salt / 3% fresh**; most fresh water is frozen |
+| **Mariana Trench** | Deepest point on Earth, in the **Pacific** |
+| **Ocean size order** | Pacific > Atlantic > Indian > Southern > Arctic |
+| **Where meteors burn** | **Mesosphere** |
+| **Ionosphere** | In the **thermosphere**; reflects radio waves |
+| **Montreal Protocol** | **1987**, phased out CFCs, ozone recovering |
+| **Highest / lowest points** | Everest (8,849 m) · Dead Sea (lowest land) · Mariana Trench (lowest overall) |
+| 🌱 **Ecosystem definition** | Living **+ non-living**, as one unit |
 
 **Trap 1:** *"The ozone layer is in the troposphere."* **No — stratosphere.** (Ozone *at ground level* is a pollutant; ozone *in the stratosphere* is protective. Same molecule, opposite roles.)
 **Trap 2:** *"Ozone depletion causes global warming."* **No — different problems.** Different gases, layers, mechanisms, treaties.
@@ -420,10 +420,10 @@ This is the payoff of the chapter — and a genuinely strong structure for a Mai
 ## 🔁 60-Second Recap
 
 1. **Four domains: lithosphere (rock), atmosphere (air), hydrosphere (water), biosphere (life).**
-2. ⭐ **The biosphere is not a layer — it is the thin overlap of the other three.** Thinner than an apple's skin, relatively.
+2. **The biosphere is not a layer — it is the thin overlap of the other three.** Thinner than an apple's skin, relatively.
 3. **Land ~29%, water ~71%.**
 4. **7 continents by size:** Asia > Africa > N.America > S.America > Antarctica > Europe > Australia.
-5. ⭐ **Africa alone is crossed by the Equator, both Tropics and the Prime Meridian.**
+5. **Africa alone is crossed by the Equator, both Tropics and the Prime Meridian.**
 6. **5 oceans by size:** Pacific > Atlantic > Indian > Southern > Arctic. **Mariana Trench (Pacific) is the deepest point on Earth.**
 7. **The Indian Ocean is the only ocean named after a country.**
 8. **Air: 78% nitrogen, 21% oxygen, 1% others.** CO₂ is ~0.04% — tiny share, planetary influence.

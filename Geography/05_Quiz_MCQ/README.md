@@ -96,10 +96,11 @@ Three further banks would complete the subject, in rough order of value:
 | `india` | [Cl.11 *India: Physical Environment*](../01_NCERT/Class_11_India_Physical_Environment/Notes/00_Index.md) + [Cl.12 *India: People and Economy*](../01_NCERT/Class_12_India_People_and_Economy/Notes/00_Index.md) |
 | `human` | [Cl.12 *Fundamentals of Human Geography*](../01_NCERT/Class_12_Fundamentals_of_Human_Geography/Notes/00_Index.md) |
 
-`human` is worth more than it looks: population and demography is the
-[second-largest Prelims topic](../03_PYQ_Prelims/00_INDEX.md) at 54 of 503
-questions, and it is almost never asked in Mains — so it is under-prepared
-relative to its weight.
+Order revised. An earlier note here claimed `human` was the priority because a
+secondary compilation put population and demography second at 54 of 503
+questions. Measured on the [actual Prelims corpus](../03_PYQ_Prelims/00_INDEX.md)
+it is *last*, at 8 of 201 — the gap is what each source counts as geography.
+`physical` and `india` are the better bets; `human` can wait.
 
 ## Publishing
 

@@ -33,15 +33,15 @@ Still **Stage 1 — a fast pass.** Roughly **5–6 hours** for the whole book. B
 
 | # | Chapter | What it really is | Weight | 🌱 |
 |---|---|---|---|---|
-| **1** | [Environment](01_Environment.md) | Natural vs human vs human-made; ecosystem | ⭐⭐ | 🌱🌱🌱 |
-| **2** | [Inside Our Earth](02_Inside_Our_Earth.md) | Crust/mantle/core; **the three rock types**; rock cycle | ⭐⭐⭐ | |
-| **3** | [Our Changing Earth](03_Our_Changing_Earth.md) | Plates, **earthquakes, volcanoes**, and landforms made by river, sea, ice, wind | ⭐⭐⭐ | 🌱 |
-| **4** | [Air](04_Air.md) | Layers, temperature, **pressure, winds, rainfall types** | ⭐⭐⭐ | 🌱🌱 |
-| **5** | [Water](05_Water.md) | Water cycle, **waves, tides, ocean currents**, tsunami | ⭐⭐⭐ | 🌱 |
-| **6** | [Natural Vegetation and Wildlife](06_Natural_Vegetation_and_Wildlife.md) | **The world's biomes**, forest to tundra | ⭐⭐⭐ | 🌱🌱🌱 |
-| **7** | [Human Environment: Settlement, Transport, Communication](07_Human_Environment_Settlement_Transport_Communication.md) | Where people live and how they move | ⭐⭐ | |
-| **8** | [Human–Environment Interactions: Tropical & Subtropical](08_Human_Environment_Interactions.md) | **Amazon** basin vs **Ganga–Brahmaputra** basin | ⭐⭐ | 🌱🌱 |
-| **9** | [Life in the Deserts](09_Life_in_the_Deserts.md) | **Sahara** (hot) vs **Ladakh** (cold) | ⭐⭐ | 🌱 |
+| **1** | [Environment](01_Environment.md) | Natural vs human vs human-made; ecosystem | | 🌱🌱🌱 |
+| **2** | [Inside Our Earth](02_Inside_Our_Earth.md) | Crust/mantle/core; **the three rock types**; rock cycle | ⭐ | |
+| **3** | [Our Changing Earth](03_Our_Changing_Earth.md) | Plates, **earthquakes, volcanoes**, and landforms made by river, sea, ice, wind | ⭐ | 🌱 |
+| **4** | [Air](04_Air.md) | Layers, temperature, **pressure, winds, rainfall types** | ⭐ | 🌱🌱 |
+| **5** | [Water](05_Water.md) | Water cycle, **waves, tides, ocean currents**, tsunami | ⭐ | 🌱 |
+| **6** | [Natural Vegetation and Wildlife](06_Natural_Vegetation_and_Wildlife.md) | **The world's biomes**, forest to tundra | ⭐ | 🌱🌱🌱 |
+| **7** | [Human Environment: Settlement, Transport, Communication](07_Human_Environment_Settlement_Transport_Communication.md) | Where people live and how they move | | |
+| **8** | [Human–Environment Interactions: Tropical & Subtropical](08_Human_Environment_Interactions.md) | **Amazon** basin vs **Ganga–Brahmaputra** basin | | 🌱🌱 |
+| **9** | [Life in the Deserts](09_Life_in_the_Deserts.md) | **Sahara** (hot) vs **Ladakh** (cold) | | 🌱 |
 
 ---
 

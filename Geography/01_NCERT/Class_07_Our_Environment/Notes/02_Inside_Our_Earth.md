@@ -11,10 +11,10 @@
 | Field | Value |
 |---|---|
 | **Subject** | Geography → **Physical Geography** → Geomorphology / Geology |
-| **Prelims (GS-I)** | ⭐⭐⭐ **Rock types and examples** — a standing favourite. Layers, depths, composition |
+| **Prelims (GS-I)** | ⭐ **Rock types and examples** — a standing favourite. Layers, depths, composition |
 | **Mains (GS-I)** | Background for landforms, minerals, soils |
 | **Also feeds** | **Economy** (minerals, mining), **Art & Culture** (marble, sandstone in monuments) |
-| **Weightage** | ⭐⭐⭐ |
+| **Weightage** | ⭐ |
 | **Later** | Cl.11 *Fundamentals* — interior of the Earth, plate tectonics |
 
 ---
@@ -23,7 +23,7 @@
 
 - [ ] **Name** the three layers with their depths and composition.
 - [ ] **Define** SIAL, SIMA, NIFE.
-- [ ] ⭐ **Distinguish** the three rock types by formation, with examples of each.
+- [ ] **Distinguish** the three rock types by formation, with examples of each.
 - [ ] **Distinguish** intrusive from extrusive igneous rock.
 - [ ] **Explain** why fossils are found only in sedimentary rock.
 - [ ] **Describe** the rock cycle as a closed loop.
@@ -54,17 +54,17 @@
 
 | Layer | Depth | Made of | Notes |
 |---|---|---|---|
-| **CRUST** | **5 km** under oceans · **35 km** under continents | **SIAL** (silica + alumina) = continental · **SIMA** (silica + magnesium) = oceanic | ⭐ **The thinnest layer** — and the only one we live on or have ever drilled into |
+| **CRUST** | **5 km** under oceans · **35 km** under continents | **SIAL** (silica + alumina) = continental · **SIMA** (silica + magnesium) = oceanic | **The thinnest layer** — and the only one we live on or have ever drilled into |
 | **MANTLE** | To **2,900 km** | Silicate rock, semi-molten | The thickest layer. Convection here drives plate movement |
-| **CORE** | To **6,400 km** (centre) | ⭐ **NIFE** — **Ni**ckel + **Fe**rrum (iron) | **Outer core liquid, inner core solid.** Temperatures and pressures are extreme |
+| **CORE** | To **6,400 km** (centre) | **NIFE** — **Ni**ckel + **Fe**rrum (iron) | **Outer core liquid, inner core solid.** Temperatures and pressures are extreme |
 
 > 🥚 **The comparison that fits: a boiled egg.** Shell = crust (brittle, thin, cracks into plates). White = mantle (thick, the bulk of the volume). Yolk = core (dense, at the centre). It's not a perfect analogy — the mantle isn't liquid and the shell doesn't move — but for the **proportions** it is exactly right, and proportion is what people get wrong. **The crust is proportionally thinner than an eggshell.**
 
-> ⭐ **Why the core is iron and nickel** — worth understanding. When the young Earth was molten, the densest materials sank to the centre and the lighter ones floated up. Iron and nickel are heavy; silica and aluminium are light. **The Earth sorted itself by density.** That's also why the core generates the magnetic field that gives us the compass (Cl.6 Ch.4) and shields us from solar radiation.
+> **Why the core is iron and nickel** — worth understanding. When the young Earth was molten, the densest materials sank to the centre and the lighter ones floated up. Iron and nickel are heavy; silica and aluminium are light. **The Earth sorted itself by density.** That's also why the core generates the magnetic field that gives us the compass (Cl.6 Ch.4) and shields us from solar radiation.
 
 ---
 
-## 2️⃣ ⭐ Rocks — The Three Types
+## 2️⃣ Rocks — The Three Types
 
 > **Rock** = any natural mass of mineral matter making up the Earth's crust.
 > **Mineral** = a naturally occurring substance with a definite chemical composition. **Rocks are made of minerals.**
@@ -85,8 +85,8 @@
 | | **INTRUSIVE** | **EXTRUSIVE** |
 |---|---|---|
 | **Cools** | **Inside** the Earth, slowly | **On the surface**, fast |
-| **Crystals** | ⭐ **Large** (slow cooling = time to grow) | ⭐ **Very fine/small** (rapid cooling) |
-| **Example** | ⭐ **GRANITE** | ⭐ **BASALT** |
+| **Crystals** | **Large** (slow cooling = time to grow) | **Very fine/small** (rapid cooling) |
+| **Example** | **GRANITE** | **BASALT** |
 
 > 🍫 **Why cooling speed decides crystal size — the comparison that fits.** Cool sugar syrup slowly and you get large rock-candy crystals; cool it fast and you get a smooth, glassy toffee. **Same substance, different cooling rate, completely different texture.** Magma behaves identically: slow underground cooling gives granite's visible crystals; fast surface cooling gives basalt's fine grain.
 
@@ -96,7 +96,7 @@
 
 Rocks at the surface are broken down by wind, water and ice into **sediments** — small fragments. These are transported, deposited in layers, and compressed over millions of years into rock.
 
-> ⭐ **Why only sedimentary rock has fossils** — this is the reasoning UPSC likes:
+> **Why only sedimentary rock has fossils** — this is the reasoning UPSC likes:
 > Fossils form when a dead organism is **buried gently in accumulating sediment** and preserved. Igneous rock forms from molten material at 1,000°C+ — nothing organic survives that. Metamorphic rock is existing rock **cooked and crushed** — any fossils present are destroyed in the process.
 > **So the fossil record — the entire history of life on Earth — is written in sedimentary rock only.**
 
@@ -109,7 +109,7 @@ Existing igneous or sedimentary rock, subjected to **great heat and pressure**, 
 | Original rock | → | Metamorphic result |
 |---|---|---|
 | **Clay** | → | **Slate** |
-| **Limestone** | → | ⭐ **Marble** |
+| **Limestone** | → | **Marble** |
 | **Sandstone** | → | Quartzite |
 | **Coal** | → | Graphite → (extreme conditions) **Diamond** |
 
@@ -119,7 +119,7 @@ Existing igneous or sedimentary rock, subjected to **great heat and pressure**, 
 
 ---
 
-## 3️⃣ ⭐ The Rock Cycle
+## 3️⃣ The Rock Cycle
 
 The three types are not permanent categories. They **continuously become one another.**
 
@@ -161,14 +161,14 @@ The three types are not permanent categories. They **continuously become one ano
 
 | Topic | The specific thing |
 |---|---|
-| **Three rock types + examples** ⭐⭐⭐ | Igneous (granite, basalt) · Sedimentary (sandstone, limestone, coal) · Metamorphic (marble, slate, diamond) |
-| **Fossils only in sedimentary** ⭐⭐⭐ | And the reason why |
-| **Intrusive vs extrusive** ⭐⭐⭐ | **Granite** (inside, large crystals) vs **Basalt** (surface, fine crystals) |
-| **Metamorphic pairs** ⭐⭐⭐ | Limestone→marble · Clay→slate · Coal→graphite/diamond · Sandstone→quartzite |
-| **Layers of the Earth** ⭐⭐ | Crust (5–35 km) · Mantle (to 2,900 km) · Core (to 6,400 km) |
-| **SIAL / SIMA / NIFE** ⭐⭐ | Continental crust / oceanic crust / core |
-| **Igneous = primary rock** ⭐⭐ | The original rock; all others derive from it |
-| **Rock cycle** ⭐⭐ | A closed loop; no rock type is permanent |
+| **Three rock types + examples** ⭐ | Igneous (granite, basalt) · Sedimentary (sandstone, limestone, coal) · Metamorphic (marble, slate, diamond) |
+| **Fossils only in sedimentary** ⭐ | And the reason why |
+| **Intrusive vs extrusive** ⭐ | **Granite** (inside, large crystals) vs **Basalt** (surface, fine crystals) |
+| **Metamorphic pairs** ⭐ | Limestone→marble · Clay→slate · Coal→graphite/diamond · Sandstone→quartzite |
+| **Layers of the Earth** | Crust (5–35 km) · Mantle (to 2,900 km) · Core (to 6,400 km) |
+| **SIAL / SIMA / NIFE** | Continental crust / oceanic crust / core |
+| **Igneous = primary rock** | The original rock; all others derive from it |
+| **Rock cycle** | A closed loop; no rock type is permanent |
 
 **Trap 1:** *"Fossils are found in metamorphic rock."* **No** — heat and pressure destroy them. **Sedimentary only.**
 **Trap 2:** *"Granite is extrusive."* **No — intrusive.** Basalt is the extrusive one. (Mnemonic: **B**asalt = **B**ahar/outside.)
@@ -205,10 +205,10 @@ The three types are not permanent categories. They **continuously become one ano
 1. **Three layers: crust (thinnest, 5–35 km), mantle (thickest, to 2,900 km), core (NIFE, to 6,400 km).**
 2. **SIAL = continental crust, SIMA = oceanic crust, NIFE = core.** Outer core liquid, inner core solid.
 3. **The Earth sorted itself by density** when molten — heavy iron and nickel sank to the centre.
-4. ⭐ **Three rock types: igneous (fire), sedimentary (settling), metamorphic (changed).**
-5. ⭐ **Igneous is primary rock.** Intrusive = **granite** (large crystals, slow cooling). Extrusive = **basalt** (fine crystals, fast cooling).
-6. ⭐ **Fossils occur only in sedimentary rock** — igneous is too hot, metamorphic destroys them.
-7. ⭐ **Metamorphic pairs: limestone→marble, clay→slate, coal→graphite/diamond, sandstone→quartzite.**
+4. **Three rock types: igneous (fire), sedimentary (settling), metamorphic (changed).**
+5. **Igneous is primary rock.** Intrusive = **granite** (large crystals, slow cooling). Extrusive = **basalt** (fine crystals, fast cooling).
+6. **Fossils occur only in sedimentary rock** — igneous is too hot, metamorphic destroys them.
+7. **Metamorphic pairs: limestone→marble, clay→slate, coal→graphite/diamond, sandstone→quartzite.**
 8. **The rock cycle is a closed loop.** No rock type is permanent.
 9. 🇮🇳 **Deccan basalt → black soil → cotton.** Rock type decides soil decides crop decides economy.
 
