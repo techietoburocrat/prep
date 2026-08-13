@@ -1,6 +1,7 @@
-# Claude chat transcripts + memory backup.
-# Synced to the cloud by OneDrive and pinned to stay on local disk.
+# Claude chat transcripts + memory backup. Local to each PC only.
+# NOT cloud-synced: OneDrive is not running on this machine despite the folder name.
 # Kept out of git: ~80MB and grows with every session.
+# Memory (not transcripts) syncs across PCs via the private mission-memory repo.
 .claude-archive/
 
 # Stale renders kept local until they are regenerated from the current notes.
