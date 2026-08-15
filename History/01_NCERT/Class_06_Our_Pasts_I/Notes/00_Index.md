@@ -51,7 +51,7 @@ These notes are written from the **rationalised 10-chapter *Our Pasts I*** (2023
 ```
    2 MILLION                      10,000              4,700          3,500        2,500        2,300       1,900       1,700       1,400
    YEARS AGO                    YEARS AGO          YEARS AGO      YEARS AGO    YEARS AGO    YEARS AGO   YEARS AGO   YEARS AGO   YEARS AGO
-       │                             │                  │              │            │            │           │           │           │
+       │                             │                  │              │            │            │           │           │              │
        ▼                             ▼                  ▼              ▼            ▼            ▼           ▼           ▼           ▼
   ┌─────────┐                 ┌────────────┐     ┌───────────┐   ┌─────────┐  ┌─────────┐  ┌────────┐  ┌────────┐  ┌────────┐  ┌────────┐
   │ HUNTER- │                 │  FARMING   │     │ HARAPPAN  │   │ RIGVEDA │  │ MAHAJAN │  │ MAURYA │  │ KUSHAN │  │ GUPTA  │  │ HARSHA │
@@ -60,7 +60,7 @@ These notes are written from the **rationalised 10-chapter *Our Pasts I*** (2023
   └─────────┘                 └────────────┘     └───────────┘   └─────────┘  └─────────┘  └────────┘  └────────┘  └────────┘  └────────┘
    Ch. 2                        Ch. 2               Ch. 3           Ch. 4      Ch. 5 & 6    Ch. 7       Ch. 8       Ch. 9      Ch. 9
                                                                                                                     Ch.10 = art/books across all of this
-       │                             │                  │              │            │            │           │           │           │
+       │                             │                  │              │            │            │           │           │              │
    ════╧═════════════════════════════╧══════════════════╧══════════════╧════════════╧════════════╧═══════════╧═══════════╧═══════════╧════▶
        STONE AGE                                     BRONZE AGE                    IRON AGE  ──────────────────────────────────────────▶
 ```

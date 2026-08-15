@@ -187,7 +187,7 @@ Two innovations, already met in Chapter 5, deserve restating because everything 
 
 ```
    ╔═══════════════════════════════════════════════════════════════════════╗
-   ║       THE THREE CROWNED KINGS OF TAMILAKAM (MUVENDAR)                 ║
+   ║       THE THREE CROWNED KINGS OF TAMILAKAM (MUVENDAR)                ║
    ╚═══════════════════════════════════════════════════════════════════════╝
 
    ┌──────────────────┬──────────────────┬────────────────────────────────┐
@@ -376,12 +376,12 @@ Around the **1st century CE**, a Greek sailor named **HIPPALUS** is credited (in
    (silk)         (Kashgar,          (Karakoram,             (Taxila,
                    Samarkand,         Hindu Kush)             Peshawar,
                    Bactria)                                   Mathura)
-                       │                                          │
+                       │                                                   │
                        │                                          ▼
                        ▼                                    Indian ports
                   ──► PERSIA ──► 🇸🇾 SYRIA ──► 🇷🇴 ROME     (Bharuch,
                                                              Muziris)
-                                                                  │
+                                                                           │
                                                                   ▼
                                                           SEA ROUTE via
                                                           Arabian Sea &

@@ -55,18 +55,18 @@ Notice a pattern that has now happened twice, and will happen again:
    FRAGMENTATION ──► UNIFICATION ──► GOLDEN AGE ──► DECLINE ──► FRAGMENTATION
    
    16 Mahajanapadas ──► MAURYAS (321 BCE) ──► Ashoka ──► collapse (185 BCE)
-                                                              │
+                                                                            │
                                                               ▼
    Shungas, Kanvas, Indo-Greeks, Shakas, Kushanas, Satavahanas — 500 years
    of REGIONAL powers, and a period of enormous trade and artistic wealth
-                                                              │
+                                                                            │
                                                               ▼
    ──► GUPTAS (319 CE) ──► "Golden Age" ──► decline after the HUNA invasions
-                                                              │
+                                                                            │
                                                               ▼
    Harsha's brief revival (606–647 CE), then permanent regionalisation:
    PALLAVAS · CHALUKYAS · RASHTRAKUTAS · PALAS · PRATIHARAS · CHOLAS
-                                                              │
+                                                                            │
                                                               ▼
                                    ⭐ AND THE CENTRE OF GRAVITY MOVES SOUTH
 ```
@@ -97,7 +97,7 @@ Watch the **architecture** of the Indian state change across these chapters:
   │                                   and revenue, and owe the overlord  │
   │                                   tribute, troops and attendance     │
   │                                                                      │
-  │  ⚠️ THE TRADE-OFF:                                                    │
+  │  ⚠️ THE TRADE-OFF:                                                   │
   │  Cheap and scalable — you don't need a huge paid bureaucracy or a    │
   │  fast communication network. BUT you have permanently GIVEN AWAY     │
   │  the revenue stream and the coercive capacity. Each grantee becomes  │
@@ -155,7 +155,7 @@ Watch the **architecture** of the Indian state change across these chapters:
 
 ```
    ╔════════════════════════════════════════════════════════════════════════╗
-   ║                     THE GUPTA RULERS                                   ║
+   ║                     THE GUPTA RULERS                               ║
    ╚════════════════════════════════════════════════════════════════════════╝
 
    SRI GUPTA  →  GHATOTKACHA
@@ -164,13 +164,13 @@ Watch the **architecture** of the Indian state change across these chapters:
    ┌────────────────────────────────────────────────────────────────────┐
    │ CHANDRAGUPTA I   (c. 319–335 CE)                                   │
    │ • Took the grand title MAHARAJADHIRAJA ("great king of kings")     │
-   │ • ⭐ Married KUMARADEVI, a LICCHAVI princess — a crucial alliance   │
-   │   Coins show BOTH of them, and name the Licchavis ⭐                │
-   │ • ⭐ The GUPTA ERA begins in 319–320 CE                             │
+   │ • ⭐ Married KUMARADEVI, a LICCHAVI princess — a crucial alliance  │
+   │   Coins show BOTH of them, and name the Licchavis ⭐               │
+   │ • ⭐ The GUPTA ERA begins in 319–320 CE                            │
    └────────────────────────┬───────────────────────────────────────────┘
                             ▼
    ┌────────────────────────────────────────────────────────────────────┐
-   │ SAMUDRAGUPTA   (c. 335–375 CE) ⭐⭐⭐                                │
+   │ SAMUDRAGUPTA   (c. 335–375 CE) ⭐⭐⭐                              │
    │ • The great conqueror. PRAYAG PRASHASTI by HARISHENA               │
    │ • Called "INDIAN NAPOLEON" by V. A. Smith                          │
    │ • Performed the ASHVAMEDHA                                         │
@@ -180,31 +180,31 @@ Watch the **architecture** of the Indian state change across these chapters:
    └────────────────────────┬───────────────────────────────────────────┘
                             ▼
    ┌────────────────────────────────────────────────────────────────────┐
-   │ CHANDRAGUPTA II "VIKRAMADITYA"  (c. 375–415 CE) ⭐⭐⭐               │
-   │ • ⭐ DEFEATED THE SHAKAS of western India → gained Gujarat and      │
+   │ CHANDRAGUPTA II "VIKRAMADITYA"  (c. 375–415 CE) ⭐⭐⭐             │
+   │ • ⭐ DEFEATED THE SHAKAS of western India → gained Gujarat and     │
    │   Malwa → gained access to the WESTERN SEA PORTS → trade boom      │
    │   → hence the title SHAKARI ("enemy of the Shakas")                │
-   │ • ⭐ FA XIAN visited India during his reign (399–414 CE)            │
-   │ • ⭐ Traditionally associated with the NAVARATNAS ("nine gems"),    │
+   │ • ⭐ FA XIAN visited India during his reign (399–414 CE)           │
+   │ • ⭐ Traditionally associated with the NAVARATNAS ("nine gems"),   │
    │   including KALIDASA and (traditionally) VARAHAMIHIRA — though     │
    │   the Navaratna list is a LATER tradition, treat with care         │
    │ • Issued the first Gupta SILVER coins (for the western regions)    │
-   │ • ⭐ The MEHRAULI IRON PILLAR is attributed to a king "CHANDRA"     │
+   │ • ⭐ The MEHRAULI IRON PILLAR is attributed to a king "CHANDRA"    │
    └────────────────────────┬───────────────────────────────────────────┘
                             ▼
    ┌────────────────────────────────────────────────────────────────────┐
    │ KUMARAGUPTA I  (c. 415–455 CE)                                     │
-   │ • ⭐ Traditionally credited with FOUNDING NALANDA MAHAVIHARA        │
+   │ • ⭐ Traditionally credited with FOUNDING NALANDA MAHAVIHARA       │
    │ • Faced the first Huna pressure                                    │
    └────────────────────────┬───────────────────────────────────────────┘
                             ▼
    ┌────────────────────────────────────────────────────────────────────┐
-   │ SKANDAGUPTA   (c. 455–467 CE) ⭐                                    │
-   │ • ⭐ REPELLED THE HUNAS (Hephthalites/White Huns) — the last great  │
+   │ SKANDAGUPTA   (c. 455–467 CE) ⭐                                   │
+   │ • ⭐ REPELLED THE HUNAS (Hephthalites/White Huns) — the last great │
    │   Gupta military achievement                                       │
-   │ • ⭐ REPAIRED THE SUDARSHANA LAKE at Girnar — recorded in the       │
+   │ • ⭐ REPAIRED THE SUDARSHANA LAKE at Girnar — recorded in the      │
    │   JUNAGADH inscription (on the same rock as Ashoka's edicts        │
-   │   and Rudradaman's inscription!) ⭐                                 │
+   │   and Rudradaman's inscription!) ⭐                                │
    │ • The wars drained the treasury; gold content of coins declines    │
    └────────────────────────┬───────────────────────────────────────────┘
                             ▼

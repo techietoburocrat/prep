@@ -1,0 +1,1414 @@
+<title>Class IX History Quiz — India and the Contemporary World – I</title>
+<style>
+:root{
+  --ink:#1A1E26; --paper:#F1F4F8; --surface:#FFFFFF; --line:#D4DAE3; --muted:#596372;
+  --good:#1F7A4C; --good-soft:#E2F1E9; --bad:#B23A34; --bad-soft:#FAE6E4;
+  --accent:#27467B; --accent-ink:#FFFFFF; --accent-soft:#E3EAF5;
+  --radius:10px;
+  --serif:Georgia,'Iowan Old Style','Palatino Linotype','Book Antiqua',serif;
+  --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --ink:#E5EAF2; --paper:#0F131A; --surface:#181D26; --line:#272F3B; --muted:#95A0B1;
+    --good:#3FBE7C; --good-soft:rgba(63,190,124,0.14); --bad:#E2665F; --bad-soft:rgba(226,102,95,0.14);
+    --accent:#84AEE2; --accent-ink:#0E1520; --accent-soft:rgba(132,174,226,0.18);
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#E5EAF2; --paper:#0F131A; --surface:#181D26; --line:#272F3B; --muted:#95A0B1;
+  --good:#3FBE7C; --good-soft:rgba(63,190,124,0.14); --bad:#E2665F; --bad-soft:rgba(226,102,95,0.14);
+  --accent:#84AEE2; --accent-ink:#0E1520; --accent-soft:rgba(132,174,226,0.18);
+}
+:root[data-theme="light"]{
+  --ink:#1A1E26; --paper:#F1F4F8; --surface:#FFFFFF; --line:#D4DAE3; --muted:#596372;
+  --good:#1F7A4C; --good-soft:#E2F1E9; --bad:#B23A34; --bad-soft:#FAE6E4;
+  --accent:#27467B; --accent-ink:#FFFFFF; --accent-soft:#E3EAF5;
+}
+*{box-sizing:border-box;}
+html,body{height:100%;}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;}
+.app{min-height:100dvh;display:flex;flex-direction:column;max-width:760px;margin:0 auto;padding:20px 20px 24px;}
+.screen{flex:1;display:flex;flex-direction:column;min-height:0;}
+.eyebrow{font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin:0 0 6px;}
+.menu-screen{gap:16px;justify-content:flex-start;padding-top:10px;}
+.menu-screen h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,36px);margin:0;text-wrap:balance;}
+.lede{color:var(--muted);line-height:1.55;max-width:64ch;margin:0;}
+.how{display:flex;flex-wrap:wrap;gap:8px 18px;margin:2px 0 4px;padding:0;list-style:none;}
+.how li{font-size:12.5px;color:var(--muted);display:flex;align-items:center;gap:6px;}
+.how li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none;}
+.menu-label{font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);margin:8px 0 -2px;}
+.lesson-list{display:flex;flex-direction:column;gap:10px;}
+.lesson-card{display:flex;align-items:center;gap:14px;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:15px 18px;font-family:var(--sans);cursor:pointer;width:100%;color:var(--ink);}
+.lesson-card:hover{border-color:var(--accent);}
+.lesson-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+.lesson-card.combined{background:var(--accent-soft);border-color:var(--accent);}
+.lesson-num{flex:none;width:38px;height:38px;border-radius:9px;background:var(--accent-soft);color:var(--accent);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:16px;font-weight:700;}
+.lesson-card.combined .lesson-num{background:var(--accent);color:var(--accent-ink);}
+.lesson-body{flex:1;min-width:0;}
+.lesson-title{font-family:var(--serif);font-size:16.5px;line-height:1.25;margin:0 0 2px;display:block;}
+.lesson-meta{font-size:12.5px;color:var(--muted);display:block;}
+.lesson-go{flex:none;color:var(--muted);font-size:20px;}
+.lesson-card:hover .lesson-go{color:var(--accent);}
+.quiz-screen{gap:14px;display:none;}
+.bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.chapter-tag{font-size:11px;text-transform:uppercase;letter-spacing:0.04em;background:var(--accent-soft);color:var(--accent);padding:5px 10px;border-radius:999px;white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis;}
+.progress-track{flex:1;min-width:60px;height:6px;background:var(--line);border-radius:999px;overflow:hidden;}
+.progress-fill{height:100%;background:var(--accent);width:0%;}
+.counter{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap;}
+.timer{font-family:var(--serif);font-size:15px;font-variant-numeric:tabular-nums;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:4px 10px;white-space:nowrap;}
+.card{flex:1;min-height:0;overflow-y:auto;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;display:flex;flex-direction:column;gap:15px;}
+.qblock{display:flex;flex-direction:column;gap:9px;}
+.question{font-family:var(--serif);font-size:clamp(17px,2.4vw,20px);line-height:1.45;margin:0;white-space:pre-line;}
+.stmt-head{font-size:12px;letter-spacing:0.05em;text-transform:uppercase;color:var(--muted);margin:0;padding-left:26px;}
+.stmt-list{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px;}
+.stmt-list li{display:flex;gap:10px;font-size:14.8px;line-height:1.5;}
+.stmt-list li .sn{flex:none;min-width:16px;color:var(--muted);font-variant-numeric:tabular-nums;}
+.stmt-list li .st{flex:1;min-width:0;}
+.stmt-list li .sr{color:var(--muted);}
+.ask{font-family:var(--serif);font-size:15.5px;line-height:1.45;margin:2px 0 0;font-style:italic;}
+.options{display:flex;flex-direction:column;gap:9px;}
+.option{display:flex;align-items:flex-start;gap:11px;text-align:left;background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:11px 13px;font-family:var(--sans);font-size:14.5px;color:var(--ink);cursor:pointer;line-height:1.4;width:100%;}
+.option:hover:not(:disabled){border-color:var(--accent);}
+.option:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+.option:disabled{cursor:default;}
+.opt-letter{flex:none;width:23px;height:23px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:var(--muted);}
+.option.correct{background:var(--good-soft);border-color:var(--good);}
+.option.correct .opt-letter{background:var(--good);border-color:var(--good);color:#fff;}
+.option.incorrect{background:var(--bad-soft);border-color:var(--bad);}
+.option.incorrect .opt-letter{background:var(--bad);border-color:var(--bad);color:#fff;}
+.feedback{font-size:13.5px;line-height:1.6;margin:0;padding:12px 14px;border-radius:8px;background:var(--paper);border-left:3px solid var(--accent);}
+.feedback .verdict{font-family:var(--serif);font-weight:700;font-style:italic;}
+.feedback.good{border-left-color:var(--good);}
+.feedback.good .verdict{color:var(--good);}
+.feedback.bad{border-left-color:var(--bad);}
+.feedback.bad .verdict{color:var(--bad);}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.hint{font-size:12px;color:var(--muted);text-align:center;flex:1;}
+.btn-primary{background:var(--accent);color:var(--accent-ink);border:none;border-radius:999px;padding:12px 24px;font-size:14.5px;font-weight:600;font-family:var(--sans);cursor:pointer;}
+.btn-primary:hover{filter:brightness(1.07);}
+.btn-primary:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+.btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:11px 20px;font-size:14px;font-family:var(--sans);cursor:pointer;}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
+.btn-ghost:disabled{opacity:0.35;cursor:not-allowed;}
+.btn-ghost:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+.result-screen{gap:18px;justify-content:center;display:none;}
+.result-screen h1{font-family:var(--serif);font-size:clamp(24px,4.5vw,32px);margin:0;}
+.result-sub{color:var(--muted);margin:-8px 0 0;font-size:14px;}
+.score-row{display:flex;gap:22px;flex-wrap:wrap;}
+.score-block{display:flex;flex-direction:column;gap:2px;}
+.score-num{font-family:var(--serif);font-size:30px;font-variant-numeric:tabular-nums;}
+.score-label{font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);}
+.breakdown-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px;max-height:280px;overflow-y:auto;}
+.breakdown{width:100%;border-collapse:collapse;font-size:13.5px;}
+.breakdown th,.breakdown td{padding:8px 12px;text-align:left;border-bottom:1px solid var(--line);}
+.breakdown th{color:var(--muted);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:0.05em;position:sticky;top:0;background:var(--surface);}
+.breakdown td.num{font-variant-numeric:tabular-nums;text-align:right;}
+.breakdown tr:last-child td{border-bottom:none;}
+.bd-bar{height:5px;border-radius:3px;background:var(--line);margin-top:4px;overflow:hidden;}
+.bd-bar span{display:block;height:100%;background:var(--accent);}
+.result-actions{display:flex;gap:10px;flex-wrap:wrap;}
+[hidden]{display:none !important;}
+.is-active{display:flex !important;}
+@media (prefers-reduced-motion: no-preference){
+  .option,.lesson-card{transition:background 0.15s ease,border-color 0.15s ease;}
+  .progress-fill{transition:width 0.25s ease;}
+}
+@media (max-width:480px){
+  .app{padding:16px 14px 18px;}
+  .nav{flex-wrap:wrap;}
+  .hint{order:3;width:100%;}
+  .card{padding:18px 16px;}
+}
+</style>
+
+<div class="app">
+  <section id="menu" class="screen menu-screen is-active">
+    <p class="eyebrow" id="courseEyebrow"></p>
+    <h1 id="courseTitle"></h1>
+    <p class="lede" id="courseLede"></p>
+    <ul class="how">
+      <li>Prelims-pattern: statements, pairs, assertion–reason</li>
+      <li>Options balanced — no length giveaways</li>
+      <li>Detailed explanation on every answer</li>
+      <li>Reshuffles each attempt · stopwatch</li>
+    </ul>
+    <p class="menu-label">Choose a lesson — or take the full syllabus</p>
+    <div class="lesson-list" id="lessonList"></div>
+  </section>
+
+  <section id="quiz" class="screen quiz-screen">
+    <header class="bar">
+      <span id="chapterTag" class="chapter-tag"></span>
+      <div class="progress-track"><div id="progressFill" class="progress-fill"></div></div>
+      <span id="counter" class="counter"></span>
+      <span id="timer" class="timer">00:00</span>
+    </header>
+    <main class="card">
+      <div id="qblock" class="qblock"></div>
+      <div id="options" class="options"></div>
+      <p id="feedback" class="feedback" hidden></p>
+    </main>
+    <footer class="nav">
+      <button id="prevBtn" class="btn-ghost" type="button">← Prev</button>
+      <span class="hint">Press 1–4 to answer · → next · ← prev</span>
+      <button id="nextBtn" class="btn-primary" type="button">Next →</button>
+    </footer>
+  </section>
+
+  <section id="result" class="screen result-screen">
+    <p class="eyebrow">Scorecard</p>
+    <h1 id="resultTitle">Quiz complete</h1>
+    <p class="result-sub" id="resultScope"></p>
+    <div class="score-row">
+      <div class="score-block"><span id="scoreText" class="score-num"></span><span class="score-label">Correct</span></div>
+      <div class="score-block"><span id="scorePct" class="score-num"></span><span class="score-label">Accuracy</span></div>
+      <div class="score-block"><span id="timeText" class="score-num"></span><span class="score-label">Time</span></div>
+    </div>
+    <div class="breakdown-wrap">
+      <table class="breakdown">
+        <thead><tr><th>Lesson</th><th>Score</th></tr></thead>
+        <tbody id="breakdownBody"></tbody>
+      </table>
+    </div>
+    <div class="result-actions">
+      <button id="reviewBtn" class="btn-ghost" type="button">Review answers</button>
+      <button id="restartBtn" class="btn-primary" type="button">Retake — new shuffle</button>
+      <button id="menuBtn" class="btn-ghost" type="button">↤ Lesson menu</button>
+    </div>
+  </section>
+</div>
+
+<script>
+/* ==========================================================================
+   DATA — generated from Polity/05_Quiz_MCQ/data/<class>.js by build.mjs
+   Question shape:
+     c    chapter tag (must match an entry in CHAPTERS)
+     q    stem
+     head optional column header for a "pairs" block, e.g. "Provision : Purpose"
+     L    optional array of numbered lines (statements, or "Left : Right" pairs)
+     ask  optional closing question line, e.g. "Which of the above are correct?"
+     o    four options
+     a    index of the correct option
+     e    explanation shown after answering
+   ========================================================================== */
+const COURSE = {
+  eyebrow: "NCERT History · India and the Contemporary World – I",
+  title: "Class IX History Quiz — India and the Contemporary World – I",
+  lede: "Prelims-pattern questions across the five printed chapters and the restored supplement — the French and Russian Revolutions, Nazism, colonial forests and pastures, and the deleted chapters on peasants, farmers and clothing. This is the book behind the Mains GS1 World History syllabus. Multi-statement, match-the-pairs and assertion-reason sets; the statements reshuffle on every attempt and the answer code is computed afresh, so nothing about the wording, length or position gives the answer away."
+};
+const CHAPTERS = [
+  "Ch1 · The French Revolution",
+  "Ch2 · Socialism and the Russian Revolution",
+  "Ch3 · Nazism and the Rise of Hitler",
+  "Ch4 · Forest Society and Colonialism",
+  "Ch5 · Pastoralists in the Modern World",
+  "Ch6 · Supplement — Peasants, Farmers and Clothing"
+];
+
+const AR = [
+  "Both A and R are true and R is the correct explanation of A",
+  "Both A and R are true but R is not the correct explanation of A",
+  "A is true but R is false",
+  "A is false but R is true"
+];
+
+const QUESTIONS = [
+
+/* ============ Ch1 · The French Revolution ============ */
+{c:'Ch1 · The French Revolution',
+ q:'Consider the following statements about the storming of the Bastille:',
+ S:[
+    ['The crowd marched to the fortress hoping to find hoarded ammunition.',true],
+    ['Only seven prisoners were found and released.',true],
+    ['The fortress was preserved afterwards as a monument to the revolution.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The fortress was demolished and its stone fragments were sold in the markets to all those who wished to keep a souvenir of its destruction. The Bastille was hated not for the number it held but because it stood for the despotic power of the king.'},
+{c:'Ch1 · The French Revolution',
+ q:'Before 1789, the Estates General had last been summoned in:',
+ o:[
+    '1614',
+    '1714',
+    '1660',
+    '1750'],
+ a:0,
+ e:'Louis XVI called it on 5 May 1789 only because in the Old Regime the monarch could not impose taxes by his will alone. A gap of 175 years meant the institution had no settled habits of procedure, which is precisely why the dispute over voting method could not be contained.'},
+{c:'Ch1 · The French Revolution',
+ q:'Consider the following pairs:',
+ head:'Thinker : Contribution',
+ S:[
+    ['John Locke : Refuted the doctrine of the divine and absolute right of the monarch',true],
+    ['Jean Jacques Rousseau : Proposed a division of power between legislature, executive and judiciary',false],
+    ['Montesquieu : Wrote The Spirit of the Laws',true],
+    ['Abbe Sieyes : Led the crowd that stormed the Bastille in July 1789',false]],
+ ask:'How many of the pairs given above are correctly matched?',
+ mode:'count',
+ e:'Separation of powers was Montesquieu\'s idea, while Rousseau proposed a social contract between people and their representatives. Abbe Sieyes, originally a priest, wrote the pamphlet What is the Third Estate and led the National Assembly with Mirabeau; he did not storm the Bastille.'},
+{c:'Ch1 · The French Revolution',
+ q:'Assertion (A): The members of the third estate walked out of the Estates General in June 1789.\nReason (R): The king rejected their demand that voting be conducted by the assembly as a whole, with one vote per member.',
+ o:AR,a:0,
+ e:'Voting had traditionally been by estate, giving the clergy and nobility two votes against one. Since the third estate alone paid taxes to the state, a procedural rule about counting was in fact a rule about who could be made to pay, which is why the walkout followed immediately.'},
+{c:'Ch1 · The French Revolution',
+ q:'Under the Old Regime, the tithe was:',
+ o:[
+    'A feudal due extracted by nobles from peasants',
+    'A tax of one-tenth of the produce paid to the Church',
+    'A direct tax paid by the third estate to the state treasury',
+    'An indirect tax levied on salt and tobacco'],
+ a:1,
+ e:'The taille was the direct tax to the state, and indirect taxes fell on articles of everyday consumption like salt or tobacco. The third estate paid all of these, while the first two estates enjoyed exemption from state taxes as a privilege of birth.'},
+{c:'Ch1 · The French Revolution',
+ q:'Consider the following statements about a subsistence crisis in the Old Regime:',
+ S:[
+    ['The population of France rose from about 23 million in 1715 to 28 million in 1789.',true],
+    ['Wages fixed by workshop owners did not keep pace with the rise in prices.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Grain production could not keep pace with demand, so the price of bread rose rapidly while wages stagnated and the gap between rich and poor widened. Any drought or hail then tipped the sequence into scarcity, food riots, weaker bodies, epidemics and death.'},
+{c:'Ch1 · The French Revolution',
+ q:'Under the Constitution of 1791, an active citizen was a man above 25 who paid taxes equal to at least:',
+ o:[
+    'Ten days of a labourer\'s wage',
+    'One year of a labourer\'s wage',
+    'Three days of a labourer\'s wage',
+    'One month of a labourer\'s wage'],
+ a:2,
+ e:'About 4 million of a population of 28 million qualified, while roughly 3 million men and all women were classed as passive citizens. To become an elector or a member of the Assembly a man had to belong to the highest bracket of taxpayers.'},
+{c:'Ch1 · The French Revolution',
+ q:'Consider the following statements about the Declaration of the Rights of Man and Citizen:',
+ S:[
+    ['It declared that men are born and remain free and equal in rights.',true],
+    ['It held that the source of all sovereignty resides in the nation.',true],
+    ['It gave every adult man and woman the right to vote.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Article 17 did declare property sacred and inviolable, permitting deprivation only where a legally established public necessity required it and just compensation was given in advance. But the Constitution the Declaration opened gave the vote only to active citizens, and to no woman at all.'},
+{c:'Ch1 · The French Revolution',
+ q:'The Jacobins came to be known as the sans-culottes because they:',
+ o:[
+    'Refused to wear any form of headgear in public',
+    'Had given up wearing shoes as a mark of poverty',
+    'Wore the red cap that symbolised liberty in France',
+    'Wore long striped trousers instead of knee breeches'],
+ a:3,
+ e:'Knee breeches were the fashion of the nobility, so long striped trousers modelled on those of dock workers announced the end of the power wielded by their wearers. Sans-culottes men also wore the red cap symbolising liberty, though women were not allowed to do so.'},
+{c:'Ch1 · The French Revolution',
+ q:'Consider the following measures of Robespierre\'s government:',
+ S:[
+    ['A maximum ceiling was placed on wages and prices.',true],
+    ['All citizens were required to eat the wholewheat pain d\'egalite.',true],
+    ['Churches were given state protection and their lands restored.',false],
+    ['The traditional forms of address Monsieur and Madame were retained.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Churches were shut down and their buildings converted into barracks or offices, and all French men and women became Citoyen and Citoyenne. Meat and bread were rationed and peasants were forced to transport grain to the cities and sell it at government-fixed prices.'},
+{c:'Ch1 · The French Revolution',
+ q:'The Directory that ruled France after the fall of the Jacobins was:',
+ o:[
+    'An executive of five members appointed by two legislative councils',
+    'A council of ministers chosen by the restored monarch',
+    'A committee of generals drawn from the revolutionary armies',
+    'An assembly elected directly by universal male suffrage'],
+ a:0,
+ e:'It was designed as a safeguard against the concentration of power in a one-man executive as under the Jacobins. The Directors nevertheless clashed repeatedly with the councils, and this political instability paved the way for the rise of a military dictator.'},
+{c:'Ch1 · The French Revolution',
+ q:'Consider the following statements about women during the revolution:',
+ S:[
+    ['About sixty women\'s clubs came up in different French cities.',true],
+    ['Schooling was made compulsory for all girls and divorce was made legal.',true],
+    ['Women were granted the right to vote by the Constitution of 1791.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The Constitution of 1791 reduced women to passive citizens, and during the Reign of Terror the government ordered the closure of women\'s clubs and banned their political activities. Women in France finally won the right to vote only in 1946.'},
+{c:'Ch1 · The French Revolution',
+ q:'Olympe de Gouges is best remembered for:',
+ o:[
+    'Commanding a battalion of women volunteers against Prussia',
+    'Writing the Declaration of the Rights of Woman and Citizen in 1791',
+    'Founding the first women\'s newspaper in revolutionary Paris',
+    'Leading the march of Parisian women to Versailles in 1789'],
+ a:1,
+ e:'She addressed it to the Queen and to the members of the National Assembly, demanding they act upon it, and in 1793 criticised the Jacobin government for forcibly closing women\'s clubs. She was tried by the National Convention, charged with treason and executed.'},
+{c:'Ch1 · The French Revolution',
+ q:'Consider the following statements about slavery in the French colonies:',
+ S:[
+    ['The National Assembly debated the question but passed no law abolishing slavery.',true],
+    ['The Convention legislated to free all slaves in the French overseas possessions in 1794.',true],
+    ['Slavery in the French colonies was never restored after 1794.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The Assembly held back fearing opposition from businessmen whose incomes depended on the slave trade, and slavery was finally abolished in French colonies only in 1848. Plantation owners understood their own freedom as including the right to enslave others in pursuit of their economic interests.'},
+{c:'Ch1 · The French Revolution',
+ q:'Assertion (A): The political instability of the Directory paved the way for Napoleon Bonaparte.\nReason (R): The Directory had been designed to prevent power from being concentrated in a one-man executive.',
+ o:AR,a:1,
+ e:'Both statements are true, but the design intention does not explain the outcome; the deadlock between the Directors and the legislative councils does. A system built only to block the concentration of power proved unable to govern, and that failure invited a general.'},
+{c:'Ch1 · The French Revolution',
+ q:'The Marseillaise, now the national anthem of France, was:',
+ o:[
+    'Adapted from a hymn sung at the Tennis Court Oath in 1789',
+    'Composed by Mirabeau to accompany the storming of the Bastille',
+    'Composed by Roget de L\'Isle and first sung at Marseilles',
+    'Written by Robespierre for the festival of the Supreme Being'],
+ a:2,
+ e:'It was sung by volunteers from Marseilles as they marched into Paris in 1792, which is how it got its name. Patriotic songs of this kind were part of how the revolution reached people who could not read the philosophers.'},
+{c:'Ch1 · The French Revolution',
+ q:'Consider the following pairs of revolutionary symbols:',
+ head:'Symbol : Meaning',
+ S:[
+    ['The bundle of rods or fasces : Strength lies in unity',true],
+    ['The broken chain : The despotic power of the monarch',false]],
+ ask:'Which of the pairs given above is/are correctly matched?',
+ mode:'code',
+ e:'Chains were used to fetter slaves, so a broken chain stands for the act of becoming free; the sceptre was the symbol of royal power. Images did the work of arguments because the majority of men and women in the eighteenth century could not read or write.'},
+
+/* ============ Ch2 · Socialism and the Russian Revolution ============ */
+{c:'Ch2 · Socialism and the Russian Revolution',
+ q:'Consider the following statements about nineteenth-century liberals in Europe:',
+ S:[
+    ['They wanted a nation that tolerated all religions.',true],
+    ['They argued for an elected parliamentary government under an independent judiciary.',true],
+    ['They believed in universal adult franchise, including votes for women.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Liberals were not democrats: they felt men of property mainly should have the vote and did not want the vote for women. This is the distinction most often got wrong, because the word liberal has since changed its meaning considerably.'},
+{c:'Ch2 · Socialism and the Russian Revolution',
+ q:'Radicals in nineteenth-century Europe differed from liberals chiefly in that they:',
+ o:[
+    'Wished to abolish private property in all its forms',
+    'Sought to restore the privileges of the old landed aristocracy',
+    'Opposed any change to the existing order of European states',
+    'Wanted government based on the majority of a country\'s population'],
+ a:3,
+ e:'Many radicals supported women\'s suffragette movements and opposed the privileges of great landowners and wealthy factory owners. They were not against the existence of private property, but disliked its concentration in the hands of a few.'},
+{c:'Ch2 · Socialism and the Russian Revolution',
+ q:'Consider the following pairs:',
+ head:'Socialist : Vision',
+ S:[
+    ['Robert Owen : The cooperative community of New Harmony in Indiana',true],
+    ['Louis Blanc : Government-encouraged cooperatives replacing capitalist enterprises',true],
+    ['Karl Marx : Cooperatives should be encouraged and funded by the government',false]],
+ ask:'Which of the pairs given above is/are correctly matched?',
+ mode:'code',
+ e:'Owen was a leading English manufacturer who relied on individual initiative; Blanc held that cooperatives could not be built on a wide scale that way and wanted the state to act. Marx argued that the profit of capitalists was produced by workers, so conditions could not improve while private capitalists accumulated it.'},
+{c:'Ch2 · Socialism and the Russian Revolution',
+ q:'The Paris Commune of 1871 is remembered for bequeathing to socialists:',
+ o:[
+    'The workers\' red flag and the Marseillaise as a symbol of struggle',
+    'The first written programme of the Second International',
+    'The eight-hour working day and the secret ballot',
+    'The idea of a disciplined party of professional revolutionaries'],
+ a:0,
+ e:'The town council of Paris was taken over between March and May 1871 by a peoples\' government of workers, professionals and political activists, and was ultimately crushed by government troops. Socialists the world over nonetheless celebrated it as a prelude to a socialist revolution.'},
+{c:'Ch2 · Socialism and the Russian Revolution',
+ q:'Consider the following statements about Russia at the beginning of the twentieth century:',
+ S:[
+    ['About 85 per cent of the empire\'s population earned their living from agriculture.',true],
+    ['Russia was a major exporter of grain.',true],
+    ['Industry was concentrated in pockets, notably St Petersburg and Moscow.',true],
+    ['Women made up about half the factory labour force by 1914.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Women made up 31 per cent of the factory labour force by 1914 and were paid between half and three-quarters of a man\'s wage. The agricultural proportion was far higher than in France and Germany, where it stood between 40 and 50 per cent.'},
+{c:'Ch2 · Socialism and the Russian Revolution',
+ q:'Some Russian socialists argued that peasants were natural socialists because they:',
+ o:[
+    'Had supported the revolutionary movement of 1905 from the start',
+    'Pooled their land periodically and divided it by family need',
+    'Had already formed trade unions across the countryside',
+    'Owned no land at all and worked entirely as wage labourers'],
+ a:1,
+ e:'This custom of the commune, the mir, led them to argue that peasants rather than workers would be the main force of the revolution, and they formed the Socialist Revolutionary Party in 1900. Lenin disagreed, holding that peasants were internally differentiated between the poor and those who employed workers.'},
+{c:'Ch2 · Socialism and the Russian Revolution',
+ q:'Assertion (A): Russian peasants wanted the land of the nobles to be given to them.\nReason (R): Nobles derived their power and position from service to the Tsar rather than from local popularity.',
+ o:AR,a:0,
+ e:'This was unlike France, where during the revolution peasants in Brittany respected nobles and fought for them. Russian peasants frequently refused to pay rent and even murdered landlords, on a large scale in south Russia in 1902 and all over Russia in 1905.'},
+{c:'Ch2 · Socialism and the Russian Revolution',
+ q:'The disagreement between Bolsheviks and Mensheviks was primarily about:',
+ o:[
+    'Whether Russia should remain in the First World War',
+    'Whether the Tsar should be replaced by a constitutional monarch',
+    'How the party should be organised in a repressive society',
+    'Whether socialism was desirable as a goal at all'],
+ a:2,
+ e:'Lenin, who led the Bolshevik group, thought that in Tsarist Russia the party should be disciplined and should control the number and quality of its members. The Mensheviks thought it should be open to all, as in Germany.'},
+{c:'Ch2 · Socialism and the Russian Revolution',
+ q:'Consider the following statements about the 1905 Revolution:',
+ S:[
+    ['It followed the dismissal of four members of the Assembly of Russian Workers at the Putilov Iron Works.',true],
+    ['Over 110,000 workers struck in St Petersburg demanding an eight-hour day.',true],
+    ['The Tsar responded by granting a sovereign parliament with full powers.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Over 100 workers were killed and about 300 wounded at the Winter Palace on the day that came to be known as Bloody Sunday. What the Tsar conceded was an elected consultative Duma, not a sovereign parliament, and he dismissed the first within seventy-five days.'},
+{c:'Ch2 · Socialism and the Russian Revolution',
+ q:'Consider the following statements about the Duma:',
+ S:[
+    ['It was an elected consultative parliament conceded during the 1905 Revolution.',true],
+    ['The Tsar dismissed the first Duma within seventy-five days.',true],
+    ['The Tsar allowed all three Dumas to complete their full terms.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The re-elected second Duma was dismissed within three months, and liberals and revolutionaries were kept out of the third. The Tsar did not want any questioning of his authority or any reduction in his power, which is why constitutionalists concluded the autocracy could not be reformed.'},
+{c:'Ch2 · Socialism and the Russian Revolution',
+ q:'Consider the following statements about the First World War and the Russian empire:',
+ S:[
+    ['There were over 7 million Russian casualties by 1917.',true],
+    ['The retreating Russian army left crops intact to protect the peasantry.',false],
+    ['St Petersburg was renamed Petrograd because the old name was German.',true],
+    ['Russian industry was well supplied through the Baltic Sea throughout the war.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'As it retreated the Russian army destroyed crops and buildings to deny them to the enemy, and this created over three million refugees inside Russia. German control of the Baltic Sea also cut the country off from suppliers of industrial goods, and by 1916 railway lines began to break down.'},
+{c:'Ch2 · Socialism and the Russian Revolution',
+ q:'Consider the following statements about the February Revolution of 1917:',
+ S:[
+    ['It began with a lockout at a factory on the right bank of the Neva.',true],
+    ['Women led the way to strikes on what came to be called International Women\'s Day.',true],
+    ['The Bolshevik Party actively organised the movement from the outset.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'At that stage no political party was actively organising the movement, which is the sharpest single contrast with October. The decisive moment came on 27 February when the cavalry refused to fire on the demonstrators and three regiments mutinied to join the striking workers.'},
+{c:'Ch2 · Socialism and the Russian Revolution',
+ q:'Tsar Nicholas II abdicated on:',
+ o:[
+    '24 October 1917',
+    '21 January 1918',
+    '25 February 1917',
+    '2 March 1917'],
+ a:3,
+ e:'A delegation went to see him after the Petrograd Soviet was formed, and military commanders advised him to abdicate. Soviet leaders and Duma leaders then formed a Provisional Government, with Russia\'s future to be decided by a constituent assembly elected on universal adult suffrage.'},
+{c:'Ch2 · Socialism and the Russian Revolution',
+ q:'Consider the following demands, which formed Lenin\'s April Theses:',
+ S:[
+    ['The war should be brought to a close.',true],
+    ['Land should be transferred to the peasants.',true],
+    ['Banks should be nationalised.',true]],
+ ask:'How many of the demands given above are correct?',
+ mode:'count',
+ e:'He also argued that the Bolshevik Party should rename itself the Communist Party to indicate its new radical aims. Most others in the party were initially surprised, believing the time was not ripe and that the Provisional Government needed to be supported.'},
+{c:'Ch2 · Socialism and the Russian Revolution',
+ q:'The Military Revolutionary Committee that organised the October seizure of power was headed by:',
+ o:[
+    'Leon Trotskii',
+    'Alexander Kerenskii',
+    'Alexander Shlyapnikov',
+    'Father Gapon'],
+ a:0,
+ e:'It was appointed by the Petrograd Soviet after Lenin persuaded it on 16 October to agree to a socialist seizure of power, and the date of the event was kept a secret. Kerenskii was the Prime Minister of the Provisional Government, who left the city to summon troops.'},
+{c:'Ch2 · Socialism and the Russian Revolution',
+ q:'Consider the following statements about the calendar and the Russian Revolution:',
+ S:[
+    ['Russia followed the Julian calendar until 1 February 1918.',true],
+    ['Gregorian dates are thirteen days ahead of Julian dates.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'By the Gregorian calendar used everywhere today, the February Revolution took place on 12 March and the October Revolution on 7 November. This is why the Soviet Union celebrated the October Revolution in November.'},
+{c:'Ch2 · Socialism and the Russian Revolution',
+ q:'Consider the following changes made by the Bolsheviks after October 1917:',
+ S:[
+    ['Most industry and banks were nationalised in November 1917.',true],
+    ['Land was declared social property and peasants were allowed to seize the land of the nobility.',true],
+    ['The old titles of aristocracy were retained as marks of honour.',false],
+    ['Private ownership of large city houses was left untouched.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'The use of the old titles of aristocracy was banned, and in the cities the Bolsheviks enforced the partition of large houses according to family requirements. Nationalisation meant that the government took over both ownership and management of industry and banks.'},
+{c:'Ch2 · Socialism and the Russian Revolution',
+ q:'Assertion (A): Lenin dismissed the Constituent Assembly in January 1918.\nReason (R): The Bolsheviks had failed to gain majority support in the elections to it.',
+ o:AR,a:1,
+ e:'Both are true, but Lenin\'s stated reason was different: he held that the All Russian Congress of Soviets was more democratic than an assembly elected in uncertain conditions. The Bolsheviks thereafter became the only party in those elections, and Russia became a one-party state.'},
+{c:'Ch2 · Socialism and the Russian Revolution',
+ q:'In the Russian Civil War, the greens and the whites respectively were:',
+ o:[
+    'Peasant militias and foreign volunteers',
+    'Socialist Revolutionaries and pro-Tsarists',
+    'Pro-Tsarists and Socialist Revolutionaries',
+    'Mensheviks and liberals'],
+ a:1,
+ e:'They were backed by French, American, British and Japanese troops, all of them worried at the growth of socialism in Russia. Supporters of private property among the whites took harsh steps with peasants who had seized land, and this cost the non-Bolsheviks their popular support.'},
+{c:'Ch2 · Socialism and the Russian Revolution',
+ q:'Consider the following statements about collectivisation:',
+ S:[
+    ['Kulaks were the name given to well-to-do peasants.',true],
+    ['From 1929 the Party forced all peasants to cultivate in collective farms called kolkhoz.',true],
+    ['Production rose immediately and averted famine.',false],
+    ['The number of cattle fell by about one-third between 1929 and 1931.',true]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Bad harvests between 1930 and 1933 led to one of the most devastating famines in Soviet history, in which over 4 million died. Resisting peasants argued that they were neither rich nor against socialism, but simply did not want to work in collective farms.'},
+{c:'Ch2 · Socialism and the Russian Revolution',
+ q:'The first two Soviet Five Year Plans covered the periods:',
+ o:[
+    '1929-1934 and 1935-1940',
+    '1921-1926 and 1927-1932',
+    '1927-1932 and 1933-1938',
+    '1917-1922 and 1923-1928'],
+ a:2,
+ e:'The government fixed all prices to promote industrial growth, and between 1929 and 1933 production of oil, coal and steel rose by 100 per cent. Rapid construction also meant poor working conditions, with 550 stoppages of work in the first year at Magnitogorsk alone.'},
+
+/* ============ Ch3 · Nazism and the Rise of Hitler ============ */
+{c:'Ch3 · Nazism and the Rise of Hitler',
+ q:'Consider the following statements about the Nuremberg Tribunal:',
+ S:[
+    ['It prosecuted Nazi war criminals for Crimes against Peace, War Crimes and Crimes Against Humanity.',true],
+    ['It sentenced only eleven leading Nazis to death.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The punishment was far short of the brutality and extent of the crimes, because the Allies did not want to be as harsh on defeated Germany as they had been after the First World War. Many others were imprisoned for life.'},
+{c:'Ch3 · Nazism and the Rise of Hitler',
+ q:'Under the Treaty of Versailles, Germany lost:',
+ o:[
+    'Twenty-six per cent of its iron and seventy-five per cent of its coal',
+    'Half of its iron and half of its coal to France alone',
+    'All of its iron and coal reserves to the League of Nations',
+    'Seventy-five per cent of its iron and twenty-six per cent of its coal'],
+ a:3,
+ e:'It also lost all its overseas colonies, a tenth of its population and 13 per cent of its territory to France, Poland, Denmark and Lithuania. The War Guilt Clause held Germany responsible for the war, and compensation of six billion pounds was demanded.'},
+{c:'Ch3 · Nazism and the Rise of Hitler',
+ q:'Those who supported the Weimar Republic were mockingly called:',
+ o:[
+    'The November criminals',
+    'The Spartacist League',
+    'The Free Corps veterans',
+    'The Junker landlords'],
+ a:0,
+ e:'They were mainly Socialists, Catholics and Democrats, and became easy targets of attack in conservative nationalist circles. This mindset had a major impact on the political developments of the early 1930s.'},
+{c:'Ch3 · Nazism and the Rise of Hitler',
+ q:'Consider the following statements about the Spartacist uprising and its consequences:',
+ S:[
+    ['The Weimar Republic crushed it with the help of a war veterans organisation called the Free Corps.',true],
+    ['The Spartacists later founded the Communist Party of Germany.',true],
+    ['Communists and socialists thereafter combined effectively against Hitler.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Because they could not make common cause, the German left was never able to combine against Hitler despite its numerical strength. The uprising had followed the pattern of the Bolshevik Revolution, with soviets of workers and sailors established in many cities.'},
+{c:'Ch3 · Nazism and the Rise of Hitler',
+ q:'Consider the following statements about the German hyperinflation of 1923:',
+ S:[
+    ['Germany refused to pay reparations and France occupied the Ruhr to claim its coal.',true],
+    ['Germany retaliated with passive resistance and printed paper currency recklessly.',true],
+    ['The crisis was resolved by a British initiative called the Young Plan.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'It was the Americans who intervened, introducing the Dawes Plan, which reworked the terms of reparation to ease the financial burden on Germans. The dollar rose from 24,000 marks in April to 98,860,000 marks by December of that year.'},
+{c:'Ch3 · Nazism and the Rise of Hitler',
+ q:'By 1932, German industrial production had fallen to about what share of its 1929 level?',
+ o:[
+    'Twenty per cent',
+    'Forty per cent',
+    'Eighty per cent',
+    'Sixty per cent'],
+ a:1,
+ e:'The number of unemployed touched an unprecedented six million, and men walked the streets with placards around their necks saying they were willing to do any work. German recovery in the 1920s had depended entirely on short-term loans, largely from the USA, which were withdrawn after the Wall Street crash.'},
+{c:'Ch3 · Nazism and the Rise of Hitler',
+ q:'Consider the following statements about the defects of the Weimar constitution:',
+ S:[
+    ['Proportional representation made a majority for any one party nearly impossible.',true],
+    ['Article 48 gave the President power to impose emergency and rule by decree.',true],
+    ['Article 48 was used sparingly and the political crisis was contained.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The crisis could not be managed even with liberal use of Article 48, and people lost confidence in a democratic parliamentary system that seemed to offer no solutions. An emergency clause meant to save the constitution instead normalised rule without parliament.'},
+{c:'Ch3 · Nazism and the Rise of Hitler',
+ q:'The share of the vote won by the Nazi Party in the Reichstag rose between 1928 and 1932 from:',
+ o:[
+    '18 per cent to 44 per cent',
+    '5 per cent to 26 per cent',
+    '2.6 per cent to 37 per cent',
+    '12 per cent to 51 per cent'],
+ a:2,
+ e:'The Nazis could not effectively mobilise popular support till the early 1930s, and it was during the Great Depression that Nazism became a mass movement. The same party with the same programme had polled negligibly in a stable economy.'},
+{c:'Ch3 · Nazism and the Rise of Hitler',
+ q:'Assertion (A): Hitler became Chancellor of Germany on 30 January 1933.\nReason (R): The Nazi Party had won an absolute majority of seats in the Reichstag.',
+ o:AR,a:2,
+ e:'He was offered the Chancellorship by President Hindenburg, having rallied the conservatives to his cause; the Nazis were the largest party with 37 per cent but not a majority. His earlier attempt to seize power by force in Bavaria in 1923 had failed and he was tried for treason.'},
+{c:'Ch3 · Nazism and the Rise of Hitler',
+ q:'Consider the following pairs:',
+ head:'Measure : Effect',
+ S:[
+    ['The Fire Decree of 28 February 1933 : Indefinitely suspended freedom of speech, press and assembly',true],
+    ['The Enabling Act of 3 March 1933 : Gave Hitler powers to sideline Parliament and rule by decree',true],
+    ['The Enabling Act : Restored the federal structure of the Weimar constitution',false]],
+ ask:'Which of the pairs given above is/are correctly matched?',
+ mode:'code',
+ e:'The Enabling Act established dictatorship in Germany, and all political parties and trade unions were banned except the Nazi Party and its affiliates. The state established complete control over the economy, media, army and judiciary.'},
+{c:'Ch3 · Nazism and the Rise of Hitler',
+ q:'The Gestapo, the SS and the SD were respectively:',
+ o:[
+    'Storm troopers, secret state police and protection squads',
+    'The Security Service, storm troopers and criminal police',
+    'Protection squads, criminal police and the Security Service',
+    'Secret state police, protection squads and the Security Service'],
+ a:3,
+ e:'Alongside them were the regular police in green uniform, the SA or Storm Troopers, and the criminal police. It was the extra-constitutional powers of these forces that gave the Nazi state its reputation as the most dreaded criminal state.'},
+{c:'Ch3 · Nazism and the Rise of Hitler',
+ q:'Consider the following statements about Nazi foreign policy successes:',
+ S:[
+    ['Germany pulled out of the League of Nations in 1933.',true],
+    ['The Rhineland was reoccupied in 1936.',true],
+    ['Austria and Germany were integrated in 1938 under the slogan One people, One empire, One leader.',true],
+    ['These moves were resisted throughout by England, which considered Versailles too lenient.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Hitler had the unspoken support of England, which had considered the Versailles verdict too harsh. He went on to wrest the German-speaking Sudetenland from Czechoslovakia and then to absorb the entire country.'},
+{c:'Ch3 · Nazism and the Rise of Hitler',
+ q:'Hitler dismissed the economist Hjalmar Schacht because Schacht:',
+ o:[
+    'Advised against heavy rearmament under deficit financing',
+    'Refused to draw up the state-funded work-creation programme',
+    'Opposed the construction of the German superhighway network',
+    'Demanded the immediate resumption of reparation payments'],
+ a:0,
+ e:'Cautious people had no place in Nazi Germany, and Hitler chose war as the way out of the approaching economic crisis, with resources to be accumulated through the expansion of territory. Schacht\'s work-creation programme had produced the superhighways and the Volkswagen.'},
+{c:'Ch3 · Nazism and the Rise of Hitler',
+ q:'Consider the following statements about the Nazi worldview:',
+ S:[
+    ['It held that there was no equality between people, but only a racial hierarchy.',true],
+    ['Hitler\'s racism borrowed from Charles Darwin and Herbert Spencer.',true],
+    ['Darwin himself had advocated human intervention in the process of natural selection.',false],
+    ['Lebensraum referred to new territories to be acquired for settlement.',true]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Darwin never advocated human intervention in what he thought was a purely natural process of selection, but his ideas were used by racist thinkers to justify imperial rule over conquered peoples. Spencer had added the idea of survival of the fittest.'},
+{c:'Ch3 · Nazism and the Rise of Hitler',
+ q:'Assertion (A): Nazi anti-Semitism held that conversion was no solution to what it called the Jewish problem.\nReason (R): Hitler\'s hatred of Jews rested on pseudoscientific theories of race rather than on religious hostility alone.',
+ o:AR,a:0,
+ e:'Traditional Christian hostility had stereotyped Jews as killers of Christ and usurers, and had left conversion available as an exit. A hatred grounded in blood left none, and the problem could therefore be solved only through total elimination.'},
+{c:'Ch3 · Nazism and the Rise of Hitler',
+ q:'Consider the following provisions of the Nuremberg Laws of September 1935:',
+ S:[
+    ['Only persons of German or related blood would be German citizens.',true],
+    ['Marriages between Jews and Germans were forbidden.',true],
+    ['Jews were forbidden to fly the national flag.',true]],
+ ask:'How many of the provisions given above are correct?',
+ mode:'count',
+ e:'Extramarital relations between Jews and Germans were also made a crime, and other measures included the boycott of Jewish businesses, expulsion from government services and confiscation of property. This was the exclusion stage of a persecution that ran from 1933 to 1939.'},
+{c:'Ch3 · Nazism and the Rise of Hitler',
+ q:'The pogrom of November 1938, in which synagogues were burnt and Jewish property looted, is remembered as:',
+ o:[
+    'The day of national mourning',
+    'The night of broken glass',
+    'The final solution',
+    'The night of the long knives'],
+ a:1,
+ e:'It fell within the first stage of persecution, exclusion, which lasted from 1933 to 1939. From September 1941, in the ghettoisation stage, all Jews had to wear a yellow Star of David stamped on their passports, legal documents and houses.'},
+{c:'Ch3 · Nazism and the Rise of Hitler',
+ q:'Consider the following statements about youth in Nazi Germany:',
+ S:[
+    ['Ten-year-olds had to enter Jungvolk.',true],
+    ['At fourteen all boys had to join the Hitler Youth.',true],
+    ['Membership of the Hitler Youth nevertheless remained voluntary throughout.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'At fourteen all boys HAD to join, and all other youth organisations were systematically dissolved and finally banned. The Youth League of the Nazis, founded in 1922, was renamed Hitler Youth four years later, and there boys learnt to worship war and condemn democracy.'},
+{c:'Ch3 · Nazism and the Rise of Hitler',
+ q:'Under the Nazi system of Honour Crosses, a gold cross was awarded to a woman who bore:',
+ o:[
+    'Six or more children',
+    'Ten or more children',
+    'Eight or more children',
+    'Four or more children'],
+ a:2,
+ e:'Bronze was given for four children and silver for six. Women who bore racially undesirable children were punished, while those who produced desirable ones received favoured treatment in hospitals and concessions in shops and on theatre tickets and railway fares.'},
+{c:'Ch3 · Nazism and the Rise of Hitler',
+ q:'Consider the following statements about Nazi language and propaganda:',
+ S:[
+    ['The words kill and murder were never used in official communications.',true],
+    ['Gas chambers were labelled disinfection-areas and fitted with fake showerheads.',true],
+    ['German Jews were in fact a highly assimilated community, difficult to distinguish by appearance.',true],
+    ['The most infamous propaganda film was called The Eternal Jew.',true]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Mass killings were termed special treatment, final solution, euthanasia, selection and disinfections, while evacuation meant deporting people to gas chambers. Because German Jews were assimilated, the stereotype of flowing beards and kaftans had to be manufactured and then enforced with the yellow star.'},
+{c:'Ch3 · Nazism and the Rise of Hitler',
+ q:'Pastor Niemoeller\'s well-known lines beginning "First they came for the Communists" were written to describe:',
+ o:[
+    'The sequence of Allied bombing raids on German cities',
+    'The order in which Nazi leaders turned against one another',
+    'The stages by which the Nuremberg Laws were drafted',
+    'The silence of ordinary Germans in the face of organised crimes'],
+ a:3,
+ e:'He was a resistance fighter who observed an uncanny absence of protest among ordinary Germans. The order in his lines matches the actual chronology of 1933, in which communists were seized under the Fire Decree before parties and unions were banned.'},
+{c:'Ch3 · Nazism and the Rise of Hitler',
+ q:'Consider the following statements about how ordinary Germans responded to Nazism:',
+ S:[
+    ['Many marked the houses of Jews and reported suspicious neighbours.',true],
+    ['Many organised active resistance, braving police repression and death.',true],
+    ['Those who looked away did so purely out of fear of the Nazi terror.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Lawrence Rees found that the lack of concern was not only the product of terror: Erna Kranz recalled that salaries increased and Germany seemed to have regained its sense of purpose. Her qualification, that she could only say it for herself, is the grammar of the bystander.'},
+
+/* ============ Ch4 · Forest Society and Colonialism ============ */
+{c:'Ch4 · Forest Society and Colonialism',
+ q:'Between 1700 and 1995, the area of forest cleared worldwide for industrial uses, cultivation, pastures and fuelwood was about:',
+ o:[
+    '13.9 million sq km, or 9.3 per cent of the world\'s total area',
+    '3.9 million sq km, or 1.3 per cent of the world\'s total area',
+    '23.9 million sq km, or 19.3 per cent of the world\'s total area',
+    '9.3 million sq km, or 13.9 per cent of the world\'s total area'],
+ a:0,
+ e:'Deforestation is not a recent problem, but under colonial rule it became more systematic and extensive. In the Amazon forests or the Western Ghats it is possible to find as many as 500 different plant species in a single forest patch.'},
+{c:'Ch4 · Forest Society and Colonialism',
+ q:'Consider the following statements about the expansion of cultivation in colonial India:',
+ S:[
+    ['In 1600 about one-sixth of India\'s landmass was under cultivation.',true],
+    ['Between 1880 and 1920 cultivated area rose by 6.7 million hectares.',true],
+    ['Colonial officials regarded uncultivated forest as productive land worth preserving.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Forests were considered unproductive wilderness that had to be brought under cultivation so the land could yield agricultural products and revenue. The British also directly encouraged commercial crops like jute, sugar, wheat and cotton for European demand.'},
+{c:'Ch4 · Forest Society and Colonialism',
+ q:'The term terra nullius, used by white settlers in Australia, meant that the continent was:',
+ o:[
+    'Already divided among rival European powers',
+    'Empty and therefore available for occupation',
+    'Held in trust for its aboriginal inhabitants',
+    'Unsuitable for European settlement'],
+ a:1,
+ e:'In fact the settlers were guided through the landscape by aboriginal tracks and led by aboriginal guides, and communities such as the Ngarrindjeri had clearly demarcated territories. The idea that uncultivated land had to be taken over and improved was an argument that justified conquest.'},
+{c:'Ch4 · Forest Society and Colonialism',
+ q:'Consider the following statements about railways and Indian forests:',
+ S:[
+    ['Each mile of railway track required between 1,760 and 2,000 sleepers.',true],
+    ['By 1890 about 765,000 km of track had been laid.',false],
+    ['In the Madras Presidency alone, 35,000 trees were being cut annually for sleepers by the 1850s.',true],
+    ['The government supplied sleepers through its own departmental agencies rather than contractors.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'About 25,500 km of track had been laid by 1890, and the figure passed 765,000 km only by 1946. The government gave out contracts to individuals, and these contractors began cutting trees indiscriminately, so forests around the railway tracks fast started disappearing.'},
+{c:'Ch4 · Forest Society and Colonialism',
+ q:'Consider the following pairs:',
+ head:'Institution : Year',
+ S:[
+    ['Indian Forest Service : 1864',true],
+    ['Indian Forest Act : 1865',true],
+    ['First amendment to the Indian Forest Act : 1927',false]],
+ ask:'Which of the pairs given above is/are correctly matched?',
+ mode:'code',
+ e:'All three were the work of the system devised after Dietrich Brandis, a German expert, was invited for advice and made the first Inspector General of Forests in India. The Act was amended twice, in 1878 and again in 1927.'},
+{c:'Ch4 · Forest Society and Colonialism',
+ q:'Under the Forest Act as amended in 1878, villagers could take wood for house building or fuel from:',
+ o:[
+    'Any forest, on payment of a fee',
+    'Reserved and protected forests alike',
+    'Protected or village forests only',
+    'Reserved forests only'],
+ a:2,
+ e:'The best forests were called reserved forests, and villagers could take nothing from them even for their own use. The three categories created by that amendment were reserved, protected and village forests.'},
+{c:'Ch4 · Forest Society and Colonialism',
+ q:'Consider the following statements about scientific forestry:',
+ S:[
+    ['Natural forests with many species were cut and replaced by one type of tree in straight rows.',true],
+    ['Species like teak and sal were promoted because they gave tall, straight hardwood.',true],
+    ['Villagers and foresters shared the same idea of what a good forest looked like.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Foresters and villagers had very different ideas of what a good forest should look like: villagers wanted a mixture of species for fuel, fodder and leaves, while the department wanted timber for ships and railways. Forest officials made working plans setting how much of the plantation to cut each year.'},
+{c:'Ch4 · Forest Society and Colonialism',
+ q:'In shifting cultivation, plots are typically left fallow for:',
+ o:[
+    'Two to three years',
+    'Thirty to forty years',
+    'Six to eight months',
+    'Twelve to eighteen years'],
+ a:3,
+ e:'The fallow allows the forest to grow back, making the practice a regeneration cycle rather than the waste colonial officials took it for. Seeds are sown in the ashes after the first monsoon rains and the crop is harvested by October or November.'},
+{c:'Ch4 · Forest Society and Colonialism',
+ q:'Consider the following reasons for which the British banned shifting cultivation:',
+ S:[
+    ['Land used for cultivation every few years could not grow trees for railway timber.',true],
+    ['Burning the forest risked flames spreading to valuable timber.',true],
+    ['It made it harder for the government to calculate taxes.',true]],
+ ask:'How many of the reasons given above are correct?',
+ mode:'count',
+ e:'All three concern the state\'s needs rather than the health of the forest itself. Many communities were forcibly displaced as a result, some had to change occupations, and some resisted through large and small rebellions.'},
+{c:'Ch4 · Forest Society and Colonialism',
+ q:'Consider the following pairs of local names for shifting cultivation:',
+ head:'Name : Region',
+ S:[
+    ['Chena : Sri Lanka',true],
+    ['Milpa : Central America',true],
+    ['Jhum : Southeast Asia',false],
+    ['Chitemene : Africa',true]],
+ ask:'How many of the pairs given above are correctly matched?',
+ mode:'count',
+ e:'Jhum is an Indian term, alongside dhya, penda, bewar, nevad, podu, khandad and kumri; lading is the Southeast Asian name. The practice is traditional in many parts of Asia, Africa and South America.'},
+{c:'Ch4 · Forest Society and Colonialism',
+ q:'Consider the following statements about hunting under colonial rule:',
+ S:[
+    ['Customary hunting by forest dwellers was reclassified as poaching.',true],
+    ['Over 80,000 tigers were killed for reward between 1875 and 1925.',true],
+    ['The British believed that killing dangerous animals would civilise India.',true],
+    ['Environmentalists argued from the outset that all these species needed protection.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Only much later did environmentalists and conservators begin to argue that these species needed to be protected rather than killed. Rewards were also paid for 150,000 leopards and 200,000 wolves, and the Maharaja of Sarguja alone shot 1,157 tigers.'},
+{c:'Ch4 · Forest Society and Colonialism',
+ q:'The Korava, Karacha and Yerukula of the Madras Presidency:',
+ o:[
+    'Lost their livelihoods and began to be called criminal tribes',
+    'Were granted exclusive rights to trade in forest produce',
+    'Were appointed as forest guards by the Forest Department',
+    'Migrated to Assam to work as tea plantation supervisors'],
+ a:0,
+ e:'They were forced to work instead in factories, mines and plantations under government supervision, after grazing and hunting by local people were restricted and trade was monopolised by large European firms. Santhals, Oraons and Gonds were separately recruited to Assam tea plantations at low wages.'},
+{c:'Ch4 · Forest Society and Colonialism',
+ q:'Consider the following statements about Bastar before the rebellion:',
+ S:[
+    ['Villages paid a fee called devsari, dand or man for taking wood from another village\'s forest.',true],
+    ['Some villages engaged watchmen paid in grain by each household.',true],
+    ['Headmen of villages in a pargana met annually at a big hunt to discuss forest matters.',true]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Bastar therefore already had defined boundaries, a transfer price, an enforcement service and a governance forum. The people believed each village had been given its land by the Earth, and looked after it with offerings at each agricultural festival.'},
+{c:'Ch4 · Forest Society and Colonialism',
+ q:'In 1910, the messages circulated between villages of Bastar inviting them to rebel took the form of:',
+ o:[
+    'Red flags raised on the boundary of each pargana',
+    'Mango boughs, a lump of earth, chillies and arrows',
+    'Written proclamations sealed by the local Raja',
+    'Drums beaten from village to village at nightfall'],
+ a:1,
+ e:'Every village contributed something to the rebellion expenses, and although there was no single leader, Gunda Dhur of village Nethanar is remembered as an important figure. The initiative was taken by the Dhurwas of the Kanger forest, where reservation had first taken place.'},
+{c:'Ch4 · Forest Society and Colonialism',
+ q:'Consider the following statements about the outcome of the Bastar rebellion:',
+ S:[
+    ['It took the British three months, from February to May, to regain control.',true],
+    ['Gunda Dhur was captured and publicly executed at Jagdalpur.',false],
+    ['Work on reservation was suspended and the area to be reserved was reduced by about half.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The British never managed to capture Gunda Dhur, and the halving of the reserved area was a major victory for the rebels. The adivasi leaders had tried to negotiate, but the British surrounded their camps and fired upon them.'},
+{c:'Ch4 · Forest Society and Colonialism',
+ q:'The blandongdiensten system in Dutch Java involved:',
+ o:[
+    'Paying villagers a wage for every sleeper they produced',
+    'Settling shifting cultivators permanently on irrigated land',
+    'Exempting villages from rent in return for free labour',
+    'Granting villagers hereditary rights over teak plantations'],
+ a:2,
+ e:'The Dutch first imposed rents on land cultivated in the forest, then remitted them for villages that worked collectively at cutting and transporting timber. Later the exemption was replaced by small wages, but the right to cultivate forest land was restricted.'},
+
+/* ============ Ch5 · Pastoralists in the Modern World ============ */
+{c:'Ch5 · Pastoralists in the Modern World',
+ q:'Consider the following pairs:',
+ head:'Community : Region',
+ S:[
+    ['Gujjar Bakarwals : Jammu and Kashmir',true],
+    ['Gaddi shepherds : Himachal Pradesh',true],
+    ['Dhangars : Rajasthan',false],
+    ['Raikas : Maharashtra',false]],
+ ask:'How many of the pairs given above are correctly matched?',
+ mode:'count',
+ e:'Dhangars belong to Maharashtra and Raikas to the deserts of Rajasthan, so the last two are reversed. The Gujjar Bakarwals crossed the Pir Panjal passes into the Kashmir valley, while the Gaddis moved to Lahul and Spiti.'},
+{c:'Ch5 · Pastoralists in the Modern World',
+ q:'Bhabar and bugyal refer respectively to:',
+ o:[
+    'Vast high-mountain meadows and a dry forested area below the foothills',
+    'A winter camp and a summer camp of the Gaddi shepherds',
+    'A grazing fee and a grazing permit in the Kumaon hills',
+    'A dry forested area below the foothills and vast high-mountain meadows'],
+ a:3,
+ e:'Gujjar cattle herders of Garhwal and Kumaon came down to the bhabar in winter and went up to the bugyals in summer. The bugyals lie above 12,000 feet, are under snow in winter and come to life after April.'},
+{c:'Ch5 · Pastoralists in the Modern World',
+ q:'Assertion (A): Mountain pastoralists moved between summer and winter pastures in an annual cycle.\nReason (R): Continuous movement allowed pastures to recover and prevented their overuse.',
+ o:AR,a:1,
+ e:'Both are true, but the immediate reason for moving was that high pastures lie under snow in winter and low scrub is exhausted in summer. Pasture recovery was a consequence of the movement rather than its motive, though it is the reason ecologists defend the system.'},
+{c:'Ch5 · Pastoralists in the Modern World',
+ q:'Consider the following statements about the Dhangars of Maharashtra:',
+ S:[
+    ['They spent the monsoon on the semi-arid central plateau, where only dry crops like bajra could be sown.',true],
+    ['They reached the Konkan in October, after about a month\'s march.',true],
+    ['Konkani peasants resented their arrival and drove their flocks away.',false],
+    ['They stayed on in the Konkan through the monsoon months.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Konkani peasants welcomed them because the flocks manured the fields after the kharif harvest and fed on the stubble, and gave the shepherds rice to carry back to a grain-scarce plateau. The Dhangars left with the onset of the monsoon, because sheep could not tolerate wet conditions.'},
+{c:'Ch5 · Pastoralists in the Modern World',
+ q:'Unlike mountain pastoralists, the movement of pastoral groups on the plateaus and deserts was governed by:',
+ o:[
+    'The alternation of the monsoon and the dry season',
+    'The freezing of high passes in winter',
+    'The dates fixed by the annual cattle fairs',
+    'The rotation of crops in neighbouring villages'],
+ a:0,
+ e:'In the dry season herders moved to the coastal tracts and left when the rains came, since only buffaloes liked the swampy wet conditions of the coast during the monsoon. Other herds had to be shifted to the dry plateau at that time.'},
+{c:'Ch5 · Pastoralists in the Modern World',
+ q:'Consider the following statements about the Waste Land Rules:',
+ S:[
+    ['Uncultivated land was taken over and given to select individuals with concessions.',true],
+    ['In most areas the lands taken over were grazing tracts used regularly by pastoralists.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'To colonial officials all uncultivated land appeared unproductive, since it yielded neither revenue nor agricultural produce. Some of those granted the land were made headmen of villages in the newly cleared areas.'},
+{c:'Ch5 · Pastoralists in the Modern World',
+ q:'Under the Criminal Tribes Act of 1871, the communities notified were:',
+ o:[
+    'Given land grants if they took up cultivation',
+    'Declared criminal by nature and by birth itself',
+    'Required to register offences with the magistrate',
+    'Permitted to move freely on paying a grazing tax'],
+ a:1,
+ e:'They were expected to live only in notified village settlements, were not allowed to move out without a permit, and were kept under continuous watch by the village police. The colonial government wanted a settled population that was easy to identify and control.'},
+{c:'Ch5 · Pastoralists in the Modern World',
+ q:'Consider the following statements about the grazing tax:',
+ S:[
+    ['Pastoralists paid tax on every animal they grazed on the pastures.',true],
+    ['Between the 1850s and 1880s the right to collect it was auctioned to contractors.',true],
+    ['From the 1880s each herder was given a pass recording his cattle and the tax paid.',true]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Contractors tried to extract as high a tax as they could, to recover their bid and profit within the year. The pass was the real innovation, since it converted a moving herd into something countable and checkable.'},
+{c:'Ch5 · Pastoralists in the Modern World',
+ q:'Assertion (A): The quality of grazing lands declined under colonial rule.\nReason (R): Restrictions on pastoral movement meant grazing lands came to be used continuously.',
+ o:AR,a:0,
+ e:'Pastoral movements had previously allowed time for the natural restoration of vegetation growth. Confinement therefore produced the overgrazing that the restrictions were officially meant to prevent, and underfed cattle died in large numbers during scarcities and famines.'},
+{c:'Ch5 · Pastoralists in the Modern World',
+ q:'After 1947 the Raikas could no longer graze their camels on the banks of the Indus, and in recent years have migrated instead to:',
+ o:[
+    'Madhya Pradesh',
+    'Karnataka',
+    'Haryana',
+    'Gujarat'],
+ a:2,
+ e:'The new political boundaries between India and Pakistan stopped their movement into Sindh. In Haryana sheep can graze on agricultural fields after the harvests are cut, at the time when those fields need the manure the animals provide.'},
+{c:'Ch5 · Pastoralists in the Modern World',
+ q:'Consider the following statements about pastoralism in Africa:',
+ S:[
+    ['Over half the world\'s pastoral population lives there.',true],
+    ['Fewer than two million Africans now depend on pastoral activity.',false],
+    ['Most African pastoralists live in the humid forest belt of the continent.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Over 22 million Africans still depend on pastoral activity, and most live in semi-arid grasslands or arid deserts where rainfed agriculture is difficult, not in the forest belt. The communities include Bedouins, Berbers, Maasai, Somali, Boran and Turkana.'},
+{c:'Ch5 · Pastoralists in the Modern World',
+ q:'Consider the following statements about the loss of Maasai grazing lands:',
+ S:[
+    ['In 1885 Maasailand was cut in half by a boundary between British Kenya and German Tanganyika.',true],
+    ['The Maasai lost about 60 per cent of their pre-colonial lands.',true],
+    ['Serengeti National Park was created over 14,760 sq km of Maasai grazing land.',true],
+    ['Pastoralists retained the right to graze their herds inside the game reserves.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Pastoralists could neither hunt animals nor graze their herds in these reserves, which were very often on land that had traditionally been regular grazing ground. The best grazing lands were also taken over for white settlement, confining the Maasai to an arid zone with poor pastures.'},
+{c:'Ch5 · Pastoralists in the Modern World',
+ q:'An enquiry of 1930 recorded Maasai holdings in Kenya of 720,000 cattle. In the severe drought years 1933 and 1934:',
+ o:[
+    'About a tenth of the cattle in the Reserve died',
+    'Cattle numbers were maintained by moving herds north',
+    'The colonial government compensated herders for their losses',
+    'Over half the cattle in the Maasai Reserve died'],
+ a:3,
+ e:'Nomadism had traditionally allowed pastoralists to survive bad times by moving to areas where forage was available. Confined within a reserve and cut off from the best grazing lands, the Maasai could not shift their cattle, so a natural event became a catastrophe.'},
+{c:'Ch5 · Pastoralists in the Modern World',
+ q:'Consider the following statements about social change in Maasai society under colonial rule:',
+ S:[
+    ['The British appointed chiefs of different sub-groups and restricted raiding and warfare.',true],
+    ['The traditional authority of both elders and warriors was adversely affected.',true],
+    ['A new distinction between wealthy and poor pastoralists developed.',true]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Appointed chiefs accumulated wealth, lent money to poor neighbours who needed cash to pay taxes, and survived war and drought because they had non-pastoral income as well. Poor pastoralists who depended only on livestock lost nearly everything and looked for work in the towns.'},
+
+/* ============ Ch6 · Supplement — Peasants, Farmers and Clothing ============ */
+{c:'Ch6 · Supplement — Peasants, Farmers and Clothing',
+ q:'Consider the following statements about the open field system in England:',
+ S:[
+    ['Each villager was allocated strips of land at a public meeting at the beginning of each year.',true],
+    ['The strips were of varying quality and were often located in different places.',true],
+    ['The common land beyond the strips was reserved for the landlord alone.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The scattering was deliberate: the effort was to ensure that everyone had a mix of good and bad land, which spread the risk of a local crop failure. For the poor, the commons supplemented meagre income, sustained cattle and helped them tide over bad times.'},
+{c:'Ch6 · Supplement — Peasants, Farmers and Clothing',
+ q:'The sixteenth-century enclosures in England differed from those after 1750 in that the earlier ones were made for:',
+ o:[
+    'Wool production, when world wool prices rose',
+    'Grain production, to feed a growing urban population',
+    'Timber plantations, to supply the Royal Navy',
+    'Deer parks and hunting grounds for the nobility'],
+ a:0,
+ e:'The early enclosures were created by individual landlords and were not supported by the state or the church. After the mid-eighteenth century Parliament passed 4,000 Acts legalising enclosures, and 6 million acres were enclosed between 1750 and 1850.'},
+{c:'Ch6 · Supplement — Peasants, Farmers and Clothing',
+ q:'Consider the following statements about English agriculture after 1780:',
+ S:[
+    ['Grain production grew as quickly as population, breaking the older pattern of food shortages.',true],
+    ['In 1868 England produced about 80 per cent of the food it consumed.',true],
+    ['The increase came chiefly from radical innovations in agricultural technology.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The increase was made possible by bringing new lands under cultivation, as landlords sliced up pasturelands, carved up open fields, cut up forest commons and took over marshes. The one improvement in use, turnip and clover, had been adopted from about the 1660s.'},
+{c:'Ch6 · Supplement — Peasants, Farmers and Clothing',
+ q:'Captain Swing, whose name was signed on threatening letters sent to English farmers in 1830, was:',
+ o:[
+    'The inventor of the threshing machine',
+    'A mythic name rather than an actual person',
+    'A dismissed soldier who led the rioters',
+    'A radical MP who defended the rural poor'],
+ a:1,
+ e:'About 387 threshing machines were broken in southern England in two years, and alarmed landlords destroyed many of their own. Government action was severe: 1,976 prisoners were tried, nine men were hanged, 505 transported and 644 put behind bars.'},
+{c:'Ch6 · Supplement — Peasants, Farmers and Clothing',
+ q:'Consider the following statements about the position of English labourers by 1800:',
+ S:[
+    ['The practice of labourers living with landowners and eating at the master\'s table was disappearing.',true],
+    ['Labourers were increasingly paid wages and employed only during harvest time.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'A year-round relationship of maintenance was replaced by a seasonal cash transaction, so work became insecure, employment uncertain and income unstable. For a very large part of the year the poor had no work at all.'},
+{c:'Ch6 · Supplement — Peasants, Farmers and Clothing',
+ q:'Cyrus McCormick is associated with the invention in 1831 of the:',
+ o:[
+    'Combined harvester',
+    'Disk plough',
+    'Mechanical reaper',
+    'Steam tractor'],
+ a:2,
+ e:'It could cut in one day as much as five men could cut with cradles and sixteen men with sickles. By the early twentieth century most farmers were using combined harvesters, with which 500 acres of wheat could be harvested in two weeks.'},
+{c:'Ch6 · Supplement — Peasants, Farmers and Clothing',
+ q:'Consider the following statements about wheat farming in the USA:',
+ S:[
+    ['Area under wheat rose from about 45 million acres in 1910 to 74 million acres in 1919.',true],
+    ['President Wilson urged farmers to plant more wheat during the First World War.',true],
+    ['Russian supplies of wheat had been cut off, so the USA had to feed Europe.',true],
+    ['Big farmers known as wheat barons controlled as much as 2,000 to 3,000 acres individually.',true]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'With power-driven machinery four men could plough, seed and harvest 2,000 to 4,000 acres in a season. The Russian supplies had failed because that country was collapsing into revolution, which is what an integrated world market looks like from the other end.'},
+{c:'Ch6 · Supplement — Peasants, Farmers and Clothing',
+ q:'Consider the following statements about the Dust Bowl of the 1930s:',
+ S:[
+    ['Black blizzards were very often 7,000 to 8,000 feet high.',true],
+    ['The early 1930s were years of persistent drought.',true],
+    ['Ordinary duststorms became black blizzards because the landscape had been stripped of the grass holding it together.',true]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Drought was the trigger, but zealous farmers had recklessly uprooted all vegetation and tractors had broken the sod into dust. After the 1930s the settlers realised that they had to respect the ecological conditions of each region.'},
+{c:'Ch6 · Supplement — Peasants, Farmers and Clothing',
+ q:'Assertion (A): British merchants sought a commodity they could sell in China.\nReason (R): Tea could otherwise be bought only with silver coins or bullion, causing an outflow of treasure from England.',
+ o:AR,a:0,
+ e:'England produced nothing that could easily be sold in China, and the Manchu rulers were unwilling to allow the entry of foreign goods. It was believed that a loss of treasure would impoverish the nation, so opium became the answer to a balance of payments problem.'},
+{c:'Ch6 · Supplement — Peasants, Farmers and Clothing',
+ q:'Consider the following statements about the opium trade with China:',
+ S:[
+    ['The Portuguese had introduced opium into China in the early sixteenth century.',true],
+    ['The Chinese Emperor had forbidden its production and sale except for medicinal purposes.',true],
+    ['Western merchants began an illegal trade in opium in the mid-eighteenth century.',true],
+    ['By the early 1820s about 10,000 crates were being smuggled into China annually.',true]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Fifteen years later, over 35,000 crates were being unloaded every year. Lin Ze-xu estimated over 4 million opium smokers in China in 1839, while a British doctor in Canton put the figure at 12 million.'},
+{c:'Ch6 · Supplement — Peasants, Farmers and Clothing',
+ q:'In 1839, Lin Ze-xu\'s action at Canton included:',
+ o:[
+    'Expelling all Chinese officials found to be using opium',
+    'Imposing a heavy duty on every crate of opium landed',
+    'Sending a fleet to blockade the ports of British India',
+    'Burning 20,000 crates of opium and scattering the ashes'],
+ a:3,
+ e:'He also arrested 1,600 men involved in the trade and confiscated 11,000 pounds of opium before announcing that Canton was closed to foreign trade. Britain then declared war, and the treaties that followed legalised the opium trade and opened China to foreign merchants.'},
+{c:'Ch6 · Supplement — Peasants, Farmers and Clothing',
+ q:'Consider the following reasons why Indian cultivators were unwilling to grow opium:',
+ S:[
+    ['Poppy had to be grown on the best, well-manured land near villages, where pulses were usually produced.',true],
+    ['Most cultivators owned their land outright and paid no rent on it.',false],
+    ['The plant was delicate and nurturing it left no time for other crops.',true],
+    ['The government paid a price so high that it attracted speculation.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'The price paid was in fact very low, making the crop unprofitable. Many cultivators also owned no land at all and had to lease it, and rent on the good land near villages was very high; displacing pulses from that land cut food security as well as income.'},
+{c:'Ch6 · Supplement — Peasants, Farmers and Clothing',
+ q:'The government\'s opium revenue consisted of:',
+ o:[
+    'The gap between the price paid to cultivators and that charged to agents',
+    'A duty levied on every chest of opium landed at the port of Canton',
+    'The rent collected from the land on which the poppy was grown',
+    'A licence fee paid by village headmen for the right to advance money'],
+ a:0,
+ e:'The government was therefore reluctant to raise the price, since doing so would have cut its own income directly. Cultivators who took advances lost the right to choose their crop, their buyer and their price at once.'},
+{c:'Ch6 · Supplement — Peasants, Farmers and Clothing',
+ q:'Consider the following statements about sumptuary laws:',
+ S:[
+    ['In France they were in force from about 1294 until the Revolution of 1789.',true],
+    ['They regulated clothing by social rank as well as by income.',true],
+    ['All sumptuary laws were framed solely to emphasise social hierarchy.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Some were passed to protect home production against imports: sixteenth-century England compelled all persons over six, except those of high position, to wear English woollen caps on Sundays and holy days. That law remained in effect for twenty-six years and helped build the English woollen industry.'},
+{c:'Ch6 · Supplement — Peasants, Farmers and Clothing',
+ q:'Amelia Bloomer, the American dress reformer, is remembered for launching:',
+ o:[
+    'The Rational Dress Society in England in 1881',
+    'Loose tunics worn over ankle-length trousers',
+    'The first factory producing ready-made women\'s clothing',
+    'A magazine campaigning against the wearing of corsets'],
+ a:1,
+ e:'The trousers were known as bloomers, rationals or knickerbockers. The Rational Dress Society was separately started in England in 1881 but did not achieve significant results, and it was the First World War that brought radical change to women\'s clothing.'},
+{c:'Ch6 · Supplement — Peasants, Farmers and Clothing',
+ q:'Consider the following statements about women\'s clothing and the First World War:',
+ S:[
+    ['Clothes had been ankle length since the thirteenth century and remained so until 1914.',true],
+    ['By 1915 the hemline of the skirt rose to mid-calf.',true],
+    ['Dress reformers had already succeeded in shortening skirts by the 1880s.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'They wore a working uniform of blouse and trousers, later replaced by khaki overalls and caps, and took to cutting their hair short for convenience. Fifty years of organised campaigning by dress reformers had failed where changed work succeeded within a year.'},
+{c:'Ch6 · Supplement — Peasants, Farmers and Clothing',
+ q:'Consider the following statements about the Shanar or Nadar community of Travancore:',
+ S:[
+    ['They were a community of toddy tappers working under Nair landlords.',true],
+    ['They were prohibited from using umbrellas and from wearing shoes or golden ornaments.',true],
+    ['Shanar women converts began wearing tailored blouses in the 1820s.',true],
+    ['The government of Travancore supported the change from the outset.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'A proclamation of 1829 ordered Shanar women to abstain in future from covering the upper parts of the body. Complaints had been filed in court especially because the Shanars were also refusing to render free labour for the upper castes.'},
+{c:'Ch6 · Supplement — Peasants, Farmers and Clothing',
+ q:'After the riots of October 1859, the Travancore government permitted Shanar women to cover their upper bodies:',
+ o:[
+    'Only if they had converted to Christianity beforehand',
+    'On payment of an annual fee to the local temple fund',
+    'In any manner whatever, but not like high-caste women',
+    'Only within their own homes and their places of worship'],
+ a:2,
+ e:'The concession was the covering; the reservation was the manner, because what upper castes could not tolerate was visual equivalence rather than the covering itself. Caste is maintained by legible difference, and the blouse threatened the legibility.'},
+{c:'Ch6 · Supplement — Peasants, Farmers and Clothing',
+ q:'Consider the following statements about dress codes under British rule:',
+ S:[
+    ['In 1830 Europeans were forbidden from wearing Indian clothes at official functions.',true],
+    ['Under Lord Dalhousie, Indians had to remove their shoes when entering any government institution.',true],
+    ['The shoe-respect rule was abandoned within a year of being imposed.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The rule was not short-lived: it took many years before shoes were permitted into the courtroom, and in 1862 Manockjee Cowasjee Entee was barred entry at Surat for refusing. Only those who wore European clothes were exempted, which shows dress was marking rank rather than culture.'},
+{c:'Ch6 · Supplement — Peasants, Farmers and Clothing',
+ q:'Rabindranath Tagore suggested that India\'s national dress should combine elements of:',
+ o:[
+    'Indian and European dress',
+    'Bengali and Parsi dress',
+    'Northern and southern regional dress',
+    'Hindu and Muslim dress'],
+ a:3,
+ e:'The chapkan, a long buttoned coat, was accordingly considered the most suitable dress for men. Jnanadanandini Devi separately adapted the Parsi style of draping the sari, which spread among Brahmo Samaji women as the Brahmika sari.'},
+{c:'Ch6 · Supplement — Peasants, Farmers and Clothing',
+ q:'Consider the following stages in Mahatma Gandhi\'s clothing:',
+ S:[
+    ['He wore a Western suit as a student in London in 1888.',true],
+    ['He first appeared in a lungi and kurta with his head shaved at Durban in 1913.',true],
+    ['He decided to dress like a Kathiawadi peasant on returning to India in 1915.',true],
+    ['He adopted the short dhoti in 1921.',true]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'He announced the change on 22 September 1921, saying he adopted it because he had always hesitated to advise anything he might not be prepared to follow himself. He intended to experiment for a month or two, but soon saw it as his duty to the poor and never wore any other dress.'},
+{c:'Ch6 · Supplement — Peasants, Farmers and Clothing',
+ q:'In adopting khadi and the short dhoti, Mahatma Gandhi consciously rejected:',
+ o:[
+    'The well-known clothes of the Indian ascetic',
+    'The Kathiawadi peasant dress he had worn since 1915',
+    'The use of any Indian handwoven cloth',
+    'The suggestion that clothing had political meaning'],
+ a:0,
+ e:'He adopted instead the dress of the poorest Indian, for whom khadi, white and coarse, was a sign of purity, simplicity and poverty. The ascetic\'s robe claims to have risen above ordinary people, while the poor man\'s loincloth claims to have come down to them.'},
+{c:'Ch6 · Supplement — Peasants, Farmers and Clothing',
+ q:'Consider the following statements about the limits of khadi:',
+ S:[
+    ['Motilal Nehru adopted the dhoti and kurta, but these were not made of coarse cloth.',true],
+    ['Babasaheb Ambedkar never gave up the Western-style suit.',true],
+    ['Many Dalits wore three-piece suits, shoes and socks in public as a statement of self-respect.',true]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Those deprived by caste norms for centuries found Western dress liberating, because coarse cloth had been the imposed uniform of humiliation rather than a chosen simplicity. A Maharashtrian woman wrote to Gandhi in 1928 that khadi was costly and her elders would not hear of reducing a nine-yard sari to six.'},
+{c:'Ch6 · Supplement — Peasants, Farmers and Clothing',
+ q:'Consider the following statements about the Gandhi cap:',
+ S:[
+    ['Gandhi wore the cap continuously from 1915 until his death.',false],
+    ['No princely state ever attempted to prohibit the wearing of the cap.',false],
+    ['A group of Santhals in 1922 believed it would protect them from bullets.',true]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Three of those Santhals died as a result, which shows how differently a mass movement can receive a leader\'s symbol. Gandhi himself wore the cap only for two years from 1919 before giving it up, and the Gwalior state tried to prohibit it in 1921.'},
+{c:'Ch6 · Supplement — Peasants, Farmers and Clothing',
+ q:'Consider the following statements about Indian textiles and the Swadeshi movement:',
+ S:[
+    ['India accounted for one-fourth of the world\'s manufactured goods in the seventeenth century.',true],
+    ['There were a million weavers in Bengal alone in the middle of the eighteenth century.',true],
+    ['The change of dress was adopted most readily by the poorest classes.',false],
+    ['Khadi was cheaper and easier to obtain than mill-made cloth.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Khadi was coarser, more expensive and difficult to obtain, so the change of dress appealed largely to the upper castes and classes rather than to those who could not afford it. After fifteen years many among the upper classes also returned to wearing European dress.'}
+
+];
+
+/* ---------- Engine (identical across classes) ---------- */
+function shuffle(arr){const a=arr.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+
+/* Canonical Prelims answer-code sets. For an S-question the statements are
+   reshuffled on every attempt and the correct code is worked out from which
+   ones landed where — so neither the option nor the position of the false
+   statement can be memorised. */
+const SET_CODE3=["1 and 2 only","2 and 3 only","1 and 3 only","1, 2 and 3"];
+const SET_CODE2=["1 only","2 only","Both 1 and 2","Neither 1 nor 2"];
+const SET_COUNT=["Only one","Only two","All three","None"];
+const SET_COUNT4=["Only one","Only two","Only three","All four"];
+function buildCode(mode,n,trueIdx){
+  const c=trueIdx.length;
+  if(mode==='count'){
+    const set=n===4?SET_COUNT4:SET_COUNT;
+    const text=c===0?'None':c===1?'Only one':c===2?'Only two':c===3?(n===3?'All three':'Only three'):'All four';
+    return {set:set,text:text};
+  }
+  if(n===2){
+    const text=c===2?'Both 1 and 2':c===0?'Neither 1 nor 2':(trueIdx[0]===1?'1 only':'2 only');
+    return {set:SET_CODE2,text:text};
+  }
+  const text=c===3?'1, 2 and 3':trueIdx[0]+' and '+trueIdx[1]+' only';
+  return {set:SET_CODE3,text:text};
+}
+function joinList(a){return a.length===1?String(a[0]):a.slice(0,-1).join(', ')+' and '+a[a.length-1];}
+function verdictLine(n,trueIdx,unit){
+  const U=unit==='pair'?'pair':'statement', Uc=U.charAt(0).toUpperCase()+U.slice(1);
+  const all=[];for(let i=1;i<=n;i++)all.push(i);
+  const f=all.filter(function(i){return trueIdx.indexOf(i)<0;});
+  if(f.length===0)return 'All the '+U+'s here are correct.';
+  if(trueIdx.length===0)return 'None of the '+U+'s here is correct.';
+  return Uc+(trueIdx.length===1?' ':'s ')+joinList(trueIdx)+(trueIdx.length===1?' is':' are')+' correct; '+
+         U+(f.length===1?' ':'s ')+joinList(f)+(f.length===1?' is not.':' are not.');
+}
+function buildSession(pool){return shuffle(pool).map(function(item){
+  let lines=item.L,options,correctText,auto='';
+  if(item.S){
+    const st=shuffle(item.S), n=st.length, trueIdx=[];
+    lines=st.map(function(s){return s[0];});
+    st.forEach(function(s,i){if(s[1])trueIdx.push(i+1);});
+    const built=buildCode(item.mode||'code',n,trueIdx);
+    options=built.set.slice(); correctText=built.text;
+    auto=verdictLine(n,trueIdx,item.unit)+' ';
+  } else { options=item.o.slice(); correctText=item.o[item.a]; }
+  const order=shuffle(options.map(function(text,i){return {text:text,i:i};}));
+  return {chapter:item.c,question:item.q,head:item.head,lines:lines,ask:item.ask,
+          options:order.map(function(o){return o.text;}),
+          correct:order.findIndex(function(o){return o.text===correctText;}),
+          explain:auto+item.e};
+});}
+let session=[],current=0,answers=[],startTime=null,timerInterval=null,reviewMode=false,activeScope="";
+const el=id=>document.getElementById(id);
+const screens={menu:el('menu'),quiz:el('quiz'),result:el('result')};
+function show(name){Object.keys(screens).forEach(k=>screens[k].classList.toggle('is-active',k===name));}
+el('courseEyebrow').textContent=COURSE.eyebrow; el('courseTitle').textContent=COURSE.title; el('courseLede').textContent=COURSE.lede;
+function chapterCount(name){return QUESTIONS.filter(q=>q.c===name).length;}
+function buildMenu(){
+  const list=el('lessonList'); list.innerHTML='';
+  const combined=document.createElement('button');
+  combined.className='lesson-card combined'; combined.type='button';
+  combined.innerHTML='<span class="lesson-num">★</span><span class="lesson-body"><span class="lesson-title">Full Syllabus — Combined</span><span class="lesson-meta">All '+CHAPTERS.length+' lessons · '+QUESTIONS.length+' questions, shuffled</span></span><span class="lesson-go">→</span>';
+  combined.addEventListener('click',()=>startQuiz(null)); list.appendChild(combined);
+  CHAPTERS.forEach((name,idx)=>{
+    const shortTitle=name.replace(/^Ch\d+ · /,'');
+    const btn=document.createElement('button'); btn.className='lesson-card'; btn.type='button';
+    const num=document.createElement('span'); num.className='lesson-num'; num.textContent=String(idx+1);
+    const body=document.createElement('span'); body.className='lesson-body';
+    const t=document.createElement('span'); t.className='lesson-title'; t.textContent=shortTitle;
+    const m=document.createElement('span'); m.className='lesson-meta'; m.textContent=chapterCount(name)+' questions';
+    body.appendChild(t); body.appendChild(m);
+    const go=document.createElement('span'); go.className='lesson-go'; go.textContent='→';
+    btn.appendChild(num); btn.appendChild(body); btn.appendChild(go);
+    btn.addEventListener('click',()=>startQuiz(name)); list.appendChild(btn);
+  });
+}
+function formatTime(sec){const m=Math.floor(sec/60).toString().padStart(2,'0');const s=Math.floor(sec%60).toString().padStart(2,'0');return m+':'+s;}
+function startTimer(){startTime=Date.now();clearInterval(timerInterval);timerInterval=setInterval(()=>{el('timer').textContent=formatTime((Date.now()-startTime)/1000);},1000);}
+function stopTimer(){clearInterval(timerInterval);}
+function startQuiz(chapter){
+  const pool=chapter?QUESTIONS.filter(q=>q.c===chapter):QUESTIONS;
+  activeScope=chapter?chapter.replace(/^Ch\d+ · /,''):"Full Syllabus";
+  session=buildSession(pool); answers=new Array(session.length).fill(null); current=0; reviewMode=false;
+  show('quiz'); el('timer').textContent='00:00'; startTimer(); renderQuestion();
+}
+function renderStem(item){
+  const box=el('qblock'); box.innerHTML='';
+  const stem=document.createElement('p'); stem.className='question'; stem.textContent=item.question; box.appendChild(stem);
+  if(item.head){const h=document.createElement('p'); h.className='stmt-head'; h.textContent=item.head; box.appendChild(h);}
+  if(item.lines&&item.lines.length){
+    const ol=document.createElement('ul'); ol.className='stmt-list';
+    item.lines.forEach((line,i)=>{
+      const li=document.createElement('li');
+      const n=document.createElement('span'); n.className='sn'; n.textContent=(i+1)+'.';
+      const t=document.createElement('span'); t.className='st';
+      const split=line.indexOf(' : ');
+      if(split>-1){
+        t.textContent=line.slice(0,split);
+        const r=document.createElement('span'); r.className='sr'; r.textContent=' — '+line.slice(split+3);
+        t.appendChild(r);
+      } else { t.textContent=line; }
+      li.appendChild(n); li.appendChild(t); ol.appendChild(li);
+    });
+    box.appendChild(ol);
+  }
+  if(item.ask){const a=document.createElement('p'); a.className='ask'; a.textContent=item.ask; box.appendChild(a);}
+}
+function renderQuestion(){
+  const item=session[current]; const chosen=answers[current]; const reveal=chosen!==null||reviewMode;
+  el('chapterTag').textContent=item.chapter; el('counter').textContent=(current+1)+' / '+session.length;
+  el('progressFill').style.width=((current+1)/session.length*100)+'%';
+  renderStem(item);
+  const optsBox=el('options'); optsBox.innerHTML=''; const letters=['A','B','C','D','E'];
+  item.options.forEach((opt,i)=>{
+    const btn=document.createElement('button'); btn.className='option'; btn.type='button';
+    const l=document.createElement('span'); l.className='opt-letter'; l.textContent=letters[i];
+    const t=document.createElement('span'); t.className='opt-text'; t.textContent=opt;
+    btn.appendChild(l); btn.appendChild(t);
+    if(reveal){btn.disabled=true; if(i===item.correct)btn.classList.add('correct'); else if(i===chosen)btn.classList.add('incorrect');}
+    btn.addEventListener('click',()=>selectOption(i)); optsBox.appendChild(btn);
+  });
+  const fb=el('feedback');
+  if(reveal){
+    fb.hidden=false; let verdict,cls;
+    if(chosen===null){verdict='Skipped.';cls='bad';} else if(chosen===item.correct){verdict='Correct.';cls='good';} else {verdict='Not quite.';cls='bad';}
+    fb.className='feedback '+cls;
+    fb.innerHTML=''; const v=document.createElement('span'); v.className='verdict'; v.textContent=verdict;
+    fb.appendChild(v); fb.appendChild(document.createTextNode(' '+item.explain));
+  } else { fb.hidden=true; }
+  el('prevBtn').disabled=current===0;
+  const nextBtn=el('nextBtn');
+  nextBtn.textContent = reviewMode ? (current===session.length-1?'Back to results':'Next →') : (current===session.length-1?'Finish':'Next →');
+  el('options').scrollIntoView&&el('qblock').parentElement.scrollTo({top:0});
+}
+function selectOption(i){ if(reviewMode||answers[current]!==null)return; answers[current]=i; renderQuestion(); }
+function finishQuiz(){
+  stopTimer(); const elapsed=(Date.now()-startTime)/1000; let correctCount=0; const stats={};
+  session.forEach((item,i)=>{ if(!stats[item.chapter])stats[item.chapter]={correct:0,total:0}; stats[item.chapter].total++; if(answers[i]===item.correct){correctCount++;stats[item.chapter].correct++;} });
+  show('result');
+  el('resultScope').textContent=activeScope+' · '+session.length+' questions';
+  el('scoreText').textContent=correctCount+' / '+session.length; el('timeText').textContent=formatTime(elapsed);
+  el('scorePct').textContent=Math.round(correctCount/session.length*100)+'%';
+  const body=el('breakdownBody'); body.innerHTML='';
+  CHAPTERS.filter(c=>stats[c]).forEach(c=>{
+    const s=stats[c]; const row=document.createElement('tr');
+    const td1=document.createElement('td'); td1.textContent=c.replace(/^Ch\d+ · /,'');
+    const p=Math.round(s.correct/s.total*100);
+    const bar=document.createElement('div'); bar.className='bd-bar';
+    const fill=document.createElement('span'); fill.style.width=p+'%'; bar.appendChild(fill); td1.appendChild(bar);
+    const td2=document.createElement('td'); td2.className='num'; td2.textContent=s.correct+' / '+s.total;
+    row.appendChild(td1); row.appendChild(td2); body.appendChild(row);
+  });
+}
+function enterReview(){reviewMode=true;current=0;show('quiz');renderQuestion();}
+function exitReviewToResult(){reviewMode=false;show('result');}
+el('prevBtn').addEventListener('click',()=>{if(current>0){current--;renderQuestion();}});
+el('nextBtn').addEventListener('click',()=>{
+  if(reviewMode){ if(current===session.length-1)exitReviewToResult(); else {current++;renderQuestion();} }
+  else { if(current===session.length-1)finishQuiz(); else {current++;renderQuestion();} }
+});
+el('reviewBtn').addEventListener('click',enterReview);
+el('restartBtn').addEventListener('click',()=>{ const chapter=activeScope==="Full Syllabus"?null:CHAPTERS.find(c=>c.replace(/^Ch\d+ · /,'')===activeScope); startQuiz(chapter); });
+el('menuBtn').addEventListener('click',()=>{stopTimer();show('menu');});
+document.addEventListener('keydown',(e)=>{
+  if(!screens.quiz.classList.contains('is-active'))return;
+  if(['1','2','3','4','5'].includes(e.key)&&!reviewMode){selectOption(parseInt(e.key,10)-1);}
+  else if(e.key==='ArrowRight'||e.key==='Enter'){el('nextBtn').click();}
+  else if(e.key==='ArrowLeft'){el('prevBtn').click();}
+});
+buildMenu();
+</script>

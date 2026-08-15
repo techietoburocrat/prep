@@ -60,7 +60,7 @@ Every previous chapter asked *"what happened?"* This one asks *"what did they MA
    │  🌊 MAHABALIPURAM         — monolithic temples on a beach          │
    │  ⚙️ MEHRAULI IRON PILLAR  — 1,600 years old, still barely rusted   │
    │  🦁 SARNATH LION CAPITAL  — on every rupee note in your wallet     │
-   │  0️⃣ THE DIGIT ZERO         — in every calculation you have ever    │
+   │  0️⃣ THE DIGIT ZERO         — in every calculation you have ever     │
    │                              run, on every machine you have used   │
    └────────────────────────────────────────────────────────────────────┘
 ```
@@ -104,7 +104,7 @@ Every previous chapter asked *"what happened?"* This one asks *"what did they MA
         │        on the MEDHI (drum/base)           │    path
         └──────────────────────────────────────────┘  ← ① MEDHI — the drum
      ┌───────────────────────────────────────────────┐
-     │  ═══════ LOWER PRADAKSHINA PATHA ═══════      │
+     │  ═══════ LOWER PRADAKSHINA PATHA ═══════                          │
      │  ║  ║  ║  ║  VEDIKA (railing)  ║  ║  ║  ║     │ ← ⑦ VEDIKA — stone
      └──╫──╫──╫──╫──────────────╫──╫──╫──╫──────────┘    railing enclosing
         ║              ╔════╗              ║              the path
@@ -721,7 +721,7 @@ Traditionally placed in the **Gupta court** (associated with **Chandragupta II V
 
 ```
    ┌──────────────────────────────────────────────────────────────────┐
-   │  ✅ 10 chapters · 2 million years · from stone tools to zero      │
+   │  ✅ 10 chapters · 2 million years · from stone tools to zero     │
    │                                                                  │
    │  WHAT NEXT:                                                      │
    │  1. Revise using the six THREADS in the Index — narrate each     │

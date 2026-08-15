@@ -111,12 +111,12 @@ In the Rigveda the *raja* was chosen. In the Later Vedic period, kings needed so
 
 ```
    ╔══════════════════════════════════════════════════════════════════════╗
-   ║                    THE ASHVAMEDHA PROCEDURE                          ║
+   ║                    THE ASHVAMEDHA PROCEDURE               ║
    ╚══════════════════════════════════════════════════════════════════════╝
 
    STEP 1   A specially chosen horse is RELEASED to wander freely
             for ONE YEAR, guarded by the king's soldiers.
-                              │
+                                                               │
                               ▼
    STEP 2   Wherever the horse wanders, that land is claimed.
             
@@ -127,13 +127,13 @@ In the Rigveda the *raja* was chosen. In the Later Vedic period, kings needed so
             │  sacrificer as         │  horse's owner          │
             │  SUPERIOR              │                         │
             └────────────────────────┴─────────────────────────┘
-                              │
+                                                               │
                               ▼
    STEP 3   After a year the horse returns. A GRAND SACRIFICE is held.
             Other rajas are INVITED — and given SUBORDINATE ROLES:
             fetching water, carrying weapons, driving the chariot.
             (The humiliation IS the point — it publicly ranks them.)
-                              │
+                                                               │
                               ▼
    STEP 4   The horse is sacrificed. PRIESTS (Brahmanas) perform the
             rituals and receive LAVISH GIFTS — gold, cattle, land.
@@ -165,7 +165,7 @@ By ~600 BCE, Buddhist and Jaina texts (especially the ***Anguttara Nikaya***) li
 
 ```
    ╔══════════════════════════════════════════════════════════════════════╗
-   ║          THE 16 MAHAJANAPADAS — SCHEMATIC MAP (~600 BCE)             ║
+   ║          THE 16 MAHAJANAPADAS — SCHEMATIC MAP (~600 BCE)         ║
    ╚══════════════════════════════════════════════════════════════════════╝
 
                             ▲ NORTH

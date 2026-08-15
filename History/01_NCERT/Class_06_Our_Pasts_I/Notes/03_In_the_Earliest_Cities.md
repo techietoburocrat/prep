@@ -56,10 +56,10 @@ Now the part that should genuinely unsettle you: **this was 4,700 years ago.** M
    │  WHO ELSE WAS BUILDING CITIES AT THIS MOMENT? (~2600 BCE)         │
    ├───────────────────────────────────────────────────────────────────┤
    │                                                                   │
-   │   🇮🇶 MESOPOTAMIA  — Sumer, Ur, Uruk (Tigris–Euphrates)            │
-   │   🇪🇬 EGYPT        — Old Kingdom, the Great Pyramids               │
-   │   🇮🇳 HARAPPA      — Indus valley                                  │
-   │   🇨🇳 CHINA        — a bit later (Shang, ~1600 BCE)                │
+   │   🇮🇶 MESOPOTAMIA  — Sumer, Ur, Uruk (Tigris–Euphrates)          │
+   │   🇪🇬 EGYPT        — Old Kingdom, the Great Pyramids             │
+   │   🇮🇳 HARAPPA      — Indus valley                                │
+   │   🇨🇳 CHINA        — a bit later (Shang, ~1600 BCE)              │
    │                                                                   │
    │   THE HARAPPAN WAS THE LARGEST OF ALL OF THEM BY AREA             │
    │   — roughly 1.5 million sq km, ~1,500 km east-to-west             │
@@ -160,14 +160,14 @@ This is a genuinely good story, and the names are asked.
 
 ```
    ╔═══════════════════════════════════════════════════════════════════════╗
-   ║          TYPICAL HARAPPAN CITY (based on Mohenjodaro)                  ║
+   ║          TYPICAL HARAPPAN CITY (based on Mohenjodaro)                 ║
    ╚═══════════════════════════════════════════════════════════════════════╝
 
             WEST ◄────────────────────────────────────► EAST
             (higher ground)                        (lower ground)
 
    ┌─────────────────────────────┐      ┌──────────────────────────────────┐
-   │        🏛️ CITADEL            │      │        🏘️ LOWER TOWN             │
+   │        🏛️ CITADEL            │      │        🏘️ LOWER TOWN            │
    │      (Acropolis)            │      │                                  │
    │                             │      │  ┌────┬────┬────┬────┬────┐      │
    │  • SMALLER but HIGHER       │      │  │    │    │    │    │    │      │
@@ -186,7 +186,7 @@ This is a genuinely good story, and the names are asked.
    │    administrative           │      │                                  │
    └─────────────────────────────┘      └──────────────────────────────────┘
              ▲                                        ▲
-             │                                        │
+             │                                                             │
       "The control plane"                    "The application layer"
 ```
 
@@ -223,9 +223,9 @@ Take this seriously. It is what makes the Harappans exceptional.
     │bath  │   │                             │   │ bath │
     │      │   └──┬───────────────────────┬──┘   │      │
     └───┬──┘      │  ▓▓▓ MANHOLE ▓▓▓      │      └──┬───┘
-        │         │  (inspection cover,   │         │
-        │ house   │   removable for       │  house  │
-        │ drain   │   CLEANING)           │  drain  │
+        │         │  (inspection cover,   │             │
+        │ house   │   removable for       │  house      │
+        │ drain   │   CLEANING)           │  drain      │
         ▼         ▼                       ▼         ▼
     ════╬═════════╬═══════════════════════╬═════════╬════
         ╚═════════▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓╬═════════╝
@@ -234,7 +234,7 @@ Take this seriously. It is what makes the Harappans exceptional.
              • covered with loose stone slabs
              • soak pits / sumps at intervals to
                collect solid waste before it clogged
-                          │
+                                                        │
                           ▼
                   out beyond the city
 ```
@@ -269,12 +269,12 @@ Take this seriously. It is what makes the Harappans exceptional.
         │  │            COLONNADED CORRIDOR          │  │
         │  │   ┌───────────────────────────────┐     │  │
         │  │   │ ▓▓ steps      TANK      steps▓▓│    │  │
-        │  │   │ ▓▓ ┌───────────────────────┐ ▓▓│   │  │
-        │  │   │ ▓▓ │ ≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈ │ ▓▓│   │  │
-        │  │   │ ▓▓ │ ≈≈≈  ~12m × 7m  ≈≈≈≈≈ │ ▓▓│   │  │
-        │  │   │ ▓▓ │ ≈≈≈  ~2.4m deep ≈≈≈≈≈ │ ▓▓│   │  │
-        │  │   │ ▓▓ │ ≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈ │ ▓▓│   │  │
-        │  │   │ ▓▓ └───────────────────────┘ ▓▓│   │  │
+        │  │   │ ▓▓ ┌───────────────────────┐ ▓▓│   │   │
+        │  │   │ ▓▓ │ ≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈ │ ▓▓│   │   │
+        │  │   │ ▓▓ │ ≈≈≈  ~12m × 7m  ≈≈≈≈≈ │ ▓▓│   │   │
+        │  │   │ ▓▓ │ ≈≈≈  ~2.4m deep ≈≈≈≈≈ │ ▓▓│   │   │
+        │  │   │ ▓▓ │ ≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈ │ ▓▓│   │   │
+        │  │   │ ▓▓ └───────────────────────┘ ▓▓│   │   │
         │  │   └───────────────────────────────┘     │  │
         │  └─────────────────────────────────────────┘  │
         │   Steps lead down on NORTH and SOUTH sides    │
@@ -349,13 +349,13 @@ Found at **Kalibangan** (Rajasthan) and **Lothal** (Gujarat).
 
 ```
    ╔══════════════════════════════════════════════════════════════════════════╗
-   ║              HARAPPAN CIVILISATION — EXTENT & KEY SITES                  ║
+   ║              HARAPPAN CIVILISATION — EXTENT & KEY SITES             ║
    ╚══════════════════════════════════════════════════════════════════════════╝
 
               AFGHANISTAN
               ★ SHORTUGHAI  ← northernmost; LAPIS LAZULI trading outpost
-              ★ MUNDIGAK          │
-                                  │
+              ★ MUNDIGAK                                                 │
+                                                                         │
        ┌──────────────────────────┼──────────────────────────────────────┐
        │        ★ MANDA (J&K) ← northernmost in India                    │
        │                          │                                      │
@@ -569,7 +569,7 @@ The **seal** is the iconic Harappan artefact. ~**4,000 inscribed objects** have 
      Gujarat coast      │                  │
      (Nageshwar,        │                  │◄───── CARNELIAN
       Balakot)          └────────┬─────────┘       Gujarat (Bharuch)
-                                 │
+                                           │
                          ▼───────┴───────▼
                      STEATITE            CHERT
                      Rajasthan,          Rohri hills,

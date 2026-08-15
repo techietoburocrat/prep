@@ -62,20 +62,20 @@ You have no live access. You cannot reproduce the bug. All you have is:
 │  WHAT SURVIVED FROM A DEAD SYSTEM                            │
 ├──────────────────────────────────────────────────────────────┤
 │                                                              │
-│  📦 ARTEFACTS         →  the binary artefacts left on disk    │
+│  📦 ARTEFACTS         →  the binary artefacts left on disk   │
 │     (pots, tools,        You can inspect them, but nobody    │
 │      bones, beads)       wrote docs for them                 │
 │                                                              │
-│  📜 INSCRIPTIONS      →  signed, immutable, deployed to       │
+│  📜 INSCRIPTIONS      →  signed, immutable, deployed to      │
 │     (Ashoka's edicts)    production. Hard to fake.           │
-│                          HIGH TRUST.                          │
+│                          HIGH TRUST.                         │
 │                                                              │
-│  📖 MANUSCRIPTS       →  code copied by hand, generation      │
-│     (Vedas, epics)       after generation. Every copy         │
-│                          introduces drift. LOWER TRUST        │
-│                          on details, high on worldview.       │
+│  📖 MANUSCRIPTS       →  code copied by hand, generation     │
+│     (Vedas, epics)       after generation. Every copy        │
+│                          introduces drift. LOWER TRUST       │
+│                          on details, high on worldview.      │
 │                                                              │
-│  🪙 COINS             →  timestamped, versioned releases       │
+│  🪙 COINS             →  timestamped, versioned releases     │
 │                          with the maintainer's name on them  │
 │                                                              │
 └──────────────────────────────────────────────────────────────┘
@@ -85,13 +85,13 @@ And the archaeological layers of a site are literally **an append-only log**:
 
 ```
    ┌────────────────────────────────┐  ← HEAD (most recent)
-   │  Layer 1 : modern              │
+   │  Layer 1 : modern                                    │
    ├────────────────────────────────┤
-   │  Layer 2 : medieval pottery    │
+   │  Layer 2 : medieval pottery                          │
    ├────────────────────────────────┤
-   │  Layer 3 : Gupta coins         │
+   │  Layer 3 : Gupta coins                               │
    ├────────────────────────────────┤
-   │  Layer 4 : NBPW ware, iron     │
+   │  Layer 4 : NBPW ware, iron                           │
    ├────────────────────────────────┤
    │  Layer 5 : Harappan seals      │  ← oldest commit
    └────────────────────────────────┘
@@ -108,7 +108,7 @@ Everything historians use falls into two buckets. **Learn this split cold — it
 
 ```
                         ┌─────────────────────────┐
-                        │   SOURCES OF HISTORY    │
+                        │   SOURCES OF HISTORY                   │
                         └────────────┬────────────┘
                      ┌───────────────┴───────────────┐
                      ▼                               ▼
@@ -125,7 +125,7 @@ Everything historians use falls into two buckets. **Learn this split cold — it
         │ • Burials              │      │   buckets — they are   │
         │ • Ornaments            │      │   objects AND text     │
         └───────────┬────────────┘      └───────────┬────────────┘
-                    │                               │
+                    │                                            │
                     ▼                               ▼
           Studied by ARCHAEOLOGISTS       Studied by HISTORIANS
           (dig, date, classify)           (read, translate, interpret)
@@ -189,7 +189,7 @@ People didn't settle randomly. **Follow the water and the food.** Here's the map
                         ╚═══════════════════════════════════════════════╝
 
                                     ▲ N
-                                    │
+                                                                        │
         ┌───────────────────────────────────────────────────────────────┐
         │                    ╱╲╱╲ HIMALAYAS ╱╲╱╲╱╲╱╲                    │
         │   SULAIMAN ╲                                    ╱ GARO HILLS  │
@@ -248,18 +248,18 @@ This section looks like trivia. **It is not.** It's asked, and it's also a live 
    SINDHU                                      "BHARATA"
    (Sanskrit name of the                       = name of a group mentioned
     Indus river)                                  in the RIGVEDA
-        │                                              │
+        │                                                                 │
         │  Iranians & Greeks came                      │  They lived in the
         │  from the north-west,                        │  north-west of the
         │  ~2500 years ago.                            │  subcontinent
-        │  They pronounced "S" as "H"                  │
+        │  They pronounced "S" as "H"                                     │
         ▼                                              ▼
    "HINDOS" / "INDOS"                          The word was later used
         │                                      for the WHOLE COUNTRY
-        ▼                                              │
+        ▼                                                                 │
    The land east of it became                          ▼
    "INDIA"                                       "BHARATA" / "BHARAT"
-        │
+                                                                          │
         ▼
    "HINDUSTAN" — from the same
    Sindhu → Hindu root
@@ -318,11 +318,11 @@ Archaeology has a brutal bias. Some materials survive thousands of years; most d
 
   ══════╪══════════╪══════════╪══════╬══════╪══════════╪══════════╪═════▶
       2000 BCE   1000 BCE    500 BCE  │   500 CE    1000 CE    2000 CE
-                                      │
+                                                     │
                                  YEAR 1 CE
                               (traditional birth
                                year of Christ)
-                                      │
+                                                     │
                        ┌──────────────┴──────────────┐
                        │  NOTE: THERE IS NO YEAR 0   │
                        │  1 BCE is followed directly │

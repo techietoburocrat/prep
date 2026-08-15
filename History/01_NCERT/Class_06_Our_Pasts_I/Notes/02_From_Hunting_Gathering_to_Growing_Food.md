@@ -126,11 +126,11 @@ Not just meat. NCERT is clear — the "gathering" half did most of the feeding.
         │     • Honey                                     │
         │     • Eggs (incl. OSTRICH eggs)                 │
         │                                                 │
-        │  🦌 HUNTED                                       │
+        │  🦌 HUNTED                                      │
         │     • Deer, wild boar, wild cattle              │
         │     • Small game, birds                         │
         │                                                 │
-        │  🐟 FISHED                                       │
+        │  🐟 FISHED                                      │
         │     • River and coastal fish                    │
         │                                                 │
         └─────────────────────────────────────────────────┘
@@ -219,7 +219,7 @@ A microlith is a **tiny stone blade, 1–2 cm long.** On its own it's useless. T
 
         One big heavy hand-axe             Wooden/bone shaft
         held directly in the hand          ┌──────────────────────────┐
-                                           │▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ │
+                                           │▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲        │
              ╱▔▔▔╲                         └──────────────────────────┘
             ╱ ███ ╲                          ↑ ↑ ↑ ↑ ↑
            ╱  ███  ╲                        microliths set in resin

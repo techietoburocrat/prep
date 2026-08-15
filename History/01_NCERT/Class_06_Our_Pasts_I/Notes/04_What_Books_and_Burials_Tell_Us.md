@@ -162,10 +162,10 @@ This is the section that most surprises people, and it is heavily tested.
    │        RIGVEDIC POLITICAL STRUCTURE — what it did NOT have          │
    ├─────────────────────────────────────────────────────────────────────┤
    │                                                                     │
-   │   ❌ NO capital city          ❌ NO palaces                          │
-   │   ❌ NO regular taxation      ❌ NO standing army                    │
-   │   ❌ NO written records       ❌ NO hereditary bureaucracy           │
-   │   ❌ NO territorial kingdom   ❌ NO coins                            │
+   │   ❌ NO capital city          ❌ NO palaces                         │
+   │   ❌ NO regular taxation      ❌ NO standing army                   │
+   │   ❌ NO written records       ❌ NO hereditary bureaucracy          │
+   │   ❌ NO territorial kingdom   ❌ NO coins                           │
    │                                                                     │
    │   ✅ WHAT IT DID HAVE:                                              │
    │                                                                     │
@@ -341,7 +341,7 @@ Large stone structures erected to **mark burials**, found mainly in the **Deccan
 
 ```
         ╔═════════════════════════════════════════════════════════════╗
-        ║              TYPES OF MEGALITHIC BURIAL                     ║
+        ║              TYPES OF MEGALITHIC BURIAL                   ║
         ╚═════════════════════════════════════════════════════════════╝
 
    1. CIST BURIAL              2. DOLMEN              3. MENHIR
@@ -357,21 +357,21 @@ Large stone structures erected to **mark burials**, found mainly in the **Deccan
       Stone slabs form a      with a capstone,        (also memorial stones)
       box; often with a       often above ground
       PORT-HOLE  ◄──────┐
-                        │
+                                                                    │
    4. STONE CIRCLE      │  5. URN BURIAL            6. SARCOPHAGUS
       ○ ○ ○ ○ ○         │     ╭─────╮                  (terracotta coffin,
     ○           ○       │    ╱ ▓▓▓▓▓ ╲                  often legged,
    ○   burial    ○      │   │  bones  │                 South India)
-    ○           ○       │   │   in a  │
+    ○           ○       │   │   in a                                │
       ○ ○ ○ ○ ○         │    ╲  pot  ╱
    Boulders in a circle  │     ╰─────╯
    marking the grave     │   Common in Adichanallur (TN)
-                         │
+                                                                    │
         ┌────────────────┴──────────────────────────────────────┐
-        │  ⭐ THE PORT-HOLE — a circular opening cut into one    │
-        │  slab of a cist. Why? To allow SUBSEQUENT BURIALS —   │
-        │  the grave could be REOPENED to add family members    │
-        │  later. Evidence of FAMILY/CLAN burial over time.     │
+        │  ⭐ THE PORT-HOLE — a circular opening cut into one       │
+        │  slab of a cist. Why? To allow SUBSEQUENT BURIALS —       │
+        │  the grave could be REOPENED to add family members        │
+        │  later. Evidence of FAMILY/CLAN burial over time.         │
         └───────────────────────────────────────────────────────┘
 ```
 

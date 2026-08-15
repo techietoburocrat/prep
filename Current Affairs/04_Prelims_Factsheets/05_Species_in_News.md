@@ -4,7 +4,11 @@
 
 | Species | Type | IUCN status | WPA 1972 schedule | CITES | Habitat / range | Why in news | ⭐ |
 |---|---|---|---|---|---|---|---|
-| | | | | | | | |
+| **Slender-billed vulture** *(Gyps tenuirostris)* | Bird — raptor | **Critically Endangered** | Schedule I | Appendix II ⚠️ | Sub-Himalayan — **Assam**, Nepal, Bangladesh, Myanmar, Cambodia; open arid landscapes and river valleys | **World-first release of captive-bred birds** (5) by **"soft release"** at **Kaziranga NP**, Assam | |
+| **White-rumped vulture** *(Gyps bengalensis)* | Bird — raptor | **Critically Endangered** | Schedule I | Appendix II ⚠️ | Widespread N & C India, Pakistan, Nepal, SE Asia; adaptable — grasslands, open deciduous forest, farmland | Released alongside the above (5 birds). **Marker: the white rump patch and 12 tail feathers — most *Gyps* have 14** | |
+| **Himalayan Serow** *(Capricornis thar)* | Mammal — goat-antelope | **Near Threatened** | **Schedule I** | Appendix I ⚠️ | Steep rocky forested Himalayan slopes; **Kalatop–Khajjiar / Dalhousie, Himachal** | Camera-trapped **4 Aug 2026** — first Western Himalayan record in ~**two decades**. **Do not confuse with Himalayan Tahr or musk deer** | |
+| **Suckermouth armoured catfish** *(Pterygoplichthys* spp.*)* | Fish — **invasive** | Not assessed / LC in native range | — | — | **Native to South America**; an aquarium escapee now widespread in Indian water bodies. Found at **Ujani Reservoir**, Bhima–Krishna basin, Maharashtra | India's **first organised invasive-fish removal drive**. Bony armour, few predators, burrows into banks, no market value | |
+| **Sandfly** *(Phlebotomus* spp.*)* | Insect — **vector** | — | — | — | Rural western and eastern India; breeds in **cracks in mud walls**; peaks in the **monsoon** | Vector of the **Chandipura virus** outbreak in Gujarat/Rajasthan — **and of kala-azar (visceral leishmaniasis)**. One vector, two national programmes | |
 
 **Column notes**
 - **Type** — mammal · bird · reptile · amphibian · fish · insect · plant · fungus · marine
@@ -22,4 +26,4 @@
 
 ---
 
-*Started 3 August 2026. Jan–Jul 2026 backfill pending.*
+*Started 3 August 2026 · rows filed for **8–10 Aug**. ⚠️ **3–7 August rows still to be filed.** Jan–Jul 2026 backfill pending.*

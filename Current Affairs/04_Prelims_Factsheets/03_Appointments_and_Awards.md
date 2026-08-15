@@ -12,6 +12,9 @@ Cheap marks that vanish without a list. Two tables, both one-line-per-row.
 | **DGAFMS** — Armed Forces Medical Services | **Air Marshal Sandeep Thareja** | 31 Aug 2026 | Ministry of Defence | Succeeds Surgeon Vice Admiral **Arti Sarin** | |
 | **FIDE — interim President** | **Viswanathan Anand** | 2026 | FIDE | World chess body, founded 1924, HQ Lausanne | |
 | **RBI Governor** | **Sanjay Malhotra** | — | Centre (ACC) | 3 yrs, renewable. Chairs the **6-member MPC**, holds the **casting vote** | |
+| **Director, Enforcement Directorate** | **Rahul Navin** | One-year extension, **Aug 2026** | **Appointments Committee of the Cabinet**, on the recommendation of a panel **chaired by the Central Vigilance Commissioner** | **2 years initially, extendable by up to three one-year terms — maximum 5 years.** Must be of Additional/Special Secretary rank, from the **IRS or IPS** | |
+| **First woman Fighter Combat Leader, IAF** | **Sqn Ldr Bhawana Kanth** | Aug 2026 | Qualification, not an appointment — **TACDE, Gwalior** | **20-week course; ~1% of IAF pilots hold it.** Commissioned **June 2016**; **MiG-21 Bison → Su-30 MKI**. One of India's **first three women fighter pilots (2016)** with **Avani Chaturvedi** and **Mohana Singh** | |
+| **Saint Louis Rapid & Blitz 2026 — winner** | **GM R. Praggnanandhaa** | Aug 2026 | — | Maiden title, **23.5 points**; runner-up **Javokhir Sindarov** (Uzbekistan). Format **9 rapid + 18 blitz** rounds ⚠️ | |
 
 > 🔑 **Varsha Aglawe is the one to remember** — **first woman to head GSI in its 176-year history**. GSI: founded **1851**, HQ **Kolkata**, under the **Ministry of Mines**. Her fields: palaeontology and **palynology** (pollen and spores).
 
@@ -39,4 +42,4 @@ Cheap marks that vanish without a list. Two tables, both one-line-per-row.
 
 ---
 
-*Started 3 August 2026 · rows through 2 Aug 2026. Jan–Jul 2026 backfill pending.*
+*Started 3 August 2026 · rows through **2 Aug**, plus **8–10 Aug**. ⚠️ **3–7 August rows still to be filed.** Jan–Jul 2026 backfill pending.*

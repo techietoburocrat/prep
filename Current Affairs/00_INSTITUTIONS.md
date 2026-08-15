@@ -150,8 +150,31 @@ Recall works far better by **parent** than alphabetically. When a new body appea
 | **Defence** | **HSL** *(Hindustan Shipyard, PSU)* · **DGAFMS** |
 | **Commerce** | **APEDA** · *(WTO engagement)* |
 | **Youth Affairs & Sports** | **NCAB** *(new — coach accreditation)* · SAI |
-| **Social Justice & Empowerment** | *(Nasha Mukt Bharat Abhiyan)* |
+| **Social Justice & Empowerment** | *(Nasha Mukt Bharat Abhiyan)* · *(proposed National Caregiver Council)* |
 | **Telecommunications** | BharatNet / BBNL |
+| **MoEFCC** *(added 8–10 Aug)* | **NBWL** *(statutory, WPA 1972, **chaired by the PM**; its Standing Committee under the Environment Minister does clearances)* · NTCA · CZA · WCCB · WII Dehradun · **State Wetland Authorities** *(Wetlands Rules 2017, under the EP Act 1986)* |
+| **Law & Justice** | **Department of Justice** *(executive — runs e-Courts with the SC's e-Committee)* · **NALSA** *(statutory, 1987, **patron-in-chief the CJI**)* · **National Judicial Academy, Bhopal** · **State Judicial Academies** *(under the High Courts)* · Law Commission *(executive, non-statutory)* |
+| **Agriculture — DARE** | **ICAR** *(**registered society**, 1860 Act, est. 1929 — not statutory)* · **KVKs** *(its district extension arm)* |
+| **Culture** | **NCSM** *(autonomous — runs the science centres. **Under Culture, not S&T**)* · ASI |
+| **Science & Technology (DST)** | **Survey of India** *(attached office, est. 1767 — **not** under Mines)* |
+| **Health & Family Welfare** | **NCDC** *(attached office — outbreak investigation; was the Malaria Institute of India, 1909)* · **ICMR** *(registered society, 1911)* → **NIV Pune** *(WHO Collaborating Centre)* · **NHA** *(executive — runs AB-PMJAY and ABDM/ABHA)* |
+| **Home Affairs** *(expanded)* | Registrar General & Census Commissioner · **Internal Security Division** *(the border-renewables guidelines)* · Department of Border Management · **BSF** *(Pak, B'desh)* · **ITBP** *(China)* · **SSB** *(Nepal, Bhutan)* · **Assam Rifles** *(Myanmar — **MHA administratively, Army operationally**)* · **I4C** · CRPF · CISF · NSG. **BRO is under Defence, not MHA** |
+| **Tribal Affairs** | **NCST** *(**constitutional**, Art 338A, 89th Amendment 2003)* · **TRIFED** *(multi-state cooperative society)* · National Tribal Research Institute |
+| **Finance — Revenue** | **Enforcement Directorate** *(executive; **no founding statute of its own** — powers from PMLA 2002, FEMA 1999, FEOA 2018. Director picked by a panel **chaired by the CVC**, max 5 years)* |
+| **Finance — DFS** *(expanded)* | **DICGC** *(statutory RBI subsidiary — **₹5 lakh cover, banks only, not NBFCs**)* · **IFSCA** *(statutory, 2019 — **unified regulator inside GIFT City**)* · **NPCI** *(**Section 8 not-for-profit company** — operator, not regulator)* · **NIPL** · **Payments Regulatory Board** *(statutory, **chaired by the RBI Governor**)* |
+| **Power** | **CEA** *(statutory — technical planning)* · **CERC / SERCs** *(statutory, Electricity Act 2003 — tariffs)* · **BEE** *(statutory, Energy Conservation Act 2001 — star labelling, PAT, carbon market)* · REC · PFC |
+| **New & Renewable Energy** *(expanded)* | SECI · **IREDA** *(an **NBFC**, listed)* · NISE · NIWE · **ISA** *(treaty-based IO, 2015, HQ **Gurugram** — the **first IO headquartered in India**)* |
+| **Ports, Shipping & Waterways** | **DGMA** *(Directorate General of Maritime Administration — runs E-Samudra)* |
+| **Textiles** | **DC (Handlooms)** and **DC (Handicrafts)** *(attached offices)* · **NIFT** *(statutory, NIFT Act 2006)* · **Textiles Committee** *(statutory, 1963)* · **Central Silk Board** *(statutory, 1948)* |
+| **Education** | **NTA** *(**registered society**, 2017 — autonomous, not statutory)* |
+| **Panchayati Raj** | *(Panchayat Advancement Index)* |
+| **Commerce & Industry** *(expanded)* | APEDA · **GeM** *(**Section 8 company** — replaced DGS&D)* |
+| **Consumer Affairs** | **BIS** *(statutory, **BIS Act 2016**, replacing the 1986 Act)* |
+| **Ayush** | **CCRAS** *(autonomous)* |
+| **Defence** *(expanded)* | HSL · DGAFMS · **TACDE, Gwalior** · **Strategic Forces Command** *(2003, under the **Nuclear Command Authority**; **only the Political Council, chaired by the PM, can authorise use**)* · **BRO** |
+| **Cabinet-level committees** *(not ministries)* | **CCS · CCEA · CCPA · ACC** — Cabinet Committees, **not statutory bodies** |
+| **International bodies met** | **UNCCD** *(1994, Bonn — the Rio convention **not** born at Rio; India hosted **COP-14, Delhi, 2019**)* · **UNFCCC** *(Bonn)* · **CBD** *(Montreal)* · **OIC** *(1969, Jeddah, 57 members — **India is not a member**)* · **NATO** *(1949, Brussels, Art 5)* · **IAEA** *(1957, Vienna — India a **founding member**)* · **NSG** *(1974 — India **not** a member, 2008 waiver)* |
+| **Election machinery** *(kept apart deliberately)* | **ECI** *(**constitutional**, Art 324 — permanent)* · **State Election Commissions** *(**constitutional**, Arts 243K & 243ZA — **panchayat and municipal polls only**)* · **Delimitation Commission** *(**statutory**, one per cycle — SC judge + CEC/EC + State EC; **orders cannot be challenged in court**)* |
 
 ---
 

@@ -54,11 +54,11 @@ Something genuinely strange happened around **600 BCE.** Not just in India — a
    │       THE "AXIAL AGE" — roughly 800–200 BCE, worldwide              │
    ├─────────────────────────────────────────────────────────────────────┤
    │                                                                     │
-   │   🇮🇳 INDIA     →  Buddha, Mahavira, the Upanishadic thinkers        │
-   │   🇨🇳 CHINA     →  Confucius, Lao Tzu                                │
-   │   🇬🇷 GREECE    →  Socrates, Plato, Pythagoras                       │
-   │   🇮🇷 PERSIA    →  Zoroaster                                         │
-   │   🇮🇱 ISRAEL    →  The Hebrew prophets                               │
+   │   🇮🇳 INDIA     →  Buddha, Mahavira, the Upanishadic thinkers      │
+   │   🇨🇳 CHINA     →  Confucius, Lao Tzu                              │
+   │   🇬🇷 GREECE    →  Socrates, Plato, Pythagoras                     │
+   │   🇮🇷 PERSIA    →  Zoroaster                                       │
+   │   🇮🇱 ISRAEL    →  The Hebrew prophets                             │
    │                                                                     │
    │   Independently, in different civilisations, people stopped asking  │
    │   "how do I please the gods?" and started asking                    │
@@ -107,7 +107,7 @@ Something genuinely strange happened around **600 BCE.** Not just in India — a
   │       Ships with a defined community process (the sangha) that has   │
   │       quorum rules and voting. → Went global.                        │
   │                                                                      │
-  │  ⚪  JAINISM     = COMPLETE REWRITE, MAXIMUM RIGOUR                   │
+  │  ⚪  JAINISM     = COMPLETE REWRITE, MAXIMUM RIGOUR                  │
   │       Also new, also vernacular, also no birth barrier — but with    │
   │       far stricter constraints. Harder to adopt, so it stayed        │
   │       smaller — but it NEVER died in India, unlike Buddhism.         │
@@ -134,7 +134,7 @@ Something genuinely strange happened around **600 BCE.** Not just in India — a
       (Kapilavastu)            an inscription — one of the few sites
       Father: Suddhodana       verified by an inscription.
                                ⭐ UNESCO World Heritage Site.
-                    │
+                                                                          │
                     ▼
       THE FOUR SIGHTS ── At 29, riding out from the palace, he sees:
                          🧓 an OLD man   🤒 a SICK man   ⚰️ a CORPSE
@@ -142,26 +142,26 @@ Something genuinely strange happened around **600 BCE.** Not just in India — a
                          → "MAHABHINISHKRAMANA" — the Great Departure.
                             He leaves palace, wife (Yashodhara) and
                             son (Rahula) to seek an answer.
-                    │
+                                                                          │
                     ▼
       SIX YEARS ── Extreme asceticism, near-starvation. It fails.
                    → He concludes: neither indulgence NOR self-torture
                      works. → THE MIDDLE PATH.
-                    │
+                                                                          │
                     ▼
   ②  ENLIGHTENMENT ────► BODH GAYA (Bihar)  🌳
       After 49 days of      Under a PEEPAL / BODHI tree, on the banks
       meditation            of the Niranjana river.
                             → He becomes "BUDDHA" = THE AWAKENED ONE
                             ⭐ Mahabodhi Temple — UNESCO World Heritage.
-                    │
+                                                                          │
                     ▼
   ③  FIRST SERMON ─────► SARNATH (near Varanasi, UP)  🦌
       "DHAMMACHAKKA-        In the DEER PARK (Isipatana/Rishipattana),
        PPAVATTANA"          to his FIVE former companions.
       = Turning the Wheel   ⭐ Site of ASHOKA'S LION CAPITAL — India's
         of Dhamma              NATIONAL EMBLEM (Ch.7 & 10).
-                    │
+                                                                          │
                     ▼
   ④  DEATH ────────────► KUSHINAGAR (UP)  🌳
       c. 483 BCE,           "MAHAPARINIRVANA" — the final passing.
@@ -184,18 +184,18 @@ Something genuinely strange happened around **600 BCE.** Not just in India — a
 
 ```
   ┌──────────────────────────────────────────────────────────────────────┐
-  │  1️⃣  DUKKHA          "There IS suffering."                          │
-  │      The world is full of suffering — birth, ageing, sickness,      │
+  │  1️⃣  DUKKHA          "There IS suffering."                            │
+  │      The world is full of suffering — birth, ageing, sickness,       │
   │      death, separation, unfulfilled desire.                          │
   ├──────────────────────────────────────────────────────────────────────┤
-  │  2️⃣  SAMUDAYA        "Suffering has a CAUSE."                        │
+  │  2️⃣  SAMUDAYA        "Suffering has a CAUSE."                         │
   │      The cause is TANHA ⭐ — craving, thirst, attachment,            │
   │      the endless wanting of more.                                    │
   ├──────────────────────────────────────────────────────────────────────┤
-  │  3️⃣  NIRODHA         "Suffering CAN END."                            │
+  │  3️⃣  NIRODHA         "Suffering CAN END."                             │
   │      Remove the craving and the suffering ceases. This is NIRVANA.   │
   ├──────────────────────────────────────────────────────────────────────┤
-  │  4️⃣  MAGGA           "There is a PATH to end it."                    │
+  │  4️⃣  MAGGA           "There is a PATH to end it."                     │
   │      The ASHTANGIKA MARGA — the Eightfold Path.                      │
   └──────────────────────────────────────────────────────────────────────┘
 ```
@@ -420,10 +420,10 @@ A recurring Mains question. **Multi-causal:**
 
 ```
         ┌────────────────────────────────────────────────────┐
-        │  1. SAMYAK DARSHANA  — Right FAITH / perception     │
-        │  2. SAMYAK JNANA     — Right KNOWLEDGE              │
-        │  3. SAMYAK CHARITRA  — Right CONDUCT                │
-        │                                                     │
+        │  1. SAMYAK DARSHANA  — Right FAITH / perception    │
+        │  2. SAMYAK JNANA     — Right KNOWLEDGE             │
+        │  3. SAMYAK CHARITRA  — Right CONDUCT               │
+        │                                                    │
         │  Together, these lead to liberation (moksha/siddha) │
         └────────────────────────────────────────────────────┘
 ```

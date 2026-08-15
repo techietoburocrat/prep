@@ -98,7 +98,7 @@ Chapter 1's lesson pays off here: this is the first Indian empire where we have 
 
 ```
     ╔════════════════════════════════════════════════════════════════════╗
-    ║               THE MAURYAN DYNASTY, 321–185 BCE                     ║
+    ║               THE MAURYAN DYNASTY, 321–185 BCE                ║
     ╚════════════════════════════════════════════════════════════════════╝
 
     321 BCE  ┌──────────────────────────────────────────────────────┐
@@ -123,7 +123,7 @@ Chapter 1's lesson pays off here: this is the first Indian empire where we have 
              └──────────────────────┬───────────────────────────────┘
                                     ▼
     268 BCE  ┌──────────────────────────────────────────────────────┐
-             │  ASHOKA  (r. c. 268–232 BCE) ⭐⭐⭐                    │
+             │  ASHOKA  (r. c. 268–232 BCE) ⭐⭐⭐                  │
              │  • Titles in the edicts: DEVANAMPIYA ("Beloved of    │
              │    the Gods") and PIYADASSI ("Pleasant to behold")   │
              │  • KALINGA WAR — 261 BCE (8th regnal year)           │
@@ -164,7 +164,7 @@ Chapter 1's lesson pays off here: this is the first Indian empire where we have 
 
 ```
   ╔═══════════════════════════════════════════════════════════════════════╗
-  ║        THREE ZONES OF MAURYAN CONTROL — decreasing tightness           ║
+  ║        THREE ZONES OF MAURYAN CONTROL — decreasing tightness        ║
   ╚═══════════════════════════════════════════════════════════════════════╝
 
   ┌─────────────────────────────────────────────────────────────────────┐
@@ -173,7 +173,7 @@ Chapter 1's lesson pays off here: this is the first Indian empire where we have 
   │  • Ruled directly by the king and his ministers                     │
   │  • Full bureaucracy: tax collection, judiciary, spies, army         │
   └─────────────────────────────────────────────────────────────────────┘
-                                 │
+                                                                        │
   ┌─────────────────────────────────────────────────────────────────────┐
   │  ZONE 2: THE PROVINCES — 4 (or 5) provincial capitals               │
   │  ████████████████  GOVERNED BY ROYAL PRINCES (KUMARAS)              │
@@ -187,7 +187,7 @@ Chapter 1's lesson pays off here: this is the first Indian empire where we have 
   │  • Local customs and laws often continued                           │
   │  • Central control was real but looser                              │
   └─────────────────────────────────────────────────────────────────────┘
-                                 │
+                                                                        │
   ┌─────────────────────────────────────────────────────────────────────┐
   │  ZONE 3: OUTLYING & FOREST AREAS                                    │
   │  ████  LOOSE / INDIRECT CONTROL                                     │
@@ -371,15 +371,15 @@ By the medieval period **nobody could read Brahmi.** Firoz Shah Tughlaq moved tw
         │      directions (only 3 visible from any angle)          │
         │      → symbolising the Buddha's teaching radiating       │
         │        in all directions; also royal power               │
-        │             🦁🦁🦁🦁                                       │
+        │             🦁🦁🦁🦁                                     │
         ├──────────────────────────────────────────────────────────┤
         │   ②  Originally surmounted by a large 32-spoked          │
         │      DHARMACHAKRA (wheel) — now lost                     │
         ├──────────────────────────────────────────────────────────┤
         │   ③  ABACUS: a circular drum bearing four animals        │
         │      separated by four 24-spoked wheels —                │
-        │      🦁 LION (north) · 🐘 ELEPHANT (east) ·               │
-        │      🐎 HORSE (south) · 🐂 BULL (west)                    │
+        │      🦁 LION (north) · 🐘 ELEPHANT (east) ·              │
+        │      🐎 HORSE (south) · 🐂 BULL (west)                   │
         ├──────────────────────────────────────────────────────────┤
         │   ④  INVERTED LOTUS (bell) base                          │
         └──────────────────────────────────────────────────────────┘
