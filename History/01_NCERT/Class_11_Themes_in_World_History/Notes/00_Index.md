@@ -41,7 +41,7 @@
 | # | Theme | Section | Prelims | Mains | Status |
 |---|---|---|---|---|---|
 | 1 | [Writing and City Life](01_Theme1_Writing_and_City_Life.md) | I · Early Societies | ⭐⭐⭐ | ⭐ | ✅ |
-| 2 | [An Empire Across Three Continents](02_Theme2_An_Empire_Across_Three_Continents.md) | II · Empires | ⭐⭐ | ⭐⭐ | ⬜ |
+| 2 | [An Empire Across Three Continents](02_Theme2_An_Empire_Across_Three_Continents.md) | II · Empires | ⭐⭐ | ⭐⭐ | ✅ |
 | 3 | [Nomadic Empires](03_Theme3_Nomadic_Empires.md) | II · Empires | ⭐⭐ | ⭐⭐ | ⬜ |
 | 4 | [The Three Orders](04_Theme4_The_Three_Orders.md) | III · Changing Traditions | ⭐⭐ | ⭐⭐⭐ | ✅ |
 | 5 | [Changing Cultural Traditions](05_Theme5_Changing_Cultural_Traditions.md) | III · Changing Traditions | ⭐⭐⭐ | ⭐⭐⭐ | ✅ |
