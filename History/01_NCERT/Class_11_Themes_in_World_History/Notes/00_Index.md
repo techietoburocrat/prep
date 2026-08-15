@@ -71,9 +71,17 @@ The original edition had **11 themes**. The rationalised edition prints **7**. T
 | **Confrontation of Cultures** | 8 | ⭐⭐⭐ The Spanish in the Americas, Columbus, Cortés, Pizarro, the destruction of the Aztecs and Incas | ⭐ **Restore** — and note it **pairs directly with Theme 6**, which now begins mid-argument without it |
 | **The Industrial Revolution** | 9 | ⭐⭐⭐⭐ ***"INDUSTRIAL REVOLUTION" IS A GS1 SYLLABUS WORD.*** Coal, iron, steam, the factory, transport, and the debate over whether living standards rose | ⭐⭐ **Restore — highest priority of the four** |
 
-> 🔄 **STATUS: the supplement is NOT yet written and the old-edition PDFs are NOT yet recovered.** This is the same job that was done for Class 7, Class 9 and Class 10, and the recovery routes are recorded in [`../../01_NCERT/Class_10_India_and_Contemporary_World_II/Textbook_PDF/Removed_Chapters_Old_Edition/README.md`](../Class_10_India_and_Contemporary_World_II/Textbook_PDF/Removed_Chapters_Old_Edition/README.md) — try the **Wayback Machine's copy of the whole-book zip** (`kehs1dd.zip`) first, since it gives one internally consistent download.
+> ✅ **STATUS (2026-08-15): ALL FOUR old-edition PDFs are RECOVERED** and stored at [`../Textbook_PDF/Removed_Chapters_Old_Edition/`](../Textbook_PDF/Removed_Chapters_Old_Edition/) — the **Wayback Machine's June-2020 copy of `kehs1dd.zip`** gave all **eleven** original chapters in one internally consistent download. See that folder's README for the exact route.
+>
+> **The supplement is at [`08_Supplement_Industrial_Revolution_Islamic_Lands_and_Confrontation.md`](08_Supplement_Industrial_Revolution_Islamic_Lands_and_Confrontation.md):**
+>
+> | Part | Theme | Status |
+> |---|---|---|
+> | **A** | ⭐⭐⭐⭐ **The Industrial Revolution** | ✅ **Written** |
+> | **B** | ⭐⭐⭐⭐ **The Central Islamic Lands** | 🔄 *pending* |
+> | **C** | ⭐⭐⭐ **Confrontation of Cultures** | 🔄 *pending* |
 
-**⚠️ Some mitigation before you worry about the hole:** the Industrial Revolution is **not** absent from your notes altogether — **Class 10 Ch.4 (*The Age of Industrialisation*)** covers it, and covers it from the Indian side, which is the side UPSC asks about more often. What the deleted Class 11 theme adds is the **British internal story** — coal and iron, canals and railways, the standard-of-living debate — which is Essay and optional material rather than GS1 core.
+**⚠️ Some mitigation before you worry about the Industrial Revolution hole:** it is **not** absent from your notes altogether — **Class 10 Ch.4 (*The Age of Industrialisation*)** covers it from the **Indian** side, which is the side UPSC asks about more often. ⭐ **Supplement Part A adds the British internal story** — coal and iron, canals and railways, the human cost, and the debate over whether it was a "revolution" at all. **Read the two together and you have both ends of one process.**
 
 ---
 
