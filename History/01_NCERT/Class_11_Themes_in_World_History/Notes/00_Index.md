@@ -78,8 +78,10 @@ The original edition had **11 themes**. The rationalised edition prints **7**. T
 > | Part | Theme | Status |
 > |---|---|---|
 > | **A** | ⭐⭐⭐⭐ **The Industrial Revolution** | ✅ **Written** |
-> | **B** | ⭐⭐⭐⭐ **The Central Islamic Lands** | 🔄 *pending* |
-> | **C** | ⭐⭐⭐ **Confrontation of Cultures** | 🔄 *pending* |
+> | **B** | ⭐⭐⭐⭐ **The Central Islamic Lands** | ✅ **Written** |
+> | **C** | ⭐⭐⭐ **Confrontation of Cultures** | ✅ **Written** |
+>
+> ✅✅ **CLASS XI IS COMPLETE — 10 of the original 11 themes**, only *From the Beginning of Time* deliberately omitted. **Seven printed themes + a 4,142-line supplement.**
 
 **⚠️ Some mitigation before you worry about the Industrial Revolution hole:** it is **not** absent from your notes altogether — **Class 10 Ch.4 (*The Age of Industrialisation*)** covers it from the **Indian** side, which is the side UPSC asks about more often. ⭐ **Supplement Part A adds the British internal story** — coal and iron, canals and railways, the human cost, and the debate over whether it was a "revolution" at all. **Read the two together and you have both ends of one process.**
 
