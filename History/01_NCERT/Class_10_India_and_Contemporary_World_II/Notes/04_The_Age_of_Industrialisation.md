@@ -215,19 +215,19 @@ By the end of this chapter you should be able to:
    │ "In Victorian Britain there was NO SHORTAGE of human     │
    │  labour. POOR PEASANTS AND VAGRANTS MOVED TO THE CITIES  │
    │  IN LARGE NUMBERS in search of jobs, waiting for work."  │
-   │ ⭐ "When there is PLENTY OF LABOUR, WAGES ARE LOW. So     │
+   │ ⭐ "When there is PLENTY OF LABOUR, WAGES ARE LOW. So    │
    │   industrialists had NO PROBLEM of labour shortage or    │
    │   high wage costs. THEY DID NOT WANT TO INTRODUCE        │
    │   MACHINES THAT GOT RID OF HUMAN LABOUR AND REQUIRED     │
    │   LARGE CAPITAL INVESTMENT."                             │
    ├──────────────────────────────────────────────────────────┤
    │ REASON 2 -- SEASONAL DEMAND                              │
-   │ ⭐ "GAS WORKS and BREWERIES were especially busy through  │
+   │ ⭐ "GAS WORKS and BREWERIES were especially busy through │
    │   THE COLD MONTHS." "BOOK-BINDERS AND PRINTERS, catering │
    │   to CHRISTMAS demand, needed extra hands before         │
    │   December." "At the WATERFRONT, WINTER was the time     │
    │   that SHIPS WERE REPAIRED and spruced up."              │
-   │ ⭐ "In all such industries where PRODUCTION FLUCTUATED    │
+   │ ⭐ "In all such industries where PRODUCTION FLUCTUATED   │
    │   WITH THE SEASON, industrialists usually PREFERRED HAND │
    │   LABOUR, EMPLOYING WORKERS FOR THE SEASON."             │
    ├──────────────────────────────────────────────────────────┤
@@ -242,12 +242,12 @@ By the end of this chapter you should be able to:
    │    REQUIRED HUMAN SKILL, NOT MECHANICAL TECHNOLOGY."     │
    ├──────────────────────────────────────────────────────────┤
    │ REASON 4 -- HANDMADE MEANT CLASS                         │
-   │ ⭐⭐ "In Victorian Britain, THE UPPER CLASSES -- the       │
+   │ ⭐⭐ "In Victorian Britain, THE UPPER CLASSES -- the     │
    │    aristocrats and the bourgeoisie -- PREFERRED THINGS   │
    │    PRODUCED BY HAND. Handmade products came to SYMBOLISE │
    │    REFINEMENT AND CLASS. They were BETTER FINISHED,      │
    │    INDIVIDUALLY PRODUCED, and CAREFULLY DESIGNED."       │
-   │ ⚠️ ⭐⭐ "MACHINE-MADE GOODS WERE FOR EXPORT TO THE         │
+   │ ⚠️ ⭐⭐ "MACHINE-MADE GOODS WERE FOR EXPORT TO THE       │
    │      COLONIES."                                          │
    └──────────────────────────────────────────────────────────┘
 

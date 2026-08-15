@@ -58,16 +58,38 @@ stay tellable apart; do not reuse a Polity accent here.
 
 ## Current state
 
-`class06` is clean on both checks:
+`class06`, `class07`, `class08`, `class09` and `class10` are all clean on both checks.
 
 ```
-117 questions · 72 statement sets · 4 assertion-reason · 41 plain MCQ
-prelims-pattern 65% · answer index 15/10/10/10
-correct lands on A/B/C/D : 24.8% / 25.0% / 25.0% / 25.2%
+class10 — 129 questions · 60 statement sets · 13 assertion-reason · 56 plain MCQ
+prelims-pattern 57% · answer index 27/14/14/14
+truth mixes  3/2×18  4/2×8  4/3×8  3/3×7  2/1×6  2/2×5  4/1×4  2/0×2  4/4×1  3/1×1
+correct lands on A/B/C/D : 25.1% / 24.9% / 25.2% / 24.8%
 one option looks clearly longest on 0.0% of plain MCQs
-no statement answer code above 17%
+no statement answer code above 13%
 ```
+
+`class10` covers all eight chapter tags — the five printed chapters plus the three
+restored ones (Indo-China, Cities, Novels), each a separate tag so the menu is usable.
+
+### ⚠️ Read the simulator output, do not trust its verdict
+
+`simulate.mjs` prints **"No exploitable pattern found."** even when the numbers
+above it are bad, because it only judges the length ratio when the pattern is
+common enough to be *learnable* (`n / plain >= 0.15`). The first `class10` run
+printed that verdict while reporting:
+
+```
+one option looks clearly longest on 4.3% of plain MCQs; it is correct 100.0% of the time
+```
+
+Three questions had a correct option that was visibly the longest on screen. That
+is a real tell on those questions regardless of the gate, and it was fixed at
+source by **lengthening the distractors** — never by shortening the correct
+option, which merely creates the opposite tell. Always read the two conditional
+length lines and the code histogram yourself.
 
 ## Still to do
 
-Classes VII–XII History banks. Class VII (`Our Pasts II`, medieval) is next.
+Classes XI–XII History banks. Class XI (`Themes in World History`) is next; notes
+for it are not yet written either.

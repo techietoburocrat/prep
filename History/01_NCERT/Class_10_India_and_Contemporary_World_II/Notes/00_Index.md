@@ -35,12 +35,14 @@ Class 9 covered *"political philosophies like communism, capitalism, socialism"*
 
 | # | Chapter | Prelims | Mains | Status |
 |---|---|---|---|---|
-| 1 | [The Rise of Nationalism in Europe](01_The_Rise_of_Nationalism_in_Europe.md) | ⭐⭐ | ⭐⭐⭐⭐ | 🔄 |
-| 2 | [Nationalism in India](02_Nationalism_in_India.md) | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 🔄 |
-| 3 | [The Making of a Global World](03_The_Making_of_a_Global_World.md) | ⭐⭐⭐ | ⭐⭐⭐⭐ | 🔄 |
-| 4 | [The Age of Industrialisation](04_The_Age_of_Industrialisation.md) | ⭐⭐⭐ | ⭐⭐⭐⭐ | 🔄 |
-| 5 | [Print Culture and the Modern World](05_Print_Culture_and_the_Modern_World.md) | ⭐⭐⭐ | ⭐⭐⭐ | 🔄 |
-| 6 | [**SUPPLEMENT** — Indo-China · Cities · Novels](06_Supplement_IndoChina_Cities_and_Novels.md) | ⭐⭐⭐ | ⭐⭐⭐⭐ | 🔄 |
+| 1 | [The Rise of Nationalism in Europe](01_The_Rise_of_Nationalism_in_Europe.md) | ⭐⭐ | ⭐⭐⭐⭐ | ✅ |
+| 2 | [Nationalism in India](02_Nationalism_in_India.md) | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ✅ |
+| 3 | [The Making of a Global World](03_The_Making_of_a_Global_World.md) | ⭐⭐⭐ | ⭐⭐⭐⭐ | ✅ |
+| 4 | [The Age of Industrialisation](04_The_Age_of_Industrialisation.md) | ⭐⭐⭐ | ⭐⭐⭐⭐ | ✅ |
+| 5 | [Print Culture and the Modern World](05_Print_Culture_and_the_Modern_World.md) | ⭐⭐⭐ | ⭐⭐⭐ | ✅ |
+| 6 | [**SUPPLEMENT** — Indo-China · Cities · Novels](06_Supplement_IndoChina_Cities_and_Novels.md) | ⭐⭐⭐ | ⭐⭐⭐⭐ | ✅ **all 3 parts** |
+
+> ✅ **All six files are written**, each from the textbook PDFs directly. The supplement is the longest file in the book because it carries **three** restored chapters, each with its own Syllabus Classification, Learning Outcomes, UPSC Focus, Recap and Test Yourself blocks.
 
 ---
 
@@ -52,7 +54,7 @@ The current book prints **5 chapters**. The 2018-19 edition had **8**:
 |---|---|---|
 | **The Nationalist Movement in Indo-China** | ⭐⭐⭐⭐ **"Decolonization" is named in the GS1 syllabus.** This is the *only* place in the entire NCERT series you meet **Vietnam, French colonialism in Asia, and an anti-colonial war that defeated two superpowers** | ✅ **Restoring** — supplement Part A |
 | **Work, Life and Leisure: Cities in the Contemporary World** | ⭐⭐⭐ **London and Bombay** — urbanisation, slums, migration, city planning. Feeds GS1 society *and* the urbanisation topic | ✅ **Restoring** — supplement Part B |
-| **Novels, Society and History** | ⭐⭐ Caste, gender and nationalism read through fiction | ✅ **Restoring** — supplement Part C (brief) |
+| **Novels, Society and History** | ⭐⭐ Caste, gender and nationalism read through fiction — and ⭐⭐⭐ **the highest density of author–work–year facts in the book**, which is exactly how Prelims asks about literature | ✅ **Restored in full** — supplement Part C |
 
 **This is the third time we have made this call** — Class 7 (*Rulers and Buildings*, *Towns, Traders and Craftspersons*), Class 9 (*Peasants and Farmers*, *Clothing*), and now Class 10. **NCERT's rationalisation is a school-workload decision, not a UPSC-relevance decision**, and on this book it removed the one chapter that covers a syllabus keyword outright.
 
@@ -92,7 +94,8 @@ The current book prints **5 chapters**. The 2018-19 edition had **8**:
 11. **Proto-industrialisation, the guilds, the "jobber", and why Indian weavers collapsed.**
 12. **Gutenberg, the Protestant Reformation, Vernacular Press Act 1878, and the reading revolution.**
 13. *(supplement)* **Ho Chi Minh, the Ho Chi Minh trail, the scholars' revolt, the Tonkin Free School, and why the US lost.**
-14. *(supplement)* **London's chawls and Bombay's, Haussmann's Paris, the Garden City, and why cities were feared.**
+14. *(supplement)* **London's tenements and Bombay's chawls, Haussmann's Paris, the Garden City, the 1863 Underground, the Improvement Trust's 64,000-vs-14,000, and why cities were feared.**
+15. *(supplement)* ⭐⭐ **The novel: *Indulekha*, *Pariksha-Guru*, *Godan*, *Anandamath*, *Saraswativijayam*, *Sultana's Dream*** — and **why the same form served both the coloniser and the nationalist.**
 
 ---
 
@@ -101,7 +104,8 @@ The current book prints **5 chapters**. The 2018-19 edition had **8**:
 1. ⭐ **Ch.2 first.** It is the most examinable chapter in the series, and you already have its background from Class 8 Ch.8.
 2. **Ch.4, then Ch.3** — industrialisation explains the global world, not the other way round.
 3. **Ch.1** — pairs with Class 9 Ch.1 and Ch.3.
-4. **Ch.5**, then the **supplement**, leading with **Indo-China**.
+4. **Ch.5**, then the **supplement**, leading with **Indo-China (Part A)**.
+5. ⭐ **Read supplement Part C (Novels) immediately after Ch.5** — NCERT wrote it as Ch.5's sequel and says so in its first line. **Part B (Cities) pairs with Ch.4**, whose mill workers are the people who filled Girangaon.
 
 ---
 

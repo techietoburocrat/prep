@@ -1,0 +1,1515 @@
+<title>Class X History Quiz — India and the Contemporary World – II</title>
+<style>
+:root{
+  --ink:#1A1E26; --paper:#F1F4F8; --surface:#FFFFFF; --line:#D4DAE3; --muted:#596372;
+  --good:#1F7A4C; --good-soft:#E2F1E9; --bad:#B23A34; --bad-soft:#FAE6E4;
+  --accent:#27467B; --accent-ink:#FFFFFF; --accent-soft:#E3EAF5;
+  --radius:10px;
+  --serif:Georgia,'Iowan Old Style','Palatino Linotype','Book Antiqua',serif;
+  --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --ink:#E5EAF2; --paper:#0F131A; --surface:#181D26; --line:#272F3B; --muted:#95A0B1;
+    --good:#3FBE7C; --good-soft:rgba(63,190,124,0.14); --bad:#E2665F; --bad-soft:rgba(226,102,95,0.14);
+    --accent:#84AEE2; --accent-ink:#0E1520; --accent-soft:rgba(132,174,226,0.18);
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#E5EAF2; --paper:#0F131A; --surface:#181D26; --line:#272F3B; --muted:#95A0B1;
+  --good:#3FBE7C; --good-soft:rgba(63,190,124,0.14); --bad:#E2665F; --bad-soft:rgba(226,102,95,0.14);
+  --accent:#84AEE2; --accent-ink:#0E1520; --accent-soft:rgba(132,174,226,0.18);
+}
+:root[data-theme="light"]{
+  --ink:#1A1E26; --paper:#F1F4F8; --surface:#FFFFFF; --line:#D4DAE3; --muted:#596372;
+  --good:#1F7A4C; --good-soft:#E2F1E9; --bad:#B23A34; --bad-soft:#FAE6E4;
+  --accent:#27467B; --accent-ink:#FFFFFF; --accent-soft:#E3EAF5;
+}
+*{box-sizing:border-box;}
+html,body{height:100%;}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;}
+.app{min-height:100dvh;display:flex;flex-direction:column;max-width:760px;margin:0 auto;padding:20px 20px 24px;}
+.screen{flex:1;display:flex;flex-direction:column;min-height:0;}
+.eyebrow{font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin:0 0 6px;}
+.menu-screen{gap:16px;justify-content:flex-start;padding-top:10px;}
+.menu-screen h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,36px);margin:0;text-wrap:balance;}
+.lede{color:var(--muted);line-height:1.55;max-width:64ch;margin:0;}
+.how{display:flex;flex-wrap:wrap;gap:8px 18px;margin:2px 0 4px;padding:0;list-style:none;}
+.how li{font-size:12.5px;color:var(--muted);display:flex;align-items:center;gap:6px;}
+.how li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none;}
+.menu-label{font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);margin:8px 0 -2px;}
+.lesson-list{display:flex;flex-direction:column;gap:10px;}
+.lesson-card{display:flex;align-items:center;gap:14px;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:15px 18px;font-family:var(--sans);cursor:pointer;width:100%;color:var(--ink);}
+.lesson-card:hover{border-color:var(--accent);}
+.lesson-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+.lesson-card.combined{background:var(--accent-soft);border-color:var(--accent);}
+.lesson-num{flex:none;width:38px;height:38px;border-radius:9px;background:var(--accent-soft);color:var(--accent);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:16px;font-weight:700;}
+.lesson-card.combined .lesson-num{background:var(--accent);color:var(--accent-ink);}
+.lesson-body{flex:1;min-width:0;}
+.lesson-title{font-family:var(--serif);font-size:16.5px;line-height:1.25;margin:0 0 2px;display:block;}
+.lesson-meta{font-size:12.5px;color:var(--muted);display:block;}
+.lesson-go{flex:none;color:var(--muted);font-size:20px;}
+.lesson-card:hover .lesson-go{color:var(--accent);}
+.quiz-screen{gap:14px;display:none;}
+.bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.chapter-tag{font-size:11px;text-transform:uppercase;letter-spacing:0.04em;background:var(--accent-soft);color:var(--accent);padding:5px 10px;border-radius:999px;white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis;}
+.progress-track{flex:1;min-width:60px;height:6px;background:var(--line);border-radius:999px;overflow:hidden;}
+.progress-fill{height:100%;background:var(--accent);width:0%;}
+.counter{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap;}
+.timer{font-family:var(--serif);font-size:15px;font-variant-numeric:tabular-nums;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:4px 10px;white-space:nowrap;}
+.card{flex:1;min-height:0;overflow-y:auto;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;display:flex;flex-direction:column;gap:15px;}
+.qblock{display:flex;flex-direction:column;gap:9px;}
+.question{font-family:var(--serif);font-size:clamp(17px,2.4vw,20px);line-height:1.45;margin:0;white-space:pre-line;}
+.stmt-head{font-size:12px;letter-spacing:0.05em;text-transform:uppercase;color:var(--muted);margin:0;padding-left:26px;}
+.stmt-list{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px;}
+.stmt-list li{display:flex;gap:10px;font-size:14.8px;line-height:1.5;}
+.stmt-list li .sn{flex:none;min-width:16px;color:var(--muted);font-variant-numeric:tabular-nums;}
+.stmt-list li .st{flex:1;min-width:0;}
+.stmt-list li .sr{color:var(--muted);}
+.ask{font-family:var(--serif);font-size:15.5px;line-height:1.45;margin:2px 0 0;font-style:italic;}
+.options{display:flex;flex-direction:column;gap:9px;}
+.option{display:flex;align-items:flex-start;gap:11px;text-align:left;background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:11px 13px;font-family:var(--sans);font-size:14.5px;color:var(--ink);cursor:pointer;line-height:1.4;width:100%;}
+.option:hover:not(:disabled){border-color:var(--accent);}
+.option:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+.option:disabled{cursor:default;}
+.opt-letter{flex:none;width:23px;height:23px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:var(--muted);}
+.option.correct{background:var(--good-soft);border-color:var(--good);}
+.option.correct .opt-letter{background:var(--good);border-color:var(--good);color:#fff;}
+.option.incorrect{background:var(--bad-soft);border-color:var(--bad);}
+.option.incorrect .opt-letter{background:var(--bad);border-color:var(--bad);color:#fff;}
+.feedback{font-size:13.5px;line-height:1.6;margin:0;padding:12px 14px;border-radius:8px;background:var(--paper);border-left:3px solid var(--accent);}
+.feedback .verdict{font-family:var(--serif);font-weight:700;font-style:italic;}
+.feedback.good{border-left-color:var(--good);}
+.feedback.good .verdict{color:var(--good);}
+.feedback.bad{border-left-color:var(--bad);}
+.feedback.bad .verdict{color:var(--bad);}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.hint{font-size:12px;color:var(--muted);text-align:center;flex:1;}
+.btn-primary{background:var(--accent);color:var(--accent-ink);border:none;border-radius:999px;padding:12px 24px;font-size:14.5px;font-weight:600;font-family:var(--sans);cursor:pointer;}
+.btn-primary:hover{filter:brightness(1.07);}
+.btn-primary:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+.btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:11px 20px;font-size:14px;font-family:var(--sans);cursor:pointer;}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
+.btn-ghost:disabled{opacity:0.35;cursor:not-allowed;}
+.btn-ghost:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+.result-screen{gap:18px;justify-content:center;display:none;}
+.result-screen h1{font-family:var(--serif);font-size:clamp(24px,4.5vw,32px);margin:0;}
+.result-sub{color:var(--muted);margin:-8px 0 0;font-size:14px;}
+.score-row{display:flex;gap:22px;flex-wrap:wrap;}
+.score-block{display:flex;flex-direction:column;gap:2px;}
+.score-num{font-family:var(--serif);font-size:30px;font-variant-numeric:tabular-nums;}
+.score-label{font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);}
+.breakdown-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px;max-height:280px;overflow-y:auto;}
+.breakdown{width:100%;border-collapse:collapse;font-size:13.5px;}
+.breakdown th,.breakdown td{padding:8px 12px;text-align:left;border-bottom:1px solid var(--line);}
+.breakdown th{color:var(--muted);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:0.05em;position:sticky;top:0;background:var(--surface);}
+.breakdown td.num{font-variant-numeric:tabular-nums;text-align:right;}
+.breakdown tr:last-child td{border-bottom:none;}
+.bd-bar{height:5px;border-radius:3px;background:var(--line);margin-top:4px;overflow:hidden;}
+.bd-bar span{display:block;height:100%;background:var(--accent);}
+.result-actions{display:flex;gap:10px;flex-wrap:wrap;}
+[hidden]{display:none !important;}
+.is-active{display:flex !important;}
+@media (prefers-reduced-motion: no-preference){
+  .option,.lesson-card{transition:background 0.15s ease,border-color 0.15s ease;}
+  .progress-fill{transition:width 0.25s ease;}
+}
+@media (max-width:480px){
+  .app{padding:16px 14px 18px;}
+  .nav{flex-wrap:wrap;}
+  .hint{order:3;width:100%;}
+  .card{padding:18px 16px;}
+}
+</style>
+
+<div class="app">
+  <section id="menu" class="screen menu-screen is-active">
+    <p class="eyebrow" id="courseEyebrow"></p>
+    <h1 id="courseTitle"></h1>
+    <p class="lede" id="courseLede"></p>
+    <ul class="how">
+      <li>Prelims-pattern: statements, pairs, assertion–reason</li>
+      <li>Options balanced — no length giveaways</li>
+      <li>Detailed explanation on every answer</li>
+      <li>Reshuffles each attempt · stopwatch</li>
+    </ul>
+    <p class="menu-label">Choose a lesson — or take the full syllabus</p>
+    <div class="lesson-list" id="lessonList"></div>
+  </section>
+
+  <section id="quiz" class="screen quiz-screen">
+    <header class="bar">
+      <span id="chapterTag" class="chapter-tag"></span>
+      <div class="progress-track"><div id="progressFill" class="progress-fill"></div></div>
+      <span id="counter" class="counter"></span>
+      <span id="timer" class="timer">00:00</span>
+    </header>
+    <main class="card">
+      <div id="qblock" class="qblock"></div>
+      <div id="options" class="options"></div>
+      <p id="feedback" class="feedback" hidden></p>
+    </main>
+    <footer class="nav">
+      <button id="prevBtn" class="btn-ghost" type="button">← Prev</button>
+      <span class="hint">Press 1–4 to answer · → next · ← prev</span>
+      <button id="nextBtn" class="btn-primary" type="button">Next →</button>
+    </footer>
+  </section>
+
+  <section id="result" class="screen result-screen">
+    <p class="eyebrow">Scorecard</p>
+    <h1 id="resultTitle">Quiz complete</h1>
+    <p class="result-sub" id="resultScope"></p>
+    <div class="score-row">
+      <div class="score-block"><span id="scoreText" class="score-num"></span><span class="score-label">Correct</span></div>
+      <div class="score-block"><span id="scorePct" class="score-num"></span><span class="score-label">Accuracy</span></div>
+      <div class="score-block"><span id="timeText" class="score-num"></span><span class="score-label">Time</span></div>
+    </div>
+    <div class="breakdown-wrap">
+      <table class="breakdown">
+        <thead><tr><th>Lesson</th><th>Score</th></tr></thead>
+        <tbody id="breakdownBody"></tbody>
+      </table>
+    </div>
+    <div class="result-actions">
+      <button id="reviewBtn" class="btn-ghost" type="button">Review answers</button>
+      <button id="restartBtn" class="btn-primary" type="button">Retake — new shuffle</button>
+      <button id="menuBtn" class="btn-ghost" type="button">↤ Lesson menu</button>
+    </div>
+  </section>
+</div>
+
+<script>
+/* ==========================================================================
+   DATA — generated from Polity/05_Quiz_MCQ/data/<class>.js by build.mjs
+   Question shape:
+     c    chapter tag (must match an entry in CHAPTERS)
+     q    stem
+     head optional column header for a "pairs" block, e.g. "Provision : Purpose"
+     L    optional array of numbered lines (statements, or "Left : Right" pairs)
+     ask  optional closing question line, e.g. "Which of the above are correct?"
+     o    four options
+     a    index of the correct option
+     e    explanation shown after answering
+   ========================================================================== */
+const COURSE = {
+  eyebrow: "NCERT History · India and the Contemporary World – II",
+  title: "Class X History Quiz — India and the Contemporary World – II",
+  lede: "Prelims-pattern questions across the five printed chapters and all three restored chapters — European and Indian nationalism, the global economy, industrialisation, print culture, and the deleted chapters on Indo-China, cities and the novel. This is the highest-yield NCERT in the series for Mains GS1. Multi-statement, match-the-pairs and assertion-reason sets; the statements reshuffle on every attempt and the answer code is computed afresh, so nothing about the wording, length or position gives the answer away."
+};
+const CHAPTERS = [
+  "Ch1 · The Rise of Nationalism in Europe",
+  "Ch2 · Nationalism in India",
+  "Ch3 · The Making of a Global World",
+  "Ch4 · The Age of Industrialisation",
+  "Ch5 · Print Culture and the Modern World",
+  "Ch6 · Supplement A — The Nationalist Movement in Indo-China",
+  "Ch7 · Supplement B — Work, Life and Leisure: Cities",
+  "Ch8 · Supplement C — Novels, Society and History"
+];
+
+const AR = [
+  "Both A and R are true and R is the correct explanation of A",
+  "Both A and R are true but R is not the correct explanation of A",
+  "A is true but R is false",
+  "A is false but R is true"
+];
+
+const QUESTIONS = [
+
+/* ============ Ch1 · The Rise of Nationalism in Europe ============ */
+{c:'Ch1 · The Rise of Nationalism in Europe',
+ q:'Consider the following statements about Frédéric Sorrieu\'s series of prints of 1848:',
+ S:[
+    ['They showed the peoples of Europe and America marching in a long train towards a statue of Liberty.',true],
+    ['The United States and Switzerland were already nation-states when the prints were made.',true],
+    ['Germany appeared in the prints as an established nation-state.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Germany did not yet exist as a nation; the German peoples in the print carry the black, red and gold tricolour, which at that date expressed a hope rather than a fact. That gap between the banner and the reality is exactly what makes Sorrieu\'s vision a utopian one.'},
+{c:'Ch1 · The Rise of Nationalism in Europe',
+ q:'The Napoleonic Code of 1804:',
+ o:[
+    'Abolished privileges based on birth and established equality before the law',
+    'Introduced universal adult suffrage throughout the annexed territories',
+    'Restored the guild system and the manorial dues of the nobility',
+    'Granted women the same civil status as men in property matters'],
+ a:0,
+ e:'The Code also secured the right to property. But it did not extend political rights: Napoleon moved back from universal suffrage to limited suffrage, and reduced women to the status of a minor, subject to the authority of fathers and husbands. The administrative gains and the political losses arrived in the same document.'},
+{c:'Ch1 · The Rise of Nationalism in Europe',
+ q:'Consider the following statements about Ernest Renan:',
+ S:[
+    ['He held that a nation is constituted by a common language, race and religion.',false],
+    ['He described the existence of a nation as a daily plebiscite.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Renan explicitly rejected language, race, religion and territory as the basis of nationhood. What he put in their place was the possession of a shared past together with present consent — which makes belonging a matter of continuing choice rather than inherited fact.'},
+{c:'Ch1 · The Rise of Nationalism in Europe',
+ q:'Assertion (A): Merchants in the German states pressed for the creation of a customs union.\nReason (R): A merchant travelling from Hamburg to Nuremberg had to pass through eleven customs barriers, paying a duty of about five per cent at each.',
+ o:AR,a:0,
+ e:'The zollverein of 1834, formed at the initiative of Prussia, abolished those barriers and reduced the number of currencies from over thirty to two. Economic nationalism arrived here through the ledger rather than through the flag.'},
+{c:'Ch1 · The Rise of Nationalism in Europe',
+ q:'The Congress of Vienna of 1815 was hosted by:',
+ o:[
+    'Louis Philippe, the King of the French',
+    'Duke Metternich, the Austrian Chancellor',
+    'Otto von Bismarck, the Prussian Chancellor',
+    'Count Cavour, the Chief Minister of Sardinia'],
+ a:1,
+ e:'The representatives of Britain, Russia, Prussia and Austria met to draw up a settlement after the defeat of Napoleon. The Bourbon dynasty was restored, France lost the territories annexed under Napoleon, and a series of states were set up along its boundaries to prevent future expansion.'},
+{c:'Ch1 · The Rise of Nationalism in Europe',
+ q:'Consider the following statements about nineteenth-century liberalism:',
+ S:[
+    ['Liberals demanded a constitution and government by consent.',true],
+    ['Liberals of the period favoured universal adult franchise from the outset.',false],
+    ['Liberals regarded the right to property as inviolable.',true],
+    ['In revolutionary France the vote was extended to women on the same terms as men.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Liberalism in this period meant government by consent, the end of autocracy and clerical privileges, and the equality of all before the law — but the right to vote was reserved for men of property. Women and non-propertied men were excluded, and organised themselves through the century to demand equal political rights.'},
+{c:'Ch1 · The Rise of Nationalism in Europe',
+ q:'Giuseppe Mazzini:',
+ o:[
+    'Commanded the Expedition of the Thousand into southern Italy',
+    'Negotiated the alliance with France that defeated Austria',
+    'Founded Young Italy at Marseilles and Young Europe at Berne',
+    'Founded the Carbonari and led it into the revolt of 1831'],
+ a:2,
+ e:'Mazzini was a member of the Carbonari, not its founder, and was sent into exile at the age of twenty-four for attempting a revolution in Liguria. His insistence that Italy be forged into a single unitary republic frightened conservatives so much that Metternich called him the most dangerous enemy of the social order.'},
+{c:'Ch1 · The Rise of Nationalism in Europe',
+ q:'Consider the following statements about conservatism after 1815:',
+ S:[
+    ['Conservatives believed the monarchy, the Church and the family should be preserved.',true],
+    ['Most conservatives accepted that modernisation could strengthen traditional institutions.',true],
+    ['A modern army and an efficient bureaucracy were regarded as compatible with autocratic rule.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'This is the point most often missed. Conservatives after 1815 did not simply want the old order back; they had absorbed the lesson that a modern army, an efficient bureaucracy, a dynamic economy and even the abolition of feudalism could make autocratic monarchy stronger rather than weaker.'},
+{c:'Ch1 · The Rise of Nationalism in Europe',
+ q:'Greek independence was formally recognised by:',
+ o:[
+    'The Treaty of Vienna of 1815',
+    'The Treaty of Frankfurt of 1871',
+    'The Treaty of Versailles of 1871',
+    'The Treaty of Constantinople of 1832'],
+ a:3,
+ e:'The struggle had begun in 1821 and drew support from educated Europeans who saw Greece as the cradle of European civilisation. The poet Byron organised funds and went on to fight, dying of fever in 1824.'},
+{c:'Ch1 · The Rise of Nationalism in Europe',
+ q:'Consider the following statements about German cultural nationalism:',
+ S:[
+    ['Johann Gottfried Herder located true German culture in das volk, the common people.',true],
+    ['The Grimm brothers published their first collection of folk tales in 1812.',true],
+    ['The Grimms also compiled a thirty-three volume German dictionary.',true],
+    ['The Grimm brothers kept away from politics and the question of press freedom.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Both Grimms were active in liberal politics and were among the professors dismissed for protesting against the suspension of a constitution. Collecting folk tales was itself a political act: if the spirit of the nation lived in the speech of ordinary people, then recording that speech was nation-building.'},
+{c:'Ch1 · The Rise of Nationalism in Europe',
+ q:'Assertion (A): Silesian weavers marched on the contractor\'s mansion in 1845.\nReason (R): The contractors who supplied them with raw material and orders had drastically reduced their payments.',
+ o:AR,a:0,
+ e:'The weavers demanded higher wages and were met with derision; when they forced their way in and plundered the stores, the army was called and eleven weavers were shot. The episode shows that the revolutions of this period grew as much out of economic distress as out of constitutional ideas.'},
+{c:'Ch1 · The Rise of Nationalism in Europe',
+ q:'Consider the following statements about the Frankfurt Parliament:',
+ S:[
+    ['It convened on 18 May 1848 in the Church of St Paul.',true],
+    ['It was composed of 831 elected representatives.',true],
+    ['Women were granted the right to vote in the elections to it.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Women had formed their own political associations, founded newspapers and taken part in the demonstrations, yet they were denied suffrage during the election and admitted only to the visitors\' gallery as observers. A parliament of liberals reproduced the exclusion it had been convened to end.'},
+{c:'Ch1 · The Rise of Nationalism in Europe',
+ q:'Friedrich Wilhelm IV of Prussia:',
+ o:[
+    'Rejected the crown offered by the Frankfurt Parliament',
+    'Accepted the crown and dissolved the princely states',
+    'Was crowned Kaiser at Versailles in January 1871',
+    'Presided over the Frankfurt Parliament as its chairman'],
+ a:0,
+ e:'He refused the crown because it came from an elected assembly rather than from the princes, and joined other monarchs in opposing the assembly. Deprived of the support of the aristocracy and the military, and having lost the artisans and workers by then, the parliament was eventually dissolved by troops.'},
+{c:'Ch1 · The Rise of Nationalism in Europe',
+ q:'Consider the following statements about German unification:',
+ S:[
+    ['It was completed through three wars fought over seven years.',true],
+    ['The Prussian king William I was proclaimed German Emperor at Versailles in January 1871.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Bismarck carried the process through with the help of the Prussian army and bureaucracy, defeating Austria, Denmark and France in turn. That the ceremony took place at Versailles, in the palace of the defeated enemy, tells you that this was unification by conquest rather than by consent.'},
+{c:'Ch1 · The Rise of Nationalism in Europe',
+ q:'Count Camillo de Cavour is described by NCERT as a figure who:',
+ o:[
+    'Was the Austrian Chancellor who presided over the Congress of Vienna',
+    'Was neither a revolutionary nor a democrat and spoke French better than Italian',
+    'Was a republican revolutionary who founded the secret society Young Italy',
+    'Led a volunteer army of Red Shirts into Sicily and Naples in the year 1860'],
+ a:1,
+ e:'Cavour was Chief Minister of Sardinia-Piedmont, and like many in the Italian elite of his class he spoke French better than the language of the state he helped to build. It was a tactful diplomatic alliance with France, not popular revolt, that let Sardinia-Piedmont defeat the Austrian forces in 1859.'},
+{c:'Ch1 · The Rise of Nationalism in Europe',
+ q:'Consider the following statements about Italian unification:',
+ S:[
+    ['Rome was incorporated into the Italian kingdom only in 1870.',true],
+    ['Garibaldi launched the Expedition of the Thousand in 1848.',false],
+    ['Victor Emmanuel II was proclaimed king of a united Italy in 1848.',false],
+    ['A majority of Italians could speak the Italian language at the time of unification.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'The Expedition of the Thousand set out in 1860 and grew into a force of about thirty thousand; Victor Emmanuel II was proclaimed king in 1861; and the Papal States were annexed in 1870 only when France withdrew its garrison during the war with Prussia. At unification a very small percentage of Italians could speak the language, which is the force of the remark that having made Italy, one now had to make Italians.'},
+{c:'Ch1 · The Rise of Nationalism in Europe',
+ q:'In nineteenth-century allegory, Germania was portrayed wearing:',
+ o:[
+    'A broken chain and the fasces of state authority',
+    'A radiant halo of the rising sun over her shoulders',
+    'A crown of oak leaves, since the oak stands for heroism',
+    'A red cap of liberty with a tricolour and a cockade'],
+ a:2,
+ e:'The female allegory allowed the nation to be given a form that no single ruler could claim. Marianne stood for France, marked by the red cap, the tricolour and the cockade; Germania wore the crown of oak leaves, the broken chain standing for freedom being gained and the sword for readiness to fight.'},
+
+/* ============ Ch2 · Nationalism in India ============ */
+{c:'Ch2 · Nationalism in India',
+ q:'Mahatma Gandhi returned to India from South Africa in:',
+ o:[
+    'January 1919',
+    'April 1917',
+    'March 1922',
+    'January 1915'],
+ a:3,
+ e:'He had successfully fought the racist regime in South Africa with a novel method of mass agitation. In his first year back he travelled the country at Gokhale\'s advice before entering national politics, which is why his first satyagrahas belong to 1917 and 1918.'},
+{c:'Ch2 · Nationalism in India',
+ q:'Consider the following pairs:',
+ head:'Satyagraha : Year and cause',
+ S:[
+    ['Champaran : 1917, against the oppressive plantation system',true],
+    ['Ahmedabad : 1918, among cotton mill workers',true],
+    ['Kheda : 1918, revenue relief after crop failure and plague',true],
+    ['Bardoli : 1919, against the Rowlatt Act',false]],
+ ask:'How many of the pairs given above are correctly matched?',
+ mode:'count',
+ e:'The three early satyagrahas were local and specific, each addressing a defined grievance, and each demonstrating that the method worked before it was applied nationally. The Rowlatt agitation of 1919 was Gandhi\'s first attempt at a movement on an all-India scale.'},
+{c:'Ch2 · Nationalism in India',
+ q:'The Rowlatt Act permitted detention of political prisoners without trial for:',
+ o:[
+    'Two years',
+    'Six months',
+    'One year',
+    'Five years'],
+ a:0,
+ e:'The Act gave the government enormous powers to repress political activities. It was hurried through the Imperial Legislative Council despite the united opposition of the Indian members, which is precisely why it was read as proof that constitutional participation counted for nothing.'},
+{c:'Ch2 · Nationalism in India',
+ q:'Consider the following statements about the events of April 1919:',
+ S:[
+    ['A hartal against the Rowlatt Act was observed on 6 April.',true],
+    ['The Jallianwala Bagh firing took place on 13 April, during the Baisakhi fair.',true],
+    ['General Dyer opened fire only after giving the crowd time to disperse.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Dyer entered the enclosed ground, blocked the exit points and opened fire without warning, killing hundreds. His declared object was to create a feeling of terror and awe, which is why the reaction against the news was itself violent and why Gandhi eventually called off the movement.'},
+{c:'Ch2 · Nationalism in India',
+ q:'Assertion (A): Gandhi took up the Khilafat question in 1919.\nReason (R): He saw in it an opportunity to bring Muslims into a unified national movement.',
+ o:AR,a:0,
+ e:'The Khilafat Committee had been formed at Bombay in March 1919 by Muhammad Ali and Shaukat Ali among others. At the Calcutta session of September 1920 Gandhi convinced other leaders to launch Non-Cooperation in support of Khilafat as well as swaraj.'},
+{c:'Ch2 · Nationalism in India',
+ q:'The Non-Cooperation programme was finally adopted by the Congress at:',
+ o:[
+    'the Karachi session of March 1931',
+    'the Nagpur session of December 1920',
+    'the Calcutta session of March 1919',
+    'the Lahore session of December 1929'],
+ a:1,
+ e:'The intervening months saw intense debate, since many members were reluctant to boycott the council elections of November 1920 and feared that the movement might lead to popular violence. The compromise reached at Nagpur held the party together at the cost of leaving that fear unresolved.'},
+{c:'Ch2 · Nationalism in India',
+ q:'Consider the following statements about the Non-Cooperation movement:',
+ S:[
+    ['Foreign cloth imports halved in value between 1921 and 1922.',true],
+    ['Every province boycotted the council elections of November 1920.',false],
+    ['Khadi cloth was often more expensive than mass-produced mill cloth.',true],
+    ['Alternative national schools and courts came up quickly enough to replace the British ones.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Madras was the exception on the boycott, where the Justice Party of the non-Brahmans saw entry into the council as a route to power that had been denied them. The cost of khadi and the slow appearance of alternative institutions are the two reasons the movement began to slow in the cities.'},
+{c:'Ch2 · Nationalism in India',
+ q:'The peasant movement in Awadh was led by:',
+ o:[
+    'Kunwar Singh, a taluqdar of the Gorakhpur district',
+    'Mahadev Desai, who served as Gandhi\'s private secretary',
+    'Baba Ramchandra, a sanyasi who had been indentured in Fiji',
+    'Alluri Sitaram Raju, who claimed special powers of healing'],
+ a:2,
+ e:'The movement was against the taluqdars and landlords who demanded exorbitantly high rents and made peasants do begar. The Oudh Kisan Sabha was set up in October 1920 by Jawaharlal Nehru, Baba Ramchandra and others, and within a month had over three hundred branches.'},
+{c:'Ch2 · Nationalism in India',
+ q:'Consider the following statements about what swaraj meant to different groups:',
+ S:[
+    ['For the peasants of Awadh it meant an end to begar and to unjust levies.',true],
+    ['For the Gudem hill people it meant the restoration of their rights over the forest.',true],
+    ['For Assam plantation workers it meant the right to move freely and return to their villages.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'This is the organising idea of the whole chapter. The movement drew its breadth from the fact that every group could pour its own meaning into the word, and it left the sharpest internal conflicts unresolved precisely because it never had to reconcile those meanings with one another.'},
+{c:'Ch2 · Nationalism in India',
+ q:'The Inland Emigration Act of 1859:',
+ o:[
+    'Allowed plantation workers to return to their homes once every three years',
+    'Abolished the indenture system in the Assam tea plantations',
+    'Fixed a minimum wage for workers on the Assam tea gardens',
+    'Barred plantation workers from leaving the tea gardens without permission'],
+ a:3,
+ e:'Permission was rarely given. When workers heard of Non-Cooperation, thousands defied the authorities and left the plantations, believing that Gandhi Raj was coming; they were caught on the way, and beaten.'},
+{c:'Ch2 · Nationalism in India',
+ q:'Assertion (A): Gandhi called off the Non-Cooperation movement in February 1922.\nReason (R): He felt the movement was turning violent and that satyagrahis needed to be properly trained before mass struggle.',
+ o:AR,a:0,
+ e:'The immediate occasion was Chauri Chaura in Gorakhpur, where a procession turned on a police station. Within the Congress, leaders such as C.R. Das and Motilal Nehru drew the opposite lesson and argued for a return to council politics.'},
+{c:'Ch2 · Nationalism in India',
+ q:'Consider the following statements about the Swaraj Party:',
+ S:[
+    ['It was formed by C.R. Das and Motilal Nehru to argue for a return to council politics.',true],
+    ['Jawaharlal Nehru and Subhas Chandra Bose were among those who supported the return to council politics.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Nehru and Bose pressed in the opposite direction, for more radical mass agitation and for full independence. The two positions inside the Congress after 1922 map onto the two ways of reading Chauri Chaura.'},
+{c:'Ch2 · Nationalism in India',
+ q:'The Simon Commission:',
+ o:[
+    'Had not a single Indian member and arrived in India in 1928',
+    'Recommended full provincial autonomy and dominion status',
+    'Was boycotted only by the Muslim League and the Liberals',
+    'Was appointed after the Lahore session of the Congress'],
+ a:0,
+ e:'It was set up to look into the functioning of the constitutional system and suggest changes, and was greeted everywhere with the slogan Go back Simon. Lala Lajpat Rai died of injuries sustained in a police assault during a demonstration against it.'},
+{c:'Ch2 · Nationalism in India',
+ q:'Consider the following statements about Purna Swaraj:',
+ S:[
+    ['It was adopted at the Lahore session of the Congress in December 1929.',true],
+    ['26 January 1930 was declared Independence Day.',true],
+    ['Jawaharlal Nehru presided over the Karachi session at which it was adopted.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Nehru presided at Lahore, not Karachi. The celebration of the first Independence Day was, in Gandhi\'s own assessment, poorly attended, which is part of why he looked for an issue that could connect the abstract demand to an everyday grievance.'},
+{c:'Ch2 · Nationalism in India',
+ q:'Gandhi\'s letter to Viceroy Irwin of 31 January 1930 contained:',
+ o:[
+    'Nine demands, with a deadline of 5 March',
+    'Eleven demands, with a deadline of 11 March',
+    'Nine demands, with a deadline of 6 April',
+    'Eleven demands, with a deadline of 26 January'],
+ a:1,
+ e:'The demands were pitched wide so that all classes could identify with them, from industrialists to peasants, and the most stirring of them was the abolition of the salt tax. Salt was consumed by rich and poor alike, and the state monopoly over it was among the most oppressive faces of British rule.'},
+{c:'Ch2 · Nationalism in India',
+ q:'Consider the following statements about the Salt March and Civil Disobedience:',
+ S:[
+    ['The march covered over 240 miles in 24 days.',true],
+    ['Gandhi set out from the Sabarmati ashram with 78 volunteers.',true],
+    ['The salt law was ceremonially broken at Dandi on 12 March 1930.',false],
+    ['About 10,000 people were arrested in the course of the movement.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'The march began on 12 March and the law was broken on 6 April, when Gandhi manufactured salt by boiling sea water. In the repression that followed, about a hundred thousand people were arrested — a figure ten times larger than is usually remembered.'},
+{c:'Ch2 · Nationalism in India',
+ q:'Assertion (A): Dr B.R. Ambedkar accepted the Poona Pact of September 1932.\nReason (R): The pact gave the Depressed Classes reserved seats in the provincial and central legislative councils.',
+ o:AR,a:0,
+ e:'Gandhi had begun a fast unto death against the separate electorates granted by the British, believing they would slow the integration of society. The compromise reached kept the reservation but placed the choice in the hands of the general electorate.'},
+{c:'Ch2 · Nationalism in India',
+ q:'The Poona Pact of September 1932 provided for:',
+ o:[
+    'A separate Depressed Classes constituency roll',
+    'Nomination of Depressed Class members by the Viceroy',
+    'Reserved seats filled by the general electorate',
+    'Separate electorates for the Depressed Classes'],
+ a:2,
+ e:'This is the distinction most often reversed in examinations. A separate electorate lets a community elect its own representatives; a reserved seat voted by the general electorate means the representative must be acceptable to the wider body of voters, which was the whole point of the disagreement.'},
+{c:'Ch2 · Nationalism in India',
+ q:'Consider the following statements about negotiations with the Muslim League:',
+ S:[
+    ['In 1927 Jinnah was willing to give up separate electorates in return for reserved seats in the Central Assembly.',true],
+    ['Talks at the All Parties Conference of 1928 broke down when M.R. Jayakar of the Hindu Mahasabha opposed compromise.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The condition attached was a guaranteed proportion of seats in the Muslim-dominated provinces of Bengal and Punjab. The failure of these talks matters because it shows that the demand for separate electorates hardened over time rather than being fixed from the beginning.'},
+{c:'Ch2 · Nationalism in India',
+ q:'The song Vande Mataram was written by:',
+ o:[
+    'Rabindranath Tagore, in the early 1900s',
+    'Abanindranath Tagore, in the late 1890s',
+    'Dwijendranath Tagore, in the 1880s',
+    'Bankim Chandra Chattopadhyay, in the 1870s'],
+ a:3,
+ e:'It was later included in his novel Anandamath and was widely sung during the Swadeshi movement in Bengal. Abanindranath Tagore painted the famous image of Bharat Mata, while Rabindranath Tagore collected ballads, nursery rhymes and myths to recover a folk tradition.'},
+{c:'Ch2 · Nationalism in India',
+ q:'Consider the following statements about nationalist symbols:',
+ S:[
+    ['The swadeshi flag of 1905 carried eight lotuses and a crescent moon.',true],
+    ['The swaraj flag of 1921 carried a spinning wheel at its centre.',true],
+    ['Abanindranath Tagore painted the image of Bharat Mata.',true],
+    ['Rabindranath Tagore composed the song Vande Mataram.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'The tricolour of 1905 was red, green and yellow, with the eight lotuses representing eight provinces and the crescent standing for Hindus and Muslims. The swaraj flag of 1921 was red, green and white, and its spinning wheel stood for self-help.'},
+{c:'Ch2 · Nationalism in India',
+ q:'The Hindustan Socialist Republican Association was founded:',
+ o:[
+    'In 1928, at the Ferozeshah Kotla ground in Delhi',
+    'In 1929, at the Lahore session of the Congress',
+    'In 1925, after the Kakori conspiracy in Uttar Pradesh',
+    'In 1931, after the execution of Bhagat Singh'],
+ a:0,
+ e:'Bhagat Singh and Batukeswar Dutta threw a bomb in the Central Legislative Assembly in April 1929, choosing an act designed to be heard rather than to kill. Bhagat Singh was twenty-three when he was executed.'},
+{c:'Ch2 · Nationalism in India',
+ q:'Consider the following statements about the Quit India movement:',
+ S:[
+    ['The resolution was passed at Wardha on 14 July 1942.',true],
+    ['The All India Congress Committee endorsed it in Bombay on 8 August 1942.',true],
+    ['Gandhi delivered the Do or Die speech at Wardha.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The Do or Die speech was made in Bombay on 8 August. The entire Congress leadership was arrested within hours, which left the movement to be carried forward by ordinary people and by underground networks rather than by the organisation.'},
+
+/* ============ Ch3 · The Making of a Global World ============ */
+{c:'Ch3 · The Making of a Global World',
+ q:'Consider the following statements about the pre-modern world:',
+ S:[
+    ['Cowries from the Maldives were used as a form of currency as far away as China and East Africa.',true],
+    ['Silk routes existed both over land and by sea before the Christian Era.',true],
+    ['Chinese silk travelled eastward along these routes to Japan and Korea.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The silk routes carried Chinese silk westward, along with Chinese pottery and textiles and spices from India and South-East Asia. In return, precious metals — gold and silver — flowed from Europe to Asia, which is one measure of where the wealth of the world then lay.'},
+{c:'Ch3 · The Making of a Global World',
+ q:'Potatoes, soya, groundnuts, maize, tomatoes and chillies:',
+ o:[
+    'Were first cultivated in the Nile valley and spread from there',
+    'Reached Europe and Asia only after Columbus discovered the Americas',
+    'Were domesticated in the Mediterranean basin in the classical period',
+    'Were carried westward from India along the maritime silk routes'],
+ a:1,
+ e:'They came from the original inhabitants of the Americas. The introduction of the potato transformed European diets so completely that the Irish poor came to depend on it — which is why the failure of the crop in the mid-1840s killed about a million people and drove double that number to emigrate.'},
+{c:'Ch3 · The Making of a Global World',
+ q:'Assertion (A): The Spanish conquest of America was not achieved by superior firepower alone.\nReason (R): Smallpox, to which the original inhabitants had no immunity, killed and decimated whole communities.',
+ o:AR,a:0,
+ e:'Having been isolated from the rest of the world for millions of years, America\'s peoples had no defence against the diseases the Spanish carried. As the chapter observes, guns could be bought or captured and turned against the invaders, but diseases could not.'},
+{c:'Ch3 · The Making of a Global World',
+ q:'Consider the following statements about the Corn Laws:',
+ S:[
+    ['They restricted the import of corn into Britain.',true],
+    ['They were abolished under pressure from industrialists and urban dwellers.',true],
+    ['Their abolition helped British farmers by raising the price of grain.',false],
+    ['They were repealed at the insistence of the landed groups who had sought them.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'After abolition, food could be imported more cheaply than it could be produced in Britain. British agriculture could not compete, vast areas of land were left uncultivated, and thousands of men and women were thrown out of work and flowed to the cities or overseas.'},
+{c:'Ch3 · The Making of a Global World',
+ q:'In the nineteenth century, the number of Europeans who emigrated to America and Australia was:',
+ o:[
+    'About 15 million',
+    'Nearly 90 million',
+    'Nearly 50 million',
+    'About 5 million'],
+ a:2,
+ e:'Across the world some 150 million people are estimated to have left their homes in that century, crossing oceans and vast distances inland in search of a better future. The movement of people was thus on a scale comparable to the movement of goods.'},
+{c:'Ch3 · The Making of a Global World',
+ q:'Consider the following statements about the three flows of the nineteenth-century global economy:',
+ S:[
+    ['The three flows are the flow of trade, the flow of labour and the flow of capital.',true],
+    ['Trade in this period was largely a trade in goods.',true],
+    ['The movement of labour faced more restrictions than the movement of goods or capital.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The asymmetry is the point worth carrying away. Capital and commodities moved with far greater freedom than people did, and that pattern has proved remarkably durable in the century since.'},
+{c:'Ch3 · The Making of a Global World',
+ q:'Between 1820 and 1914 world trade is estimated to have multiplied:',
+ o:[
+    '5 to 10 times',
+    '3 to 6 times',
+    '60 to 80 times',
+    '25 to 40 times'],
+ a:3,
+ e:'Nearly sixty per cent of that trade was in primary products — agricultural produce and minerals such as cotton, wheat and coal. The industrial nations sold manufactures and bought raw materials, and the shape of that exchange defined the colonial economies.'},
+{c:'Ch3 · The Making of a Global World',
+ q:'Consider the following statements about rinderpest in Africa:',
+ S:[
+    ['It was a fast-spreading disease of cattle.',true],
+    ['It arrived in the late 1880s with cattle imported to feed Italian soldiers invading Eritrea.',true],
+    ['It killed about ninety per cent of the cattle it reached.',true],
+    ['It strengthened the bargaining power of African peasants against European planters.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'The loss of cattle destroyed African livelihoods and left people with no choice but to work for a wage. Planters, mine owners and colonial governments monopolised what remained of the scarce cattle resource, and used it to strengthen their power over the labour market.'},
+{c:'Ch3 · The Making of a Global World',
+ q:'Indentured labour in the nineteenth century has been described as:',
+ o:[
+    'A new system of slavery',
+    'A form of free wage labour',
+    'A variety of tenant farming',
+    'A kind of apprenticeship'],
+ a:0,
+ e:'Workers were bound by a contract promising return travel after five years of work on the employer\'s plantation. Living and working conditions were harsh and legal rights few, and agents often provided false information about the destination and the nature of the work.'},
+{c:'Ch3 · The Making of a Global World',
+ q:'Consider the following statements about Indian indentured migration:',
+ S:[
+    ['Most recruits came from eastern Uttar Pradesh, Bihar, central India and the dry districts of Tamil Nadu.',true],
+    ['The system was abolished in 1921.',true],
+    ['Recruits were fully informed of the conditions and the destination before they sailed.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Nationalist leaders had begun opposing the system as abusive and cruel from the first years of the twentieth century. The main destinations were Trinidad, Guyana, Surinam, Mauritius and Fiji, with Tamil migrants going mainly to Ceylon and Malaya.'},
+{c:'Ch3 · The Making of a Global World',
+ q:'Hosay was:',
+ o:[
+    'A festival of the Indian merchant houses of Mauritius',
+    'A Muharram procession in Trinidad turned into a carnival',
+    'A protest movement among the Fiji plantation workers',
+    'A form of Rastafarianism developed in British Guyana'],
+ a:1,
+ e:'The annual procession became a riotous carnival called Hosay, for Imam Hussain, in which workers of all races and religions joined. It is a good example of the way indentured workers developed new forms of culture that blended the old and the new.'},
+{c:'Ch3 · The Making of a Global World',
+ q:'Consider the following statements about India\'s trade under colonial rule:',
+ S:[
+    ['Britain ran a trade surplus with India.',true],
+    ['India\'s share of Britain\'s cotton textile imports fell to below three per cent by the 1870s.',true],
+    ['The home charges consisted mainly of India\'s defence expenditure.',false],
+    ['Britain\'s surplus with India was used to balance its deficits with third countries.',true]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'The home charges were private remittances by British officials and traders, interest on India\'s external debt, and pensions of British officials in India. The surplus with India was what allowed Britain\'s system of multilateral settlements to work.'},
+{c:'Ch3 · The Making of a Global World',
+ q:'Assertion (A): Britain was able to balance its trade deficits with other countries.\nReason (R): Its trade surplus with India allowed a system of multilateral settlement to function.',
+ o:AR,a:0,
+ e:'Britain imported more from countries such as the United States and Germany than it sold to them, and covered the difference with what India was made to yield. The colony was therefore performing a service for the imperial economy well beyond the direct extraction of goods.'},
+{c:'Ch3 · The Making of a Global World',
+ q:'The casualties of the First World War are estimated at:',
+ o:[
+    '9 million dead and 9 million injured',
+    '2 million dead and 10 million injured',
+    '9 million dead and 20 million injured',
+    '20 million dead and 9 million injured'],
+ a:2,
+ e:'Most of those killed and maimed were men of working age, which reduced the able-bodied workforce in Europe and altered household incomes for a generation. The war was also the first modern industrial war, fought with machine guns, tanks, aircraft and chemical weapons on a scale not seen before.'},
+{c:'Ch3 · The Making of a Global World',
+ q:'Consider the following statements about the United States after the First World War:',
+ S:[
+    ['The war turned the United States into an international debtor.',false],
+    ['At the war\'s end the US owned more overseas assets than foreign governments owned in the US.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The war transformed the US from an international debtor into an international creditor. Britain, which had begun the war as the world\'s leading economy, emerged burdened with debts and struggling to recover its former position.'},
+{c:'Ch3 · The Making of a Global World',
+ q:'Henry Ford doubled the daily wage to $5 in January 1914 because:',
+ o:[
+    'A strike by the newly recognised trade union had begun',
+    'Congress had legislated a national minimum wage',
+    'His competitors had already raised wages beyond his',
+    'Workers were quitting the assembly line in large numbers'],
+ a:3,
+ e:'The pace of the moving assembly line was so exhausting that workers left in large numbers. Ford recovered the cost by speeding up the line still further and by banning trade unions from his plants, and later called it the best cost-cutting decision he had made.'},
+{c:'Ch3 · The Making of a Global World',
+ q:'Consider the following statements about the causes and course of the Great Depression:',
+ S:[
+    ['Agricultural overproduction and falling prices were among its causes.',true],
+    ['US overseas lending, which had exceeded $1 billion in the first half of 1928, was withdrawn.',true],
+    ['The United States doubled import duties in an attempt to protect its economy.',true],
+    ['By 1933 fewer than 500 US banks had closed.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'By 1933 over four thousand banks had closed, and between 1929 and 1932 about 110,000 companies collapsed. The withdrawal of American credit is what turned a US downturn into a global one, since countries dependent on that lending were hit hardest.'},
+{c:'Ch3 · The Making of a Global World',
+ q:'Between 1928 and 1934 Indian wheat prices fell by about:',
+ o:[
+    'Fifty per cent',
+    'Twenty per cent',
+    'Ten per cent',
+    'Eighty per cent'],
+ a:0,
+ e:'India\'s exports and imports nearly halved in the same years, and raw jute prices crashed by more than sixty per cent. Peasants producing for the world market were the worst hit, since their prices collapsed while their obligations did not.'},
+{c:'Ch3 · The Making of a Global World',
+ q:'Consider the following statements about the Depression in India:',
+ S:[
+    ['The colonial government refused to reduce its revenue demands.',true],
+    ['Raw jute prices crashed by more than sixty per cent.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Peasants who produced for the market fell deeper into debt, using up their savings, mortgaging land and selling jewellery and precious metals. This is why the countryside was seething with unrest exactly when Civil Disobedience was launched, and the two facts belong in the same answer.'},
+{c:'Ch3 · The Making of a Global World',
+ q:'The Bretton Woods conference was held in:',
+ o:[
+    'June 1947, in New Hampshire',
+    'July 1944, in New Hampshire',
+    'July 1945, in Washington DC',
+    'June 1944, in Massachusetts'],
+ a:1,
+ e:'It established the International Monetary Fund to deal with external surpluses and deficits and the International Bank for Reconstruction and Development to finance post-war rebuilding. Both institutions commenced financial operations in 1947.'},
+
+/* ============ Ch4 · The Age of Industrialisation ============ */
+{c:'Ch4 · The Age of Industrialisation',
+ q:'Consider the following statements about proto-industrialisation:',
+ S:[
+    ['It was large-scale production for an international market that was not based on factories.',true],
+    ['Merchants moved into the countryside because urban guilds restricted entry into the trade.',true],
+    ['Proto-industrial producers in the countryside were wholly independent of town merchants.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The countryside producer remained tied to the merchant who advanced the raw material and took the finished cloth. What the arrangement gave the peasant was supplementary income at a time when common lands were shrinking, not independence.'},
+{c:'Ch4 · The Age of Industrialisation',
+ q:'In the proto-industrial system, a stapler:',
+ o:[
+    'Prepared the fibre so that it was ready for spinning',
+    'Fixed the warp threads on the loom before weaving',
+    'Sorted wool according to the length of the fibre',
+    'Gathered cloth together by pleating it after weaving'],
+ a:2,
+ e:'The fuller gathered cloth by pleating, and carding was the process that prepared fibres for spinning. Each stage was carried out by a different household in a different village, so a single piece of cloth passed through the hands of twenty or more people before it reached the merchant.'},
+{c:'Ch4 · The Age of Industrialisation',
+ q:'Consider the following pairs:',
+ head:'Innovation : Person associated',
+ S:[
+    ['Spinning Jenny : James Hargreaves',true],
+    ['Cotton mill : Richard Arkwright',true],
+    ['Steam engine : Mathew Boulton',false],
+    ['Fly shuttle : Richard Arkwright',false]],
+ ask:'How many of the pairs given above are correctly matched?',
+ mode:'count',
+ e:'The steam engine was made by Newcomen and improved by James Watt, who patented the new engine in 1781; Boulton was the manufacturer who produced it. Arkwright\'s contribution was the cotton mill, which brought the costly new machines under one roof and made supervision possible.'},
+{c:'Ch4 · The Age of Industrialisation',
+ q:'By 1800, the number of steam engines in England was:',
+ o:[
+    'About 3,200',
+    'About 1,500',
+    'No more than 50',
+    'No more than 321'],
+ a:3,
+ e:'Of these, eighty were in cotton industries, nine in wool, and the rest in mining, canal works and iron works. The figure is worth remembering because it punctures the image of an England transformed overnight by steam.'},
+{c:'Ch4 · The Age of Industrialisation',
+ q:'Consider the following statements about why British industrialists often preferred hand labour:',
+ S:[
+    ['Labour was abundant and wages were low.',true],
+    ['Demand in many industries was seasonal, so machines would have stood idle for part of the year.',true],
+    ['The upper classes preferred goods produced by hand.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'A further reason was the demand for a wide variety of designs: in the mid-nineteenth century Britain produced five hundred varieties of hammer and forty-five kinds of axe, which required human skill rather than mechanical repetition. Machine-made uniform goods were largely for export to the colonies.'},
+{c:'Ch4 · The Age of Industrialisation',
+ q:'Assertion (A): Women in the woollen industry attacked the Spinning Jenny.\nReason (R): They had survived on hand spinning and feared the machine would take their work away.',
+ o:AR,a:0,
+ e:'The contemporary report notes that the wives had lost their work to the spinning engines, that the women were clamorous, and that the men were more open to conviction. Resistance to machinery was concentrated among precisely those whose livelihood the machine replaced.'},
+{c:'Ch4 · The Age of Industrialisation',
+ q:'At the end of the nineteenth century, the share of the European workforce in advanced industrial sectors was:',
+ o:[
+    'Less than 20 per cent',
+    'About 45 per cent',
+    'About 60 per cent',
+    'More than 80 per cent'],
+ a:0,
+ e:'Textiles remained a largely domestic industry, carried on in small workshops rather than factories. The image of the nineteenth century as an age of steam-driven factory production describes a small and unrepresentative part of the economy.'},
+{c:'Ch4 · The Age of Industrialisation',
+ q:'Consider the following statements about Indian trade and the Company:',
+ S:[
+    ['Surat\'s trade fell from about Rs 16 million in the late seventeenth century to Rs 3 million by the 1740s.',true],
+    ['The gomastha was a paid servant of the Company and usually an outsider to the weaving village.',true],
+    ['The gomastha was an Indian merchant who supplied cloth on his own account.',false],
+    ['Bombay and Calcutta declined as Surat and Hoogly grew during the eighteenth century.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Surat and Hoogly decayed while Bombay and Calcutta grew, and the shift from the old ports to the new was a shift from Indian merchant networks to European company control. The gomastha marched into villages with sepoys and peons and flogged weavers for delays.'},
+{c:'Ch4 · The Age of Industrialisation',
+ q:'Indian cotton piece-goods as a proportion of India\'s exports fell from 33 per cent in 1811-12 to:',
+ o:[
+    'No more than 8 per cent by 1870-71',
+    'No more than 3 per cent by 1850-51',
+    'About 15 per cent by 1850-51',
+    'About 20 per cent by 1870-71'],
+ a:1,
+ e:'Over the same period cotton piece-goods rose from virtually nothing to over 31 per cent of India\'s imports by the 1850s and over 50 per cent by the 1870s. India moved from being an exporter of cloth to an importer of it in roughly two generations.'},
+{c:'Ch4 · The Age of Industrialisation',
+ q:'Assertion (A): Indian weavers were starved of raw cotton during the 1860s.\nReason (R): The American Civil War raised the demand for Indian raw cotton and its price rose beyond what weavers could pay.',
+ o:AR,a:0,
+ e:'Britain turned to India when supplies of American cotton were cut off. Raw cotton exports and prices rose together, so an apparent boom in Indian exports was experienced by Indian weavers as a shortage of the material they needed.'},
+{c:'Ch4 · The Age of Industrialisation',
+ q:'Consider the following statements about early Indian industry:',
+ S:[
+    ['J.N. Tata set up the first Indian iron and steel works at Jamshedpur in 1912.',true],
+    ['Seth Hukumchand set up the first Indian-owned jute mill in Calcutta in 1917.',true],
+    ['The earliest Indian mills concentrated on producing fine cloth for the domestic market.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Capital for these ventures was accumulated through trade with China, including the opium trade, and through exports of raw cotton. The pattern is worth noting: Indian industrial capital was built out of colonial trade before it could be turned against colonial industry.'},
+{c:'Ch4 · The Age of Industrialisation',
+ q:'The earliest Indian mills produced mainly:',
+ o:[
+    'Woven piece-goods for army supply',
+    'Jute sacking for the export trade',
+    'Coarse cotton yarn rather than woven cloth',
+    'Fine muslin for the European market'],
+ a:2,
+ e:'Yarn was not an important part of British imports into India, so this was the one line in which Indian mills faced little competition. The yarn was bought by Indian handloom weavers or exported to China, and the mills turned to cloth only when that Chinese market was captured by Chinese and Japanese producers.'},
+{c:'Ch4 · The Age of Industrialisation',
+ q:'Consider the following statements about handloom weaving in twentieth-century India:',
+ S:[
+    ['Handloom cloth production almost trebled between 1900 and 1940.',true],
+    ['By 1941 over 35 per cent of handlooms in India had fly shuttles.',true],
+    ['Weavers producing coarse cloth were more vulnerable in famine years than those making fine cloth.',true],
+    ['Handloom production collapsed entirely once the mills were established.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Weavers survived by adopting new technology and by specialising in what mills could not easily copy, such as the Banarasi or Baluchari border. In the regions of Travancore, Madras, Mysore, Cochin and Bengal the proportion of looms with fly shuttles was as high as seventy or eighty per cent.'},
+{c:'Ch4 · The Age of Industrialisation',
+ q:'The European Managing Agencies of colonial India:',
+ o:[
+    'Provided both the capital and the management for new Indian ventures',
+    'Were required to admit Indian members to their chambers of commerce',
+    'Were set up by Indian merchants trading with China and West Asia',
+    'Made investment decisions with capital raised from Indian financiers'],
+ a:3,
+ e:'Indian financiers supplied the money while the European agencies made all the investment and business decisions, and Indians were kept out of their chambers of commerce. The three largest were Bird Heiglers, Andrew Yule and Jardine Skinner.'},
+{c:'Ch4 · The Age of Industrialisation',
+ q:'Consider the following statements about advertising and the market:',
+ S:[
+    ['Manchester manufacturers put labels on cloth bundles so that buyers would know the place of manufacture.',true],
+    ['Indian manufacturers avoided calendars as a form of advertising because they reached too few homes.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Calendars were used precisely because, unlike newspapers, they reached those who could not read, hanging in tea shops and in poor homes throughout the year. Labels often carried images of Indian gods and goddesses, as if to suggest divine approval of the goods being sold.'},
+{c:'Ch4 · The Age of Industrialisation',
+ q:'In 1873 Britain exported iron and steel worth:',
+ o:[
+    'About £77 million, double its cotton exports',
+    'About £77 million, half its cotton exports',
+    'About £22 million, equal to its cotton exports',
+    'About £150 million, triple its cotton exports'],
+ a:0,
+ e:'Cotton had been the leading sector of British industrialisation until the 1840s, after which iron and steel took its place. The shift was driven by the expansion of railways in England from the 1840s and in the colonies from the 1860s.'},
+{c:'Ch4 · The Age of Industrialisation',
+ q:'Consider the following statements about industrial workers:',
+ S:[
+    ['In 1911 about five per cent of India\'s industrial workforce was employed in registered factories.',true],
+    ['At the best of times about ten per cent of Britain\'s urban population was extremely poor.',true],
+    ['During slumps in the 1830s unemployment ran between 35 and 75 per cent, depending on the region.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The Indian figure had risen only to about ten per cent by 1931; the rest worked in small workshops and household units. In both countries the factory was the visible face of an economy whose bulk lay elsewhere.'},
+
+/* ============ Ch5 · Print Culture and the Modern World ============ */
+{c:'Ch5 · Print Culture and the Modern World',
+ q:'Consider the following statements about the origins of print:',
+ S:[
+    ['Hand printing in China dates from AD 594.',true],
+    ['The Diamond Sutra of AD 868 is the oldest surviving printed Chinese book.',true],
+    ['Buddhist missionaries carried the technology of hand printing from Japan to China.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The movement was in the other direction: Chinese Buddhist missionaries introduced hand printing to Japan around AD 768 to 770. Paper was also a Chinese invention, reaching Europe by way of the trade routes.'},
+{c:'Ch5 · Print Culture and the Modern World',
+ q:'The imperial state in China was for a long time the major producer of printed material because:',
+ o:[
+    'It alone possessed the woodblocks needed for the script',
+    'It printed the textbooks for the civil service examinations',
+    'It held a legal monopoly over the manufacture of paper',
+    'It required every merchant house to register its accounts'],
+ a:1,
+ e:'As the number of candidates went up, the volume of print went up with it. Diversification came in the seventeenth century, when urban culture expanded and merchants, readers of fiction, poetry and romance, and women writers all entered the market.'},
+{c:'Ch5 · Print Culture and the Modern World',
+ q:'Assertion (A): The earliest printed books in Europe closely resembled written manuscripts.\nReason (R): Printers imitated ornamental handwriting in the metal letters and left space blank for the buyer\'s chosen decoration.',
+ o:AR,a:0,
+ e:'Borders were illuminated by hand and illustrations painted in. The nobility often had the printed pages decorated to their own taste, because among the elite the lack of uniformity was itself a mark of distinction.'},
+{c:'Ch5 · Print Culture and the Modern World',
+ q:'Consider the following statements about Gutenberg\'s press:',
+ S:[
+    ['He perfected the press by 1448, and the first book he printed was the Bible.',true],
+    ['His press could turn out about 8,000 sheets an hour.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Gutenberg\'s press could print about 250 sheets on one side per hour, and about 180 copies of the Bible were produced in three years. The figure of 8,000 sheets an hour belongs to Richard M. Hoe\'s power-driven cylindrical press of the mid-nineteenth century.'},
+{c:'Ch5 · Print Culture and the Modern World',
+ q:'The number of books printed in Europe in the second half of the fifteenth century was about:',
+ o:[
+    '2 million',
+    '80 million',
+    '20 million',
+    '200 million'],
+ a:2,
+ e:'The figure rose to about 200 million in the sixteenth century. The shift from hand copying to mechanical reproduction cut both the cost and the time required, and books ceased to be the possession of a very small elite.'},
+{c:'Ch5 · Print Culture and the Modern World',
+ q:'Consider the following statements about print and the Reformation:',
+ S:[
+    ['Luther described printing as the ultimate gift of God and the greatest one.',true],
+    ['Luther\'s translation of the New Testament sold 5,000 copies within a few weeks.',true],
+    ['The Roman Church began maintaining an Index of Prohibited Books from 1517.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The Index was begun in 1558. Luther\'s Ninety Five Theses of 1517 were printed and widely circulated, and the Church\'s inability to recall what had already been distributed is precisely what made print so threatening to it.'},
+{c:'Ch5 · Print Culture and the Modern World',
+ q:'Menocchio, who was executed by the Roman Inquisition, was:',
+ o:[
+    'A printer in Strasbourg who published Luther',
+    'A bookseller in Venice who sold banned works',
+    'A monk in Germany who translated the Psalms',
+    'A miller in Italy who reinterpreted the Bible'],
+ a:3,
+ e:'He read available books and formulated a view of God and Creation that enraged the Roman Church. His case shows that print did not merely spread approved doctrine faster; it let readers outside the learned classes reach conclusions of their own.'},
+{c:'Ch5 · Print Culture and the Modern World',
+ q:'Consider the following statements about Erasmus:',
+ S:[
+    ['He welcomed the printing of books as an unmixed benefit to scholarship.',false],
+    ['He expressed his fears about printing in a work published in 1608.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Erasmus wrote in his Adages of 1508 that the very multitude of books is hurtful to scholarship because it creates a glut, and that swarms of new books may be silly, slanderous or irreligious. The anxiety that abundance would drown out quality is thus as old as printing itself.'},
+{c:'Ch5 · Print Culture and the Modern World',
+ q:'The Bibliothèque Bleue was:',
+ o:[
+    'Cheap French books printed on poor paper in blue covers',
+    'A royal library founded in Paris in the seventeenth century',
+    'A series of English penny chapbooks sold by chapmen',
+    'A censorship register maintained by the French crown'],
+ a:0,
+ e:'It was the French equivalent of the English penny chapbook, which pedlars known as chapmen carried from village to village. Both were formats designed to reach buyers with very little money, and both did so by economising on materials rather than on content.'},
+{c:'Ch5 · Print Culture and the Modern World',
+ q:'Consider the following statements about print and the French Revolution:',
+ S:[
+    ['Print popularised the ideas of Enlightenment thinkers who criticised tradition and despotism.',true],
+    ['Print created a new culture of dialogue and debate in which established values were re-evaluated.',true],
+    ['NCERT holds that print directly shaped the minds of the people who made the revolution.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The textbook is careful here: people read many kinds of literature, including monarchical and Church propaganda, and did not accept everything they read. Print did not directly shape their minds, but it did open up the possibility of thinking differently.'},
+{c:'Ch5 · Print Culture and the Modern World',
+ q:'The first printing press in India was brought by:',
+ o:[
+    'British Baptist missionaries, who founded the Serampore press',
+    'Portuguese missionaries, who reached Goa in the mid-sixteenth century',
+    'The East India Company, which set up a press at Calcutta in 1780',
+    'Dutch traders, who established a press at Cochin in the year 1713'],
+ a:1,
+ e:'Jesuit priests learnt Konkani and printed several tracts, and by 1674 about fifty books had been printed in Konkani and Kanara. The first Tamil book was printed at Cochin in 1579 and the first Malayalam book in 1713.'},
+{c:'Ch5 · Print Culture and the Modern World',
+ q:'Consider the following statements about early newspapers in India:',
+ S:[
+    ['The Bengal Gazette of Gangadhar Bhattacharya was among the first Indian-edited weeklies.',true],
+    ['James Augustus Hickey\'s Bengal Gazette was officially sponsored by the Company.',false],
+    ['Rammohun Roy published the Samachar Chandrika to advance his programme of reform.',false],
+    ['Warren Hastings rewarded Hickey by appointing him the official Company printer.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Hickey described his paper as a commercial paper open to all but influenced by none, and printed gossip about senior officials; Hastings persecuted him and sponsored papers that would counter his. Rammohun Roy published the Sambad Kaumudi from 1821, and the Samachar Chandrika was commissioned by the Hindu orthodoxy to oppose him.'},
+{c:'Ch5 · Print Culture and the Modern World',
+ q:'The Vernacular Press Act of 1878 was modelled on:',
+ o:[
+    'The Company Charter Act',
+    'The English Libel Statutes',
+    'The Irish Press Laws',
+    'The Scottish Sedition Acts'],
+ a:2,
+ e:'The Act gave the government extensive rights to censor reports and editorials in the vernacular press. If a report was judged seditious the press could be seized and its printing machinery confiscated, which made publication itself a risk rather than merely an offence.'},
+{c:'Ch5 · Print Culture and the Modern World',
+ q:'Consider the following statements about writing from below in colonial India:',
+ S:[
+    ['Rashsundari Debi\'s Amar Jiban, published in 1876, was the first full-length autobiography in Bengali.',true],
+    ['Jyotiba Phule wrote Gulamgiri in 1871 on the injustices of the caste system.',true],
+    ['Kashibaba, a Kanpur millworker, wrote Chhote Aur Bade Ka Sawal in 1938.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Rashsundari Debi was a housewife in a very orthodox household who taught herself to read in stolen moments in the kitchen. Kashibaba linked caste and class exploitation together, and mill workers in Kanpur and Bangalore set up libraries to educate themselves.'},
+{c:'Ch5 · Print Culture and the Modern World',
+ q:'Under Governor-General Bentinck in 1835, Thomas Macaulay:',
+ o:[
+    'Introduced the licensing of all vernacular newspapers',
+    'Extended the Company\'s monopoly over printed matter',
+    'Established the first official press censorship board',
+    'Formulated rules that restored earlier press freedoms'],
+ a:3,
+ e:'Bentinck agreed to revise press laws after facing urgent petitions from editors of English and vernacular newspapers. The liberal phase did not last: after the revolt of 1857 the attitude to freedom of the press hardened, leading to the Vernacular Press Act of 1878.'},
+{c:'Ch5 · Print Culture and the Modern World',
+ q:'Consider the following statements about wartime control of the press:',
+ S:[
+    ['In the First World War twenty-two papers had to furnish securities and eighteen shut down.',true],
+    ['During the Quit India agitation of August 1942 about ninety newspapers were suppressed.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Repression of the press ran alongside repression of the movement, and intensified with it. Tilak had earlier written in Kesari about the Punjab revolutionaries deported in 1907 and was himself imprisoned in 1908, which provoked widespread protest across India.'},
+
+/* ============ Ch6 · Supplement A — The Nationalist Movement in Indo-China ============ */
+{c:'Ch6 · Supplement A — The Nationalist Movement in Indo-China',
+ q:'Consider the following statements about French colonisation in Vietnam:',
+ S:[
+    ['French troops landed in Vietnam in 1858.',true],
+    ['French Indo-China was formed in 1887.',true],
+    ['Cochinchina became a French colony in 1887, at the same time as the Union was formed.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Cochinchina became a French colony in 1867, twenty years before the Indo-China Union was formed. The Union brought together Cochinchina, Annam, Tonkin, Cambodia and later Laos under a single administration.'},
+{c:'Ch6 · Supplement A — The Nationalist Movement in Indo-China',
+ q:'By 1931 Vietnam had become:',
+ o:[
+    'The third largest exporter of rice in the world',
+    'The largest exporter of rubber in Asia',
+    'The second largest exporter of tea in Asia',
+    'The fourth largest exporter of coal in the world'],
+ a:0,
+ e:'The area under rice cultivation went from 274,000 hectares in 1873 to 2.2 million by 1930, and two-thirds of production was exported. The canals and earthworks that made this possible were built mainly with forced labour, which is the fact to set beside the export figures.'},
+{c:'Ch6 · Supplement A — The Nationalist Movement in Indo-China',
+ q:'Consider the following statements about Paul Bernard:',
+ S:[
+    ['He argued that the colonial economy needed to be developed so that the market would expand.',true],
+    ['He identified high population, low agricultural productivity and peasant indebtedness as barriers to growth.',true],
+    ['The French followed his advice and industrialised Vietnam rapidly.',false],
+    ['He opposed land reform on the ground that it had failed in Japan.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Bernard prescribed land reform on the Japanese model of the 1890s, together with industrialisation to create employment. The French did little to industrialise, staying with rice and rubber worked by indentured labour, so that landlordism spread and the standard of living declined.'},
+{c:'Ch6 · Supplement A — The Nationalist Movement in Indo-China',
+ q:'In 1925, out of a Vietnamese population of 17 million, the number who passed the school-leaving examination was:',
+ o:[
+    'Fewer than 40',
+    'Fewer than 400',
+    'About 4,000',
+    'About 40,000'],
+ a:1,
+ e:'As many as two-thirds of students failed, largely because of a deliberate policy of failing candidates in the final year so that they could not qualify for better-paid jobs. The examination was working less as a test of merit than as a control on the supply of educated Vietnamese.'},
+{c:'Ch6 · Supplement A — The Nationalist Movement in Indo-China',
+ q:'Assertion (A): French residents in Vietnam, the colons, opposed giving the Vietnamese full access to French education.\nReason (R): They feared losing their own jobs as teachers, shopkeepers and policemen to educated Vietnamese.',
+ o:AR,a:0,
+ e:'Colonial policy was pulled three ways: the state needed an educated local labour force, the ideology of the civilising mission promised education, and the settlers wanted no competition. The mission was obstructed less by Vietnamese resistance than by French residents defending their livelihoods.'},
+{c:'Ch6 · Supplement A — The Nationalist Movement in Indo-China',
+ q:'Consider the following statements about the Tonkin Free School:',
+ S:[
+    ['It was started in 1907 to provide a Western-style education.',true],
+    ['Its classes in science, hygiene and French were held in the evening and had to be paid for separately.',true],
+    ['The school discouraged short haircuts as a betrayal of Vietnamese identity.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The school actively encouraged the adoption of Western styles, including a short haircut, on the view that to be modern the Vietnamese had also to look modern. For the Vietnamese this meant a major break with identity, since they traditionally kept long hair.'},
+{c:'Ch6 · Supplement A — The Nationalist Movement in Indo-China',
+ q:'The plague of 1903 struck the modern French quarter of Hanoi first because:',
+ o:[
+    'Its water supply was drawn from the contaminated Red River',
+    'Its markets imported grain from the plague-stricken interior',
+    'Its large sewers bred rats and carried them across the city',
+    'Its residents refused to accept the new sanitary regulations'],
+ a:2,
+ e:'The modern city had been rebuilt with a sewer system that turned out to be an ideal breeding ground and a rapid means of transport for rats, while the native quarter was left without any modern facilities at all. The infrastructure of modernity delivered the epidemic to those who had commissioned it.'},
+{c:'Ch6 · Supplement A — The Nationalist Movement in Indo-China',
+ q:'Consider the following statements about the Hanoi rat hunt:',
+ S:[
+    ['Rat-catchers were paid a bounty for each rat, and the tail served as proof.',true],
+    ['The bounty scheme succeeded and the rat population was eliminated.',false],
+    ['The rat hunt was begun in 1905, two years after the plague appeared.',false],
+    ['Only French officials, and not Vietnamese workers, were employed in the hunt.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'The hunt began in 1902, before the plague. Rat-catchers clipped the tails and released the rats so they could breed again, and some people began breeding rats for the bounty; defeated by the resistance of the weak, the French were forced to scrap the programme.'},
+{c:'Ch6 · Supplement A — The Nationalist Movement in Indo-China',
+ q:'Phan Boi Chau differed from Phan Chu Trinh in that he:',
+ o:[
+    'Wanted a democratic republic without a monarch',
+    'Rejected every element of Western civilisation',
+    'Refused to seek any support from outside Vietnam',
+    'Wished to use the monarchy against the French'],
+ a:3,
+ e:'Chau formed the Revival Society in 1903 with Prince Cuong De as its head. Trinh was hostile to the monarchy and wanted a democratic republic; he did not reject Western civilisation wholesale but charged the French with failing to live up to their own ideal of liberty.'},
+{c:'Ch6 · Supplement A — The Nationalist Movement in Indo-China',
+ q:'Consider the following statements about the go east movement:',
+ S:[
+    ['About 300 Vietnamese students went to Japan in 1907-08.',true],
+    ['They were drawn by Japan\'s modernisation and by its victory over Russia.',true],
+    ['After 1908 the Japanese authorities deported many of them.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Japan had modernised itself and defeated Russia in 1907, and so offered a model of an Asian country that had resisted colonisation. The Japanese Ministry of the Interior clamped down after 1908 and deported many of the students, including Phan Boi Chau.'},
+{c:'Ch6 · Supplement A — The Nationalist Movement in Indo-China',
+ q:'The French were defeated at Dien Bien Phu on:',
+ o:[
+    '7 May 1954',
+    '7 May 1945',
+    '30 April 1975',
+    '21 July 1954'],
+ a:0,
+ e:'General Vo Nguyen Giap used the hills over a monsoon-flooded valley, trenches and tunnels, and artillery that closed the airstrip. Over 16,000 personnel were captured, including a general, sixteen colonels and 1,749 officers, and the supplies came in by bicycle and porter.'},
+{c:'Ch6 · Supplement A — The Nationalist Movement in Indo-China',
+ q:'Consider the following statements about the United States war in Vietnam:',
+ S:[
+    ['US bomb tonnage in Vietnam exceeded that used in the whole of the Second World War.',true],
+    ['Agent Orange was a defoliant sprayed over Vietnamese farmland.',true],
+    ['Compulsory military service could be waived for university graduates.',true],
+    ['The Ho Chi Minh trail ran mostly through Laos and Cambodia.',true]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Some 11 million gallons of Agent Orange were sprayed between 1961 and 1971, affecting over fourteen per cent of farmland, and the dioxin in it caused cancers and deformities. The graduate exemption meant that those actually sent were disproportionately from minorities and working-class families.'},
+{c:'Ch6 · Supplement A — The Nationalist Movement in Indo-China',
+ q:'Between 1965 and 1975, of the 17,000 young volunteers working on the Ho Chi Minh trail, women constituted:',
+ o:[
+    'Ten to fifteen per cent',
+    'Seventy to eighty per cent',
+    'Twenty to thirty per cent',
+    'Forty to fifty per cent'],
+ a:1,
+ e:'About 1.5 million women in all served in the regular army, the militia and local forces. As peace approached in the 1970s, however, women were increasingly represented as workers rather than as fighters.'},
+
+/* ============ Ch7 · Supplement B — Work, Life and Leisure: Cities ============ */
+{c:'Ch7 · Supplement B — Work, Life and Leisure: Cities',
+ q:'Consider the following statements about the modern city:',
+ S:[
+    ['Ancient cities could develop only where a rise in food supplies could support non-food producers.',true],
+    ['Three processes shaped the modern city: industrial capitalism, colonial rule and democratic ideals.',true],
+    ['The modern city worldwide developed over the last five hundred years.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Urbanisation has a long history, but the modern city worldwide has developed only over the last two hundred years. The third of the three processes, the development of democratic ideals, is the one most often forgotten, and it is what explains public museums, mass housing and rent control.'},
+{c:'Ch7 · Supplement B — Work, Life and Leisure: Cities',
+ q:'Nineteenth-century London grew into a powerful magnet for migrants even though:',
+ o:[
+    'It had no rail link to the north',
+    'Its population was largely rural',
+    'It did not have large factories',
+    'Its port had been closed by war'],
+ a:2,
+ e:'It was a city of clerks and shopkeepers, small masters and skilled artisans, sweated outworkers, soldiers and servants, casual labourers, street sellers and beggars. Large factories accounted for nearly a third of all jobs only after the First World War brought motor car and electrical goods manufacture.'},
+{c:'Ch7 · Supplement B — Work, Life and Leisure: Cities',
+ q:'Consider the following statements about Charles Booth\'s survey of London:',
+ S:[
+    ['Booth was a Liverpool shipowner rather than a government official.',true],
+    ['His survey of 1887 found about one-fifth of Londoners to be very poor.',true],
+    ['He found that the very poor could expect to live to an average age of 45.',false],
+    ['He concluded that London needed about 40,000 new rooms for its poorest citizens.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Booth found the very poor could expect to live only to about twenty-nine, against fifty-five among the gentry and middle class, and put the rebuilding need at least 400,000 rooms. What was new was not the poverty but the fact that it had been counted and expressed as a policy requirement.'},
+{c:'Ch7 · Supplement B — Work, Life and Leisure: Cities',
+ q:'Ebenezer Howard\'s garden city principle, as built at New Earswick, turned out to be:',
+ o:[
+    'Abandoned before any houses were built',
+    'Requisitioned by the state during the war',
+    'Rebuilt as a suburb of central Manchester',
+    'Affordable only to the better-off workers'],
+ a:3,
+ e:'Howard believed a pleasant space full of plants and trees, where people would both live and work, would also produce better-quality citizens, and Raymond Unwin and Barry Parker designed the settlement. A subsidy attached to a house rather than to a person is captured by whoever can already afford the house.'},
+{c:'Ch7 · Supplement B — Work, Life and Leisure: Cities',
+ q:'Consider the following statements about the London Underground:',
+ S:[
+    ['The world\'s first section of underground railway opened in January 1863.',true],
+    ['About 900 houses had to be destroyed for every two miles of railway built.',true],
+    ['The Underground was welcomed on health grounds from the day it opened.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'One newspaper correspondent complained of an atmosphere of sulphur, coal dust and foul fumes and called the railways a menace to health. The line ran between Paddington and Farrington Street, carried 10,000 passengers on the first day, and by 1880 was carrying 40 million a year.'},
+{c:'Ch7 · Supplement B — Work, Life and Leisure: Cities',
+ q:'Assertion (A): Workers\' mass housing schemes were planned in London in the early twentieth century.\nReason (R): There was a widespread fear of social disorder, especially after the Russian Revolution of 1917.',
+ o:AR,a:0,
+ e:'The other two reasons were the threat that overcrowded and unsanitary one-room housing posed to public health, and the risk of fire. None of the three was compassion: disease crosses the class boundary, fire crosses the property line, and revolution threatens the whole order.'},
+{c:'Ch7 · Supplement B — Work, Life and Leisure: Cities',
+ q:'Haussmann\'s rebuilding of Paris displaced from the city centre:',
+ o:[
+    'Up to 350,000 people',
+    'About 35,000 people',
+    'About 64,000 people',
+    'Up to 900,000 people'],
+ a:0,
+ e:'The poor were evicted both to reduce the possibility of political rebellion and to beautify the city, and by 1870 one-fifth of the streets of Paris were Haussmann\'s creation. A cartoon of the time represented him as the Attila of the Straight Line, holding a compass and a set square.'},
+{c:'Ch7 · Supplement B — Work, Life and Leisure: Cities',
+ q:'Consider the following statements comparing London and Bombay:',
+ S:[
+    ['In the 1840s a Londoner had on average 155 square yards of space and a Bombay resident 9.5.',true],
+    ['By 1872 London averaged eight persons to a house while the density in Bombay was twenty.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Bombay did not grow according to any plan from its earliest days, and the crisis of housing and water supply had become acute by the mid-1850s. The arrival of the textile mills only increased the pressure.'},
+{c:'Ch7 · Supplement B — Work, Life and Leisure: Cities',
+ q:'More than seventy per cent of Bombay\'s working people lived in:',
+ o:[
+    'Company barracks attached to the Bombay Port Trust',
+    'One-room tenements in chawls without private toilets',
+    'Spacious bungalows in the reclaimed Ballard Estate',
+    'Purpose-built quarters provided by the mill owners'],
+ a:1,
+ e:'Chawls were owned by private landlords — merchants, bankers and building contractors — looking for quick ways of earning money from anxious migrants. The Census of 1901 found that eighty per cent of the island\'s population lived in one-room tenements with four to five occupants on average.'},
+{c:'Ch7 · Supplement B — Work, Life and Leisure: Cities',
+ q:'Consider the following statements about town planning in Bombay:',
+ S:[
+    ['By 1918 the City of Bombay Improvement Trust had deprived 64,000 people of their homes.',true],
+    ['The Trust rehoused almost all of those it displaced.',false],
+    ['The Rent Act of 1918 succeeded in easing the housing shortage.',false],
+    ['Planning in Bombay was prompted mainly by the fear of political revolution.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Only 14,000 of those displaced were rehoused, and the Rent Act produced a severe housing crisis because landlords withdrew houses from the market. Planning in London emerged from fears of social revolution; in Bombay it came about as a result of fears about the plague epidemic.'},
+{c:'Ch7 · Supplement B — Work, Life and Leisure: Cities',
+ q:'Calcutta became the first Indian city to obtain smoke nuisance legislation in:',
+ o:[
+    '1878',
+    '1920',
+    '1863',
+    '1855'],
+ a:2,
+ e:'The city was built on marshy land, so fog combined with smoke to generate thick black smog, and the railway line introduced in 1855 brought high-ash coal from Raniganj. The main polluters were the industries and establishments using steam engines run on coal.'},
+{c:'Ch7 · Supplement B — Work, Life and Leisure: Cities',
+ q:'Consider the following statements about controlling urban air pollution:',
+ S:[
+    ['The Smoke Abatement Acts of 1847 and 1853 cleared the air of Britain\'s industrial towns.',false],
+    ['The Bengal Smoke Nuisance Commission found domestic smoke easier to control than industrial smoke.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Smoke was difficult to monitor or measure, and owners got away with small adjustments to their machinery that did nothing to stop it. The Bengal inspectors eventually managed to control industrial smoke, but controlling domestic smoke proved far more difficult.'},
+
+/* ============ Ch8 · Supplement C — Novels, Society and History ============ */
+{c:'Ch8 · Supplement C — Novels, Society and History',
+ q:'Consider the following statements about the rise of the novel:',
+ S:[
+    ['The novel is described as being born from print, a mechanical invention.',true],
+    ['The novel first took firm root in England and France.',true],
+    ['Samuel Richardson\'s Pamela is an example of the serialised novel.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Pamela is the standard example of the epistolary novel, telling much of its story through an exchange of letters between two lovers. The serialised example is Dickens\'s Pickwick Papers, published in instalments in a magazine from 1836.'},
+{c:'Ch8 · Supplement C — Novels, Society and History',
+ q:'Circulating libraries, which widened access to novels, were introduced in:',
+ o:[
+    '1749',
+    '1836',
+    '1719',
+    '1740'],
+ a:3,
+ e:'Novels were at first far too expensive for ordinary readers: Fielding\'s Tom Jones of 1749 came in six volumes at three shillings each, more than a labourer earned in a week. Cheaper printing, new marketing and, in France, the hiring out of novels by the hour brought the price within reach.'},
+{c:'Ch8 · Supplement C — Novels, Society and History',
+ q:'Consider the following statements about Charles Dickens:',
+ S:[
+    ['He described the industrial town of Coketown in Hard Times, published in 1854.',true],
+    ['In Coketown the workers are called hands because they were paid by the hour.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'They are called hands as if they had no identity other than as operators of machines. Dickens criticised not merely the greed for profits but the ideas that reduced human beings to simple instruments of production.'},
+{c:'Ch8 · Supplement C — Novels, Society and History',
+ q:'Emile Zola\'s Germinal, published in 1885, ends with:',
+ o:[
+    'The failure of the strike its hero leads',
+    'The hero adopted by a wealthy benefactor',
+    'The miners winning recognition of a union',
+    'The closure of the mine and a fresh start'],
+ a:0,
+ e:'The novel explores in harsh detail the grim conditions of the life of a young miner in France, and closes on a note of despair as his co-workers turn against him. It stands in deliberate contrast to Oliver Twist, where the orphan is adopted by a wealthy man and lives happily ever after.'},
+{c:'Ch8 · Supplement C — Novels, Society and History',
+ q:'Assertion (A): The novel has been compared to the nation.\nReason (R): By drawing on the different spoken languages of the people, the novel produces the sense of a shared world among diverse readers.',
+ o:AR,a:0,
+ e:'A novel may take a classical language and combine it with the language of the streets, making them all part of the vernacular it uses. Like the nation, the novel brings together many cultures, and a reader who follows all its registers has inhabited a society larger than the one actually met.'},
+{c:'Ch8 · Supplement C — Novels, Society and History',
+ q:'Consider the following statements about women and the novel:',
+ S:[
+    ['George Eliot was the pen-name of Mary Ann Evans.',true],
+    ['Rokeya Hossein wrote Sultana\'s Dream in English in 1905.',true],
+    ['Hannah Mullens wrote openly and with the encouragement of those around her.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Hannah Mullens, author of Karuna o Phulmonir Bibaran of 1852, reputedly the first novel in Bengali, tells her readers that she wrote in secret. Eliot argued that no educational restrictions could shut women from the materials of fiction, since its raw material was ordinary life.'},
+{c:'Ch8 · Supplement C — Novels, Society and History',
+ q:'Chandu Menon wrote Indulekha in 1889 after:',
+ o:[
+    'Publishing a Tamil version of Reynolds\'s Pickwick Abroad',
+    'Abandoning a translation of Disraeli\'s Henrietta Temple',
+    'Completing a translation of Goldsmith\'s Vicar of Wakefield',
+    'Serialising an earlier Malayalam novel in a Cochin journal'],
+ a:1,
+ e:'He realised his readers in Kerala were unfamiliar with the clothes, speech and manners of English characters and would find a direct translation dreadfully boring, so he wrote instead in the manner of English novel books. Kandukuri Viresalingam abandoned a Telugu translation of the Vicar of Wakefield for the same reason.'},
+{c:'Ch8 · Supplement C — Novels, Society and History',
+ q:'Consider the following pairs:',
+ head:'Novel : Author',
+ S:[
+    ['Pariksha-Guru : Srinivas Das',true],
+    ['Rajasekhara Caritamu : Kandukuri Viresalingam',true],
+    ['Chaa Mana Atha Guntha : Fakir Mohon Senapati',true],
+    ['Anandamath : Bhudeb Mukhopadhyay',false]],
+ ask:'How many of the pairs given above are correctly matched?',
+ mode:'count',
+ e:'Anandamath of 1882 was written by Bankim Chandra Chattopadhyay; Bhudeb Mukhopadhyay wrote Anguriya Binimoy of 1857, the first historical novel in Bengal. Chaa Mana Atha Guntha of 1902 takes its title from a measurement of land, announcing a novel about land and its possession.'},
+{c:'Ch8 · Supplement C — Novels, Society and History',
+ q:'Saraswativijayam, written in 1892 by Potheri Kunjambu, is notable because it:',
+ o:[
+    'Described the fisherfolk community of the river Titash',
+    'Imagined a world in which women took the place of men',
+    'Attacked caste oppression and stressed education for upliftment',
+    'Was the first novel written in any south Indian language'],
+ a:2,
+ e:'A young man from an untouchable caste escapes the cruelty of his Brahmin landlord, converts to Christianity, obtains a modern education and returns as the judge of the local court. Kunjambu was himself from a lower caste, which is what distinguishes the novel from reforming works written from above.'},
+{c:'Ch8 · Supplement C — Novels, Society and History',
+ q:'Consider the following statements about the novel and the nation:',
+ S:[
+    ['Bankim\'s Anandamath is about a secret Hindu militia that fights Muslims.',true],
+    ['Bhudeb Mukhopadhyay\'s Anguriya Binimoy was the last historical novel written in Bengal.',false],
+    ['Premchand shared his contemporaries\' nostalgic obsession with ancient history.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Anguriya Binimoy was the first historical novel written in Bengal, and Premchand explicitly rejected the nostalgic obsession with ancient history, looking towards the future without forgetting the past. Such novels also raised the question of whether India was to be a nation of only a single religious community.'},
+{c:'Ch8 · Supplement C — Novels, Society and History',
+ q:'The central character of Premchand\'s Rangbhoomi is:',
+ o:[
+    'A grain merchant who becomes mayor of his town',
+    'A peasant who loses his land to a moneylender',
+    'A fisherman from the Malla community of Bengal',
+    'A blind beggar from a so-called untouchable caste'],
+ a:3,
+ e:'Surdas struggles against the forcible takeover of his land for a tobacco factory, and the choice of such a person as hero makes the lives of the most oppressed section of society worthy of literary reflection. The character was inspired by Gandhi\'s personality and ideas.'}
+
+];
+
+/* ---------- Engine (identical across classes) ---------- */
+function shuffle(arr){const a=arr.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+
+/* Canonical Prelims answer-code sets. For an S-question the statements are
+   reshuffled on every attempt and the correct code is worked out from which
+   ones landed where — so neither the option nor the position of the false
+   statement can be memorised. */
+const SET_CODE3=["1 and 2 only","2 and 3 only","1 and 3 only","1, 2 and 3"];
+const SET_CODE2=["1 only","2 only","Both 1 and 2","Neither 1 nor 2"];
+const SET_COUNT=["Only one","Only two","All three","None"];
+const SET_COUNT4=["Only one","Only two","Only three","All four"];
+function buildCode(mode,n,trueIdx){
+  const c=trueIdx.length;
+  if(mode==='count'){
+    const set=n===4?SET_COUNT4:SET_COUNT;
+    const text=c===0?'None':c===1?'Only one':c===2?'Only two':c===3?(n===3?'All three':'Only three'):'All four';
+    return {set:set,text:text};
+  }
+  if(n===2){
+    const text=c===2?'Both 1 and 2':c===0?'Neither 1 nor 2':(trueIdx[0]===1?'1 only':'2 only');
+    return {set:SET_CODE2,text:text};
+  }
+  const text=c===3?'1, 2 and 3':trueIdx[0]+' and '+trueIdx[1]+' only';
+  return {set:SET_CODE3,text:text};
+}
+function joinList(a){return a.length===1?String(a[0]):a.slice(0,-1).join(', ')+' and '+a[a.length-1];}
+function verdictLine(n,trueIdx,unit){
+  const U=unit==='pair'?'pair':'statement', Uc=U.charAt(0).toUpperCase()+U.slice(1);
+  const all=[];for(let i=1;i<=n;i++)all.push(i);
+  const f=all.filter(function(i){return trueIdx.indexOf(i)<0;});
+  if(f.length===0)return 'All the '+U+'s here are correct.';
+  if(trueIdx.length===0)return 'None of the '+U+'s here is correct.';
+  return Uc+(trueIdx.length===1?' ':'s ')+joinList(trueIdx)+(trueIdx.length===1?' is':' are')+' correct; '+
+         U+(f.length===1?' ':'s ')+joinList(f)+(f.length===1?' is not.':' are not.');
+}
+function buildSession(pool){return shuffle(pool).map(function(item){
+  let lines=item.L,options,correctText,auto='';
+  if(item.S){
+    const st=shuffle(item.S), n=st.length, trueIdx=[];
+    lines=st.map(function(s){return s[0];});
+    st.forEach(function(s,i){if(s[1])trueIdx.push(i+1);});
+    const built=buildCode(item.mode||'code',n,trueIdx);
+    options=built.set.slice(); correctText=built.text;
+    auto=verdictLine(n,trueIdx,item.unit)+' ';
+  } else { options=item.o.slice(); correctText=item.o[item.a]; }
+  const order=shuffle(options.map(function(text,i){return {text:text,i:i};}));
+  return {chapter:item.c,question:item.q,head:item.head,lines:lines,ask:item.ask,
+          options:order.map(function(o){return o.text;}),
+          correct:order.findIndex(function(o){return o.text===correctText;}),
+          explain:auto+item.e};
+});}
+let session=[],current=0,answers=[],startTime=null,timerInterval=null,reviewMode=false,activeScope="";
+const el=id=>document.getElementById(id);
+const screens={menu:el('menu'),quiz:el('quiz'),result:el('result')};
+function show(name){Object.keys(screens).forEach(k=>screens[k].classList.toggle('is-active',k===name));}
+el('courseEyebrow').textContent=COURSE.eyebrow; el('courseTitle').textContent=COURSE.title; el('courseLede').textContent=COURSE.lede;
+function chapterCount(name){return QUESTIONS.filter(q=>q.c===name).length;}
+function buildMenu(){
+  const list=el('lessonList'); list.innerHTML='';
+  const combined=document.createElement('button');
+  combined.className='lesson-card combined'; combined.type='button';
+  combined.innerHTML='<span class="lesson-num">★</span><span class="lesson-body"><span class="lesson-title">Full Syllabus — Combined</span><span class="lesson-meta">All '+CHAPTERS.length+' lessons · '+QUESTIONS.length+' questions, shuffled</span></span><span class="lesson-go">→</span>';
+  combined.addEventListener('click',()=>startQuiz(null)); list.appendChild(combined);
+  CHAPTERS.forEach((name,idx)=>{
+    const shortTitle=name.replace(/^Ch\d+ · /,'');
+    const btn=document.createElement('button'); btn.className='lesson-card'; btn.type='button';
+    const num=document.createElement('span'); num.className='lesson-num'; num.textContent=String(idx+1);
+    const body=document.createElement('span'); body.className='lesson-body';
+    const t=document.createElement('span'); t.className='lesson-title'; t.textContent=shortTitle;
+    const m=document.createElement('span'); m.className='lesson-meta'; m.textContent=chapterCount(name)+' questions';
+    body.appendChild(t); body.appendChild(m);
+    const go=document.createElement('span'); go.className='lesson-go'; go.textContent='→';
+    btn.appendChild(num); btn.appendChild(body); btn.appendChild(go);
+    btn.addEventListener('click',()=>startQuiz(name)); list.appendChild(btn);
+  });
+}
+function formatTime(sec){const m=Math.floor(sec/60).toString().padStart(2,'0');const s=Math.floor(sec%60).toString().padStart(2,'0');return m+':'+s;}
+function startTimer(){startTime=Date.now();clearInterval(timerInterval);timerInterval=setInterval(()=>{el('timer').textContent=formatTime((Date.now()-startTime)/1000);},1000);}
+function stopTimer(){clearInterval(timerInterval);}
+function startQuiz(chapter){
+  const pool=chapter?QUESTIONS.filter(q=>q.c===chapter):QUESTIONS;
+  activeScope=chapter?chapter.replace(/^Ch\d+ · /,''):"Full Syllabus";
+  session=buildSession(pool); answers=new Array(session.length).fill(null); current=0; reviewMode=false;
+  show('quiz'); el('timer').textContent='00:00'; startTimer(); renderQuestion();
+}
+function renderStem(item){
+  const box=el('qblock'); box.innerHTML='';
+  const stem=document.createElement('p'); stem.className='question'; stem.textContent=item.question; box.appendChild(stem);
+  if(item.head){const h=document.createElement('p'); h.className='stmt-head'; h.textContent=item.head; box.appendChild(h);}
+  if(item.lines&&item.lines.length){
+    const ol=document.createElement('ul'); ol.className='stmt-list';
+    item.lines.forEach((line,i)=>{
+      const li=document.createElement('li');
+      const n=document.createElement('span'); n.className='sn'; n.textContent=(i+1)+'.';
+      const t=document.createElement('span'); t.className='st';
+      const split=line.indexOf(' : ');
+      if(split>-1){
+        t.textContent=line.slice(0,split);
+        const r=document.createElement('span'); r.className='sr'; r.textContent=' — '+line.slice(split+3);
+        t.appendChild(r);
+      } else { t.textContent=line; }
+      li.appendChild(n); li.appendChild(t); ol.appendChild(li);
+    });
+    box.appendChild(ol);
+  }
+  if(item.ask){const a=document.createElement('p'); a.className='ask'; a.textContent=item.ask; box.appendChild(a);}
+}
+function renderQuestion(){
+  const item=session[current]; const chosen=answers[current]; const reveal=chosen!==null||reviewMode;
+  el('chapterTag').textContent=item.chapter; el('counter').textContent=(current+1)+' / '+session.length;
+  el('progressFill').style.width=((current+1)/session.length*100)+'%';
+  renderStem(item);
+  const optsBox=el('options'); optsBox.innerHTML=''; const letters=['A','B','C','D','E'];
+  item.options.forEach((opt,i)=>{
+    const btn=document.createElement('button'); btn.className='option'; btn.type='button';
+    const l=document.createElement('span'); l.className='opt-letter'; l.textContent=letters[i];
+    const t=document.createElement('span'); t.className='opt-text'; t.textContent=opt;
+    btn.appendChild(l); btn.appendChild(t);
+    if(reveal){btn.disabled=true; if(i===item.correct)btn.classList.add('correct'); else if(i===chosen)btn.classList.add('incorrect');}
+    btn.addEventListener('click',()=>selectOption(i)); optsBox.appendChild(btn);
+  });
+  const fb=el('feedback');
+  if(reveal){
+    fb.hidden=false; let verdict,cls;
+    if(chosen===null){verdict='Skipped.';cls='bad';} else if(chosen===item.correct){verdict='Correct.';cls='good';} else {verdict='Not quite.';cls='bad';}
+    fb.className='feedback '+cls;
+    fb.innerHTML=''; const v=document.createElement('span'); v.className='verdict'; v.textContent=verdict;
+    fb.appendChild(v); fb.appendChild(document.createTextNode(' '+item.explain));
+  } else { fb.hidden=true; }
+  el('prevBtn').disabled=current===0;
+  const nextBtn=el('nextBtn');
+  nextBtn.textContent = reviewMode ? (current===session.length-1?'Back to results':'Next →') : (current===session.length-1?'Finish':'Next →');
+  el('options').scrollIntoView&&el('qblock').parentElement.scrollTo({top:0});
+}
+function selectOption(i){ if(reviewMode||answers[current]!==null)return; answers[current]=i; renderQuestion(); }
+function finishQuiz(){
+  stopTimer(); const elapsed=(Date.now()-startTime)/1000; let correctCount=0; const stats={};
+  session.forEach((item,i)=>{ if(!stats[item.chapter])stats[item.chapter]={correct:0,total:0}; stats[item.chapter].total++; if(answers[i]===item.correct){correctCount++;stats[item.chapter].correct++;} });
+  show('result');
+  el('resultScope').textContent=activeScope+' · '+session.length+' questions';
+  el('scoreText').textContent=correctCount+' / '+session.length; el('timeText').textContent=formatTime(elapsed);
+  el('scorePct').textContent=Math.round(correctCount/session.length*100)+'%';
+  const body=el('breakdownBody'); body.innerHTML='';
+  CHAPTERS.filter(c=>stats[c]).forEach(c=>{
+    const s=stats[c]; const row=document.createElement('tr');
+    const td1=document.createElement('td'); td1.textContent=c.replace(/^Ch\d+ · /,'');
+    const p=Math.round(s.correct/s.total*100);
+    const bar=document.createElement('div'); bar.className='bd-bar';
+    const fill=document.createElement('span'); fill.style.width=p+'%'; bar.appendChild(fill); td1.appendChild(bar);
+    const td2=document.createElement('td'); td2.className='num'; td2.textContent=s.correct+' / '+s.total;
+    row.appendChild(td1); row.appendChild(td2); body.appendChild(row);
+  });
+}
+function enterReview(){reviewMode=true;current=0;show('quiz');renderQuestion();}
+function exitReviewToResult(){reviewMode=false;show('result');}
+el('prevBtn').addEventListener('click',()=>{if(current>0){current--;renderQuestion();}});
+el('nextBtn').addEventListener('click',()=>{
+  if(reviewMode){ if(current===session.length-1)exitReviewToResult(); else {current++;renderQuestion();} }
+  else { if(current===session.length-1)finishQuiz(); else {current++;renderQuestion();} }
+});
+el('reviewBtn').addEventListener('click',enterReview);
+el('restartBtn').addEventListener('click',()=>{ const chapter=activeScope==="Full Syllabus"?null:CHAPTERS.find(c=>c.replace(/^Ch\d+ · /,'')===activeScope); startQuiz(chapter); });
+el('menuBtn').addEventListener('click',()=>{stopTimer();show('menu');});
+document.addEventListener('keydown',(e)=>{
+  if(!screens.quiz.classList.contains('is-active'))return;
+  if(['1','2','3','4','5'].includes(e.key)&&!reviewMode){selectOption(parseInt(e.key,10)-1);}
+  else if(e.key==='ArrowRight'||e.key==='Enter'){el('nextBtn').click();}
+  else if(e.key==='ArrowLeft'){el('prevBtn').click();}
+});
+buildMenu();
+</script>

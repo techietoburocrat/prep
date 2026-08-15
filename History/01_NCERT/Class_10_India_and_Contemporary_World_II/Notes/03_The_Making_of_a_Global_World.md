@@ -154,13 +154,13 @@ By the end of this chapter you should be able to:
    ├──────────────────────────────────────────────────────────┤
    │ 2. THE FLOW OF LABOUR                                    │
    │    "the MIGRATION OF PEOPLE IN SEARCH OF EMPLOYMENT"     │
-   │    INDIAN EXAMPLE -> ⭐ INDENTURED LABOUR to Trinidad,    │
+   │    INDIAN EXAMPLE -> ⭐ INDENTURED LABOUR to Trinidad,   │
    │                      Guyana, Surinam, Mauritius, Fiji    │
    ├──────────────────────────────────────────────────────────┤
    │ 3. THE MOVEMENT OF CAPITAL                               │
    │    "for SHORT-TERM OR LONG-TERM INVESTMENTS over long    │
    │     distances"                                           │
-   │    INDIAN EXAMPLE -> ⭐ the SHIKARIPURI SHROFFS and       │
+   │    INDIAN EXAMPLE -> ⭐ the SHIKARIPURI SHROFFS and      │
    │                      NATTUKOTTAI CHETTIARS financing     │
    │                      export agriculture in Southeast Asia│
    └──────────────────────────────────────────────────────────┘
