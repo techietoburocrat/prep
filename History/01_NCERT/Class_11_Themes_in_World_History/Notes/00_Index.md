@@ -40,7 +40,7 @@
 
 | # | Theme | Section | Prelims | Mains | Status |
 |---|---|---|---|---|---|
-| 1 | [Writing and City Life](01_Theme1_Writing_and_City_Life.md) | I · Early Societies | ⭐⭐⭐ | ⭐ | ⬜ |
+| 1 | [Writing and City Life](01_Theme1_Writing_and_City_Life.md) | I · Early Societies | ⭐⭐⭐ | ⭐ | ✅ |
 | 2 | [An Empire Across Three Continents](02_Theme2_An_Empire_Across_Three_Continents.md) | II · Empires | ⭐⭐ | ⭐⭐ | ⬜ |
 | 3 | [Nomadic Empires](03_Theme3_Nomadic_Empires.md) | II · Empires | ⭐⭐ | ⭐⭐ | ⬜ |
 | 4 | [The Three Orders](04_Theme4_The_Three_Orders.md) | III · Changing Traditions | ⭐⭐ | ⭐⭐⭐ | ✅ |
@@ -48,7 +48,9 @@
 | 6 | [Displacing Indigenous Peoples](06_Theme6_Displacing_Indigenous_Peoples.md) | IV · Towards Modernisation | ⭐⭐⭐ | ⭐⭐⭐⭐ | ✅ |
 | 7 | [Paths to Modernisation](07_Theme7_Paths_to_Modernisation.md) | IV · Towards Modernisation | ⭐⭐⭐ | ⭐⭐⭐⭐ | ✅ |
 
-> ✅ **Themes are being written in STUDY ORDER, not print order** — highest-yield first. **Done so far: 7, 6, 5 and 4.** **Remaining: Themes 1, 2 and 3**, which are the ⭐⭐ "read once for Prelims facts and Essay material" group, plus the **supplement** for the four deleted themes.
+> ✅ **Themes are being written in STUDY ORDER, not print order** — highest-yield first. **Done so far: 7, 6, 5, 4 and 1.** **Remaining: Themes 2 and 3**, plus the **supplement** for the four deleted themes.
+>
+> ⭐ **Theme 1 turned out to be worth more than its ⭐⭐ Mains rating suggests** — it is **the most Prelims-dense chapter in the book**, and its **Ur / Mohenjo-daro comparison is directly usable in Class 6 Ch.3 answers on the Harappan civilisation.**
 >
 > ⭐ **Theme 4 (*The Three Orders*) is the one to read immediately before Class 9 Ch.1** — it defines the **taille**, the **tithe** and the **Estates-General**, all three of which Class 9 uses without explaining where they came from. Theme 6's file also carries the **Section IV Introduction**, which contains the book's best short passage on **civic vs ethnic nationalism** and its **three variants of imperialism**; both are directly usable in GS1 and GS2 and are easy to miss because they sit in a section introduction.
 
