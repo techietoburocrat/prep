@@ -1,0 +1,1035 @@
+<title>Class XII History Quiz — Themes in Indian History II</title>
+<style>
+:root{
+  --ink:#1A1E26; --paper:#F1F4F8; --surface:#FFFFFF; --line:#D4DAE3; --muted:#596372;
+  --good:#1F7A4C; --good-soft:#E2F1E9; --bad:#B23A34; --bad-soft:#FAE6E4;
+  --accent:#27467B; --accent-ink:#FFFFFF; --accent-soft:#E3EAF5;
+  --radius:10px;
+  --serif:Georgia,'Iowan Old Style','Palatino Linotype','Book Antiqua',serif;
+  --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --ink:#E5EAF2; --paper:#0F131A; --surface:#181D26; --line:#272F3B; --muted:#95A0B1;
+    --good:#3FBE7C; --good-soft:rgba(63,190,124,0.14); --bad:#E2665F; --bad-soft:rgba(226,102,95,0.14);
+    --accent:#84AEE2; --accent-ink:#0E1520; --accent-soft:rgba(132,174,226,0.18);
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#E5EAF2; --paper:#0F131A; --surface:#181D26; --line:#272F3B; --muted:#95A0B1;
+  --good:#3FBE7C; --good-soft:rgba(63,190,124,0.14); --bad:#E2665F; --bad-soft:rgba(226,102,95,0.14);
+  --accent:#84AEE2; --accent-ink:#0E1520; --accent-soft:rgba(132,174,226,0.18);
+}
+:root[data-theme="light"]{
+  --ink:#1A1E26; --paper:#F1F4F8; --surface:#FFFFFF; --line:#D4DAE3; --muted:#596372;
+  --good:#1F7A4C; --good-soft:#E2F1E9; --bad:#B23A34; --bad-soft:#FAE6E4;
+  --accent:#27467B; --accent-ink:#FFFFFF; --accent-soft:#E3EAF5;
+}
+*{box-sizing:border-box;}
+html,body{height:100%;}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;}
+.app{min-height:100dvh;display:flex;flex-direction:column;max-width:760px;margin:0 auto;padding:20px 20px 24px;}
+.screen{flex:1;display:flex;flex-direction:column;min-height:0;}
+.eyebrow{font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin:0 0 6px;}
+.menu-screen{gap:16px;justify-content:flex-start;padding-top:10px;}
+.menu-screen h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,36px);margin:0;text-wrap:balance;}
+.lede{color:var(--muted);line-height:1.55;max-width:64ch;margin:0;}
+.how{display:flex;flex-wrap:wrap;gap:8px 18px;margin:2px 0 4px;padding:0;list-style:none;}
+.how li{font-size:12.5px;color:var(--muted);display:flex;align-items:center;gap:6px;}
+.how li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none;}
+.menu-label{font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);margin:8px 0 -2px;}
+.lesson-list{display:flex;flex-direction:column;gap:10px;}
+.lesson-card{display:flex;align-items:center;gap:14px;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:15px 18px;font-family:var(--sans);cursor:pointer;width:100%;color:var(--ink);}
+.lesson-card:hover{border-color:var(--accent);}
+.lesson-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+.lesson-card.combined{background:var(--accent-soft);border-color:var(--accent);}
+.lesson-num{flex:none;width:38px;height:38px;border-radius:9px;background:var(--accent-soft);color:var(--accent);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:16px;font-weight:700;}
+.lesson-card.combined .lesson-num{background:var(--accent);color:var(--accent-ink);}
+.lesson-body{flex:1;min-width:0;}
+.lesson-title{font-family:var(--serif);font-size:16.5px;line-height:1.25;margin:0 0 2px;display:block;}
+.lesson-meta{font-size:12.5px;color:var(--muted);display:block;}
+.lesson-go{flex:none;color:var(--muted);font-size:20px;}
+.lesson-card:hover .lesson-go{color:var(--accent);}
+.quiz-screen{gap:14px;display:none;}
+.bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.chapter-tag{font-size:11px;text-transform:uppercase;letter-spacing:0.04em;background:var(--accent-soft);color:var(--accent);padding:5px 10px;border-radius:999px;white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis;}
+.progress-track{flex:1;min-width:60px;height:6px;background:var(--line);border-radius:999px;overflow:hidden;}
+.progress-fill{height:100%;background:var(--accent);width:0%;}
+.counter{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap;}
+.timer{font-family:var(--serif);font-size:15px;font-variant-numeric:tabular-nums;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:4px 10px;white-space:nowrap;}
+.card{flex:1;min-height:0;overflow-y:auto;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;display:flex;flex-direction:column;gap:15px;}
+.qblock{display:flex;flex-direction:column;gap:9px;}
+.question{font-family:var(--serif);font-size:clamp(17px,2.4vw,20px);line-height:1.45;margin:0;white-space:pre-line;}
+.stmt-head{font-size:12px;letter-spacing:0.05em;text-transform:uppercase;color:var(--muted);margin:0;padding-left:26px;}
+.stmt-list{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px;}
+.stmt-list li{display:flex;gap:10px;font-size:14.8px;line-height:1.5;}
+.stmt-list li .sn{flex:none;min-width:16px;color:var(--muted);font-variant-numeric:tabular-nums;}
+.stmt-list li .st{flex:1;min-width:0;}
+.stmt-list li .sr{color:var(--muted);}
+.ask{font-family:var(--serif);font-size:15.5px;line-height:1.45;margin:2px 0 0;font-style:italic;}
+.options{display:flex;flex-direction:column;gap:9px;}
+.option{display:flex;align-items:flex-start;gap:11px;text-align:left;background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:11px 13px;font-family:var(--sans);font-size:14.5px;color:var(--ink);cursor:pointer;line-height:1.4;width:100%;}
+.option:hover:not(:disabled){border-color:var(--accent);}
+.option:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+.option:disabled{cursor:default;}
+.opt-letter{flex:none;width:23px;height:23px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:var(--muted);}
+.option.correct{background:var(--good-soft);border-color:var(--good);}
+.option.correct .opt-letter{background:var(--good);border-color:var(--good);color:#fff;}
+.option.incorrect{background:var(--bad-soft);border-color:var(--bad);}
+.option.incorrect .opt-letter{background:var(--bad);border-color:var(--bad);color:#fff;}
+.feedback{font-size:13.5px;line-height:1.6;margin:0;padding:12px 14px;border-radius:8px;background:var(--paper);border-left:3px solid var(--accent);}
+.feedback .verdict{font-family:var(--serif);font-weight:700;font-style:italic;}
+.feedback.good{border-left-color:var(--good);}
+.feedback.good .verdict{color:var(--good);}
+.feedback.bad{border-left-color:var(--bad);}
+.feedback.bad .verdict{color:var(--bad);}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.hint{font-size:12px;color:var(--muted);text-align:center;flex:1;}
+.btn-primary{background:var(--accent);color:var(--accent-ink);border:none;border-radius:999px;padding:12px 24px;font-size:14.5px;font-weight:600;font-family:var(--sans);cursor:pointer;}
+.btn-primary:hover{filter:brightness(1.07);}
+.btn-primary:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+.btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:11px 20px;font-size:14px;font-family:var(--sans);cursor:pointer;}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
+.btn-ghost:disabled{opacity:0.35;cursor:not-allowed;}
+.btn-ghost:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+.result-screen{gap:18px;justify-content:center;display:none;}
+.result-screen h1{font-family:var(--serif);font-size:clamp(24px,4.5vw,32px);margin:0;}
+.result-sub{color:var(--muted);margin:-8px 0 0;font-size:14px;}
+.score-row{display:flex;gap:22px;flex-wrap:wrap;}
+.score-block{display:flex;flex-direction:column;gap:2px;}
+.score-num{font-family:var(--serif);font-size:30px;font-variant-numeric:tabular-nums;}
+.score-label{font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);}
+.breakdown-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px;max-height:280px;overflow-y:auto;}
+.breakdown{width:100%;border-collapse:collapse;font-size:13.5px;}
+.breakdown th,.breakdown td{padding:8px 12px;text-align:left;border-bottom:1px solid var(--line);}
+.breakdown th{color:var(--muted);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:0.05em;position:sticky;top:0;background:var(--surface);}
+.breakdown td.num{font-variant-numeric:tabular-nums;text-align:right;}
+.breakdown tr:last-child td{border-bottom:none;}
+.bd-bar{height:5px;border-radius:3px;background:var(--line);margin-top:4px;overflow:hidden;}
+.bd-bar span{display:block;height:100%;background:var(--accent);}
+.result-actions{display:flex;gap:10px;flex-wrap:wrap;}
+[hidden]{display:none !important;}
+.is-active{display:flex !important;}
+@media (prefers-reduced-motion: no-preference){
+  .option,.lesson-card{transition:background 0.15s ease,border-color 0.15s ease;}
+  .progress-fill{transition:width 0.25s ease;}
+}
+@media (max-width:480px){
+  .app{padding:16px 14px 18px;}
+  .nav{flex-wrap:wrap;}
+  .hint{order:3;width:100%;}
+  .card{padding:18px 16px;}
+}
+</style>
+
+<div class="app">
+  <section id="menu" class="screen menu-screen is-active">
+    <p class="eyebrow" id="courseEyebrow"></p>
+    <h1 id="courseTitle"></h1>
+    <p class="lede" id="courseLede"></p>
+    <ul class="how">
+      <li>Prelims-pattern: statements, pairs, assertion–reason</li>
+      <li>Options balanced — no length giveaways</li>
+      <li>Detailed explanation on every answer</li>
+      <li>Reshuffles each attempt · stopwatch</li>
+    </ul>
+    <p class="menu-label">Choose a lesson — or take the full syllabus</p>
+    <div class="lesson-list" id="lessonList"></div>
+  </section>
+
+  <section id="quiz" class="screen quiz-screen">
+    <header class="bar">
+      <span id="chapterTag" class="chapter-tag"></span>
+      <div class="progress-track"><div id="progressFill" class="progress-fill"></div></div>
+      <span id="counter" class="counter"></span>
+      <span id="timer" class="timer">00:00</span>
+    </header>
+    <main class="card">
+      <div id="qblock" class="qblock"></div>
+      <div id="options" class="options"></div>
+      <p id="feedback" class="feedback" hidden></p>
+    </main>
+    <footer class="nav">
+      <button id="prevBtn" class="btn-ghost" type="button">← Prev</button>
+      <span class="hint">Press 1–4 to answer · → next · ← prev</span>
+      <button id="nextBtn" class="btn-primary" type="button">Next →</button>
+    </footer>
+  </section>
+
+  <section id="result" class="screen result-screen">
+    <p class="eyebrow">Scorecard</p>
+    <h1 id="resultTitle">Quiz complete</h1>
+    <p class="result-sub" id="resultScope"></p>
+    <div class="score-row">
+      <div class="score-block"><span id="scoreText" class="score-num"></span><span class="score-label">Correct</span></div>
+      <div class="score-block"><span id="scorePct" class="score-num"></span><span class="score-label">Accuracy</span></div>
+      <div class="score-block"><span id="timeText" class="score-num"></span><span class="score-label">Time</span></div>
+    </div>
+    <div class="breakdown-wrap">
+      <table class="breakdown">
+        <thead><tr><th>Lesson</th><th>Score</th></tr></thead>
+        <tbody id="breakdownBody"></tbody>
+      </table>
+    </div>
+    <div class="result-actions">
+      <button id="reviewBtn" class="btn-ghost" type="button">Review answers</button>
+      <button id="restartBtn" class="btn-primary" type="button">Retake — new shuffle</button>
+      <button id="menuBtn" class="btn-ghost" type="button">↤ Lesson menu</button>
+    </div>
+  </section>
+</div>
+
+<script>
+/* ==========================================================================
+   DATA — generated from Polity/05_Quiz_MCQ/data/<class>.js by build.mjs
+   Question shape:
+     c    chapter tag (must match an entry in CHAPTERS)
+     q    stem
+     head optional column header for a "pairs" block, e.g. "Provision : Purpose"
+     L    optional array of numbered lines (statements, or "Left : Right" pairs)
+     ask  optional closing question line, e.g. "Which of the above are correct?"
+     o    four options
+     a    index of the correct option
+     e    explanation shown after answering
+   ========================================================================== */
+const COURSE = {
+  eyebrow: "NCERT History · Themes in Indian History — Part II",
+  title: "Class XII History Quiz — Themes in Indian History II",
+  lede: "Prelims-pattern questions across all four themes of Part II and the restored chapter on the Mughal courts — the foreign travellers, the bhakti and Sufi traditions, Vijayanagara, the agrarian order of the Ain-i Akbari, and the ideology of Mughal kingship. Part II names each theme after a kind of observer, so many of these questions test where the witness was standing. Multi-statement, match-the-pairs and assertion-reason sets; the statements reshuffle on every attempt and the answer code is computed afresh, so nothing about the wording, length or position gives the answer away."
+};
+const CHAPTERS = [
+  "Th5 · Through the Eyes of Travellers",
+  "Th6 · Bhakti-Sufi Traditions",
+  "Th7 · An Imperial Capital — Vijayanagara",
+  "Th8 · Peasants, Zamindars and the State",
+  "Th9 · Supplement — Kings and Chronicles: The Mughal Courts"
+];
+
+const AR = [
+  "Both A and R are true and R is the correct explanation of A",
+  "Both A and R are true but R is not the correct explanation of A",
+  "A is true but R is false",
+  "A is false but R is true"
+];
+
+const QUESTIONS = [
+
+/* ============ Th5 · Through the Eyes of Travellers ============ */
+{c:'Th5 · Through the Eyes of Travellers',
+ q:'Al-Biruni came to the subcontinent:',
+ o:[
+    'As a hostage taken to Ghazni when Mahmud invaded Khwarizm in 1017',
+    'As an ambassador sent by the Abbasid caliph to the Ghaznavid court',
+    'As a merchant following the overland route through Central Asia',
+    'As a physician attached to the household of a Ghaznavid governor'],
+ a:0,
+ e:'His Indian itinerary is not clear. He was born in Khwarizm, in present-day Uzbekistan, in 973, and knew Syriac, Arabic, Persian, Hebrew and Sanskrit — but not Greek, so he read Plato in Arabic translation.'},
+{c:'Th5 · Through the Eyes of Travellers',
+ q:'Consider the following statements about the Kitab-ul-Hind:',
+ S:[
+    ['It was written in Persian, the language of the Ghaznavid court.',false],
+    ['It runs to eighty chapters and its style is simple and lucid.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'It was written in Arabic. Al-Biruni translated Patanjali into Arabic and, for his Brahmana friends, translated Euclid into Sanskrit — a two-way traffic that his reputation as an observer of India tends to obscure.'},
+{c:'Th5 · Through the Eyes of Travellers',
+ q:'Consider the following statements about the word "Hindu":',
+ S:[
+    ['The Arabs used Hindustan and the Turks used al-Hind and Hindi.',false],
+    ['None of these expressions indicated the religious identity of the people.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The Arabs said al-Hind and Hindi; the Turks said Hindu, Hindustan and Hindavi. None of these expressions indicated religious identity, and that matters for everything that follows. A word that began as a geographical marker acquired a religious sense much later, and reading the later sense back into the earlier texts distorts them.'},
+{c:'Th5 · Through the Eyes of Travellers',
+ q:'Al-Biruni\'s response to the Brahmanical idea of pollution was that:',
+ o:[
+    'It has no basis in the Sanskrit texts he had read on the subject',
+    'It is contrary to the laws of nature, since the sun cleanses the air',
+    'It is a necessary safeguard against the mixing of the four varnas',
+    'It corresponds closely to the practice of the Persian social order'],
+ a:1,
+ e:'He added that salt keeps the sea pure. He accepted the Brahmanical description of the caste order but rejected this element of it, which shows how a source can be at once dependent on a tradition and critical of it.'},
+{c:'Th5 · Through the Eyes of Travellers',
+ q:'Consider the following statements about Ibn Battuta:',
+ S:[
+    ['He came from Tangier in Morocco and reached Sind in 1333.',true],
+    ['He considered experience gained through travel a more important source of knowledge than books.',true],
+    ['He served as qazi of Delhi under Muhammad bin Tughlaq.',true],
+    ['He wrote the Rihla down himself as he travelled.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'The Rihla was dictated on the local ruler\'s instruction and written down by Ibn Juzayy, for entertainment to the mind and delight to the ears and eyes. He was later qazi of the Maldives for eighteen months, and was sent as envoy to China in 1342.'},
+{c:'Th5 · Through the Eyes of Travellers',
+ q:'On the postal system of the Sultanate, Ibn Battuta records that:',
+ o:[
+    'Both systems used stations placed four miles apart',
+    'News from Sind reached Delhi in about fifty days',
+    'The foot-post was quicker than the mounted horse-post',
+    'The horse-post was three times faster than the foot-post'],
+ a:2,
+ e:'The horse-post or uluq had stations every four miles; the foot-post or dawa had three stations to the mile. Travel from Sind to Delhi took fifty days, but the postal system carried news in five.'},
+{c:'Th5 · Through the Eyes of Travellers',
+ q:'Consider the following statements about Francois Bernier:',
+ S:[
+    ['He was a doctor, political philosopher and historian.',true],
+    ['He was physician to Dara Shukoh and later attached to Danishmand Khan.',true],
+    ['His major work was dedicated to Louis XIV.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'He was in India from 1656 to 1668. His book went through eight French reprints between 1670 and 1725 and three English editions by 1684, whereas Arabic and Persian accounts circulated as manuscripts and were generally not published before 1800.'},
+{c:'Th5 · Through the Eyes of Travellers',
+ q:'Assertion (A): Bernier\'s claim that the Mughal state owned all the land is not supported by the evidence.\nReason (R): None of the Mughal official documents suggests that the state was the sole owner of land.',
+ o:AR,a:0,
+ e:'Abu\'l Fazl describes land revenue as the remunerations of sovereignty claimed in return for protection, and NCERT adds that it was not a rent or even a land tax but a tax on the crop. Montesquieu used Bernier\'s account to develop the idea of oriental despotism, and Marx developed it further as the Asiatic mode of production.'},
+{c:'Th5 · Through the Eyes of Travellers',
+ q:'Consider the following statements about towns and merchants in Mughal India:',
+ S:[
+    ['About five per cent of the population lived in towns.',false],
+    ['The urban share was on average higher than in western Europe then.',true],
+    ['The chief of the merchant community of Ahmedabad was called the nagarsheth.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'About fifteen per cent of the population lived in towns, on average higher than western Europe in the same period. The mahajans were merchant communities in western India and their chief was the sheth. Bernier, who described the towns as camp towns dependent on the court, missed these institutions — which is why NCERT supplies them against him.'},
+{c:'Th5 · Through the Eyes of Travellers',
+ q:'Consider the following statements about what the travellers did not record:',
+ S:[
+    ['They gave detailed accounts of women\'s work in production.',false],
+    ['We have practically no accounts of travel left by women from this period.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Women\'s labour was crucial in agricultural and non-agricultural production, and merchant women even took disputes to court — none of which the travellers thought worth describing. We know women travelled; what we do not have is their account of it.'},
+{c:'Th5 · Through the Eyes of Travellers',
+ q:'Bernier is described in the chapter as:',
+ o:[
+    'The first European to be granted a formal audience by a Mughal emperor',
+    'The only traveller of the period who learnt to read Persian documents',
+    'The earliest writer to record the existence of the mahajan communities',
+    'Perhaps the only historian to describe the working of the imperial karkhanas'],
+ a:3,
+ e:'He also conceded that vast quantities of the world\'s precious metals flowed into India in exchange for its manufactures, and noticed a prosperous long-distance merchant community — concessions that sit awkwardly with his general picture of decline.'},
+{c:'Th5 · Through the Eyes of Travellers',
+ q:'Consider the following statements about slavery as Ibn Battuta describes it:',
+ S:[
+    ['Slaves formed an undifferentiated group performing identical work.',false],
+    ['Some skilled slaves were employed as musicians and dancers.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Others were cheap domestic labour. The differentiation is the point, because it shows that a single legal category covered wholly different social positions — the mistake of treating slavery as one condition is exactly the one the chapter guards against.'},
+
+/* ============ Th6 · Bhakti-Sufi Traditions ============ */
+{c:'Th6 · Bhakti-Sufi Traditions',
+ q:'The terms "great" and "little" traditions were coined by:',
+ o:[
+    'Robert Redfield, a sociologist of the twentieth century',
+    'Ramanuja, in his commentary on the Vedanta Sutras',
+    'Max Muller, in his introduction to the Rigveda',
+    'D.D. Kosambi, in his study of Indian social forms'],
+ a:0,
+ e:'NCERT keeps the quotation marks because scholars are uncomfortable with the hierarchy the pair suggests. The chapter describes two processes at work — the dissemination of Puranic ideas, and Brahmanas accepting and reworking the beliefs of other social categories.'},
+{c:'Th6 · Bhakti-Sufi Traditions',
+ q:'Consider the following statements about the deity Jagannatha at Puri:',
+ S:[
+    ['The image was made of wood by local tribal specialists.',true],
+    ['He was identified as a form of Vishnu by the twelfth century.',true],
+    ['Vishnu was thereby visualised differently from elsewhere in the country.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Local goddesses were incorporated by a different route — given an identity as the wife of a principal male deity and equated with Lakshmi or Parvati. Both are cases of integration working in two directions at once.'},
+{c:'Th6 · Bhakti-Sufi Traditions',
+ q:'Consider the following statements about the Alvars and Nayanars:',
+ S:[
+    ['The Alvars were devotees of Shiva and the Nayanars of Vishnu.',false],
+    ['The Tevaram is the compilation of the Nayanars\' hymns.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The Alvars, those immersed in devotion, were devotees of Vishnu; the Nayanars, the leaders, of Shiva. The Tevaram was compiled in the tenth century on the basis of the music of the songs, and the Alvars\' anthology holds four thousand compositions by twelve poets.'},
+{c:'Th6 · Bhakti-Sufi Traditions',
+ q:'Andal and Karaikkal Ammaiyar differed in that:',
+ o:[
+    'Andal joined an order of nuns while Karaikkal Ammaiyar remained a householder',
+    'Andal saw herself as the beloved of the deity while Ammaiyar adopted extreme asceticism',
+    'Andal composed her verses in Sanskrit while Karaikkal Ammaiyar wrote only in Tamil',
+    'Andal was a devotee of Shiva while Karaikkal Ammaiyar was a devotee of Vishnu'],
+ a:1,
+ e:'Karaikkal Ammaiyar describes herself as a pey, a demoness. NCERT is careful to add that such women renounced their social obligations but did not join an alternative order or become nuns — there was no institutional shelter for them.'},
+{c:'Th6 · Bhakti-Sufi Traditions',
+ q:'Consider the following statements about the Lingayats:',
+ S:[
+    ['Basavanna was a wandering ascetic who held no office at any court.',false],
+    ['They bury their dead ceremonially rather than cremating them.',true],
+    ['They accepted the theory of rebirth as the Dharmashastras stated it.',false],
+    ['Their vachanas were composed in Kannada.',true]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Basavanna was a Brahmana who served as a minister at a Kalachuri court. They questioned the theory of rebirth, which is precisely why they bury — the devotee is held to unite with Shiva and not to return, so the funerary rites of the Dharmashastras have no purpose. They also encouraged post-puberty marriage and widow remarriage.'},
+{c:'Th6 · Bhakti-Sufi Traditions',
+ q:'Assertion (A): The Chola rulers cannot be described as opponents of the bhakti saints.\nReason (R): The Cholas suppressed the Tamil Shaiva hymns in favour of Sanskrit liturgy.',
+ o:AR,a:2,
+ e:'They also built temples, introduced Tamil Shaiva hymns into temple worship and had the Tevaram compiled. The consecration of the saints\' own images is the strongest evidence, because it makes the devotees themselves objects of worship.'},
+{c:'Th6 · Bhakti-Sufi Traditions',
+ q:'Consider the following statements about the sources of the sharia:',
+ S:[
+    ['It draws on the Quran and the hadis.',true],
+    ['It also draws on qiyas, reasoning by analogy, and ijma, consensus.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The last two were recognised as Islamic rule expanded into regions with different customs. In India the status of zimmi, with its protection in return for jizya, was extended to Hindus as well as to Jews and Christians.'},
+{c:'Th6 · Bhakti-Sufi Traditions',
+ q:'The word "Sufism" is:',
+ o:[
+    'A Persian word meaning the chain of transmission from a master to a disciple',
+    'A term first applied by the Chishti order to distinguish itself from the Suhrawardis',
+    'An English coinage of the nineteenth century, the Islamic term being tasawwuf',
+    'An Arabic term used by the earliest mystics to describe their own practice'],
+ a:2,
+ e:'Tasawwuf may derive from suf, meaning wool, or safa, purity, or suffa, the platform outside the Prophet\'s mosque. A silsila, by contrast, is literally a chain — the unbroken spiritual genealogy through which blessings were held to be transmitted.'},
+{c:'Th6 · Bhakti-Sufi Traditions',
+ q:'Consider the following statements about the Chishti order:',
+ S:[
+    ['The order is named after its founder rather than after a place.',false],
+    ['The dargah of Shaikh Muinuddin Chishti is at Ajmer.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'It is named after Chisht, a town in central Afghanistan; the Qadiri order is the one named after a founder. The Chishtis spent donations rather than accumulating them, and Nizamuddin Auliya refused the land grant offered to him in 1313.'},
+{c:'Th6 · Bhakti-Sufi Traditions',
+ q:'The term urs, used for the annual observance at a Sufi shrine, means:',
+ o:[
+    'Remembrance, signifying the recollection of the saint\'s teaching',
+    'Assembly, signifying the gathering of disciples at the shrine',
+    'Succession, signifying the transfer of authority to a new master',
+    'Marriage, signifying the union of the saint\'s soul with God'],
+ a:3,
+ e:'It is observed on the death anniversary, which is why it is so often misread as meaning one. Akbar visited Ajmer fourteen times, sometimes two or three times a year until 1580, and in 1568 presented a huge cauldron there.'},
+{c:'Th6 · Bhakti-Sufi Traditions',
+ q:'Consider the following statements about the transmission of Islam in the Deccan:',
+ S:[
+    ['Dakhani poems were probably sung by women at household work.',true],
+    ['Lurinama were wedding songs and shadinama were lullabies.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Lurinama were lullabies and shadinama wedding songs, and grinding grain and spinning are the tasks NCERT names. The argument matters because it locates religious change in domestic and everyday practice rather than in conquest or royal patronage.'},
+{c:'Th6 · Bhakti-Sufi Traditions',
+ q:'Consider the following statements about Kabir and Baba Guru Nanak:',
+ S:[
+    ['Kabir\'s verses survive in three distinct compilations.',true],
+    ['Kabir\'s verses name Ramananda as his preceptor.',false],
+    ['It appears that Baba Guru Nanak did not wish to establish a new religion.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The verses use the words guru and satguru but do not mention any specific preceptor, and it is very difficult to establish that Ramananda and Kabir were contemporaries. The three compilations are the Kabir Bijak, the Kabir Granthavali and the Adi Granth Sahib, all made long after his death.'},
+{c:'Th6 · Bhakti-Sufi Traditions',
+ q:'The compilation Guru Arjan made became known as the Guru Granth Sahib when:',
+ o:[
+    'Guru Gobind Singh added the compositions of Guru Tegh Bahadur',
+    'The hymns of Baba Farid, Ravidas and Kabir were first included',
+    'It was installed in the Harmandar Sahib at Amritsar',
+    'The community adopted it in place of a living human guru'],
+ a:0,
+ e:'Guru Arjan had already compiled Baba Guru Nanak and his four successors along with Baba Farid, Ravidas and Kabir — so the scripture was never a collection of the Sikh gurus alone. Mirabai, by contrast, attracted no sect, and her bhajans were transmitted orally for centuries.'},
+
+/* ============ Th7 · An Imperial Capital — Vijayanagara ============ */
+{c:'Th7 · An Imperial Capital — Vijayanagara',
+ q:'The ruins at Hampi were brought to light in 1800 by:',
+ o:[
+    'James Fergusson, in the course of his study of Indian architecture',
+    'Colin Mackenzie, an engineer employed by the East India Company',
+    'Alexander Cunningham, the first head of the Archaeological Survey',
+    'John Marshall, during his survey of monuments in the Deccan'],
+ a:1,
+ e:'Mackenzie prepared the first survey map, and became the first Surveyor General of India in 1815. Much of the initial information he received was based on the memories of priests of the Virupaksha temple and the shrine of Pampadevi, rather than on inscriptions.'},
+{c:'Th7 · An Imperial Capital — Vijayanagara',
+ q:'Consider the following statements about the names associated with the site:',
+ S:[
+    ['Vijayanagara was the name of both a city and an empire.',true],
+    ['Contemporaries called the empire the Karnataka Samrajyamu.',true],
+    ['Hampi derives from Pampadevi, the local mother goddess.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The empire\'s own name for itself died with it while the goddess\'s name survived in that of the site. Royal orders were all signed Shri Virupaksha, usually in the Kannada script, the kings claiming to rule on behalf of the god.'},
+{c:'Th7 · An Imperial Capital — Vijayanagara',
+ q:'In the popular traditions of the period, the rayas of Vijayanagara were styled:',
+ o:[
+    'Gajapati, lord of elephants',
+    'Chhatrapati, lord of the parasol',
+    'Narapati, lord of men',
+    'Ashvapati, lord of horses'],
+ a:2,
+ e:'The Deccan Sultans were the ashvapati, lords of horses, and the Orissa lineage the gajapati, lords of elephants. Getting the horses and the men the wrong way round is one of the standard errors in this chapter.'},
+{c:'Th7 · An Imperial Capital — Vijayanagara',
+ q:'Consider the following statements about the horse trade:',
+ S:[
+    ['It was controlled by the Portuguese from the outset.',false],
+    ['Local kudirai chettis also took part in it.',true],
+    ['The Portuguese entered it from 1498, their advantage lying in muskets.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The trade was initially controlled by Arab traders, and kudirai chettis means horse merchants. Superior military technology, especially firearms, is what let the Portuguese displace the earlier traders rather than any commercial advantage.'},
+{c:'Th7 · An Imperial Capital — Vijayanagara',
+ q:'Consider the following statements about Krishnadeva Raya:',
+ S:[
+    ['He belonged to the Tuluva dynasty and ruled from 1509 to 1529.',true],
+    ['He acquired the Raichur doab in 1512 and subdued Orissa in 1514.',true],
+    ['He founded a suburban township named after his mother.',true],
+    ['He wrote the Amuktamalyada, a work on statecraft, in Kannada.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'The Amuktamalyada was written in Telugu. The four dynasties in order were Sangama, Saluva, Tuluva and Aravidu, and he inflicted severe defeats on the Sultan of Bijapur in 1520.'},
+{c:'Th7 · An Imperial Capital — Vijayanagara',
+ q:'Assertion (A): The rayas and the Deccan Sultans were not always or inevitably hostile to one another.\nReason (R): Krishnadeva Raya supported claimants within the Sultanates and took the title establisher of the Yavana kingdom.',
+ o:AR,a:0,
+ e:'The Sultan of Bijapur later intervened to resolve Vijayanagara\'s succession disputes. NCERT accordingly blames the defeat of 1565 not on religious antagonism but on Rama Raya\'s adventurous policy of playing one Sultan off against another, which led them to combine.'},
+{c:'Th7 · An Imperial Capital — Vijayanagara',
+ q:'Consider the following statements about the battle of 1565 and its aftermath:',
+ S:[
+    ['Rama Raya, who led the army, was the chief minister rather than the king.',true],
+    ['The empire itself ended with the battle.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The Aravidu dynasty continued to rule from Penukonda and later Chandragiri until the end of the seventeenth century. The battle is known both as Talikota and as Rakshasi-Tangadi, and the victors were Bijapur, Ahmadnagar and Golconda acting together.'},
+{c:'Th7 · An Imperial Capital — Vijayanagara',
+ q:'Consider the following statements about the amara-nayaka system:',
+ S:[
+    ['Amara is believed to derive from the Sanskrit samara, meaning battle.',true],
+    ['Many of its features were probably derived from the iqta system of the Delhi Sultanate.',true],
+    ['The amara-nayakas retained the whole of the revenue they collected.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'They retained a part, for personal use and to maintain a stipulated contingent of horses and elephants, and sent annual tribute to the king; some also gave to temples and irrigation works. The word also resembles the Persian amir, which is a separate observation.'},
+{c:'Th7 · An Imperial Capital — Vijayanagara',
+ q:'Abdur Razzaq described the fortifications of Vijayanagara as consisting of:',
+ o:[
+    'Three concentric walls surrounding the royal centre alone',
+    'A single wall of mortared masonry pierced by twenty-eight gates',
+    'A citadel raised on platforms above the level of the town',
+    'Seven lines of forts, enclosing the city with its fields and forests'],
+ a:3,
+ e:'No mortar or cementing agent was employed anywhere; wedge-shaped blocks rested on an earth-and-rubble core. Most rulers built granaries against a siege, but Vijayanagara adopted the more expensive strategy of enclosing the agricultural belt itself.'},
+{c:'Th7 · An Imperial Capital — Vijayanagara',
+ q:'Consider the following statements about building at Vijayanagara:',
+ S:[
+    ['Secular buildings had superstructures of perishable material.',true],
+    ['The largest enclosure has yielded definitive evidence of being a royal residence.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'It has not, which is why the label king\'s palace is written in quotation marks — as are elephant stables and several other names on the site. The difference in materials is why the sacred centre survives as architecture and the royal centre survives largely as floors.'},
+{c:'Th7 · An Imperial Capital — Vijayanagara',
+ q:'The mahanavami dibba is described as:',
+ o:[
+    'A platform of about 11,000 square feet rising to a height of forty feet',
+    'A hall of audience roofed in stone and lined with carved pillars',
+    'A council chamber identified from a map drawn by Colin Mackenzie',
+    'A shrine designed in the form of a chariot within the sacred centre'],
+ a:0,
+ e:'It stood on one of the highest points in the city and supported a wooden structure. Scholars point out that the surrounding space does not seem adequate for the processions described, so NCERT calls its function an enigma.'},
+{c:'Th7 · An Imperial Capital — Vijayanagara',
+ q:'Consider the following statements about the Mahanavami festival:',
+ S:[
+    ['It fell in the spring months of March and April.',false],
+    ['The ceremonies included worship of the state horse and animal sacrifice.',true],
+    ['On the last day the king inspected his army and those of the nayakas.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'It fell in the autumn months of September and October, and the nayakas brought rich gifts and the stipulated tribute on the last day. A festival that begins in worship therefore ends in an audit of military and fiscal obligation, which is what makes it central to the chapter\'s account of the state.'},
+{c:'Th7 · An Imperial Capital — Vijayanagara',
+ q:'Consider the following statements about the sacred centre:',
+ S:[
+    ['It lies at the rocky northern end of the site, on the Tungabhadra.',true],
+    ['The area also holds Jaina temples of the pre-Vijayanagara period.',true],
+    ['Virupaksha is a form of Vishnu and the guardian deity of the kingdom.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Virupaksha is a form of Shiva; Pampadevi did penance to marry him, and the marriage is still celebrated annually in the temple. The Vitthala temple, by contrast, is dedicated to a form of Vishnu generally worshipped in Maharashtra — the rulers drew on different traditions to create an imperial culture.'},
+{c:'Th7 · An Imperial Capital — Vijayanagara',
+ q:'The title Hindu Suratrana, used by the rayas, is significant because:',
+ o:[
+    'It was used only by the rulers of the later Aravidu dynasty',
+    'Suratrana is a Sanskritisation of the Arabic word Sultan itself',
+    'It is the earliest recorded use of the word Hindu in a royal title',
+    'It was conferred on the rayas by the Sultan of Bijapur himself'],
+ a:1,
+ e:'The title therefore means Hindu Sultan. It sits beside the raya gopurams that often dwarfed the towers over the central shrines, and beside mosques at the site whose architecture resembles the mandapas of the Hampi temples — all evidence of an imperial culture assembled from several traditions.'},
+{c:'Th7 · An Imperial Capital — Vijayanagara',
+ q:'Consider the following statements about the travellers who described Vijayanagara:',
+ S:[
+    ['Nicolo de Conti was an Italian trader and Afanasii Nikitin a merchant from Russia.',true],
+    ['Abdur Razzaq came as a merchant travelling from the Russian lands.',false],
+    ['Barbosa, Paes and Nuniz were Portuguese.',true],
+    ['Paes described Krishnadeva Raya as tall, spare and without blemish.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Abdur Razzaq came as an ambassador of the ruler of Persia. Paes wrote that Krishnadeva Raya was of medium height, rather fat than thin, and bore on his face the signs of smallpox. NCERT sets that description against the idealised statue of the king on the gopuram at Chidambaram.'},
+
+/* ============ Th8 · Peasants, Zamindars and the State ============ */
+{c:'Th8 · Peasants, Zamindars and the State',
+ q:'Consider the following statements about the sources for agrarian history:',
+ S:[
+    ['About eighty-five per cent of the population lived in villages.',true],
+    ['Peasants did not write about themselves.',true],
+    ['The major sources are chronicles and documents from the Mughal court.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The court sources are corrected using revenue records from Gujarat, Maharashtra and Rajasthan and East India Company records for the east — sources that record conflicts, and therefore record what peasants expected of those above them.'},
+{c:'Th8 · Peasants, Zamindars and the State',
+ q:'A khud-kashta peasant was one who:',
+ o:[
+    'Held land directly from the state without a zamindar',
+    'Worked the personal lands of the zamindar for wages',
+    'Resided in the village where he held his land',
+    'Cultivated land in a village other than his own'],
+ a:2,
+ e:'The pahi-kashta were non-resident cultivators farming elsewhere on a contractual basis, sometimes out of choice when revenue terms were better and sometimes out of compulsion after a famine. Reversing the pair is the standard error here.'},
+{c:'Th8 · Peasants, Zamindars and the State',
+ q:'Consider the following statements about landholding and property:',
+ S:[
+    ['Cultivation was based on the principle of individual ownership.',true],
+    ['An average north Indian peasant held more than a pair of bullocks and two ploughs.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'He seldom held more than that, and most possessed even less. In Gujarat about six acres marked an affluent peasant; in Bengal five acres was the upper limit of an average farm and ten acres made a rich asami.'},
+{c:'Th8 · Peasants, Zamindars and the State',
+ q:'The light wooden plough of the period is explained in the chapter as:',
+ o:[
+    'Evidence of the technological backwardness of Indian agriculture then',
+    'A device restricted to the rice-growing zones of the eastern provinces',
+    'An import introduced through Portuguese contact along the west coast',
+    'An adaptation, since shallow furrows preserved moisture in the hot months'],
+ a:3,
+ e:'A seed drill pulled by a pair of giant oxen also existed, though broadcasting of seed remained the most prevalent method. The chapter consistently reads simple technology as fitted to conditions rather than as failure.'},
+{c:'Th8 · Peasants, Zamindars and the State',
+ q:'Consider the following statements about crops:',
+ S:[
+    ['Jins-i kamil means perfect crops, and cotton and sugarcane were the leading examples.',true],
+    ['Cotton was grown across central India and the Deccan plateau.',true],
+    ['Bengal was famous for its sugar.',true],
+    ['The Ain-i Akbari lists tobacco among the crops of northern India.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'The Ain does not mention tobacco: Akbar and his nobles first encountered it in 1604, six years after the Ain was completed, and it had arrived first in the Deccan. Jahangir banned it, and the ban was totally ineffective.'},
+{c:'Th8 · Peasants, Zamindars and the State',
+ q:'Consider the following statements about the village panchayat:',
+ S:[
+    ['It was an oligarchy of elders with hereditary property rights.',true],
+    ['The village menial-cum-agricultural worker was unlikely to be represented on it.',true],
+    ['Its funds came from a grant made by the provincial administration.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Funds came from contributions made by individuals to a common pool, spent on entertaining visiting revenue officials, on relief in calamity and on bunds and canals. The headman was chosen by consensus of the elders, ratified by the zamindar, and could be dismissed by them.'},
+{c:'Th8 · Peasants, Zamindars and the State',
+ q:'The severest punishment a panchayat could impose was:',
+ o:[
+    'Expulsion from the community, usually for a limited period',
+    'A fine assessed in proportion to the offender\'s landholding',
+    'Forfeiture of the offender\'s right of residence in the village',
+    'Referral of the offender to the qazi of the pargana for trial'],
+ a:0,
+ e:'The person expelled became an outcaste and lost the right to practise his profession. The jati panchayats were separate and parallel bodies, and the state respected their decisions in most matters except criminal justice.'},
+{c:'Th8 · Peasants, Zamindars and the State',
+ q:'Assertion (A): Deserting the village was an effective form of peasant resistance.\nReason (R): Peasants held their land communally, so an individual could leave without loss.',
+ o:AR,a:2,
+ e:'Cultivation rested on individual ownership, and peasant lands were bought and sold like any other property. Desertion worked for a quite different reason — uncultivated land was abundant and there was competition over labour, so the bargaining power came from the scarcity of cultivators rather than of land. Petitions were the other recourse, usually made collectively by villagers from the lowest rungs of rural society.'},
+{c:'Th8 · Peasants, Zamindars and the State',
+ q:'Consider the following statements about women in rural society:',
+ S:[
+    ['A gendered segregation between the home and the world was not possible.',true],
+    ['Bride-price rather than dowry was paid, and remarriage was legitimate.',true],
+    ['Women\'s petitions were recorded under their own names.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Their names were excluded: the petitioner appears as the mother, sister or wife of the male head of the household. The same premise that took women into the fields also produced strict control and draconian punishments on suspicion of infidelity — the freedom and the control have one source.'},
+{c:'Th8 · Peasants, Zamindars and the State',
+ q:'Consider the following statements about women and zamindaris:',
+ S:[
+    ['Hindu and Muslim women inherited zamindaris and could sell or mortgage them.',true],
+    ['One of the biggest zamindaris in eighteenth-century Bengal had a woman at its head.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Rajshahi is the zamindari in question. The contrast with the anonymity of the peasant woman petitioner is the point — property, not gender alone, determined whether a woman appeared in the record under her own name.'},
+{c:'Th8 · Peasants, Zamindars and the State',
+ q:'The term jangli, as used in the sources, described:',
+ o:[
+    'Land that had been classified as uncultivated for five years or more',
+    'Those living by gathering forest produce, hunting and shifting agriculture',
+    'People considered to be wholly outside the pale of settled life',
+    'Tribute-paying chiefs of the forest tracts of central India and east'],
+ a:1,
+ e:'It did not mean an absence of civilisation. Land uncultivated for five years or more was banjar; and mawas, often taken for a tax, was a place of refuge — Babur wrote of the tracts behind which the people of the pargana became stubbornly rebellious and paid no taxes.'},
+{c:'Th8 · Peasants, Zamindars and the State',
+ q:'Consider the following statements about zamindars:',
+ S:[
+    ['They lived off agriculture but did not take part directly in production.',true],
+    ['Milkiyat lands were their personal property, which they could sell or mortgage at will.',true],
+    ['Zamindaris were created mainly by conquest.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'More important were the slow processes of consolidation — colonisation of new land, transfer of rights, state order and purchase — and even conquest required confirmation by an imperial sanad. Purchase in particular let relatively lower castes enter the rank.'},
+{c:'Th8 · Peasants, Zamindars and the State',
+ q:'Assertion (A): The main antagonism in the seventeenth-century countryside was between the village and the state.\nReason (R): Zamindars often received the support of the peasantry in their struggles against the state.',
+ o:AR,a:0,
+ e:'The chapter\'s other evidence is an argument from silence: the bhakti saints, who spared few, did not denounce the zamindar or even the moneylender, and usually it was the revenue official of the state who was the object of their ire.'},
+{c:'Th8 · Peasants, Zamindars and the State',
+ q:'In the revenue vocabulary of the Ain-i Akbari, jama and hasil mean respectively:',
+ o:[
+    'The share of the crop and the share paid in cash',
+    'The measured area and the area under cultivation',
+    'The amount assessed and the amount actually collected',
+    'The amount collected and the amount remitted in charity'],
+ a:2,
+ e:'Akbar directed the amil-guzar to strive for cash while keeping the option of payment in kind open, and not all areas were successfully measured — forests in particular remained unmeasured. Polaj, parauti, chachar and banjar classify land by how long it lies fallow.'},
+{c:'Th8 · Peasants, Zamindars and the State',
+ q:'Consider the following statements about the Ain-i Akbari:',
+ S:[
+    ['It forms the third book of the Akbar Nama.',true],
+    ['It was completed in 1598 after five revisions.',true],
+    ['It is divided into five daftars.',true],
+    ['Its prices and wages are drawn mainly from in and around Agra.',true]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'That last point is a limit on its use, since such figures are of limited relevance for the rest of the country, and there is no caste data on zamindars for Bengal and Orissa. Numerals were written out in words to prevent transcription errors, and errors of totalling are generally minor.'},
+{c:'Th8 · Peasants, Zamindars and the State',
+ q:'NCERT\'s central objection to describing the Mughal village as a "little republic" is that:',
+ o:[
+    'The village was too small a unit to have possessed any institutions at all',
+    'The panchayat was appointed by the state and not chosen by the villagers',
+    'The term was invented by nationalist writers of the twentieth century',
+    'There was individual ownership, sharp inequality, and a strong cash nexus'],
+ a:3,
+ e:'It is a nineteenth-century British idea. Tavernier observed that a village must be very small indeed if it has no money-changer called a shroff, dealing in rupees, paisa and cowrie shells — which is the cash nexus in one sentence.'},
+
+/* ============ Th9 · Supplement — Kings and Chronicles: The Mughal Courts ============ */
+{c:'Th9 · Supplement — Kings and Chronicles: The Mughal Courts',
+ q:'Consider the following statements about the dynasty\'s name and descent:',
+ S:[
+    ['Mughal was not the name the rulers chose for themselves.',true],
+    ['They referred to themselves as Timurids.',true],
+    ['Babur descended from Timur through his mother and from Genghis Khan through his father.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Timur came through the paternal line and Genghis Khan through his mother. The word Mughal derives from Mongol, and Babur himself referred derisively to the Mongols as barbaric hordes.'},
+{c:'Th9 · Supplement — Kings and Chronicles: The Mughal Courts',
+ q:'A kitabkhana was:',
+ o:[
+    'A scriptorium where manuscripts were kept and also produced',
+    'A library holding the emperor\'s collection of Persian works',
+    'A hall in which the emperor held debates on religious questions',
+    'A workshop in which court painters were trained as apprentices'],
+ a:0,
+ e:'NCERT notes that although the word can be translated as library, it was a scriptorium. Calligraphers and painters within it held high social standing while paper makers and bookbinders have remained anonymous artisans.'},
+{c:'Th9 · Supplement — Kings and Chronicles: The Mughal Courts',
+ q:'Consider the following statements about the making of an illustrated manuscript:',
+ S:[
+    ['Akbar\'s favourite calligraphic style was nastaliq.',true],
+    ['Zarrin qalam was a title awarded to a calligrapher, not a kind of pen.',true],
+    ['Paintings were executed on the page as the scribe wrote the text.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The scribe left blank spaces on nearby pages and paintings executed separately by artists were inserted. Muhammad Husayn of Kashmir received the title golden pen for the perfectly proportioned curvature of his letters.'},
+{c:'Th9 · Supplement — Kings and Chronicles: The Mughal Courts',
+ q:'Assertion (A): Akbar accepted the objection of the ulama to the painting of living beings.\nReason (R): The objection was that a naturalistic depiction suggested the artist was appropriating the power of creation.',
+ o:AR,a:3,
+ e:'Akbar did not accept it. He inverted the argument instead, holding that an artist has a unique way of recognising God when he must come to feel that he cannot bestow life on his work. The objection itself was as stated — that a naturalistic depiction suggested the artist was appropriating the power of creation, which belongs to God alone.'},
+{c:'Th9 · Supplement — Kings and Chronicles: The Mughal Courts',
+ q:'Consider the following statements about the Akbar Nama:',
+ S:[
+    ['It is made up of three books, the third being the Ain-i Akbari.',true],
+    ['Abu\'l Fazl completed it within three years and never revised it.',false],
+    ['He was murdered in 1602 in a conspiracy hatched by Prince Salim.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Abu\'l Fazl worked on it for thirteen years, repeatedly revising the draft, and was murdered in 1602 — the deed executed by Bir Singh Bundela. Volume one carries the history of mankind from Adam to one celestial cycle of Akbar\'s life, and volume two closes in the forty-sixth regnal year.'},
+{c:'Th9 · Supplement — Kings and Chronicles: The Mughal Courts',
+ q:'A synchronic account, in the sense NCERT uses the term, is one that:',
+ o:[
+    'Records events in the order in which they were reported at court',
+    'Describes one or several situations at a single point in time',
+    'Traces the development of an institution over several reigns',
+    'Compares two empires ruling in the same period of history'],
+ a:1,
+ e:'A diachronic account traces change over time. The Ain is the synchronic part of the Akbar Nama, and NCERT calls that the more novel of the two senses in which the work is a history.'},
+{c:'Th9 · Supplement — Kings and Chronicles: The Mughal Courts',
+ q:'Consider the following statements about the Badshah Nama:',
+ S:[
+    ['It was written by Abdul Hamid Lahori, a pupil of Abu\'l Fazl.',true],
+    ['Its daftars cover ten lunar years each.',true],
+    ['The whole text has been translated into English.',false],
+    ['The illustrated copy is held in the Royal Collections at Windsor Castle.',true]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Only excerpts have been translated; the text in its entirety still awaits translation. Lahori wrote the first two decades, later revised by Sadullah Khan, and Waris chronicled the third; the illustrated copy was gifted by the Nawab of Awadh to George III in 1799.'},
+{c:'Th9 · Supplement — Kings and Chronicles: The Mughal Courts',
+ q:'The idea of farr-i izadi, the divine light, reached Abu\'l Fazl through:',
+ o:[
+    'The Ottoman court, with which Akbar exchanged embassies',
+    'Ibn Rushd, whose method had been adopted by Christian thinkers',
+    'Shihabuddin Suhrawardi, whose ideas go back to Plato\'s Republic',
+    'Al-Biruni, who had translated Greek philosophy into Arabic'],
+ a:2,
+ e:'Suhrawardi\'s ideas passed to Shaikh Mubarak, who taught them to his sons Faizi and Abu\'l Fazl. The legend attaches the light to the Mongol queen Alanqua, impregnated by a ray of sunshine, and haloes appear in Mughal painting only from the seventeenth century, copied from European paintings of Christ and the Virgin.'},
+{c:'Th9 · Supplement — Kings and Chronicles: The Mughal Courts',
+ q:'Consider the following statements about sulh-i kul:',
+ S:[
+    ['The term means absolute peace.',true],
+    ['Freedom of expression was granted on condition that the state was not undermined.',true],
+    ['Akbar abolished the jizya in 1563 and the pilgrimage tax in 1564.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The pilgrimage tax went in 1563 and the jizya in 1564, as both were based on religious discrimination. Grants to non-Muslim institutions were made by several emperors including Aurangzeb, who nevertheless re-imposed the jizya.'},
+{c:'Th9 · Supplement — Kings and Chronicles: The Mughal Courts',
+ q:'The four essences that Abu\'l Fazl held the emperor to protect were:',
+ o:[
+    'Jan, mal, mulk and din — life, property, realm and faith',
+    'Zat, sawar, jama and hasil — rank, horsemen, assessment and collection',
+    'Sulh, adl, ihsan and din — peace, justice, benevolence and faith',
+    'Jan, mal, namus and din — life, property, honour and faith'],
+ a:3,
+ e:'They were protected in return for obedience and a share of resources, which makes sovereignty a kind of contract. The lion-and-lamb motif in a niche directly below the throne carried the same claim, signifying a realm where the strong and the weak could exist in harmony.'},
+{c:'Th9 · Supplement — Kings and Chronicles: The Mughal Courts',
+ q:'Consider the following statements about court ritual:',
+ S:[
+    ['Status in court was determined by spatial proximity to the emperor.',true],
+    ['Sijda, complete prostration, was replaced under Shah Jahan by chahar taslim and zaminbos.',true],
+    ['Kornish involved kissing the emperor\'s feet.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Kornish meant placing the palm of the right hand against the forehead and bending the head, suggesting that the subject had placed his head into the hand of humility. The slightest infringement of etiquette was noticed and punished on the spot — which is what Thomas Roe discovered when he bowed in the European manner and then demanded a chair.'},
+{c:'Th9 · Supplement — Kings and Chronicles: The Mughal Courts',
+ q:'Jharoka darshan was introduced by:',
+ o:[
+    'Akbar, to broaden acceptance of imperial authority as part of popular faith',
+    'Jahangir, alongside the chain of justice at the outset of his reign',
+    'Shah Jahan, on the completion of the new capital at Shahjahanabad',
+    'Humayun, in imitation of ceremonial he had observed in Safavid Iran'],
+ a:0,
+ e:'The balcony faced east, and the emperor appeared at sunrise. Jahangir\'s chain of justice was of pure gold, thirty gaz long with sixty bells, and was the first order of his reign.'},
+{c:'Th9 · Supplement — Kings and Chronicles: The Mughal Courts',
+ q:'Consider the following statements about the imperial household:',
+ S:[
+    ['The word harem originates in the Persian haram, meaning a sacred place.',true],
+    ['Khwajasara were slave eunuchs who also acted as agents for women trading.',true],
+    ['Chandni Chowk was designed by the court architects of Shah Jahan.',false],
+    ['Mughal princesses had no independent sources of income.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Chandni Chowk, the throbbing centre of Shahjahanabad, was designed by Jahanara. She and Roshanara had annual incomes often equal to those of high imperial mansabdars, and Jahanara received the revenues of Surat. Of the total cost of Dara Shukoh\'s wedding, the treasury paid six lakh and Jahanara sixteen.'},
+{c:'Th9 · Supplement — Kings and Chronicles: The Mughal Courts',
+ q:'Consider the following statements about Gulbadan Begum:',
+ S:[
+    ['She was Babur\'s daughter, Humayun\'s sister and Akbar\'s aunt.',true],
+    ['Her Humayun Nama was no eulogy and described conflicts among princes and kings.',true],
+    ['She began writing after Abu\'l Fazl had started the Akbar Nama.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'She began about 1587, against Abu\'l Fazl\'s 1589. She also described the important mediating role that elderly women of the family played — and she wrote at Akbar\'s request, as material for Abu\'l Fazl to use.'},
+{c:'Th9 · Supplement — Kings and Chronicles: The Mughal Courts',
+ q:'Assertion (A): The Mughal nobility was recruited from diverse ethnic and religious groups.\nReason (R): Abu\'l Fazl described the resulting body as a guldasta, a bouquet of flowers.',
+ o:AR,a:1,
+ e:'The guldasta is Abu\'l Fazl\'s description of the result, not the reason for the policy: diversity was cultivated so that no faction would be large enough to challenge the authority of the state. Raja Bharmal Kachhwaha of Amber was the first Rajput to join imperial service, and under Aurangzeb Rajputs held high positions while the Marathas accounted for a sizeable number.'},
+{c:'Th9 · Supplement — Kings and Chronicles: The Mughal Courts',
+ q:'In the mansabdari system, zat and sawar denoted respectively:',
+ o:[
+    'The revenue assignment held, and the cash portion of a noble\'s pay',
+    'Position in the hierarchy with salary, and the horsemen to be maintained',
+    'The horsemen to be maintained, and position in the hierarchy with salary',
+    'The imperial brand on a horse, and the muster of a noble\'s contingent'],
+ a:1,
+ e:'Mansabdars of 1,000 zat or above ranked as nobles. The imperial brand on a horse\'s flank was the dagh, and an applicant for a mansab petitioned through a noble, who presented a tajwiz to the emperor.'},
+{c:'Th9 · Supplement — Kings and Chronicles: The Mughal Courts',
+ q:'Consider the following statements about the ministers and the flow of information:',
+ S:[
+    ['The mir bakhshi was the paymaster general and stood on the emperor\'s right.',true],
+    ['The three chief ministers were independent of each other rather than a cabinet.',true],
+    ['The akhbarat were official gazettes issued by the imperial secretariat.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The akhbarat were compiled by wakils, the agents of nobles and regional rulers, who recorded court proceedings with the date and the pahar; the state\'s own writers were the waqia nawis. News moved by round-the-clock relays of foot-runners carrying papers rolled up in bamboo containers.'},
+{c:'Th9 · Supplement — Kings and Chronicles: The Mughal Courts',
+ q:'Consider the following statements about Mughal relations beyond the frontier:',
+ S:[
+    ['Qandahar was reconquered by Akbar in 1595 and lost to a Persian siege in 1622.',true],
+    ['The painting Jahangir\'s Dream depicts a meeting that never took place.',true],
+    ['Mughal dealings with the Ottomans centred on disputed territory in Iraq.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Shah Abbas\'s face in that painting was based on portraits by Bishandas, who had gone with the embassy of 1613. On discovering that charity sent to Arabia was being misappropriated, Aurangzeb favoured distributing it in India, which he said was as much a house of God as Mecca.'},
+{c:'Th9 · Supplement — Kings and Chronicles: The Mughal Courts',
+ q:'Abdul Qadir Badauni is significant among the Mughal chroniclers because:',
+ o:[
+    'He wrote in Turkish at a time when Persian had become the court language',
+    'He was commissioned by Jahangir to revise the record of Akbar\'s reign',
+    'He was critical of his employer\'s policies and did not wish his book made public',
+    'He was the only chronicler to have been trained as a painter as well'],
+ a:2,
+ e:'His Muntakhab-ut Tawarikh called Akbar\'s sun ceremonies atish-parasti, fire worship, and recorded that in the twenty-fifth regnal year the emperor prostrated publicly before the sun and the fire. That such a work was written at all is the evidence that the court contained its own opposition.'}
+
+];
+
+/* ---------- Engine (identical across classes) ---------- */
+function shuffle(arr){const a=arr.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+
+/* Canonical Prelims answer-code sets. For an S-question the statements are
+   reshuffled on every attempt and the correct code is worked out from which
+   ones landed where — so neither the option nor the position of the false
+   statement can be memorised. */
+const SET_CODE3=["1 and 2 only","2 and 3 only","1 and 3 only","1, 2 and 3"];
+const SET_CODE2=["1 only","2 only","Both 1 and 2","Neither 1 nor 2"];
+const SET_COUNT=["Only one","Only two","All three","None"];
+const SET_COUNT4=["Only one","Only two","Only three","All four"];
+function buildCode(mode,n,trueIdx){
+  const c=trueIdx.length;
+  if(mode==='count'){
+    const set=n===4?SET_COUNT4:SET_COUNT;
+    const text=c===0?'None':c===1?'Only one':c===2?'Only two':c===3?(n===3?'All three':'Only three'):'All four';
+    return {set:set,text:text};
+  }
+  if(n===2){
+    const text=c===2?'Both 1 and 2':c===0?'Neither 1 nor 2':(trueIdx[0]===1?'1 only':'2 only');
+    return {set:SET_CODE2,text:text};
+  }
+  const text=c===3?'1, 2 and 3':trueIdx[0]+' and '+trueIdx[1]+' only';
+  return {set:SET_CODE3,text:text};
+}
+function joinList(a){return a.length===1?String(a[0]):a.slice(0,-1).join(', ')+' and '+a[a.length-1];}
+function verdictLine(n,trueIdx,unit){
+  const U=unit==='pair'?'pair':'statement', Uc=U.charAt(0).toUpperCase()+U.slice(1);
+  const all=[];for(let i=1;i<=n;i++)all.push(i);
+  const f=all.filter(function(i){return trueIdx.indexOf(i)<0;});
+  if(f.length===0)return 'All the '+U+'s here are correct.';
+  if(trueIdx.length===0)return 'None of the '+U+'s here is correct.';
+  return Uc+(trueIdx.length===1?' ':'s ')+joinList(trueIdx)+(trueIdx.length===1?' is':' are')+' correct; '+
+         U+(f.length===1?' ':'s ')+joinList(f)+(f.length===1?' is not.':' are not.');
+}
+function buildSession(pool){return shuffle(pool).map(function(item){
+  let lines=item.L,options,correctText,auto='';
+  if(item.S){
+    const st=shuffle(item.S), n=st.length, trueIdx=[];
+    lines=st.map(function(s){return s[0];});
+    st.forEach(function(s,i){if(s[1])trueIdx.push(i+1);});
+    const built=buildCode(item.mode||'code',n,trueIdx);
+    options=built.set.slice(); correctText=built.text;
+    auto=verdictLine(n,trueIdx,item.unit)+' ';
+  } else { options=item.o.slice(); correctText=item.o[item.a]; }
+  const order=shuffle(options.map(function(text,i){return {text:text,i:i};}));
+  return {chapter:item.c,question:item.q,head:item.head,lines:lines,ask:item.ask,
+          options:order.map(function(o){return o.text;}),
+          correct:order.findIndex(function(o){return o.text===correctText;}),
+          explain:auto+item.e};
+});}
+let session=[],current=0,answers=[],startTime=null,timerInterval=null,reviewMode=false,activeScope="";
+const el=id=>document.getElementById(id);
+const screens={menu:el('menu'),quiz:el('quiz'),result:el('result')};
+function show(name){Object.keys(screens).forEach(k=>screens[k].classList.toggle('is-active',k===name));}
+el('courseEyebrow').textContent=COURSE.eyebrow; el('courseTitle').textContent=COURSE.title; el('courseLede').textContent=COURSE.lede;
+function chapterCount(name){return QUESTIONS.filter(q=>q.c===name).length;}
+function buildMenu(){
+  const list=el('lessonList'); list.innerHTML='';
+  const combined=document.createElement('button');
+  combined.className='lesson-card combined'; combined.type='button';
+  combined.innerHTML='<span class="lesson-num">★</span><span class="lesson-body"><span class="lesson-title">Full Syllabus — Combined</span><span class="lesson-meta">All '+CHAPTERS.length+' lessons · '+QUESTIONS.length+' questions, shuffled</span></span><span class="lesson-go">→</span>';
+  combined.addEventListener('click',()=>startQuiz(null)); list.appendChild(combined);
+  CHAPTERS.forEach((name,idx)=>{
+    const shortTitle=name.replace(/^Ch\d+ · /,'');
+    const btn=document.createElement('button'); btn.className='lesson-card'; btn.type='button';
+    const num=document.createElement('span'); num.className='lesson-num'; num.textContent=String(idx+1);
+    const body=document.createElement('span'); body.className='lesson-body';
+    const t=document.createElement('span'); t.className='lesson-title'; t.textContent=shortTitle;
+    const m=document.createElement('span'); m.className='lesson-meta'; m.textContent=chapterCount(name)+' questions';
+    body.appendChild(t); body.appendChild(m);
+    const go=document.createElement('span'); go.className='lesson-go'; go.textContent='→';
+    btn.appendChild(num); btn.appendChild(body); btn.appendChild(go);
+    btn.addEventListener('click',()=>startQuiz(name)); list.appendChild(btn);
+  });
+}
+function formatTime(sec){const m=Math.floor(sec/60).toString().padStart(2,'0');const s=Math.floor(sec%60).toString().padStart(2,'0');return m+':'+s;}
+function startTimer(){startTime=Date.now();clearInterval(timerInterval);timerInterval=setInterval(()=>{el('timer').textContent=formatTime((Date.now()-startTime)/1000);},1000);}
+function stopTimer(){clearInterval(timerInterval);}
+function startQuiz(chapter){
+  const pool=chapter?QUESTIONS.filter(q=>q.c===chapter):QUESTIONS;
+  activeScope=chapter?chapter.replace(/^Ch\d+ · /,''):"Full Syllabus";
+  session=buildSession(pool); answers=new Array(session.length).fill(null); current=0; reviewMode=false;
+  show('quiz'); el('timer').textContent='00:00'; startTimer(); renderQuestion();
+}
+function renderStem(item){
+  const box=el('qblock'); box.innerHTML='';
+  const stem=document.createElement('p'); stem.className='question'; stem.textContent=item.question; box.appendChild(stem);
+  if(item.head){const h=document.createElement('p'); h.className='stmt-head'; h.textContent=item.head; box.appendChild(h);}
+  if(item.lines&&item.lines.length){
+    const ol=document.createElement('ul'); ol.className='stmt-list';
+    item.lines.forEach((line,i)=>{
+      const li=document.createElement('li');
+      const n=document.createElement('span'); n.className='sn'; n.textContent=(i+1)+'.';
+      const t=document.createElement('span'); t.className='st';
+      const split=line.indexOf(' : ');
+      if(split>-1){
+        t.textContent=line.slice(0,split);
+        const r=document.createElement('span'); r.className='sr'; r.textContent=' — '+line.slice(split+3);
+        t.appendChild(r);
+      } else { t.textContent=line; }
+      li.appendChild(n); li.appendChild(t); ol.appendChild(li);
+    });
+    box.appendChild(ol);
+  }
+  if(item.ask){const a=document.createElement('p'); a.className='ask'; a.textContent=item.ask; box.appendChild(a);}
+}
+function renderQuestion(){
+  const item=session[current]; const chosen=answers[current]; const reveal=chosen!==null||reviewMode;
+  el('chapterTag').textContent=item.chapter; el('counter').textContent=(current+1)+' / '+session.length;
+  el('progressFill').style.width=((current+1)/session.length*100)+'%';
+  renderStem(item);
+  const optsBox=el('options'); optsBox.innerHTML=''; const letters=['A','B','C','D','E'];
+  item.options.forEach((opt,i)=>{
+    const btn=document.createElement('button'); btn.className='option'; btn.type='button';
+    const l=document.createElement('span'); l.className='opt-letter'; l.textContent=letters[i];
+    const t=document.createElement('span'); t.className='opt-text'; t.textContent=opt;
+    btn.appendChild(l); btn.appendChild(t);
+    if(reveal){btn.disabled=true; if(i===item.correct)btn.classList.add('correct'); else if(i===chosen)btn.classList.add('incorrect');}
+    btn.addEventListener('click',()=>selectOption(i)); optsBox.appendChild(btn);
+  });
+  const fb=el('feedback');
+  if(reveal){
+    fb.hidden=false; let verdict,cls;
+    if(chosen===null){verdict='Skipped.';cls='bad';} else if(chosen===item.correct){verdict='Correct.';cls='good';} else {verdict='Not quite.';cls='bad';}
+    fb.className='feedback '+cls;
+    fb.innerHTML=''; const v=document.createElement('span'); v.className='verdict'; v.textContent=verdict;
+    fb.appendChild(v); fb.appendChild(document.createTextNode(' '+item.explain));
+  } else { fb.hidden=true; }
+  el('prevBtn').disabled=current===0;
+  const nextBtn=el('nextBtn');
+  nextBtn.textContent = reviewMode ? (current===session.length-1?'Back to results':'Next →') : (current===session.length-1?'Finish':'Next →');
+  el('options').scrollIntoView&&el('qblock').parentElement.scrollTo({top:0});
+}
+function selectOption(i){ if(reviewMode||answers[current]!==null)return; answers[current]=i; renderQuestion(); }
+function finishQuiz(){
+  stopTimer(); const elapsed=(Date.now()-startTime)/1000; let correctCount=0; const stats={};
+  session.forEach((item,i)=>{ if(!stats[item.chapter])stats[item.chapter]={correct:0,total:0}; stats[item.chapter].total++; if(answers[i]===item.correct){correctCount++;stats[item.chapter].correct++;} });
+  show('result');
+  el('resultScope').textContent=activeScope+' · '+session.length+' questions';
+  el('scoreText').textContent=correctCount+' / '+session.length; el('timeText').textContent=formatTime(elapsed);
+  el('scorePct').textContent=Math.round(correctCount/session.length*100)+'%';
+  const body=el('breakdownBody'); body.innerHTML='';
+  CHAPTERS.filter(c=>stats[c]).forEach(c=>{
+    const s=stats[c]; const row=document.createElement('tr');
+    const td1=document.createElement('td'); td1.textContent=c.replace(/^Ch\d+ · /,'');
+    const p=Math.round(s.correct/s.total*100);
+    const bar=document.createElement('div'); bar.className='bd-bar';
+    const fill=document.createElement('span'); fill.style.width=p+'%'; bar.appendChild(fill); td1.appendChild(bar);
+    const td2=document.createElement('td'); td2.className='num'; td2.textContent=s.correct+' / '+s.total;
+    row.appendChild(td1); row.appendChild(td2); body.appendChild(row);
+  });
+}
+function enterReview(){reviewMode=true;current=0;show('quiz');renderQuestion();}
+function exitReviewToResult(){reviewMode=false;show('result');}
+el('prevBtn').addEventListener('click',()=>{if(current>0){current--;renderQuestion();}});
+el('nextBtn').addEventListener('click',()=>{
+  if(reviewMode){ if(current===session.length-1)exitReviewToResult(); else {current++;renderQuestion();} }
+  else { if(current===session.length-1)finishQuiz(); else {current++;renderQuestion();} }
+});
+el('reviewBtn').addEventListener('click',enterReview);
+el('restartBtn').addEventListener('click',()=>{ const chapter=activeScope==="Full Syllabus"?null:CHAPTERS.find(c=>c.replace(/^Ch\d+ · /,'')===activeScope); startQuiz(chapter); });
+el('menuBtn').addEventListener('click',()=>{stopTimer();show('menu');});
+document.addEventListener('keydown',(e)=>{
+  if(!screens.quiz.classList.contains('is-active'))return;
+  if(['1','2','3','4','5'].includes(e.key)&&!reviewMode){selectOption(parseInt(e.key,10)-1);}
+  else if(e.key==='ArrowRight'||e.key==='Enter'){el('nextBtn').click();}
+  else if(e.key==='ArrowLeft'){el('prevBtn').click();}
+});
+buildMenu();
+</script>

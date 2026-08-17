@@ -52,9 +52,21 @@ Quiz `dist/` files are **generated** — edit `Polity/05_Quiz_MCQ/data/<class>.j
 
 ## History
 
-| Artifact | URL | Source |
-|---|---|---|
-| Class VI History Quiz — Our Pasts I | [29fc4e7a](https://claude.ai/code/artifact/29fc4e7a-d507-4d47-bdb2-cdafa7d160f8) | `History/05_Quiz_MCQ/dist/class06.html` |
+| Artifact | URL | Source | Questions |
+|---|---|---|---|
+| Class VI History Quiz — Our Pasts I | [29fc4e7a](https://claude.ai/code/artifact/29fc4e7a-d507-4d47-bdb2-cdafa7d160f8) | `History/05_Quiz_MCQ/dist/class06.html` | 117 |
+| Class VII History Quiz — Our Pasts II | [e16f5b53](https://claude.ai/code/artifact/e16f5b53-0fd8-4914-87eb-65366806b343) | `History/05_Quiz_MCQ/dist/class07.html` | 111 |
+| Class VIII History Quiz — Our Pasts III | [9cba9395](https://claude.ai/code/artifact/9cba9395-a947-4a8c-94e7-492260772385) | `History/05_Quiz_MCQ/dist/class08.html` | 87 |
+| Class IX History Quiz — India and the Contemporary World – I | [4d6643bc](https://claude.ai/code/artifact/4d6643bc-12c9-4217-a0d9-a924de9d8a31) | `History/05_Quiz_MCQ/dist/class09.html` | 115 |
+| Class X History Quiz — India and the Contemporary World – II | [e68419d6](https://claude.ai/code/artifact/e68419d6-e5a5-432d-af30-277b8bd96720) | `History/05_Quiz_MCQ/dist/class10.html` | 129 |
+| Class XI History Quiz — Themes in World History | [bb8d93b5](https://claude.ai/code/artifact/bb8d93b5-667f-4af2-838a-dce9fb02d3d3) | `History/05_Quiz_MCQ/dist/class11.html` | 126 |
+| Class XII History Quiz — Themes in Indian History I | [f4139b07](https://claude.ai/code/artifact/f4139b07-3671-4bea-ba9d-1d2df5c82568) | `History/05_Quiz_MCQ/dist/class12p1.html` | 61 |
+| Class XII History Quiz — Themes in Indian History II | [faed50aa](https://claude.ai/code/artifact/faed50aa-329e-4e70-a0a7-9ffdec8d0074) | `History/05_Quiz_MCQ/dist/class12p2.html` | 75 |
+| Class XII History Quiz — Themes in Indian History III | [1db21367](https://claude.ai/code/artifact/1db21367-9ce8-4b7a-9f68-fa6d07aa4a0a) | `History/05_Quiz_MCQ/dist/class12p3.html` | 76 |
+
+**Favicons** (kept distinct so the browser tabs stay tellable apart, since all History quizzes share the lapis accent `#27467B`): VI 🏺 · VII 🕌 · VIII 🚩 · IX 🌍 · X 🏭 · XI 🏛️ · XII-I 🧱 · XII-II 🛕 · XII-III ⚖️.
+
+✅ **The NCERT History quiz series is COMPLETE — all nine banks, Classes VI to XII, 764 questions.** Every bank is clean on `audit.mjs` and shows no length or answer-code tell in `simulate.mjs`.
 
 ## Planning & Targets
 

@@ -20,11 +20,21 @@ node build.mjs                # writes dist/
 node normalize.mjs class06    # optional: reformat + re-spread one bank
 ```
 
-Published artifacts (same URLs, updated in place):
+Published artifacts (same URLs, updated in place — republish the same `dist/` path):
 
-| Class | Bank | URL |
-|---|---|---|
-| VI — Our Pasts I | `class06` | https://claude.ai/code/artifact/29fc4e7a-d507-4d47-bdb2-cdafa7d160f8 |
+| Class | Bank | Qs | Favicon | URL |
+|---|---|:--:|:--:|---|
+| VI — Our Pasts I | `class06` | 117 | 🏺 | https://claude.ai/code/artifact/29fc4e7a-d507-4d47-bdb2-cdafa7d160f8 |
+| VII — Our Pasts II | `class07` | 111 | 🕌 | https://claude.ai/code/artifact/e16f5b53-0fd8-4914-87eb-65366806b343 |
+| VIII — Our Pasts III | `class08` | 87 | 🚩 | https://claude.ai/code/artifact/9cba9395-a947-4a8c-94e7-492260772385 |
+| IX — India and the Contemporary World I | `class09` | 115 | 🌍 | https://claude.ai/code/artifact/4d6643bc-12c9-4217-a0d9-a924de9d8a31 |
+| X — India and the Contemporary World II | `class10` | 129 | 🏭 | https://claude.ai/code/artifact/e68419d6-e5a5-432d-af30-277b8bd96720 |
+| XI — Themes in World History | `class11` | 126 | 🏛️ | https://claude.ai/code/artifact/bb8d93b5-667f-4af2-838a-dce9fb02d3d3 |
+| XII — Themes in Indian History I | `class12p1` | 61 | 🧱 | https://claude.ai/code/artifact/f4139b07-3671-4bea-ba9d-1d2df5c82568 |
+| XII — Themes in Indian History II | `class12p2` | 75 | 🛕 | https://claude.ai/code/artifact/faed50aa-329e-4e70-a0a7-9ffdec8d0074 |
+| XII — Themes in Indian History III | `class12p3` | 76 | ⚖️ | https://claude.ai/code/artifact/1db21367-9ce8-4b7a-9f68-fa6d07aa4a0a |
+
+All nine share the lapis accent, so **the favicon is the only thing that tells the browser tabs apart** — keep them stable across republishes. Registered in `Mission/00_ARTIFACTS.md` and on the hub page.
 
 ## The rules
 
@@ -91,5 +101,46 @@ length lines and the code histogram yourself.
 
 ## Still to do
 
-Classes XI–XII History banks. Class XI (`Themes in World History`) is next; notes
-for it are not yet written either.
+✅ **Nothing — the NCERT History series is complete.** Classes VI to XII, nine
+banks, 764 questions, all clean on both checks (17 Aug 2026).
+
+⭐ The fast route (proved on Class 10, and used for all four of the XI–XII banks):
+do **not** re-read the whole chapter to write questions. Extract just the two dense
+blocks per chapter —
+
+```bash
+awk '/^### 🔴 Prelims traps/,/^### 🟢/' NN_Theme.md
+```
+
+— because those trap tables are already *claim vs truth* pairs, i.e. a distractor
+and an answer side by side, which is the shape of an MCQ. Plan the truth-mix
+distribution on paper **before** writing so FLAT and the code histogram cannot bite.
+
+### ⚠️ The two traps that bit on every one of the XI–XII banks
+
+1. **Writing naturally produces far too many all-true 3-statement sets.** A 3/3
+   `code` set always answers *"1, 2 and 3"*, so ten of them in a 40-set bank puts
+   that one code at 26%. The `class12p3` first pass hit exactly that. **Fix at
+   source by flipping one statement to false** — and do it in the statement, not
+   in the explanation.
+2. **Over-correcting then trips FLAT.** Converting every 3/3 to 3/2 pushed
+   `class12p2` and `class12p3` to 61–66% of sets sharing the 3/2 mix, over the
+   0.55 threshold. **The reliable second move is to DROP one true statement from
+   about eight sets, turning 3/2 into 2/1** — that fills the `CODE2` codes, which
+   are otherwise the emptiest part of the histogram.
+
+⭐ **A target distribution that passed first time:** roughly `3/2` 40% · `2/1` 25%
+· the rest spread over `4/2`, `4/3`, `3/3`, `2/2`, `4/4`, `2/0`. Keep no single
+answer code above ~15%.
+
+⚠️ **`normalize.mjs` does not rotate assertion-reason questions**, because `AR` is
+a canonical named set. If every AR is written with `a:0` the INDEX check fails even
+after normalising. **Vary the AR answers deliberately** — make some reasons false
+(`a:2`), some assertions false (`a:3`), and some true-but-not-explanatory (`a:1`).
+
+⚠️ **class09 residual:** the simulator reports a clearly-longest option on 3.7% of
+its plain MCQs and a clearly-shortest on 7.4%, correct **0.0%** of the time in both
+cases — i.e. a weak *"don't pick that one"* tell on roughly 2–3 questions out of 45.
+It is far below the simulator's 15% learnability gate and the bank passes both
+checks, but classes 06/07/08/10 all sit at 0.0%. Worth flattening at source
+(lengthen the short distractors) next time class09 is touched.

@@ -1,0 +1,1478 @@
+<title>Class XI History Quiz — Themes in World History</title>
+<style>
+:root{
+  --ink:#1A1E26; --paper:#F1F4F8; --surface:#FFFFFF; --line:#D4DAE3; --muted:#596372;
+  --good:#1F7A4C; --good-soft:#E2F1E9; --bad:#B23A34; --bad-soft:#FAE6E4;
+  --accent:#27467B; --accent-ink:#FFFFFF; --accent-soft:#E3EAF5;
+  --radius:10px;
+  --serif:Georgia,'Iowan Old Style','Palatino Linotype','Book Antiqua',serif;
+  --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --ink:#E5EAF2; --paper:#0F131A; --surface:#181D26; --line:#272F3B; --muted:#95A0B1;
+    --good:#3FBE7C; --good-soft:rgba(63,190,124,0.14); --bad:#E2665F; --bad-soft:rgba(226,102,95,0.14);
+    --accent:#84AEE2; --accent-ink:#0E1520; --accent-soft:rgba(132,174,226,0.18);
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#E5EAF2; --paper:#0F131A; --surface:#181D26; --line:#272F3B; --muted:#95A0B1;
+  --good:#3FBE7C; --good-soft:rgba(63,190,124,0.14); --bad:#E2665F; --bad-soft:rgba(226,102,95,0.14);
+  --accent:#84AEE2; --accent-ink:#0E1520; --accent-soft:rgba(132,174,226,0.18);
+}
+:root[data-theme="light"]{
+  --ink:#1A1E26; --paper:#F1F4F8; --surface:#FFFFFF; --line:#D4DAE3; --muted:#596372;
+  --good:#1F7A4C; --good-soft:#E2F1E9; --bad:#B23A34; --bad-soft:#FAE6E4;
+  --accent:#27467B; --accent-ink:#FFFFFF; --accent-soft:#E3EAF5;
+}
+*{box-sizing:border-box;}
+html,body{height:100%;}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;}
+.app{min-height:100dvh;display:flex;flex-direction:column;max-width:760px;margin:0 auto;padding:20px 20px 24px;}
+.screen{flex:1;display:flex;flex-direction:column;min-height:0;}
+.eyebrow{font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin:0 0 6px;}
+.menu-screen{gap:16px;justify-content:flex-start;padding-top:10px;}
+.menu-screen h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,36px);margin:0;text-wrap:balance;}
+.lede{color:var(--muted);line-height:1.55;max-width:64ch;margin:0;}
+.how{display:flex;flex-wrap:wrap;gap:8px 18px;margin:2px 0 4px;padding:0;list-style:none;}
+.how li{font-size:12.5px;color:var(--muted);display:flex;align-items:center;gap:6px;}
+.how li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none;}
+.menu-label{font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);margin:8px 0 -2px;}
+.lesson-list{display:flex;flex-direction:column;gap:10px;}
+.lesson-card{display:flex;align-items:center;gap:14px;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:15px 18px;font-family:var(--sans);cursor:pointer;width:100%;color:var(--ink);}
+.lesson-card:hover{border-color:var(--accent);}
+.lesson-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+.lesson-card.combined{background:var(--accent-soft);border-color:var(--accent);}
+.lesson-num{flex:none;width:38px;height:38px;border-radius:9px;background:var(--accent-soft);color:var(--accent);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:16px;font-weight:700;}
+.lesson-card.combined .lesson-num{background:var(--accent);color:var(--accent-ink);}
+.lesson-body{flex:1;min-width:0;}
+.lesson-title{font-family:var(--serif);font-size:16.5px;line-height:1.25;margin:0 0 2px;display:block;}
+.lesson-meta{font-size:12.5px;color:var(--muted);display:block;}
+.lesson-go{flex:none;color:var(--muted);font-size:20px;}
+.lesson-card:hover .lesson-go{color:var(--accent);}
+.quiz-screen{gap:14px;display:none;}
+.bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.chapter-tag{font-size:11px;text-transform:uppercase;letter-spacing:0.04em;background:var(--accent-soft);color:var(--accent);padding:5px 10px;border-radius:999px;white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis;}
+.progress-track{flex:1;min-width:60px;height:6px;background:var(--line);border-radius:999px;overflow:hidden;}
+.progress-fill{height:100%;background:var(--accent);width:0%;}
+.counter{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap;}
+.timer{font-family:var(--serif);font-size:15px;font-variant-numeric:tabular-nums;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:4px 10px;white-space:nowrap;}
+.card{flex:1;min-height:0;overflow-y:auto;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;display:flex;flex-direction:column;gap:15px;}
+.qblock{display:flex;flex-direction:column;gap:9px;}
+.question{font-family:var(--serif);font-size:clamp(17px,2.4vw,20px);line-height:1.45;margin:0;white-space:pre-line;}
+.stmt-head{font-size:12px;letter-spacing:0.05em;text-transform:uppercase;color:var(--muted);margin:0;padding-left:26px;}
+.stmt-list{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px;}
+.stmt-list li{display:flex;gap:10px;font-size:14.8px;line-height:1.5;}
+.stmt-list li .sn{flex:none;min-width:16px;color:var(--muted);font-variant-numeric:tabular-nums;}
+.stmt-list li .st{flex:1;min-width:0;}
+.stmt-list li .sr{color:var(--muted);}
+.ask{font-family:var(--serif);font-size:15.5px;line-height:1.45;margin:2px 0 0;font-style:italic;}
+.options{display:flex;flex-direction:column;gap:9px;}
+.option{display:flex;align-items:flex-start;gap:11px;text-align:left;background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:11px 13px;font-family:var(--sans);font-size:14.5px;color:var(--ink);cursor:pointer;line-height:1.4;width:100%;}
+.option:hover:not(:disabled){border-color:var(--accent);}
+.option:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+.option:disabled{cursor:default;}
+.opt-letter{flex:none;width:23px;height:23px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:var(--muted);}
+.option.correct{background:var(--good-soft);border-color:var(--good);}
+.option.correct .opt-letter{background:var(--good);border-color:var(--good);color:#fff;}
+.option.incorrect{background:var(--bad-soft);border-color:var(--bad);}
+.option.incorrect .opt-letter{background:var(--bad);border-color:var(--bad);color:#fff;}
+.feedback{font-size:13.5px;line-height:1.6;margin:0;padding:12px 14px;border-radius:8px;background:var(--paper);border-left:3px solid var(--accent);}
+.feedback .verdict{font-family:var(--serif);font-weight:700;font-style:italic;}
+.feedback.good{border-left-color:var(--good);}
+.feedback.good .verdict{color:var(--good);}
+.feedback.bad{border-left-color:var(--bad);}
+.feedback.bad .verdict{color:var(--bad);}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.hint{font-size:12px;color:var(--muted);text-align:center;flex:1;}
+.btn-primary{background:var(--accent);color:var(--accent-ink);border:none;border-radius:999px;padding:12px 24px;font-size:14.5px;font-weight:600;font-family:var(--sans);cursor:pointer;}
+.btn-primary:hover{filter:brightness(1.07);}
+.btn-primary:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+.btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:11px 20px;font-size:14px;font-family:var(--sans);cursor:pointer;}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
+.btn-ghost:disabled{opacity:0.35;cursor:not-allowed;}
+.btn-ghost:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+.result-screen{gap:18px;justify-content:center;display:none;}
+.result-screen h1{font-family:var(--serif);font-size:clamp(24px,4.5vw,32px);margin:0;}
+.result-sub{color:var(--muted);margin:-8px 0 0;font-size:14px;}
+.score-row{display:flex;gap:22px;flex-wrap:wrap;}
+.score-block{display:flex;flex-direction:column;gap:2px;}
+.score-num{font-family:var(--serif);font-size:30px;font-variant-numeric:tabular-nums;}
+.score-label{font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);}
+.breakdown-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px;max-height:280px;overflow-y:auto;}
+.breakdown{width:100%;border-collapse:collapse;font-size:13.5px;}
+.breakdown th,.breakdown td{padding:8px 12px;text-align:left;border-bottom:1px solid var(--line);}
+.breakdown th{color:var(--muted);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:0.05em;position:sticky;top:0;background:var(--surface);}
+.breakdown td.num{font-variant-numeric:tabular-nums;text-align:right;}
+.breakdown tr:last-child td{border-bottom:none;}
+.bd-bar{height:5px;border-radius:3px;background:var(--line);margin-top:4px;overflow:hidden;}
+.bd-bar span{display:block;height:100%;background:var(--accent);}
+.result-actions{display:flex;gap:10px;flex-wrap:wrap;}
+[hidden]{display:none !important;}
+.is-active{display:flex !important;}
+@media (prefers-reduced-motion: no-preference){
+  .option,.lesson-card{transition:background 0.15s ease,border-color 0.15s ease;}
+  .progress-fill{transition:width 0.25s ease;}
+}
+@media (max-width:480px){
+  .app{padding:16px 14px 18px;}
+  .nav{flex-wrap:wrap;}
+  .hint{order:3;width:100%;}
+  .card{padding:18px 16px;}
+}
+</style>
+
+<div class="app">
+  <section id="menu" class="screen menu-screen is-active">
+    <p class="eyebrow" id="courseEyebrow"></p>
+    <h1 id="courseTitle"></h1>
+    <p class="lede" id="courseLede"></p>
+    <ul class="how">
+      <li>Prelims-pattern: statements, pairs, assertion–reason</li>
+      <li>Options balanced — no length giveaways</li>
+      <li>Detailed explanation on every answer</li>
+      <li>Reshuffles each attempt · stopwatch</li>
+    </ul>
+    <p class="menu-label">Choose a lesson — or take the full syllabus</p>
+    <div class="lesson-list" id="lessonList"></div>
+  </section>
+
+  <section id="quiz" class="screen quiz-screen">
+    <header class="bar">
+      <span id="chapterTag" class="chapter-tag"></span>
+      <div class="progress-track"><div id="progressFill" class="progress-fill"></div></div>
+      <span id="counter" class="counter"></span>
+      <span id="timer" class="timer">00:00</span>
+    </header>
+    <main class="card">
+      <div id="qblock" class="qblock"></div>
+      <div id="options" class="options"></div>
+      <p id="feedback" class="feedback" hidden></p>
+    </main>
+    <footer class="nav">
+      <button id="prevBtn" class="btn-ghost" type="button">← Prev</button>
+      <span class="hint">Press 1–4 to answer · → next · ← prev</span>
+      <button id="nextBtn" class="btn-primary" type="button">Next →</button>
+    </footer>
+  </section>
+
+  <section id="result" class="screen result-screen">
+    <p class="eyebrow">Scorecard</p>
+    <h1 id="resultTitle">Quiz complete</h1>
+    <p class="result-sub" id="resultScope"></p>
+    <div class="score-row">
+      <div class="score-block"><span id="scoreText" class="score-num"></span><span class="score-label">Correct</span></div>
+      <div class="score-block"><span id="scorePct" class="score-num"></span><span class="score-label">Accuracy</span></div>
+      <div class="score-block"><span id="timeText" class="score-num"></span><span class="score-label">Time</span></div>
+    </div>
+    <div class="breakdown-wrap">
+      <table class="breakdown">
+        <thead><tr><th>Lesson</th><th>Score</th></tr></thead>
+        <tbody id="breakdownBody"></tbody>
+      </table>
+    </div>
+    <div class="result-actions">
+      <button id="reviewBtn" class="btn-ghost" type="button">Review answers</button>
+      <button id="restartBtn" class="btn-primary" type="button">Retake — new shuffle</button>
+      <button id="menuBtn" class="btn-ghost" type="button">↤ Lesson menu</button>
+    </div>
+  </section>
+</div>
+
+<script>
+/* ==========================================================================
+   DATA — generated from Polity/05_Quiz_MCQ/data/<class>.js by build.mjs
+   Question shape:
+     c    chapter tag (must match an entry in CHAPTERS)
+     q    stem
+     head optional column header for a "pairs" block, e.g. "Provision : Purpose"
+     L    optional array of numbered lines (statements, or "Left : Right" pairs)
+     ask  optional closing question line, e.g. "Which of the above are correct?"
+     o    four options
+     a    index of the correct option
+     e    explanation shown after answering
+   ========================================================================== */
+const COURSE = {
+  eyebrow: "NCERT History · Themes in World History",
+  title: "Class XI History Quiz — Themes in World History",
+  lede: "Prelims-pattern questions across the seven printed themes and all three restored ones — Mesopotamia, Rome, the Mongols, feudal Europe, the Renaissance, settler colonialism, and the modernisation of Japan, China and Korea, plus the Industrial Revolution, the Central Islamic Lands and the conquest of the Americas. Multi-statement, match-the-pairs and assertion-reason sets; the statements reshuffle on every attempt and the answer code is computed afresh, so nothing about the wording, length or position gives the answer away."
+};
+const CHAPTERS = [
+  "Th1 · Writing and City Life",
+  "Th2 · An Empire Across Three Continents",
+  "Th3 · Nomadic Empires",
+  "Th4 · The Three Orders",
+  "Th5 · Changing Cultural Traditions",
+  "Th6 · Displacing Indigenous Peoples",
+  "Th7 · Paths to Modernisation",
+  "Th8 · Supplement A — The Industrial Revolution",
+  "Th9 · Supplement B — The Central Islamic Lands",
+  "Th10 · Supplement C — Confrontation of Cultures"
+];
+
+const AR = [
+  "Both A and R are true and R is the correct explanation of A",
+  "Both A and R are true but R is not the correct explanation of A",
+  "A is true but R is false",
+  "A is false but R is true"
+];
+
+const QUESTIONS = [
+
+/* ============ Th1 · Writing and City Life ============ */
+{c:'Th1 · Writing and City Life',
+ q:'Consider the following statements about the location of the earliest Mesopotamian cities:',
+ S:[
+    ['Agriculture in the region began in the north-eastern uplands between 7000 and 6000 BCE.',true],
+    ['The first cities nevertheless developed in the southern desert.',true],
+    ['Southern Mesopotamia had sufficient rainfall to raise crops without irrigation.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The south was fertile not because of rain but because the Euphrates and Tigris carried silt down from the northern mountains, and their overflow channels functioned as ready-made irrigation canals. Farming began where the rain fell; cities began where the rivers deposited their load.'},
+{c:'Th1 · Writing and City Life',
+ q:'The word "Mesopotamia" is derived from:',
+ o:[
+    'Greek words for "middle" and "river", meaning the land between rivers',
+    'Latin words for "wedge" and "shape", after the script used there',
+    'Arabic words for "two waters", a name given after the conquest',
+    'Akkadian words for "black land", after the silt left by floods'],
+ a:0,
+ e:'From mesos and potamos, the land lying between the Euphrates and the Tigris, in what is now Iraq. The wedge-and-shape derivation belongs to cuneiform, which comes from the Latin cuneus and forma — a neat pair of etymologies that are easy to swap by mistake.'},
+{c:'Th1 · Writing and City Life',
+ q:'Consider the following statements about the earliest written tablets from Uruk:',
+ S:[
+    ['They were hymns composed for the city\'s temple deities.',false],
+    ['They were lists of goods brought into or given out from the temples.',true],
+    ['They date from about 3200 BCE.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'About 5,000 such tablets survive, recording oxen, fish and bread loaves. Writing in Mesopotamia begins as accountancy rather than as literature, which tells you what the institution that invented it was actually for.'},
+{c:'Th1 · Writing and City Life',
+ q:'Consider the following statements about Mesopotamian tablets and their signs:',
+ S:[
+    ['The tablets were hardened by baking them in kilns.',false],
+    ['Cuneiform signs stood for syllables rather than single letters.',true],
+    ['A fresh tablet was needed for each transaction.',true],
+    ['Cuneiform had gone out of use by about 600 BCE.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Cuneiform lasted into the first century CE. Tablets were dried in the sun, after which they were almost as indestructible as pottery — but once dry no sign could be added, so every transaction required its own tablet, and because the signs were syllabic there were hundreds of them, which is why literacy stayed rare.'},
+{c:'Th1 · Writing and City Life',
+ q:'Assertion (A): Compulsory labour rather than an agricultural tax was the levy that built Mesopotamia\'s temples.\nReason (R): Hundreds of ration lists recording quantities issued against people\'s names have been recovered.',
+ o:AR,a:0,
+ e:'Workers on temple construction were paid in rations, and the lists are the evidence of the arrangement. One large temple is estimated to have taken 1,500 men working ten hours a day for five years.'},
+{c:'Th1 · Writing and City Life',
+ q:'Consider the following statements comparing Ur with the Harappan cities:',
+ S:[
+    ['Ur had a network of covered street drains.',false],
+    ['Ur\'s narrow winding streets and irregular plots indicate an absence of town planning.',true],
+    ['Household drains at Ur emptied into sumps in the inner courtyards.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Roofs sloped inward so that rainwater ran into the courtyard and away through clay pipes, because there was nothing in the street to carry it. Refuse was swept into the unpaved streets, and thresholds had to be raised as the street level rose — the older and larger urban tradition was in this respect the worse planned one.'},
+{c:'Th1 · Writing and City Life',
+ q:'Which of the following best describes the role of the Mesopotamian temple?',
+ o:[
+    'A meeting hall where the city assembly settled disputes and debts',
+    'A shrine used solely for worship and the housing of divine images',
+    'A royal treasury administered directly by officials of the king',
+    'A landowner, employer, manufacturer and keeper of written records'],
+ a:1,
+ e:'The temple was the theoretical owner of fields, fisheries and herds, carried out oil pressing, grain grinding, spinning and weaving, employed merchants and kept the records. NCERT calls it the main urban institution, which is why the earliest writing comes out of it.'},
+{c:'Th1 · Writing and City Life',
+ q:'Consider the following statements about seals:',
+ S:[
+    ['Mesopotamian seals were cylindrical and were rolled over wet clay.',true],
+    ['Harappan seals were stamped rather than rolled.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The Mesopotamian cylinder was pierced through the centre and fitted with a stick, so rolling it produced a continuous picture. The distinction is a favourite one to reverse in an examination.'},
+{c:'Th1 · Writing and City Life',
+ q:'The kingdom of Mari was:',
+ o:[
+    'A pastoral confederacy that levied no dues on river traffic',
+    'A colony founded by the Assyrian kings of the far north',
+    'Exceptionally prosperous although it was not militarily strong',
+    'The dominant military power of the southern alluvial plain'],
+ a:2,
+ e:'Mari lay far upstream on the Euphrates in a zone used mainly for pasturing sheep and goats, and grew rich by inspecting cargo passing downstream and levying about a tenth of its value. Its Amorite kings raised a temple to Dagan, god of the steppe, beside the Mesopotamian gods.'},
+{c:'Th1 · Writing and City Life',
+ q:'Consider the following statements about Mesopotamian learning and its transmission:',
+ S:[
+    ['Sumerian ceased to be spoken after about 1800 BCE but continued to be taught in schools.',true],
+    ['A value for the square root of 2 accurate to about six decimal places was in use by about 1800 BCE.',true],
+    ['NCERT credits Egypt with the division of the year into twelve months and the hour into sixty minutes.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The division of the year, the month, the day and the hour is credited to Mesopotamia and reached medieval Europe through Alexander\'s successors, the Roman world and the world of Islam. Sumerian survived in vocabulary texts, sign lists and bilingual tablets, so a tablet of 2000 BCE was still intelligible in 650 BCE.'},
+{c:'Th1 · Writing and City Life',
+ q:'Assertion (A): Uruk was among the largest cities of the ancient world.\nReason (R): Its inhabitants were the first people anywhere to use a stamped seal.',
+ o:AR,a:2,
+ e:'Uruk covered 250 hectares around 3000 BCE — twice the size of Mohenjo-daro — and reached 400 hectares by about 2800 BCE. But Mesopotamian seals were cylindrical and rolled; it was the Indian seals that were stamped.'},
+{c:'Th1 · Writing and City Life',
+ q:'Nabonidus is remembered in the chapter as:',
+ o:[
+    'The king who freed Babylonia from Assyrian rule in the year 625 BCE',
+    'The Achaemenid ruler of Iran who captured Babylon in the year 539 BCE',
+    'The Assyrian king whose library at Nineveh held some 30,000 tablets',
+    'The last ruler of independent Babylon, who repaired a statue of Sargon'],
+ a:3,
+ e:'Nabopolassar freed Babylonia in 625 BCE, the Achaemenids of Iran conquered Babylon in 539 BCE, and Assurbanipal built the Nineveh library. Nabonidus knew of Sargon only as a great king of remote times, which is itself evidence of how deep the Mesopotamian sense of the past ran.'},
+{c:'Th1 · Writing and City Life',
+ q:'Consider the following statements about Gilgamesh as the epic presents him:',
+ S:[
+    ['He obtained the secret of immortality on his travels.',false],
+    ['He consoled himself by walking along the wall of Uruk.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'He failed and returned home, taking comfort in the fired-brick foundations of the city wall he had laid. The epic was written on twelve tablets, and its ending is a statement that the enduring achievement is the city itself.'},
+
+/* ============ Th2 · An Empire Across Three Continents ============ */
+{c:'Th2 · An Empire Across Three Continents',
+ q:'Consider the following statements about the Roman army:',
+ S:[
+    ['It was a paid professional army with a minimum term of twenty-five years.',true],
+    ['The Iranian army of the same period was raised by conscription.',true],
+    ['It numbered about 600,000 by the fourth century.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'NCERT calls the existence of a paid army a distinctive feature of the Roman empire, and describes the army as the largest single organised body in it. The contrast with conscripted Iran matters, because a professional army has to be paid whether or not there is a war.'},
+{c:'Th2 · An Empire Across Three Continents',
+ q:'Octavian and Augustus were:',
+ o:[
+    'The same man, the adopted son and heir of Julius Caesar',
+    'Two brothers who governed the eastern and western halves',
+    'Rival generals whose contest ended the Roman Republic',
+    'Successive emperors of the first and the second centuries'],
+ a:0,
+ e:'He overthrew the Republic in 27 BCE and later changed his name. The Republic itself had lasted from 509 BCE to 27 BCE and, in NCERT\'s words, represented the government of the nobility exercised through the Senate.'},
+{c:'Th2 · An Empire Across Three Continents',
+ q:'Consider the following statements about how the Roman empire was governed:',
+ S:[
+    ['There was a large central bureaucracy of the modern kind.',false],
+    ['The answer to how so vast an empire was administered lies in its urbanisation.',true],
+    ['Local upper classes actively collaborated in the collection of taxes.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'A Roman city was an urban centre with its own magistrates, its own council and a territory of villages under its jurisdiction, and it taxed that territory on the empire\'s behalf. The empire ran on delegation to city elites rather than on officials sent from Rome.'},
+{c:'Th2 · An Empire Across Three Continents',
+ q:'Assertion (A): The emperor Gallienus excluded senators from military command.\nReason (R): He wished to prevent control of the empire from falling into their hands.',
+ o:AR,a:0,
+ e:'The measure runs opposite to the assumption that emperors steadily enlarged senatorial privilege. By the third century senators of provincial origin were already a majority of the body, and in 212 CE all free inhabitants of the empire had been made Roman citizens.'},
+{c:'Th2 · An Empire Across Three Continents',
+ q:'Consider the following statements about women in Roman society:',
+ S:[
+    ['A wife passed legally into her husband\'s authority on marriage.',false],
+    ['A married woman remained a primary heir of her father.',true],
+    ['In law the married couple was not one financial entity but two.',true],
+    ['Divorce required no more than a notice of intent by either party.',true]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Roman women held property in ways that surprise modern readers. NCERT immediately supplies the counterweight, however — a systematic age gap at marriage, arranged marriages, Augustine\'s account of his mother being beaten, and a father\'s legal power over the life of an unwanted infant.'},
+{c:'Th2 · An Empire Across Three Continents',
+ q:'NCERT argues that free labour was extensively used on public works at Rome because:',
+ o:[
+    'The guilds of the city reserved such work for citizen craftsmen',
+    'An extensive use of slave labour would have been too expensive',
+    'The supply of slaves had been exhausted by the second century',
+    'Roman law forbade the employment of slaves on state contracts'],
+ a:1,
+ e:'Slaves had to be fed and maintained through the whole year, whereas hired workers were paid only when needed. It is a cost argument rather than a moral one, and it is the reason NCERT rejects the idea that most imperial labour was slave labour.'},
+{c:'Th2 · An Empire Across Three Continents',
+ q:'Consider the following statements about slavery in the Roman world:',
+ S:[
+    ['Christianity, once it became the state religion, seriously challenged the institution.',false],
+    ['Slaves were included in the family as the Romans understood it.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'NCERT is explicit that not even Christianity, when it emerged and triumphed in the fourth century, mounted a serious challenge to slavery. The inclusion of slaves in the familia is a point about Roman legal categories, not about their treatment.'},
+{c:'Th2 · An Empire Across Three Continents',
+ q:'Pliny the Elder is quoted in the chapter as:',
+ o:[
+    'Praising the chaining of agricultural slaves as an aid to discipline',
+    'Proposing that estate managers be recruited from among freedmen',
+    'Condemning slave gangs as the worst method of organising production',
+    'Recommending squads of ten men and double stocks of iron tools'],
+ a:2,
+ e:'His objection was that gang slaves were chained together by their feet. The advice about squads of ten and duplicate tools is Columella\'s, and the pairing of the two writers is an easy one to cross.'},
+{c:'Th2 · An Empire Across Three Continents',
+ q:'Consider the following statements about coinage and mining:',
+ S:[
+    ['The denarius was a silver coin of about four and a half grammes.',true],
+    ['Constantine founded a new monetary system based on gold.',true],
+    ['Rome turned to gold because the Spanish silver mines had been exhausted.',true],
+    ['Spanish mining output was not matched again until the nineteenth century.',true]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'The solidus of four and a half grammes of pure gold would, in NCERT\'s phrase, outlast the Roman empire itself. Hydraulic mining on a gigantic industrial scale is what made the earlier silver coinage possible, and its exhaustion is what ended it.'},
+{c:'Th2 · An Empire Across Three Continents',
+ q:'Assertion (A): Amphorae are unusually informative about the Roman economy.\nReason (R): Matching the clay of a vessel to the clay pits it came from establishes where it was made.',
+ o:AR,a:0,
+ e:'Distribution maps built this way show Spanish olive oil capturing markets from Italy and peaking between 140 and 160, then North African oil dominating in the third and fourth centuries, then eastern producers after 425. Monte Testaccio alone holds the remnants of over fifty million vessels.'},
+{c:'Th2 · An Empire Across Three Continents',
+ q:'Consider the following statements about Diocletian:',
+ S:[
+    ['He abandoned territories of little strategic or economic value.',true],
+    ['He separated civilian from military functions in provincial government.',true],
+    ['He founded Constantinople on the site of the older city of Byzantium.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Constantinople was Constantine\'s foundation of 324. Diocletian cut back rather than expanded, fortified the frontiers, and reorganised the provinces into roughly a hundred units in 297, giving military command to officers called duces.'},
+{c:'Th2 · An Empire Across Three Continents',
+ q:'Which of the following does NCERT record about the later Roman empire?',
+ o:[
+    'Population fell steadily across every province of the empire from the fourth century onwards',
+    'Justinian\'s reconquest of Italy restored the prosperity of the whole Italian peninsula',
+    'The Arab conquests needed roughly a full century to reach the Roman and Iranian heartlands',
+    'Parts of the Near Eastern countryside were more densely settled than in the twentieth century'],
+ a:3,
+ e:'Eastern population expanded until the sixth century. Justinian\'s reconquest in fact left Italy devastated and paved the way for the Lombard invasion, and large parts of both empires had fallen by 642, barely ten years after the Prophet\'s death.'},
+{c:'Th2 · An Empire Across Three Continents',
+ q:'Consider the following statements about the late Roman aristocracy:',
+ S:[
+    ['It was enormously wealthy.',true],
+    ['It was in many ways less powerful than the military elites.',true],
+    ['The military elites were drawn largely from aristocratic families.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The military elites came almost entirely from non-aristocratic backgrounds. Wealth and power had come apart, which is one reason the late empire looks so different from the senatorial world of the Republic.'},
+
+/* ============ Th3 · Nomadic Empires ============ */
+{c:'Th3 · Nomadic Empires',
+ q:'Consider the following statements about the sources for Mongol history:',
+ S:[
+    ['The steppe dwellers themselves usually produced no literature.',true],
+    ['Much of what is known comes from city-based writers of the settled world.',true],
+    ['Some of the harshest accounts of Mongol massacres were written under Mongol patronage.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Mongol success attracted Buddhist, Confucian, Christian, Turkish and Muslim writers, some of whom produced eulogies. A monstrous ancestor made a present ruler look moderate by comparison, which is why the question of who benefits from a casualty figure has to be asked of every one of them.'},
+{c:'Th3 · Nomadic Empires',
+ q:'Juwaini reported that 1,300,000 people died at Merv because:',
+ o:[
+    'It took thirteen days to count the dead at 100,000 corpses a day',
+    'The city\'s own tax registers listed that many inhabitants before the siege',
+    'A survivor of the siege supplied him with a written eyewitness list',
+    'The Mongol commanders kept a tally of the dead for the Great Khan'],
+ a:0,
+ e:'The arithmetic is the whole of the evidence. Against it, an eyewitness reported some 400 defenders at the citadel of Bukhara where an Il-Khanid chronicle claimed 30,000 killed — which is why the numbers in these chronicles are treated as rhetoric rather than as counts.'},
+{c:'Th3 · Nomadic Empires',
+ q:'Consider the following statements about how Genghis Khan organised his army:',
+ S:[
+    ['He preserved the old tribal groupings as the basis of military units.',false],
+    ['He distributed men into new decimal units of tens, hundreds and thousands.',true],
+    ['Moving between units without permission was harshly punished.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'He systematically erased the old tribal identities, and the unit of ten thousand was the tuman. Breaking the tribes and reassembling their members by number is what made the confederation outlast its founder, which Attila\'s had not.'},
+{c:'Th3 · Nomadic Empires',
+ q:'Assertion (A): The qubcur was a levy of a tenth of the herd taken from the nomads.\nReason (R): NCERT records that the nomads paid it willingly for the benefits it brought them.',
+ o:AR,a:0,
+ e:'The qubcur funded the yam, the courier system that carried messages and merchants across the empire. The paiza or gerege was the pass that let a traveller use it, and the baj was the tax traders paid.'},
+{c:'Th3 · Nomadic Empires',
+ q:'Consider the following statements about the term ulus:',
+ S:[
+    ['It originally meant a fixed and bounded territory.',false],
+    ['Jochi\'s ulus was described as extending as far west as his horses could roam.',true],
+    ['It acquired the sense of a territorial dominion by the mid-thirteenth century.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The shift in the word tracks the shift in the polity, from a confederation of moving people to a set of governed territories. Toluy, the youngest son, received Mongolia itself, while Ogodei was designated successor as Great Khan with his capital at Karakorum.'},
+{c:'Th3 · Nomadic Empires',
+ q:'Consider the following statements about trade under the Mongols:',
+ S:[
+    ['Mongol conquest brought the Silk Route trade to an end.',false],
+    ['The routes now continued north to Karakorum instead of ending in China.',true],
+    ['The loss of maintenance of the qanats caused lasting ecological damage in Khurasan.',true],
+    ['Mongol campaigning avoided the winter months.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Commerce and travel along the Silk Route in fact reached their peak under the Mongols, and their armies campaigned in the depths of winter, treating frozen rivers as highways to enemy cities. The underground canals of Khurasan, left unmaintained, let the desert creep in — devastation from which NCERT says parts of the region never recovered.'},
+{c:'Th3 · Nomadic Empires',
+ q:'Ghazan Khan\'s argument for protecting the Persian peasantry was that:',
+ o:[
+    'The Mongol nobility had sworn to respect the customs of settled peoples',
+    'Taking their oxen and seed would leave nothing to plunder in future years',
+    'The peasantry had a right to the minimum required for their survival',
+    'Islamic law obliged a ruler to shield cultivators from military exactions'],
+ a:1,
+ e:'He said plainly that he was not on the side of the peasantry and invited his commanders to rob them together — before asking what they would do in the future if the crops were trampled. It is a purely practical case, probably drafted by his Persian wazir Rashiduddin, and it reversed a position that in the 1230s had favoured massacring the peasantry outright and turning the fields to pasture.'},
+{c:'Th3 · Nomadic Empires',
+ q:'Consider the following statements about the yasa:',
+ S:[
+    ['The term derives from yasaq, meaning law, decree or order.',true],
+    ['It originally concerned administrative regulations such as the hunt and the postal system.',true],
+    ['It was promulgated as a complete legal code at the assembly of 1206.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Only by the mid-thirteenth century did the word come to mean the legal code of Genghis Khan, and NCERT calls it in all probability a compilation of Mongol customary tradition. Since the Mongols were a numerical minority in their own empire, a claimed ancestral code was a useful thing to possess.'},
+{c:'Th3 · Nomadic Empires',
+ q:'Timur was unable to declare himself khan because:',
+ o:[
+    'The assembly of Mongol princes had already elected a rival candidate',
+    'His own Barlas tribe held the title to be reserved for Chaghatai\'s heirs',
+    'He was not of Genghis Khanid descent and ruled as a royal son-in-law',
+    'The Abbasid caliph refused to confer that title on a Turkish commander'],
+ a:2,
+ e:'He took the style of guregen, son-in-law, after marrying a princess of the lineage. Babur, by contrast, descended from both Timur and Genghis Khan — which is why NCERT can say the Mongols supplied later regimes with an ideological model.'},
+{c:'Th3 · Nomadic Empires',
+ q:'Consider the following statements about the halt of the Mongol advance:',
+ S:[
+    ['Vienna, western Europe and Egypt were within the grasp of Mongol forces.',true],
+    ['The advance stopped mainly because of the strength of European resistance.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The cause was internal — succession politics, and the diversion of Toluyid forces to the China campaign, which left only a small and understaffed force facing Egypt. The empire was checked by its own dynastic arithmetic rather than by its enemies.'},
+{c:'Th3 · Nomadic Empires',
+ q:'The word "barbarian" originally meant:',
+ o:[
+    'A member of a tribe living beyond the Roman frontier defences',
+    'A warrior who fought on horseback rather than on foot in ranks',
+    'A herdsman of the steppe who owned no fixed dwelling or field',
+    'A person who was not Greek, whose speech sounded like "bar-bar"'],
+ a:3,
+ e:'The negative character profile was added later and passed to the Romans, who applied the term to Germanic tribes, Gauls and Huns. Starting from the word is a good way into the chapter\'s real subject, which is how one perspective can erase all others.'},
+{c:'Th3 · Nomadic Empires',
+ q:'Consider the following statements about the four lineages descended from Genghis Khan:',
+ S:[
+    ['Ogodei\'s line was defeated and absorbed into the Toluyid.',true],
+    ['The Toluyids ruled both China and Iran.',true],
+    ['The Jochids ruled Transoxiana and Turkistan.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The Jochids held the Russian steppes as the Golden Horde; Transoxiana and Turkistan went to the Chaghataids. The Toluyid lines were the Yuan in China and the Il-Khanids in Iran, the latter founded by Hulegu after the fall of Baghdad in 1258 ended the Abbasid caliphate.'},
+{c:'Th3 · Nomadic Empires',
+ q:'Assertion (A): The Mongol khans never let their personal beliefs dictate public policy.\nReason (R): The khans were at various times shamanist, Buddhist, Christian and Muslim.',
+ o:AR,a:1,
+ e:'Both statements are accurate, but the religious variety of the ruling house is a description of the same fact rather than its cause. The regime was multi-ethnic, multilingual and multi-religious, and NCERT presents that as the model later regimes such as the Mughals inherited.'},
+
+/* ============ Th4 · The Three Orders ============ */
+{c:'Th4 · The Three Orders',
+ q:'The three orders of medieval European society were:',
+ o:[
+    'The clergy, the nobility and the peasantry',
+    'The king, the landed nobles and the peasantry',
+    'The clergy, the merchants and the free peasants',
+    'The nobility, the knights and the unfree serfs'],
+ a:0,
+ e:'Some pray, others fight, still others work. The king is not one of the three orders, and the scheme was written by the clergy — which is why the priests placed themselves in the first order and the nobles only in the second.'},
+{c:'Th4 · The Three Orders',
+ q:'Consider the following statements about the tithe and the taille:',
+ S:[
+    ['The tithe was the Church\'s tenth share of the annual produce.',true],
+    ['The taille was a direct tax levied by the king.',true],
+    ['The clergy and the nobility were exempt from the taille.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'That exemption is the direct ancestor of the grievance of 1789, and both words appear unexplained in the Class IX chapter on the French Revolution. A tax that falls only on the order which works is a political arrangement, not an accounting one.'},
+{c:'Th4 · The Three Orders',
+ q:'Consider the following statements about the manorial estate:',
+ S:[
+    ['It was entirely self-sufficient in the goods its people needed.',false],
+    ['Salt, millstones and metalware had to be obtained from outside.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'NCERT denies the self-sufficiency of the manor explicitly, and adds luxury goods to the list of imports. The estate could feed itself, but it could not equip itself.'},
+{c:'Th4 · The Three Orders',
+ q:'Assertion (A): Knights ceased to be central to European warfare.\nReason (R): The Black Death of 1347 to 1350 killed a large proportion of the knightly class.',
+ o:AR,a:2,
+ e:'Knights declined because rulers dispensed with feudal levies in favour of professionally trained infantry with guns and siege artillery. In NCERT\'s phrase, the resistance of the aristocracies crumbled in the face of the firepower of the kings.'},
+{c:'Th4 · The Three Orders',
+ q:'Consider the following statements about monastic life:',
+ S:[
+    ['St Benedict established his monastery in Italy in 529.',true],
+    ['The abbey of Cluny was founded in Burgundy in 910.',true],
+    ['Unlike the priesthood, monastic life was open to both men and women.',true],
+    ['Friars from the thirteenth century chose not to be based in a monastery.',true]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Friars moved from place to place preaching and living on charity, which is the distinction from monks. Serfs, the physically challenged and women were barred from the priesthood, and priests could not marry — so the openness of the monastic vocation stands out.'},
+{c:'Th4 · The Three Orders',
+ q:'The three-field system differed from the two-field system in that:',
+ o:[
+    'Peasants ploughed twice a year instead of only once',
+    'Only a third of the land lay fallow instead of a half',
+    'Cultivators sowed the same crop on every strip each year',
+    'The lord rather than the village decided the rotation'],
+ a:1,
+ e:'Autumn wheat or rye, then spring peas, beans and lentils with oats and barley, then one field resting. Food availability doubled, and the legumes are the reason — they restored the soil while feeding people.'},
+{c:'Th4 · The Three Orders',
+ q:'Consider the following statements about the fourteenth-century crisis in Europe:',
+ S:[
+    ['A shortage of silver from the mines of Austria and Serbia led to debased currency.',true],
+    ['The Black Death killed about a fifth of the whole of Europe.',true],
+    ['Wages fell sharply in the decades after the plague.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Wages rose — demand for agricultural labour in England increased by as much as 250 per cent and survivors could ask double their earlier earnings, while agricultural prices dropped. Some places lost as much as 40 per cent of their people, and as trade centres the cities were hardest hit.'},
+{c:'Th4 · The Three Orders',
+ q:'Consider the following statements about the peasant revolts of the fourteenth century:',
+ S:[
+    ['They were led mainly by the poorest and least educated peasants.',false],
+    ['They were most violent in regions where economic expansion had brought prosperity.',true],
+    ['Although crushed, they prevented the restoration of serfdom.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The rebels were particularly the better-educated and more prosperous peasants, defending gains rather than demanding new ones. NCERT\'s explanation for the outcome is that the money economy was by then too far advanced to be reversed.'},
+{c:'Th4 · The Three Orders',
+ q:'The peasant revolts of 1323, 1358 and 1381 occurred respectively in:',
+ o:[
+    'England, Flanders and France',
+    'France, Flanders and England',
+    'Flanders, France and England',
+    'France, England and Flanders'],
+ a:2,
+ e:'The sequence is easy to scramble and is therefore worth fixing precisely. All three were crushed, and all three nevertheless made a return to unfree labour impossible.'},
+{c:'Th4 · The Three Orders',
+ q:'Consider the following statements about the Estates General of France:',
+ S:[
+    ['It met in 1614 under the child-king Louis XIII.',true],
+    ['It then did not meet again for nearly two centuries.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'NCERT gives the reason without hedging: the kings did not want to share power. The contrast is with the English Parliament, which grew out of the Anglo-Saxon Great Council that had existed before the Norman Conquest and that the king had to consult before imposing any tax.'},
+{c:'Th4 · The Three Orders',
+ q:'Royal absolutism has been described as a modified form of feudalism because:',
+ o:[
+    'The monarchy continued to grant fiefs in return for military service',
+    'Kings relied on feudal levies rather than on standing professional armies',
+    'The three orders were preserved unchanged in the new royal states',
+    'The nobility shifted from opposition to loyalty and took administrative posts'],
+ a:3,
+ e:'The nobles made a tactical shift and were absorbed into permanent service rather than destroyed. Absolutism did not abolish the second order; it employed it.'},
+{c:'Th4 · The Three Orders',
+ q:'Consider the following statements about serfs:',
+ S:[
+    ['The plots they cultivated belonged to the lord.',true],
+    ['They could grind their grain at any mill they chose.',false],
+    ['They could not leave the estate without permission.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Only the lord\'s mill, his oven and his wine-presses could be used — a monopoly that turned every loaf into a fee. Marriage required the lord\'s decision or the payment of a fee, and serfs received no wages at all.'},
+{c:'Th4 · The Three Orders',
+ q:'A serf who escaped to a town became free after:',
+ o:[
+    'One year and one day without being discovered by his lord',
+    'Seven years of continuous residence within the town walls',
+    'Payment of a fee fixed by the guild he had joined',
+    'A formal grant of citizenship voted by the town council'],
+ a:0,
+ e:'Hence the saying that town air makes free. The larger towns had populations of about thirty thousand, and it was in them that guilds controlled the quality, price and sale of each craft\'s product.'},
+
+/* ============ Th5 · Changing Cultural Traditions ============ */
+{c:'Th5 · Changing Cultural Traditions',
+ q:'Consider the following statements about the term "Renaissance":',
+ S:[
+    ['People of the period used the term to describe their own age.',false],
+    ['Jacob Burckhardt gave it currency in a book published in 1860.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The label was applied by historians from the nineteenth century. Burckhardt of Basle had studied under Leopold von Ranke, who held that history meant states and politics drawn from government files, and broke with him by insisting that it was as much about culture.'},
+{c:'Th5 · Changing Cultural Traditions',
+ q:'The humanist subjects were:',
+ o:[
+    'Poetry, painting, sculpture, architecture and music',
+    'Grammar, rhetoric, poetry, history and moral philosophy',
+    'Grammar, logic, rhetoric, arithmetic and astronomy',
+    'Theology, canon law, medicine, rhetoric and poetry'],
+ a:1,
+ e:'NCERT stresses that these were not drawn from or connected with religion, while university curricula continued to be dominated by law, medicine and theology. The word humanitas had been used centuries earlier by Cicero to mean culture.'},
+{c:'Th5 · Changing Cultural Traditions',
+ q:'Consider the following statements about how Europe recovered Greek learning:',
+ S:[
+    ['Europeans were indebted to Arab translators rather than to their own scholars.',true],
+    ['Plato and Aristotle were known in Arabic as Aflatun and Aristu.',true],
+    ['The Arabic definite article survives in the title of Ptolemy\'s Almagest.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Ibn Sina, al-Razi and Ibn Rushd reached Europe as Avicenna, Rhazes and Averroes, and NCERT observes drily that the European spelling made later generations think they were Europeans. Ibn Rushd\'s method of reconciling philosophy and faith was itself adopted by Christian thinkers.'},
+{c:'Th5 · Changing Cultural Traditions',
+ q:'The first person to dissect the human body, described by NCERT as beginning modern physiology, was:',
+ o:[
+    'Paracelsus, the Swiss physician and alchemical writer',
+    'William Harvey, who described the circulation of the blood',
+    'Andreas Vesalius, a Belgian professor of medicine at Padua',
+    'Leonardo da Vinci, who studied anatomy for his paintings'],
+ a:2,
+ e:'Padua and Bologna had been centres of legal study since the eleventh century because commerce needed lawyers and notaries, and the same universities became centres of medical study. Vesalius lived from 1514 to 1564.'},
+{c:'Th5 · Changing Cultural Traditions',
+ q:'Consider the following statements about women in Renaissance Italy:',
+ S:[
+    ['The new ideal of individuality and citizenship included women.',false],
+    ['Schools were open to boys only.',true],
+    ['Dowries were invested in businesses in which women had no say.',true],
+    ['Cassandra Fedele advised women against taking up the study of letters.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Fedele said that even though the study of letters promises and offers no reward for women and no dignity, every woman ought to seek and embrace these studies. Daughters without dowries went to convents, and Isabella d\'Este ruled Mantua in her husband\'s absence — the exceptions that mark the rule.'},
+{c:'Th5 · Changing Cultural Traditions',
+ q:'Consider the following statements about printing in Europe:',
+ S:[
+    ['Europe was indebted to China for the technology of printing.',true],
+    ['Contact with that technology came through the Mongol rulers.',true],
+    ['Gutenberg printed about fifteen hundred copies of the Bible.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'He printed 150 copies in 1455, at a time when a monk would have taken as long to write one. NCERT adds firearms, the compass and the abacus to the list of things Europe owed to the same contact.'},
+{c:'Th5 · Changing Cultural Traditions',
+ q:'Consider the following statements about the Reformation:',
+ S:[
+    ['Martin Luther supported the German peasants\' rebellion of 1525.',false],
+    ['Jean Calvin\'s work in Switzerland preceded Luther\'s campaign.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Luther called on the German rulers to suppress the peasants, which they did. Luther launched his campaign in 1517; his ideas were spread in Switzerland first by Ulrich Zwingli and later by Calvin, and the radicals who argued that God had made all people equal were the Anabaptists.'},
+{c:'Th5 · Changing Cultural Traditions',
+ q:'Assertion (A): Copernicus did not want De Revolutionibus printed in his lifetime.\nReason (R): He was a devout Christian who feared the reaction of the clergy.',
+ o:AR,a:0,
+ e:'He handed the manuscript to Joachim Rheticus on his deathbed. Kepler then showed that the planets move in ellipses rather than circles, Galileo confirmed the dynamic conception of the world, and the revolution climaxed with Newton\'s theory of gravitation.'},
+{c:'Th5 · Changing Cultural Traditions',
+ q:'The Society of Jesus was founded:',
+ o:[
+    'By Pope Urban II at Clermont to preach the recovery of Jerusalem',
+    'By Erasmus at Rotterdam to reform the teaching of the clergy',
+    'By Jean Calvin at Geneva to train preachers for the new faith',
+    'By Ignatius Loyola in Spain in 1540 to combat Protestantism'],
+ a:3,
+ e:'Its members were charged with serving the poor and widening their knowledge of other cultures, which is how they reached Akbar\'s court and the coasts of Brazil. Indulgences, the documents that appeared to free a buyer from the burden of sin, were the abuse Luther had attacked.'},
+{c:'Th5 · Changing Cultural Traditions',
+ q:'NCERT\'s own comment on the label "Dark Ages" is that:',
+ o:[
+    'It seems unfair to describe any period of history in those terms',
+    'It correctly describes the centuries before the eleventh in Europe',
+    'It applies to the countryside though not to the Italian towns',
+    'It was coined by Burckhardt and has since been abandoned'],
+ a:0,
+ e:'The chapter points to comparable flowerings in ninth-century France and in the twelfth and thirteenth centuries. Periodisation that flatters one age at the expense of another is a habit the chapter is written to unsettle.'},
+{c:'Th5 · Changing Cultural Traditions',
+ q:'Consider the following statements about Venice and Florence:',
+ S:[
+    ['Both were republics rather than principalities.',true],
+    ['Venice\'s governing council deliberately excluded the common people.',true],
+    ['Entry to that council was determined by wealth rather than by lineage.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Contarini recorded in 1534 that entry was for gentlemen past the age of twenty-five, admitted on nobility of lineage rather than wealth. Many other Italian cities were court-cities ruled by princes, which is what makes the two republics distinctive.'},
+
+/* ============ Th6 · Displacing Indigenous Peoples ============ */
+{c:'Th6 · Displacing Indigenous Peoples',
+ q:'Consider the following statements about the variants of imperialism NCERT identifies:',
+ S:[
+    ['Settler colonies such as Australia and North America form one variant.',true],
+    ['Direct imperial control, as in British India, forms a second.',true],
+    ['The semi-colony, as in China, forms a third.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'In the semi-colony the powers meddled without directly taking over state power, which is why China appears in the chapter on modernisation rather than here. The three-way distinction is worth carrying into any answer on colonialism.'},
+{c:'Th6 · Displacing Indigenous Peoples',
+ q:'Civic nationalism, as the chapter defines it:',
+ o:[
+    'Applies only to states formed after the First World War',
+    'Defines nationhood by citizenship regardless of language or ethnicity',
+    'Defines the nation as a community sharing descent and language',
+    'Rejects popular sovereignty in favour of dynastic legitimacy'],
+ a:1,
+ e:'Ethnic nationalism defines the people ethnically, and NCERT names Germany as the prominent exception among western countries, tracing that strand to the reaction against the French occupation of the German states in 1806. Both doctrines are modern, and both rest on popular sovereignty.'},
+{c:'Th6 · Displacing Indigenous Peoples',
+ q:'Consider the following statements about the native peoples of North America:',
+ S:[
+    ['The first inhabitants crossed a land-bridge from Asia over thirty thousand years ago.',true],
+    ['They did not develop kingdoms and empires as in Central and South America.',true],
+    ['Goods among them were obtained as gifts rather than by purchase.',true],
+    ['They rode horses long before Europeans reached the continent.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Horses were bought from Spanish settlers and riding began only in the seventeenth century. NCERT links the absence of empires to the absence of an agricultural surplus, and wampum belts of coloured shells were exchanged after a treaty had been agreed.'},
+{c:'Th6 · Displacing Indigenous Peoples',
+ q:'Consider the following statements about European writing on native Americans:',
+ S:[
+    ['Rousseau, who admired them as noble savages, had never met any.',true],
+    ['Washington Irving, who had met them, described them quite differently.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Wordsworth, who had also never met them, thought them limited in imagination. The pattern is worth noticing: the more admiring the portrait, the less likely its author was to have encountered the people described.'},
+{c:'Th6 · Displacing Indigenous Peoples',
+ q:'In the Cherokee case decided in 1832:',
+ o:[
+    'The Cherokees agreed to exchange their lands for territory further west',
+    'Congress overturned an earlier ruling that had protected Cherokee land',
+    'The Chief Justice ruled in their favour but the President ignored the judgment',
+    'The Supreme Court upheld the state of Georgia against the Cherokee nation'],
+ a:2,
+ e:'John Marshall held the Cherokees to be a distinct community in which the laws of Georgia had no force; Andrew Jackson refused to honour the ruling and sent the army. Of the fifteen thousand forced to move on the Trail of Tears, over a quarter died.'},
+{c:'Th6 · Displacing Indigenous Peoples',
+ q:'Consider the following statements about reservations in the United States:',
+ S:[
+    ['Reservations were established on the peoples\' own ancestral lands.',false],
+    ['Land granted in perpetuity was taken again when minerals were found on it.',true],
+    ['The Indian Reorganisation Act of 1934 allowed reservation residents to buy land and take loans.',true],
+    ['Native representatives welcomed the plan of the 1950s to end all special provisions.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'In the Declaration of Indian Rights of 1954 they accepted citizenship only on condition that the reservations were not taken away and their traditions were not interfered with. The 1934 Act had followed Lewis Meriam\'s survey, The Problem of Indian Administration, of 1928.'},
+{c:'Th6 · Displacing Indigenous Peoples',
+ q:'Assertion (A): The United States was the leading industrial power in the world by 1890.\nReason (R): Industry there grew because enclosure had driven peasants off the land, as in England.',
+ o:AR,a:2,
+ e:'In 1860 the USA had been an undeveloped economy and in 1890 it led the world, but the reasons were different from the English ones — the need to manufacture railway equipment and machinery that would make large-scale farming easier.'},
+{c:'Th6 · Displacing Indigenous Peoples',
+ q:'Consider the following statements about Australia before European settlement:',
+ S:[
+    ['Aboriginal people reached the continent over forty thousand years ago.',true],
+    ['Between 350 and 750 communities existed, each with its own language.',true],
+    ['The term Aborigine is also applied to the Torres Strait Islanders.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The islanders are believed to have migrated from elsewhere and are classed separately; together the two groups were 2.4 per cent of Australia\'s population in 2005. About two hundred of the original languages are still spoken.'},
+{c:'Th6 · Displacing Indigenous Peoples',
+ q:'The doctrine of terra nullius was overturned in:',
+ o:[
+    'The Constitution Act of 1982, which recognised aboriginal rights',
+    'The year 1974, when the White Australia policy was abandoned',
+    'The National Enquiry of 1995 into the separation of children',
+    'The Mabo judgment of 1992, which recognised claims predating 1770'],
+ a:3,
+ e:'The Constitution Act of 1982 is Canada\'s, following its announcement in 1969 that it would not recognise aboriginal rights. National Sorry Day was observed on 26 May 1999, and the year 1974 marks the end of White Australia and the adoption of multiculturalism as official policy.'},
+{c:'Th6 · Displacing Indigenous Peoples',
+ q:'Consider the following statements about two well-known interventions in Australian public memory:',
+ S:[
+    ['W.E.H. Stanner\'s lecture of 1968 was titled "The Great Australian Silence".',true],
+    ['Why Weren\'t We Told? is a book by Henry Reynolds.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The two are regularly attributed to the wrong author. Both are arguments that the writing of Australian history had systematically left the frontier wars out.'},
+{c:'Th6 · Displacing Indigenous Peoples',
+ q:'The name Canberra is derived from:',
+ o:[
+    'A native word that means "a meeting place"',
+    'The surname of the colony\'s first surveyor-general',
+    'A Latin phrase used in the federation ceremony of 1901',
+    'The Aboriginal name for the Murray river valley'],
+ a:0,
+ e:'A suggested alternative had been Woolwheatgold, after the country\'s three staple exports. Federation of the six states came in 1901 and Canberra was chosen as capital in 1911.'},
+
+/* ============ Th7 · Paths to Modernisation ============ */
+{c:'Th7 · Paths to Modernisation',
+ q:'Consider the following statements about Tokugawa Japan:',
+ S:[
+    ['The shogun ruled from Edo, which was renamed Tokyo in 1868.',true],
+    ['The country was divided into over two hundred and fifty domains.',true],
+    ['The daimyo were required to spend long periods at the shogun\'s capital.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Keeping the lords at Edo for long stretches was precisely what stopped them from becoming a threat at home. The emperor, meanwhile, had his own capital at Kyoto, and Edo was probably the most populated city in the world in the seventeenth century.'},
+{c:'Th7 · Paths to Modernisation',
+ q:'The slogan fukoku kyohei meant:',
+ o:[
+    '"Overcoming the modern age of the West"',
+    '"A rich country and a strong army"',
+    '"Civilisation and enlightenment"',
+    '"Revere the emperor, expel the alien"'],
+ a:1,
+ e:'It captures the Meiji conviction that Japan needed to develop its economy and build a military in order to avoid the fate of its neighbours. The symposium called "Overcoming Modernity" belongs to a very different moment — 1943.'},
+{c:'Th7 · Paths to Modernisation',
+ q:'Consider the following statements about Japan before Commodore Perry\'s arrival:',
+ S:[
+    ['Perry reached Japan in 1853 and the treaty followed in 1854.',true],
+    ['Holland was the only Western country then trading with Japan.',true],
+    ['Scholars now question whether Japan had really been closed.',true],
+    ['Japan had no access to knowledge of the wider world.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'NCERT itself records that Japan took part in the east Asian trade and had access to the wider world through the Dutch and the Chinese. The phrase "the opening of Japan" is written from the deck of an American ship.'},
+{c:'Th7 · Paths to Modernisation',
+ q:'Consider the following statements about industrial work in Japan:',
+ S:[
+    ['Most industrial workers were employed in units of fewer than five people.',true],
+    ['Over half the workers in modern factories were women.',true],
+    ['The first modern strike in Japan was organised by women in 1886.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Men outnumbered women in modern factories only in the 1930s, and even in 1940 there were over 550,000 workshops using neither machinery nor electric power. The picture of industrialisation as a matter of large plants full of men is wrong twice over.'},
+{c:'Th7 · Paths to Modernisation',
+ q:'Assertion (A): Tanaka Shozo led an agitation against industrial pollution in 1897.\nReason (R): The Ashio mine had polluted the Watarase river, damaging a hundred square miles of farmland.',
+ o:AR,a:0,
+ e:'Eight hundred villagers took part, about a thousand families were affected, and harvests were normal again by 1904. It is the earliest environmental agitation in the chapter, and it comes at the height of the drive to industrialise.'},
+{c:'Th7 · Paths to Modernisation',
+ q:'Consider the following statements about the Japanese state after 1890:',
+ S:[
+    ['The army and the navy had independent control under the emperor.',true],
+    ['From 1899 only serving generals and admirals could become ministers.',true],
+    ['The Japanese word for parliament was borrowed from English usage.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The Japanese used the German word for parliament because of the influence of German legal ideas. The independence of the services from cabinet control is the institutional root of the militarism of the following decades.'},
+{c:'Th7 · Paths to Modernisation',
+ q:'Fukuzawa Yukichi argued that Japan must:',
+ o:[
+    'Return to the moral order of the Tokugawa age',
+    'Adopt Western technology but reject Western learning',
+    '"Expel Asia" and remodel itself on the West',
+    'Lead Asia in resisting Western encroachment'],
+ a:2,
+ e:'He founded Keio University, belonged to the Meirokusha, and wrote that all Japan had to be proud of was its scenery. The line "Heaven did not create men above men" is also his.'},
+{c:'Th7 · Paths to Modernisation',
+ q:'Consider the following statements about the Chinese examination system:',
+ S:[
+    ['It required an "eight-legged essay" in classical Chinese.',true],
+    ['Roughly a quarter of the candidates passed the first level.',false],
+    ['It was abolished in 1905 as a barrier to science and technology.',true],
+    ['There were more official posts available than there were degree-holders.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'There were about 526,869 civil and 212,330 military provincial degree-holders for only some 27,000 official positions. Those who passed the first level, usually by the age of twenty-four, were called "beautiful talent".'},
+{c:'Th7 · Paths to Modernisation',
+ q:'Sun Yat-sen\'s Three Principles were:',
+ o:[
+    'Nationalism, democracy and equality',
+    'Nationalism, discipline and self-strengthening',
+    'Democracy, land reform and self-reliance',
+    'Nationalism, democracy and socialism'],
+ a:3,
+ e:'The third, socialism, meant regulating capital and equalising landholdings. The republic he led was proclaimed in 1911; the May Fourth movement, protesting that China had not recovered its seized territories despite being on the victorious side, came in 1919.'},
+{c:'Th7 · Paths to Modernisation',
+ q:'Consider the following statements about the failure of the Guomindang:',
+ S:[
+    ['It ignored the peasantry and never carried out land reform on the mainland.',true],
+    ['NCERT attributes its failure to a narrow social base and a limited political vision.',true],
+    ['It never carried out land reform anywhere.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'It did carry out land reform in Taiwan, where productivity rose so far that by 1973 the island had a GNP second only to Japan\'s in Asia, with inequality steadily declining. On the mainland it sought to impose military order rather than address the problems people faced.'},
+{c:'Th7 · Paths to Modernisation',
+ q:'Consider the following statements about Korea after 1945:',
+ S:[
+    ['The peninsula was divided at the thirty-eighth parallel.',true],
+    ['The Korean War of 1950 to 1953 ended in an armistice rather than a peace treaty.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The seventeenth parallel is Vietnam\'s. The division became permanent when separate governments were established in 1948, and Japanese colonial rule had ended in August 1945 after thirty-five years.'},
+{c:'Th7 · Paths to Modernisation',
+ q:'The Saemaul movement launched in Korea in 1970 was:',
+ o:[
+    'A "new village" programme to modernise agriculture and mobilise rural people',
+    'A campaign of student protest that ended military rule in the country',
+    'An export drive in light industry aimed at textiles and garments',
+    'A public collection of gold to help repay foreign loans after a crisis'],
+ a:0,
+ e:'It was later extended to urban areas. The gold collection movement belongs to the crisis of 1997, and the shift from import substitution to exports — light industry first, then heavy and chemical industries — had begun in the early 1960s.'},
+{c:'Th7 · Paths to Modernisation',
+ q:'Consider the following statements about the Four Modernisations announced in China in 1978:',
+ S:[
+    ['They were science, industry, agriculture and defence.',true],
+    ['Democracy was demanded as a fifth modernisation on a wall-poster that year.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The wall-poster of 5 December 1978 was suppressed. The protests of 1989 at Tiananmen fell on the seventieth anniversary of the May Fourth movement, which is part of what gave them their charge.'},
+
+/* ============ Th8 · Supplement A — The Industrial Revolution ============ */
+{c:'Th8 · Supplement A — The Industrial Revolution',
+ q:'Consider the following statements about the term "Industrial Revolution":',
+ S:[
+    ['Arnold Toynbee was the first to use it in the English language.',true],
+    ['He applied it to the years 1760 to 1820, the reign of George III.',true],
+    ['NCERT dates the transformation itself to those same years.',false],
+    ['The term had already been used by writers in France and Germany.',true]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'NCERT dates the transformation to the 1780s to the 1850s; Toynbee\'s bracket was chosen to match the reign that was the subject of his Oxford lectures. Georges Michelet and Friedrich Engels had used the term earlier in French and German.'},
+{c:'Th8 · Supplement A — The Industrial Revolution',
+ q:'The "agricultural revolution" is defined in the chapter as:',
+ o:[
+    'The replacement of grain farming by sheep rearing for the wool trade',
+    'Larger landlords buying up small farms and enclosing the village commons',
+    'The adoption of the seed drill and of scientific crop rotation',
+    'A rise in yields caused by a warmer climatic phase after 1750'],
+ a:1,
+ e:'The point of the definition is what it produced: landless farmers and grazers who had to look for work in the towns. The inventions came after the preconditions, not before them.'},
+{c:'Th8 · Supplement A — The Industrial Revolution',
+ q:'Consider the following statements about iron and its makers:',
+ S:[
+    ['The first Abraham Darby built the coke-fired blast furnace in 1709.',true],
+    ['Henry Cort designed the puddling furnace and the rolling mill.',true],
+    ['The first iron bridge, at Coalbrookdale, was built by the second Darby.',false],
+    ['Britain smelted more iron than the rest of the world put together by 1848.',true]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'The iron bridge over the Severn was built in 1779 by the third Darby; the second had developed wrought iron from pig iron. Output quadrupled between 1800 and 1830, and the coal needed per ton of pig iron fell from eight tons in 1820 to two by 1850.'},
+{c:'Th8 · Supplement A — The Industrial Revolution',
+ q:'The correct order of the great textile inventions is:',
+ o:[
+    'Water frame, flying shuttle, spinning jenny, powerloom, mule',
+    'Flying shuttle, water frame, spinning jenny, powerloom, mule',
+    'Flying shuttle, spinning jenny, water frame, mule, powerloom',
+    'Spinning jenny, flying shuttle, mule, water frame, powerloom'],
+ a:2,
+ e:'Kay in 1733, Hargreaves in 1765, Arkwright in 1769, Crompton in 1779 and Cartwright in 1787. The water frame produced a much stronger thread, allowing pure cotton fabrics, and the mule allowed yarn that was strong and fine at once.'},
+{c:'Th8 · Supplement A — The Industrial Revolution',
+ q:'Consider the following statements about steam power:',
+ S:[
+    ['Savery\'s engine of 1698 was designed to drain mines.',true],
+    ['James Watt turned the engine from a mere pump into a prime mover.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Savery\'s Miner\'s Friend was slow, could not work at depth, and its boiler burst under pressure. Watt\'s engines were built at the Soho Foundry in Birmingham from 1775, backed by Matthew Boulton, and by 1840 British engines produced more than seventy per cent of all European horsepower.'},
+{c:'Th8 · Supplement A — The Industrial Revolution',
+ q:'Assertion (A): Canals lost their advantage over railways in the 1830s.\nReason (R): Canals were subject to congestion, and to frost, flood and drought.',
+ o:AR,a:0,
+ e:'Railways were available throughout the year, and were cheap and fast. The canals had been built to carry coal — Brindley\'s Worsley Canal of 1761 halved the price of coal in Manchester — and it was that trade the railways took over.'},
+{c:'Th8 · Supplement A — The Industrial Revolution',
+ q:'Consider the following statements about the inventors of the period:',
+ S:[
+    ['Most of them had been trained as scientists.',false],
+    ['Richard Arkwright had been a barber and wig-maker.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'NCERT says few of them were trained scientists. Cartwright knew little of mechanics, the road-builder John Metcalf was blind, and the canal builder James Brindley was almost illiterate and could never spell the word navigation.'},
+{c:'Th8 · Supplement A — The Industrial Revolution',
+ q:'The survey of 1842 found that the average lifespan of workers was:',
+ o:[
+    'Twenty-nine years in Birmingham, thirty-one in Manchester and thirty-five in Derby',
+    'Forty years in Birmingham, forty-two in Manchester and forty-five in Derby',
+    'Twenty-two years in Birmingham, twenty-four in Manchester and twenty-six in Derby',
+    'Fifteen years in Birmingham, seventeen in Manchester and twenty-one in Derby'],
+ a:3,
+ e:'The figures are averages dragged down by the fact that half of all children died before the age of five. The growth of the industrial cities came from immigration rather than from any rise in the number of children born.'},
+{c:'Th8 · Supplement A — The Industrial Revolution',
+ q:'Consider the following statements about Luddism:',
+ S:[
+    ['It was no more than a backward-looking assault on machinery.',false],
+    ['Its demands included a minimum wage and the right to form trade unions.',true],
+    ['It also demanded work for those displaced by machines.',true],
+    ['The Combination Acts outlawing such organisation were repealed in 1819.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'NCERT is explicit that Luddism was not merely a rejection of machines; it was a programme. The Combination Acts of 1795 had made such organisation unlawful, and they were repealed only in 1824 and 1825.'},
+{c:'Th8 · Supplement A — The Industrial Revolution',
+ q:'The Peterloo massacre took place:',
+ o:[
+    'At St Peter\'s Fields in Manchester in the August of 1819',
+    'Outside the Parliament at Westminster in the winter of 1819',
+    'At the Crystal Palace during the Great Exhibition of 1851',
+    'At the Ashio copper works during a strike in the year 1820'],
+ a:0,
+ e:'Eighty thousand people had gathered peacefully, and the name was coined to rhyme with Waterloo of 1815. It was followed by the Six Acts, which are easily confused with the Combination Acts of 1795.'},
+{c:'Th8 · Supplement A — The Industrial Revolution',
+ q:'Consider the following statements about the protective legislation of the period:',
+ S:[
+    ['The Factory Act of 1833 banned all employment of children under nine.',false],
+    ['The Mines and Collieries Act of 1842 barred women from working underground.',true],
+    ['The Ten Hours\' Bill was passed in 1833.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'The 1833 Act allowed children under nine in silk factories, limited older children\'s hours and — its real innovation — provided factory inspectors, which the 1819 law had lacked. The Ten Hours\' Bill came in 1847 after more than thirty years of agitation, and the 1842 Mines Commission had found conditions worse than in 1833.'},
+{c:'Th8 · Supplement A — The Industrial Revolution',
+ q:'In the Birmingham button trade of the 1850s, for the same hours of work:',
+ o:[
+    'Men earned 15 shillings, women 14 and children 9',
+    'Men earned 25 shillings, women 7 and children 1',
+    'Men earned 25 shillings, women 20 and children 12',
+    'Men earned 12 shillings, women 10 and children 5'],
+ a:1,
+ e:'Two-thirds of that workforce were women and children. Children were employed not only because they were cheap but because the machines were designed for them — the spinning jenny for small hands, and small bodies to move between tightly packed machinery.'},
+{c:'Th8 · Supplement A — The Industrial Revolution',
+ q:'Consider the following statements about historians\' revision of the Industrial Revolution:',
+ S:[
+    ['The concept has been challenged since the 1970s as too gradual and too regional.',true],
+    ['A.E. Musson argued that the real industrial revolution occurred between 1850 and 1914.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'At the time of the Great Exhibition of 1851 as many town workers were in handicraft units as in factories, and in the second phase of chemicals and electricals Britain fell behind Germany and the United States. Both facts sit awkwardly with the older picture of a sudden national transformation.'},
+
+/* ============ Th9 · Supplement B — The Central Islamic Lands ============ */
+{c:'Th9 · Supplement B — The Central Islamic Lands',
+ q:'The term isnad refers to:',
+ o:[
+    'A commentary written on a difficult passage of the Quran',
+    'A biography of the Prophet composed by an early follower',
+    'The chain of transmission by which a report is authenticated',
+    'A chronicle arranged year by year from the Hijra onwards'],
+ a:2,
+ e:'The reliability of a report was tested by establishing the reliability of its narrators. Tawarikh are chronicles, sira are biographies, hadith the Prophet\'s sayings and doings, tafsir Quran commentary and akhbar eyewitness reports.'},
+{c:'Th9 · Supplement B — The Central Islamic Lands',
+ q:'Consider the following statements about medieval Muslim chroniclers:',
+ S:[
+    ['On controversial issues they reproduced different versions of the same event.',true],
+    ['They left the task of judgement to their readers.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'NCERT nevertheless rates documentary evidence higher than chronicles, precisely because a document does not consciously refer to events and persons. The papyri and the Geniza records are its examples.'},
+{c:'Th9 · Supplement B — The Central Islamic Lands',
+ q:'Consider the following statements about the early Muslim community:',
+ S:[
+    ['The Kaba held the idols of many tribes before Islam.',true],
+    ['The umma at Medina was widened to include polytheists and Jews.',true],
+    ['The Hijri era dates from the Prophet\'s birth.',false],
+    ['Islamic festivals fall in fixed seasons of the solar year.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'The era dates from the migration to Medina in 622 and was established during the caliphate of Umar. Because the Hijri year is lunar and 354 days long, none of the festivals corresponds in any way to a season.'},
+{c:'Th9 · Supplement B — The Central Islamic Lands',
+ q:'Consider the following statements about the mawali:',
+ S:[
+    ['They were treated as equals by Arab Muslims once they converted.',false],
+    ['They had to pray in separate mosques.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The grievance of the non-Arab converts is one of the forces behind the Abbasid revolution, which began in Khurasan among a mixed Arab and Iranian population and was led in the field by an Iranian, Abu Muslim.'},
+{c:'Th9 · Supplement B — The Central Islamic Lands',
+ q:'Assertion (A): The caliphs at first discouraged conversion to Islam.\nReason (R): Converts paid ushr, a tenth, instead of the heavier kharaj.',
+ o:AR,a:0,
+ e:'Conversion reduced the revenue of the state, so the fiscal incentive ran against it, and a uniform policy of taxation was adopted only later. Muslims were under ten per cent of the population in the Umayyad and early Abbasid periods, which is the plainest answer to the idea of conversion by the sword.'},
+{c:'Th9 · Supplement B — The Central Islamic Lands',
+ q:'Consider the following statements about non-Muslims under the early caliphate:',
+ S:[
+    ['They retained rights to property and religious practice on payment of taxes.',true],
+    ['Jews and Christians were dhimmis with autonomy in their communal affairs.',true],
+    ['Christian merchants and travellers could be granted aman, or safe conduct.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'They were ahl al-kitab, People of the Book. The Crusades later produced what NCERT calls a harsher attitude of the Muslim state towards its Christian subjects, which is a change from this earlier position rather than a continuation of it.'},
+{c:'Th9 · Supplement B — The Central Islamic Lands',
+ q:'The Umayyad state is characterised by NCERT as:',
+ o:[
+    'A theocracy in which the religious scholars directed all state policy',
+    'A loose confederation of Arab tribes with no permanent administration',
+    'A revival of the Sasanian monarchy under a new Arab ruling dynasty',
+    'An imperial power resting on statecraft and the loyalty of Syrian troops'],
+ a:3,
+ e:'It was no longer based directly on Islam, employed Christian advisers and Zoroastrian scribes, and yet still drew legitimacy from Islam. Abd al-Malik\'s three measures were Arabic as the administrative language, an Islamic coinage and the Dome of the Rock.'},
+{c:'Th9 · Supplement B — The Central Islamic Lands',
+ q:'Consider the following statements about the Abbasids and the Buyids:',
+ S:[
+    ['The Abbasids dismantled the centralised state they had inherited.',false],
+    ['The Buyids took the title shahanshah but retained the Abbasid caliph.',true],
+    ['The caliph al-Qaim conferred the title of Sultan on Tughril Beg in 1055.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The Abbasids were forced by the needs of government to retain the centralised state — the regime that took pride in bringing down the monarchy found itself compelled to establish it again. Keeping the caliph was shrewd of the Buyids, since the rival Shiite Fatimids had ambitions to rule the Islamic world, and the grant of 1055 marked the separation of religious from political authority.'},
+{c:'Th9 · Supplement B — The Central Islamic Lands',
+ q:'The iqta was:',
+ o:[
+    'A revenue assignment from which an official claimed his salary',
+    'A hereditary landholding granted in perpetuity to a soldier',
+    'A tax paid by non-Muslims in place of military service',
+    'A garrison city founded to settle Arab troops and their families'],
+ a:0,
+ e:'From the tenth century officials were authorised to claim their salaries from the agricultural revenues of assigned territories. The garrison city is the misr, of which Kufa, Basra and Fustat are examples, and the word is also the Arabic name for Egypt.'},
+{c:'Th9 · Supplement B — The Central Islamic Lands',
+ q:'Consider the following statements about commercial instruments in the Islamic lands:',
+ S:[
+    ['Sakk were letters of credit and gave English the word cheque.',true],
+    ['Suftaja were bills of exchange.',true],
+    ['Interest-bearing transactions were lawful and openly practised.',false],
+    ['Fulus were gold coins of high value.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Fulus were copper coins. Riba was unlawful but was circumvented by hiyal — borrowing in one coin and repaying in another so that the interest was disguised as a currency-exchange commission, which NCERT calls the origin of the bill of exchange.'},
+{c:'Th9 · Supplement B — The Central Islamic Lands',
+ q:'Paper reached the Islamic world:',
+ o:[
+    'Through Indian scribes brought to Baghdad by the early Abbasids',
+    'Through prisoners taken at Samarqand who knew how to make it',
+    'Through merchants travelling the sea route from Canton to Basra',
+    'Through Byzantine craftsmen resettled at Damascus by the Umayyads'],
+ a:1,
+ e:'In 751 the governor of Samarqand took twenty thousand Chinese captives, some of whom were good at making paper, and the technique spread because Islam prohibited monopolies. It is a transfer of technology by war rather than by trade.'},
+{c:'Th9 · Supplement B — The Central Islamic Lands',
+ q:'Consider the following statements about law and custom:',
+ S:[
+    ['Customary law continued to bypass the sharia in large parts of the countryside.',true],
+    ['The inheritance of land by daughters was one such matter.',true],
+    ['The qazi often acted as an arbitrator rather than as a strict enforcer.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Each of the four schools of law is named after a leading jurist — Maliki, Hanafi, Shafii and Hanbali, the last being the most conservative. The gap between the law as written and the law as applied is one of the chapter\'s recurring themes.'},
+{c:'Th9 · Supplement B — The Central Islamic Lands',
+ q:'Kalila wa Dimna is:',
+ o:[
+    'The Persian epic of fifty thousand couplets written by Firdausi',
+    'An eleventh-century account of India written by Alberuni',
+    'The Arabic translation of a Pahlavi version of the Panchatantra',
+    'A collection of the Prophet\'s sayings compiled at Medina'],
+ a:2,
+ e:'The two jackals of the Panchatantra are its leading characters, and The Thousand and One Nights was likewise Indo-Persian before it was Arabic. Firdausi\'s Shahnama is in New Persian, and it was in keeping with the Ghaznavid tradition that Persian later became the language of administration in India.'},
+
+/* ============ Th10 · Supplement C — Confrontation of Cultures ============ */
+{c:'Th10 · Supplement C — Confrontation of Cultures',
+ q:'Consider the following statements about the first voyages across the Atlantic:',
+ S:[
+    ['Columbus believed he had reached the Indies.',true],
+    ['Ptolemy\'s Geography, newly available in print, underestimated the width of the oceans.',true],
+    ['Columbus sailed under a commission from the Portuguese crown.',false],
+    ['The Vikings of Norway had reached North America in the eleventh century.',true]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'The Portuguese crown turned him down and Spain sanctioned a modest expedition, which sailed from Palos on 3 August 1492. Because Ptolemy made the voyage look short, many ventured out recklessly — and Arabs, Chinese, Indians, Polynesians and Micronesians had all made long crossings before.'},
+{c:'Th10 · Supplement C — Confrontation of Cultures',
+ q:'America was named after:',
+ o:[
+    'Christopher Columbus, in a German atlas of 1507',
+    'Amerigo, the patron saint of Spanish navigators',
+    'A Carib word for the mainland recorded by Cabral',
+    'Amerigo Vespucci, a geographer from Florence'],
+ a:3,
+ e:'The name was first used by a German publisher in 1507. Columbus is commemorated only in a small district of the United States and in Columbia, though he reached neither.'},
+{c:'Th10 · Supplement C — Confrontation of Cultures',
+ q:'Consider the following statements about Aztec society:',
+ S:[
+    ['Land was owned by clans rather than by individuals.',true],
+    ['The Aztecs made sure that all children went to school.',true],
+    ['Slaves were usually enslaved for life and could not purchase their freedom.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Slavery was usually for a limited period and slaves could buy back their freedom. Children of the nobility went to the calmecac and all others to the tepochcalli in every neighbourhood, while peasants worked noble-held lands much as European serfs did.'},
+{c:'Th10 · Supplement C — Confrontation of Cultures',
+ q:'Chinampas were:',
+ o:[
+    'Artificial islands made of reed mats covered with mud and plants',
+    'Terraced fields cut into the slopes of the Andean highlands',
+    'Knotted cords used by the Incas to record mathematical units',
+    'Raised stone causeways linking Tenochtitlan to the lake shore'],
+ a:0,
+ e:'Tenochtitlan was built among them in 1325 and was five times larger than Madrid, with a hundred thousand inhabitants — twice the population of Seville, Spain\'s largest city. The knotted cords are the Inca quipu.'},
+{c:'Th10 · Supplement C — Confrontation of Cultures',
+ q:'Consider the following statements about the Incas:',
+ S:[
+    ['They possessed a written script of their own.',false],
+    ['Every subject of the empire was required to speak Quechua.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'They had no script, though some scholars now suggest a sort of code was woven into the quipu. Each tribe kept its own council of elders, so NCERT says the empire resembled a confederacy, with its capital at Cuzco rather than at Machu Picchu, which was rediscovered only in 1911.'},
+{c:'Th10 · Supplement C — Confrontation of Cultures',
+ q:'Assertion (A): Gold and silver were not greatly valued in Aztec and Inca society.\nReason (R): Neither society had developed the technique of smelting precious metals.',
+ o:AR,a:2,
+ e:'Gold was used ritually, and NCERT sets the low value placed on it in marked contrast to contemporary European society. The Arawaks likewise traded gold for glass beads because the beads seemed so much more beautiful.'},
+{c:'Th10 · Supplement C — Confrontation of Cultures',
+ q:'Consider the following statements about the conquest of Mexico:',
+ S:[
+    ['Cortés allied with the Totonacs, who wanted to secede from Aztec rule.',true],
+    ['Montezuma resisted the Spanish from the moment they landed.',false],
+    ['The Aztecs never inflicted a defeat on the Spanish forces.',false],
+    ['Cortés completed the conquest with a force of about a hundred and eighty soldiers.',true]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'The Night of Tears cost six hundred conquistadores and many more of their Tlaxcalan allies their lives, after Alvarado ordered a massacre at the festival of Huizilpochtli. Cortés returned with 180 soldiers and 30 horses against a people already dying of smallpox.'},
+{c:'Th10 · Supplement C — Confrontation of Cultures',
+ q:'Doña Marina was:',
+ o:[
+    'A Tlaxcalan ruler who supplied Cortés with troops and provisions',
+    'An interpreter given to Cortés who was fluent in three local languages',
+    'A Spanish noblewoman who accompanied the expedition to Mexico',
+    'The sister of Montezuma, married to Cortés after the conquest'],
+ a:1,
+ e:'Bernal Diaz wrote that without her they could not have understood the language. Mexicans came to call her Malinche, a word that carries the sense of betrayal — the same person read as indispensable by one side and as treachery by the other.'},
+{c:'Th10 · Supplement C — Confrontation of Cultures',
+ q:'Consider the following statements about Atahualpa and Peru:',
+ S:[
+    ['He paid a roomful of gold, the most extravagant ransom recorded in history.',true],
+    ['Pizarro honoured the promise and released him.',false],
+    ['Potosi in Upper Peru held vast silver mines.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Pizarro had the king executed. To work the mines of Potosi, in what is now Bolivia, the Inca people were made into slaves — and Pizarro, in contrast to Cortés, had been uneducated and poor when he joined the army.'},
+{c:'Th10 · Supplement C — Confrontation of Cultures',
+ q:'The Portuguese occupation of Brazil began:',
+ o:[
+    'Following the papal award of the territory in the year 1494',
+    'When Spanish settlers ceded the coast under a treaty of exchange',
+    'By accident, when a fleet bound for India looped west to avoid stormy seas',
+    'After a deliberate expedition sent to search for gold in the south Atlantic'],
+ a:2,
+ e:'Cabral was sailing for India in 1500. Brazil promised no gold; its resource was brazilwood, which yielded a beautiful red dye and was traded for iron knives and saws, and in 1534 the coast was divided into fourteen hereditary captaincies.'},
+{c:'Th10 · Supplement C — Confrontation of Cultures',
+ q:'Consider the following statements about labour in the Portuguese and Spanish colonies:',
+ S:[
+    ['Africans were brought to Brazil because the native people had already died out.',false],
+    ['Philip II publicly banned forced labour in 1601 but allowed it to continue by secret decree.',true],
+    ['The freedom law of 1609 was revoked within two years.',true],
+    ['The Jesuits were disliked by the European settlers.',true]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'In Brazil the natives refused the exhausting work and kept retreating into the forests, whereas in the Aztec and Inca lands people were already used to labouring in mines and fields, so the Spanish did not need to look elsewhere. The Jesuits urged humane interaction, lived in forest villages and strongly criticised slavery.'},
+{c:'Th10 · Supplement C — Confrontation of Cultures',
+ q:'Assertion (A): Spain and Portugal were not the chief beneficiaries of American silver.\nReason (R): They did not invest their income in further trade or in building a merchant navy.',
+ o:AR,a:0,
+ e:'England, France, Belgium and Holland gained instead, forming joint-stock companies. Between 1560 and 1600 some hundred ships a year carried silver across the Atlantic, and the native population of the Americas fell from about seventy million to three and a half million in a century and a half.'},
+{c:'Th10 · Supplement C — Confrontation of Cultures',
+ q:'Olaudah Equiano\'s autobiography of 1789 argued that:',
+ o:[
+    'The slave trade had been introduced to Africa by Arab merchants',
+    'Plantation slavery was compatible with Christian teaching',
+    'Freed slaves should be resettled on the coast of West Africa',
+    'Slaves in Africa were treated as part of the family'],
+ a:3,
+ e:'He was replying to the claim that African slavery predated the Europeans and therefore excused them. NCERT\'s own formulation is that slavery was not a new idea, but that the South American experience was new in that it accompanied the emerging capitalist system of production.'}
+
+];
+
+/* ---------- Engine (identical across classes) ---------- */
+function shuffle(arr){const a=arr.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+
+/* Canonical Prelims answer-code sets. For an S-question the statements are
+   reshuffled on every attempt and the correct code is worked out from which
+   ones landed where — so neither the option nor the position of the false
+   statement can be memorised. */
+const SET_CODE3=["1 and 2 only","2 and 3 only","1 and 3 only","1, 2 and 3"];
+const SET_CODE2=["1 only","2 only","Both 1 and 2","Neither 1 nor 2"];
+const SET_COUNT=["Only one","Only two","All three","None"];
+const SET_COUNT4=["Only one","Only two","Only three","All four"];
+function buildCode(mode,n,trueIdx){
+  const c=trueIdx.length;
+  if(mode==='count'){
+    const set=n===4?SET_COUNT4:SET_COUNT;
+    const text=c===0?'None':c===1?'Only one':c===2?'Only two':c===3?(n===3?'All three':'Only three'):'All four';
+    return {set:set,text:text};
+  }
+  if(n===2){
+    const text=c===2?'Both 1 and 2':c===0?'Neither 1 nor 2':(trueIdx[0]===1?'1 only':'2 only');
+    return {set:SET_CODE2,text:text};
+  }
+  const text=c===3?'1, 2 and 3':trueIdx[0]+' and '+trueIdx[1]+' only';
+  return {set:SET_CODE3,text:text};
+}
+function joinList(a){return a.length===1?String(a[0]):a.slice(0,-1).join(', ')+' and '+a[a.length-1];}
+function verdictLine(n,trueIdx,unit){
+  const U=unit==='pair'?'pair':'statement', Uc=U.charAt(0).toUpperCase()+U.slice(1);
+  const all=[];for(let i=1;i<=n;i++)all.push(i);
+  const f=all.filter(function(i){return trueIdx.indexOf(i)<0;});
+  if(f.length===0)return 'All the '+U+'s here are correct.';
+  if(trueIdx.length===0)return 'None of the '+U+'s here is correct.';
+  return Uc+(trueIdx.length===1?' ':'s ')+joinList(trueIdx)+(trueIdx.length===1?' is':' are')+' correct; '+
+         U+(f.length===1?' ':'s ')+joinList(f)+(f.length===1?' is not.':' are not.');
+}
+function buildSession(pool){return shuffle(pool).map(function(item){
+  let lines=item.L,options,correctText,auto='';
+  if(item.S){
+    const st=shuffle(item.S), n=st.length, trueIdx=[];
+    lines=st.map(function(s){return s[0];});
+    st.forEach(function(s,i){if(s[1])trueIdx.push(i+1);});
+    const built=buildCode(item.mode||'code',n,trueIdx);
+    options=built.set.slice(); correctText=built.text;
+    auto=verdictLine(n,trueIdx,item.unit)+' ';
+  } else { options=item.o.slice(); correctText=item.o[item.a]; }
+  const order=shuffle(options.map(function(text,i){return {text:text,i:i};}));
+  return {chapter:item.c,question:item.q,head:item.head,lines:lines,ask:item.ask,
+          options:order.map(function(o){return o.text;}),
+          correct:order.findIndex(function(o){return o.text===correctText;}),
+          explain:auto+item.e};
+});}
+let session=[],current=0,answers=[],startTime=null,timerInterval=null,reviewMode=false,activeScope="";
+const el=id=>document.getElementById(id);
+const screens={menu:el('menu'),quiz:el('quiz'),result:el('result')};
+function show(name){Object.keys(screens).forEach(k=>screens[k].classList.toggle('is-active',k===name));}
+el('courseEyebrow').textContent=COURSE.eyebrow; el('courseTitle').textContent=COURSE.title; el('courseLede').textContent=COURSE.lede;
+function chapterCount(name){return QUESTIONS.filter(q=>q.c===name).length;}
+function buildMenu(){
+  const list=el('lessonList'); list.innerHTML='';
+  const combined=document.createElement('button');
+  combined.className='lesson-card combined'; combined.type='button';
+  combined.innerHTML='<span class="lesson-num">★</span><span class="lesson-body"><span class="lesson-title">Full Syllabus — Combined</span><span class="lesson-meta">All '+CHAPTERS.length+' lessons · '+QUESTIONS.length+' questions, shuffled</span></span><span class="lesson-go">→</span>';
+  combined.addEventListener('click',()=>startQuiz(null)); list.appendChild(combined);
+  CHAPTERS.forEach((name,idx)=>{
+    const shortTitle=name.replace(/^Ch\d+ · /,'');
+    const btn=document.createElement('button'); btn.className='lesson-card'; btn.type='button';
+    const num=document.createElement('span'); num.className='lesson-num'; num.textContent=String(idx+1);
+    const body=document.createElement('span'); body.className='lesson-body';
+    const t=document.createElement('span'); t.className='lesson-title'; t.textContent=shortTitle;
+    const m=document.createElement('span'); m.className='lesson-meta'; m.textContent=chapterCount(name)+' questions';
+    body.appendChild(t); body.appendChild(m);
+    const go=document.createElement('span'); go.className='lesson-go'; go.textContent='→';
+    btn.appendChild(num); btn.appendChild(body); btn.appendChild(go);
+    btn.addEventListener('click',()=>startQuiz(name)); list.appendChild(btn);
+  });
+}
+function formatTime(sec){const m=Math.floor(sec/60).toString().padStart(2,'0');const s=Math.floor(sec%60).toString().padStart(2,'0');return m+':'+s;}
+function startTimer(){startTime=Date.now();clearInterval(timerInterval);timerInterval=setInterval(()=>{el('timer').textContent=formatTime((Date.now()-startTime)/1000);},1000);}
+function stopTimer(){clearInterval(timerInterval);}
+function startQuiz(chapter){
+  const pool=chapter?QUESTIONS.filter(q=>q.c===chapter):QUESTIONS;
+  activeScope=chapter?chapter.replace(/^Ch\d+ · /,''):"Full Syllabus";
+  session=buildSession(pool); answers=new Array(session.length).fill(null); current=0; reviewMode=false;
+  show('quiz'); el('timer').textContent='00:00'; startTimer(); renderQuestion();
+}
+function renderStem(item){
+  const box=el('qblock'); box.innerHTML='';
+  const stem=document.createElement('p'); stem.className='question'; stem.textContent=item.question; box.appendChild(stem);
+  if(item.head){const h=document.createElement('p'); h.className='stmt-head'; h.textContent=item.head; box.appendChild(h);}
+  if(item.lines&&item.lines.length){
+    const ol=document.createElement('ul'); ol.className='stmt-list';
+    item.lines.forEach((line,i)=>{
+      const li=document.createElement('li');
+      const n=document.createElement('span'); n.className='sn'; n.textContent=(i+1)+'.';
+      const t=document.createElement('span'); t.className='st';
+      const split=line.indexOf(' : ');
+      if(split>-1){
+        t.textContent=line.slice(0,split);
+        const r=document.createElement('span'); r.className='sr'; r.textContent=' — '+line.slice(split+3);
+        t.appendChild(r);
+      } else { t.textContent=line; }
+      li.appendChild(n); li.appendChild(t); ol.appendChild(li);
+    });
+    box.appendChild(ol);
+  }
+  if(item.ask){const a=document.createElement('p'); a.className='ask'; a.textContent=item.ask; box.appendChild(a);}
+}
+function renderQuestion(){
+  const item=session[current]; const chosen=answers[current]; const reveal=chosen!==null||reviewMode;
+  el('chapterTag').textContent=item.chapter; el('counter').textContent=(current+1)+' / '+session.length;
+  el('progressFill').style.width=((current+1)/session.length*100)+'%';
+  renderStem(item);
+  const optsBox=el('options'); optsBox.innerHTML=''; const letters=['A','B','C','D','E'];
+  item.options.forEach((opt,i)=>{
+    const btn=document.createElement('button'); btn.className='option'; btn.type='button';
+    const l=document.createElement('span'); l.className='opt-letter'; l.textContent=letters[i];
+    const t=document.createElement('span'); t.className='opt-text'; t.textContent=opt;
+    btn.appendChild(l); btn.appendChild(t);
+    if(reveal){btn.disabled=true; if(i===item.correct)btn.classList.add('correct'); else if(i===chosen)btn.classList.add('incorrect');}
+    btn.addEventListener('click',()=>selectOption(i)); optsBox.appendChild(btn);
+  });
+  const fb=el('feedback');
+  if(reveal){
+    fb.hidden=false; let verdict,cls;
+    if(chosen===null){verdict='Skipped.';cls='bad';} else if(chosen===item.correct){verdict='Correct.';cls='good';} else {verdict='Not quite.';cls='bad';}
+    fb.className='feedback '+cls;
+    fb.innerHTML=''; const v=document.createElement('span'); v.className='verdict'; v.textContent=verdict;
+    fb.appendChild(v); fb.appendChild(document.createTextNode(' '+item.explain));
+  } else { fb.hidden=true; }
+  el('prevBtn').disabled=current===0;
+  const nextBtn=el('nextBtn');
+  nextBtn.textContent = reviewMode ? (current===session.length-1?'Back to results':'Next →') : (current===session.length-1?'Finish':'Next →');
+  el('options').scrollIntoView&&el('qblock').parentElement.scrollTo({top:0});
+}
+function selectOption(i){ if(reviewMode||answers[current]!==null)return; answers[current]=i; renderQuestion(); }
+function finishQuiz(){
+  stopTimer(); const elapsed=(Date.now()-startTime)/1000; let correctCount=0; const stats={};
+  session.forEach((item,i)=>{ if(!stats[item.chapter])stats[item.chapter]={correct:0,total:0}; stats[item.chapter].total++; if(answers[i]===item.correct){correctCount++;stats[item.chapter].correct++;} });
+  show('result');
+  el('resultScope').textContent=activeScope+' · '+session.length+' questions';
+  el('scoreText').textContent=correctCount+' / '+session.length; el('timeText').textContent=formatTime(elapsed);
+  el('scorePct').textContent=Math.round(correctCount/session.length*100)+'%';
+  const body=el('breakdownBody'); body.innerHTML='';
+  CHAPTERS.filter(c=>stats[c]).forEach(c=>{
+    const s=stats[c]; const row=document.createElement('tr');
+    const td1=document.createElement('td'); td1.textContent=c.replace(/^Ch\d+ · /,'');
+    const p=Math.round(s.correct/s.total*100);
+    const bar=document.createElement('div'); bar.className='bd-bar';
+    const fill=document.createElement('span'); fill.style.width=p+'%'; bar.appendChild(fill); td1.appendChild(bar);
+    const td2=document.createElement('td'); td2.className='num'; td2.textContent=s.correct+' / '+s.total;
+    row.appendChild(td1); row.appendChild(td2); body.appendChild(row);
+  });
+}
+function enterReview(){reviewMode=true;current=0;show('quiz');renderQuestion();}
+function exitReviewToResult(){reviewMode=false;show('result');}
+el('prevBtn').addEventListener('click',()=>{if(current>0){current--;renderQuestion();}});
+el('nextBtn').addEventListener('click',()=>{
+  if(reviewMode){ if(current===session.length-1)exitReviewToResult(); else {current++;renderQuestion();} }
+  else { if(current===session.length-1)finishQuiz(); else {current++;renderQuestion();} }
+});
+el('reviewBtn').addEventListener('click',enterReview);
+el('restartBtn').addEventListener('click',()=>{ const chapter=activeScope==="Full Syllabus"?null:CHAPTERS.find(c=>c.replace(/^Ch\d+ · /,'')===activeScope); startQuiz(chapter); });
+el('menuBtn').addEventListener('click',()=>{stopTimer();show('menu');});
+document.addEventListener('keydown',(e)=>{
+  if(!screens.quiz.classList.contains('is-active'))return;
+  if(['1','2','3','4','5'].includes(e.key)&&!reviewMode){selectOption(parseInt(e.key,10)-1);}
+  else if(e.key==='ArrowRight'||e.key==='Enter'){el('nextBtn').click();}
+  else if(e.key==='ArrowLeft'){el('prevBtn').click();}
+});
+buildMenu();
+</script>
