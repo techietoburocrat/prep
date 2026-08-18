@@ -22,6 +22,8 @@
 
 **Every question is tagged by topic and every answer sits behind a collapsible block, so the file works as a practice paper rather than a reading list.**
 
+> 📌 **Update 18 Aug 2026 — the official UPSC keys have been sourced** and now sit in [papers/](papers/). Read [§ THE OFFICIAL KEYS ARE NOW HERE](#-the-official-keys-are-now-here--downloaded-18-aug-2026) below before planning around the ⚠️ counts in this table: **2011–13 can never be keyed** (UPSC published no key before 2017), while **2021 and 2024 are ready to be filled.**
+
 ---
 
 ## ⚠️ THE KEYS — 98 of 201, and why I did not fill the rest
@@ -45,16 +47,27 @@
 
  *This is the same failure mode your [target sheet](../../00_TARGET_Topper_Marks.md) already documents for cut-off tables, where one source's rows are systematically shifted by a year. **Coaching secondary data needs cross-checking every time.***
 
-### ✅ How to close the gap — 20 minutes
+### ✅ THE OFFICIAL KEYS ARE NOW HERE — downloaded 18 Aug 2026
 
-**UPSC publishes the official final answer keys after each cycle closes.** **They are the only keys worth trusting.**
+**No action left on you. The earlier note that "the official UPSC PDFs aren't fetchable" was wrong** — the site had simply moved its paths (`/examinations/answer-key`, singular). **All 8 GS Paper-I keys UPSC has ever published are now in [papers/](papers/)**, along with 4 official question papers. See **[papers/00_README.md](papers/00_README.md)**.
 
-| Step | Action |
-|---|---|
-| **1** | Go to **[upsc.gov.in → Examination → Previous Question Papers](https://upsc.gov.in/examinations/previous-question-papers)** and the **Answer Keys** section |
-| **2** | Download the **CS(P) GS Paper-I** keys for **2011, 2012, 2013, 2019, 2021, 2022 and 2024** — those are the years with gaps |
-| **3** | Drop them into **[papers/](papers/)** and tell me |
-| **4** | I'll fill all 103 gaps by matching on question text rather than position, and flag anything ambiguous |
+🔴 **But the gap cannot be closed completely, and here is the honest arithmetic:**
+
+| Year | Unkeyed Qs | Official key | Official paper | Verdict |
+|---|---|---|---|---|
+| 2011 | 18 | ❌ **never published** | ❌ | ❌ **permanently unkeyable** |
+| 2012 | 11 | ❌ **never published** | ❌ | ❌ **permanently unkeyable** |
+| 2013 | 18 | ❌ **never published** | ❌ | ❌ **permanently unkeyable** |
+| 2019 | 12 | ✅ | ❌ not archived anywhere | 🟡 blocked on the paper |
+| 2021 | 12 | ✅ | ✅ | ✅ **fillable now** |
+| 2022 | 13 | ✅ | ❌ not archived anywhere | 🟡 blocked on the paper |
+| 2024 | 18 | ✅ | ✅ | ✅ **fillable now** |
+
+**UPSC's final answer keys begin with CS(P) 2017.** For 2011–13 there is no official key in existence — those 47 questions stay open permanently, and no amount of searching changes that. **Treat those three years as reading material, not as a scored practice paper.**
+
+**Why 2019 and 2022 are blocked even though their keys are here:** UPSC keys are numbered **per booklet set (A/B/C/D)**, and this compilation renumbered everything Q1, Q2, Q3… A key row cannot be matched to a question by position — the question's **original** number has to come off the official paper first. That paper is not on upsc.gov.in and was never captured by the Wayback Machine.
+
+**Next job (not yet done): fill 2021 and 2024 — 30 questions.** Every file is a scanned image with no text layer, so this is visual page-by-page work, not a script. **The 4 extra keys (2017, 2018, 2020, 2023) also let the 48 already-filled answers in those years be audited against the official record — worth doing first.**
 
 ---
 

@@ -245,6 +245,18 @@ Read line 3 again. **"Changes in… and the effects of such changes"** is UPSC's
 | 13 | **Shankar IAS — Environment** | The standard reference. Covers ecology, biodiversity, climate change, protected areas, conventions, Acts, pollution. **The single highest-yield non-NCERT book in the merged subject** |
 | 14 | *(reference, not reading)* **India State of Forest Report** + current-affairs environment | Latest forest/tiger/wetland figures. Pull from your [Current Affairs](../Current%20Affairs/00_START_HERE.md) work rather than reading cover to cover |
 
+### 📌 Buying decision — settled 18 Aug 2026
+
+**Both Tier-1 reference books are copyrighted with no free official PDF, and both already have complete notes** ([Leong](02_Standard_Reference_Books/GC_Leong/00_INDEX.md) · [Shankar](02_Standard_Reference_Books/Shankar_IAS_Environment/00_INDEX.md)), so neither is blocking anything. **Decision: buy ONE, physical, after the NCERT reading pass — and make it Shankar.**
+
+| | |
+|---|---|
+| **Buy** | **Shankar IAS *Environment*** — larger Prelims cluster, and its content (Acts, conventions, PA categories, EIA, institutions) is the one body of material not reproducible from NCERT |
+| **When** | **After the NCERT reading pass; hold until early 2027 if you can.** Shankar is revised roughly yearly and is the only book here whose facts expire — a later edition ships fewer stale figures. Still check the ⚠️`[VERIFY]` register against FSI/NTCA/Ramsar regardless of edition |
+| **Skip** | **G.C. Leong** — its notes are a *delta* over the NCERTs you'll have just read. Buy it only if the `climates` and `physical` quiz banks come back weak on climate types or landform evolution |
+
+---
+
 ### Tier 2 — ❌ NOT FOR YOU. Ever.
 
 | Book | Verdict |
@@ -545,14 +557,15 @@ Geography/
 │   ├── Class_11_Fundamentals_of_Physical_Geography/   the core
 │   ├── Class_11_India_Physical_Environment/
 │   ├── Class_12_Fundamentals_of_Human_Geography/
+│   ├── 00_PDF_SOURCES.md         ✅ NEW — editions, sources, verification, code traps
 │   └── Class_12_India_People_and_Economy/
-│        └── each: Notes/ + Textbook_PDF/
+│        └── each: Notes/ + Textbook_PDF/  ✅ 95 PDFs, 221 MB, all 9 books on disk
 ├── 02_Standard_Reference_Books/
 │   ├── GC_Leong/                  ✅ DONE — 25 files, 5,526 lines
 │   │    ├── 00_INDEX.md           ← triage + skip register + NCERT cross-link map
 │   │    ├── Part_A_Physical/      ← 12 delta notes (karst, lakes, coral, currents…)
 │   │    ├── Part_B_Climate_Types/ 11 climates + 00_Comparison_Matrix.md
-│   │    └── Textbook_PDF/         ⚠️ empty — book not downloaded
+│   │    └── Textbook_PDF/         ⬜ deliberately empty — copyrighted, notes complete
 │   └── Shankar_IAS_Environment/   ✅ DONE — 21 files, 3,510 lines
 │        ├── 00_INDEX.md           ← overlap policy + ⚠️ VOLATILE-FIGURES register
 │        ├── 00_QUICK_REVISION_TABLES.md  the revision core
@@ -561,7 +574,7 @@ Geography/
 │        ├── Part_C_Pollution/     ← 3 (air, water/soil, waste)
 │        ├── Part_D_Climate_Change/← 3
 │        ├── Part_E_Governance/    ← 5 (Acts, EIA, conventions, bodies, SDGs)
-│        └── Textbook_PDF/         ⚠️ empty — book not downloaded
+│        └── Textbook_PDF/         ⬜ deliberately empty — copyrighted, use primary sources
 ├── 03_PYQ_Prelims/                ← target ~150 Qs, 2011→2026
 ├── 04_PYQ_Mains/                  ← target 96 Qs, 2013→2025
 ├── 05_Quiz_MCQ/                   ← data/ + dist/
@@ -574,11 +587,11 @@ Geography/
 
 ## ✅ First session — do exactly this
 
-1. 🛒 Order the **[Oxford Student Atlas for India](https://www.flipkart.com/oxford-student-atlas-india-for-competitive-exams-6th/p/itm275e6a52f36ce)** — ₹252, physical copy, today. Before any reading. Check the title says *"for India"* ([why](#-buying-the-atlas)).
-2. Download the **9 legacy NCERTs** and verify each filename against the Tier-1 table (Polity's Class 12 PDFs were misnamed — don't repeat it).
+1. ✅ ~~Order the Oxford Student Atlas for India~~ — **bought (confirmed 18 Aug 2026).**
+2. ✅ ~~Download the 9 legacy NCERTs and verify each filename~~ — **done 18 Aug 2026. All 9 books, 81 chapters, 221 MB, every filename verified against the PDF's own text.** See **[01_NCERT/00_PDF_SOURCES.md](01_NCERT/00_PDF_SOURCES.md)** — it also records the 11 chapters current NCERT editions have deleted, which you now hold and most 2026 material does not.
 3. **2-hour PYQ skim** — read, don't solve, the Geography questions from Prelims 2023, 2024, 2025. You're calibrating depth, not testing yourself.
-4. Start **Stage 1** with Class 6. Fast. Light notes.
-5. Start the **15-min daily map habit tonight**, bolted onto your current-affairs slot. Day 1: every country and maritime neighbour of India.
+4. ~~Start **Stage 1** with Class 6~~ — ✅ all reading stages are complete; see the [flow](#-the-step-by-step-flow).
+5. **Start the 15-min daily map habit — the atlas is on your desk and [06_Maps/03_Daily_Rotation.md](06_Maps/03_Daily_Rotation.md) Week 1 Day 1 is waiting.** This is now the single biggest open item in the subject.
 
 ---
 
