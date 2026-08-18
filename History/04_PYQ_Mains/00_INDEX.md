@@ -2,6 +2,8 @@
 
 Descriptive History and World History questions from the UPSC Civil Services **Main** examination, GS Paper I — the paper the syllabus formally assigns History, Art & Culture, Society and World History to. One file per year.
 
+> 🎯 **Subject cut:** **[Art & Culture strategy and PYQ map](../02_Standard_Reference_Books/Art_and_Culture_Singhania/00_STRATEGY_AND_PYQ_MAP.md)** — the recurring Mains shapes, the **Q1–Q3 / Q11–Q13 slot pattern**, and the three answers worth pre-drafting.
+>
 > **Companion set:** the objective Prelims MCQs live in [`../03_PYQ_Prelims/00_INDEX.md`](../03_PYQ_Prelims/00_INDEX.md) — 239 questions, 2013–2026. Prelims tests recall and precision; Mains tests argument. Use both.
 >
 > **Sibling folder:** the same pipeline built [Polity's PYQ set](../../Polity/04_PYQ_Mains/00_INDEX.md) first — that folder goes back to 2000 because Polity content is separable from the older-format papers by topic alone; this folder stops at 2013 (see the note at the foot of [2013.md](2013.md)).

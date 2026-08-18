@@ -5,6 +5,8 @@
 >
 > ✅✅ **STATUS (2026-08-18): COMPLETE — ALL 24 CHAPTERS AND 5 APPENDICES COVERED, in 14 files, 4,671 lines.** See the 📊 Status table below.
 
+> 🎯 ⭐⭐⭐⭐⭐ **START HERE INSTEAD, if you are planning rather than reading:** **[00_STRATEGY_AND_PYQ_MAP.md](00_STRATEGY_AND_PYQ_MAP.md)** — *what Art & Culture is actually worth (**58 of 239 Prelims questions = 24%**; **~30 marks a year** across both papers), which of these 14 files every past question came from, the reading order, and the volatile-figure checklist. **All computed from your own PYQ folders, not estimated.***
+
 [⬅ Standard Books](../00_INDEX.md) · [TN Class XI *(temple architecture)*](../TN_State_Board_History/Class_11/00_INDEX.md) · [NCERT History](../../01_NCERT/README_TEXTBOOKS.md)
 
 ---

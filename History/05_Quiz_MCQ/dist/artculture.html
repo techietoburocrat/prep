@@ -1,0 +1,1623 @@
+<title>Art & Culture Quiz — Nitin Singhania</title>
+<style>
+:root{
+  --ink:#1A1E26; --paper:#F1F4F8; --surface:#FFFFFF; --line:#D4DAE3; --muted:#596372;
+  --good:#1F7A4C; --good-soft:#E2F1E9; --bad:#B23A34; --bad-soft:#FAE6E4;
+  --accent:#27467B; --accent-ink:#FFFFFF; --accent-soft:#E3EAF5;
+  --radius:10px;
+  --serif:Georgia,'Iowan Old Style','Palatino Linotype','Book Antiqua',serif;
+  --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --ink:#E5EAF2; --paper:#0F131A; --surface:#181D26; --line:#272F3B; --muted:#95A0B1;
+    --good:#3FBE7C; --good-soft:rgba(63,190,124,0.14); --bad:#E2665F; --bad-soft:rgba(226,102,95,0.14);
+    --accent:#84AEE2; --accent-ink:#0E1520; --accent-soft:rgba(132,174,226,0.18);
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#E5EAF2; --paper:#0F131A; --surface:#181D26; --line:#272F3B; --muted:#95A0B1;
+  --good:#3FBE7C; --good-soft:rgba(63,190,124,0.14); --bad:#E2665F; --bad-soft:rgba(226,102,95,0.14);
+  --accent:#84AEE2; --accent-ink:#0E1520; --accent-soft:rgba(132,174,226,0.18);
+}
+:root[data-theme="light"]{
+  --ink:#1A1E26; --paper:#F1F4F8; --surface:#FFFFFF; --line:#D4DAE3; --muted:#596372;
+  --good:#1F7A4C; --good-soft:#E2F1E9; --bad:#B23A34; --bad-soft:#FAE6E4;
+  --accent:#27467B; --accent-ink:#FFFFFF; --accent-soft:#E3EAF5;
+}
+*{box-sizing:border-box;}
+html,body{height:100%;}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;}
+.app{min-height:100dvh;display:flex;flex-direction:column;max-width:760px;margin:0 auto;padding:20px 20px 24px;}
+.screen{flex:1;display:flex;flex-direction:column;min-height:0;}
+.eyebrow{font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin:0 0 6px;}
+.menu-screen{gap:16px;justify-content:flex-start;padding-top:10px;}
+.menu-screen h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,36px);margin:0;text-wrap:balance;}
+.lede{color:var(--muted);line-height:1.55;max-width:64ch;margin:0;}
+.how{display:flex;flex-wrap:wrap;gap:8px 18px;margin:2px 0 4px;padding:0;list-style:none;}
+.how li{font-size:12.5px;color:var(--muted);display:flex;align-items:center;gap:6px;}
+.how li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none;}
+.menu-label{font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);margin:8px 0 -2px;}
+.lesson-list{display:flex;flex-direction:column;gap:10px;}
+.lesson-card{display:flex;align-items:center;gap:14px;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:15px 18px;font-family:var(--sans);cursor:pointer;width:100%;color:var(--ink);}
+.lesson-card:hover{border-color:var(--accent);}
+.lesson-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+.lesson-card.combined{background:var(--accent-soft);border-color:var(--accent);}
+.lesson-num{flex:none;width:38px;height:38px;border-radius:9px;background:var(--accent-soft);color:var(--accent);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:16px;font-weight:700;}
+.lesson-card.combined .lesson-num{background:var(--accent);color:var(--accent-ink);}
+.lesson-body{flex:1;min-width:0;}
+.lesson-title{font-family:var(--serif);font-size:16.5px;line-height:1.25;margin:0 0 2px;display:block;}
+.lesson-meta{font-size:12.5px;color:var(--muted);display:block;}
+.lesson-go{flex:none;color:var(--muted);font-size:20px;}
+.lesson-card:hover .lesson-go{color:var(--accent);}
+.quiz-screen{gap:14px;display:none;}
+.bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.chapter-tag{font-size:11px;text-transform:uppercase;letter-spacing:0.04em;background:var(--accent-soft);color:var(--accent);padding:5px 10px;border-radius:999px;white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis;}
+.progress-track{flex:1;min-width:60px;height:6px;background:var(--line);border-radius:999px;overflow:hidden;}
+.progress-fill{height:100%;background:var(--accent);width:0%;}
+.counter{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap;}
+.timer{font-family:var(--serif);font-size:15px;font-variant-numeric:tabular-nums;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:4px 10px;white-space:nowrap;}
+.card{flex:1;min-height:0;overflow-y:auto;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;display:flex;flex-direction:column;gap:15px;}
+.qblock{display:flex;flex-direction:column;gap:9px;}
+.question{font-family:var(--serif);font-size:clamp(17px,2.4vw,20px);line-height:1.45;margin:0;white-space:pre-line;}
+.stmt-head{font-size:12px;letter-spacing:0.05em;text-transform:uppercase;color:var(--muted);margin:0;padding-left:26px;}
+.stmt-list{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px;}
+.stmt-list li{display:flex;gap:10px;font-size:14.8px;line-height:1.5;}
+.stmt-list li .sn{flex:none;min-width:16px;color:var(--muted);font-variant-numeric:tabular-nums;}
+.stmt-list li .st{flex:1;min-width:0;}
+.stmt-list li .sr{color:var(--muted);}
+.ask{font-family:var(--serif);font-size:15.5px;line-height:1.45;margin:2px 0 0;font-style:italic;}
+.options{display:flex;flex-direction:column;gap:9px;}
+.option{display:flex;align-items:flex-start;gap:11px;text-align:left;background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:11px 13px;font-family:var(--sans);font-size:14.5px;color:var(--ink);cursor:pointer;line-height:1.4;width:100%;}
+.option:hover:not(:disabled){border-color:var(--accent);}
+.option:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+.option:disabled{cursor:default;}
+.opt-letter{flex:none;width:23px;height:23px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:var(--muted);}
+.option.correct{background:var(--good-soft);border-color:var(--good);}
+.option.correct .opt-letter{background:var(--good);border-color:var(--good);color:#fff;}
+.option.incorrect{background:var(--bad-soft);border-color:var(--bad);}
+.option.incorrect .opt-letter{background:var(--bad);border-color:var(--bad);color:#fff;}
+.feedback{font-size:13.5px;line-height:1.6;margin:0;padding:12px 14px;border-radius:8px;background:var(--paper);border-left:3px solid var(--accent);}
+.feedback .verdict{font-family:var(--serif);font-weight:700;font-style:italic;}
+.feedback.good{border-left-color:var(--good);}
+.feedback.good .verdict{color:var(--good);}
+.feedback.bad{border-left-color:var(--bad);}
+.feedback.bad .verdict{color:var(--bad);}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.hint{font-size:12px;color:var(--muted);text-align:center;flex:1;}
+.btn-primary{background:var(--accent);color:var(--accent-ink);border:none;border-radius:999px;padding:12px 24px;font-size:14.5px;font-weight:600;font-family:var(--sans);cursor:pointer;}
+.btn-primary:hover{filter:brightness(1.07);}
+.btn-primary:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+.btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:11px 20px;font-size:14px;font-family:var(--sans);cursor:pointer;}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
+.btn-ghost:disabled{opacity:0.35;cursor:not-allowed;}
+.btn-ghost:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+.result-screen{gap:18px;justify-content:center;display:none;}
+.result-screen h1{font-family:var(--serif);font-size:clamp(24px,4.5vw,32px);margin:0;}
+.result-sub{color:var(--muted);margin:-8px 0 0;font-size:14px;}
+.score-row{display:flex;gap:22px;flex-wrap:wrap;}
+.score-block{display:flex;flex-direction:column;gap:2px;}
+.score-num{font-family:var(--serif);font-size:30px;font-variant-numeric:tabular-nums;}
+.score-label{font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);}
+.breakdown-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px;max-height:280px;overflow-y:auto;}
+.breakdown{width:100%;border-collapse:collapse;font-size:13.5px;}
+.breakdown th,.breakdown td{padding:8px 12px;text-align:left;border-bottom:1px solid var(--line);}
+.breakdown th{color:var(--muted);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:0.05em;position:sticky;top:0;background:var(--surface);}
+.breakdown td.num{font-variant-numeric:tabular-nums;text-align:right;}
+.breakdown tr:last-child td{border-bottom:none;}
+.bd-bar{height:5px;border-radius:3px;background:var(--line);margin-top:4px;overflow:hidden;}
+.bd-bar span{display:block;height:100%;background:var(--accent);}
+.result-actions{display:flex;gap:10px;flex-wrap:wrap;}
+[hidden]{display:none !important;}
+.is-active{display:flex !important;}
+@media (prefers-reduced-motion: no-preference){
+  .option,.lesson-card{transition:background 0.15s ease,border-color 0.15s ease;}
+  .progress-fill{transition:width 0.25s ease;}
+}
+@media (max-width:480px){
+  .app{padding:16px 14px 18px;}
+  .nav{flex-wrap:wrap;}
+  .hint{order:3;width:100%;}
+  .card{padding:18px 16px;}
+}
+</style>
+
+<div class="app">
+  <section id="menu" class="screen menu-screen is-active">
+    <p class="eyebrow" id="courseEyebrow"></p>
+    <h1 id="courseTitle"></h1>
+    <p class="lede" id="courseLede"></p>
+    <ul class="how">
+      <li>Prelims-pattern: statements, pairs, assertion–reason</li>
+      <li>Options balanced — no length giveaways</li>
+      <li>Detailed explanation on every answer</li>
+      <li>Reshuffles each attempt · stopwatch</li>
+    </ul>
+    <p class="menu-label">Choose a lesson — or take the full syllabus</p>
+    <div class="lesson-list" id="lessonList"></div>
+  </section>
+
+  <section id="quiz" class="screen quiz-screen">
+    <header class="bar">
+      <span id="chapterTag" class="chapter-tag"></span>
+      <div class="progress-track"><div id="progressFill" class="progress-fill"></div></div>
+      <span id="counter" class="counter"></span>
+      <span id="timer" class="timer">00:00</span>
+    </header>
+    <main class="card">
+      <div id="qblock" class="qblock"></div>
+      <div id="options" class="options"></div>
+      <p id="feedback" class="feedback" hidden></p>
+    </main>
+    <footer class="nav">
+      <button id="prevBtn" class="btn-ghost" type="button">← Prev</button>
+      <span class="hint">Press 1–4 to answer · → next · ← prev</span>
+      <button id="nextBtn" class="btn-primary" type="button">Next →</button>
+    </footer>
+  </section>
+
+  <section id="result" class="screen result-screen">
+    <p class="eyebrow">Scorecard</p>
+    <h1 id="resultTitle">Quiz complete</h1>
+    <p class="result-sub" id="resultScope"></p>
+    <div class="score-row">
+      <div class="score-block"><span id="scoreText" class="score-num"></span><span class="score-label">Correct</span></div>
+      <div class="score-block"><span id="scorePct" class="score-num"></span><span class="score-label">Accuracy</span></div>
+      <div class="score-block"><span id="timeText" class="score-num"></span><span class="score-label">Time</span></div>
+    </div>
+    <div class="breakdown-wrap">
+      <table class="breakdown">
+        <thead><tr><th>Lesson</th><th>Score</th></tr></thead>
+        <tbody id="breakdownBody"></tbody>
+      </table>
+    </div>
+    <div class="result-actions">
+      <button id="reviewBtn" class="btn-ghost" type="button">Review answers</button>
+      <button id="restartBtn" class="btn-primary" type="button">Retake — new shuffle</button>
+      <button id="menuBtn" class="btn-ghost" type="button">↤ Lesson menu</button>
+    </div>
+  </section>
+</div>
+
+<script>
+/* ==========================================================================
+   DATA — generated from Polity/05_Quiz_MCQ/data/<class>.js by build.mjs
+   Question shape:
+     c    chapter tag (must match an entry in CHAPTERS)
+     q    stem
+     head optional column header for a "pairs" block, e.g. "Provision : Purpose"
+     L    optional array of numbered lines (statements, or "Left : Right" pairs)
+     ask  optional closing question line, e.g. "Which of the above are correct?"
+     o    four options
+     a    index of the correct option
+     e    explanation shown after answering
+   ========================================================================== */
+const COURSE = {
+  eyebrow: "Standard Reference Books · Nitin Singhania",
+  title: "Art & Culture Quiz — Nitin Singhania",
+  lede: "Prelims-pattern questions across all 24 chapters and the appendices of Indian Art and Culture — architecture and the temple sub-schools, painting, handicrafts, the two UNESCO lists, music, the classical dances, theatre and puppetry, languages, religion and philosophy, literature, the modern cultural state, science and coinage, calendars and martial arts, and India's cultural reach abroad. Art & Culture is the densest single block in the Prelims History paper and almost none of it appears in the NCERT spine. Multi-statement, count and assertion-reason sets; the statements reshuffle on every attempt and the answer code is computed afresh, so nothing about the wording, length or position gives the answer away."
+};
+const CHAPTERS = [
+  "Ch1 · Architecture, Sculpture and Pottery",
+  "Ch2 · Indian Paintings",
+  "Ch3 · Indian Handicrafts",
+  "Ch4+10 · UNESCO Heritage Lists",
+  "Ch5 · Indian Music",
+  "Ch6 · Indian Dance Forms",
+  "Ch7-9 · Theatre, Puppetry and Circus",
+  "Ch11 · Languages in India",
+  "Ch12+14 · Religions and Philosophy",
+  "Ch13 · Indian Literature",
+  "Ch15+19+20+22 · The Modern Cultural State",
+  "Ch16+23 · Science, Technology and Coins",
+  "Ch17+18+21 · Calendars, Festivals and Martial Arts",
+  "Ch24+Apx · Culture Abroad and Reference"
+];
+
+const AR = [
+  "Both A and R are true and R is the correct explanation of A",
+  "Both A and R are true but R is not the correct explanation of A",
+  "A is true but R is false",
+  "A is false but R is true"
+];
+
+const QUESTIONS = [
+
+/* ============ Ch1 · Architecture, Sculpture and Pottery ============ */
+{c:'Ch1 · Architecture, Sculpture and Pottery',
+ q:'In the context of Indian temple architecture, the term Panchayatan refers to:',
+ o:[
+    'An assembly of five village elders administering temple lands',
+    'A group of five deities installed within a single garbhagriha',
+    'A style in which four subsidiary shrines surround the main one',
+    'A five-storeyed gateway tower built into the boundary wall'],
+ a:2,
+ e:'The four subsidiary shrines sit opposite each other on either side of the mandapa, so the ground plan takes a cruciform shape, and the main shrine is square with an elongated mandapa in front. It enters the record at the third stage of Gupta temple evolution, at Deogarh and the Durga temple at Aihole. UPSC asked this exact term in 2014.'},
+{c:'Ch1 · Architecture, Sculpture and Pottery',
+ q:'The word shikhara does not mean the same thing in both temple styles. In the Dravida style it denotes:',
+ o:[
+    'Only the octagonal crowning element on top of the vimana',
+    'The entire tower rising above the sanctum of the temple',
+    'The high gateway set into the front of the boundary wall',
+    'The fluted disc laid horizontally at the top of the tower'],
+ a:0,
+ e:'In Nagara the shikhara is the whole tower over the garbhagriha; in Dravida the tower is the vimana and the shikhara is only its crowning member. The gateway is the gopuram, and the fluted horizontal disc is the amalaka, a Nagara feature that is itself crowned by a kalash.'},
+{c:'Ch1 · Architecture, Sculpture and Pottery',
+ q:'The oldest surviving rock-cut caves in India are the:',
+ o:[
+    'Badami caves, excavated by the Chalukyas of Vatapi',
+    'Barabar caves, of the third century BCE in Bihar',
+    'Ajanta caves, begun in the Satavahana period',
+    'Udayagiri caves, cut under King Kharavela'],
+ a:1,
+ e:'They were excavated for the Ajivikas under Ashoka and his grandson Dasharatha, not under Chandragupta Maurya. Singhania\'s own answer key names Bhimbetka here, but Bhimbetka is a natural rock shelter carrying paintings rather than rock-cut architecture, so for rock-cut caves the answer is Barabar.'},
+{c:'Ch1 · Architecture, Sculpture and Pottery',
+ q:'The colossal Gomateshwara image at Shravanabelagola represents:',
+ o:[
+    'Rishabhadeva, the first of the twenty-four tirthankaras',
+    'Mahavira, the last tirthankara of the Jaina tradition',
+    'Parshvanatha, the twenty-third tirthankara',
+    'Bahubali, a son of the first tirthankara'],
+ a:3,
+ e:'He is not a tirthankara at all, which is exactly what makes the question work. Bahubali was a son of Rishabhadeva, and the monolith was raised by the Ganga minister Chavundaraya. UPSC used this distinction in 2002.'},
+{c:'Ch1 · Architecture, Sculpture and Pottery',
+ q:'The Mathura school of sculpture is distinguished by its use of:',
+ o:[
+    'Spotted red sandstone, under Kushana patronage',
+    'White marble, under Satavahana patronage',
+    'Bluish-grey sandstone, under Kushana patronage',
+    'Polished black basalt, under Gupta patronage'],
+ a:0,
+ e:'White marble under the Satavahanas is Amaravati, and bluish-grey sandstone is Gandhara. Mathura is also the only one of the three that carved Hindu, Jain and Buddhist images alike, and its Buddha has a shaven head where the Gandhara Buddha has wavy hair.'},
+{c:'Ch1 · Architecture, Sculpture and Pottery',
+ q:'Painted Grey Ware is associated with:',
+ o:[
+    'The mature Harappan cities of the Indus valley',
+    'The Mauryan levels at Pataliputra and Kaushambi',
+    'The Vedic settlements of the upper Ganga plain',
+    'The Roman trading station on the Coromandel coast'],
+ a:2,
+ e:'Harappan pottery is red and black ware, the Mauryan marker is Northern Black Polished Ware, and Arikamedu is where Roulette ware is found, a Roman-contact marker of about 200 to 100 BCE.'},
+{c:'Ch1 · Architecture, Sculpture and Pottery',
+ q:'The principal monuments of the Hoysala rulers are found at:',
+ o:[
+    'Hampi and Hospet, on the banks of the Tungabhadra',
+    'Halebid and Belur, in southern Karnataka',
+    'Badami and Aihole, in the Malaprabha valley',
+    'Warangal and Palampet, in northern Telangana'],
+ a:1,
+ e:'Hampi is the Vijayanagara capital, Badami and Aihole are Chalukya, and Warangal and Palampet are Kakatiya. UPSC asked the Hoysala pair in 2001, and Somnathpur is the third major site of the group.'},
+{c:'Ch1 · Architecture, Sculpture and Pottery',
+ q:'The Ibadat Khana at Fatehpur Sikri was:',
+ o:[
+    'A chamber reserved for the emperor\'s personal prayers',
+    'The residence set aside for visiting Sufi shaikhs',
+    'A treasury built to hold the offerings of pilgrims',
+    'A hall for debate among scholars of many religions'],
+ a:3,
+ e:'It was built in 1575 and was at first open only to Sunni Muslims, then opened to Hindus, Jains, Christians and Zoroastrians. UPSC asked it in 2014, and the discussions held there fed into Akbar\'s policy of sulh-i-kul and later into the Din-i-Ilahi.'},
+{c:'Ch1 · Architecture, Sculpture and Pottery',
+ q:'Consider the following statements about Harappan art and architecture:',
+ S:[
+    ['The bull appears on Harappan seals but the cow does not.',true],
+    ['Harappan sites have yielded large monumental temples and palaces.',false],
+    ['The dancing girl of Mohenjodaro was made by the lost-wax process.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The absence of the cow from every known seal is a standing Prelims favourite, as is the absence of monumental temples and palaces, which is the contrast usually drawn with Egypt and Mesopotamia. Lost-wax casting, cire perdue, is still practised in Bastar and in Odisha.'},
+{c:'Ch1 · Architecture, Sculpture and Pottery',
+ q:'Consider the following statements about the Dravida style of temple architecture:',
+ S:[
+    ['A water tank within the temple enclosure is a regular feature.',true],
+    ['Each subsidiary shrine carries a vimana of its own.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Only the main temple gets a vimana in the Dravida style. In Nagara the position reverses on both counts, since subsidiary shrines there do get shikharas of their own, and there are no tanks or reservoirs in the premises at all.'},
+{c:'Ch1 · Architecture, Sculpture and Pottery',
+ q:'Consider the following statements about the Nagara style:',
+ S:[
+    ['Images of Ganga and Yamuna are placed outside the garbhagriha.',true],
+    ['The shikhara is crowned by an amalaka topped with a kalash.',true],
+    ['Elaborate boundary walls and gateways are among its normal features.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'High boundary walls and a gopuram gateway are Dravida markers. The Odisha sub-school is the standing exception, since its temples are enclosed by a boundary wall despite belonging to the Nagara family.'},
+{c:'Ch1 · Architecture, Sculpture and Pottery',
+ q:'Consider the following statements about the three Nagara sub-schools:',
+ S:[
+    ['In the Odisha sub-school the exterior is lavishly carved while the interior is left plain.',true],
+    ['Khajuraho temples carry carving on the interior as well as the exterior.',true],
+    ['The Solanki temples of Gujarat and Rajasthan have walls devoid of carving.',true],
+    ['The step-tank called surya-kund is a feature of the Khajuraho group.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'The step-tank belongs to the Solanki sub-school, Modhera being the type example. The Odisha porch has no pillars at all, iron girders carrying the roof instead, and Khajuraho\'s erotic sculpture draws on Vatsyayana.'},
+{c:'Ch1 · Architecture, Sculpture and Pottery',
+ q:'Consider the following statements about Pallava temple architecture:',
+ S:[
+    ['In the Mahendra group the term mandapa denotes the entire temple.',true],
+    ['Structural temples first replace rock-cut ones in the Narasimha group.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Structural temples arrive in the Rajsimha group, with the Shore Temple at Mahabalipuram and the Kailashnath at Kanchipuram. The Narasimha group is the one that divides mandapas into separate rathas, the largest being the Dharmaraja ratha from which the Dravida style descends.'},
+{c:'Ch1 · Architecture, Sculpture and Pottery',
+ q:'Consider the following statements about the Ajanta caves:',
+ S:[
+    ['They were excavated under Vakataka patronage, notably that of Harishena.',true],
+    ['They comprise twenty-nine caves, of which four are chaityas.',true],
+    ['No blue pigment occurs anywhere in the paintings.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The remaining twenty-five are viharas, and the outlines were drawn in red before the colour was laid on. Five caves belong to the Hinayana phase and twenty-four to the Mahayana phase, and both Fa Hien and Hiuen Tsang refer to the site.'},
+{c:'Ch1 · Architecture, Sculpture and Pottery',
+ q:'Consider the following statements about the Ellora caves:',
+ S:[
+    ['Of its thirty-four caves the last five are Jain.',true],
+    ['All thirty-four were excavated by Buddhist guilds before the fifth century.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Caves one to twelve are Buddhist, thirteen to twenty-nine Hindu and thirty to thirty-four Jain, of the Digambara sect, and the work runs from the fifth to the eleventh century. The guilds came from Vidarbha, Karnataka and Tamil Nadu.'},
+{c:'Ch1 · Architecture, Sculpture and Pottery',
+ q:'Assertion (A): Babur introduced the true arch and the dome to India.\nReason (R): The arcuate technique had already been in use in India for roughly three centuries before Babur.',
+ o:AR,a:3,
+ e:'Arch and dome came with the Delhi Sultanate from the late twelfth century onwards. What Babur did bring was gunpowder and the founding of the Timurid line in India. UPSC tested this in 2015.'},
+{c:'Ch1 · Architecture, Sculpture and Pottery',
+ q:'Assertion (A): The chaitya hall is a post-Mauryan development.\nReason (R): The Mauryan rock-cut excavations at Barabar produced dwelling cells rather than prayer halls.',
+ o:AR,a:0,
+ e:'Viharas, the dwellings, came first, and the quadrangular flat-roofed prayer hall was developed afterwards, with Karle as the type example. The chaitya is the prayer hall and the vihara the residence, a pair UPSC reversed in 2013 to see who would take the bait.'},
+{c:'Ch1 · Architecture, Sculpture and Pottery',
+ q:'Assertion (A): Ajanta and Mahabalipuram cannot be assigned to a single period or a single faith.\nReason (R): Both sites are rock-cut.',
+ o:AR,a:1,
+ e:'Ajanta is Buddhist and runs from about 200 BCE to 650 CE, while Mahabalipuram is Hindu and belongs to the seventh century. Being rock-cut is precisely what the two do share, which is why the 2016 question offered it as their common feature.'},
+
+/* ============ Ch2 · Indian Paintings ============ */
+{c:'Ch2 · Indian Paintings',
+ q:'The word miniature, as used of Indian painting, derives from:',
+ o:[
+    'Minimum, the Latin word for the smallest measure',
+    'Minium, the Latin term for red lead pigment',
+    'Minuere, the Latin verb meaning to diminish',
+    'Miniare, the Persian word for a court album'],
+ a:1,
+ e:'The name comes from the pigment, not from the size, though miniatures are indeed small. Singhania sets the conventions at no larger than about 25 square inches, with the subject in profile, bulging eyes and a pointed nose.'},
+{c:'Ch2 · Indian Paintings',
+ q:'The Bani Thani painting belongs to which Rajasthani sub-school?',
+ o:[
+    'Kishangarh, under Sawant Singh',
+    'Mewar, under Rana Jagat Singh',
+    'Bundi, under Rao Chattar Sal',
+    'Marwar, under Maharaja Jaswant'],
+ a:0,
+ e:'It was painted by Nihal Chand under the patron who wrote as Nagari Das. Mewar is the school of Sahibdin, Bundi is known for its lush vegetation and water scenes, and Kishangarh faces are recognised by the exaggerated arched eyebrow and elongated eye.'},
+{c:'Ch2 · Indian Paintings',
+ q:'Which pair of Pahari schools is correctly described?',
+ o:[
+    'Basohli soft and lyrical; Kangra bold and intense',
+    'Basohli bold and intense; Kangra soft and lyrical',
+    'Both schools worked in cool blues and greens alone',
+    'Both schools used only primary colours throughout'],
+ a:1,
+ e:'Basohli is the earlier and more emphatic of the two, using strong primary colour and the lotus-petal eye, while Kangra is the softer school of cool blues and greens. Reversing the pair is the standard trap.'},
+{c:'Ch2 · Indian Paintings',
+ q:'Kalamkari, a hand-painted cotton textile art, belongs to:',
+ o:[
+    'Kerala, at Guruvayur and Thrissur',
+    'Andhra Pradesh, at Srikalahasti',
+    'Karnataka, at Mysore and Bidar',
+    'Odisha, at Raghurajpur and Puri'],
+ a:1,
+ e:'UPSC asked this in 2015 with a distractor describing it as a block-painted woollen cloth of the western Himalaya. The Srikalahasti style uses a pen and is temple-centred, while Machilipatnam uses block printing.'},
+{c:'Ch2 · Indian Paintings',
+ q:'Tanjore paintings are distinguished by their use of:',
+ o:[
+    'Cloth and vellum, with vegetable dyes',
+    'Palm leaf, with lamp black and chalk',
+    'Glass and board, with gold leaf',
+    'Wet plaster, with mineral pigments'],
+ a:2,
+ e:'Cloth and vellum are the northern convention. Gesso paste made of zinc oxide and Arabic gum belongs to the neighbouring Mysore school, not to Tanjore, and the two are regularly swapped in questions.'},
+{c:'Ch2 · Indian Paintings',
+ q:'Ustad Mansur, celebrated for his studies of the zebra, the turkey and the cock, worked under:',
+ o:[
+    'Akbar',
+    'Jahangir',
+    'Shah Jahan',
+    'Aurangzeb'],
+ a:1,
+ e:'Jahangir was the great patron of natural history painting and of portraiture, and he also brought in European influence and the halo device. Under Shah Jahan the work turns to pencil sketching and heavy gold, and under Aurangzeb patronage is withdrawn altogether.'},
+{c:'Ch2 · Indian Paintings',
+ q:'Consider the following statements about prehistoric painting in India:',
+ S:[
+    ['Most of the Bhimbetka paintings belong to the Mesolithic period.',true],
+    ['Petroglyphs are rock engravings rather than early manuscripts.',true],
+    ['Bhimbetka lies in Maharashtra, close to the Gujarat border.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Bhimbetka is in Madhya Pradesh, near Bhopal. It is Warli painting that belongs to Maharashtra near the Gujarat border, and the resemblance between Warli figures and the Bhimbetka style is what makes the two easy to confuse.'},
+{c:'Ch2 · Indian Paintings',
+ q:'Consider the following statements about the Shadanga, the six limbs of painting:',
+ S:[
+    ['They are set out in a commentary on Vatsyayana\'s Kamasutra.',true],
+    ['Rupabheda refers to the knowledge of appearances.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The six limbs are rupabheda, pramanam, bhava, lavanya yojanam, sadrisyam and varnikabhanga, covering appearance, proportion, emotion, the infusion of grace, likeness and the mixing of colour. They are the earliest Indian theoretical statement about painting.'},
+{c:'Ch2 · Indian Paintings',
+ q:'Consider the following statements about regional folk painting traditions:',
+ S:[
+    ['Manjusha painting, with its snake motif, belongs to Bihar.',true],
+    ['Paitkar painting of Jharkhand takes what happens after death as a theme.',true],
+    ['Madhubani painting uses careful shading to create depth.',false],
+    ['Kalighat and Patua painting belong to Bengal.',true]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Madhubani is emphatically two-dimensional, with no shading at all, and its figures are built from double outlines filled with colour. Manjusha comes from Bhagalpur and is sometimes called snake painting.'},
+{c:'Ch2 · Indian Paintings',
+ q:'Consider the following statements about the Pala school of painting:',
+ S:[
+    ['Its surviving works were executed on palm leaf or vellum.',true],
+    ['It was the earliest Indian school to work on paper.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The Pala school is the earlier of the two pre-Mughal miniature traditions and is Buddhist in subject. The Jain or western Indian school that followed used only banana or coconut leaves, a restriction imposed by the doctrine of non-violence.'},
+{c:'Ch2 · Indian Paintings',
+ q:'Consider the following statements about painters of the modern period:',
+ S:[
+    ['Nandalal Bose illuminated the manuscript of the Indian Constitution.',true],
+    ['Raja Ravi Varma is associated with the Bengal School of art.',false],
+    ['Amrita Sher-Gil drew on both European training and Ajanta.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Ravi Varma belongs to the academic realist strand and predates the Bengal School, whose leading figures are Abanindranath Tagore and Nandalal Bose. The Bengal School was a deliberate reaction against exactly the western academic manner Ravi Varma represented.'},
+{c:'Ch2 · Indian Paintings',
+ q:'Assertion (A): The Ajanta murals cannot be attributed to Mauryan patronage.\nReason (R): The site was developed under the Satavahanas and then the Vakatakas.',
+ o:AR,a:0,
+ e:'Singhania\'s own chapter on paintings says Mauryan here while his architecture chapter says Vakataka; the architecture chapter is the correct one. This is one of roughly twenty checkable errors flagged in the notes for this book.'},
+
+/* ============ Ch3 · Indian Handicrafts ============ */
+{c:'Ch3 · Indian Handicrafts',
+ q:'The essential difference between Ikat and Bandhani is that:',
+ o:[
+    'Ikat dyes the yarn before weaving; Bandhani ties the woven cloth',
+    'Ikat ties the woven cloth; Bandhani dyes the yarn before weaving',
+    'Ikat uses a wax resist while Bandhani uses a mud resist',
+    'Ikat is block printed while Bandhani is entirely hand painted'],
+ a:0,
+ e:'Both are resist-dye techniques, which is why they are confused. Ikat is practised in Telangana, Odisha, Gujarat and Andhra Pradesh, and the double ikat of Patan in Gujarat is the patola. Bandhani belongs to Rajasthan and Gujarat.'},
+{c:'Ch3 · Indian Handicrafts',
+ q:'Bidri work is characterised by:',
+ o:[
+    'Gold inlay on a polished copper ground',
+    'Silver inlay on a blackened alloy ground',
+    'Enamel painting over a beaten brass sheet',
+    'Openwork carving in a cast bronze surface'],
+ a:1,
+ e:'The craft takes its name from Bidar in Karnataka, and the ground is a zinc and copper alloy blackened with a soil paste. Pembarthi, the sheet-metal brass work, comes from Warangal in Telangana and is a common distractor.'},
+{c:'Ch3 · Indian Handicrafts',
+ q:'The Blue Pottery of Jaipur is distinctive because it is made from:',
+ o:[
+    'Multani mitti rather than ordinary clay',
+    'Terracotta fired at unusually low heat',
+    'Porcelain imported from Central Asia',
+    'Kaolin mixed with powdered soapstone'],
+ a:0,
+ e:'It uses no clay at all, which is the point of the question, and the ware is fired only once. The blue derives from a Turko-Persian tradition that reached Jaipur through Mughal channels.'},
+{c:'Ch3 · Indian Handicrafts',
+ q:'Kasuti embroidery is distinguished by the fact that:',
+ o:[
+    'It is worked in plain undyed white cotton thread',
+    'It uses no knots and looks alike on both sides',
+    'It is worked on a nine-yard saree of Karnataka',
+    'It depicts human and animal figures in outline'],
+ a:1,
+ e:'Kasuti belongs to Karnataka and is associated with the Chalukya region. Kashida of Kashmir is the tradition in which human and animal figures are absent and the vocabulary is purely floral.'},
+{c:'Ch3 · Indian Handicrafts',
+ q:'A Nauvari saree is:',
+ o:[
+    'A six-yard saree woven in Tamil Nadu',
+    'A nine-yard saree also called Kasta',
+    'A five-yard saree of the Konkan coast',
+    'A twelve-yard saree worn in Kerala'],
+ a:1,
+ e:'It is the Maharashtrian nine-yard drape, worn in a manner that leaves the legs free. The name simply records the length, which is why the six-yard distractor is the one candidates fall for.'},
+{c:'Ch3 · Indian Handicrafts',
+ q:'Consider the following statements about Indian embroidery traditions:',
+ S:[
+    ['Phulkari belongs to Punjab.',true],
+    ['Chikankari belongs to Lucknow in Uttar Pradesh.',true],
+    ['Kashida is the embroidery tradition of Rajasthan.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Kashida belongs to Kashmir. Phulkari means flower work and is worked from the reverse of coarse khaddar, while chikankari is a white-on-white shadow work said to have been introduced by Nur Jahan.'},
+{c:'Ch3 · Indian Handicrafts',
+ q:'Consider the following statements about pottery and glassware:',
+ S:[
+    ['Roulette ware is a Harappan type found at Lothal.',false],
+    ['Thatheras of Jandiala Guru work in brass and copper.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Roulette ware dates to about 200 to 100 BCE and is found at Arikamedu, where it marks Roman contact. The Thatheras craft of Punjab is on the UNESCO intangible heritage list, inscribed in 2014.'},
+{c:'Ch3 · Indian Handicrafts',
+ q:'Consider the following statements about regional crafts:',
+ S:[
+    ['Mojadis, the embroidered footwear, belong to Rajasthan.',true],
+    ['Manoti, the camel-skin decoration craft, belongs to Jodhpur.',false],
+    ['Tirupati dolls are carved from red sandalwood.',true],
+    ['Pembarthi sheet-metal work belongs to Kerala.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Pembarthi comes from Warangal in Telangana. The red sandalwood used at Tirupati is raktachandan, and the Rajasthani mojadi centres are Jaipur and Jodhpur, with Manoti specifically a Bikaner craft.'},
+{c:'Ch3 · Indian Handicrafts',
+ q:'Consider the following statements about the four resist-dye techniques:',
+ S:[
+    ['Batik uses wax as the resisting medium.',true],
+    ['Kalamkari is a hand-painted cotton textile of South India.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The four techniques are Bandhani, Ikat, Batik and Kalamkari. In batik the wax cracks during dyeing and lets colour seep through, which produces the characteristic veined effect.'},
+
+/* ============ Ch4+10 · UNESCO Heritage Lists ============ */
+{c:'Ch4+10 · UNESCO Heritage Lists',
+ q:'Under the World Heritage criteria, which set applies to natural properties?',
+ o:[
+    'Criteria one to six',
+    'Criteria seven to ten',
+    'Criteria one to four',
+    'Criteria five to ten'],
+ a:1,
+ e:'Criteria one to six are cultural and seven to ten are natural, and a property that satisfies at least one from each half is inscribed as mixed. India has exactly one mixed site, Khangchendzonga National Park, inscribed in 2016.'},
+{c:'Ch4+10 · UNESCO Heritage Lists',
+ q:'As of 2026, the number of World Heritage Sites in India is:',
+ o:[
+    'Thirty-six',
+    'Thirty-eight',
+    'Forty',
+    'Forty-five'],
+ a:3,
+ e:'The count reached forty-five with the inscription of Sarnath on 25 July 2026, comprising thirty-seven cultural, seven natural and one mixed site. This figure moves at almost every session of the World Heritage Committee and must be re-verified before each attempt.'},
+{c:'Ch4+10 · UNESCO Heritage Lists',
+ q:'The Mountain Railways of India are counted by UNESCO as:',
+ o:[
+    'Three separate sites inscribed in three different years',
+    'One site, inscribed in 1999 and twice extended',
+    'Two sites, one for the Nilgiri and one for the rest',
+    'A tentative-list entry not yet formally inscribed'],
+ a:1,
+ e:'The Darjeeling Himalayan Railway was inscribed in 1999, the Nilgiri Mountain Railway added in 2005 and the Kalka-Shimla Railway in 2008, all as extensions of a single property. Serial and extended inscriptions of this kind are a favourite counting trap.'},
+{c:'Ch4+10 · UNESCO Heritage Lists',
+ q:'The Ramappa Temple, inscribed in 2021, is located in:',
+ o:[
+    'Telangana',
+    'Andhra Pradesh',
+    'Karnataka',
+    'Maharashtra'],
+ a:0,
+ e:'It is a Kakatiya-period temple at Palampet, near Warangal. The Kakatiya heartland is now in Telangana, which is why the Andhra Pradesh distractor works so well on candidates using older material.'},
+{c:'Ch4+10 · UNESCO Heritage Lists',
+ q:'Consider the following statements about India and the intangible cultural heritage list:',
+ S:[
+    ['India has sixteen elements on the representative list.',true],
+    ['India has no element on the list of intangible heritage in need of urgent safeguarding.',true],
+    ['The representative list ranks elements by their exceptional value.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The 2003 Convention explicitly refuses to assess elements on a comparative basis, for exclusivity or for exceptional value, which is the sharpest contrast with the World Heritage system. Singhania says ten and then lists twelve, and both figures are wrong.'},
+{c:'Ch4+10 · UNESCO Heritage Lists',
+ q:'Consider the following statements about elements of India on the intangible heritage list:',
+ S:[
+    ['Sankirtana is the ritual singing and drumming tradition of Manipur.',true],
+    ['Mudiyettu enacts the killing of the demon Darika by Kali.',true],
+    ['Ramman is a religious festival of Himachal Pradesh.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Ramman belongs to the Chamoli district of Uttarakhand. Mudiyettu is a Kerala ritual theatre and is regularly misdescribed as depicting Durga and Mahishasura, which is a different myth altogether.'},
+{c:'Ch4+10 · UNESCO Heritage Lists',
+ q:'Consider the following statements about Kutiyattam:',
+ S:[
+    ['It was among the first Indian elements proclaimed by UNESCO in 2008.',true],
+    ['Every character in the performance speaks Sanskrit.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The Vidushaka, the jester, speaks simple Malayalam while the rest use Sanskrit, and that mixture is part of what makes the form distinctive. Kutiyattam is also the oldest continuing theatre tradition in India, dating to about the tenth century in Kerala.'},
+{c:'Ch4+10 · UNESCO Heritage Lists',
+ q:'Consider the following statements about World Heritage Sites in India:',
+ S:[
+    ['The Bagh caves are inscribed on the World Heritage list.',false],
+    ['Pattadakal is in Karnataka.',true],
+    ['Moidams, inscribed in 2024, are Ahom burial mounds in Assam.',true],
+    ['Santiniketan was inscribed as a cultural property.',true]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Ajanta, Ellora and Elephanta are inscribed but the Bagh caves are not, although Bagh is the other significant surviving Gupta-period cave painting site alongside Ajanta.'},
+{c:'Ch4+10 · UNESCO Heritage Lists',
+ q:'Consider the following statements about the legal effect of World Heritage listing:',
+ S:[
+    ['Sovereignty over the property remains with the state concerned.',true],
+    ['Listing makes the property the legal property of UNESCO.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The Convention adds international recognition and access to the World Heritage Fund, along with an obligation to report on the state of conservation, but ownership and jurisdiction are unaffected. This is the part of the chapter candidates most often skip.'},
+{c:'Ch4+10 · UNESCO Heritage Lists',
+ q:'Consider the following statements about the natural and mixed sites of India:',
+ S:[
+    ['India has seven natural World Heritage Sites.',true],
+    ['Khangchendzonga National Park is the one mixed site.',true],
+    ['The Western Ghats are inscribed as a serial property.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The seven natural sites include Kaziranga, Manas, Keoladeo, the Sundarbans, Nanda Devi and Valley of Flowers, the Western Ghats and the Great Himalayan National Park. Khangchendzonga qualifies on natural criteria and on the sacred associations of the massif.'},
+{c:'Ch4+10 · UNESCO Heritage Lists',
+ q:'Assertion (A): Le Corbusier\'s work at Chandigarh is not an exclusively Indian inscription.\nReason (R): UNESCO does not allow any single country to hold an exclusive inscription of twentieth-century architecture.',
+ o:AR,a:2,
+ e:'The property is titled The Architectural Work of Le Corbusier and was inscribed in 2016 across seven countries. The Capitol Complex at Chandigarh is the Indian component of it.'},
+
+/* ============ Ch5 · Indian Music ============ */
+{c:'Ch5 · Indian Music',
+ q:'In Indian classical music, raga and tala are respectively the basis of:',
+ o:[
+    'Rhythm and melody',
+    'Melody and rhythm',
+    'Pitch and timbre',
+    'Timbre and pitch'],
+ a:1,
+ e:'Raga governs melody and tala governs rhythm, and swara, the notes, is the third of the three pillars. Singhania\'s own practice set reverses the pair, so the reversal is worth fixing in the memory deliberately.'},
+{c:'Ch5 · Indian Music',
+ q:'Of the twenty-two shrutis recognised in Indian music, the number that are audible is:',
+ o:[
+    'Seven',
+    'Nine',
+    'Twelve',
+    'Twenty-two'],
+ a:2,
+ e:'The twelve audible ones are seven shuddha swaras and five vikrita swaras. A shruti is the smallest gradation of pitch, effectively a microtone, and the distinction between shruti and swara is the highest-value pair in the chapter.'},
+{c:'Ch5 · Indian Music',
+ q:'A raga using five notes is described as:',
+ o:[
+    'Sampurna',
+    'Shadava',
+    'Odava',
+    'Vakra'],
+ a:2,
+ e:'Odava, also written audava, is the pentatonic class; shadava uses six notes and sampurna uses all seven. A raga must have at least five notes, which is precisely why the five-note category exists as the floor.'},
+{c:'Ch5 · Indian Music',
+ q:'The Jaltarang belongs to which class of instrument?',
+ o:[
+    'Sushira vadya, the wind instruments',
+    'Tata vadya, the stringed instruments',
+    'Avanaddha vadya, the covered instruments',
+    'Ghana vadya, the solid or idiophone class'],
+ a:3,
+ e:'It is a set of tuned bowls struck with sticks, so it needs no tuning of a string or a membrane, which is what defines the ghana class. The shehnai, flute and pungi are sushira, and the tabla and mridangam are avanaddha.'},
+{c:'Ch5 · Indian Music',
+ q:'Bhimsen Joshi belonged to which gharana?',
+ o:[
+    'Gwalior',
+    'Agra',
+    'Jaipur',
+    'Kirana'],
+ a:3,
+ e:'Kirana is a khyal gharana, not a dhrupad one, and Singhania mistakenly calls it dhrupad in one place while his own text elsewhere has it right. Gwalior is the gharana of Nathu Khan and Vishnu Digambar Paluskar.'},
+{c:'Ch5 · Indian Music',
+ q:'Which instrument is the standard percussion accompaniment in Carnatic music?',
+ o:[
+    'Tabla',
+    'Pakhawaj',
+    'Mridangam',
+    'Dholak'],
+ a:2,
+ e:'The tabla belongs to Hindustani music and the pakhawaj accompanies dhrupad. The flute and the violin are common to both systems, which makes them useless as discriminators and therefore attractive as distractors.'},
+{c:'Ch5 · Indian Music',
+ q:'Consider the following statements comparing thaat and raga:',
+ S:[
+    ['A thaat must have exactly seven notes.',true],
+    ['A thaat has only an ascending movement.',true],
+    ['A thaat is sung in performance and must be melodious.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'A thaat is a classifying scale and is not performed; a raga is sung, must have both ascending and descending movement, and carries vadi and samvadi notes, which a thaat does not. Bhatkhande\'s ten-thaat scheme is the one Hindustani music uses.'},
+{c:'Ch5 · Indian Music',
+ q:'Consider the following statements about Dhrupad:',
+ S:[
+    ['It originated in the Rajput courts during the Mughal period.',false],
+    ['It reached its height at the court of Akbar.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Dhrupad is far older, going back to about the thirteenth century and descending from the prabandha and dhruvapada forms, and its origins are in temple singing. UPSC put the false origin claim to candidates in 2012.'},
+{c:'Ch5 · Indian Music',
+ q:'Consider the following statements about Hindustani and Carnatic music:',
+ S:[
+    ['Hindustani ragas are assigned to particular times of day.',true],
+    ['Carnatic music observes the same time-of-day convention.',false],
+    ['Carnatic performance gives greater prominence to the composition than to improvisation of the raga outline.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Carnatic music does not follow samay. Singhania also claims Carnatic allows no freedom to improvise, which his own text contradicts two paragraphs earlier by describing ragam thanam pallavi and swara-kalpana, both improvisatory.'},
+{c:'Ch5 · Indian Music',
+ q:'Consider the following statements about Khyal and Tappa:',
+ S:[
+    ['Khyal allows the alap much less room than Dhrupad does.',true],
+    ['Tappa originated in the folk songs of camel riders of north-west India.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Khyal relies on taan, the rapid melodic run, which compresses the slow unmetred opening. Tappa was legitimised at the Mughal court but did not originate there, and that distinction between origin and patronage is the examinable point.'},
+{c:'Ch5 · Indian Music',
+ q:'Consider the following statements about the parts of a musical composition:',
+ S:[
+    ['The sthayee, also called mukhda, is the opening section.',true],
+    ['The antara is the second section.',true],
+    ['Alha is a folk form of Maharashtra.',false],
+    ['The Manganiyars are a musical community of Rajasthan.',true]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Alha belongs to Madhya Pradesh, while Maharashtra\'s folk forms are Lavani, Powada, Ovi and Bhavageete. UPSC asked about the Manganiyars in 2014 with a distractor placing them in the north-east as a martial tradition.'},
+{c:'Ch5 · Indian Music',
+ q:'Consider the following statements about the musicological texts:',
+ S:[
+    ['The Brihaddesi of Matanga is the earliest of the musicological texts.',false],
+    ['Sharangdeva composed the Sangeet Ratnakara.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The chain runs from the Samaveda through the Natya Shastra, Dattilam, Brihaddesi of Matanga, which first names raga, and then the Sangeet Ratnakara, which is the text both systems still treat as common ground.'},
+{c:'Ch5 · Indian Music',
+ q:'Assertion (A): Amir Khusrau is credited with a decisive Persian turn in Indian music.\nReason (R): He is associated with the development of the qawwali and the khyal, and with instruments such as the sitar.',
+ o:AR,a:0,
+ e:'He worked at the Delhi Sultanate court and the attributions to him are traditional rather than documentary, but the direction of influence is not in dispute. The same period gives rise to the ghazal and to a lasting fusion of Persian and Indian practice.'},
+
+/* ============ Ch6 · Indian Dance Forms ============ */
+{c:'Ch6 · Indian Dance Forms',
+ q:'In the grammar of Indian dance, Nritta refers to:',
+ o:[
+    'Dramatic representation of a story',
+    'Sentiment conveyed through mime',
+    'Pure rhythmic movement without expression',
+    'The feminine and graceful aspect of dance'],
+ a:2,
+ e:'Nritya is the expressive element with mood and mudras, and natya is dramatic representation. Nritta and nritya are one letter apart with opposite meanings, which is exactly the shape a Prelims setter builds a question around.'},
+{c:'Ch6 · Indian Dance Forms',
+ q:'Tribhanga, in the vocabulary of Indian dance and sculpture, means:',
+ o:[
+    'A combination of facial expression, gesture and make-up',
+    'A sequence of three rhythmic cycles within one tala',
+    'A threefold division of the stage used in performance',
+    'A posture with one leg bent and the body twice curved'],
+ a:3,
+ e:'It is a body posture, not an expressive technique, and it is the signature stance of Odissi, which is why that form is called mobile sculpture. UPSC offered the expressive-technique reading as a distractor in 2013.'},
+{c:'Ch6 · Indian Dance Forms',
+ q:'The dance item performed on the rim of a brass plate belongs to:',
+ o:[
+    'Bharatanatyam',
+    'Odissi',
+    'Mohiniattam',
+    'Kuchipudi'],
+ a:3,
+ e:'The item is the Tarangam, in which the dancer balances on the edge of a brass plate, often with a pot of water on the head. UPSC asked it in 2012, and Kuchipudi is also the form in which the dancer may sing or speak, making it a dance-drama.'},
+{c:'Ch6 · Indian Dance Forms',
+ q:'Mohiniattam is the classical dance of:',
+ o:[
+    'Odisha',
+    'Karnataka',
+    'Kerala',
+    'Tamil Nadu'],
+ a:2,
+ e:'Odisha\'s form is Odissi, and the two names are close enough that UPSC used exactly this confusion in 2014. Mohiniattam is lasya-dominant, uses white or off-white costume and avoids the thumping footwork of the other forms.'},
+{c:'Ch6 · Indian Dance Forms',
+ q:'Which classical dance is accompanied by Hindustani rather than Carnatic music?',
+ o:[
+    'Bharatanatyam, of Tamil Nadu',
+    'Kuchipudi, of Andhra Pradesh',
+    'Odissi, of the eastern coast',
+    'Kathakali, of northern Kerala'],
+ a:2,
+ e:'Bharatanatyam and Kuchipudi both use Carnatic music, and Odissi uses Hindustani despite being an eastern rather than a northern form. That gives a clean three-way discriminator among forms that are otherwise easy to group together.'},
+{c:'Ch6 · Indian Dance Forms',
+ q:'Sitara Devi is associated with which classical dance form?',
+ o:[
+    'Kuchipudi',
+    'Odissi',
+    'Manipuri',
+    'Kathak'],
+ a:3,
+ e:'Kathak is the form of gharanas, pirouettes and jugalbandi with the tabla. The Kuchipudi names to hold instead are the Reddy couple, Yamini Krishnamurthy and Indrani Rehman.'},
+{c:'Ch6 · Indian Dance Forms',
+ q:'Consider the following statements about the count of classical dance forms:',
+ S:[
+    ['The Sangeet Natak Akademi recognises eight classical forms.',true],
+    ['The Ministry of Culture recognises nine, adding Chhau.',true],
+    ['All Chhau dancers wear masks.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The Mayurbhanj style of Odisha uses no masks, while the Saraikella and Purulia styles do. The discrepancy in the count is real and stated in the book, so a question naming the recognising body has to be read carefully.'},
+{c:'Ch6 · Indian Dance Forms',
+ q:'Consider the following statements about Sattriya:',
+ S:[
+    ['It was initiated by Shankaradeva in the Vaishnava monasteries of Assam.',true],
+    ['Its songs are the compositions of Tulsidas, Kabir and Mirabai.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The songs are the Borgeets, composed by Shankaradeva himself, and the form was traditionally performed by the male monks known as bhokots in the sattras. UPSC offered the false attribution in 2014.'},
+{c:'Ch6 · Indian Dance Forms',
+ q:'Consider the following statements about Manipuri dance:',
+ S:[
+    ['The dancer\'s face is veiled and facial expression is de-emphasised.',true],
+    ['It emphasises devotion rather than sensuality.',true],
+    ['It is a tandava-dominant form with vigorous footwork.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Manipuri is lasya-emphasised and its movements are notably rounded and restrained, with no sharp edges. The veiled face is what makes it the one classical form in which expression is deliberately subordinate.'},
+{c:'Ch6 · Indian Dance Forms',
+ q:'Consider the following statements about the nine rasas:',
+ S:[
+    ['Karuna is the rasa of tragedy.',true],
+    ['Adbhuta is the rasa of wonder.',true],
+    ['Lavanya is among the nine rasas.',false],
+    ['Bibhatsa is the rasa of disgust.',true]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Lavanya means grace or beauty and is not a rasa at all; Singhania\'s own practice set uses precisely this distractor. The nine are shringara, roudra, bibhatsa, veera, shaant, haasya, karuna, bhayanak and adbhuta.'},
+{c:'Ch6 · Indian Dance Forms',
+ q:'Consider the following statements about the identifiers of the classical forms:',
+ S:[
+    ['Bharatanatyam is called the fire dance.',true],
+    ['Odissi is called the ballad of the east.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Odissi is the one called mobile sculpture and Mohiniattam the dance of the enchantress. The elements assigned are fire to Bharatanatyam, earth to Kuchipudi, ether to Kathakali, air to Mohiniattam and water to Odissi, with none assigned to the remaining three.'},
+{c:'Ch6 · Indian Dance Forms',
+ q:'Consider the following statements about Kathak:',
+ S:[
+    ['It has four recognised gharanas.',true],
+    ['Its Lucknow gharana developed under Wajid Ali Shah.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The four are Lucknow, Jaipur, Raigarh and Banaras, though NCERT names only the first two, so a question phrased as per NCERT should be answered as two. Singhania calls the Nawab Wajid Ali Khan, which is wrong.'},
+{c:'Ch6 · Indian Dance Forms',
+ q:'Assertion (A): Bharatanatyam was once known as Sadir or Dasiattam.\nReason (R): Rukmini Devi Arundale and E. Krishna Iyer led its revival in the twentieth century.',
+ o:AR,a:1,
+ e:'The revival is associated with Rukmini Devi Arundale and E. Krishna Iyer, and the modern repertoire sequence of alarippu, jatiswaram, shabdam, varnam, padam, tillana and shloka took its present shape through the Tanjore Quartet.'},
+
+/* ============ Ch7-9 · Theatre, Puppetry and Circus ============ */
+{c:'Ch7-9 · Theatre, Puppetry and Circus',
+ q:'The play Ratnavali was composed by:',
+ o:[
+    'Ashvaghosha',
+    'Bhasa',
+    'Shudraka',
+    'Harshavardhana'],
+ a:3,
+ e:'Ashvaghosha wrote the Sariputraprakarana, Shudraka the Mrichchhakatika and Bhasa the Svapnavasavadatta. Harsha is also credited with Priyadarshika and Nagananda, and his authorship is a recurring match-the-following item.'},
+{c:'Ch7-9 · Theatre, Puppetry and Circus',
+ q:'The oldest continuing theatre tradition in India is:',
+ o:[
+    'Yakshagana of Karnataka',
+    'Bhavai of Gujarat',
+    'Kutiyattam of Kerala',
+    'Tamasha of Maharashtra'],
+ a:2,
+ e:'Kutiyattam dates to about the tenth century and was among the first elements UNESCO proclaimed from India. Yakshagana is described as perhaps the oldest tradition, but the word continuing is what settles the question in favour of Kutiyattam.'},
+{c:'Ch7-9 · Theatre, Puppetry and Circus',
+ q:'Kundhei puppets of Odisha are:',
+ o:[
+    'Shadow puppets',
+    'Rod puppets',
+    'Glove puppets',
+    'String puppets'],
+ a:3,
+ e:'Odisha\'s shadow form is Ravanchhaya and its rod puppetry is represented elsewhere by Yampuri of Bihar and Putul Nachh. Kundhei figures have no legs and wear long flowing skirts.'},
+{c:'Ch7-9 · Theatre, Puppetry and Circus',
+ q:'Bommalattam puppetry belongs to:',
+ o:[
+    'Andhra Pradesh',
+    'Karnataka',
+    'Tamil Nadu',
+    'Kerala'],
+ a:2,
+ e:'Andhra Pradesh\'s form is Tholu Bommalata and Karnataka\'s is Togalu Gombeyatta, in which puppet size varies according to the social status of the character. Bommalattam combines rod and string techniques and uses the largest and heaviest puppets in India.'},
+{c:'Ch7-9 · Theatre, Puppetry and Circus',
+ q:'The earliest known reference to puppetry in Indian literature occurs in:',
+ o:[
+    'The Natya Shastra',
+    'The Abhinaya Darpan',
+    'The Silappadikaram',
+    'The Sangeet Ratnakara'],
+ a:2,
+ e:'The reference is in the Tamil classic, which is also where the staves of Silambam are mentioned. The Natya Shastra is the obvious guess precisely because it is the foundational text for theatre generally.'},
+{c:'Ch7-9 · Theatre, Puppetry and Circus',
+ q:'Consider the following statements about Sanskrit theatre:',
+ S:[
+    ['Plays almost invariably ended happily and tragedy was seldom portrayed.',true],
+    ['Curtains were used on the Sanskrit stage.',true],
+    ['Masks were a regular feature of Sanskrit performance.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Masks belong to Ankia Nat, Chhau and Ramman rather than to Sanskrit drama. The refusal of tragic endings is the sharpest contrast with Greek theatre and is a ready-made comparison for a Mains answer.'},
+{c:'Ch7-9 · Theatre, Puppetry and Circus',
+ q:'Consider the following statements about regional theatre forms:',
+ S:[
+    ['Bhavai belongs to Gujarat and Rajasthan.',true],
+    ['Tamasha belongs to Madhya Pradesh.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Tamasha belongs to Maharashtra, while Madhya Pradesh\'s form is Maach. Odisha\'s forms are Daskathia, Ravanchhaya and Sahi Jatra, and these state attributions are the most heavily tested part of the chapter.'},
+{c:'Ch7-9 · Theatre, Puppetry and Circus',
+ q:'Consider the following statements about the casting conventions of Indian folk theatre:',
+ S:[
+    ['In Ramlila men take the female roles including that of Sita.',true],
+    ['In Tamasha women take even the male roles.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The two conventions run in opposite directions, which is why questions reverse them. Ramlila is also on the UNESCO intangible list, inscribed in 2008.'},
+{c:'Ch7-9 · Theatre, Puppetry and Circus',
+ q:'Consider the following statements about theatre and circus:',
+ S:[
+    ['Jatra was initiated by Sri Chaitanya.',true],
+    ['Nautanki is mentioned in the Ain-i-Akbari.',true],
+    ['The Circus Academy at Thalassery is in Karnataka.',false],
+    ['Ankia Nat was initiated by Shankaradeva.',true]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Thalassery is in Kerala, and UPSC asked about it in 2010. Nautanki is an offshoot of Swang, and Shankaradeva is responsible for Ankia Nat and Sattriya but not for Jatra.'},
+{c:'Ch7-9 · Theatre, Puppetry and Circus',
+ q:'Assertion (A): Sanskrit theatre declined from about the tenth century.\nReason (R): The language of the plays had grown remote from the audiences that might have watched them.',
+ o:AR,a:0,
+ e:'Singhania sets out several converging causes, including the loss of court patronage, the rise of vernacular and devotional performance, and the rigidity of the classical conventions themselves. The argument is the ready-made structure for a Mains answer.'},
+
+/* ============ Ch11 · Languages in India ============ */
+{c:'Ch11 · Languages in India',
+ q:'As of 2026, the number of languages holding classical status in India is:',
+ o:[
+    'Six',
+    'Eight',
+    'Nine',
+    'Eleven'],
+ a:3,
+ e:'Five were added on 3 October 2024, taking the total to eleven. Pali and Prakrit are among them, and neither is in the Eighth Schedule, so classical status and scheduled status are separate lists that only partly overlap.'},
+{c:'Ch11 · Languages in India',
+ q:'Which statement about the official language position is correct?',
+ o:[
+    'Hindi is the national language of India',
+    'English is listed in the Eighth Schedule',
+    'India has no national language at all',
+    'Sanskrit is excluded from the Eighth Schedule'],
+ a:2,
+ e:'Hindi is the official language of the Union, not a national language, and the Constitution nowhere uses that term. English is not in the Eighth Schedule though it is the official language of Nagaland and Meghalaya, and Sanskrit is one of the twenty-two scheduled languages.'},
+{c:'Ch11 · Languages in India',
+ q:'The Dravidian language with the largest number of speakers is:',
+ o:[
+    'Tamil',
+    'Kannada',
+    'Malayalam',
+    'Telugu'],
+ a:3,
+ e:'Tamil is the oldest of the group and Malayalam the youngest and smallest, so the three properties are commonly swapped. Brahui, spoken in Baluchistan, is the geographical outlier of the family.'},
+{c:'Ch11 · Languages in India',
+ q:'The Brahmi script was deciphered by:',
+ o:[
+    'William Jones, in 1786',
+    'Max Müller, in 1849',
+    'Alexander Cunningham, in 1861',
+    'James Prinsep, in 1837'],
+ a:3,
+ e:'Prinsep also deciphered Kharosthi, and his work is what made the Ashokan edicts readable. Kharosthi is a sister script of Brahmi rather than a descendant of it, and it is written from right to left.'},
+{c:'Ch11 · Languages in India',
+ q:'Consider the following statements about Sanskrit, Pali and Prakrit:',
+ S:[
+    ['Pali is a form of Prakrit.',true],
+    ['Sanskrit precedes the Prakrits chronologically.',true],
+    ['Sanskrit is itself derived from Prakrit.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Old Indo-Aryan, that is Sanskrit, begins around 1500 BCE and the Prakrits from about 600 BCE. Pali, Apabhramsha and Ardha-Magadhi descend from that stock, but Sanskrit does not descend from them, and the direction is regularly reversed in distractors.'},
+{c:'Ch11 · Languages in India',
+ q:'Consider the following statements about the Eighth Schedule:',
+ S:[
+    ['Konkani was added by the ninety-second amendment.',false],
+    ['The ninety-second amendment added Bodo, Maithili, Dogri and Santhali.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The seventy-first amendment of 1992 added Konkani, Manipuri and Nepali, and the ninety-second of 2003 added the other four, bringing the schedule to twenty-two. Attributing Konkani to the later amendment is the standard trap.'},
+{c:'Ch11 · Languages in India',
+ q:'Consider the following statements about language families and scripts:',
+ S:[
+    ['Konkani belongs to the Indo-Aryan family.',true],
+    ['Gurmukhi descends from the Sharada script.',true],
+    ['Ahom survives as a thriving Sino-Tibetan language.',false],
+    ['Kharosthi is written from right to left.',true]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Ahom is extinct in the subcontinent, though the Ahom state it served shaped Assam for six centuries. Sharada itself descends from Gupta and so from Brahmi, and Gurmukhi was standardised by Guru Angad.'},
+{c:'Ch11 · Languages in India',
+ q:'Consider the following statements about the language the Buddha preached in:',
+ S:[
+    ['He is believed to have preached in Ardha-Magadhi.',true],
+    ['The Tripitaka was later written down in Pali.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The assumption that he preached in Pali is very widespread and is what the question tests. Ardha-Magadhi is also the language of the Jain canon, which is why the two traditions share a linguistic layer.'},
+{c:'Ch11 · Languages in India',
+ q:'Assertion (A): Classical language status and inclusion in the Eighth Schedule are distinct.\nReason (R): Pali and Prakrit hold classical status without appearing in the Eighth Schedule.',
+ o:AR,a:0,
+ e:'The criteria for classical status turn on a high antiquity of early texts, a body of ancient literature regarded as a heritage, and an original literary tradition, and are decided by the Ministry of Culture rather than by constitutional amendment.'},
+
+/* ============ Ch12+14 · Religions and Philosophy ============ */
+{c:'Ch12+14 · Religions and Philosophy',
+ q:'Sautrantika and Sammitiya were sects of:',
+ o:[
+    'Jainism',
+    'Buddhism',
+    'Ajivikism',
+    'Shaivism'],
+ a:1,
+ e:'They are sub-sects of the Sthavira nikaya, and UPSC asked this in 2017 with Jainism as the trap. Jainism\'s two divisions are Digambara and Svetambara, which is what makes the misdirection plausible.'},
+{c:'Ch12+14 · Religions and Philosophy',
+ q:'Which school of philosophy was founded by Jaimini?',
+ o:[
+    'Vedanta',
+    'Nyaya',
+    'Mimamsa',
+    'Vaisheshika'],
+ a:2,
+ e:'Shankaracharya belongs to Vedanta, Gautama to Nyaya and Kanada to Vaisheshika. Mimamsa is concerned with ritual action and the authority of the Vedas rather than with liberation through knowledge.'},
+{c:'Ch12+14 · Religions and Philosophy',
+ q:'The Charvaka school accepts how many elements?',
+ o:[
+    'Three',
+    'Four',
+    'Five',
+    'Seven'],
+ a:1,
+ e:'It rejects ether, akasha, on the ground that it cannot be perceived, leaving earth, water, fire and air. Perception is the only valid means of knowledge the school admits, which is what drives the rejection.'},
+{c:'Ch12+14 · Religions and Philosophy',
+ q:'The Vinaya Pitaka is traditionally held to have been compiled by:',
+ o:[
+    'Ananda, long attendant of the Buddha',
+    'Mahakashyapa, who presided at Rajgir',
+    'Moggaliputta Tissa, of the third council',
+    'Upali, a senior monk of the sangha'],
+ a:3,
+ e:'Ananda is credited with the Sutta Pitaka and Mahakashyapa with the Abhidhamma. The Vinaya deals with monastic discipline, and Upali was remembered as the specialist in the rules.'},
+{c:'Ch12+14 · Religions and Philosophy',
+ q:'Consider the following statements about the Samkhya school:',
+ S:[
+    ['Rebirth and transmigration are inherent in it.',true],
+    ['It holds that self-knowledge rather than an external agent brings liberation.',true],
+    ['It affirms the existence of God as the creator.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'What Samkhya denies is God, not rebirth, and UPSC put exactly that reversal to candidates in 2013. It is dualist, holding Prakriti and Purusha to be separate, so advaita belongs to Shankara\'s Vedanta rather than here.'},
+{c:'Ch12+14 · Religions and Philosophy',
+ q:'Consider the following statements about the orthodox and heterodox schools:',
+ S:[
+    ['Vedanta is one of the six orthodox schools.',true],
+    ['Lokayata and Kapalika are among the six orthodox schools.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The six are Samkhya, Yoga, Nyaya, Vaisheshika, Mimamsa and Vedanta, and UPSC offered Lokayata and Kapalika as distractors in 2014. The three heterodox schools are the Buddhist, the Jain and the Charvaka.'},
+{c:'Ch12+14 · Religions and Philosophy',
+ q:'Consider the following statements about Shankara and Ramanuja:',
+ S:[
+    ['Shankara held Brahman to be without attributes.',true],
+    ['Ramanuja held Brahman to possess attributes.',true],
+    ['Both made ritual action the primary means of liberation.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Shankara makes knowledge the path and Ramanuja makes devotion the path, and the pair is regularly reversed. Ritual action as the road to liberation is the Mimamsa position rather than either of theirs.'},
+{c:'Ch12+14 · Religions and Philosophy',
+ q:'Consider the following statements about Jainism and Buddhism:',
+ S:[
+    ['Mahavira was the twenty-fourth and last tirthankara.',true],
+    ['Navayana rejects Theravada, Mahayana and Vajrayana alike.',true],
+    ['Murtipujaka monks wear the muhapatti.',false],
+    ['Sallekhana currently stands prohibited throughout India.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'Rishabhadeva was the first tirthankara, so Mahavira did not found the religion. The muhapatti is worn by the Sthanakavasi and Terapanthi, and the Supreme Court stayed the Rajasthan High Court ban on sallekhana in the same year, 2015.'},
+{c:'Ch12+14 · Religions and Philosophy',
+ q:'Assertion (A): Vaisheshika is not an atheistic school despite its atomism.\nReason (R): It holds that atoms combine spontaneously, without any guiding intelligence.',
+ o:AR,a:2,
+ e:'The atheistic school among the six is none of them; Charvaka, which is heterodox, is the materialist and atheist position. Smartism, by contrast, worships five deities as equals rather than elevating one.'},
+
+/* ============ Ch13 · Indian Literature ============ */
+{c:'Ch13 · Indian Literature',
+ q:'Magical charms and spells are the distinctive content of the:',
+ o:[
+    'Rig Veda',
+    'Atharva Veda',
+    'Sama Veda',
+    'Yajur Veda'],
+ a:1,
+ e:'The Atharva Veda is also the Veda of ailments and their remedies, which is why it sits apart from the other three in subject matter. UPSC asked this in 2004, and the Rig Veda is the reflex wrong answer because it is the best known of the four.'},
+{c:'Ch13 · Indian Literature',
+ q:'The play Malavikagnimitra concerns a love story set in the reign of:',
+ o:[
+    'Harshavardhana of Kanauj',
+    'Samudragupta of Magadha',
+    'Agnimitra of the Sunga line',
+    'Kanishka of the Kushana line'],
+ a:2,
+ e:'Kalidasa wrote it about Agnimitra, son of Pushyamitra Sunga, and UPSC asked it in 2016. Ratnavali is Harsha\'s own play, and the Mrichchhakatika is a love story about Charudatta and the courtesan Vasantasena rather than an account of any campaign.'},
+{c:'Ch13 · Indian Literature',
+ q:'The Guru Granth Sahib is written in:',
+ o:[
+    'Punjabi, in the Gurmukhi script',
+    'Sanskrit, in the Devanagari script',
+    'Braj Bhasha, in the Sharada script',
+    'Sant Bhasa, in the Gurmukhi script'],
+ a:3,
+ e:'Sant Bhasa is a composite devotional idiom rather than any one regional language, and the script is Gurmukhi. Guru Arjan Dev compiled the Adi Granth in 1604 and Guru Gobind Singh expanded it into the Guru Granth Sahib later in the century.'},
+{c:'Ch13 · Indian Literature',
+ q:'The Chhayavad Yug in Hindi literature covers the period:',
+ o:[
+    '1918 to 1937',
+    '1868 to 1893',
+    '1893 to 1918',
+    '1937 to 1950'],
+ a:0,
+ e:'The Bharatendu Yug runs from 1868 to 1893 and the Dwivedi Yug from 1893 to 1918, with the Chhayavad romantics following and the progressive writing of the Chhayavadottar period after that. Attaching the Bharatendu dates to Chhayavad is the standard slip.'},
+{c:'Ch13 · Indian Literature',
+ q:'Consider the following statements about the Guru Granth Sahib:',
+ S:[
+    ['It includes compositions by thirteen Bhakti bhagats.',true],
+    ['It includes compositions by two Muslims, Kabir and Baba Farid.',true],
+    ['It contains only the hymns of the Sikh Gurus themselves.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The inclusion of voices from outside the Sikh tradition is one of the text\'s defining features and is what makes the exclusivity claim wrong. Kabir in particular sits at the meeting point of several devotional currents.'},
+{c:'Ch13 · Indian Literature',
+ q:'Consider the following statements about Jain and Zoroastrian literature:',
+ S:[
+    ['The Digambaras reject the Agamas settled at the Vallabhi council.',true],
+    ['The Gathas form all seventy-two chapters of the Yasna.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The Digambaras hold that the original teachings were lost, which is why they do not accept the recension the Svetambaras preserve. The Gathas are five chapters of the Yasna, containing seventeen hymns attributed to Zarathustra himself.'},
+{c:'Ch13 · Indian Literature',
+ q:'Assertion (A): Gandharva Veda is one of the four Vedas.\nReason (R): Music was regarded in the tradition as a means of approaching the divine.',
+ o:AR,a:3,
+ e:'The four Vedas are Rig, Yajur, Sama and Atharva. Gandharva is the Upaveda of music, attached to the Sama Veda, and each of the four Vedas has an Upaveda of this kind, such as Ayurveda for medicine and Dhanurveda for archery.'},
+
+/* ============ Ch15+19+20+22 · The Modern Cultural State ============ */
+{c:'Ch15+19+20+22 · The Modern Cultural State',
+ q:'The constitutional provision obliging the State to protect monuments of national importance is:',
+ o:[
+    'Article 29, a Fundamental Right',
+    'Article 49, a Directive Principle',
+    'Article 51A(f), a Fundamental Duty',
+    'Article 25, a Fundamental Right'],
+ a:1,
+ e:'Article 29 protects the distinct culture of any section of citizens and is a Fundamental Right, while Article 51A(f) makes valuing and preserving the heritage a Fundamental Duty of citizens. Only Article 49 addresses monuments directly, and it binds the State rather than conferring a right.'},
+{c:'Ch15+19+20+22 · The Modern Cultural State',
+ q:'Appeals against a decision of the Central Board of Film Certification now lie to:',
+ o:[
+    'The Film Certification Appellate Tribunal',
+    'The Ministry of Information and Broadcasting',
+    'The High Courts of the states concerned',
+    'The National Commission for Indian Cinema'],
+ a:2,
+ e:'The Film Certification Appellate Tribunal was abolished in 2021 by the Tribunals Reforms legislation, and its jurisdiction passed to the High Courts. Any answer naming the tribunal reflects the position before that year, which is exactly what the 2018 book still records.'},
+{c:'Ch15+19+20+22 · The Modern Cultural State',
+ q:'India\'s first indigenously produced feature film was:',
+ o:[
+    'Pundalik, of 1912',
+    'Alam Ara, of 1931',
+    'Kaliya Mardan, of 1919',
+    'Raja Harishchandra, of 1913'],
+ a:3,
+ e:'Dadasaheb Phalke made it in 1913. Pundalik came a year earlier but was an Indo-British collaboration, which is the ground on which it is excluded, and Alam Ara was the first Indian sound film rather than the first feature.'},
+{c:'Ch15+19+20+22 · The Modern Cultural State',
+ q:'Consider the following statements about the Bharat Ratna:',
+ S:[
+    ['It may not be used as a title prefixed to the recipient\'s name.',true],
+    ['Not more than three may be conferred in a single year.',true],
+    ['It remains confined to art, science, literature and public service.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The field was widened in December 2011 to any field of human endeavour, which is how sportspersons became eligible. The bar on using it as a title follows from Article 18(1), which abolishes titles other than military and academic distinctions.'},
+{c:'Ch15+19+20+22 · The Modern Cultural State',
+ q:'Consider the following statements about film certification in India:',
+ S:[
+    ['The body was set up in 1950 as the Central Board of Film Censors.',true],
+    ['The UA and S certificates were introduced by the 1952 Act itself.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The renaming to Central Board of Film Certification came under the Cinematograph Act of 1952, and the UA and S categories were added by the Certification Rules of 1983. Certification is a central function while enforcement rests with the states.'},
+{c:'Ch15+19+20+22 · The Modern Cultural State',
+ q:'Consider the following statements about cultural institutions:',
+ S:[
+    ['Kala Nidhi is the library division of the IGNCA.',true],
+    ['The Archaeological Survey of India works under the Ministry of Culture.',true],
+    ['The Crafts Council of India was founded by Kamaladevi Chattopadhyay.',true],
+    ['Kala Kosa is the division of the IGNCA that handles fundamental texts.',true]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'The Archaeological Survey works through twenty-four circles and is regularly and wrongly placed under the Ministry of Tourism. Kamaladevi Chattopadhyay founded the Crafts Council in 1976, and Pupul Jayakar is the name usually substituted for hers.'},
+{c:'Ch15+19+20+22 · The Modern Cultural State',
+ q:'Consider the following statements about the Padma awards:',
+ S:[
+    ['Government servants are generally ineligible for them.',true],
+    ['Doctors and scientists in government service are an exception.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The three grades are Padma Vibhushan, Padma Bhushan and Padma Shri, in descending order, and they were instituted in 1954 along with the Bharat Ratna. The exception for doctors and scientists is the detail most often missed.'},
+{c:'Ch15+19+20+22 · The Modern Cultural State',
+ q:'Assertion (A): The certification of films in India is a central function.\nReason (R): The Cinematograph Act of 1952 vests the power to enforce certification in the Union government alone.',
+ o:AR,a:2,
+ e:'Certification is central and rests with the Board, but enforcement, including the power to suspend a film locally, lies with the states, which is why the same film can face different treatment in different states.'},
+
+/* ============ Ch16+23 · Science, Technology and Coins ============ */
+{c:'Ch16+23 · Science, Technology and Coins',
+ q:'The earliest Indian treatise dealing with mathematics is the:',
+ o:[
+    'Sulvasutra of Baudhayana',
+    'Aryabhatiya of Aryabhata',
+    'Brahmasphuta Siddhanta',
+    'Lilavati of Bhaskara II'],
+ a:0,
+ e:'The Sulvasutras belong to about the sixth century BCE and grew out of the geometry needed to lay out sacrificial altars. The Aryabhatiya is far later, and Ganita, the Indian term for the discipline, is divided into five branches.'},
+{c:'Ch16+23 · Science, Technology and Coins',
+ q:'The first mathematician to treat zero as a number in its own right was:',
+ o:[
+    'Aryabhata',
+    'Brahmagupta',
+    'Mahaviracharya',
+    'Bhaskara I'],
+ a:1,
+ e:'He did so in the Brahmasphuta Siddhanta in the seventh century, setting out rules for operations involving zero. Mahaviracharya, of the ninth century, is credited with the method for finding the lowest common multiple.'},
+{c:'Ch16+23 · Science, Technology and Coins',
+ q:'Sanskrit legends appear on Indian coins for the first time under the:',
+ o:[
+    'Mauryas',
+    'Satavahanas',
+    'Guptas',
+    'Kushanas'],
+ a:2,
+ e:'Singhania notes this as the first appearance of Sanskrit in the history of coinage anywhere. Indo-Greek coins carry Greek and Pali in the Kharosthi script, and Kanishka\'s coins used only Greek characters.'},
+{c:'Ch16+23 · Science, Technology and Coins',
+ q:'The silver rupee, ancestor of the modern unit, was introduced by:',
+ o:[
+    'Akbar, the third Mughal emperor',
+    'Alauddin Khilji, of the Khilji line',
+    'Muhammad bin Tughlaq, of Delhi',
+    'Sher Shah Suri, of the Sur line'],
+ a:3,
+ e:'Akbar\'s contribution was the Ilahi coinage of 1579, struck for the Din-i-Ilahi, while Jahangir is remembered for the zodiac series. Muhammad bin Tughlaq is associated with the token currency experiment rather than with the rupee.'},
+{c:'Ch16+23 · Science, Technology and Coins',
+ q:'Consider the following statements about dynastic coinage:',
+ S:[
+    ['Lead was characteristically used by the Satavahanas.',true],
+    ['The Ujjain symbol is a Satavahana feature.',true],
+    ['Peacocks appear on the coins of the Guptas.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The peacock belongs to the Vardhana coins of Harsha, while Gupta reverses carry Lakshmi, Durga, Ganga, Garuda and Kartikeya. Kushana coins are of gold and copper rather than lead, so the metal alone distinguishes them from the Satavahana series.'},
+{c:'Ch16+23 · Science, Technology and Coins',
+ q:'Consider the following statements about early Indian technical literature:',
+ S:[
+    ['The Yukti Kalpa Taru deals with shipbuilding.',true],
+    ['The ship\'s compass was known as the machayantra.',true],
+    ['Nagarjuna is remembered as an astronomer.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Nagarjuna was an alchemist and chemist, associated with metallurgy and the preparation of medicines. Nava tala is the keel of the ship rather than the compass, and the two terms are easy to exchange in a hurry.'},
+{c:'Ch16+23 · Science, Technology and Coins',
+ q:'Consider the following statements about the Western Satrap coinage:',
+ S:[
+    ['It is dated in the Saka era, reckoned from 78 CE.',true],
+    ['It is dated in the Vikrama era, reckoned from 56 BCE.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The Western Satraps were the first Indian rulers to put dates on their coins, which is what makes the series so useful to historians. Confusing the two eras is among the most common errors in the whole chapter.'},
+{c:'Ch16+23 · Science, Technology and Coins',
+ q:'Assertion (A): Bijaganita is the Sanskrit term for arithmetic.\nReason (R): Indian mathematicians treated computation with numbers as the foundation of the discipline.',
+ o:AR,a:3,
+ e:'Bijaganita means algebra, literally the other mathematics, and it is Pati Ganita that covers arithmetic. The five branches of Ganita run from arithmetic and algebra through geometry, astronomy and astrology.'},
+
+/* ============ Ch17+18+21 · Calendars, Festivals and Martial Arts ============ */
+{c:'Ch17+18+21 · Calendars, Festivals and Martial Arts',
+ q:'Kalaripayattu is:',
+ o:[
+    'An ancient devotional cult of the Bhakti period',
+    'An ancient martial art surviving in South India',
+    'A style of bronze casting from the Chola period',
+    'A classical dance form recognised by the Akademi'],
+ a:1,
+ e:'UPSC asked this in 2014 with precisely those distractors. It belongs to Kerala, is among the oldest surviving martial systems, and was banned by the British along with Silambam and Thang-ta.'},
+{c:'Ch17+18+21 · Calendars, Festivals and Martial Arts',
+ q:'The Adhik Masa in the Hindu calendar is the month that has:',
+ o:[
+    'No sankranti at all, and is therefore intercalated',
+    'Two sankrantis, and is therefore intercalated',
+    'No sankranti at all, and is therefore deleted',
+    'Two sankrantis, and is therefore deleted'],
+ a:0,
+ e:'The month with two sankrantis is the Kshaya Masa, and that one is dropped from the reckoning. The lunar year falls short of the solar year by about eleven days, and the intercalary month is the device that keeps the two aligned.'},
+{c:'Ch17+18+21 · Calendars, Festivals and Martial Arts',
+ q:'The Vikram Samvat era is reckoned from:',
+ o:[
+    '78 CE',
+    '3102 BCE',
+    '56 BCE',
+    '248 CE'],
+ a:2,
+ e:'The Saka era, which the national calendar uses, begins in 78 CE, and swapping the two is the commonest error here. The Saka year opens on 22 March, or 21 March in a Gregorian leap year, and runs 365 days.'},
+{c:'Ch17+18+21 · Calendars, Festivals and Martial Arts',
+ q:'The Hornbill Festival is celebrated in:',
+ o:[
+    'Manipur, at Imphal',
+    'Nagaland, at Kisama',
+    'Sikkim, at Gangtok',
+    'Arunachal Pradesh, at Ziro'],
+ a:1,
+ e:'It runs from 1 December at Kisama and brings together the state\'s tribes. Losoong belongs to Sikkim, Bihu to Assam, and these north-eastern festivals are the part of the chapter candidates most often leave unrevised.'},
+{c:'Ch17+18+21 · Calendars, Festivals and Martial Arts',
+ q:'Consider the following statements about Indian martial arts:',
+ S:[
+    ['Silambam belongs to Tamil Nadu.',true],
+    ['Thang-ta belongs to Manipur.',true],
+    ['Chhau dance draws on the martial system called Pari-khanda.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Pari-khanda is a Bihar system built around the shield and the sword, and it supplies much of the movement vocabulary of Chhau. Thodi, or Thoda, of Himachal Pradesh is the art built around archery, and Gatka is the Punjabi tradition.'},
+{c:'Ch17+18+21 · Calendars, Festivals and Martial Arts',
+ q:'Consider the following statements about units of time and the lunar fortnight:',
+ S:[
+    ['A muhurta is equal to sixty minutes.',false],
+    ['Krishna Paksha begins the day after the full moon.',true],
+    ['Shukla Paksha begins the day after the new moon.',true],
+    ['The lunar year falls short of the solar year by ten days.',false]],
+ ask:'How many of the statements given above are correct?',
+ mode:'count',
+ e:'The shortfall is about eleven days, not ten. A muhurta is forty-eight minutes, being two ghatikas, and the panchanga is built from tithi, vara, nakshatra, yoga and karana.'},
+{c:'Ch17+18+21 · Calendars, Festivals and Martial Arts',
+ q:'Consider the following statements about the Kumbh Mela:',
+ S:[
+    ['The Maha Kumbh occurs once in one hundred and forty-four years.',true],
+    ['The Ardh Kumbh occurs every six years.',true],
+    ['Varanasi is one of the four Kumbh sites.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The four sites are Allahabad, Haridwar, Nashik-Trimbak and Ujjain. The ordinary Kumbh returns to a given site every twelve years, and the Maha Kumbh is the twelfth of those cycles, which is where the figure of a hundred and forty-four comes from.'},
+{c:'Ch17+18+21 · Calendars, Festivals and Martial Arts',
+ q:'Consider the following statements about the Hijri calendar:',
+ S:[
+    ['It makes no adjustment for the solar year.',true],
+    ['Its day begins at sunset.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Because it never intercalates, its months drift steadily through the seasons, which is why Ramzan moves earlier each Gregorian year. India recognises three calendar systems in official use, the Vikram Samvat, the Saka and the Hijri, alongside the Gregorian.'},
+{c:'Ch17+18+21 · Calendars, Festivals and Martial Arts',
+ q:'Assertion (A): Kalaripayattu is mentioned in Sangam literature.\nReason (R): The staves used in Silambam are referred to in the Silappadikaram.',
+ o:AR,a:3,
+ e:'It is Kuttu Varisai, the unarmed Tamil system, that the Sangam corpus mentions, while Kalaripayattu\'s attested history is later. The Silappadikaram reference to Silambam staves is genuine, which is what makes the pairing tempting.'},
+
+/* ============ Ch24+Apx · Culture Abroad and Reference ============ */
+{c:'Ch24+Apx · Culture Abroad and Reference',
+ q:'The ancient port of Muziris was located on the:',
+ o:[
+    'Coromandel coast, in Tamil Nadu',
+    'Konkan coast, in Maharashtra',
+    'Malabar coast, in Kerala',
+    'Kalinga coast, in Odisha'],
+ a:2,
+ e:'It was the Chera port of Sangam literature and of the Roman trade, usually identified with the neighbourhood of Pattanam near Kodungallur. Arikamedu, on the Coromandel side, is the Poduke of the classical accounts.'},
+{c:'Ch24+Apx · Culture Abroad and Reference',
+ q:'India\'s first product to receive a Geographical Indication tag was:',
+ o:[
+    'Darjeeling tea',
+    'Kanchipuram silk',
+    'Mysore silk',
+    'Alphonso mango'],
+ a:0,
+ e:'The registration was made in 2004 to 2005, and the register has since grown to roughly six hundred and fifty entries from the two hundred and sixty-seven the book records for August 2017. Hyderabad Haleem was the first prepared dish to be tagged.'},
+{c:'Ch24+Apx · Culture Abroad and Reference',
+ q:'The city of Siri, one of the seven cities of Delhi, was built by:',
+ o:[
+    'Ghiyasuddin Tughlaq',
+    'Alauddin Khilji',
+    'Firoz Shah Tughlaq',
+    'Muhammad bin Tughlaq'],
+ a:1,
+ e:'Tughlaqabad, Jahanpanah and Firozabad are the Tughlaq foundations among the seven. Qila Rai Pithora is the earliest of them, an extension of the Lal Kot of the Tomars, and Prithviraj Chauhan ruled from Ajmer rather than from Delhi.'},
+{c:'Ch24+Apx · Culture Abroad and Reference',
+ q:'Consider the following statements about the ancient ports:',
+ S:[
+    ['Arikamedu was known to classical writers as Poduke.',true],
+    ['Barygaza is identified with Bharuch in Gujarat.',true],
+    ['Tamralipti lay in what is now Odisha.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'Tamralipti is Tamluk in West Bengal and served as the Mauryan outlet to the eastern sea, while Palur is the Odisha port usually paired with it. Korkai on the Tamil coast was famous for its pearl fishery rather than for muslin.'},
+{c:'Ch24+Apx · Culture Abroad and Reference',
+ q:'Consider the following statements about Indian contributions to mathematics that travelled abroad:',
+ S:[
+    ['The binary system is described in Pingala\'s Chandahsastra.',true],
+    ['The Chandahsastra is a treatise on prosody.',true],
+    ['The sequence later named after Fibonacci appears in it as matrameru.',true]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The sequence passes from Pingala through Virahanka, Gopala and Hemachandra long before Leonardo of Pisa. That the source is a work on metre rather than on mathematics is the detail that makes the claim memorable.'},
+{c:'Ch24+Apx · Culture Abroad and Reference',
+ q:'Consider the following statements about the spread of Indian culture abroad:',
+ S:[
+    ['Angkor Wat in Cambodia was built as a Buddhist foundation dedicated to the Buddha.',false],
+    ['Borobudur in Java is a Hindu temple complex dedicated to Shiva.',false]],
+ ask:'Which of the statements given above is/are correct?',
+ mode:'code',
+ e:'The attributions are the wrong way round in both cases. Angkor Wat was built for Vishnu under Suryavarman II and only later came into Buddhist use, while Borobudur is a Buddhist monument, and Prambanan is the Shaiva complex of Java.'},
+{c:'Ch24+Apx · Culture Abroad and Reference',
+ q:'Assertion (A): Indian cultural influence in South-East Asia spread without large-scale conquest.\nReason (R): The Chola navy mounted a maritime expedition against Srivijaya in the eleventh century.',
+ o:AR,a:1,
+ e:'The absence of large-scale conquest is exactly what distinguishes this expansion, and it is the point a Mains answer on soft power has to make. The Chola naval expedition against Srivijaya is the notable exception rather than the pattern.'},
+
+];
+
+/* ---------- Engine (identical across classes) ---------- */
+function shuffle(arr){const a=arr.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+
+/* Canonical Prelims answer-code sets. For an S-question the statements are
+   reshuffled on every attempt and the correct code is worked out from which
+   ones landed where — so neither the option nor the position of the false
+   statement can be memorised. */
+const SET_CODE3=["1 and 2 only","2 and 3 only","1 and 3 only","1, 2 and 3"];
+const SET_CODE2=["1 only","2 only","Both 1 and 2","Neither 1 nor 2"];
+const SET_COUNT=["Only one","Only two","All three","None"];
+const SET_COUNT4=["Only one","Only two","Only three","All four"];
+function buildCode(mode,n,trueIdx){
+  const c=trueIdx.length;
+  if(mode==='count'){
+    const set=n===4?SET_COUNT4:SET_COUNT;
+    const text=c===0?'None':c===1?'Only one':c===2?'Only two':c===3?(n===3?'All three':'Only three'):'All four';
+    return {set:set,text:text};
+  }
+  if(n===2){
+    const text=c===2?'Both 1 and 2':c===0?'Neither 1 nor 2':(trueIdx[0]===1?'1 only':'2 only');
+    return {set:SET_CODE2,text:text};
+  }
+  const text=c===3?'1, 2 and 3':trueIdx[0]+' and '+trueIdx[1]+' only';
+  return {set:SET_CODE3,text:text};
+}
+function joinList(a){return a.length===1?String(a[0]):a.slice(0,-1).join(', ')+' and '+a[a.length-1];}
+function verdictLine(n,trueIdx,unit){
+  const U=unit==='pair'?'pair':'statement', Uc=U.charAt(0).toUpperCase()+U.slice(1);
+  const all=[];for(let i=1;i<=n;i++)all.push(i);
+  const f=all.filter(function(i){return trueIdx.indexOf(i)<0;});
+  if(f.length===0)return 'All the '+U+'s here are correct.';
+  if(trueIdx.length===0)return 'None of the '+U+'s here is correct.';
+  return Uc+(trueIdx.length===1?' ':'s ')+joinList(trueIdx)+(trueIdx.length===1?' is':' are')+' correct; '+
+         U+(f.length===1?' ':'s ')+joinList(f)+(f.length===1?' is not.':' are not.');
+}
+function buildSession(pool){return shuffle(pool).map(function(item){
+  let lines=item.L,options,correctText,auto='';
+  if(item.S){
+    const st=shuffle(item.S), n=st.length, trueIdx=[];
+    lines=st.map(function(s){return s[0];});
+    st.forEach(function(s,i){if(s[1])trueIdx.push(i+1);});
+    const built=buildCode(item.mode||'code',n,trueIdx);
+    options=built.set.slice(); correctText=built.text;
+    auto=verdictLine(n,trueIdx,item.unit)+' ';
+  } else { options=item.o.slice(); correctText=item.o[item.a]; }
+  const order=shuffle(options.map(function(text,i){return {text:text,i:i};}));
+  return {chapter:item.c,question:item.q,head:item.head,lines:lines,ask:item.ask,
+          options:order.map(function(o){return o.text;}),
+          correct:order.findIndex(function(o){return o.text===correctText;}),
+          explain:auto+item.e};
+});}
+let session=[],current=0,answers=[],startTime=null,timerInterval=null,reviewMode=false,activeScope="";
+const el=id=>document.getElementById(id);
+const screens={menu:el('menu'),quiz:el('quiz'),result:el('result')};
+function show(name){Object.keys(screens).forEach(k=>screens[k].classList.toggle('is-active',k===name));}
+el('courseEyebrow').textContent=COURSE.eyebrow; el('courseTitle').textContent=COURSE.title; el('courseLede').textContent=COURSE.lede;
+function chapterCount(name){return QUESTIONS.filter(q=>q.c===name).length;}
+function buildMenu(){
+  const list=el('lessonList'); list.innerHTML='';
+  const combined=document.createElement('button');
+  combined.className='lesson-card combined'; combined.type='button';
+  combined.innerHTML='<span class="lesson-num">★</span><span class="lesson-body"><span class="lesson-title">Full Syllabus — Combined</span><span class="lesson-meta">All '+CHAPTERS.length+' lessons · '+QUESTIONS.length+' questions, shuffled</span></span><span class="lesson-go">→</span>';
+  combined.addEventListener('click',()=>startQuiz(null)); list.appendChild(combined);
+  CHAPTERS.forEach((name,idx)=>{
+    const shortTitle=name.replace(/^Ch\d+ · /,'');
+    const btn=document.createElement('button'); btn.className='lesson-card'; btn.type='button';
+    const num=document.createElement('span'); num.className='lesson-num'; num.textContent=String(idx+1);
+    const body=document.createElement('span'); body.className='lesson-body';
+    const t=document.createElement('span'); t.className='lesson-title'; t.textContent=shortTitle;
+    const m=document.createElement('span'); m.className='lesson-meta'; m.textContent=chapterCount(name)+' questions';
+    body.appendChild(t); body.appendChild(m);
+    const go=document.createElement('span'); go.className='lesson-go'; go.textContent='→';
+    btn.appendChild(num); btn.appendChild(body); btn.appendChild(go);
+    btn.addEventListener('click',()=>startQuiz(name)); list.appendChild(btn);
+  });
+}
+function formatTime(sec){const m=Math.floor(sec/60).toString().padStart(2,'0');const s=Math.floor(sec%60).toString().padStart(2,'0');return m+':'+s;}
+function startTimer(){startTime=Date.now();clearInterval(timerInterval);timerInterval=setInterval(()=>{el('timer').textContent=formatTime((Date.now()-startTime)/1000);},1000);}
+function stopTimer(){clearInterval(timerInterval);}
+function startQuiz(chapter){
+  const pool=chapter?QUESTIONS.filter(q=>q.c===chapter):QUESTIONS;
+  activeScope=chapter?chapter.replace(/^Ch\d+ · /,''):"Full Syllabus";
+  session=buildSession(pool); answers=new Array(session.length).fill(null); current=0; reviewMode=false;
+  show('quiz'); el('timer').textContent='00:00'; startTimer(); renderQuestion();
+}
+function renderStem(item){
+  const box=el('qblock'); box.innerHTML='';
+  const stem=document.createElement('p'); stem.className='question'; stem.textContent=item.question; box.appendChild(stem);
+  if(item.head){const h=document.createElement('p'); h.className='stmt-head'; h.textContent=item.head; box.appendChild(h);}
+  if(item.lines&&item.lines.length){
+    const ol=document.createElement('ul'); ol.className='stmt-list';
+    item.lines.forEach((line,i)=>{
+      const li=document.createElement('li');
+      const n=document.createElement('span'); n.className='sn'; n.textContent=(i+1)+'.';
+      const t=document.createElement('span'); t.className='st';
+      const split=line.indexOf(' : ');
+      if(split>-1){
+        t.textContent=line.slice(0,split);
+        const r=document.createElement('span'); r.className='sr'; r.textContent=' — '+line.slice(split+3);
+        t.appendChild(r);
+      } else { t.textContent=line; }
+      li.appendChild(n); li.appendChild(t); ol.appendChild(li);
+    });
+    box.appendChild(ol);
+  }
+  if(item.ask){const a=document.createElement('p'); a.className='ask'; a.textContent=item.ask; box.appendChild(a);}
+}
+function renderQuestion(){
+  const item=session[current]; const chosen=answers[current]; const reveal=chosen!==null||reviewMode;
+  el('chapterTag').textContent=item.chapter; el('counter').textContent=(current+1)+' / '+session.length;
+  el('progressFill').style.width=((current+1)/session.length*100)+'%';
+  renderStem(item);
+  const optsBox=el('options'); optsBox.innerHTML=''; const letters=['A','B','C','D','E'];
+  item.options.forEach((opt,i)=>{
+    const btn=document.createElement('button'); btn.className='option'; btn.type='button';
+    const l=document.createElement('span'); l.className='opt-letter'; l.textContent=letters[i];
+    const t=document.createElement('span'); t.className='opt-text'; t.textContent=opt;
+    btn.appendChild(l); btn.appendChild(t);
+    if(reveal){btn.disabled=true; if(i===item.correct)btn.classList.add('correct'); else if(i===chosen)btn.classList.add('incorrect');}
+    btn.addEventListener('click',()=>selectOption(i)); optsBox.appendChild(btn);
+  });
+  const fb=el('feedback');
+  if(reveal){
+    fb.hidden=false; let verdict,cls;
+    if(chosen===null){verdict='Skipped.';cls='bad';} else if(chosen===item.correct){verdict='Correct.';cls='good';} else {verdict='Not quite.';cls='bad';}
+    fb.className='feedback '+cls;
+    fb.innerHTML=''; const v=document.createElement('span'); v.className='verdict'; v.textContent=verdict;
+    fb.appendChild(v); fb.appendChild(document.createTextNode(' '+item.explain));
+  } else { fb.hidden=true; }
+  el('prevBtn').disabled=current===0;
+  const nextBtn=el('nextBtn');
+  nextBtn.textContent = reviewMode ? (current===session.length-1?'Back to results':'Next →') : (current===session.length-1?'Finish':'Next →');
+  el('options').scrollIntoView&&el('qblock').parentElement.scrollTo({top:0});
+}
+function selectOption(i){ if(reviewMode||answers[current]!==null)return; answers[current]=i; renderQuestion(); }
+function finishQuiz(){
+  stopTimer(); const elapsed=(Date.now()-startTime)/1000; let correctCount=0; const stats={};
+  session.forEach((item,i)=>{ if(!stats[item.chapter])stats[item.chapter]={correct:0,total:0}; stats[item.chapter].total++; if(answers[i]===item.correct){correctCount++;stats[item.chapter].correct++;} });
+  show('result');
+  el('resultScope').textContent=activeScope+' · '+session.length+' questions';
+  el('scoreText').textContent=correctCount+' / '+session.length; el('timeText').textContent=formatTime(elapsed);
+  el('scorePct').textContent=Math.round(correctCount/session.length*100)+'%';
+  const body=el('breakdownBody'); body.innerHTML='';
+  CHAPTERS.filter(c=>stats[c]).forEach(c=>{
+    const s=stats[c]; const row=document.createElement('tr');
+    const td1=document.createElement('td'); td1.textContent=c.replace(/^Ch\d+ · /,'');
+    const p=Math.round(s.correct/s.total*100);
+    const bar=document.createElement('div'); bar.className='bd-bar';
+    const fill=document.createElement('span'); fill.style.width=p+'%'; bar.appendChild(fill); td1.appendChild(bar);
+    const td2=document.createElement('td'); td2.className='num'; td2.textContent=s.correct+' / '+s.total;
+    row.appendChild(td1); row.appendChild(td2); body.appendChild(row);
+  });
+}
+function enterReview(){reviewMode=true;current=0;show('quiz');renderQuestion();}
+function exitReviewToResult(){reviewMode=false;show('result');}
+el('prevBtn').addEventListener('click',()=>{if(current>0){current--;renderQuestion();}});
+el('nextBtn').addEventListener('click',()=>{
+  if(reviewMode){ if(current===session.length-1)exitReviewToResult(); else {current++;renderQuestion();} }
+  else { if(current===session.length-1)finishQuiz(); else {current++;renderQuestion();} }
+});
+el('reviewBtn').addEventListener('click',enterReview);
+el('restartBtn').addEventListener('click',()=>{ const chapter=activeScope==="Full Syllabus"?null:CHAPTERS.find(c=>c.replace(/^Ch\d+ · /,'')===activeScope); startQuiz(chapter); });
+el('menuBtn').addEventListener('click',()=>{stopTimer();show('menu');});
+document.addEventListener('keydown',(e)=>{
+  if(!screens.quiz.classList.contains('is-active'))return;
+  if(['1','2','3','4','5'].includes(e.key)&&!reviewMode){selectOption(parseInt(e.key,10)-1);}
+  else if(e.key==='ArrowRight'||e.key==='Enter'){el('nextBtn').click();}
+  else if(e.key==='ArrowLeft'){el('prevBtn').click();}
+});
+buildMenu();
+</script>

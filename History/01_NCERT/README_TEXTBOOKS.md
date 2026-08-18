@@ -95,12 +95,16 @@ curl -sS -L --max-time 200 --retry 2 -A "$UA" \
 
 ## 📈 Suggested study order for UPSC (not class order)
 
-Ancient and medieval are done first for foundation, but **Modern India carries 3–4× the marks**:
+> ✅✅ **ALL NINE BOOKS ARE WRITTEN — notes AND quiz banks.** *71 note files, ~70,100 lines, 764 audited MCQs (17 Aug 2026).* **The list below is now your REVISION order, not a reading queue.**
 
-1. ✅ **Class VI** — Ancient India *(notes + quiz complete)*
-2. 🔄 **Class VII** — Medieval India *(notes in progress)*
-3. ⭐ **Class VIII** — **Modern India / freedom struggle — the single highest-value school book**
-4. **Class XII Part III** — Colonialism, 1857, Gandhi, the Constitution
-5. **Class X** — Nationalism in India, industrialisation, print culture
-6. **Class XII Parts I & II** — deepens Ancient and Medieval for Mains
-7. **Class IX / XI** — world history; Mains GS1 only, lower priority
+Ancient and medieval come first for foundation, but **Modern India carries 3–4× the marks**:
+
+1. ✅ **Class VI** — Ancient India *(11 files · 6,545 lines)*
+2. ✅ **Class VII** — Medieval India *(10 files · 5,154 lines)*
+3. ✅ ⭐ **Class VIII** — **Modern India / freedom struggle — the single highest-value school book** *(9 files · 5,126 lines)*
+4. ✅ **Class XII Part III** — Colonialism, 1857, Gandhi, the Constitution *(7 files · 10,873 lines)*
+5. ✅ **Class X** — Nationalism in India, industrialisation, print culture *(7 files · 7,332 lines)*
+6. ✅ **Class XII Parts I & II** — deepens Ancient and Medieval for Mains *(11 files · 15,091 lines)*
+7. ✅ **Class IX / XI** — world history; Mains GS1 only, lower priority *(16 files · 20,023 lines)*
+
+> ➡️ **After these, the delta layer:** [Standard Reference Books](../02_Standard_Reference_Books/00_INDEX.md) — TN Class XI, Spectrum, TN Class XII and **Singhania Art & Culture**, all complete.

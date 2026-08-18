@@ -2,6 +2,8 @@
 
 Objective History questions (Ancient, Medieval, Modern, Art & Culture) from the UPSC Civil Services **Preliminary** examination, one file per year, with all four options and answer keys.
 
+> 🎯 **Subject cut:** **[Art & Culture strategy and PYQ map](../02_Standard_Reference_Books/Art_and_Culture_Singhania/00_STRATEGY_AND_PYQ_MAP.md)** — all **58 Art & Culture questions** in this folder, mapped to the note file each came from, with the marks arithmetic.
+>
 > **Companion set:** descriptive Mains questions live in [`../04_PYQ_Mains/00_INDEX.md`](../04_PYQ_Mains/00_INDEX.md). Prelims tests recall and precision; Mains tests argument. Use both.
 >
 > **Sibling folder:** the same pipeline built [Polity's PYQ set](../../Polity/03_PYQ_Prelims/00_INDEX.md) first — same sourcing discipline, same format.

@@ -7,6 +7,7 @@ History's own.
 ```
 _template.html      the quiz engine + styling, with a /*__DATA__*/ placeholder
 data/class06.js     Class VI · Our Pasts I (10 chapters, 117 questions)
+data/artculture.js  Singhania · Art & Culture (14 chapters, 143 questions)
 build.mjs           template + data  ->  dist/classNN.html  (self-contained)
 audit.mjs           static checks; exits non-zero on any problem
 simulate.mjs        replays 400 attempts and measures whether the quiz is guessable
@@ -33,8 +34,21 @@ Published artifacts (same URLs, updated in place — republish the same `dist/` 
 | XII — Themes in Indian History I | `class12p1` | 61 | 🧱 | https://claude.ai/code/artifact/f4139b07-3671-4bea-ba9d-1d2df5c82568 |
 | XII — Themes in Indian History II | `class12p2` | 75 | 🛕 | https://claude.ai/code/artifact/faed50aa-329e-4e70-a0a7-9ffdec8d0074 |
 | XII — Themes in Indian History III | `class12p3` | 76 | ⚖️ | https://claude.ai/code/artifact/1db21367-9ce8-4b7a-9f68-fa6d07aa4a0a |
+| **Singhania — Art & Culture** | `artculture` | **143** | 🎭 | ⚠️ **NOT PUBLISHED — see below** |
 
-All nine share the lapis accent, so **the favicon is the only thing that tells the browser tabs apart** — keep them stable across republishes. Registered in `Mission/00_ARTIFACTS.md` and on the hub page.
+All nine NCERT banks share the lapis accent, so **the favicon is the only thing that tells the browser tabs apart** — keep them stable across republishes. Registered in `Mission/00_ARTIFACTS.md` and on the hub page.
+
+### ⚠️ `artculture` is built but deliberately unpublished
+
+`dist/artculture.html` is finished and clean on both checks, but **it was NOT published as an
+Artifact**, because the session that built it was signed in to the wrong account. **Every
+artifact in this project belongs on `pavanmarapalli171862@gmail.com`** — publishing from any
+other account creates an orphan URL that cannot later be updated in place.
+
+**To publish it:** open the repo in a session signed in to that account and publish
+`05_Quiz_MCQ/dist/artculture.html`, favicon 🎭, then paste the URL into the table above,
+into `Mission/00_ARTIFACTS.md` and onto the hub page. Publish from `dist/`, never from a
+temp directory, or the source is lost.
 
 ## The rules
 
@@ -71,6 +85,21 @@ stay tellable apart; do not reuse a Polity accent here.
 `class06`, `class07`, `class08`, `class09` and `class10` are all clean on both checks.
 
 ```
+artculture — 143 questions · 62 statement sets · 15 assertion-reason · 66 plain MCQ
+prelims-pattern 54% · answer index 15/23/22/21
+truth mixes  3/2×21  2/1×17  2/2×8  4/3×7  3/3×4  4/2×3  4/4×1  2/0×1
+correct lands on A/B/C/D : 25.2% / 25.2% / 24.7% / 25.0%
+one option looks clearly longest on 0.0% of plain MCQs; shortest on 0.0%
+no statement answer code above 14%
+```
+
+⭐ **The first bank built from a standard reference book rather than an NCERT.** It covers all
+24 Singhania chapters plus the appendices, mapped onto 14 chapter tags that follow the note
+files rather than the book, since several chapters were merged where they form one system.
+**Art & Culture is 58 of the 239 questions in the Prelims PYQ folder — 24% — and had no MCQ
+practice at all before this bank.**
+
+```
 class10 — 129 questions · 60 statement sets · 13 assertion-reason · 56 plain MCQ
 prelims-pattern 57% · answer index 27/14/14/14
 truth mixes  3/2×18  4/2×8  4/3×8  3/3×7  2/1×6  2/2×5  4/1×4  2/0×2  4/4×1  3/1×1
@@ -101,8 +130,13 @@ length lines and the code histogram yourself.
 
 ## Still to do
 
-✅ **Nothing — the NCERT History series is complete.** Classes VI to XII, nine
-banks, 764 questions, all clean on both checks (17 Aug 2026).
+✅ **The NCERT History series is complete.** Classes VI to XII, nine banks, 764 questions,
+all clean on both checks (17 Aug 2026). **`artculture` adds a tenth bank, 143 questions,
+clean on both checks (18 Aug 2026) — built but awaiting publication from the right account.**
+
+⬜ **The three remaining standard books have no bank yet:** TN Class XI (Ancient + Medieval),
+Spectrum (Modern) and TN Class XII (World History). Their notes carry the same
+🔴 Prelims-traps tables this bank was built from, so the same fast route applies.
 
 ⭐ The fast route (proved on Class 10, and used for all four of the XI–XII banks):
 do **not** re-read the whole chapter to write questions. Extract just the two dense
