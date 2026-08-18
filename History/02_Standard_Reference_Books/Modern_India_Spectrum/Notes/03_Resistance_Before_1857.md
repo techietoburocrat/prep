@@ -3,7 +3,7 @@
 
 > **DELTA SIZE: 🔴 LARGE — and it is the *widest* gap in the Modern block, though not the deepest.** ⚠️ **Your NCERT notes cover the pre-1857 resistance that later became *famous* — the Santhals, the Paharias, Birsa Munda, the Paikas — and cover them BETTER than Spectrum does.** ⭐⭐⭐⭐⭐ **What they do not contain is the CATEGORY: that between 1763 and 1856 there were something like FORTY separate armed risings, that they fall into FOUR distinct types with different leaders and different logics, and that the whole south — ⭐ PULI THEVAR, VELU NACHIYAR, KATTABOMMAN, the MARUDU BROTHERS, THEERAN CHINNAMALAI and the VELLORE REVOLT OF 1806 — is missing from your notes ENTIRELY.** ⚠️ **This is also the file where the "TN adds" debt promised in the [folder index](../../00_INDEX.md) falls due, and it is paid in full in PART C.**
 
-[Index](../00_INDEX.md) | [← Previous: Advent of the Europeans](02_Advent_of_the_Europeans.md) | **📕 Spectrum file 3 of 12** | Next: Integration and the New Nation →
+[Index](../00_INDEX.md) | [← Previous: Advent of the Europeans](02_Advent_of_the_Europeans.md) | **📕 Spectrum file 3 of 12** | [Next: Integration and the New Nation →](04_Integration_and_the_New_Nation.md)
 
 ---
 
@@ -1174,6 +1174,6 @@
 
 ---
 
-[Index](../00_INDEX.md) | [← Previous: Advent of the Europeans](02_Advent_of_the_Europeans.md) | **📕 Spectrum file 3 of 12** | Next: Integration and the New Nation →
+[Index](../00_INDEX.md) | [← Previous: Advent of the Europeans](02_Advent_of_the_Europeans.md) | **📕 Spectrum file 3 of 12** | [Next: Integration and the New Nation →](04_Integration_and_the_New_Nation.md)
 
 *Written from **Spectrum Ch.6** and **TN Class XI Unit 18**, as a delta over the [NCERT History notes](../../../01_NCERT/README_TEXTBOOKS.md). ⚠️ **The "TN adds" debt recorded in the [folder index](../../00_INDEX.md) — Poligar rebellions, Vellore 1806, and the Mysore wars from the southern side — is PAID by PART C of this file.***

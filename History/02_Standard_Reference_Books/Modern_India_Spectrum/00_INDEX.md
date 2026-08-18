@@ -2,6 +2,8 @@
 ## The **MODERN + POST-INDEPENDENCE** standard reference, written as a **DELTA** over the finished NCERT notes
 
 > **What this folder is.** ⭐⭐⭐⭐⭐ **Not a second summary.** *Your Modern India notes already run to **23,331 lines** across Classes 8, 10 and 12 — **the largest NCERT block in the whole subject**. ⭐ **So Spectrum's job here is NOT to retell the freedom struggle.** It is to supply the **three things NCERT structurally cannot give you**: the **PRE-BRITISH EUROPEANS**, the **WARS AND TREATIES**, and the **INSTITUTIONAL/ADMINISTRATIVE SPINE** — plus the **entire POST-1947 story**, which NCERT History stops short of.*
+>
+> ✅✅ **STATUS (2026-08-17): THIS FOLDER IS COMPLETE — ALL 12 FILES WRITTEN, 7,794 LINES.** See the 📊 Status table at the bottom of this file for the full list.
 
 [⬅ Standard Books](../00_INDEX.md) · [TN Class XI *(Ancient + Medieval)*](../TN_State_Board_History/Class_11/00_INDEX.md) · [NCERT History](../../01_NCERT/README_TEXTBOOKS.md)
 
@@ -238,15 +240,15 @@
 | ✅ **1st** | ⭐⭐⭐⭐⭐ **5 — Expansion and Consolidation** | [`01`](Notes/01_Expansion_and_Consolidation.md) | **The single biggest hole.** Mysore, the Sikhs, Sindh, the Subsidiary Alliance and Lapse as systems, and the frontier policy — ⭐ *done in ONE file, not two* |
 | ✅ **2nd** | ⭐⭐⭐⭐⭐ **3 — Advent of the Europeans** | [`02`](Notes/02_Advent_of_the_Europeans.md) | **The other big hole**, and it is the *foundation* Ch.5 assumes — ⭐ *written with **TN Unit 16 folded in**, since that unit is the same chapter from the South Indian side* |
 | ✅ **3rd** | ⭐⭐⭐⭐⭐ **6 — Resistance Before 1857** | [`03`](Notes/03_Resistance_Before_1857.md) | ⚠️ **Pays the "TN adds" debt** — Poligars, Vellore 1806 — ⭐ *written with **TN Unit 18** folded in as **PART C**: Puli Thevar, Yusuf Khan, Velu Nachiyar, Kattabomman, the Marudus, Chinnamalai and **Vellore 1806 in full*** |
-| **4th** | ⭐⭐⭐⭐⭐ **34, 33 — The Indian States and the new nation** | `04_Integration_and_the_New_Nation.md` | **Post-1947 is a total gap, and princely-state integration is the most examined part of it** |
-| **5th** | ⭐⭐⭐⭐ **9, 8 — The reform movements** | `05_Reform_Movements.md` | Organisation-by-organisation; heavy Prelims density |
-| **6th** | ⭐⭐⭐⭐ **13, 17 — Revolutionaries and Swarajists** | `06_Revolutionaries_and_Swarajists.md` | Two total gaps that belong together |
-| **7th** | ⭐⭐⭐⭐ **31, 32 — Peasant and working-class movements** | `07_Peasant_and_Labour_Movements.md` | Two gaps, one theme |
-| **8th** | ⭐⭐⭐⭐ **18, 20, 21, 22, 24 — the institutional years** | `08_From_Simon_to_Cabinet_Mission.md` | The machinery between the mass movements |
-| **9th** | ⭐⭐⭐ **38, 36, 37, 39 — the Nehru era and after** | `09_The_Nehru_Years.md` | Completes Unit 10 |
-| **10th** | ⭐⭐⭐ **10, 11, 12, 14 — nationalism's first three decades** | `10_Early_Nationalism_Topups.md` | Deltas over Cl.8 Ch.8 |
-| **11th** | ⭐⭐⭐ **1, 2 — sources and historiography** | `11_Sources_and_Historiography.md` | ⭐ Short, but a named Mains asset |
-| **last** | **4, 7, 16, 19, 25, 26, 27, 28, 29, 30** | `12_Topup_Tables.md` | ⭐ **Top-up tables only** — 1857 leaders · Press Acts · education despatches · Round Tables · Mountbatten Plan clauses · the drain-theory argument · ⚠️ **and the Ch.26 CROSS-LINK to Polity** |
+| ✅ **4th** | ⭐⭐⭐⭐⭐ **34, 33 — The Indian States and the new nation** | [`04`](Notes/04_Integration_and_the_New_Nation.md) | **Post-1947 is a total gap, and princely-state integration is the most examined part of it** — ⭐ *hands over to [Laxmikanth Ch.5](../../../Polity/02_Laxmikanth/05_Union_and_its_Territory.md) at the Seventh Amendment* |
+| ✅ **5th** | ⭐⭐⭐⭐ **9, 8 — The reform movements** | [`05`](Notes/05_Reform_Movements.md) | Organisation-by-organisation; heavy Prelims density — ⭐ *plus the REFORMIST/REVIVALIST frame and the MIDDLE-CLASS PARADOX* |
+| ✅ **6th** | ⭐⭐⭐⭐ **13, 17 — Revolutionaries and Swarajists** | [`06`](Notes/06_Revolutionaries_and_Swarajists.md) | Two total gaps that belong together — Kakori, HSRA, Bhagat Singh's Marxist turn, Chittagong, the Swarajist Party in full |
+| ✅ **7th** | ⭐⭐⭐⭐ **31, 32 — Peasant and working-class movements** | [`07`](Notes/07_Peasant_and_Labour_Movements.md) | Two gaps, one theme — Indigo Revolt, Tebhaga, Telangana's peasant side, and the entire labour movement (AITUC, the 1926/1929 Acts, Meerut) |
+| ✅ **8th** | ⭐⭐⭐⭐ **18, 20, 21, 22, 24 — the institutional years** | [`08`](Notes/08_From_Simon_to_Cabinet_Mission.md) | The machinery between the mass movements — Simon, the Nehru Report, the 1935 Act in full, 28 months of Congress rule, the Bose crisis, the INA trials and RIN Mutiny |
+| ✅ **9th** | ⭐⭐⭐ **38, 36, 37, 39 — the Nehru era and after** | [`09`](Notes/09_The_Nehru_Years.md) | Completes Unit 10 — Panchsheel's real origin, the 1952 election, the party system, 1962 and 1965, Shastri in full |
+| ✅ **10th** | ⭐⭐⭐ **10, 11, 12, 14 — nationalism's first three decades** | [`10`](Notes/10_Early_Nationalism_Topups.md) | Deltas over Cl.8 Ch.8 — pre-Congress associations, the three theories, Morley-Minto and the Home Rule League in full |
+| ✅ **11th** | ⭐⭐⭐ **1, 2 — sources and historiography** | [`11`](Notes/11_Sources_and_Historiography.md) | ⭐ Short, but a named Mains asset — turned out to be **EIGHT** named schools, not seven |
+| ✅ **last** | **4, 7, 16, 19, 25, 26, 27, 28, 29, 30** | [`12`](Notes/12_Topup_Tables.md) | ⭐ **Top-up tables only** — 1857 leaders · Press Acts · education despatches · Round Tables · Mountbatten Plan clauses · the drain-theory argument · ⚠️ **and the Ch.26 CROSS-LINK to Polity — done** |
 | ⛔ | **15, 23 *(Pakistan half)*, 35** | — | **Skipped** — your Class 12 Themes and Polity notes are better |
 
 ---
@@ -280,15 +282,21 @@
 | 1 | 5 — Expansion and Consolidation | [`01_Expansion_and_Consolidation.md`](Notes/01_Expansion_and_Consolidation.md) | ✅ **806 lines** |
 | 2 | 3 — Advent of the Europeans *(+ TN Unit 16)* | [`02_Advent_of_the_Europeans.md`](Notes/02_Advent_of_the_Europeans.md) | ✅ **1,041 lines** |
 | 3 | 6 — Resistance Before 1857 *(+ TN Unit 18)* | [`03_Resistance_Before_1857.md`](Notes/03_Resistance_Before_1857.md) | ✅ **1,179 lines** — ⭐ **the "TN adds" debt PAID** |
-| 4 | 34, 33 — Integration and the new nation | `04_Integration_and_the_New_Nation.md` | ⏳ |
-| 5 | 9, 8 — Reform movements | `05_Reform_Movements.md` | ⏳ |
-| 6 | 13, 17 — Revolutionaries and Swarajists | `06_Revolutionaries_and_Swarajists.md` | ⏳ |
-| 7 | 31, 32 — Peasant and labour movements | `07_Peasant_and_Labour_Movements.md` | ⏳ |
-| 8 | 18, 20, 21, 22, 24 — the institutional years | `08_From_Simon_to_Cabinet_Mission.md` | ⏳ |
-| 9 | 38, 36, 37, 39 — the Nehru years | `09_The_Nehru_Years.md` | ⏳ |
-| 10 | 10, 11, 12, 14 — early nationalism | `10_Early_Nationalism_Topups.md` | ⏳ |
-| 11 | 1, 2 — sources and historiography | `11_Sources_and_Historiography.md` | ⏳ |
-| 12 | the rest | `12_Topup_Tables.md` | ⏳ |
+| 4 | 34, 33 — Integration and the new nation | [`04_Integration_and_the_New_Nation.md`](Notes/04_Integration_and_the_New_Nation.md) | ✅ **664 lines** — ⭐ *the file [Cl.12 Th.12](../../01_NCERT/Class_12_Themes_in_Indian_History_III/Notes/12_Theme12_Framing_the_Constitution.md) tells you to go and find* |
+| 5 | 9, 8 — Reform movements | [`05_Reform_Movements.md`](Notes/05_Reform_Movements.md) | ✅ **565 lines** — ⭐ *resolves a contradiction between Spectrum's own Ch.6 and Ch.9* |
+| 6 | 13, 17 — Revolutionaries and Swarajists | [`06_Revolutionaries_and_Swarajists.md`](Notes/06_Revolutionaries_and_Swarajists.md) | ✅ **692 lines** |
+| 7 | 31, 32 — Peasant and labour movements | [`07_Peasant_and_Labour_Movements.md`](Notes/07_Peasant_and_Labour_Movements.md) | ✅ **656 lines** |
+| 8 | 18, 20, 21, 22, 24 — the institutional years | [`08_From_Simon_to_Cabinet_Mission.md`](Notes/08_From_Simon_to_Cabinet_Mission.md) | ✅ **613 lines** |
+| 9 | 38, 36, 37, 39 — the Nehru years | [`09_The_Nehru_Years.md`](Notes/09_The_Nehru_Years.md) | ✅ **518 lines** — ⭐ **completes Unit 10** |
+| 10 | 10, 11, 12, 14 — early nationalism | [`10_Early_Nationalism_Topups.md`](Notes/10_Early_Nationalism_Topups.md) | ✅ **431 lines** — ⭐ **the Morley-Minto Reforms and the Home Rule League, both total gaps, are now closed** |
+| 11 | 1, 2 — sources and historiography | [`11_Sources_and_Historiography.md`](Notes/11_Sources_and_Historiography.md) | ✅ **208 lines** — ⭐ **eight named schools, not seven; the archive map and the four expatriate revolutionary newspapers** |
+| 12 | the rest | [`12_Topup_Tables.md`](Notes/12_Topup_Tables.md) | ✅ **422 lines — CLOSES SPECTRUM AT 12/12.** Mughal-decline historiography, the 1857 leader table, all three RTCs, the Mountbatten Plan/Independence Act, the Ch.26 admin/judicial cross-link, a full Viceroys-at-a-glance table, deindustrialisation + drain theory, Press Acts, education timeline |
+
+---
+
+## ✅✅ SPECTRUM COMPLETE (2026-08-17) — 12 of 12 files, 7,794 lines
+
+⭐⭐⭐⭐⭐ Every one of the 39 chapters has been triaged and written — as full notes, as a delta, or as an explicit cross-link to Laxmikanth/the NCERT Themes where those are already better. **Next in the "wrap History whole subject" plan:** the PYQ folders (Prelims + Mains, both empty), Art & Culture/Singhania (blocked on sourcing), and TN Class XII World History (smallest remaining delta, not yet started).
 
 ---
 
