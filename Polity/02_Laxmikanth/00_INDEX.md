@@ -9,13 +9,28 @@
 | | |
 |---|---|
 | **Total chapters** | **~79**, across **10 Parts** ⚠️ *numbering varies by edition — the Part structure is stable, chapter numbers shift* |
-| **Notes written so far** | **11 — ✅ PART I COMPLETE** (chapters 1–11) |
+| **Notes written so far** | **38 — ✅ PARTS I–V COMPLETE** (Ch 1–38) |
 | **Realistic first read, full-time aspirant** | **50–60 focused hours** ≈ **8 weeks** at 1–1.5 hrs/day, or **4 weeks** at 2.5–3 hrs/day |
 | **Prelims yield** | **~15–20 questions** of 100 in GS Paper I. Post-2023 it has trended nearer **15** |
 | **Mains yield** | GS Paper II is 250 marks; the **polity + governance** portion is typically **110–175 marks** |
 | **Best return in the syllabus** | Roughly **300+ marks across both stages from one book.** Nothing else in the syllabus concentrates like this |
 
 > ⚠️ **The single most important thing to understand before you start:** Laxmikanth is a **reference book, not a textbook**. Reading it cover-to-cover once and moving on is the most common way aspirants waste three months. It is built for **three passes**, and the value is almost entirely in passes two and three. More on this below.
+
+---
+
+## 📁 How this folder is organised
+
+Each **Part** of the book has its own folder with its own `00_INDEX.md`. Chapter files live inside their Part folder, and every chapter links back to both its **Part Index** and this **Master** index.
+
+| Part | Folder | Status |
+|---|---|---|
+| I — Constitutional Framework | [`Part_I_Constitutional_Framework/`](Part_I_Constitutional_Framework/00_INDEX.md) | ✅ Ch 1–11 |
+| II — System of Government | [`Part_II_System_of_Government/`](Part_II_System_of_Government/00_INDEX.md) | ✅ Ch 12–16 |
+| III — Central Government | [`Part_III_Central_Government/`](Part_III_Central_Government/00_INDEX.md) | ✅ Ch 17–29 |
+| IV — State Government | [`Part_IV_State_Government/`](Part_IV_State_Government/00_INDEX.md) | ✅ Ch 30–36 |
+| V — Local Government | [`Part_V_Local_Government/`](Part_V_Local_Government/00_INDEX.md) | ✅ Ch 37–38 |
+| VI–X | created as each Part is written | ⏳ pending |
 
 ---
 
@@ -67,37 +82,37 @@ The priority column below is **not my opinion**. It is derived from counting the
 
 ## 📚 THE FULL CHAPTER MAP
 
-### PART I — Constitutional Framework *(Ch 1–11)* ✅ **COMPLETE**
+### [PART I — Constitutional Framework *(Ch 1–11)* ✅ **COMPLETE**](Part_I_Constitutional_Framework/00_INDEX.md)
 **Total ~14 hrs · The foundation. Everything else assumes this.**
 
 | # | Chapter | Priority | Hrs | Notes |
 |---|---|---|---|---|
-| 1 | [Historical Background](01_Historical_Background.md) | 🟡 | 0.75 | ✅ Written |
-| 2 | [Making of the Constitution](02_Making_of_the_Constitution.md) | 🟡 | 0.75 | ✅ Written |
-| 3 | [Salient Features](03_Salient_Features.md) | 🔴 | 1.5 | ✅ Written |
-| 4 | [Preamble](04_Preamble.md) | 🔴 | 1 | ✅ Written |
-| 5 | [Union and its Territory](05_Union_and_its_Territory.md) | 🟠 | 1 | ✅ Written |
-| 6 | [Citizenship](06_Citizenship.md) | 🟠 | 1 | ✅ Written |
-| 7 | [Fundamental Rights](07_Fundamental_Rights.md) | 🔴🔴 | **3** | ✅ Written — **biggest chapter in the book** |
-| 8 | [Directive Principles](08_DPSP.md) | 🔴 | 1.5 | ✅ Written |
-| 9 | [Fundamental Duties](09_Fundamental_Duties.md) | 🟡 | 0.5 | ✅ Written |
-| 10 | [Amendment of the Constitution](10_Amendment_of_the_Constitution.md) | 🔴 | 1.5 | ✅ Written |
-| 11 | [Basic Structure of the Constitution](11_Basic_Structure.md) | 🔴 | 1.5 | ✅ Written |
+| 1 | [Historical Background](Part_I_Constitutional_Framework/01_Historical_Background.md) | 🟡 | 0.75 | ✅ Written |
+| 2 | [Making of the Constitution](Part_I_Constitutional_Framework/02_Making_of_the_Constitution.md) | 🟡 | 0.75 | ✅ Written |
+| 3 | [Salient Features](Part_I_Constitutional_Framework/03_Salient_Features.md) | 🔴 | 1.5 | ✅ Written |
+| 4 | [Preamble](Part_I_Constitutional_Framework/04_Preamble.md) | 🔴 | 1 | ✅ Written |
+| 5 | [Union and its Territory](Part_I_Constitutional_Framework/05_Union_and_its_Territory.md) | 🟠 | 1 | ✅ Written |
+| 6 | [Citizenship](Part_I_Constitutional_Framework/06_Citizenship.md) | 🟠 | 1 | ✅ Written |
+| 7 | [Fundamental Rights](Part_I_Constitutional_Framework/07_Fundamental_Rights.md) | 🔴🔴 | **3** | ✅ Written — **biggest chapter in the book** |
+| 8 | [Directive Principles](Part_I_Constitutional_Framework/08_DPSP.md) | 🔴 | 1.5 | ✅ Written |
+| 9 | [Fundamental Duties](Part_I_Constitutional_Framework/09_Fundamental_Duties.md) | 🟡 | 0.5 | ✅ Written |
+| 10 | [Amendment of the Constitution](Part_I_Constitutional_Framework/10_Amendment_of_the_Constitution.md) | 🔴 | 1.5 | ✅ Written |
+| 11 | [Basic Structure of the Constitution](Part_I_Constitutional_Framework/11_Basic_Structure.md) | 🔴 | 1.5 | ✅ Written |
 
-### PART II — System of Government *(Ch 12–16)*
+### [PART II — System of Government *(Ch 12–16)* ✅ **COMPLETE**](Part_II_System_of_Government/00_INDEX.md)
 **Total ~8 hrs · 🔴 The conceptual spine of GS-II.**
 
 | # | Chapter | Priority | Hrs |
 |---|---|---|---|
-| 12 | Parliamentary System | 🔴 | 1.5 |
-| 13 | Federal System | 🔴 | 1.5 |
-| 14 | Centre–State Relations | 🔴🔴 | **2.5** |
-| 15 | Inter-State Relations | 🟠 | 1 |
-| 16 | Emergency Provisions | 🔴🔴 | **2** |
+| 12 | ✅ [Parliamentary System](Part_II_System_of_Government/12_Parliamentary_System.md) | 🔴 | 1.5 |
+| 13 | ✅ [Federal System](Part_II_System_of_Government/13_Federal_System.md) | 🔴 | 1.5 |
+| 14 | ✅ [Centre–State Relations](Part_II_System_of_Government/14_Centre_State_Relations.md) | 🔴🔴 | **2.5** |
+| 15 | ✅ [Inter-State Relations](Part_II_System_of_Government/15_Inter_State_Relations.md) | 🟠 | 1 |
+| 16 | ✅ [Emergency Provisions](Part_II_System_of_Government/16_Emergency_Provisions.md) | 🔴🔴 | **2** |
 
 > 💡 **Ch 14 and 16 are among the highest-yield chapters in the entire book.** Centre–State relations produced 33 Mains questions; Emergency underpins the ADM Jabalpur / 44th Amendment story that runs through half the syllabus.
 
-### PART III — Central Government *(Ch 17–29)*
+### [PART III — Central Government *(Ch 17–29)*](Part_III_Central_Government/00_INDEX.md) ✅ **COMPLETE**
 **Total ~14 hrs · The institutions themselves.**
 
 | # | Chapter | Priority | Hrs |
@@ -118,7 +133,7 @@ The priority column below is **not my opinion**. It is derived from counting the
 
 > 🔑 **Chapter 22 (Parliament) is the single highest-yield chapter in Laxmikanth.** Money Bills, sessions, motions, devices, privileges, the Speaker — give it three full sittings, not one.
 
-### PART IV — State Government *(Ch 30–36)*
+### [PART IV — State Government *(Ch 30–36)*](Part_IV_State_Government/00_INDEX.md) ✅ **COMPLETE**
 **Total ~8 hrs · Mirrors Part III. Read it as *differences*, not from scratch.**
 
 | # | Chapter | Priority | Hrs |
@@ -134,7 +149,7 @@ The priority column below is **not my opinion**. It is derived from counting the
 > 💡 **Reading trick that saves ~4 hours:** don't re-learn Part IV. Read each chapter asking only *"how does this differ from the Union equivalent?"* Governor vs President, State Legislature vs Parliament, High Court vs Supreme Court. **The exam tests the differences, not the similarities.**
 > Ch 36 (Articles 371A–371J) has become high-value post-2019 — J&K, Nagaland, Article 370.
 
-### PART V — Local Government *(Ch 37–38)*
+### [PART V — Local Government *(Ch 37–38)*](Part_V_Local_Government/00_INDEX.md) ✅ **COMPLETE**
 **Total ~3.5 hrs · 🟠 13 Mains + ~8 Prelims questions.**
 
 | # | Chapter | Priority | Hrs |
@@ -312,8 +327,8 @@ You are not a full-time aspirant, so here's the honest adaptation. At **1–1.5 
 
 | Folder | What's in it | Use it for |
 |---|---|---|
-| **`02_Laxmikanth/`** *(here)* | Chapters 1–10 written; 11–79 pending | Your primary study notes |
-| [`03_PYQ_Prelims/`](../03_PYQ_Prelims/00_INDEX.md) | **147 objective PYQs**, 2013–2023, options + answer keys, collapsible answers | Pass 2 and 3 self-testing |
+| **`02_Laxmikanth/`** *(here)* | Chapters **1–38 written** (Parts I–V complete); **39–79 pending** | Your primary study notes |
+| [`03_PYQ_Prelims/`](../03_PYQ_Prelims/00_INDEX.md) | **192 objective PYQs**, 2013–2026, options + answer keys, collapsible answers | Pass 2 and 3 self-testing |
 | [`04_PYQ_Mains/`](../04_PYQ_Mains/00_INDEX.md) | **299 descriptive PYQs**, 2000–2026, by year and by theme | Seeing how each topic is actually asked |
 | [`01_NCERT/`](../01_NCERT/) | Class 6–12 foundation notes | When a concept here moves too fast |
 

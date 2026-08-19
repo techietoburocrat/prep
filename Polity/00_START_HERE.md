@@ -37,7 +37,7 @@ Polity/
 1. Open **[02_Laxmikanth/00_INDEX.md](02_Laxmikanth/00_INDEX.md)**
 2. Install the Mermaid extension (30 seconds — instructions at the top of that file) so diagrams render
 3. Read the **priority table** — it tells you which chapters carry the marks, derived from counting the actual PYQs in folders 03 and 04
-4. Start **[Chapter 1](02_Laxmikanth/01_Historical_Background.md)**
+4. Start **[Chapter 1](02_Laxmikanth/Part_I_Constitutional_Framework/01_Historical_Background.md)**
 
 ---
 

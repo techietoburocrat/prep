@@ -21,73 +21,84 @@ Objective polity questions from the UPSC Civil Services **Preliminary** examinat
 | [**2021**](2021.md) | 18 | |
 | [**2022**](2022.md) | 10 | Sharply legal — contempt, writs, Bar Councils |
 | [**2023**](2023.md) | 15 | New counting + Statement-I/II formats appear |
+| [**2024**](2024.md) | 19 | ✅ **Official UPSC key.** 3 questions dropped from the paper (none polity) |
+| [**2025**](2025.md) | 14 | ✅ **Official UPSC key.** A federalism-heavy year; Roman-numeral statements |
+| [**2026**](2026.md) | 12 | ⚠️ **No official key yet** — answers are worked, not UPSC's. Governance/ethics scenarios enter GS-I |
 
-**Total compiled: 147 questions across 11 years.**
+**Total compiled: 192 questions across 14 years — every year from 2013 to 2026.**
 
 Every file has `← previous` / `next →` links, collapsible answers for self-testing, and an answer-key table at the foot.
 
 ---
 
-## ⏳ Not yet compiled — 2000–2012 and 2024–2026
+## 📌 Sourcing status — read once, then trust the files
 
-I have **not** written these files, and I'd rather say so than fill them with plausible-looking questions.
+**2013–2023** were compiled from sources that reproduce the papers inline.
 
-MCQs need four options and a verified answer key reproduced exactly. Unlike the Mains stems, an invented option or a wrong key actively teaches you something false. So every question above was pulled from a source that reproduces the paper inline — nothing was written from memory.
+**2024, 2025 and 2026** are keyed to the **official UPSC PDFs**, which now sit in [`_source_pdfs/`](_source_pdfs/):
 
-**What's blocking each range:**
-
-| Range | Status |
+| File | What it is |
 |---|---|
-| **2024, 2025, 2026** | Papers exist and Prelims 2026 was held on 24 May 2026, but every source found so far publishes them as **PDF or Google-Drive downloads only**. The one year-organised site that has them inline returns paraphrased stems ("considers three statements about Panchayats…") rather than printed wording, and omits answer keys. |
-| **2009, 2011, 2012** | The archive hosts these papers as **scanned images**, not text. |
-| **2000–2008, 2010** | Partially available. 2004, 2005 and 2006 yielded some questions inline but **without answer keys**, and the older papers ran 150 questions across multiple sub-pages, so coverage was incomplete. |
+| `CSP_2024_GS1.pdf` | Official question paper, Series A |
+| `CSP_2024_GS1_OFFICIAL_ANSWER_KEY.pdf` | Official UPSC answer key |
+| `CSP_2025_GS1.pdf` | Official question paper, Series A |
+| `CSP_2025_GS1_OFFICIAL_ANSWER_KEY.pdf` | Official UPSC answer key |
+| `CSP_2026_GS1.pdf` | Official question paper, Series A |
 
-**Also worth knowing:** the pre-2011 Prelims was a different exam — 150 questions, no CSAT, and a much more factual style. For a CSE 2027 target, the 2013-onward set above is the material that actually reflects the current paper.
+These are **scanned image PDFs with no text layer** — they were read page by page. Keep them: they are the ground truth for these three years, and UPSC removes old files from its site without notice.
 
-**To finish the remaining years I'd need either** a source that renders those papers as inline text, or for you to drop the official UPSC PDFs into this folder so I can read them directly. The second option is the reliable one — [upsc.gov.in](https://upsc.gov.in) publishes every paper and, since 2023, official answer keys.
+### The one answer you cannot yet trust
+
+**2026 has no official answer key.** UPSC publishes a Prelims key only **after the whole cycle concludes** — the 2024 key appeared in May 2025, the 2025 key in May 2026. Expect the **2026 key around May 2027**. Until then, [`2026.md`](2026.md) carries my worked answers, marked ✅ where a provision settles it and ⚠️ where it does not. **One question (Q62, Zero FIR) is genuinely open.** Re-check that file when the key drops.
+
+---
+
+## ⏳ Not compiled — 2000 to 2012, and why that is now final
+
+This is settled, not pending. **UPSC's own archive only goes back to 2016.**
+
+Its [Previous Question Papers](https://www.upsc.gov.in/examinations/previous-question-papers) page carries 2024–2026 and the [archives](https://www.upsc.gov.in/examinations/previous-question-papers/archives) page carries 2016–2023. **There is no official copy of any Prelims paper before 2016 anywhere on upsc.gov.in.** So the "drop the official PDFs into this folder" fix that this file used to recommend cannot work for those years — the PDFs do not exist to drop.
+
+What is left for 2000–2012 is third-party scans and image archives, with no verified answer keys. An invented option or a wrong key actively teaches you something false, so those years stay out rather than go in unverified.
+
+**And you should not mind.** The pre-2011 Prelims was a **different examination** — 150 questions, no CSAT, far more factual, and an optional subject paper carrying 300 marks. For a **CSE 2027** target, the 2013-onward set above *is* the relevant corpus, and it is now complete.
 
 ---
 
 ## 🏷️ What comes up most
 
-Counted across the 147 compiled questions:
+Counted across all 192 compiled questions:
 
 | Theme | Roughly how often |
 |---|---|
-| **Parliament** — Money Bills, committees, sessions, Speaker, no-confidence | ~25 |
-| **Fundamental Rights & DPSP** — Articles 14–32, Part IV | ~24 |
+| **Parliament** — Money Bills, committees, sessions, Speaker, questions, no-confidence | ~34 |
+| **Fundamental Rights & DPSP** — Articles 14–32, Part IV, Fundamental Duties | ~27 |
+| **Executive** — President, Governor, Council of Ministers, ordinances, pardoning power | ~24 |
+| **Federalism & Schedules** — Fifth/Sixth/Seventh/Ninth/Tenth, Scheduled Areas, Centre-State | ~23 |
 | **Political theory** — liberty, equality, constitutionalism, democracy | ~18 |
-| **Executive** — President, Governor, Council of Ministers, Attorney General | ~17 |
-| **Judiciary** — jurisdiction, writs, judicial review, NALSA, contempt | ~16 |
-| **Federalism & Schedules** — Fifth/Sixth/Seventh/Ninth/Tenth, Scheduled Areas | ~15 |
-| **Elections & RPA** — ECI, presidential election, disqualification | ~12 |
-| **Constitutional & statutory bodies** — NCBC, NHRC, Finance Commission, NITI Aayog | ~10 |
-| **Local government** — Panchayats, PESA, Gram Nyayalayas | ~8 |
+| **Judiciary** — jurisdiction, writs, judicial review, NALSA, contempt | ~17 |
+| **Constitutional & statutory bodies** — NCBC, NHRC, Finance Commission, NITI Aayog, Lokpal | ~14 |
+| **Elections & RPA** — ECI, presidential election, delimitation, disqualification | ~13 |
+| **Local government** — Panchayats, PESA, RGSA, Gram Nyayalayas | ~11 |
+| **Constituent Assembly & historical background** | ~8 |
 
 ### Repeats worth noticing
 
 - **"Welfare State is in the DPSP"** — asked in **2015 Q39** and again almost word-for-word in **2020 Q10**.
 - **"Constitutional government = limited government"** — **2014 Q1**, **2020 Q6**, **2021 Q4**, **2023 Q3**. Four times in ten years.
-- **Right to Privacy / Article 21** — **2018 Q7**, **2019 Q5**, **2021 Q17**.
-- **Presidential election arithmetic** — **2018 Q6**, **2023 Q11**.
-- **Scheduled Areas / Fifth Schedule** — **2013 Q17**, **2015 Q9**, **2022 Q10**, **2023 Q8**.
-- **Panchayat minimum age** — the 25-vs-21 trap runs in **2016 Q1** and again in 2025.
+- **Article 74 — "the President acts on advice"** decided **three separate questions in 2025 alone** (ordinance, pardoning power, reservation of State Bills) and one more in **2024** (prorogation). It is the single highest-yield principle in the subject.
+- **Fifth vs Sixth Schedule** — the swap was the trap in **2025 Q56** and again in **2026 Q57**. Assam, Meghalaya, Tripura, Mizoram = **Sixth**. Learn those four names as a block.
 
 ---
 
-## 📖 How to use this set
+## 📈 Where the paper is heading (2024 → 2026)
 
-1. **Attempt before revealing.** Answers are inside `<details>` blocks — they stay collapsed until you click. Attempt the whole year, then check against the answer-key table at the foot.
-2. **Practise the 2023-onward formats separately.** The "How many of the above are correct?" counting format and the Statement-I/Statement-II format both defeat the old elimination tricks. 2023 is the year to drill these on.
-3. **Pair with the Mains set.** Where a topic appears in both — NALSA, the anti-defection law, the Attorney General, the NCBC, Article 356 — the cross-references are noted inline in the answer blocks.
-4. **Don't over-weight the older papers** when they arrive. Pre-2011 Prelims was a different exam.
+Three trends across the newest three years, which are the ones that actually predict 2027:
+
+1. **From "what does it do" to "what does it say."** 2026 asked about Articles 393–395 and the Article 13(3)(a) definition clause — text nobody reads in a summary. 2024 asked for the exact words of Article 368 ("addition, variation or repeal").
+2. **One wrong word inside an otherwise true statement.** RPwD Act "2018" (it is 2016), RGSA "2021" (it is 2022), CEIB under "Home Affairs" (it is Finance), the 106th Amendment "from the 18th Lok Sabha" (it is after census + delimitation). Read every date and every ministry.
+3. **Governance and ethics scenarios have entered GS Paper I** (2026 Q51, Q52, Q53) — case studies of the type that used to appear only in GS-IV at Mains. Expect more in 2027.
 
 ---
 
-## 📌 Sourcing & fidelity
-
-- Every question is reproduced from a source that renders the paper inline, cross-checked against year-wise papers where both were available.
-- Two source defects are flagged in place rather than silently fixed: a duplicated option in **2021 Q4**, and a contested official key in **2023 Q5**.
-- Adjacent questions — ones that polity compilations bundle in but that are really social justice, modern history or international organisations — are kept in a separate section per file rather than dropped, and marked *(not polity)*.
-
-*Compiled 29 July 2026. 11 years done, 16 outstanding.*
+*Sources: official UPSC question papers and answer keys for 2024–2026 (in [`_source_pdfs/`](_source_pdfs/)); year-wise papers for 2013–2023.*
