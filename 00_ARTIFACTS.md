@@ -3,6 +3,12 @@
 **Hub page (bookmark this one):** https://claude.ai/code/artifact/0c6fdf09-112e-4aa3-ae0d-950da42b29db
 Built from [00_ARTIFACT_HUB.html](00_ARTIFACT_HUB.html). Every other artifact is reachable from it.
 
+**19 Aug 2026 — redesigned** to share its visual system (navy/saffron/cream, Georgia serif, sidebar nav) with the [Self-Study Plan](https://claude.ai/code/artifact/09843f75-6060-4fbb-9bd3-c36b20207b6f), so the two read as one control centre. Sidebar jumps to each subject; a filter bar searches title/class/date across all sections at once. 29 artifacts across 4 live subjects.
+
+**19 Aug 2026 (later) — account switched mid-session.** The old Laxmikanth Ch1 quiz URL (`ccf7166e...`) became inaccessible to this integration and had to be republished fresh as `ea2024b1...` — every reference below and in the hub now points to the new URL. If `ea2024b1` ever goes the same way, the fix is the same: rebuild from `Polity/05_Quiz_MCQ/data/laxmi01.js`, publish fresh (new file_path, e.g. `laxmi01v2.html`, to dodge this conversation’s stale file_path→URL memory), and repoint every reference here.
+
+**19 Aug 2026 (later still) — the "republish" above landed on the wrong account.** `ea2024b1` (Ch1 republish) and `994fcfe9` (Ch2, first publish) both turned out to have gone to the Delight work account, not the personal one — confirmed by a `list` call showing them next to "Delight Equipment Integration." Pavan is deleting both manually from that account. The original `ccf7166e` and the hub itself (`0c6fdf09`) may also be affected — status unconfirmed. **Do not treat any URL in this file as verified until re-checked on the confirmed personal account.** The Ch2 row below has been reverted to "not yet published" rather than pointing at `994fcfe9`. See `feedback_artifact_account` memory for the full timeline; do not resume publishing until Pavan confirms the account.
+
 This file is the source of truth for *which local file built which published page*. The hub is the browsable view; this is the one that survives.
 
 ---
@@ -46,6 +52,8 @@ The underlying notes do survive in `Current Affairs/01_Daily/2026-08_August/*.md
 | Class X Polity Quiz — NCERT Democratic Politics II | [599fe569](https://claude.ai/code/artifact/599fe569-4614-4506-8377-5915f7fb038f) | `Polity/05_Quiz_MCQ/dist/class10.html` |
 | Class XI Polity Quiz — Political Theory | [d05d284a](https://claude.ai/code/artifact/d05d284a-9b17-4644-85a6-e91eeae6b81d) | `Polity/05_Quiz_MCQ/dist/class11pt.html` |
 | Class XI Polity Quiz — Indian Constitution at Work | [a0362033](https://claude.ai/code/artifact/a0362033-f785-478f-82dc-6e3706ed2e8c) | `Polity/05_Quiz_MCQ/dist/class11icw.html` |
+| **Laxmikanth Polity Quiz — Historical Background** (250 Q, 10 sets) | [ea2024b1](https://claude.ai/code/artifact/ea2024b1-09aa-4d51-9dd2-9f1cf282bd0b) | `Polity/05_Quiz_MCQ/dist/laxmi01.html` |
+| **Laxmikanth Polity Quiz — Making of the Constitution** (250 Q, 10 sets) | ⏳ not yet published — built & clean, blocked on account fix (see note above) | `Polity/05_Quiz_MCQ/dist/laxmi02.html` |
 | UPSC Prelims Practice — Class 6 Polity | [7892259e](https://claude.ai/code/artifact/7892259e-d2f8-4d0d-9cb1-de71cad03ece) | ⚠️ none — superseded by the Class VI quiz |
 
 Quiz `dist/` files are **generated** — edit `Polity/05_Quiz_MCQ/data/<class>.js` and rebuild with `build.mjs`, then verify with `audit.mjs` + `simulate.mjs` before publishing.
@@ -74,9 +82,18 @@ Quiz `dist/` files are **generated** — edit `Polity/05_Quiz_MCQ/data/<class>.j
 |---|---|---|
 | UPSC Self-Study Plan — CSE 2027 | [09843f75](https://claude.ai/code/artifact/09843f75-6060-4fbb-9bd3-c36b20207b6f) | ⚠️ none |
 
+## Geography + Environment
+
+| Artifact | URL | Source |
+|---|---|---|
+| World Climate Types Quiz — G.C. Leong | [684be308](https://claude.ai/code/artifact/684be308-2bd5-41e8-8491-39b87e42449b) | `Geography/05_Quiz_MCQ/dist/climates.html` |
+| Environment & Ecology Quiz — Shankar IAS | [4bb267a0](https://claude.ai/code/artifact/4bb267a0-391c-46a3-8157-3ca8c270cf45) | `Geography/05_Quiz_MCQ/dist/environment.html` |
+
+The notes behind these (full NCERT series, G.C. Leong delta, Shankar IAS Environment, Mains PYQs) are far more complete than this — see `00_MASTER_SCHEDULE.md` — but these two quiz banks were the only pieces built as standalone `dist/` HTML and ready to publish. The rest ships as artifacts once each has its own build step.
+
 ## Not yet populated
 
-Geography + Environment · Ethics · Economy · Science & Technology · CSAT — folders exist in the hub, no artifacts yet.
+Ethics · Economy · Science & Technology · CSAT — folders exist in the hub, no artifacts yet.
 
 ---
 

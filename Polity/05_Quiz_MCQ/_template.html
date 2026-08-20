@@ -57,7 +57,13 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);-
 .progress-fill{height:100%;background:var(--accent);width:0%;}
 .counter{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap;}
 .timer{font-family:var(--serif);font-size:15px;font-variant-numeric:tabular-nums;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:4px 10px;white-space:nowrap;}
-.card{flex:1;min-height:0;overflow-y:auto;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;display:flex;flex-direction:column;gap:15px;}
+.card{position:relative;flex:1;min-height:0;overflow-y:auto;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;display:flex;flex-direction:column;gap:15px;}
+.pause-btn{font-family:var(--sans);font-size:12.5px;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:4px 11px;color:var(--ink);cursor:pointer;white-space:nowrap;}
+.pause-btn:hover{border-color:var(--accent);color:var(--accent);}
+.pause-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+.pause-overlay{position:absolute;inset:0;z-index:5;background:var(--surface);border-radius:var(--radius);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;padding:24px;}
+.pause-overlay .pause-icon{font-size:38px;margin:0;line-height:1;}
+.pause-overlay .pause-msg{color:var(--muted);margin:0;font-size:14.5px;max-width:38ch;line-height:1.5;}
 .qblock{display:flex;flex-direction:column;gap:9px;}
 .question{font-family:var(--serif);font-size:clamp(17px,2.4vw,20px);line-height:1.45;margin:0;white-space:pre-line;}
 .stmt-head{font-size:12px;letter-spacing:0.05em;text-transform:uppercase;color:var(--muted);margin:0;padding-left:26px;}
@@ -131,7 +137,7 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);-
       <li>Prelims-pattern: statements, pairs, assertion–reason</li>
       <li>Options balanced — no length giveaways</li>
       <li>Detailed explanation on every answer</li>
-      <li>Reshuffles each attempt · stopwatch</li>
+      <li>Reshuffles each attempt · stopwatch with pause</li>
     </ul>
     <p class="menu-label">Choose a lesson — or take the full syllabus</p>
     <div class="lesson-list" id="lessonList"></div>
@@ -143,15 +149,21 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);-
       <div class="progress-track"><div id="progressFill" class="progress-fill"></div></div>
       <span id="counter" class="counter"></span>
       <span id="timer" class="timer">00:00</span>
+      <button id="pauseBtn" class="pause-btn" type="button" aria-pressed="false">⏸ Pause</button>
     </header>
     <main class="card">
+      <div id="pauseOverlay" class="pause-overlay" hidden>
+        <p class="pause-icon" aria-hidden="true">⏸</p>
+        <p class="pause-msg">Paused — the clock has stopped. Take your time.</p>
+        <button id="resumeBtn" class="btn-primary" type="button">Resume</button>
+      </div>
       <div id="qblock" class="qblock"></div>
       <div id="options" class="options"></div>
       <p id="feedback" class="feedback" hidden></p>
     </main>
     <footer class="nav">
       <button id="prevBtn" class="btn-ghost" type="button">← Prev</button>
-      <span class="hint">Press 1–4 to answer · → next · ← prev</span>
+      <span class="hint">Press 1–4 to answer · → next · ← prev · p to pause</span>
       <button id="nextBtn" class="btn-primary" type="button">Next →</button>
     </footer>
   </section>
@@ -245,7 +257,7 @@ function buildSession(pool){return shuffle(pool).map(function(item){
           correct:order.findIndex(function(o){return o.text===correctText;}),
           explain:auto+item.e};
 });}
-let session=[],current=0,answers=[],startTime=null,timerInterval=null,reviewMode=false,activeScope="";
+let session=[],current=0,answers=[],timerInterval=null,elapsedMs=0,segmentStart=null,isPaused=false,reviewMode=false,activeScope="";
 const el=id=>document.getElementById(id);
 const screens={menu:el('menu'),quiz:el('quiz'),result:el('result')};
 function show(name){Object.keys(screens).forEach(k=>screens[k].classList.toggle('is-active',k===name));}
@@ -271,12 +283,30 @@ function buildMenu(){
   });
 }
 function formatTime(sec){const m=Math.floor(sec/60).toString().padStart(2,'0');const s=Math.floor(sec%60).toString().padStart(2,'0');return m+':'+s;}
-function startTimer(){startTime=Date.now();clearInterval(timerInterval);timerInterval=setInterval(()=>{el('timer').textContent=formatTime((Date.now()-startTime)/1000);},1000);}
-function stopTimer(){clearInterval(timerInterval);}
+function elapsedSeconds(){return (elapsedMs+(segmentStart!==null?Date.now()-segmentStart:0))/1000;}
+function tickTimer(){el('timer').textContent=formatTime(elapsedSeconds());}
+function startTimer(){elapsedMs=0;segmentStart=Date.now();isPaused=false;clearInterval(timerInterval);timerInterval=setInterval(tickTimer,1000);tickTimer();}
+function stopTimer(){if(segmentStart!==null){elapsedMs+=Date.now()-segmentStart;segmentStart=null;}clearInterval(timerInterval);}
+function setNavDisabled(disabled){el('nextBtn').disabled=disabled;el('prevBtn').disabled=disabled||current===0;}
+function pauseTimer(){
+  if(isPaused||reviewMode)return;
+  if(segmentStart!==null){elapsedMs+=Date.now()-segmentStart;segmentStart=null;}
+  clearInterval(timerInterval); isPaused=true;
+  el('pauseOverlay').hidden=false; el('pauseBtn').textContent='▶ Resume'; el('pauseBtn').setAttribute('aria-pressed','true');
+  setNavDisabled(true);
+}
+function resumeTimer(){
+  if(!isPaused)return;
+  segmentStart=Date.now(); isPaused=false;
+  clearInterval(timerInterval); timerInterval=setInterval(tickTimer,1000);
+  el('pauseOverlay').hidden=true; el('pauseBtn').textContent='⏸ Pause'; el('pauseBtn').setAttribute('aria-pressed','false');
+  setNavDisabled(false);
+}
 function startQuiz(chapter){
   const pool=chapter?QUESTIONS.filter(q=>q.c===chapter):QUESTIONS;
   activeScope=chapter?chapter.replace(/^Ch\d+ · /,''):"Full Syllabus";
   session=buildSession(pool); answers=new Array(session.length).fill(null); current=0; reviewMode=false;
+  isPaused=false; el('pauseOverlay').hidden=true; el('pauseBtn').hidden=false; el('pauseBtn').textContent='⏸ Pause'; el('pauseBtn').setAttribute('aria-pressed','false');
   show('quiz'); el('timer').textContent='00:00'; startTimer(); renderQuestion();
 }
 function renderStem(item){
@@ -328,9 +358,9 @@ function renderQuestion(){
   nextBtn.textContent = reviewMode ? (current===session.length-1?'Back to results':'Next →') : (current===session.length-1?'Finish':'Next →');
   el('options').scrollIntoView&&el('qblock').parentElement.scrollTo({top:0});
 }
-function selectOption(i){ if(reviewMode||answers[current]!==null)return; answers[current]=i; renderQuestion(); }
+function selectOption(i){ if(reviewMode||isPaused||answers[current]!==null)return; answers[current]=i; renderQuestion(); }
 function finishQuiz(){
-  stopTimer(); const elapsed=(Date.now()-startTime)/1000; let correctCount=0; const stats={};
+  stopTimer(); const elapsed=elapsedMs/1000; let correctCount=0; const stats={};
   session.forEach((item,i)=>{ if(!stats[item.chapter])stats[item.chapter]={correct:0,total:0}; stats[item.chapter].total++; if(answers[i]===item.correct){correctCount++;stats[item.chapter].correct++;} });
   show('result');
   el('resultScope').textContent=activeScope+' · '+session.length+' questions';
@@ -347,7 +377,7 @@ function finishQuiz(){
     row.appendChild(td1); row.appendChild(td2); body.appendChild(row);
   });
 }
-function enterReview(){reviewMode=true;current=0;show('quiz');renderQuestion();}
+function enterReview(){reviewMode=true;current=0;isPaused=false;el('pauseOverlay').hidden=true;el('pauseBtn').hidden=true;show('quiz');renderQuestion();}
 function exitReviewToResult(){reviewMode=false;show('result');}
 el('prevBtn').addEventListener('click',()=>{if(current>0){current--;renderQuestion();}});
 el('nextBtn').addEventListener('click',()=>{
@@ -356,9 +386,13 @@ el('nextBtn').addEventListener('click',()=>{
 });
 el('reviewBtn').addEventListener('click',enterReview);
 el('restartBtn').addEventListener('click',()=>{ const chapter=activeScope==="Full Syllabus"?null:CHAPTERS.find(c=>c.replace(/^Ch\d+ · /,'')===activeScope); startQuiz(chapter); });
-el('menuBtn').addEventListener('click',()=>{stopTimer();show('menu');});
+el('menuBtn').addEventListener('click',()=>{stopTimer();isPaused=false;el('pauseOverlay').hidden=true;show('menu');});
+el('pauseBtn').addEventListener('click',()=>{ isPaused?resumeTimer():pauseTimer(); });
+el('resumeBtn').addEventListener('click',resumeTimer);
 document.addEventListener('keydown',(e)=>{
   if(!screens.quiz.classList.contains('is-active'))return;
+  if((e.key==='p'||e.key==='P')&&!reviewMode){ isPaused?resumeTimer():pauseTimer(); return; }
+  if(isPaused)return;
   if(['1','2','3','4','5'].includes(e.key)&&!reviewMode){selectOption(parseInt(e.key,10)-1);}
   else if(e.key==='ArrowRight'||e.key==='Enter'){el('nextBtn').click();}
   else if(e.key==='ArrowLeft'){el('prevBtn').click();}

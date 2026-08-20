@@ -9,6 +9,8 @@ _template.html     the quiz engine + styling, with a /*__DATA__*/ placeholder
 data/class06..10.js  one question bank per class (COURSE, CHAPTERS, QUESTIONS)
 data/class11icw.js   Class XI · Indian Constitution at Work (10 chapters)
 data/class11pt.js    Class XI · Political Theory (8 chapters)
+data/laxmi01.js      Laxmikanth Ch1 · Historical Background (10 practice sets, 250 Q)
+data/laxmi02.js      Laxmikanth Ch2 · Making of the Constitution (10 practice sets, 250 Q)
 build.mjs          template + data  ->  dist/classNN.html  (self-contained)
 audit.mjs          static checks; exits non-zero on any problem
 simulate.mjs       replays 400 attempts and measures whether the quiz is guessable
@@ -33,6 +35,8 @@ Published artifacts (same URLs, updated in place):
 | X    | `class10`    | https://claude.ai/code/artifact/599fe569-4614-4506-8377-5915f7fb038f |
 | XI — Indian Constitution at Work | `class11icw` | https://claude.ai/code/artifact/a0362033-f785-478f-82dc-6e3706ed2e8c |
 | XI — Political Theory | `class11pt` | https://claude.ai/code/artifact/d05d284a-9b17-4644-85a6-e91eeae6b81d |
+| **Laxmikanth Ch1 — Historical Background** | `laxmi01` | https://claude.ai/code/artifact/ea2024b1-09aa-4d51-9dd2-9f1cf282bd0b |
+| **Laxmikanth Ch2 — Making of the Constitution** | `laxmi02` | ⏳ built & clean, not yet published (account mix-up, see `00_ARTIFACTS.md`) |
 
 ## The problem this rebuild fixed
 
